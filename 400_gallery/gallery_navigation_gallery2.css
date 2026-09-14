@@ -1,0 +1,10 @@
+.gallery-nav {
+  position: fixed;
+  top: 50%;
+  z-index: 20;
+  line-height: 0;
+  transform: translateY(-50%);
+}
+.gallery-prev { left: 18px; }
+.gallery-next { right: 18px; }
+.gallery-nav img { border: 0; }
