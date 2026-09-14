@@ -18,7 +18,7 @@ $ledgifurl  = "http://www.dennisagerblad.dk/dennis/06_kommunikation/cgi-bin/bull
 $allow_html = 1;
 $time_miss  = -0;
 $title      = "GraphixBook";
-$manage[0]  = "username¡üpassword";
+$manage[0]  = "usernameÂ¡Ã¼password";
 
 $bgcolor = "ffffff";
 $text    = "000000";
@@ -109,7 +109,7 @@ elsif ($job =~ /manage/) {
 if ($job =~ /manage/) {
    $temp=1;
    foreach $manage_line (@manage) {
-      if ($manage_line eq "$id¡ü$password") {
+      if ($manage_line eq "$idÂ¡Ã¼$password") {
          $temp=2;
          last;
       }  
@@ -126,7 +126,7 @@ if ($FORM{'username'}) {
    $username =~ s/<//g;
    $username =~ s/>//g;
    $username =~ s/\&//g;
-   $username =~ s/¡ü//g;
+   $username =~ s/Â¡Ã¼//g;
    &checkempty($username,"Please type your name");
 }
 elsif ($job eq "add") {
@@ -135,13 +135,13 @@ elsif ($job eq "add") {
 
 if ($FORM{'usermail'} =~ /.*\@.*\..*/) {
    $usermail = "$FORM{'usermail'}";
-   $usermail =~ s/¡ü//g;
+   $usermail =~ s/Â¡Ã¼//g;
    $usermail =~ s/\n//g;
 }
 
 if ($FORM{'userurl'} =~ /.*\:.*\..*/ ) {
    $userurl = "$FORM{'userurl'}";
-   $userurl =~ s/¡ü//g;
+   $userurl =~ s/Â¡Ã¼//g;
    $userurl =~ s/\n//g;
 }
 
@@ -350,7 +350,7 @@ $error_subject = $_[0];
 print "<head><title>$wwwboardtitle error</title></head>\n";
 print "\n";
 print "<center><h2>\n";
-print "ERROR¡G$error_subject\n";
+print "ERRORÂ¡G$error_subject\n";
 print "</h2></center>\n";
 exit 0;
 }
