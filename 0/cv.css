@@ -1,0 +1,154 @@
+/** Red: #FF0000
+	Green: #42B7C8 **/
+
+body { 
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #42B7C8; 
+	FONT-SIZE: 13px; 
+	FONT-WEIGHT: normal;
+	background-color: #000000;
+	background-image: url(bg.jpg);
+	background-position: top;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	margin: 0px; 
+	scrollbar-face-color: #42B7C8;
+	scrollbar-shadow-color: #000000; 
+	scrollbar-highlight-color: #000000;
+	scrollbar-3dlight-color:  #000000; 
+	scrollbar-darkshadow-color: #000000;
+	scrollbar-track-color: #000000; 
+	scrollbar-arrow-color: #000000; 
+}
+
+.menu { 
+    background-color: #2E0000;
+	background-image: url(bg_menu_101.jpg);
+	background-position: top;
+	margin: 0px;
+	background-repeat: repeat-x;
+	background-attachment: fixed; 
+} 
+
+hr
+{
+border-bottom: 1px solid #00FF00;
+border-right: 1px solid #00FF00;
+border-top: 1px solid #00FF00;
+border-left: 1px solid #00FF00;
+/**border-bottom: 1px solid #42B7C8;
+border-right: 1px solid #42B7C8;
+border-top: 1px solid #42B7C8;
+border-left: 1px solid #42B7C8;**/
+}
+
+img
+{
+/**border-bottom: 1px solid #42B7C8;
+border-right: 1px solid #42B7C8;
+border-top: 1px solid #42B7C8;
+border-left: 1px solid #42B7C8;**/
+	border-style: solid;
+	border-color: #42B7C8;
+	border-width: 1px 1px 1px 1px;
+}
+
+.no
+{
+border: 0px;
+}
+ 
+ .ramme {
+	border-style: solid;
+	border-color: #42B7C8;
+	border-width: 1px 1px 1px 1px;
+}
+
+td { 
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #42B7C8; 
+	FONT-SIZE: 13px; 
+	FONT-WEIGHT: normal;
+ }
+
+.head {
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #42B7C8;
+	FONT-SIZE: 18px;
+	FONT-WEIGHT: bold;
+	TEXT-DECORATION: none;
+	padding: 4px;
+} 
+
+H1 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #308692; 
+	FONT-SIZE: 30px; 
+	FONT-WEIGHT: Bold;
+}
+
+H2 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #308692; 
+	FONT-SIZE: 20px; 
+	FONT-WEIGHT: Bold;
+}
+
+H3 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #308692; 
+	FONT-SIZE: 15px; 
+	FONT-WEIGHT: Bold;
+	margin-top:-2px;
+}
+
+A.simple {
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #42B7C8;  
+	FONT-WEIGHT: normal; 
+	TEXT-DECORATION: underline;
+	CURSOR: hand;
+} 
+
+A {
+
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #FF0000;
+	FONT-WEIGHT: bold; 
+	TEXT-DECORATION: underline;
+	CURSOR: hand;
+} 
+
+A:visited { 
+	COLOR: #a93636; 
+} 
+
+A:active { 
+	COLOR: #FF0000; 
+} 
+
+A:hover { 
+    COLOR: #FF0000; 
+	TEXT-DECORATION: none; 
+}
+
+input {
+    border: 1px solid #00FF00;
+    background: #FFFFFF;
+    margin: 0px;
+    height: 20px;
+}
+
+TEXTAREA{
+    border: 1px solid #00FF00;
+    background: #FFFFFF;
+    width: 250px;
+}
+
+.button {
+	COLOR: #000000;
+	font-weight : bold;
+	font-size : 10px;
+	background-color: #00FF00;
+	BORDER: #00FF00 1px solid;
+}

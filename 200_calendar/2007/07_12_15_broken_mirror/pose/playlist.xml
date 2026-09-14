@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<track>
+		<path>pose/dennis_pose.mp3</path>
+		<title>01 - I Wanna Pose</title>
+	</track>
+	<track>
+		<path>pose/dennis_everytime.mp3</path>
+		<title>02 - Everytime</title>
+	</track>
+</xml>

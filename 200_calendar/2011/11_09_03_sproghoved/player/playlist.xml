@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<track>
+		<path>player/velkommen.mp3</path>
+		<title>01 - Velkommen</title>
+	</track>
+	<track>
+		<path>player/flaget.mp3</path>
+		<title>02 - Flaget</title>
+	</track>
+	<track>
+		<path>player/larm.mp3</path>
+		<title>03 - Larm</title>
+	</track>
+	<track>
+		<path>player/det_samme_som_mig.mp3</path>
+		<title>04 - Det samme Som Mig</title>
+	</track>
+	<track>
+		<path>player/sproghoved.mp3</path>
+		<title>05 - Sproghoved</title>
+	</track>
+	<track>
+		<path>player/blomster.mp3</path>
+		<title>06 - Blomster</title>
+	</track>
+	<track>
+		<path>player/hip_og_hop.mp3</path>
+		<title>07 - Hip Og Hop</title>
+	</track>
+	<track>
+		<path>player/jer_som_kan_floejte.mp3</path>
+		<title>08 - Jer Som Kan Fløjte</title>
+	</track>
+	<track>
+		<path>player/landing.mp3</path>
+		<title>09 - Landing</title>
+	</track>
+	<track>
+		<path>player/kaerlighed.mp3</path>
+		<title>10 - Kærlighed</title>
+	</track>
+	<track>
+		<path>player/god_morgen.mp3</path>
+		<title>11 - God Morgen</title>
+	</track>
+	<track>
+		<path>player/haab.mp3</path>
+		<title>12 - Håb</title>
+	</track>
+	<track>
+		<path>player/velkommen_fo.mp3</path>
+		<title>01 - Vælkomin</title>
+	</track>
+	<track>
+		<path>player/flaget_fo.mp3</path>
+		<title>02 - Flaggið</title>
+	</track>
+	<track>
+		<path>player/larm_fo.mp3</path>
+		<title>03 - Dun</title>
+	</track>
+	<track>
+		<path>player/det_samme_som_mig_fo.mp3</path>
+		<title>04 - Tað Sama Sum Eg</title>
+	</track>
+	<track>
+		<path>player/sproghoved_fo.mp3</path>
+		<title>05 - Málhøvd</title>
+	</track>
+	<track>
+		<path>player/blomster_fo.mp3</path>
+		<title>06 - Blómur</title>
+	</track>
+	<track>
+		<path>player/hip_og_hop_fo.mp3</path>
+		<title>07 - Hipp Og Hopp</title>
+	</track>
+	<track>
+		<path>player/jer_som_kan_floejte_fo.mp3</path>
+		<title>08 - Tit Sum Duga At Floyta</title>
+	</track>
+	<track>
+		<path>player/landing_fo.mp3</path>
+		<title>09 - Lending</title>
+	</track>
+	<track>
+		<path>player/kaerlighed_fo.mp3</path>
+		<title>10 - Ást</title>
+	</track>
+	<track>
+		<path>player/god_morgen_fo.mp3</path>
+		<title>11 - Goðan Morgum</title>
+	</track>
+	<track>
+		<path>player/haab_fo.mp3</path>
+		<title>12 - Vón</title>
+	</track>
+</xml>

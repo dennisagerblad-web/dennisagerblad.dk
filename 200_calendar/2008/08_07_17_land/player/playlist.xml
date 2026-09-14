@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<track>
+		<path>player/land01.mp3</path>
+		<title>01 - kossurin</title>
+	</track>
+	<track>
+		<path>player/land03.mp3</path>
+		<title>03 - dansurin</title>
+	</track>
+	<track>
+		<path>player/land04.mp3</path>
+		<title>04 - stjørnuhópurin</title>
+	</track>
+	<track>
+		<path>player/land05.mp3</path>
+		<title>05 - túrurin</title>
+	</track>
+	<track>
+		<path>player/land06.mp3</path>
+		<title>06 - einslingurin</title>
+	</track>
+	<track>
+		<path>player/land07.mp3</path>
+		<title>07 - lyklasmidurin</title>
+	</track>
+	<track>
+		<path>player/land08.mp3</path>
+		<title>08 - urdin</title>
+	</track>
+	<track>
+		<path>player/land09.mp3</path>
+		<title>09 - føringurin</title>
+	</track>
+	<track>
+		<path>player/land10.mp3</path>
+		<title>10 - hugurin</title>
+	</track>
+	<track>
+		<path>player/land11.mp3</path>
+		<title>11 - bussurin</title>
+	</track>
+	<track>
+		<path>player/land12.mp3</path>
+		<title>12 - úlvurin</title>
+	</track>
+	<track>
+		<path>player/land13.mp3</path>
+		<title>13 - spurningrurin</title>
+	</track>
+	<track>
+		<path>player/land14.mp3</path>
+		<title>14 - vinurin</title>
+	</track>
+</xml>

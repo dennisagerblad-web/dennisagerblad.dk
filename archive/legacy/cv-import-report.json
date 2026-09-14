@@ -1,0 +1,28 @@
+{
+  "source": "https://dennisagerblad.dk/200_calendar/200_cv.html",
+  "auditedFromYear": 2013,
+  "importedEntries": [
+    {
+      "date": "2021-08-20",
+      "group": "live",
+      "page": "/200_calendar/2021/artist-talk/artist-talk.html"
+    },
+    {
+      "date": "2021-07-25",
+      "group": "art",
+      "page": "/200_calendar/2021/udstilling/samtaler_om_taage.html"
+    },
+    {
+      "date": "2021-04-24",
+      "group": "live",
+      "page": "/200_calendar/2021/lgbtplus30.html"
+    },
+    {
+      "date": "2020-10-31",
+      "group": "art",
+      "page": "/200_calendar/2021/udstilling/samtaler_om_taage.html"
+    }
+  ],
+  "pagesSaved": 3,
+  "assetsSaved": 7
+}

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<track>
+		<path>player/sum01.mp3</path>
+		<title>01 - gæsnar renna...</title>
+	</track>
+	<track>
+		<path>player/sum02.mp3</path>
+		<title>02 - málningur</title>
+	</track>
+	<track>
+		<path>player/sum03.mp3</path>
+		<title>03 - tú gongur gjøgnum múrar tú</title>
+	</track>
+	<track>
+		<path>player/sum04.mp3</path>
+		<title>04 - hví rædist eg</title>
+	</track>
+	<track>
+		<path>player/sum05.mp3</path>
+		<title>05 - hvønn teskar tú vid nú?</title>
+	</track>
+	<track>
+		<path>player/sum06.mp3</path>
+		<title>06 - eldur í</title>
+	</track>
+	<track>
+		<path>player/sum07.mp3</path>
+		<title>07 - omma</title>
+	</track>
+	<track>
+		<path>player/sum08.mp3</path>
+		<title>08 - ...eftir tínum ryggji</title>
+	</track>
+	<track>
+		<path>player/sum09.mp3</path>
+		<title>09 - nú drippar</title>
+	</track>
+	<track>
+		<path>player/sum10.mp3</path>
+		<title>10 - saknur</title>
+	</track>
+	<track>
+		<path>player/sum11.mp3</path>
+		<title>11 - medova</title>
+	</track>
+	<track>
+		<path>player/sum12.mp3</path>
+		<title>12 - hvat er ein menniskja</title>
+	</track>
+	<track>
+		<path>player/sum13.mp3</path>
+		<title>13 - ein langur vegur</title>
+	</track>
+</xml>

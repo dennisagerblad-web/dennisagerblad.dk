@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<track>
+		<path>player/01_web_sprog.mp3</path>
+		<title>01 - Sproghoved - G.De Bellis Pinex Remix</title>
+	</track>
+	<track>
+		<path>player/02_web_sprog.mp3</path>
+		<title>02 - Málhøvd - Mathuresh Drama Remix</title>
+	</track>
+	<track>
+		<path>player/03_web_sprog.mp3</path>
+		<title>03 - Sproghoved - Nico Defrost Remix</title>
+	</track>
+	<track>
+		<path>player/04_web_sprog.mp3</path>
+		<title>04 - Málhøvd - Rod Remix</title>
+	</track>
+	<track>
+		<path>player/05_web_sprog.mp3</path>
+		<title>05 - Sproghoved - Sådan Remix</title>
+	</track>
+	<track>
+		<path>player/06_web_sprog.mp3</path>
+		<title>06 - Málhøvd (Føroysk Album Version)</title>
+	</track>
+	<track>
+		<path>player/07_web_sprog.mp3</path>
+		<title>07 - Sproghoved (Dansk Album Version)</title>
+	</track>
+</xml>

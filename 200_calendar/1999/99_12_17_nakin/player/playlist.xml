@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<track>
+		<path>player/nakin01.mp3</path>
+		<title>01 - hví er tad so ringt?</title>
+	</track>
+	<track>
+		<path>player/nakin02.mp3</path>
+		<title>03 - blámadur</title>
+	</track>
+	<track>
+		<path>player/nakin03.mp3</path>
+		<title>03 - stórkavin</title>
+	</track>
+	<track>
+		<path>player/nakin04.mp3</path>
+		<title>04 - aftur</title>
+	</track>
+	<track>
+		<path>player/nakin05.mp3</path>
+		<title>05 - hvat er ein fótur uttan eitt fet (tad er einki feitt)</title>
+	</track>
+	<track>
+		<path>player/nakin06.mp3</path>
+		<title>06 - svim</title>
+	</track>
+	<track>
+		<path>player/nakin07.mp3</path>
+		<title>07 - samtídarfeilur</title>
+	</track>
+	<track>
+		<path>player/nakin08.mp3</path>
+		<title>08 - havnarmadur</title>
+	</track>
+	<track>
+		<path>player/nakin09.mp3</path>
+		<title>09 - alt eg vil hava</title>
+	</track>
+	<track>
+		<path>player/nakin10.mp3</path>
+		<title>10 - nátt</title>
+	</track>
+	<track>
+		<path>player/nakin11.mp3</path>
+		<title>11 - nakin?</title>
+	</track>
+</xml>

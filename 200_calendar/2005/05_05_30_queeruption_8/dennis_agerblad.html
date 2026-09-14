@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Dennis Agerblad</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK rel="stylesheet" href="../../../0/cv.css" type="text/css">
+<meta name="Generator" content="EditPlus">
+</head>
+<script type="text/javascript">
+var player;
+
+function getPlayer() {
+	return document.getElementById("RAOCX");
+  if (document.prim_player_embed) {
+    return document.prim_player_embed;
+  } else {
+    return document.prim_player;
+  }
+}
+
+function Player() {
+    this.player     = getPlayer();
+    this.stop       = playerStop;
+    this.play       = playerPlay;
+    this.pause      = playerPause;
+}
+
+function playerStop() {
+  this.player.DoStop();
+}
+
+function playerPause() {
+  this.player.DoPause();
+}
+
+function playerPlay() {
+  this.player.DoPlay();
+}
+
+function pageLoad() {
+  player = new Player(); 
+}
+</script>
+<BODY onLoad="pageLoad()">
+<CENTER>
+  <TABLE WIDTH="375" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+    <TR>
+      <TD><H1>Dennis Agerblad live at Queeruption 8, Barcelona, Spain.<BR>
+30/05 - 2005.         </H1></TD>
+    </TR>
+  </TABLE>
+  
+  <IMG SRC="IMG_6162.jpg" WIDTH="375" HEIGHT="500">
+<BR>
+Dennis Agerblad.  <BR>
+  <BR>
+    <IMG SRC="IMG_6166.jpg" WIDTH="375" HEIGHT="500">
+
+<BR>
+Dennis Agerblad.<BR>
+    <BR>
+  <IMG SRC="008_na.jpg" WIDTH="333" HEIGHT="500"><BR>
+Liebling Siebling &amp; Dennis Agerblad.<BR>
+  <BR>
+    <IMG SRC="011_na.jpg" WIDTH="500" HEIGHT="333"><BR>
+Liebling Siebling, Dennis Agerblad &amp; The Thom.<BR>
+  <BR>
+    <IMG SRC="009_na.jpg" WIDTH="500" HEIGHT="333"><BR>
+Liebling Siebling &amp; Dennis Agerblad.  <BR>
+  <BR>
+    <IMG SRC="020_na.jpg" WIDTH="500" HEIGHT="333"><BR>
+Dennis Agerblad. <BR>
+  <BR>
+    <IMG SRC="IMG_6153.jpg" WIDTH="500" HEIGHT="375">
+<BR>
+  The party.<BR>
+<BR>
+</CENTER>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-683517-2";
+urchinTracker();
+</script>
+</BODY>
+</HTML>

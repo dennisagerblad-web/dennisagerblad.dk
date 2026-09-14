@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<track>
+		<path>player/dun_mathuresh.mp3</path>
+		<title>1. - Dun - Mathuresh Remix</title>
+	</track>
+	<track>
+		<path>player/dun_hairwerk.mp3</path>
+		<title>2. - Dun feat. Hairwerk</title>
+	</track>
+	<track>
+		<path>player/dun_bryn.mp3</path>
+		<title>3. - Dun - Brynjolfur Remix</title>
+	</track>
+	<track>
+		<path>player/larm_fo.mp3</path>
+		<title>4. - Dun - (Føroysk Album Version)</title>
+	</track>
+	<track>
+		<path>player/larm.mp3</path>
+		<title>5. - Larm - (Dansk Album Version)</title>
+	</track>
+</xml>

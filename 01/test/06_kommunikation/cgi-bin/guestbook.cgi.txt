@@ -1,0 +1,365 @@
+<html><body bgcolor=$bgcolor text=$text link=$link>#!/usr/bin/perl
+
+###############################################################################
+# GraphixBook - Version 1.0				Created January 23, 2002	#
+# Copyright 1999 - 2002 Hanna Camille Werner	development@wwb.no		#
+# Created January 23, 2002				http://www.wwb.no/		#
+# Werner WEBureau							  				#
+# Not for re-sell or re-distribution.           					#
+###############################################################################
+
+# Setup Begin
+
+$cgiurl     = "http://www.dennisagerblad.dk/dennis/06_kommunikation/cgi-bin/guestbook.cgi";
+$mainurl    = "http://www.dennisagerblad.dk/dennis/06_kommunikation/cgi-bin/guestbook.html";
+$mainfile   = "/home/httpdocs/guestbook.html";
+$numberfile = "/home/httpdocs/guestbook.log";
+$ledgifurl  = "http://www.dennisagerblad.dk/dennis/06_kommunikation/cgi-bin/bullet.gif";
+$allow_html = 1;
+$time_miss  = -0;
+$title      = "GraphixBook";
+$manage[0]  = "username¡üpassword";
+
+$bgcolor = "ffffff";
+$text    = "000000";
+#End of Setup
+
+#####################################################################
+#			Do NOT edit	under this line		  		  #
+#####################################################################
+
+print "Content-type: text/html\n";
+print "Pragma:no-cache\n\n";
+
+&get_data;
+&set_var;
+
+if ($job eq "add") {
+   &get_new_number;
+   &write_main(add);
+   &return_succ(add);
+}
+elsif ($job eq "manage") {
+   &return_request(manage);
+}
+elsif ($job eq "managedel") {
+   &write_main(managedel);
+   &return_succ(managedel);
+}
+
+
+sub get_data {
+@querys = split(/&/, $ENV{'QUERY_STRING'});
+foreach $query (@querys) {
+  ($name, $value) = split(/=/, $query);
+  $FORM{$name} = $value;    
+}
+
+read(STDIN, $buffer, $ENV{'CONTENT_LENGTH'});
+@pairs = split(/&/, $buffer);
+
+foreach $pair (@pairs) {
+   ($name, $value) = split(/=/, $pair);
+
+   # Un-Webify plus signs and %-encoding
+   $value =~ tr/+/ /;
+   $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+   $value =~ s/<!--(.|\n)*-->//g;
+
+   if ($allow_html != 1) {
+      $value =~ s/<([^>]|\n)*>//g;
+      $value =~ s/<([^>]|\n)*//g;
+   }
+   else {
+      unless ($name eq 'says') {
+         $value =~ s/<([^>]|\n)*>//g;
+         $value =~ s/<([^>]|\n)*//g;
+      }
+   }
+   $FORM{$name} = $value;
+}
+}
+
+
+sub set_var {
+if ($FORM{'job'}) {
+   $job = "$FORM{'job'}";
+   &checkempty($job,"NO COMMAND");
+}
+else {
+   &error("NO COMMAND");
+}
+
+if ($FORM{'id'}) {
+   $id = "$FORM{'id'}";
+   &checkempty($id,"NO ID");
+}
+elsif ($job =~ /manage/) {
+   &error("NO ID");
+}
+
+if ($FORM{'password'}) {
+   $password = "$FORM{'password'}";
+   &checkempty($password,"NO Password");
+}
+elsif ($job =~ /manage/) {
+   &error("NO Password");
+}
+
+if ($job =~ /manage/) {
+   $temp=1;
+   foreach $manage_line (@manage) {
+      if ($manage_line eq "$id¡ü$password") {
+         $temp=2;
+         last;
+      }  
+   }
+   if ($temp ne "2") {
+      &error("ERROR");
+   }
+}
+
+if ($FORM{'username'}) {
+   $username = "$FORM{'username'}";
+   $username =~ s/\n//g;
+   $username =~ s/"//g;
+   $username =~ s/<//g;
+   $username =~ s/>//g;
+   $username =~ s/\&//g;
+   $username =~ s/¡ü//g;
+   &checkempty($username,"Please type your name");
+}
+elsif ($job eq "add") {
+   &error("Please type your name");
+}
+
+if ($FORM{'usermail'} =~ /.*\@.*\..*/) {
+   $usermail = "$FORM{'usermail'}";
+   $usermail =~ s/¡ü//g;
+   $usermail =~ s/\n//g;
+}
+
+if ($FORM{'userurl'} =~ /.*\:.*\..*/ ) {
+   $userurl = "$FORM{'userurl'}";
+   $userurl =~ s/¡ü//g;
+   $userurl =~ s/\n//g;
+}
+
+if ($FORM{'says'}) {
+   $says = "$FORM{'says'}";
+   $says =~ s/\n/<br>/g;
+   &checkempty($says,"NO MESSAGE");
+}
+elsif ($job eq "add") {
+   &error("NO MESSAGE");
+}
+
+if ($FORM{'number'}) {
+   $number = "$FORM{'number'}";
+   &checkempty($number,"NO NUMBER");
+}
+elsif ($job eq "managedel") {
+   &error("NO NUMBER");
+}
+
+($nsec,$nmin,$nhour,$nday,$nmon,$nyear,$wday,$yday,$isdst) = localtime(time+($time_miss*3600));
+$nmon++;
+if ($nmon<10) {$nmon="0$nmon";}
+if ($nday<10) {$nday="0$nday";}
+if ($nhour<10){$nhour="0$nhour";}
+if ($nmin<10) {$nmin="0$nmin";}
+if ($nsec<10) {$nsec="0$nsec";}
+$normal_time = "$nmon/$nday($nhour\:$nmin)";
+$userhost = $ENV{'REMOTE_HOST'};
+}      
+
+sub get_new_number {
+open(MAIN,"$numberfile") || die $!;
+$number = <MAIN>;
+close(MAIN);
+
+$number=int($number)+1;
+
+open(MAIN,">$numberfile") || die $!;
+print MAIN "$number";
+close(MAIN);
+}
+
+sub write_main {
+$write_main_subject = $_[0];
+
+open(MAIN,"$mainfile") || die $!;
+@main = <MAIN>;
+close(MAIN);
+
+if ($write_main_subject eq "add") {
+
+   open(MAIN,">$mainfile") || die $!;
+   foreach $main_line (@main) {
+      if ($main_line =~ /<!--begin-->/) {
+         print MAIN "<!--begin-->\n";
+         print MAIN "<!--number=$number--head-->\n";
+
+         print MAIN "<img src=../../../../dennis_ny/06_kommunikation/cgi-bin/$ledgifurl>";
+
+         print MAIN "<br>";
+         print MAIN "<br>";
+
+         print MAIN "<font size=2>";
+         print MAIN "$says";
+         print MAIN "</font>";
+
+         print MAIN "<br>";
+         print MAIN "<br>";
+
+         print MAIN "<font size=2><b>";
+         print MAIN "By $username";
+         print MAIN "</b></font>";
+
+         print MAIN "<br>";
+
+         if ($usermail) {
+
+         print MAIN "<font size=2>";
+         print MAIN "E-mail\:<a href=\"mailto:$usermail\">$usermail</a>";     
+         print MAIN "</font>";
+
+         print MAIN "<br>";
+
+         }
+         if ($userurl){
+         print MAIN "<font size=2>";
+         print MAIN "Web\:<a href=../../../../dennis_ny/06_kommunikation/cgi-bin//%22$userurl/%22 target=\"windows\">$userurl</a>";  
+         print MAIN "</font>";
+
+         print MAIN "<br>";
+
+         }
+
+         print MAIN "<font size=2>Date\:$normal_time</font>";
+
+         print MAIN "<br>";
+         print MAIN "<br>";
+
+         print MAIN "<!--number=$number--end-->\n";
+      }
+      else {
+         print MAIN "$main_line";
+      }
+   }
+   close(MAIN);
+
+}
+elsif ($write_main_subject eq "managedel") {
+   $temp=1;
+   open(MAIN,">$mainfile") || die $!;
+   foreach $main_line (@main) {
+      if ($main_line =~ /<!--number=$number--head-->/) {
+         $temp=2;
+         print MAIN ""; 
+      }
+      elsif ($main_line =~ /<!--number=$number--end-->/) {
+         $temp=3;
+         print MAIN "";
+      }
+      elsif ($temp==2) {
+         print MAIN "";
+      }
+      else {
+         print MAIN "$main_line";
+      }
+   }
+   close(MAIN);
+}
+
+}
+
+
+
+sub return_request {
+$return_request_subject = $_[0];
+
+open(MAIN,"$mainfile") || die $!;
+@main = <MAIN>;
+close(MAIN);
+
+if ($return_request_subject eq "manage") {
+   foreach $main_line (@main) {
+      if ($main_line =~ /<!--number=(.*)--head-->/) {
+         $number=$1;
+         print "<a href=../../../../dennis_ny/06_kommunikation/cgi-bin/$cgiurl?job=managedel&id=$id&password=$password&number=$number>del</a>$main_line";
+      }
+      else {
+         print "$main_line";
+      }
+   }
+}
+
+}
+
+
+sub return_succ {
+$return_succ_subject = $_[0];
+print "<head><title>$title</title>\n";
+if ($return_succ_subject eq "managedel") {
+   print "<META HTTP-EQUIV=REFRESH CONTENT=\&quot;3;URL=../../../../dennis_ny/06_kommunikation/cgi-bin/$cgiurl?job=manage&amp;id=$id&amp;password=$password%5C%22></head>\n";
+}
+else {
+   print "<META HTTP-EQUIV=REFRESH CONTENT=\&quot;3;URL=../../../../dennis_ny/06_kommunikation/cgi-bin/$mainurl/%22>\n";
+}
+print "\n";
+print "<center>\n";
+if ($return_succ_subject eq "add") {
+   print "<h2>Thank You for signing my Guestbook</h2>\n";
+
+}
+if ($return_succ_subject eq "managedel") {
+   print "<h2>Delete success!</h2>\n";
+}
+print "\n";
+print "<a href=../../../../dennis_ny/06_kommunikation/cgi-bin//%22$mainurl/%22>Back to $title</a>\n";
+   print "<br>";
+   print "<br>";
+   print "<br>";
+   print "<br>";
+   print "<br>";
+   print "Script by Hanna "Divinity" Werner";
+   print "<br>";
+   print "<a href=\"http://www.wwb.no/divinity\" target=\"_blank\">http://www.wwb.no/divinity</a>";
+
+print "</center>\n";
+}
+
+
+sub checkempty {
+$checkvalue = $_[0];
+$checkerror = $_[1];
+$checkvalue =~ s/<br>//g;
+$checkvalue =~ s/\n//g;
+$checkvalue =~ s/ //g;
+
+if ($checkvalue eq "") {
+   &error($checkerror);
+}
+
+}
+
+
+sub error {
+$error_subject = $_[0];
+print "<head><title>$wwwboardtitle error</title></head>\n";
+print "\n";
+print "<center><h2>\n";
+print "ERROR¡G$error_subject\n";
+print "</h2></center>\n";
+exit 0;
+}
+
+
+
+
+
+
+
+
+</body></html>
