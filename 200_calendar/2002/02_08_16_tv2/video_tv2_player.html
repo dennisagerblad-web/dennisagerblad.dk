@@ -44,35 +44,30 @@ function playerPlay() {
 }
 
 function pageLoad() {
-  player = new Player(); 
+  player = new Player();
 }
 </script>
 <body onLoad="pageLoad()">
 <BR>
 <TABLE  BORDER="0" ALIGN="CENTER" CELLPADDING="0" CELLSPACING="5" CLASS="ramme">
-  <TR> 
+  <TR>
     <TD VALIGN="TOP"><BR>
       <TABLE WIDTH="337" BORDER="0" ALIGN="CENTER" CELLPADDING="0" CELLSPACING="0">
-        <TR> 
+        <TR>
           <TD><B><IMG SRC="../../logoer/tv2_logo.gif" WIDTH="360" HEIGHT="40"></B></TD>
         </TR>
-        <TR> 
+        <TR>
           <TD ALIGN="RIGHT"><B>16. August 2002</B> </TD>
         </TR>
       </TABLE>
       <HR>
       <TABLE WIDTH="360" BORDER="0" CELLSPACING="0" CELLPADDING="0" HEIGHT="341" ALIGN="CENTER" BACKGROUND="tv2_ramme.gif">
-        <TR> 
+        <TR>
           <TD ALIGN="CENTER"  VALIGN="TOP" COLSPAN="3"><IMG SRC="../../../cv/0/images/pix_trans.gif" WIDTH="50" HEIGHT="69"><BR>
-            <OBJECT ID="RAOCX" CLASSID="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA" HEIGHT="215" WIDTH="268" NAME="prim_player">
-              <PARAM NAME="CONTROLS" VALUE="ImageWindow">
-              <PARAM NAME="AUTOSTART" VALUE="true">
-              <PARAM NAME="MAINTAINASPECT" VALUE="0">
-              <PARAM NAME="SRC" VALUE="http://konsol.tv2.dk/ram/9012.ram">
-            </OBJECT>
+
           </TD>
         </TR>
-        <TR VALIGN="TOP"> 
+        <TR VALIGN="TOP">
           <TD WIDTH="33%"><A HREF="video_tv2_foto.html" TARGET="_self" onFocus="this.blur()"><IMG SRC="../../../cv/0/images/pix_trans.gif" WIDTH="60" HEIGHT="45" BORDER="0" ALT="stop"></A></TD>
           <TD ALIGN="CENTER" WIDTH="33%"><A HREF="javascript:player.pause()" onFocus="this.blur()"><IMG SRC="../../../cv/0/images/pix_trans.gif" WIDTH="40" HEIGHT="45" BORDER="0" ALT="pause"></A></TD>
           <TD ALIGN="RIGHT" WIDTH="33%"><A HREF="javascript:player.play()" onFocus="this.blur()"><IMG SRC="../../../cv/0/images/pix_trans.gif" WIDTH="60" HEIGHT="45" BORDER="0" ALT="play"></A></TD>
