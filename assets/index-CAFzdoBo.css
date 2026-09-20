@@ -30,3 +30,20 @@
   .porcelain-series .art-series-strip{gap:10px;padding-right:0}
   .porcelain-series .art-series-strip>img,.porcelain-series .art-series-strip>.rotated-cup{width:min(42vw,calc((100vw - 70px)/2));height:min(31.5vw,calc((100vw - 70px)*.375))}
 }
+
+/* Timeline header placement and panel alignment at every screen width. */
+.section-5 .section-heading{top:12px;left:16px;right:auto;align-items:flex-start}
+.section-5 .archive .section-heading h1{width:180px}
+.timeline-shell{padding-top:70px}
+.calendar-biography{margin-top:0;padding-right:0}
+.archive .calendar-biography p{color:#111!important;text-shadow:0 1px 2px #fff9}
+.calendar-biography a{color:#111!important}
+.timeline-controls{margin-left:auto;margin-right:0;transform:none}
+.timeline-controls:before{width:100%;left:0;filter:drop-shadow(0 10px 10px #0008)}
+@media (width<=760px){
+  .section-5 .section-heading{top:8px;left:12px;right:auto}
+  .section-5 .archive .section-heading h1{width:145px}
+  .timeline-shell{padding-top:64px}
+  .timeline-controls{width:min(430px,calc(100vw - 20px));margin-left:auto;margin-right:0;transform:none}
+  .timeline-controls:before{width:100%;left:0}
+}
