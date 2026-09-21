@@ -47,3 +47,45 @@
   .timeline-controls{width:min(430px,calc(100vw - 20px));margin-left:auto;margin-right:0;transform:none}
   .timeline-controls:before{width:100%;left:0}
 }
+
+/* iPhone and narrow-screen corrections from the September 2026 archive review. */
+.timeline-popup-date{align-self:flex-start;color:var(--timeline-accent);font:900 18px/1.2 Georgia,serif}
+.timeline-popup-summary{align-items:stretch;text-align:left;padding:26px 30px 30px}
+.timeline-popup-summary>svg{align-self:center}
+.timeline-popup-summary p{max-width:none}
+.timeline-popup-summary figure,.timeline-popup-gallery{width:100%}
+.timeline-popup-summary figure img{width:100%;max-height:none;object-fit:contain}
+.timeline-popup-gallery{display:grid;gap:14px}
+.timeline-popup-gallery figure{margin:0}
+.timeline-popup-gallery figure img{margin:0}
+
+@media (width<=600px){
+  .timeline-popup-summary{gap:12px;padding:24px 18px 18px}
+  .timeline-popup-summary p{font-size:20px;line-height:1.4}
+  .timeline-popup-summary figure img{width:100%;max-height:none}
+  .event-left .timeline-entry,.event-right .timeline-entry{width:100%;margin-left:0}
+  .event-left .timeline-entry{padding-right:10px}
+  .event-right .timeline-entry{padding-left:10px}
+  .timeline-entry time{display:block;font-size:13px;line-height:1.25;white-space:nowrap}
+  .timeline-shell[data-theme="art"] .life-year>h2,
+  .timeline-shell[data-theme="art"] .timeline-entry time,
+  .timeline-shell[data-theme="art"] .timeline-entry .life-category{color:#4b2b00!important;text-shadow:0 1px 0 #ffe3a766}
+  .timeline-shell[data-theme="art"] .continuous-thread{stroke:#643900!important;stroke-width:4px}
+  .timeline-shell[data-theme="art"] .timeline-arrowhead{fill:#643900!important}
+  .timeline-shell[data-theme="art"] .life-dot{background:#643900!important;box-shadow:0 0 0 4px #d89a32!important}
+  .is-open.section-3 .portrait-underlay{background-position:50% 10%;background-size:cover}
+}
+
+@media (orientation:landscape) and (max-height:650px){
+  .face-menu{transform:scale(.78);transform-origin:50% 50%}
+  .menu-0{width:22%;top:5%;left:22%}
+  .menu-1{width:20%;top:8%;right:14%}
+  .menu-2{width:30%;inset:auto auto 6% 18%}
+  .menu-3{width:27%;top:56%;right:8%}
+  .menu-4{width:18%;top:31%;left:8%}
+  .menu-5{width:27%;inset:auto 5% 2% auto}
+  .section-5 .timeline-shell{padding-top:12px}
+  .section-5 .calendar-biography{display:none}
+  .section-5 .timeline-controls{top:4px;margin-bottom:8px;padding-top:6px;padding-bottom:5px}
+  .section-5 .timeline-controls:before{height:108px}
+}
