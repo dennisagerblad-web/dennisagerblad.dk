@@ -102,3 +102,70 @@
   .timeline-shell[data-theme="art"] .life-dot{border-color:#2a1500!important}
   .timeline-shell[data-theme="art"] .timeline-line{background:#2a1500!important}
 }
+
+/* Mobile orientation and archive refinements, 2026-09-22. */
+@media (max-width:760px) and (orientation:portrait){
+  .performance-viewer:not(.release-viewer){width:100%;height:calc(100svh - 24px)}
+  .performance-viewer:not(.release-viewer) figure,
+  .performance-viewer:not(.release-viewer) figure.is-portrait,
+  .performance-viewer:not(.release-viewer) figure.is-landscape{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;align-content:center;align-items:center;gap:12px;width:100%;height:100%;display:grid}
+  .performance-viewer:not(.release-viewer) figure>img,
+  .performance-viewer:not(.release-viewer) figure.is-portrait>img{justify-self:center;object-fit:contain;width:auto;max-width:100%;height:auto;max-height:calc(100svh - 150px)}
+  .performance-viewer:not(.release-viewer) figcaption{text-align:center;width:100%;margin:0}
+}
+@media (max-width:1000px) and (orientation:landscape){
+  .performance-lightbox{padding:8px 14px}
+  .performance-viewer:not(.release-viewer){width:100%;height:calc(100svh - 16px)}
+  .performance-viewer:not(.release-viewer) figure,
+  .performance-viewer:not(.release-viewer) figure.is-portrait,
+  .performance-viewer:not(.release-viewer) figure.is-landscape{grid-template-columns:minmax(0,1fr) minmax(190px,30vw);align-items:center;gap:clamp(14px,2.5vw,32px);width:100%;height:100%;display:grid}
+  .performance-viewer:not(.release-viewer) figure>img,
+  .performance-viewer:not(.release-viewer) figure.is-portrait>img{justify-self:end;object-fit:contain;width:auto;max-width:100%;height:auto;max-height:calc(100svh - 20px)}
+  .performance-viewer:not(.release-viewer) figcaption{text-align:left;align-self:center;margin:0}
+  .section-0 .music-intro-list{padding-right:150px;font-size:clamp(11px,1.7vw,15px)}
+  .section-0 .music-intro-list li:nth-child(-n+2){white-space:nowrap}
+  .ship.section-5 .archive{right:-3vw}
+  .section-5 .timeline-controls{margin-left:auto;margin-right:0;transform:translateX(clamp(55px,8vw,100px))}
+  .section-3 .section-heading{top:2px;left:8px}
+  .section-3 .section-heading h1{width:min(250px,26vw)}
+  .ship.section-3 .archive{top:80px;bottom:8px}
+}
+/* A narrow pointer continues the timeline instead of the former broad cap. */
+.timeline-shell .timeline-arrowhead{stroke:none}
+/* Separate each thumbnail from its category row. */
+.timeline-entry .timeline-video-thumbnail{margin-top:12px}
+/* Let the Literature portrait settle into its corrected crop when the door opens. */
+@keyframes literature-background-settle{from{transform:translate3d(2.2vw,-1.2vh,0) scale(1.025)}to{transform:translate3d(0,0,0) scale(1)}}
+.is-open.section-3 .portrait-underlay{animation:literature-background-settle 1.05s cubic-bezier(.2,.72,.2,1) .12s both}
+
+/* Mobile orientation and archive refinements, 2026-09-22. */
+@media (max-width:760px) and (orientation:portrait){
+  .performance-viewer:not(.release-viewer){width:100%;height:calc(100svh - 24px)}
+  .performance-viewer:not(.release-viewer) figure,
+  .performance-viewer:not(.release-viewer) figure.is-portrait,
+  .performance-viewer:not(.release-viewer) figure.is-landscape{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;align-items:center;gap:12px;width:100%;height:100%;display:grid}
+  .performance-viewer:not(.release-viewer) figure>img,
+  .performance-viewer:not(.release-viewer) figure.is-portrait>img{justify-self:center;object-fit:contain;width:auto;max-width:100%;height:auto;max-height:calc(100svh - 150px)}
+  .performance-viewer:not(.release-viewer) figcaption{text-align:center;width:100%;margin:0}
+}
+@media (max-width:1000px) and (orientation:landscape){
+  .performance-lightbox{padding:8px 14px}
+  .performance-viewer:not(.release-viewer){width:100%;height:calc(100svh - 16px)}
+  .performance-viewer:not(.release-viewer) figure,
+  .performance-viewer:not(.release-viewer) figure.is-portrait,
+  .performance-viewer:not(.release-viewer) figure.is-landscape{grid-template-columns:minmax(0,1fr) minmax(190px,30vw);align-items:center;gap:clamp(14px,2.5vw,32px);width:100%;height:100%;display:grid}
+  .performance-viewer:not(.release-viewer) figure>img,
+  .performance-viewer:not(.release-viewer) figure.is-portrait>img{justify-self:end;object-fit:contain;width:auto;max-width:100%;height:auto;max-height:calc(100svh - 20px)}
+  .performance-viewer:not(.release-viewer) figcaption{text-align:left;align-self:center;margin:0}
+  .section-0 .music-intro-list{padding-right:150px;font-size:clamp(11px,1.7vw,15px)}
+  .section-0 .music-intro-list li:nth-child(-n+2){white-space:nowrap}
+  .ship.section-5 .archive{right:-3vw}
+  .section-5 .timeline-controls{margin-left:auto;margin-right:0;transform:translateX(clamp(55px,8vw,100px))}
+  .section-3 .section-heading{top:2px;left:8px}
+  .section-3 .section-heading h1{width:min(250px,26vw)}
+  .ship.section-3 .archive{top:80px;bottom:8px}
+}
+.timeline-shell .timeline-arrowhead{stroke:none}
+.timeline-entry .timeline-video-thumbnail{margin-top:12px}
+@keyframes literature-background-settle{from{transform:translate3d(2.2vw,-1.2vh,0) scale(1.025)}to{transform:translate3d(0,0,0) scale(1)}}
+.is-open.section-3 .portrait-underlay{animation:literature-background-settle 1.05s cubic-bezier(.2,.72,.2,1) .12s both}
