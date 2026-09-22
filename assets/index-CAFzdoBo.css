@@ -133,7 +133,7 @@
 /* A narrow pointer continues the timeline instead of the former broad cap. */
 .timeline-shell .timeline-arrowhead{stroke:none}
 /* Separate each thumbnail from its category row. */
-.timeline-entry .timeline-video-thumbnail{margin-top:12px}
+.timeline-entry .timeline-thumbnail{margin-top:14px}
 /* Let the Literature portrait settle into its corrected crop when the door opens. */
 @keyframes literature-background-settle{from{transform:translate3d(2.2vw,-1.2vh,0) scale(1.025)}to{transform:translate3d(0,0,0) scale(1)}}
 .is-open.section-3 .portrait-underlay{animation:literature-background-settle 1.05s cubic-bezier(.2,.72,.2,1) .12s both}
@@ -166,6 +166,6 @@
   .ship.section-3 .archive{top:80px;bottom:8px}
 }
 .timeline-shell .timeline-arrowhead{stroke:none}
-.timeline-entry .timeline-video-thumbnail{margin-top:12px}
+.timeline-entry .timeline-thumbnail{margin-top:14px}
 @keyframes literature-background-settle{from{transform:translate3d(2.2vw,-1.2vh,0) scale(1.025)}to{transform:translate3d(0,0,0) scale(1)}}
 .is-open.section-3 .portrait-underlay{animation:literature-background-settle 1.05s cubic-bezier(.2,.72,.2,1) .12s both}
