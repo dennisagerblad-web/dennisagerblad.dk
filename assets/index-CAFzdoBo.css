@@ -124,8 +124,6 @@
   .performance-viewer:not(.release-viewer) figcaption{text-align:left;align-self:center;margin:0}
   .section-0 .music-intro-list{padding-right:150px;font-size:clamp(11px,1.7vw,15px)}
   .section-0 .music-intro-list li:nth-child(-n+2){white-space:nowrap}
-  .ship.section-5 .archive{right:-3vw}
-  .section-5 .timeline-controls{margin-left:auto;margin-right:0;transform:translateX(clamp(55px,8vw,100px))}
   .section-3 .section-heading{top:2px;left:8px}
   .section-3 .section-heading h1{width:min(250px,26vw)}
   .ship.section-3 .archive{top:80px;bottom:8px}
@@ -159,8 +157,6 @@
   .performance-viewer:not(.release-viewer) figcaption{text-align:left;align-self:center;margin:0}
   .section-0 .music-intro-list{padding-right:150px;font-size:clamp(11px,1.7vw,15px)}
   .section-0 .music-intro-list li:nth-child(-n+2){white-space:nowrap}
-  .ship.section-5 .archive{right:-3vw}
-  .section-5 .timeline-controls{margin-left:auto;margin-right:0;transform:translateX(clamp(55px,8vw,100px))}
   .section-3 .section-heading{top:2px;left:8px}
   .section-3 .section-heading h1{width:min(250px,26vw)}
   .ship.section-3 .archive{top:80px;bottom:8px}
@@ -169,3 +165,17 @@
 .timeline-entry .timeline-thumbnail{margin-top:14px}
 @keyframes literature-background-settle{from{transform:translate3d(2.2vw,-1.2vh,0) scale(1.025)}to{transform:translate3d(0,0,0) scale(1)}}
 .is-open.section-3 .portrait-underlay{animation:literature-background-settle 1.05s cubic-bezier(.2,.72,.2,1) .12s both}
+
+/* Keep the timeline stationary and its green navigation within the viewport. */
+.ship.section-5 .archive,.section-5 .archive-scroll{overflow-x:hidden}
+.section-5 .archive-scroll{overscroll-behavior-x:none;touch-action:pan-y}
+.section-5 .timeline-controls{box-sizing:border-box;width:min(430px,100%);max-width:100%;margin-left:auto;margin-right:0;transform:none}
+.section-5 .timeline-controls:before{width:100%;left:0}
+@media (min-width:761px) and (max-width:1100px){
+  .ship.section-5 .archive{right:8px;padding-right:0}
+  .section-5 .archive-scroll{padding-right:8px}
+  .section-5 .timeline-shell{width:100%}
+}
+@media (max-width:760px){
+  .section-5 .timeline-controls{width:min(430px,100%)}
+}
