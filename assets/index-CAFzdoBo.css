@@ -89,3 +89,16 @@
   .section-5 .timeline-controls{top:4px;margin-bottom:8px;padding-top:6px;padding-bottom:5px}
   .section-5 .timeline-controls:before{height:108px}
 }
+
+/* Mobile timeline review 2026-09-22, round 2 */
+@media (width<=760px){
+  /* Keep the Literature portrait in the same correct position while open and while closing. */
+  .section-3 .portrait-underlay,.is-open.section-3 .portrait-underlay{background-position:80% -22svh;background-size:auto 120svh}
+  /* The sticky island is about 122px high; leave the selected year visibly below it. */
+  .life-year{scroll-margin-top:156px}
+  /* Art dates and labels need strong contrast over the ochre panels. */
+  .timeline-shell[data-theme="art"] .timeline-entry time,
+  .timeline-shell[data-theme="art"] .timeline-entry .life-category{color:#1b0e00!important;text-shadow:0 1px 0 #fff6!important;font-weight:900}
+  .timeline-shell[data-theme="art"] .life-dot{border-color:#2a1500!important}
+  .timeline-shell[data-theme="art"] .timeline-line{background:#2a1500!important}
+}
