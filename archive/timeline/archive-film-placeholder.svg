@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Arkivfilm</title><desc id="desc">Den oprindelige Google Video findes ikke længere</desc>
+  <rect width="640" height="360" rx="24" fill="#171315"/>
+  <rect x="44" y="44" width="552" height="272" rx="18" fill="#2b2427" stroke="#76d7ef" stroke-width="4"/>
+  <circle cx="320" cy="155" r="54" fill="#76d7ef"/><path d="M303 121l55 34-55 34z" fill="#171315"/>
+  <text x="320" y="245" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="32">ARKIVFILM</text>
+  <text x="320" y="278" text-anchor="middle" fill="#d9d4d6" font-family="Arial,sans-serif" font-size="18">Den oprindelige Google Video findes ikke længere</text>
+</svg>
