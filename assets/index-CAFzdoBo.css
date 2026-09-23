@@ -182,3 +182,9 @@
 
 /* Timeline supporting copy stays visually subordinate to the event title. */
 .timeline-popup-summary p.timeline-popup-detail{font:400 18px/1.45 Georgia,serif;color:#f4dfe3;max-width:620px}
+
+/* Scene uses the same red for its selected tab and year markers as its timeline. */
+.timeline-shell[data-theme="live"] .timeline-groups button.active{background:var(--timeline-line);border-color:var(--timeline-line);color:#fff}
+.timeline-shell[data-theme="live"] .timeline-years a,.timeline-shell[data-theme="live"] .life-year>h2{color:var(--timeline-line)}
+/* Thumbnails in every timeline sit directly on their cards. */
+.timeline-shell .timeline-thumbnail{border:0}
