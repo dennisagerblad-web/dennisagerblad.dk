@@ -188,3 +188,5 @@
 .timeline-shell[data-theme="live"] .timeline-years a,.timeline-shell[data-theme="live"] .life-year>h2{color:var(--timeline-line)}
 /* Thumbnails in every timeline sit directly on their cards. */
 .timeline-shell .timeline-thumbnail{border:0}
+
+.timeline-popup-link{display:block;width:max-content;max-width:100%;margin:18px auto 0;color:var(--timeline-accent);text-align:center;text-decoration:underline;text-underline-offset:4px;font-weight:700}
