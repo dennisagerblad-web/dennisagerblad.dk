@@ -195,3 +195,8 @@
 .timeline-popup-juleshow-2024 .timeline-popup-gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));align-items:center}.timeline-popup-juleshow-2024 .timeline-popup-gallery figure:nth-child(1){grid-column:1;grid-row:1}.timeline-popup-juleshow-2024 .timeline-popup-gallery figure:nth-child(2){grid-column:1;grid-row:2}.timeline-popup-juleshow-2024 .timeline-popup-gallery figure:nth-child(3){grid-column:2;grid-row:1 / span 2}.timeline-popup-juleshow-2024 .timeline-popup-gallery figure:nth-child(n+4){grid-column:1 / -1}
 
 @media(max-width:700px){.timeline-popup-juleshow-2024 .timeline-popup-gallery{grid-template-columns:minmax(0,1fr);grid-template-rows:auto}.timeline-popup-juleshow-2024 .timeline-popup-gallery figure:nth-child(1),.timeline-popup-juleshow-2024 .timeline-popup-gallery figure:nth-child(2),.timeline-popup-juleshow-2024 .timeline-popup-gallery figure:nth-child(3){grid-column:1;grid-row:auto}}
+
+/* Keep long video popups anchored at the top so their player stays visible. */
+.timeline-video-viewer{justify-content:flex-start}
+/* Preserve every source photo ratio while fitting large images inside the popup. */
+.timeline-popup-gallery figure img{width:auto;height:auto;max-width:100%;max-height:62svh;object-fit:contain}
