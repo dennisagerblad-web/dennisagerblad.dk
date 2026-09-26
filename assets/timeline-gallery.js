@@ -6,7 +6,7 @@ let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
-const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=approved-split-20260926-v20', import.meta.url)).then(r => {
+const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=dansk-20260926-v21', import.meta.url)).then(r => {
   if (!r.ok) throw new Error('Gallery data unavailable');
   return r.json();
 }).catch(error => { dataPromise = null; throw error; });
@@ -233,7 +233,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   const dialog = el('section', 'tg-dialog'); dialog.setAttribute('role','dialog');
   dialog.setAttribute('aria-modal','true'); dialog.setAttribute('aria-labelledby','tg-title');
   const header = el('header', 'tg-header');
-  const title = el('h2', '', entry.popupTitle || entry.shortTitle || entry.title); title.id = 'tg-title';
+  const title = el('h2', '', entry.title); title.id = 'tg-title';
   const details = el('div','tg-details');
   const date = el('time','tg-date',timelineDate(entry.date, entry.display)); date.dateTime = entry.date;
   header.append(date, title, details);
@@ -488,7 +488,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     if (closed) return;
     const gallery = data.entries?.[`${entry.date}|${entry.category}|${entry.title}`];
     media = data.media || {};
-    title.textContent = entry.popupTitle || entry.shortTitle || entry.title;
+    title.textContent = entry.title;
     const paragraphs = gallery?.details || (entry.details ? [entry.details] : []);
     const longCopy = paragraphs.join(' ').length > 700 && paragraphs.length > 1;
     if (longCopy) {
