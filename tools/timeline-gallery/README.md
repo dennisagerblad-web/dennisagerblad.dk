@@ -1,6 +1,6 @@
 # Timeline popups and galleries
 
-The active site is `index.html` plus `assets/index-BLggFwkW.js`. The older Vite app in `migration-tools/dennis-github-app` predates the September 2026 changes. Rebuilding it would overwrite newer content. This change keeps the current bundle and adds a single scoped click handler importing the readable module `assets/timeline-gallery.js`. The other categories retain their archive, video and release content inside popups with the same title-first header.
+The active site is `index.html` plus the bundle it references (`assets/index-281e0f92.js` at this revision). The older Vite app in `migration-tools/dennis-github-app` predates the September 2026 changes. Rebuilding it would overwrite newer content. The current bundle imports the readable module `assets/timeline-gallery.js`. The other categories retain their archive, video and release content inside popups with the same title-first header.
 
 The popup is implemented in `assets/timeline-gallery.js` and `assets/timeline-gallery.css`. There are three named effects in `galleryEffects`, selected by `timelineEffects`:
 
@@ -10,7 +10,7 @@ The popup is implemented in `assets/timeline-gallery.js` and `assets/timeline-ga
 
 Grow and Morph use the same 1000 ms sine easing, `0.5 - cos(t * PI) / 2`, for displacement and fade. Pointer drags scrub progress directly; release eases over the remaining fraction. Reversal, cancellation, keyboard navigation and reduced motion are supported. No UI Initiative code is included, and there are no paid dependencies.
 
-Each event gets an independent gallery. Its heading is `shortTitle || title`, matching the timeline, with descriptions below it. Credits and supplementary videos stay above the photo. The added “Se det oprindelige arkiv” link was removed. The only visible image controls are two white chevrons. No count, footer strip or fit toggle is shown.
+Each event gets an independent gallery. Its popup heading is `title`, with descriptions below it. Credits stay above the photo; an associated video is embedded directly before the photo instead of hidden behind a “Se videoen” control. The added “Se det oprindelige arkiv” link was removed. The only visible image controls are two white chevrons. No count, footer strip or fit toggle is shown.
 
 The majority of portrait or landscape photos determines the frame orientation on every platform, using the geometric mean of the winning photos' aspect ratios. Squares are neutral; tied counts follow the viewport orientation. All photos fill this stable frame using proportional cover cropping. Vertical cropping starts at the top; detected faces can shift the crop just enough to retain them. If all faces cannot fit horizontally, the largest face is prioritized. Face detection is approximate; not every person can fit into a narrow crop. Overrides may supply `focus` / `faces` in the media manifest.
 

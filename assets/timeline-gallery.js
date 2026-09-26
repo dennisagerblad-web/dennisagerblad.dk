@@ -6,7 +6,7 @@ let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
-const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=dansk-20260926-v22', import.meta.url)).then(r => {
+const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=personlig-20260927-v23', import.meta.url)).then(r => {
   if (!r.ok) throw new Error('Gallery data unavailable');
   return r.json();
 }).catch(error => { dataPromise = null; throw error; });
@@ -508,7 +508,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     if (entry.videoId) {
       const video=el('iframe','tg-video'); video.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(entry.videoId)}`;
       video.title=entry.title; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
-      const more=el('details','tg-more'); more.append(el('summary','','Se videoen'),video); supplementary.append(more);
+      dialog.insertBefore(video,viewer);
     }
     if (entry.popupHref) link(entry.popupLabel || 'Se linket ↗',entry.popupHref);
     if (items.length) {
