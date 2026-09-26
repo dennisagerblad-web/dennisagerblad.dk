@@ -1,0 +1,54 @@
+/* Only the Scene and Kunst timeline galleries. */
+.tg-overlay { z-index:10000; padding:32px; background:#09090bea; backdrop-filter:blur(12px); }
+.tg-dialog { position:relative; width:min(90vw,1200px); max-height:calc(100dvh - 64px); overflow:auto; overscroll-behavior:contain; background:#171719; color:#fff; border:0; border-radius:9px; box-shadow:0 24px 100px #0009; }
+.tg-dialog * { box-sizing:border-box; }
+.tg-header { padding:clamp(18px,2vw,30px); padding-right:70px; }
+.tg-header h2 { margin:0; color:#fff; font:500 clamp(22px,2vw,34px)/1.2 Georgia,serif; text-wrap:balance; }
+.tg-details { margin-top:10px; }
+.tg-details:empty { display:none; }
+.tg-details p { margin:0 0 6px; color:#e5e5e6; font:clamp(15px,1.15vw,19px)/1.45 Georgia,serif; }
+.tg-date { display:block; margin-top:10px; color:#aeafb2; font:11px/1.3 system-ui,sans-serif; letter-spacing:.1em; }
+.tg-close { position:absolute; z-index:5; top:10px; right:12px; width:44px; height:44px; border:0; border-radius:0; background:transparent; color:#fff; font:32px/1 system-ui,sans-serif; cursor:pointer; text-shadow:0 1px 8px #000; }
+.tg-viewer { min-width:0; }
+.tg-stage { position:relative; width:100%; aspect-ratio:var(--tg-ratio,1.33333); overflow:hidden; background:#171719; touch-action:pan-y pinch-zoom; }
+.tg-stage canvas { position:absolute; inset:0; display:block; width:100%; height:100%; }
+.tg-effect { opacity:0; pointer-events:none; }
+.tg-effect.is-active { opacity:1; }
+.tg-status { position:absolute; inset:0; display:flex; gap:10px; align-items:center; justify-content:center; padding:24px; text-align:center; color:#fff; font:16px/1.5 system-ui,sans-serif; }
+.tg-arrow { position:absolute; z-index:2; top:50%; transform:translateY(-50%); width:60px; height:90px; padding:0; border:0; border-radius:0; background:transparent; color:#fff; cursor:pointer; filter:drop-shadow(0 1px 4px #0008); }
+.tg-arrow::after { content:''; display:block; position:absolute; top:28px; width:25px; height:25px; border-top:2px solid #fff; border-right:2px solid #fff; }
+.tg-previous { left:0; }
+.tg-previous::after { left:22px; transform:rotate(-135deg); }
+.tg-next { right:0; }
+.tg-next::after { right:22px; transform:rotate(45deg); }
+.tg-arrow:hover { filter:drop-shadow(0 1px 6px #000); }
+.tg-supplementary { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 18px; margin-top:10px; color:#c3c3c6; font:12px/1.5 system-ui,sans-serif; }
+.tg-supplementary:empty { display:none; }
+.tg-supplementary a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.tg-credit { margin:0; font:inherit; }
+.tg-video { display:block; width:100%; aspect-ratio:16/9; border:0; margin-top:12px; }
+.tg-more { width:100%; }
+.tg-more summary { margin:8px 0; cursor:pointer; color:#ccc; font:13px/1.5 system-ui,sans-serif; }
+.tg-dialog :focus-visible { outline:2px solid #fff; outline-offset:-4px; }
+.tg-dialog [hidden] { display:none!important; }
+.tg-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+@media (max-width:760px), (max-width:1100px) and (max-height:600px) {
+  .tg-overlay { padding:0; }
+  .tg-dialog { max-width:100vw; max-height:100dvh; border-radius:0; }
+  .tg-header { padding:18px 54px 16px 18px; }
+  .tg-header h2 { font-size:22px; }
+  .tg-close { top:5px; right:5px; }
+  .tg-arrow { width:48px; height:80px; }
+  .tg-arrow::after { width:20px; height:20px; }
+  .tg-previous::after { left:17px; }
+  .tg-next::after { right:17px; }
+}
+@media (orientation:landscape) and (max-height:500px) {
+  .tg-header { padding:10px 54px 10px 16px; }
+  .tg-header h2 { font-size:18px; }
+  .tg-details { margin-top:4px; }
+  .tg-details p { font-size:13px; margin-bottom:0; }
+  .tg-date { margin-top:6px; font-size:10px; }
+  .tg-supplementary { margin-top:5px; font-size:11px; }
+}
+@media (prefers-reduced-motion:reduce) { .tg-effect { display:none; } }
