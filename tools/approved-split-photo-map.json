@@ -1,0 +1,337 @@
+[
+  {
+    "id": "B01",
+    "sources": [
+      "archive/legacy/200_calendar/1991/1991_birthday_02a.jpg",
+      "archive/legacy/200_calendar/1991/1991_birthday_02b.jpg",
+      "archive/legacy/200_calendar/1991/1991_birthday_02c.jpg"
+    ],
+    "output": "./archive/timeline/combined/B01-1991_birthday.png"
+  },
+  {
+    "id": "B02",
+    "sources": [
+      "archive/legacy/200_calendar/1991/1991_birthday_04a.jpg",
+      "archive/legacy/200_calendar/1991/1991_birthday_04b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B02-1991_birthday.png"
+  },
+  {
+    "id": "B03",
+    "sources": [
+      "archive/legacy/200_calendar/1991/1991_birthday_01a.jpg",
+      "archive/legacy/200_calendar/1991/1991_birthday_01b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B03-1991_birthday.png"
+  },
+  {
+    "id": "B04",
+    "sources": [
+      "archive/legacy/200_calendar/2000/00_10_31_halloween/2000_halloween_04a.jpg",
+      "archive/legacy/200_calendar/2000/00_10_31_halloween/2000_halloween_04b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B04-2000_halloween.png"
+  },
+  {
+    "id": "B05",
+    "sources": [
+      "archive/legacy/200_calendar/2000/00_10_31_halloween/2000_halloween_05a.jpg",
+      "archive/legacy/200_calendar/2000/00_10_31_halloween/2000_halloween_05b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B05-2000_halloween.png"
+  },
+  {
+    "id": "B06",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_06_01_foer_cabaret/2002_06_01_flyer_03a.jpg",
+      "archive/legacy/200_calendar/2002/02_06_01_foer_cabaret/2002_06_01_flyer_03b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B06-2002_06_01_flyer.png"
+  },
+  {
+    "id": "B07",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_06_01_foer_cabaret/2002_06_01_flyer_02a.jpg",
+      "archive/legacy/200_calendar/2002/02_06_01_foer_cabaret/2002_06_01_flyer_02b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B07-2002_06_01_flyer.png"
+  },
+  {
+    "id": "B08",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_06_01_foer_cabaret/2002_06_01_flyer_01a.jpg",
+      "archive/legacy/200_calendar/2002/02_06_01_foer_cabaret/2002_06_01_flyer_01b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B08-2002_06_01_flyer.png"
+  },
+  {
+    "id": "B09",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_hverdag_04a.jpg",
+      "archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_hverdag_04b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B09-2002_hverdag.png"
+  },
+  {
+    "id": "B10",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_strand_04a.jpg",
+      "archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_strand_04b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B10-2002_strand.png"
+  },
+  {
+    "id": "B11",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_strand_07a.jpg",
+      "archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_strand_07b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B11-2002_strand.png"
+  },
+  {
+    "id": "B12",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_mermaid_01a.jpg",
+      "archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_mermaid_01b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B12-2002_08_17_mermaid.png"
+  },
+  {
+    "id": "B13",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_mermaid_05a.jpg",
+      "archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_mermaid_05b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B13-2002_08_17_mermaid.png"
+  },
+  {
+    "id": "B14",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_09_01_frk_verden/presse_panbladet_01a.jpg",
+      "archive/legacy/200_calendar/2002/02_09_01_frk_verden/presse_panbladet_01b.jpg",
+      "archive/legacy/200_calendar/2002/02_09_01_frk_verden/presse_panbladet_01c.jpg"
+    ],
+    "output": "./archive/timeline/combined/B14-presse_panbladet.png"
+  },
+  {
+    "id": "B15",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_08a.jpg",
+      "archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_08b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B15-2002_09_08_design.png"
+  },
+  {
+    "id": "B16",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_07a.jpg",
+      "archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_07b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B16-2002_09_08_design.png"
+  },
+  {
+    "id": "B17",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_09_11_electrical_record_opening/2002_10_11_electical_01a.jpg",
+      "archive/legacy/200_calendar/2002/02_09_11_electrical_record_opening/2002_10_11_electical_01b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B17-2002_10_11_electical.png"
+  },
+  {
+    "id": "B18",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_09_11_electrical_record_opening/2002_10_11_electical_03a.jpg",
+      "archive/legacy/200_calendar/2002/02_09_11_electrical_record_opening/2002_10_11_electical_03b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B18-2002_10_11_electical.png"
+  },
+  {
+    "id": "B19",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_10_01_kulturkontakten/kultur_kontakten_for_02a.jpg",
+      "archive/legacy/200_calendar/2002/02_10_01_kulturkontakten/kultur_kontakten_for_02b.jpg",
+      "archive/legacy/200_calendar/2002/02_10_01_kulturkontakten/kultur_kontakten_for_02c.jpg"
+    ],
+    "output": "./archive/timeline/combined/B19-kultur_kontakten_for.png"
+  },
+  {
+    "id": "B20",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_10_11_kulturnatten/2002_10_11_kulturnat_03a.jpg",
+      "archive/legacy/200_calendar/2002/02_10_11_kulturnatten/2002_10_11_kulturnat_03b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B20-2002_10_11_kulturnat.png"
+  },
+  {
+    "id": "B21",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_10_19_filmfestival/2002_10_19_filmfestival_02a.jpg",
+      "archive/legacy/200_calendar/2002/02_10_19_filmfestival/2002_10_19_filmfestival_02b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B21-2002_10_19_filmfestival.png"
+  },
+  {
+    "id": "B22",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_11_01_filmhuset/presse_panbladet_04c.jpg",
+      "archive/legacy/200_calendar/2002/02_11_01_filmhuset/presse_panbladet_04d.jpg"
+    ],
+    "output": "./archive/timeline/combined/B22-presse_panbladet.png"
+  },
+  {
+    "id": "B23",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_12_01_pan_lefreak/presse_panbladet_05a.jpg",
+      "archive/legacy/200_calendar/2002/02_12_01_pan_lefreak/presse_panbladet_05b.jpg",
+      "archive/legacy/200_calendar/2002/02_12_01_pan_lefreak/presse_panbladet_05c.gif"
+    ],
+    "output": "./archive/timeline/combined/B23-presse_panbladet.png"
+  },
+  {
+    "id": "B24",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_grr-itt_04a.jpg",
+      "archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_grr-itt_04b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B24-2002_12_20_grr-itt.png"
+  },
+  {
+    "id": "B25",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_flyer_grr-itt_1a.jpg",
+      "archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_flyer_grr-itt_1b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B25-2002_12_20_flyer_grr-itt.png"
+  },
+  {
+    "id": "B26",
+    "sources": [
+      "archive/legacy/200_calendar/2002/02_12_31_nytaar/2002_12_31_newyear_01a.jpg",
+      "archive/legacy/200_calendar/2002/02_12_31_nytaar/2002_12_31_newyear_01b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B26-2002_12_31_newyear.png"
+  },
+  {
+    "id": "B27",
+    "sources": [
+      "archive/legacy/200_calendar/2003/03_02_01_studio54/out_and_about_studio_54_02a.jpg",
+      "archive/legacy/200_calendar/2003/03_02_01_studio54/out_and_about_studio_54_02b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B27-out_and_about_studio_54.png"
+  },
+  {
+    "id": "B28",
+    "sources": [
+      "200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_02a.jpg",
+      "200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_02b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B28-2002_08_03_listastevna.png"
+  },
+  {
+    "id": "B29",
+    "sources": [
+      "200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_01a.jpg",
+      "200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_01b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B29-2002_08_03_listastevna.png"
+  },
+  {
+    "id": "B30",
+    "sources": [
+      "200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_03a.jpg",
+      "200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_03b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B30-2002_08_03_listastevna.png"
+  },
+  {
+    "id": "B31",
+    "sources": [
+      "200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_05a.jpg",
+      "200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_05b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B31-2002_08_03_listastevna.png"
+  },
+  {
+    "id": "B32",
+    "sources": [
+      "200_calendar/2002/02_06_08_gay_night_cabaret/2002_06_08_cabaret._09a.jpg",
+      "200_calendar/2002/02_06_08_gay_night_cabaret/2002_06_08_cabaret._09b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B32-2002_06_08_cabaret..png"
+  },
+  {
+    "id": "B33",
+    "sources": [
+      "200_calendar/2002/02_08_10_froeken_verden/2002_hverdag_01a.jpg",
+      "200_calendar/2002/02_08_10_froeken_verden/2002_hverdag_01b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B33-2002_hverdag.png"
+  },
+  {
+    "id": "B34",
+    "sources": [
+      "200_calendar/2002/02_09_01_frk_verden/presse_panbladet_02a.jpg",
+      "200_calendar/2002/02_09_01_frk_verden/presse_panbladet_02b.gif"
+    ],
+    "output": "./archive/timeline/combined/B34-presse_panbladet.png"
+  },
+  {
+    "id": "B35",
+    "sources": [
+      "200_calendar/2002/02_09_08_designskolen/2002_09_08_design_05a.jpg",
+      "200_calendar/2002/02_09_08_designskolen/2002_09_08_design_05b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B35-2002_09_08_design.png"
+  },
+  {
+    "id": "B36",
+    "sources": [
+      "200_calendar/2002/02_09_08_designskolen/2002_09_08_design_06a.jpg",
+      "200_calendar/2002/02_09_08_designskolen/2002_09_08_design_06b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B36-2002_09_08_design.png"
+  },
+  {
+    "id": "B37",
+    "sources": [
+      "200_calendar/2002/02_10_01_electro/presse_panbladet_03a.gif",
+      "200_calendar/2002/02_10_01_electro/presse_panbladet_03b.jpg",
+      "200_calendar/2002/02_10_01_electro/presse_panbladet_03c.gif"
+    ],
+    "output": "./archive/timeline/combined/B37-presse_panbladet.png"
+  },
+  {
+    "id": "B38",
+    "sources": [
+      "200_calendar/2002/02_10_19_filmfestival/2002_10_19_filmfestival_01a.jpg",
+      "200_calendar/2002/02_10_19_filmfestival/2002_10_19_filmfestival_01b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B38-2002_10_19_filmfestival.png"
+  },
+  {
+    "id": "B39",
+    "sources": [
+      "200_calendar/2002/02_11_16_lefreak/2002_11_16_freakshow_03a.jpg",
+      "200_calendar/2002/02_11_16_lefreak/2002_11_16_freakshow_03b.jpg"
+    ],
+    "output": "./archive/timeline/combined/B39-2002_11_16_freakshow.png"
+  },
+  {
+    "id": "B40",
+    "sources": [
+      "200_calendar/2003/03_04_01_straight_dennis/presse_panbladet_06a.gif",
+      "200_calendar/2003/03_04_01_straight_dennis/presse_panbladet_06b.jpg",
+      "200_calendar/2003/03_04_01_straight_dennis/presse_panbladet_06c.gif"
+    ],
+    "output": "./archive/timeline/combined/B40-presse_panbladet.png"
+  },
+  {
+    "id": "B41",
+    "sources": [
+      "200_calendar/2005/05_10_07_be_queer_02/poster_a.gif",
+      "200_calendar/2005/05_10_07_be_queer_02/poster_b.jpg",
+      "200_calendar/2005/05_10_07_be_queer_02/poster_c.gif"
+    ],
+    "output": "./archive/timeline/combined/B41-poster.png"
+  }
+]
