@@ -1,6 +1,7 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
+import { timelineDate } from './timeline-ui.js';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
@@ -228,9 +229,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
   const header = el('header', 'tg-header');
   const title = el('h2', '', entry.shortTitle || entry.title); title.id = 'tg-title';
   const details = el('div','tg-details');
-  header.append(title, details);
-  const date = el('time','tg-date',entry.display); date.dateTime = entry.date;
-  header.append(date);
+  const date = el('time','tg-date',timelineDate(entry.date, entry.display)); date.dateTime = entry.date;
+  header.append(date, title, details);
   const close = button('×','Luk billedvisning', () => cleanup()); close.className = 'tg-close';
   const viewer = el('div','tg-viewer');
   const stage = el('div','tg-stage'); stage.setAttribute('aria-roledescription','karrusel');
