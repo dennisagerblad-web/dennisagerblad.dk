@@ -6,7 +6,7 @@ let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
-const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=approved-split-20260926', import.meta.url)).then(r => {
+const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=approved-split-20260926-v19', import.meta.url)).then(r => {
   if (!r.ok) throw new Error('Gallery data unavailable');
   return r.json();
 }).catch(error => { dataPromise = null; throw error; });
@@ -76,7 +76,7 @@ function compose(image, w, h, meta, fill) {
   const pixelRatio = Math.min(devicePixelRatio || 1, 2);
   const frameWidth = w / pixelRatio, frameHeight = h / pixelRatio;
   const canFillWithoutEnlarging = image.naturalWidth >= frameWidth && image.naturalHeight >= frameHeight;
-  const crop = canFillWithoutEnlarging ? cropRect(image.naturalWidth,image.naturalHeight,w,h,meta,fill) : null;
+  const crop = canFillWithoutEnlarging && !meta.preserveFull ? cropRect(image.naturalWidth,image.naturalHeight,w,h,meta,fill) : null;
   if (crop) { ctx.drawImage(image,...crop,0,0,w,h); return canvas; }
   // A low-resolution enlarged copy gives a soft backdrop even on browsers
   // without canvas filters. The sharp foreground remains undistorted at rest.
@@ -233,7 +233,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   const dialog = el('section', 'tg-dialog'); dialog.setAttribute('role','dialog');
   dialog.setAttribute('aria-modal','true'); dialog.setAttribute('aria-labelledby','tg-title');
   const header = el('header', 'tg-header');
-  const title = el('h2', '', entry.shortTitle || entry.title); title.id = 'tg-title';
+  const title = el('h2', '', entry.popupTitle || entry.shortTitle || entry.title); title.id = 'tg-title';
   const details = el('div','tg-details');
   const date = el('time','tg-date',timelineDate(entry.date, entry.display)); date.dateTime = entry.date;
   header.append(date, title, details);
@@ -488,7 +488,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     if (closed) return;
     const gallery = data.entries?.[`${entry.date}|${entry.category}|${entry.title}`];
     media = data.media || {};
-    title.textContent = entry.shortTitle || entry.title;
+    title.textContent = entry.popupTitle || entry.shortTitle || entry.title;
     const paragraphs = gallery?.details || (entry.details ? [entry.details] : []);
     const longCopy = paragraphs.join(' ').length > 700 && paragraphs.length > 1;
     if (longCopy) {
