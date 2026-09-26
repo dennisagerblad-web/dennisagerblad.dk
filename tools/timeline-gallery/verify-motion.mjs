@@ -5,7 +5,7 @@ import vm from 'node:vm';
 // Exercise real gallery handlers with a deterministic clock and lightweight DOM/GL.
 // Browser verification separately covers actual rendering and native pointer input.
 const source = (await readFile(new URL('../../assets/timeline-gallery.js',import.meta.url),'utf8'))
-  .replace("import { timelineDate } from './timeline-ui.js?v=20260926-v11';", 'const timelineDate = (date, fallback) => fallback;')
+  .replace("import { timelineDate } from './timeline-ui.js?v=20260926-v16';", 'const timelineDate = (date, fallback) => fallback;')
   .replaceAll('import.meta.url',JSON.stringify('http://localhost/assets/timeline-gallery.js'))
   .replaceAll('export ', '');
 async function fixture(group='live', reduced=false) {

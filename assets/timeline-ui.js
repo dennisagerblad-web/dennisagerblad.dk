@@ -2,33 +2,43 @@ export { timelineThumbDimensions } from './timeline-thumb-dimensions.js';
 
 const months = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
 let stopKeepingYearInView;
+let lastChosenYear;
 
 export function timelineDate(date, fallback = '') {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date || '');
   if (!match) return fallback;
   const month = months[Number(match[2]) - 1];
-  return month ? `${Number(match[3])}. ${month} ${match[1]}.` : fallback;
+  return month ? `${Number(match[3])}. ${month} ${match[1]}` : fallback;
 }
 
 export function scrollTimelineYear(category, year, updateHash = false) {
+  if (!updateHash && lastChosenYear?.category === category && performance.now() - lastChosenYear.at < 1500) return;
+  lastChosenYear = updateHash ? { category, at:performance.now() } : null;
   stopKeepingYearInView?.();
   const scroller = document.querySelector('.section-5 .archive-scroll');
   const target = document.getElementById(`timeline-${category}-${year}`);
   const shell = target?.closest('.timeline-shell');
   const controls = shell?.querySelector('.timeline-controls');
   if (!scroller || !target || !controls) return;
+  const oldestYear = [...shell.querySelectorAll('.life-year[id]')].at(-1);
+  const scrollToBottom = updateHash && target === oldestYear;
 
   function placeYear() {
+    scroller.style.scrollBehavior = 'auto';
+    if (scrollToBottom) {
+      scroller.scrollTop = scroller.scrollHeight - scroller.clientHeight;
+      return;
+    }
     const scrollerTop = scroller.getBoundingClientRect().top;
     const stickyTop = Number.parseFloat(getComputedStyle(controls).top) || 0;
     const offset = Math.max(0, stickyTop) + controls.getBoundingClientRect().height + 12;
     const targetTop = target.getBoundingClientRect().top - scrollerTop + scroller.scrollTop;
     // Override the base sheet's smooth behavior even during initial loading.
-    scroller.style.scrollBehavior = 'auto';
     scroller.scrollTop = Math.max(0, targetTop - offset);
   }
   placeYear();
-  if (updateHash) history.replaceState(null, '', `#timeline-${category}-${year}`);
+  if (!updateHash) return;
+  history.replaceState(null, '', `#timeline-${category}-${year}`);
 
   // Eager thumbnails can finish after an immediate year click. Keep the chosen
   // year anchored while their reserved boxes and the opening archive settle.

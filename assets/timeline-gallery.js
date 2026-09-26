@@ -1,7 +1,7 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20260926-v11';
+import { timelineDate } from './timeline-ui.js?v=20260926-v16';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
@@ -73,7 +73,10 @@ export function galleryRatio(items, media, viewportRatio = 4/3) {
 function compose(image, w, h, meta, fill) {
   const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h;
   const ctx = canvas.getContext('2d');
-  const crop = cropRect(image.naturalWidth,image.naturalHeight,w,h,meta,fill);
+  const pixelRatio = Math.min(devicePixelRatio || 1, 2);
+  const frameWidth = w / pixelRatio, frameHeight = h / pixelRatio;
+  const canFillWithoutEnlarging = image.naturalWidth >= frameWidth && image.naturalHeight >= frameHeight;
+  const crop = canFillWithoutEnlarging ? cropRect(image.naturalWidth,image.naturalHeight,w,h,meta,fill) : null;
   if (crop) { ctx.drawImage(image,...crop,0,0,w,h); return canvas; }
   // A low-resolution enlarged copy gives a soft backdrop even on browsers
   // without canvas filters. The sharp foreground remains undistorted at rest.
@@ -84,8 +87,11 @@ function compose(image, w, h, meta, fill) {
   ctx.save(); ctx.filter = `blur(${Math.max(12,w*.025)}px) brightness(.64)`;
   const bleed = Math.ceil(w*.08);
   ctx.drawImage(backdrop,-bleed,-bleed,w+bleed*2,h+bleed*2); ctx.restore();
-  const fit = Math.min(w/image.naturalWidth,h/image.naturalHeight);
-  const iw=image.naturalWidth*fit, ih=image.naturalHeight*fit;
+  // Display archival scans at no more than their natural CSS pixel size.
+  // This leaves their original detail intact while the same image fills the
+  // unused field as a soft, enlarged backdrop.
+  const fit = Math.min(frameWidth/image.naturalWidth,frameHeight/image.naturalHeight,1);
+  const iw=image.naturalWidth*fit*pixelRatio, ih=image.naturalHeight*fit*pixelRatio;
   ctx.drawImage(image,(w-iw)/2,(h-ih)/2,iw,ih);
   return canvas;
 }
@@ -273,12 +279,16 @@ export function openTimelineGallery(entry, group, theme = {}) {
     const margin=compact ? 0 : 32;
     const maxW=vw-margin*2;
     const ratio=galleryRatio(items,media,vw/vh);
-    dialog.style.setProperty('--tg-ratio',String(ratio));
+    const readableWidth=Math.min(maxW,360);
     let width=maxW;
     for(let i=0;i<8;i++) {
       dialog.style.width=`${width}px`;
       const available=Math.max(1,vh-margin*2-header.offsetHeight);
-      const nextWidth=Math.max(1,Math.min(maxW,available*ratio));
+      // A short viewport or a long heading must not squeeze the entire popup
+      // below the original width of a 360px archive scan.
+      const frameRatio=Math.max(ratio,readableWidth/available);
+      dialog.style.setProperty('--tg-ratio',String(frameRatio));
+      const nextWidth=Math.max(1,Math.min(maxW,available*frameRatio));
       if(Math.abs(nextWidth-width)<1) break;
       width=nextWidth;
     }

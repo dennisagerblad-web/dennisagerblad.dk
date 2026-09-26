@@ -2,7 +2,7 @@
 .tg-overlay { z-index:10000; padding:32px; background:#09090bea; backdrop-filter:blur(12px); }
 .tg-dialog { position:relative; width:min(90vw,1200px); max-height:calc(100dvh - 64px); overflow:auto; overscroll-behavior:contain; background:#171719; color:#fff; border:0; border-radius:9px; box-shadow:0 24px 100px #0009; }
 .tg-dialog * { box-sizing:border-box; }
-.tg-header { padding:clamp(18px,2vw,30px); padding-right:70px; max-height:min(34dvh,320px); overflow:auto; scrollbar-width:thin; overscroll-behavior:contain; }
+.tg-header { padding:clamp(18px,2vw,30px); padding-right:70px; max-height:min(45dvh,400px); overflow:auto; scrollbar-width:thin; overscroll-behavior:contain; }
 .tg-header h2 { margin:0; color:#fff; font:500 clamp(22px,2vw,34px)/1.2 Georgia,serif; text-wrap:balance; }
 .tg-details { margin-top:10px; }
 .tg-details:empty { display:none; }
@@ -74,8 +74,6 @@
 .section-5 .timeline-years a { flex:none; }
 .section-5 .timeline-entry time { font-weight:400!important; }
 .section-5 .archive-scroll { scroll-behavior:auto; overflow-anchor:none; }
-/* Give the oldest entry enough trailing space to sit below the sticky island. */
-.section-5 .continuous-timeline .life-year:last-child { min-height:calc(100svh - 100px); }
 @media (max-width:760px), (max-width:1100px) and (max-height:600px) {
   .timeline-popup-header { padding:18px 54px 16px 18px; }
   .timeline-popup-header h2 { font-size:22px; }
