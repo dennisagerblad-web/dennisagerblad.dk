@@ -1,7 +1,7 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js';
+import { timelineDate } from './timeline-ui.js?v=20260926-v11';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
