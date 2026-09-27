@@ -11,10 +11,30 @@ export const timelineEntries = [
     "images": [
       "./archive/timeline/performance/2026-09-11-01.webp",
       "./archive/timeline/performance/2026-09-11-02.webp",
-      "./archive/timeline/performance/2026-09-11-03.webp"
+      "./archive/timeline/performance/2026-09-11-03-v2.webp"
     ],
     "details": "Performancegruppen Kaleido fra Amsterdam var på besøg. Jeg optrådte med min sang “Alien”.",
     "thumbnailPreview": "./assets/timeline-thumbs/1829969504a70525.webp"
+  },
+  {
+    "date": "2026-08-08",
+    "display": "08.08.2026",
+    "year": 2026,
+    "category": "Koncert",
+    "title": "Sommerfest i Bøssehuset",
+    "group": "live",
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2026-08-08-01.webp",
+    "images": [
+      "./archive/timeline/performance/2026-08-08-01.webp",
+      "./archive/timeline/performance/2026-08-08-02.webp",
+      "./archive/timeline/performance/2026-08-08-03.webp",
+      "./archive/timeline/performance/2026-08-08-04.webp",
+      "./archive/timeline/performance/2026-08-08-05.webp",
+      "./archive/timeline/performance/2026-08-08-06.webp"
+    ],
+    "details": "Jeg sang “Selleri” med Dennis Agerblad Band.",
+    "thumbnailPreview": "./assets/timeline-thumbs/fe0cfbb46834c13b.webp"
   },
   {
     "date": "2026-07-18",
@@ -308,7 +328,7 @@ export const timelineEntries = [
     "title": "Stjernevask, “Sex in A UFO”",
     "group": "live",
     "href": null,
-    "thumbnail": "./archive/timeline/performance/2024-05-31-thumb.webp",
+    "thumbnail": "./archive/timeline/performance/2024-05-31-01.webp",
     "images": [
       "./archive/timeline/performance/2024-05-31-01.webp",
       "./archive/timeline/performance/2024-05-31-02.webp",
@@ -319,7 +339,8 @@ export const timelineEntries = [
     ],
     "details": "Jeg optræder i Stjernevasks musikvideo “Sex in A UFO”.",
     "videoId": "I_KZ83dsv-Y",
-    "thumbnailPreview": "./assets/timeline-thumbs/9691c176e4664afc.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/96322bf28cef62e1.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2024-05-18",
@@ -832,13 +853,14 @@ export const timelineEntries = [
     "category": "Optræden",
     "title": "Jeg optrådte i 30 minutter med mit band i Facebookgruppen LGBT+30.",
     "group": "live",
-    "href": "./archive/legacy/200_calendar/2021/lgbtplus30.html",
-    "thumbnail": "./archive/timeline/performance/2021-04-25-01.jpg",
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2021-04-25-02.jpg",
     "images": [
-      "./archive/timeline/performance/2021-04-25-02.jpg",
-      "./archive/timeline/performance/2021-04-25-01.jpg"
+      "./archive/timeline/performance/2021-04-25-02.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/a61fc1e5f0f6f502.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/39483d29602c3b06.webp",
+    "videoId": "ddKXaFtYU80",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2021-03-01",

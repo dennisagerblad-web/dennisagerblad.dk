@@ -243,8 +243,7 @@
       "title": "Jeg optrådte i 30 minutter med mit band i Facebookgruppen LGBT+30.",
       "details": [],
       "images": [
-        "./archive/timeline/performance/2021-04-25-02.jpg",
-        "./archive/timeline/performance/2021-04-25-01.jpg"
+        "./archive/timeline/performance/2021-04-25-02.jpg"
       ]
     },
     "2020-12-18|TV|Christiania Jule-TV": {
@@ -3079,7 +3078,7 @@
       "images": [
         "./archive/timeline/performance/2026-09-11-01.webp",
         "./archive/timeline/performance/2026-09-11-02.webp",
-        "./archive/timeline/performance/2026-09-11-03.webp"
+        "./archive/timeline/performance/2026-09-11-03-v2.webp"
       ]
     },
     "2022-10-21|Optræden|Sjæl på Dåse 7, Operaen, Christiania": {
@@ -3181,6 +3180,20 @@
         "./archive/timeline/performance/2025-10-29-05.jpg",
         "./archive/timeline/performance/2025-10-29-06.jpg",
         "./archive/timeline/performance/2025-10-29-07.jpg"
+      ]
+    },
+    "2026-08-08|Koncert|Sommerfest i Bøssehuset": {
+      "title": "Sommerfest i Bøssehuset",
+      "details": [
+        "Jeg sang “Selleri” med Dennis Agerblad Band."
+      ],
+      "images": [
+        "./archive/timeline/performance/2026-08-08-01.webp",
+        "./archive/timeline/performance/2026-08-08-02.webp",
+        "./archive/timeline/performance/2026-08-08-03.webp",
+        "./archive/timeline/performance/2026-08-08-04.webp",
+        "./archive/timeline/performance/2026-08-08-05.webp",
+        "./archive/timeline/performance/2026-08-08-06.webp"
       ]
     }
   }
