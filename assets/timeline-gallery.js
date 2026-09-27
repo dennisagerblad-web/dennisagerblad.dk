@@ -1,12 +1,12 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20260926-v16';
+import { timelineDate } from './timeline-ui.js?v=20260927-v17';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
-const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=personlig-20260927-v24', import.meta.url)).then(r => {
+const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=timeline-corrections-20260927-v25', import.meta.url)).then(r => {
   if (!r.ok) throw new Error('Gallery data unavailable');
   return r.json();
 }).catch(error => { dataPromise = null; throw error; });
@@ -32,31 +32,12 @@ export const galleryEffects = Object.freeze({
 });
 export const timelineEffects = Object.freeze({ live:'Morph', art:'Paint' });
 
-// Fill the series frame proportionally, anchored at the top. Shift the crop
-// only as far as needed to retain detected faces; never stretch the photo.
-// Overrides can supply `faces` or `focus: [x, y]` in the media manifest.
-export function cropRect(iw, ih, w, h, meta, fill) {
-  if (!fill) return null;
-  const scale = Math.max(w / iw, h / ih), cw = w / scale, ch = h / scale;
-  const faces = meta.faces || [];
-  let x = (meta.focus?.[0] ?? .5) * iw - cw / 2;
-  let y = meta.focus ? meta.focus[1] * ih - ch / 2 : 0;
-  if (faces.length) {
-    const left = Math.max(0, Math.min(...faces.map(f => f[0])) - .035) * iw;
-    const right = Math.min(1, Math.max(...faces.map(f => f[0] + f[2])) + .035) * iw;
-    const top = Math.max(0, Math.min(...faces.map(f => f[1])) - .05) * ih;
-    const bottom = Math.min(1, Math.max(...faces.map(f => f[1] + f[3])) + .035) * ih;
-    if (right-left <= cw) x=clamp(x,right-cw,left);
-    else {
-      // A narrow crop cannot include widely separated faces. Keep the
-      // largest face instead of centering on empty space between people.
-      const main=faces.reduce((a,b)=>a[2]*a[3]>=b[2]*b[3]?a:b);
-      x=(main[0]+main[2]/2)*iw-cw/2;
-    }
-    // If all faces cannot fit vertically, favor the uppermost faces.
-    y = bottom-top <= ch ? clamp(y,bottom-ch,top) : top;
-  }
-  return [clamp(x, 0, iw - cw), clamp(y, 0, ih - ch), cw, ch];
+// Fit the complete photo in the frame and keep small archive images at their
+// original CSS pixel size. The remaining field receives the blurred backdrop.
+export function containRect(imageWidth, imageHeight, frameWidth, frameHeight) {
+  const scale = Math.min(frameWidth / imageWidth, frameHeight / imageHeight, 1);
+  const width = imageWidth * scale, height = imageHeight * scale;
+  return [(frameWidth-width)/2, (frameHeight-height)/2, width, height];
 }
 
 // Majority orientation determines the frame on every device. A tie follows
@@ -70,16 +51,13 @@ export function galleryRatio(items, media, viewportRatio = 4/3) {
   return majority.length ? Math.exp(majority.reduce((sum,r)=>sum+Math.log(r),0)/majority.length) : 1;
 }
 
-function compose(image, w, h, meta, fill) {
+function compose(image, w, h) {
   const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h;
   const ctx = canvas.getContext('2d');
   const pixelRatio = Math.min(devicePixelRatio || 1, 2);
   const frameWidth = w / pixelRatio, frameHeight = h / pixelRatio;
-  const canFillWithoutEnlarging = image.naturalWidth >= frameWidth && image.naturalHeight >= frameHeight;
-  const crop = canFillWithoutEnlarging && !meta.preserveFull ? cropRect(image.naturalWidth,image.naturalHeight,w,h,meta,fill) : null;
-  if (crop) { ctx.drawImage(image,...crop,0,0,w,h); return canvas; }
-  // A low-resolution enlarged copy gives a soft backdrop even on browsers
-  // without canvas filters. The sharp foreground remains undistorted at rest.
+  // Every Scene and Kunst photo stays whole. A blurred copy of that same
+  // photo fills the frame behind it, including for high-resolution originals.
   const backdrop = document.createElement('canvas'); backdrop.width = 48; backdrop.height = Math.max(16, Math.round(48*h/w));
   const bg = backdrop.getContext('2d');
   const scale = Math.max(backdrop.width/image.naturalWidth,backdrop.height/image.naturalHeight)*1.18;
@@ -90,9 +68,8 @@ function compose(image, w, h, meta, fill) {
   // Display archival scans at no more than their natural CSS pixel size.
   // This leaves their original detail intact while the same image fills the
   // unused field as a soft, enlarged backdrop.
-  const fit = Math.min(frameWidth/image.naturalWidth,frameHeight/image.naturalHeight,1);
-  const iw=image.naturalWidth*fit*pixelRatio, ih=image.naturalHeight*fit*pixelRatio;
-  ctx.drawImage(image,(w-iw)/2,(h-ih)/2,iw,ih);
+  const [x,y,iw,ih] = containRect(image.naturalWidth,image.naturalHeight,frameWidth,frameHeight);
+  ctx.drawImage(image,x*pixelRatio,y*pixelRatio,iw*pixelRatio,ih*pixelRatio);
   return canvas;
 }
 
@@ -344,8 +321,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
     stage.setAttribute('aria-busy','true');
     imageAt(session.target).then(image => {
       if (closed || scene !== session) return;
-      const [w,h] = size(), meta = media[items[session.target]] || {};
-      session.after = compose(image,w,h,meta,true);
+      const [w,h] = size();
+      session.after = compose(image,w,h);
       if (drawing && drawing.width === w && drawing.height === h && !reduced.matches) {
         transition ||= createTransition(effectCanvas);
         if (transition) {
@@ -375,8 +352,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
     try {
       const image = await imageAt(index);
       if (closed || ticket !== request) return;
-      const [w,h] = size(), meta = media[items[index]] || {};
-      const composed = compose(image,w,h,meta,true);
+      const [w,h] = size();
+      const composed = compose(image,w,h);
       status.hidden = true; poster.hidden = false;
       const before = drawing; paint(composed); announce();
       if (direction && before && before.width === w && before.height === h && !reduced.matches) {

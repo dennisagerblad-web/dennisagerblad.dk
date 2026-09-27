@@ -27,6 +27,7 @@
 .tg-supplementary a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
 .tg-credit { margin:0; font:inherit; }
 .tg-video { display:block; width:100%; aspect-ratio:16/9; border:0; margin-top:12px; }
+.tg-video + .tg-viewer { margin-top:22px; }
 .section-5 .timeline-thumbnail.timeline-video-thumbnail.timeline-thumbnail-contain { aspect-ratio:auto; object-fit:contain; width:auto; max-width:128px; height:auto; max-height:108px; }
 .tg-more { width:100%; }
 .tg-more summary { margin:8px 0; cursor:pointer; color:#ccc; font:13px/1.5 system-ui,sans-serif; }
@@ -97,13 +98,14 @@
 .section-5 .timeline-shell[data-theme="art"] .calendar-biography { --bubble-max-width:620px; }
 .section-5 .timeline-shell[data-theme="word"] .calendar-biography { --bubble-max-width:550px; }
 .section-5 .archive .calendar-biography p {
-  /* The paragraph content box is the text container. These insets center it
-     on the white field, which sits to the right of the illustration's tail. */
+  /* timeline-speech.js measures the copy and centers its content box in the
+     illustrated white field as the font, viewport, or text changes. */
   --bubble-copy-left:18%;
   --bubble-copy-right:8%;
   position:relative;
   display:block;
   min-height:0;
+  box-sizing:border-box;
   margin:0;
   padding:clamp(36px,5%,50px) var(--bubble-copy-right) clamp(36px,5%,50px) var(--bubble-copy-left);
   border:0;
@@ -119,6 +121,11 @@
 .section-5 .calendar-biography p::before { content:none; }
 .section-5 .calendar-biography strong { font-weight:700; }
 .section-5 .calendar-biography a { color:#4a251b!important; text-decoration-color:#4a251b; text-decoration-thickness:1.5px; }
+.section-5 .calendar-biography .bio-icon { color:#1c130d!important; }
+.section-5 .calendar-biography .bio-emphasis { font-weight:700; text-decoration:underline; text-underline-offset:2px; }
+.section-5 .calendar-biography a[href*="youtube.com/@dennisagerblad"] { font-size:.86em; white-space:nowrap; }
+.section-5 .calendar-biography .bio-year-link { display:inline; padding:0; border:0; background:none; color:#4a251b; font:inherit; text-decoration:underline; text-underline-offset:2px; cursor:pointer; }
+.section-5 .calendar-biography .bio-year-link:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
 .section-5 .timeline-shell[data-theme="press"] .calendar-biography p:not(:nth-child(1)),
 .section-5 .timeline-shell[data-theme="live"] .calendar-biography p:not(:nth-child(2)),
 .section-5 .timeline-shell[data-theme="music"] .calendar-biography p:not(:nth-child(3)),
@@ -138,14 +145,14 @@
   .section-5 .archive .calendar-biography p {
     --bubble-copy-left:16%;
     --bubble-copy-right:10%;
-    padding:125px var(--bubble-copy-right) 70px var(--bubble-copy-left);
+    padding:90px var(--bubble-copy-right) 85px var(--bubble-copy-left);
     background-image:url("./timeline-speech-portrait.webp");
     font-size:clamp(21px,5.8vw,27px);
     line-height:1.1;
   }
 }
 @media (max-width:320px) and (orientation:portrait) {
-  .section-5 .archive .calendar-biography p { padding-top:125px; font-size:20px; }
+  .section-5 .archive .calendar-biography p { font-size:20px; }
 }
 @media (max-width:300px) and (orientation:portrait) {
   .section-5 .archive .calendar-biography p { hyphens:auto; }
