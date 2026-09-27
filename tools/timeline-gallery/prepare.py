@@ -1,15 +1,13 @@
-"""Derive gallery media from the current published bundle, not the stale Vite copy."""
+"""Derive gallery media from the maintained timeline data."""
 import json, re
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlparse, unquote
 SITE = Path(__file__).resolve().parents[2]
-index = (SITE / 'index.html').read_text()
-bundle = SITE / re.search(r'src="\./(assets/index-[^?" ]+)', index)[1]
-source = bundle.read_text()
-raw = source.split('be=JSON.parse(`', 1)[1].split('`)', 1)[0]
-# JSON is embedded in a JS template literal; unescape its extra backslashes.
-entries = json.loads(raw.replace('\\\\', '\\').replace('\\`','`').replace('\\$', '$'))
+source = (SITE / 'content/timeline/entries.js').read_text()
+prefix = 'export const timelineEntries = '
+assert source.startswith(prefix) and source.rstrip().endswith(';')
+entries = json.loads(source[len(prefix):].strip()[:-1])
 Path('/tmp/timeline-current.json').write_text(json.dumps(entries, ensure_ascii=False, indent=2))
 print('Current entries:', len(entries))
 for e in entries:
@@ -105,7 +103,16 @@ faces_path=Path(__file__).with_name('faces.json')
 if faces_path.exists():
     for src, boxes in json.loads(faces_path.read_text()).items():
         if src in media: media[src]['faces']=[[round(v,5) for v in box] for box in boxes]
-output=SITE/'assets/timeline-gallery-data.json'
-output.write_text(json.dumps({'entries':galleries,'media':media},ensure_ascii=False,separators=(',',':')))
+output=SITE/'content/timeline/galleries.json'
+metadata_path=SITE/'content/timeline/image-metadata.json'
+existing=json.loads(output.read_text()) if output.exists() else {'entries':{}}
+metadata=json.loads(metadata_path.read_text()) if metadata_path.exists() else {'media':{}}
+# Descriptions and slide order are curated. Refresh only measured image data;
+# rebuilding the manifest must never silently undo later editorial changes.
+for key, gallery in galleries.items():
+    existing['entries'].setdefault(key, gallery)
+metadata['media'].update(media)
+output.write_text(json.dumps(existing,ensure_ascii=False,indent=2)+'\n')
+metadata_path.write_text(json.dumps(metadata,ensure_ascii=False,separators=(',',':'))+'\n')
 Path('/tmp/timeline-gallery-images.json').write_text(json.dumps([str(SITE/src[2:]) for src in media]))
-print('Galleries:',len(galleries),'Images:',len(media),'Total slides:',sum(len(g['images']) for g in galleries.values()))
+print('Galleries preserved:',len(existing['entries']),'Images measured:',len(media))

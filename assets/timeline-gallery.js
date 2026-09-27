@@ -6,10 +6,14 @@ let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
-const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=timeline-corrections-20260927-v25', import.meta.url)).then(r => {
-  if (!r.ok) throw new Error('Gallery data unavailable');
-  return r.json();
-}).catch(error => { dataPromise = null; throw error; });
+const loadData = () => dataPromise ||= Promise.all([
+  '../content/timeline/galleries.json?v=20260927-2',
+  '../content/timeline/image-metadata.json?v=20260927-2',
+].map(path => fetch(new URL(path, import.meta.url)).then(response => {
+  if (!response.ok) throw new Error('Gallery data unavailable');
+  return response.json();
+}))).then(([galleries, metadata]) => ({entries:galleries.entries, media:metadata.media}))
+  .catch(error => { dataPromise = null; throw error; });
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
   if (className) node.className = className;

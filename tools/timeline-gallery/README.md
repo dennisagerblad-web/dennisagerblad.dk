@@ -1,6 +1,6 @@
 # Timeline popups and galleries
 
-The active site is `index.html` plus the bundle it references (`assets/index-281e0f92.js` at this revision). The older Vite app in `migration-tools/dennis-github-app` predates the September 2026 changes. Rebuilding it would overwrite newer content. The current bundle imports the readable module `assets/timeline-gallery.js`. The other categories retain their archive, video and release content inside popups with the same title-first header.
+The active site is `index.html`, `assets/site-app.js` and `assets/site.css`. Timeline text and image references live in `content/timeline/entries.js`; curated Scene and Kunst slideshow content lives in `content/timeline/galleries.json`. The older Vite app in `migration-tools/dennis-github-app` predates the September 2026 changes and must not be rebuilt over this version. See the site root `README.md` for the current editing workflow.
 
 The popup is implemented in `assets/timeline-gallery.js` and `assets/timeline-gallery.css`. There are three named effects in `galleryEffects`, selected by `timelineEffects`:
 
@@ -18,7 +18,7 @@ Popup dimensions fit the available viewport without a fixed maximum width. Text 
 
 ## Rebuilding media metadata
 
-Run `python3 tools/timeline-gallery/prepare.py` from the site with Pillow installed. It reads the current bundle referenced by index.html; it does not alter the timeline data. It reuses the committed offline face bounds in `faces.json`. Outputs: the gallery manifest, `/tmp/timeline-current.json` and `/tmp/timeline-gallery-images.json`.
+Run `python3 tools/timeline-gallery/prepare.py` from the site with Pillow installed. It reads `content/timeline/entries.js`, preserves existing edited slideshow text and slide order in `galleries.json`, adds new galleries, and refreshes image dimensions in the generated `image-metadata.json`. It reuses the committed offline face bounds in `faces.json`. Diagnostic outputs go to `/tmp/timeline-current.json` and `/tmp/timeline-gallery-images.json`.
 
 To re-analyze photos on macOS, run:
 

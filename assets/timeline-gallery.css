@@ -110,7 +110,7 @@
   padding:clamp(36px,5%,50px) var(--bubble-copy-right) clamp(36px,5%,50px) var(--bubble-copy-left);
   border:0;
   border-radius:0;
-  background:transparent url("./timeline-speech-wide.webp") center / 100% 100% no-repeat;
+  background:transparent url("./timeline-speech-wide.webp?v=20260927-optimized") center / 100% 100% no-repeat;
   box-shadow:none;
   color:#24180f!important;
   text-shadow:none!important;
@@ -146,7 +146,7 @@
     --bubble-copy-left:16%;
     --bubble-copy-right:10%;
     padding:90px var(--bubble-copy-right) 85px var(--bubble-copy-left);
-    background-image:url("./timeline-speech-portrait.webp");
+    background-image:url("./timeline-speech-portrait.webp?v=20260927-optimized");
     font-size:clamp(21px,5.8vw,27px);
     line-height:1.1;
   }

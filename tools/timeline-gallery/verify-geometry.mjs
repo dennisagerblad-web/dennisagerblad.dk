@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { galleryRatio, containRect } from '../../assets/timeline-gallery.js';
-const data=JSON.parse(await readFile(new URL('../../assets/timeline-gallery-data.json',import.meta.url),'utf8'));
+const galleries=JSON.parse(await readFile(new URL('../../content/timeline/galleries.json',import.meta.url),'utf8'));
+const metadata=JSON.parse(await readFile(new URL('../../content/timeline/image-metadata.json',import.meta.url),'utf8'));
+const data={entries:galleries.entries,media:metadata.media};
 let checked=0,landscape=0,portrait=0;
 for(const entry of Object.values(data.entries)) {
  const valid=entry.images.filter(src=>data.media[src]);
