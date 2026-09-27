@@ -97,11 +97,15 @@
 .section-5 .timeline-shell[data-theme="art"] .calendar-biography { --bubble-max-width:620px; }
 .section-5 .timeline-shell[data-theme="word"] .calendar-biography { --bubble-max-width:550px; }
 .section-5 .archive .calendar-biography p {
+  /* The paragraph content box is the text container. These insets center it
+     on the white field, which sits to the right of the illustration's tail. */
+  --bubble-copy-left:18%;
+  --bubble-copy-right:8%;
   position:relative;
   display:block;
   min-height:0;
   margin:0;
-  padding:clamp(36px,5%,50px) 12% clamp(36px,5%,50px) 17%;
+  padding:clamp(36px,5%,50px) var(--bubble-copy-right) clamp(36px,5%,50px) var(--bubble-copy-left);
   border:0;
   border-radius:0;
   background:transparent url("./timeline-speech-wide.webp") center / 100% 100% no-repeat;
@@ -132,19 +136,26 @@
     margin:12px 6px 36px;
   }
   .section-5 .archive .calendar-biography p {
-    padding:125px clamp(44px,12%,76px) 90px clamp(48px,15%,88px);
+    --bubble-copy-left:16%;
+    --bubble-copy-right:10%;
+    padding:125px var(--bubble-copy-right) 70px var(--bubble-copy-left);
     background-image:url("./timeline-speech-portrait.webp");
     font-size:clamp(21px,5.8vw,27px);
     line-height:1.1;
   }
 }
 @media (max-width:320px) and (orientation:portrait) {
-  .section-5 .archive .calendar-biography p { padding-top:145px; font-size:20px; }
+  .section-5 .archive .calendar-biography p { padding-top:125px; font-size:20px; }
 }
 @media (max-width:300px) and (orientation:portrait) {
   .section-5 .archive .calendar-biography p { hyphens:auto; }
 }
 @media (min-width:761px) and (max-width:850px) {
+  .section-5 .timeline-controls { top:12px; }
+}
+/* At tablet portrait widths there is room for the island beside the logo. */
+@media (min-width:620px) and (max-width:760px) and (orientation:portrait) {
+  .section-5 .timeline-shell { padding-top:14px; }
   .section-5 .timeline-controls { top:12px; }
 }
 @media (max-width:1000px) and (orientation:landscape) and (max-height:650px) {
