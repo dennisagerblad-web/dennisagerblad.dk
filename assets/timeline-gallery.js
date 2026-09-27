@@ -6,7 +6,7 @@ let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
-const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=personlig-20260927-v23', import.meta.url)).then(r => {
+const loadData = () => dataPromise ||= fetch(new URL('./timeline-gallery-data.json?v=personlig-20260927-v24', import.meta.url)).then(r => {
   if (!r.ok) throw new Error('Gallery data unavailable');
   return r.json();
 }).catch(error => { dataPromise = null; throw error; });
