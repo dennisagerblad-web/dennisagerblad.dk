@@ -88,17 +88,20 @@
 .section-5 .calendar-biography {
   position:relative;
   z-index:1;
-  width:min(calc(100% + 20px),800px);
+  width:min(calc(100% + 20px),var(--bubble-max-width,800px));
   margin:26px 0 38px -20px;
   padding:0;
   text-align:left;
 }
+.section-5 .timeline-shell[data-theme="press"] .calendar-biography { --bubble-max-width:700px; }
+.section-5 .timeline-shell[data-theme="art"] .calendar-biography { --bubble-max-width:620px; }
+.section-5 .timeline-shell[data-theme="word"] .calendar-biography { --bubble-max-width:550px; }
 .section-5 .archive .calendar-biography p {
   position:relative;
   display:block;
-  min-height:140px;
+  min-height:0;
   margin:0;
-  padding:40px clamp(60px,6vw,82px) 38px clamp(98px,10vw,125px);
+  padding:clamp(36px,5%,50px) 12% clamp(36px,5%,50px) 17%;
   border:0;
   border-radius:0;
   background:transparent url("./timeline-speech-wide.webp") center / 100% 100% no-repeat;
@@ -107,6 +110,8 @@
   text-shadow:none!important;
   font:400 clamp(24px,2.1vw,29px)/1.12 "Caveat Timeline","Bradley Hand",cursive;
   text-wrap:pretty;
+  overflow-wrap:anywhere;
+  hyphens:auto;
 }
 .section-5 .calendar-biography p::before { content:none; }
 .section-5 .calendar-biography strong { font-weight:700; }
@@ -124,15 +129,21 @@
   }
   .section-5 .calendar-biography {
     width:calc(100% - 12px);
+    max-width:none;
     margin:12px 6px 36px;
   }
   .section-5 .archive .calendar-biography p {
-    min-height:205px;
-    padding:clamp(82px,23vw,100px) 46px 42px 48px;
+    padding:125px clamp(44px,12%,76px) 90px clamp(48px,15%,88px);
     background-image:url("./timeline-speech-portrait.webp");
-    font-size:clamp(23px,6vw,27px);
+    font-size:clamp(21px,5.8vw,27px);
     line-height:1.1;
   }
+}
+@media (max-width:320px) and (orientation:portrait) {
+  .section-5 .archive .calendar-biography p { padding-top:145px; font-size:20px; }
+}
+@media (min-width:761px) and (max-width:850px) {
+  .section-5 .timeline-controls { top:12px; }
 }
 @media (max-width:1000px) and (orientation:landscape) and (max-height:650px) {
   .section-5 .timeline-shell { padding-top:12px; }
