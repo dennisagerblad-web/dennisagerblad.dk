@@ -96,7 +96,7 @@
 .section-5 .archive .calendar-biography p {
   position:relative;
   display:block;
-  min-height:175px;
+  min-height:140px;
   margin:0;
   padding:40px clamp(60px,6vw,82px) 38px clamp(98px,10vw,125px);
   border:0;
@@ -127,7 +127,7 @@
     margin:12px 6px 36px;
   }
   .section-5 .archive .calendar-biography p {
-    min-height:240px;
+    min-height:205px;
     padding:clamp(82px,23vw,100px) 46px 42px 48px;
     background-image:url("./timeline-speech-portrait.webp");
     font-size:clamp(23px,6vw,27px);
