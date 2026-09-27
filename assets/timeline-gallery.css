@@ -77,41 +77,40 @@
 .section-5 .archive-scroll { scroll-behavior:auto; overflow-anchor:none; }
 
 /* Timeline introduction: the island stays above one speech bubble per category. */
+@font-face {
+  font-family:"Caveat Timeline";
+  src:url("./fonts/Caveat-variable.ttf") format("truetype");
+  font-style:normal;
+  font-weight:400 700;
+  font-display:swap;
+}
 .section-5 .timeline-shell { padding-top:14px; }
 .section-5 .calendar-biography {
   position:relative;
   z-index:1;
-  width:min(calc(100% - 44px),720px);
-  margin:32px 20px 38px auto;
+  width:min(calc(100% + 20px),800px);
+  margin:26px 0 38px -20px;
   padding:0;
   text-align:left;
 }
 .section-5 .archive .calendar-biography p {
   position:relative;
   display:block;
+  min-height:175px;
   margin:0;
-  padding:clamp(18px,2.5vw,28px) clamp(20px,3vw,34px);
-  border:1px solid rgb(255 255 255 / 72%);
-  border-radius:24px;
-  background:rgb(252 246 226 / 94%);
-  box-shadow:0 12px 36px rgb(0 0 0 / 34%);
-  color:#221a1b!important;
+  padding:40px clamp(60px,6vw,82px) 38px clamp(98px,10vw,125px);
+  border:0;
+  border-radius:0;
+  background:transparent url("./timeline-speech-wide.webp") center / 100% 100% no-repeat;
+  box-shadow:none;
+  color:#24180f!important;
   text-shadow:none!important;
-  font:400 clamp(16px,1.45vw,21px)/1.45 Georgia,serif;
+  font:400 clamp(24px,2.1vw,29px)/1.12 "Caveat Timeline","Bradley Hand",cursive;
   text-wrap:pretty;
 }
-.section-5 .calendar-biography p::before {
-  content:"";
-  position:absolute;
-  top:24px;
-  left:-35px;
-  width:42px;
-  height:38px;
-  background:rgb(252 246 226 / 94%);
-  clip-path:polygon(100% 0,100% 100%,0 53%);
-  filter:drop-shadow(-2px 3px 2px rgb(0 0 0 / 15%));
-}
-.section-5 .calendar-biography a { color:#4b2730!important; text-decoration-color:#8e5062; }
+.section-5 .calendar-biography p::before { content:none; }
+.section-5 .calendar-biography strong { font-weight:700; }
+.section-5 .calendar-biography a { color:#4a251b!important; text-decoration-color:#4a251b; text-decoration-thickness:1.5px; }
 .section-5 .timeline-shell[data-theme="press"] .calendar-biography p:not(:nth-child(1)),
 .section-5 .timeline-shell[data-theme="live"] .calendar-biography p:not(:nth-child(2)),
 .section-5 .timeline-shell[data-theme="music"] .calendar-biography p:not(:nth-child(3)),
@@ -124,26 +123,21 @@
     background-size:auto 160svh;
   }
   .section-5 .calendar-biography {
-    width:calc(100% - 32px);
-    margin:108px 16px 36px;
+    width:calc(100% - 12px);
+    margin:12px 6px 36px;
   }
   .section-5 .archive .calendar-biography p {
-    padding:20px 20px 22px;
-    border-radius:20px;
-    font-size:clamp(16px,4.3vw,19px);
-    line-height:1.42;
-  }
-  .section-5 .calendar-biography p::before {
-    top:-65px;
-    left:42%;
-    width:54px;
-    height:72px;
-    clip-path:polygon(0 100%,100% 100%,45% 0);
+    min-height:240px;
+    padding:clamp(82px,23vw,100px) 46px 42px 48px;
+    background-image:url("./timeline-speech-portrait.webp");
+    font-size:clamp(23px,6vw,27px);
+    line-height:1.1;
   }
 }
 @media (max-width:1000px) and (orientation:landscape) and (max-height:650px) {
   .section-5 .timeline-shell { padding-top:12px; }
   .section-5 .calendar-biography { display:block!important; margin-top:26px; }
+  .section-5 .archive .calendar-biography p { padding-top:26px; padding-bottom:25px; font-size:clamp(20px,2.6vw,24px); }
 }
 @media (max-width:760px), (max-width:1100px) and (max-height:600px) {
   .timeline-popup-header { padding:18px 54px 16px 18px; }
