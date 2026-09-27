@@ -117,11 +117,15 @@
 .section-5 .timeline-shell[data-theme="music"] .calendar-biography p:not(:nth-child(3)),
 .section-5 .timeline-shell[data-theme="art"] .calendar-biography p:not(:nth-child(4)),
 .section-5 .timeline-shell[data-theme="word"] .calendar-biography p:not(:nth-child(5)) { display:none!important; }
-@media (max-width:760px) {
+@media (max-width:760px) and (orientation:portrait) {
   .section-5 .timeline-shell { padding-top:64px; }
+  .is-open.section-5 .portrait-underlay {
+    background-position:11% -39svh;
+    background-size:auto 160svh;
+  }
   .section-5 .calendar-biography {
     width:calc(100% - 32px);
-    margin:33px 16px 36px;
+    margin:108px 16px 36px;
   }
   .section-5 .archive .calendar-biography p {
     padding:20px 20px 22px;
@@ -130,11 +134,11 @@
     line-height:1.42;
   }
   .section-5 .calendar-biography p::before {
-    top:-28px;
-    left:18%;
-    width:38px;
-    height:34px;
-    clip-path:polygon(0 100%,100% 100%,28% 0);
+    top:-65px;
+    left:42%;
+    width:54px;
+    height:72px;
+    clip-path:polygon(0 100%,100% 100%,45% 0);
   }
 }
 @media (max-width:1000px) and (orientation:landscape) and (max-height:650px) {
