@@ -1,5 +1,22 @@
 export const timelineEntries = [
   {
+    "date": "2026-09-11",
+    "display": "11.09.2026",
+    "year": 2026,
+    "category": "Optræden",
+    "title": "Kaleido-show, Bøssehuset",
+    "group": "live",
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2026-09-11-01.webp",
+    "images": [
+      "./archive/timeline/performance/2026-09-11-01.webp",
+      "./archive/timeline/performance/2026-09-11-02.webp",
+      "./archive/timeline/performance/2026-09-11-03.webp"
+    ],
+    "details": "Performancegruppen Kaleido fra Amsterdam var på besøg. Jeg optrådte med min sang “Alien”.",
+    "thumbnailPreview": "./assets/timeline-thumbs/1829969504a70525.webp"
+  },
+  {
     "date": "2026-07-18",
     "display": "18.07.2026",
     "year": 2026,
@@ -9,11 +26,11 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/performance/2026-07-18-02.jpg",
     "images": [
-      "./archive/timeline/performance/2026-07-18-01.jpg",
       "./archive/timeline/performance/2026-07-18-02.jpg",
       "./archive/timeline/performance/2026-07-18-03.jpg",
       "./archive/timeline/performance/2026-07-18-04.jpg",
-      "./archive/timeline/performance/2026-07-18-05.jpg"
+      "./archive/timeline/performance/2026-07-18-05.jpg",
+      "./archive/timeline/performance/2026-07-18-01.jpg"
     ],
     "thumbnailPreview": "./assets/timeline-thumbs/066b54791347bab1.webp"
   },
@@ -33,7 +50,7 @@ export const timelineEntries = [
       "./archive/timeline/performance/2026-06-05-04.jpg",
       "./archive/timeline/performance/2026-06-05-05.jpg"
     ],
-    "details": "Jeg sang “Gardinet brændes af”.",
+    "details": "Jeg sang “Gardinet brændes af”. På billederne ses Tutu Wanna og Lago, Direktørfrue Andersen, Per, Lizette, Lulu Selest og Hairwerk.",
     "thumbnailPreview": "./assets/timeline-thumbs/a645c9bd815db9fa.webp"
   },
   {
@@ -91,7 +108,7 @@ export const timelineEntries = [
     "display": "29.10.2025",
     "year": 2025,
     "category": "Optræden",
-    "title": "Sjæl på Dåse",
+    "title": "Sjæl på Dåse 10, Operaen, Christiania",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2025-10-29-01.jpg",
@@ -255,7 +272,7 @@ export const timelineEntries = [
     "display": "18.10.2024",
     "year": 2024,
     "category": "Optræden",
-    "title": "Sjæl på Dåse 8",
+    "title": "Sjæl på Dåse 9, Operaen, Christiania",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2024-10-18-thumb.webp",
@@ -358,7 +375,7 @@ export const timelineEntries = [
     "display": "20.10.2023",
     "year": 2023,
     "category": "Optræden",
-    "title": "Sjæl på Dåse 7",
+    "title": "Sjæl på Dåse 8, Operaen, Christiania",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2023-10-20-thumb.webp",
@@ -542,6 +559,21 @@ export const timelineEntries = [
     "href": null
   },
   {
+    "date": "2022-10-21",
+    "display": "21.10.2022",
+    "year": 2022,
+    "category": "Optræden",
+    "title": "Sjæl på Dåse 7, Operaen, Christiania",
+    "group": "live",
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2022-10-21-01.jpg",
+    "images": [
+      "./archive/timeline/performance/2022-10-21-01.jpg"
+    ],
+    "details": "Jeg sang “Straight World Order”, som jeg har lavet med technoproduceren Giuseppe De Bellis. Alle var klædt i guld eller sølv.",
+    "thumbnailPreview": "./assets/timeline-thumbs/db69f899495acc49.webp"
+  },
+  {
     "date": "2022-10-12",
     "display": "12.10.2022",
     "year": 2022,
@@ -705,7 +737,7 @@ export const timelineEntries = [
     "display": "22.10.2021",
     "year": 2021,
     "category": "Liveoptræden",
-    "title": "Optræder på Sjæl På dåse 6",
+    "title": "Sjæl på Dåse 6, Operaen, Christiania",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2021-10-22-01.jpg",
@@ -729,11 +761,17 @@ export const timelineEntries = [
     "display": "21.08.2021",
     "year": 2021,
     "category": "Liveoptræden",
-    "title": "Optræder på Sjæl På dåse 5 med to sange, Operaen, Christiania.",
+    "title": "Sjæl på Dåse 5, Operaen, Christiania",
     "group": "live",
-    "href": "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/daase5.html",
+    "href": null,
     "thumbnail": "./archive/timeline/generated-thumbs/6c094ef11d7bfa.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/31c056432b689e00.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/31c056432b689e00.webp",
+    "images": [
+      "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-i-hvid.jpg",
+      "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black.jpg",
+      "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black-2.jpg"
+    ],
+    "details": "Jeg optrådte med to sange til Sjæl på Dåse. Først var vi klædt i sort, siden i hvidt; Hairwerk Hugh Mongous havde lavet kostumerne."
   },
   {
     "date": "2021-08-20",
@@ -893,14 +931,15 @@ export const timelineEntries = [
     "display": "16.10.2020",
     "year": 2020,
     "category": "Liveoptræden",
-    "title": "Covid-19, Sjæl på Dåse 4, Operaen, Christiania",
+    "title": "Sjæl på Dåse 4, Operaen, Christiania",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2020-10-16-02.jpg",
     "images": [
       "./archive/timeline/performance/2020-10-16-02.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/7408e213ce0e1e7d.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/7408e213ce0e1e7d.webp",
+    "details": "Jeg optrådte under coronapandemien."
   },
   {
     "date": "2020-05-11",
@@ -1015,7 +1054,7 @@ export const timelineEntries = [
     "display": "19.10.2019",
     "year": 2019,
     "category": "Liveoptræden",
-    "title": "Sang Master Fucker til Sjæl På Dåse 3, Operaen, Christiania",
+    "title": "Sjæl på Dåse 3, Operaen, Christiania",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2019-10-19-01.jpg",
@@ -1023,7 +1062,8 @@ export const timelineEntries = [
       "./archive/timeline/performance/2019-10-19-01.jpg",
       "./archive/timeline/performance/2019-10-19-02.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/e110c5e154593f10.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e110c5e154593f10.webp",
+    "details": "Jeg sang “Master Fucker”."
   },
   {
     "date": "2019-08-10",
@@ -1103,7 +1143,7 @@ export const timelineEntries = [
     "display": "14.10.2018",
     "year": 2018,
     "category": "Liveoptræden",
-    "title": "Duet med Florince, Sjæl På Dåse 2, Operaen, Christiania",
+    "title": "Sjæl på Dåse 2, Operaen, Christiania",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2018-10-14-04.jpg",
@@ -1113,7 +1153,8 @@ export const timelineEntries = [
       "./archive/timeline/performance/2018-10-14-03.jpg",
       "./archive/timeline/performance/2018-10-14-04.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/e6c145dd9ded8e32.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e6c145dd9ded8e32.webp",
+    "details": "Jeg sang duet med Florince."
   },
   {
     "date": "2018-09-01",
@@ -1177,9 +1218,10 @@ export const timelineEntries = [
     "display": "27.10.2017",
     "year": 2017,
     "category": "Optræden",
-    "title": "Sang med Røvhullet til kontrabas, Sjæl På Dåse 1, Operaen, Christiania",
+    "title": "Sjæl på Dåse 1, Operaen, Christiania",
     "group": "live",
-    "href": null
+    "href": null,
+    "details": "Jeg sang med Røvhullet til kontrabas."
   },
   {
     "date": "2017-10-08",
@@ -5413,8 +5455,96 @@ export const timelineEntries = [
     "category": "Født",
     "title": "Selvbiografi: Jeg blev født og fik navnet Robin Ova Tolfsen.",
     "group": "media",
-    "href": "./200_calendar/1970/index.html",
+    "href": null,
     "thumbnail": "./200_calendar/1970/Robin_4_aar_02.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/70d02de2376c5fc8.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/70d02de2376c5fc8.webp",
+    "biography": [
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/Robin_4_aar_02.jpg",
+        "caption": "Robin, 4 år"
+      },
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/biografi_01.jpg",
+        "caption": "Robin, 6 år"
+      },
+      {
+        "type": "text",
+        "text": "Som lille hed jeg Robin. Jeg er vokset op på Færøerne i bygden Vestmanna (1500 indbyggere) med min mamma. Jeg var en nervøs dreng, som helt fra lille af, led af angst. Jeg skabte en hemmelig person inden i sig selv, som jeg kaldte Dennis Agerblad, som kun jeg selv kendte til. Jeg følte at Dennis Agerblad var kroppens rigtige person, som forstod sig selv. Robin var det navn mine forældre har givet mig, fordi min far, som jeg sjældent så, blev kaldt Robin Hood som lille."
+      },
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/biografi_02.jpg",
+        "caption": "Robin på fjeldtoppen"
+      },
+      {
+        "type": "text",
+        "text": "Jeg følte aldrig at der var nogen der forstod mig, eller var som mig og prøvede ihærdigt at opføre mig som man skulle for at blive accepteret og elsket."
+      },
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/biografi_03.jpg",
+        "caption": "Mit værelse"
+      },
+      {
+        "type": "text",
+        "text": "Men det gad min indre Dennis Agerblad ikke og så var konflikten født. En konflikt som aldrig skulle løses imellem mine to personer. Min indre Dennis Agerblad blev 180 grader modsat mit ydre Robin. Dennis Agerblad ville vise sig frem og farvede derfor sit hår, syede sit eget tøj, pjattede og begyndte at optage en masse sjove ting på bånd. Men når mit ydre Robin så skulle ud, turde jeg næsten ikke vise mig med det nye hår, som min indre Dennis Agerblad havde lavet på mig."
+      },
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/biografi_05.jpg",
+        "caption": "Robin, 14 år"
+      },
+      {
+        "type": "text",
+        "text": "Det var værst da jeg kom i puberteten for det gjorde begge mine personer også. Robin som heteroseksuel og Dennis Agerblad som homoseksuel. Jeg blev bange for at min indre Dennis Agerblad side skulle blive opdaget og gjorde nu endnu mere for at skjule ham, ved at være den første i klassen som kyssede på pigerne. Jeg blev glad hvis nogen kaldte mig for pigeglad eller en skørtejæger. Men to seksualiteter i en krop var meget kompliceret. Især fordi min dominerende Dennis Agerblad side ikke fik levet sin seksualitet ud. Jeg vidste ikke hvad homoseksualitet var, men havde hørt om kønsskifteoperationer i medierne. Og tænkte, øv skal jeg virkelig operere mig om, for at få en mand som vil have mig?"
+      },
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/biografi_07.jpg",
+        "caption": "Dennis Agerblad, 15 år, Vestmanna skole"
+      },
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/biografi_04.jpg",
+        "caption": "Alene"
+      },
+      {
+        "type": "text",
+        "text": "Mine to personer blev mere og mere konflikt fyldte og mit liv blev et mareridt. Og jeg tænkte, hvis bare jeg boede i Danmark så kunne jeg måske få en kønsskifteoperation og kalde mig for Denice."
+      },
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/biografi_06.jpg",
+        "caption": "Dennis Agerblad, 15 år"
+      },
+      {
+        "type": "text",
+        "text": "Jeg flyttede til København, men min indre Dennis Agerblad side ville ikke høre tale om min ydre Robin sides idéer om at blive til en pige. Jeg er Dennis Agerblad og ikke andet. Jeg vil ikke sættes i nogen bås. Jeg vil finde et menneske som kan elske mig, som jeg er. Men min indre Dennis Agerblad side var stadig en så ekstrem person for min ydre Robin side, at de to kæmpede om pladsen i kroppen. Til sidst opfant jeg en ny tredje person som var en blanding af de to andre og kaldte mig for Ova."
+      },
+      {
+        "type": "text",
+        "text": "Jeg var glad for at jeg nu kunne glemme alt om min dumme Robin side og hans dobbeltmoral, løgne og selvhad. Robin blev 20 år før han blev lukket og slukket, men ikke glemt."
+      },
+      {
+        "type": "image",
+        "src": "./200_calendar/1970/biografi_robin.jpg",
+        "caption": "Ova, 22 år"
+      },
+      {
+        "type": "text",
+        "text": "Som Ova klarede jeg mig rigtig godt. Jeg var åben homoseksuel. Jeg fik mig en uddannelse som tekstil designer på Danmarks Design Skole. Startede et færøsk band, som jeg udgav musik med. Startede et kunstnerværksted op og lavede kunst og fik også solgt billeder. Fik fast job som grafiker. Ova blev 10 år. Min Ova side har skabt en del relationer, som intet har med Dennis Agerblad siden at gøre, så han ligger og ulmer under sengen."
+      },
+      {
+        "type": "image",
+        "src": "./400_gallery/dennis_agerblad_blue_blond.jpg",
+        "caption": "Dennis Agerblad, 30 år"
+      },
+      {
+        "type": "text",
+        "text": "I år 2000 tog Dennis Agerblad magten over kroppen. Med tiden og med god hjælp fra performance gruppen dunst, blomstede min Dennis Agerblad side op og ud over scenekanten. Med alle de undelige ekstreme, sjove og søde mennesker følte jeg mig for første gang normal. Jeg er Dennis Agerblad. Forfatter, Komponist, Sanger, Performancekunstner, Videokunstner, Textildesigner, Grafiker & Kunstmaler."
+      }
+    ]
   }
 ];

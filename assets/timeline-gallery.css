@@ -174,3 +174,28 @@
   .timeline-popup-header { padding:18px 54px 16px 18px; }
   .timeline-popup-header h2 { font-size:22px; }
 }
+
+/* The autobiography uses the current popup, with its original photos and prose. */
+.timeline-popup-biography-dialog { width:min(900px,calc(100vw - 40px)); }
+.timeline-popup-biography {
+  flex:1 1 auto;
+  min-height:0;
+  overflow:auto;
+  overscroll-behavior:contain;
+  padding:clamp(20px,3vw,38px);
+  scrollbar-width:thin;
+}
+.timeline-popup-biography p {
+  max-width:680px;
+  margin:0 auto 1.6em;
+  color:#f4f1ed;
+  font:400 clamp(17px,1.35vw,21px)/1.55 Georgia,serif;
+  text-align:left;
+}
+.timeline-popup-biography figure { width:max-content; max-width:100%; margin:0 auto clamp(26px,4vw,44px); }
+.timeline-popup-biography img { display:block; width:auto; height:auto; max-width:100%; margin:auto; }
+.timeline-popup-biography figcaption { margin-top:8px; color:#d4d0cd; font:400 14px/1.4 system-ui,sans-serif; text-align:center; }
+@media (max-width:760px) {
+  .timeline-popup-biography-dialog { width:calc(100vw - 20px); max-height:calc(100dvh - 20px); }
+  .timeline-popup-biography { padding:18px; }
+}

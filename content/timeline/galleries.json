@@ -60,16 +60,6 @@
         "./archive/timeline/performance/2024-12-14-04.webp"
       ]
     },
-    "2024-10-18|Optræden|Sjæl på Dåse 8": {
-      "title": "Sjæl på Dåse 8",
-      "details": [],
-      "images": [
-        "./archive/timeline/performance/2024-10-18-01.webp",
-        "./archive/timeline/performance/2024-10-18-02.webp",
-        "./archive/timeline/performance/2024-10-18-03.webp",
-        "./archive/timeline/performance/2024-10-18-04.webp"
-      ]
-    },
     "2024-08-10|Optræden|Sommerfest, Bøssehuset": {
       "title": "Sommerfest, Bøssehuset",
       "details": [
@@ -121,16 +111,6 @@
         "./archive/timeline/performance/2023-10-28-02.webp",
         "./archive/timeline/performance/2023-10-28-03.webp",
         "./archive/timeline/performance/2023-10-28-04.webp"
-      ]
-    },
-    "2023-10-20|Optræden|Sjæl på Dåse 7": {
-      "title": "Sjæl på Dåse 7",
-      "details": [],
-      "images": [
-        "./archive/timeline/performance/2023-10-20-01.webp",
-        "./archive/timeline/performance/2023-10-20-02.webp",
-        "./archive/timeline/performance/2023-10-20-03.webp",
-        "./archive/timeline/performance/2023-10-20-04.webp"
       ]
     },
     "2023-10-06|Optræden|Cabaret, Bøssehuset": {
@@ -247,29 +227,10 @@
         "./archive/timeline/boessernes-danmarkshistorie-2021.jpeg"
       ]
     },
-    "2021-10-22|Liveoptræden|Optræder på Sjæl På dåse 6": {
-      "title": "Optræder på Sjæl På dåse 6",
-      "details": [],
-      "images": [
-        "./archive/timeline/performance/2021-10-22-01.jpg",
-        "./archive/timeline/performance/2021-10-22-02.jpg"
-      ]
-    },
     "2021-09-04|Liveoptræden|Kunstnersamtale på Nordic Music Days, Tórshavn, Færøerne.": {
       "title": "Kunstnersamtale på Nordic Music Days, Tórshavn, Færøerne.",
       "details": [],
       "images": []
-    },
-    "2021-08-21|Liveoptræden|Optræder på Sjæl På dåse 5 med to sange, Operaen, Christiania.": {
-      "title": "Optræder på Sjæl På dåse 5 med to sange, Operaen, Christiania.",
-      "details": [
-        "Jeg optrådte med to sange til Sjæl på Dåse. Først var vi klædt i sort, siden i hvidt; Hairwerk Hugh Mongous havde lavet kostumerne."
-      ],
-      "images": [
-        "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-i-hvid.jpg",
-        "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black.jpg",
-        "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black-2.jpg"
-      ]
     },
     "2021-08-14|Liveoptræden|Optræde med LoneStar til Bøssehusets Sommerfest": {
       "title": "Optræde med LoneStar til Bøssehusets Sommerfest",
@@ -313,13 +274,6 @@
         "./archive/legacy/200_calendar/2021/udstilling/IMG_1981.jpg"
       ]
     },
-    "2020-10-16|Liveoptræden|Covid-19, Sjæl på Dåse 4, Operaen, Christiania": {
-      "title": "Covid-19, Sjæl på Dåse 4, Operaen, Christiania",
-      "details": [],
-      "images": [
-        "./archive/timeline/performance/2020-10-16-02.jpg"
-      ]
-    },
     "2020-03-07|Liveoptræden|Sang Netflix Netflix til Nostalgisk Melodigrandprix": {
       "title": "Sang Netflix Netflix til Nostalgisk Melodigrandprix",
       "details": [],
@@ -346,14 +300,6 @@
       "images": [
         "./archive/timeline/performance/2019-12-05-01.jpg",
         "./archive/timeline/performance/2019-12-05-02.jpg"
-      ]
-    },
-    "2019-10-19|Liveoptræden|Sang Master Fucker til Sjæl På Dåse 3, Operaen, Christiania": {
-      "title": "Sang Master Fucker til Sjæl På Dåse 3, Operaen, Christiania",
-      "details": [],
-      "images": [
-        "./archive/timeline/performance/2019-10-19-01.jpg",
-        "./archive/timeline/performance/2019-10-19-02.jpg"
       ]
     },
     "2019-08-10|Optræden|East is East, Teateret ved Sorte Hest": {
@@ -394,16 +340,6 @@
       ],
       "images": []
     },
-    "2018-10-14|Liveoptræden|Duet med Florince, Sjæl På Dåse 2, Operaen, Christiania": {
-      "title": "Duet med Florince, Sjæl På Dåse 2, Operaen, Christiania",
-      "details": [],
-      "images": [
-        "./archive/timeline/performance/2018-10-14-01.jpg",
-        "./archive/timeline/performance/2018-10-14-02.jpg",
-        "./archive/timeline/performance/2018-10-14-03.jpg",
-        "./archive/timeline/performance/2018-10-14-04.jpg"
-      ]
-    },
     "2018-09-01|Optræden|Jeg var Frankensteins brud på Teateret ved Sorte Hest.": {
       "title": "Jeg var Frankensteins brud på Teateret ved Sorte Hest.",
       "details": [
@@ -433,11 +369,6 @@
       "details": [
         "Jeg læste op på herretoilettet."
       ],
-      "images": []
-    },
-    "2017-10-27|Optræden|Sang med Røvhullet til kontrabas, Sjæl På Dåse 1, Operaen, Christiania": {
-      "title": "Sang med Røvhullet til kontrabas, Sjæl På Dåse 1, Operaen, Christiania",
-      "details": [],
       "images": []
     },
     "2017-10-08|Optræden|Teateret ved Sorte Hest": {
@@ -3064,21 +2995,6 @@
         "./archive/timeline/performance/2025-08-09-03.jpg"
       ]
     },
-    "2025-10-29|Optræden|Sjæl på Dåse": {
-      "title": "Sjæl på Dåse",
-      "details": [
-        "Jeg sang min sang “Kærlighed”."
-      ],
-      "images": [
-        "./archive/timeline/performance/2025-10-29-01.jpg",
-        "./archive/timeline/performance/2025-10-29-02.jpg",
-        "./archive/timeline/performance/2025-10-29-03.jpg",
-        "./archive/timeline/performance/2025-10-29-04.jpg",
-        "./archive/timeline/performance/2025-10-29-05.jpg",
-        "./archive/timeline/performance/2025-10-29-06.jpg",
-        "./archive/timeline/performance/2025-10-29-07.jpg"
-      ]
-    },
     "2025-11-28|Koncert|Udgivelseskoncert for albummet “STEV”, Blábar, Tórshavn": {
       "title": "Udgivelseskoncert for albummet “STEV”, Blábar, Tórshavn",
       "details": [
@@ -3109,7 +3025,8 @@
     "2026-06-05|Melodigrandprix|Kønspolitisk Melodigrandprix": {
       "title": "Kønspolitisk Melodigrandprix",
       "details": [
-        "Jeg sang “Gardinet brændes af”."
+        "Jeg sang “Gardinet brændes af”.",
+        "På billederne ses Tutu Wanna og Lago, Direktørfrue Andersen, Per, Lizette, Lulu Selest og Hairwerk."
       ],
       "images": [
         "./archive/timeline/performance/2026-06-05-01.jpg",
@@ -3123,11 +3040,11 @@
       "title": "maður:glotti på G! Festival, Færøerne",
       "details": [],
       "images": [
-        "./archive/timeline/performance/2026-07-18-01.jpg",
         "./archive/timeline/performance/2026-07-18-02.jpg",
         "./archive/timeline/performance/2026-07-18-03.jpg",
         "./archive/timeline/performance/2026-07-18-04.jpg",
-        "./archive/timeline/performance/2026-07-18-05.jpg"
+        "./archive/timeline/performance/2026-07-18-05.jpg",
+        "./archive/timeline/performance/2026-07-18-01.jpg"
       ]
     },
     "2025-10-25|Kunst|Jeg stiller op til borgmester i København": {
@@ -3152,6 +3069,118 @@
         "./archive/timeline/valgplakater-2022-02.jpeg",
         "./archive/timeline/valgplakater-2022-03.jpeg",
         "./archive/timeline/valgplakater-2022-04.jpeg"
+      ]
+    },
+    "2026-09-11|Optræden|Kaleido-show, Bøssehuset": {
+      "title": "Kaleido-show, Bøssehuset",
+      "details": [
+        "Performancegruppen Kaleido fra Amsterdam var på besøg. Jeg optrådte med min sang “Alien”."
+      ],
+      "images": [
+        "./archive/timeline/performance/2026-09-11-01.webp",
+        "./archive/timeline/performance/2026-09-11-02.webp",
+        "./archive/timeline/performance/2026-09-11-03.webp"
+      ]
+    },
+    "2022-10-21|Optræden|Sjæl på Dåse 7, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 7, Operaen, Christiania",
+      "details": [
+        "Jeg sang “Straight World Order”, som jeg har lavet med technoproduceren Giuseppe De Bellis. Alle var klædt i guld eller sølv."
+      ],
+      "images": [
+        "./archive/timeline/performance/2022-10-21-01.jpg"
+      ]
+    },
+    "2017-10-27|Optræden|Sjæl på Dåse 1, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 1, Operaen, Christiania",
+      "details": [
+        "Jeg sang med Røvhullet til kontrabas."
+      ],
+      "images": []
+    },
+    "2018-10-14|Liveoptræden|Sjæl på Dåse 2, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 2, Operaen, Christiania",
+      "details": [
+        "Jeg sang duet med Florince."
+      ],
+      "images": [
+        "./archive/timeline/performance/2018-10-14-01.jpg",
+        "./archive/timeline/performance/2018-10-14-02.jpg",
+        "./archive/timeline/performance/2018-10-14-03.jpg",
+        "./archive/timeline/performance/2018-10-14-04.jpg"
+      ]
+    },
+    "2019-10-19|Liveoptræden|Sjæl på Dåse 3, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 3, Operaen, Christiania",
+      "details": [
+        "Jeg sang “Master Fucker”."
+      ],
+      "images": [
+        "./archive/timeline/performance/2019-10-19-01.jpg",
+        "./archive/timeline/performance/2019-10-19-02.jpg"
+      ]
+    },
+    "2020-10-16|Liveoptræden|Sjæl på Dåse 4, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 4, Operaen, Christiania",
+      "details": [
+        "Jeg optrådte under coronapandemien."
+      ],
+      "images": [
+        "./archive/timeline/performance/2020-10-16-02.jpg"
+      ]
+    },
+    "2021-08-21|Liveoptræden|Sjæl på Dåse 5, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 5, Operaen, Christiania",
+      "details": [
+        "Jeg optrådte med to sange til Sjæl på Dåse. Først var vi klædt i sort, siden i hvidt; Hairwerk Hugh Mongous havde lavet kostumerne."
+      ],
+      "images": [
+        "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-i-hvid.jpg",
+        "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black.jpg",
+        "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black-2.jpg"
+      ]
+    },
+    "2021-10-22|Liveoptræden|Sjæl på Dåse 6, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 6, Operaen, Christiania",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2021-10-22-01.jpg",
+        "./archive/timeline/performance/2021-10-22-02.jpg"
+      ]
+    },
+    "2023-10-20|Optræden|Sjæl på Dåse 8, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 8, Operaen, Christiania",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2023-10-20-01.webp",
+        "./archive/timeline/performance/2023-10-20-02.webp",
+        "./archive/timeline/performance/2023-10-20-03.webp",
+        "./archive/timeline/performance/2023-10-20-04.webp"
+      ]
+    },
+    "2024-10-18|Optræden|Sjæl på Dåse 9, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 9, Operaen, Christiania",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2024-10-18-01.webp",
+        "./archive/timeline/performance/2024-10-18-02.webp",
+        "./archive/timeline/performance/2024-10-18-03.webp",
+        "./archive/timeline/performance/2024-10-18-04.webp"
+      ]
+    },
+    "2025-10-29|Optræden|Sjæl på Dåse 10, Operaen, Christiania": {
+      "title": "Sjæl på Dåse 10, Operaen, Christiania",
+      "details": [
+        "Jeg sang min sang “Kærlighed”."
+      ],
+      "images": [
+        "./archive/timeline/performance/2025-10-29-01.jpg",
+        "./archive/timeline/performance/2025-10-29-02.jpg",
+        "./archive/timeline/performance/2025-10-29-03.jpg",
+        "./archive/timeline/performance/2025-10-29-04.jpg",
+        "./archive/timeline/performance/2025-10-29-05.jpg",
+        "./archive/timeline/performance/2025-10-29-06.jpg",
+        "./archive/timeline/performance/2025-10-29-07.jpg"
       ]
     }
   }
