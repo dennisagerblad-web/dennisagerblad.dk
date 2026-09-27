@@ -111,7 +111,6 @@
   font:400 clamp(24px,2.1vw,29px)/1.12 "Caveat Timeline","Bradley Hand",cursive;
   text-wrap:pretty;
   overflow-wrap:anywhere;
-  hyphens:auto;
 }
 .section-5 .calendar-biography p::before { content:none; }
 .section-5 .calendar-biography strong { font-weight:700; }
@@ -141,6 +140,9 @@
 }
 @media (max-width:320px) and (orientation:portrait) {
   .section-5 .archive .calendar-biography p { padding-top:145px; font-size:20px; }
+}
+@media (max-width:300px) and (orientation:portrait) {
+  .section-5 .archive .calendar-biography p { hyphens:auto; }
 }
 @media (min-width:761px) and (max-width:850px) {
   .section-5 .timeline-controls { top:12px; }
