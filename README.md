@@ -5,18 +5,6 @@ app ligger i `assets/site-app.js` og `assets/site.css`. De gamle
 genererede bundles er fjernet fra arbejdsfilstrukturen; Git-historikken gemmer
 tidligere versioner.
 
-## Kunst 1 og Kunst 2
-
-Kunst 1 bruger fortsat det originale `universe-art-v2.webp` uden ændringer.
-Kunst 2 kan vælges med knappen ved siden af Kunst 1 inde i galleriet. Det nye,
-letvægts loft-og-gulvlag ligger i `assets/art2-ceiling-floor.jpg`. Det originale
-gallerifoto vises proportionalt ovenpå; `assets/art2-gallery-mask.svg` skærer
-loftet fra og toner det originale gulv ud over det nye. Glasmontrerne er bevaret,
-fordi en genereret fjernelse ændrede selve keramikværkerne. Opsætning og
-skift mellem versionerne findes i `assets/art-versions.css` og
-`assets/art-versions.js`. Ændres de filer, øges versionsparameteren for dem i
-`index.html`.
-
 ## Hvor redigeres tidslinjen?
 
 | Indhold | Fil eller mappe |
