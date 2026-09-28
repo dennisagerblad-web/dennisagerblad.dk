@@ -260,7 +260,11 @@ export function openTimelineGallery(entry, group, theme = {}) {
     const compact=mobile.matches;
     const margin=compact ? 0 : 32;
     const maxW=vw-margin*2;
-    const ratio=galleryRatio(items,media,vw/vh);
+    // This event has six portraits and one landscape image. On desktop the
+    // landscape deserves a broad viewing area; portrait viewports keep their
+    // natural tall frame. The image composition still preserves every photo.
+    const measuredRatio=galleryRatio(items,media,vw/vh);
+    const ratio=entry.date==='2026-08-08' && !compact ? Math.max(measuredRatio,1.5) : measuredRatio;
     const readableWidth=Math.min(maxW,360);
     let width=maxW;
     for(let i=0;i<8;i++) {

@@ -70,7 +70,7 @@ export const timelineEntries = [
       "./archive/timeline/performance/2026-06-05-04.jpg",
       "./archive/timeline/performance/2026-06-05-05.jpg"
     ],
-    "details": "Jeg sang “Gardinet brændes af”. På billederne ses Tutu Wanna og Lago, Direktørfrue Andersen, Per, Lizette, Lulu Selest og Hairwerk.",
+    "details": "Jeg sang “Gardinet brændes af”. På billederne ses Tutu Wanna og Lago, Fru Direktør Elsa Kragh Madsen, Per, Lizette, Lulu Selest og Hairwerk.",
     "thumbnailPreview": "./assets/timeline-thumbs/a645c9bd815db9fa.webp"
   },
   {

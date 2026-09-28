@@ -19,16 +19,19 @@ tidligere versioner.
 
 `thumbnail` i en post peger på originalen, der kan bruges i en popup.
 `thumbnailPreview` peger på den lille WebP-udgave til tidslinjens oversigt.
-Samme original får altid samme forhåndsvisning. Previewfilerne kan genskabes
-med `python3 tools/timeline-gallery/optimize_thumbnails.py`; scriptet sletter
-også previews, der ikke længere er i brug. Kræver Pillow.
+Samme original får altid samme forhåndsvisning. Når der kommer nye fotos til
+tidslinjen, opdaterer jeg deres metadata og previewbilleder som en fast del af
+arbejdet. Den samlede arbejdsgang kan køres med
+`python3 tools/timeline-gallery/prepare_new_photos.py`; den opretter små WebP-
+forhåndsvisninger til tidslinjen og fjerner forældede previews uden at ændre
+popuporiginalerne. Kræver Pillow.
 
 Hvis en ny Scene- eller Kunst-post har billeder, køres
-`python3 tools/timeline-gallery/prepare.py` efter redigering af `entries.js`.
+`python3 tools/timeline-gallery/prepare_new_photos.py` efter redigering af `entries.js`.
 Det føjer nye gallerier til `galleries.json` og opdaterer den tekniske fil
 `image-metadata.json`, men bevarer allerede redigerede tekster og
-billedrækkefølger. Gennemgå derefter den nye post i `galleries.json`. Kør
-preview-scriptet til sidst.
+billedrækkefølger. Gennemgå derefter den nye post i `galleries.json`. Den
+samlede kommando udfører også preview-trinnet.
 
 Ved ændringer i `entries.js` skal versionsparameteren i importen øverst i
 `assets/site-app.js` øges. Ved ændringer i `galleries.json` eller

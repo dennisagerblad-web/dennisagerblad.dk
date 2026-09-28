@@ -200,3 +200,20 @@
 .timeline-video-viewer{justify-content:flex-start}
 /* Preserve every source photo ratio while fitting large images inside the popup. */
 .timeline-popup-gallery figure img{width:auto;height:auto;max-width:100%;max-height:62svh;object-fit:contain}
+
+
+/* Timeline readability, Literature full-window scrolling, 2026-09-28. */
+.timeline-shell[data-theme="live"] .continuous-thread{stroke:#740915!important}
+.timeline-shell[data-theme="live"] .timeline-arrowhead{fill:#740915!important}
+.timeline-shell[data-theme="live"] .timeline-line{background:#740915!important}
+.timeline-shell[data-theme="live"] .life-year>h2{color:#740915!important;text-shadow:0 1px 1px #fff9}
+.timeline-entry time,.timeline-entry .life-category{color:#fff!important;text-shadow:0 1px 3px #000!important}
+.timeline-entry .life-category svg{color:#fff!important}
+.ship.section-3 .archive{inset:0;width:auto;padding:0;border-radius:0;overflow:hidden}
+.section-3 .section-heading{top:20px;left:clamp(18px,4vw,64px);right:auto}
+.section-3 .archive-layout{display:block;flex:1 1 auto;height:100%;min-height:0}
+.section-3 .archive-scroll{height:100%;max-height:none;overflow-y:auto;overscroll-behavior:contain;padding:130px clamp(18px,4vw,64px) 48px}
+@media (max-width:760px){
+  .section-3 .section-heading{top:12px;left:14px}
+  .section-3 .archive-scroll{padding:188px 18px 40px}
+}
