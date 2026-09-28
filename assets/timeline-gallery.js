@@ -1,14 +1,14 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20260927-v17';
+import { timelineDate } from './timeline-ui.js?v=20260928-1';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20260927-4',
-  '../content/timeline/image-metadata.json?v=20260927-4',
+  '../content/timeline/galleries.json?v=20260928-1',
+  '../content/timeline/image-metadata.json?v=20260928-1',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();
@@ -212,6 +212,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   overlay.dataset.theme = group;
   Object.entries(theme).forEach(([key,value]) => overlay.style.setProperty(key,value));
   const dialog = el('section', 'tg-dialog'); dialog.setAttribute('role','dialog');
+  dialog.dataset.entryDate = entry.date;
   dialog.setAttribute('aria-modal','true'); dialog.setAttribute('aria-labelledby','tg-title');
   const header = el('header', 'tg-header');
   const title = el('h2', '', entry.title); title.id = 'tg-title';
@@ -471,7 +472,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     media = data.media || {};
     title.textContent = entry.title;
     const paragraphs = gallery?.details || (entry.details ? [entry.details] : []);
-    const longCopy = paragraphs.join(' ').length > 700 && paragraphs.length > 1;
+    const longCopy = entry.date !== '2012-10-12' && paragraphs.join(' ').length > 700 && paragraphs.length > 1;
     if (longCopy) {
       details.append(el('p','',paragraphs[0]));
       const more = el('details','tg-more'); more.append(el('summary','','Læs mere om arrangementet'));
@@ -490,6 +491,10 @@ export function openTimelineGallery(entry, group, theme = {}) {
       const video=el('iframe','tg-video'); video.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(entry.videoId)}`;
       video.title=entry.title; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
       dialog.insertBefore(video,viewer);
+      const youtube=el('a','tg-video-link','Se videoen på YouTube');
+      youtube.href=`https://www.youtube.com/watch?v=${encodeURIComponent(entry.videoId)}`;
+      youtube.target='_blank'; youtube.rel='noreferrer';
+      dialog.insertBefore(youtube,viewer);
     }
     if (entry.popupHref) link(entry.popupLabel || 'Se linket ↗',entry.popupHref);
     if (items.length) {

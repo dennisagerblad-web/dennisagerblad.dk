@@ -96,11 +96,12 @@ export const timelineEntries = [
     "display": "28.11.2025",
     "year": 2025,
     "category": "CD-udgivelse",
-    "title": "“STEV” – fjerde album med den færøske duo maður:glotti.",
+    "title": "\"STEV\" - fjerde album med min færøske duo maður:glotti.",
     "group": "music",
     "href": "./archive/legacy/200_calendar/2025/25_11_28_stev/madurglotti_stev.html",
     "thumbnail": "./archive/music/stev.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/c9f6f5d025efb2f7.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/c9f6f5d025efb2f7.webp",
+    "albumKey": "STEV"
   },
   {
     "date": "2025-11-28",
@@ -161,7 +162,10 @@ export const timelineEntries = [
     ],
     "shortTitle": "Jeg stiller op til borgmester",
     "details": "Stem på mig, og jeg lover dig guld og lyserøde skove.",
-    "thumbnailPreview": "./assets/timeline-thumbs/ae0f9657b3589790.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/ae0f9657b3589790.webp",
+    "creditPrefix": "Plakater udført af",
+    "creditName": "Ian Christensen",
+    "creditHref": "https://ianchristensen.dk/"
   },
   {
     "date": "2025-08-09",
@@ -2032,7 +2036,8 @@ export const timelineEntries = [
     "group": "art",
     "href": "./archive/legacy/200_calendar/2012/2012_10_12_ke12/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/40b37d87442619.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/3afed582461efc26.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/3afed582461efc26.webp",
+    "videoId": "GreHCFZLsuA"
   },
   {
     "date": "2012-08-31",
@@ -2838,9 +2843,9 @@ export const timelineEntries = [
     "title": "Som Jeg Er - Homo-Bi-Trans i København, ByMuseet, København.",
     "group": "art",
     "href": "./archive/legacy/200_calendar/2009/09_07_03_bymuseum/bymuseum.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/60ceaab5137c64.jpg",
+    "thumbnail": "./archive/legacy/200_calendar/2009/09_07_03_bymuseum/CIMG1181.jpg",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/37039a89d7f0efa9.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/7b0ebd5516f8055b.webp"
   },
   {
     "date": "2009-07-03",
@@ -3270,11 +3275,12 @@ export const timelineEntries = [
     "display": "17.07.2008",
     "year": 2008,
     "category": "CD-udgivelse",
-    "title": "\"land\" Tredje album med maður:glotti (min færøske duo)",
+    "title": "\"land\" - tredje album med min færøske duo maður:glotti.",
     "group": "music",
     "href": "./archive/legacy/200_calendar/2008/08_07_17_land/madurglotti_land.html",
     "thumbnail": "./archive/timeline/land.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/5667152e7827ccc4.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/5667152e7827ccc4.webp",
+    "albumKey": "land"
   },
   {
     "date": "2008-07-17",
@@ -5208,11 +5214,12 @@ export const timelineEntries = [
     "display": "15.12.1999",
     "year": 1999,
     "category": "CD-udgivelse",
-    "title": "\"nakin?\" – andet album med maður:glotti (min færøske duo).",
+    "title": "\"nakin?\" - andet album med min færøske duo maður:glotti.",
     "group": "music",
     "href": "./archive/legacy/200_calendar/1999/99_12_17_nakin/madurglotti_nakin.html",
     "thumbnail": "./archive/timeline/nakin.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/6dbaf8fd13890428.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/6dbaf8fd13890428.webp",
+    "albumKey": "nakin?"
   },
   {
     "date": "1999-11-01",
@@ -5373,11 +5380,12 @@ export const timelineEntries = [
     "display": "27.11.1997",
     "year": 1997,
     "category": "CD-udgivelse",
-    "title": "\"sum\" – første album med maður:glotti (min færøske duo)",
+    "title": "\"sum\" - Første album med min færøske duo maður:glotti.",
     "group": "music",
     "href": "./archive/legacy/200_calendar/1997/97_11_29_sum/madurglotti_sum.html",
     "thumbnail": "./archive/timeline/sum.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/7a5a2ed40aa19cef.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/7a5a2ed40aa19cef.webp",
+    "albumKey": "sum"
   },
   {
     "date": "1996-07-28",
