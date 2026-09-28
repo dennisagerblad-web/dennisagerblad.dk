@@ -15,7 +15,7 @@ tidligere versioner.
 | De store billeder | `archive/timeline/` eller deres eksisterende arkivmapper |
 | Små, automatisk fremstillede tidslinjebilleder | `assets/timeline-thumbs/` |
 | Tidslinjens popups, effekter og layout | `assets/timeline-gallery.js` og `assets/timeline-gallery.css` |
-| Talebobler | `assets/timeline-speech.js` og billedfilerne i `assets/` |
+| Talebobler | `assets/timeline-speech.js`, `assets/video-speech.js` og billedfilerne i `assets/` |
 
 `thumbnail` i en post peger på originalen, der kan bruges i en popup.
 `thumbnailPreview` peger på den lille WebP-udgave til tidslinjens oversigt.
