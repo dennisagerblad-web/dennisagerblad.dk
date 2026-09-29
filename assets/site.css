@@ -218,38 +218,52 @@
   .section-3 .archive-scroll{padding:188px 18px 40px}
 }
 
-/* Video: the introduction scrolls with the films, inside the supplied speech art. */
+/* Video: a shallow speech strip leaves the screen to the films. */
 .ship.section-1 .archive{inset:0;width:auto;padding:0}
 .section-1 .archive-layout{height:100%}
-.section-1 .archive-scroll{height:100%;padding:0 clamp(18px,3vw,48px) 42px;scrollbar-gutter:auto}
+.section-1 .archive-scroll{height:100%;padding:0 8px 32px;scrollbar-gutter:auto}
 .section-1 .archive .scrolling-intro{
   box-sizing:border-box;
   display:block;
-  width:min(56vw,720px);
+  width:min(72vw,1030px);
   min-height:0;
   max-width:none;
   height:auto;
-  margin:14px 0 24px auto;
+  margin:5px 9vw 5px auto;
   padding:0;
   background:transparent url("./video-bubble-wide.webp") center / 100% 100% no-repeat;
   color:#251a12;
-  font:400 clamp(27px,2.8vw,36px)/1.06 "Caveat Timeline","Bradley Hand",cursive;
-  text-align:left;
+  font:400 clamp(18px,1.8vw,23px)/1.02 "Caveat Timeline","Bradley Hand",cursive;
+  text-align:center;
   text-shadow:none;
   text-wrap:pretty;
   overflow-wrap:break-word;
 }
-.section-1 .video-grid{width:min(62vw,980px);margin-left:0}
-@media (max-width:760px) and (orientation:portrait){
-  .section-1 .archive-scroll{padding:0 12px 32px}
+.section-1 .video-grid{
+  width:min(70vw,1150px);
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-left:0;
+}
+@media (max-width:950px) and (orientation:landscape){
   .section-1 .archive .scrolling-intro{
-    width:min(100%,430px);
-    margin:clamp(220px,29svh,300px) 0 22px auto;
-    background-image:url("./video-bubble-mobile.webp");
-    font-size:clamp(23px,6.6vw,29px);
-    line-height:1.06;
+    width:min(50vw,430px);
+    margin:5px 29vw 4px auto;
+    background-image:url("./video-bubble-right.png");
+    font-size:clamp(16px,2.1vw,19px);
   }
-  .section-1 .video-grid{width:100%}
+  .section-1 .video-grid{width:72%;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+}
+@media (max-width:760px) and (orientation:portrait){
+  .section-1 .archive-scroll{padding:0 4px 24px}
+  .section-1 .archive .scrolling-intro{
+    width:100%;
+    margin:clamp(100px,calc(10.4svh + 33px),125px) 0 4px;
+    background-image:url("./video-bubble-mobile.webp");
+    font-size:clamp(16px,4.6vw,19px);
+    line-height:1.02;
+  }
+  .section-1 .video-grid{width:100%;grid-template-columns:minmax(0,1fr);gap:8px}
   .is-open.section-1 .face-piece-shadow{transform:translate(36vw,48vh) rotate(7deg) scale(.9)}
   /* Kunst uses the same visual scale as the other front-page labels. */
   .face-menu .menu-4{width:42%;top:29%;left:11%}
