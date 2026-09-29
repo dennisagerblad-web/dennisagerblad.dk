@@ -206,7 +206,7 @@
 .timeline-shell[data-theme="live"] .continuous-thread{stroke:#740915!important}
 .timeline-shell[data-theme="live"] .timeline-arrowhead{fill:#740915!important}
 .timeline-shell[data-theme="live"] .timeline-line{background:#740915!important}
-.timeline-shell[data-theme="live"] .life-year>h2{color:#740915!important;text-shadow:0 1px 1px #fff9}
+.timeline-shell[data-theme="live"] .life-year>h2{color:#ffd1dc!important;text-shadow:none!important}
 .timeline-entry time,.timeline-entry .life-category{color:#fff!important;text-shadow:0 1px 3px #000!important}
 .timeline-entry .life-category svg{color:#fff!important}
 .ship.section-3 .archive{inset:0 auto 0 3vw;width:54vw;padding:0;border:0;border-radius:0;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;overflow:visible}

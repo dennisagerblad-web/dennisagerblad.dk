@@ -240,11 +240,16 @@ export function openTimelineGallery(entry, group, theme = {}) {
   dialog.append(close,header,viewer); overlay.append(dialog); document.body.append(overlay);
   close.focus({preventScroll:true});
   let closed = false, index = 0, items = [], media = {}, drawing = null, request = 0;
-  let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0;
+  let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
   let scene = null, drag = null;
   const mobile = matchMedia('(max-width: 760px), (max-width: 1100px) and (max-height: 600px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cache = new Map();
+  function scheduleAutoplay(delay = 2000) {
+    clearTimeout(autoplayTimer);
+    if (closed || items.length < 2) return;
+    autoplayTimer = window.setTimeout(() => { autoplayTimer = 0; navigate(1); }, delay);
+  }
   function imageAt(i) {
     const src = items[i];
     if (!cache.has(src)) cache.set(src,new Promise((resolve,reject) => {
@@ -305,6 +310,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     if (commit) { index = session.target; paint(session.after); announce(); }
     effectCanvas.classList.remove('is-active');
     scene = null; busy = false; stage.setAttribute('aria-busy','false'); prefetch();
+    scheduleAutoplay(commit && session.animated ? 2000 - sceneDuration : 2000);
   }
   function settleScene(session, destination, started = performance.now()) {
     // A partial drag uses only the remaining fraction of the one-second run.
@@ -354,6 +360,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   async function render(direction = 0) {
     const ticket = ++request;
+    clearTimeout(autoplayTimer);
     cancelScene();
     cancelAnimationFrame(frame); effectCanvas.classList.remove('is-active'); busy = false;
     if (!items.length || closed) return;
@@ -375,7 +382,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
             if (closed || ticket !== request) return;
             const progress = Math.min(1,(now-start)/1100); transition.draw(progress*progress*(3-2*progress));
             if (progress < 1) frame = requestAnimationFrame(animate);
-            else { effectCanvas.classList.remove('is-active'); busy = false; }
+            else { effectCanvas.classList.remove('is-active'); busy = false; scheduleAutoplay(2000 - 1100); }
           };
           frame = requestAnimationFrame(animate);
         }
@@ -383,6 +390,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
       // Keep memory bounded to current and adjacent photos.
       prefetch();
       if (group === 'live' && items.length > 1 && !reduced.matches) transition ||= createTransition(effectCanvas);
+      if (!busy) scheduleAutoplay();
     } catch {
       if (closed || ticket !== request) return;
       poster.hidden = true; drawing = null; announce();
@@ -392,6 +400,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function navigate(direction) {
     if (busy || drag || items.length < 2) return;
+    clearTimeout(autoplayTimer);
     if (group === 'live') {
       const started = performance.now();
       settleScene(beginScene(direction),1,started); return;
@@ -413,7 +422,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function cleanup() {
     if (closed) return;
-    closed = true; ++request; cancelScene(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect();
+    closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect();
     transition?.destroy(); cache.clear(); window.removeEventListener('keydown',keydown,true);
     mobile.removeEventListener('change',resize); window.removeEventListener('resize',resize); window.visualViewport?.removeEventListener('resize',resize); overlay.remove();
     if (root) root.inert = oldInert;
@@ -461,7 +470,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   },{passive:true});
   stage.addEventListener('touchcancel',() => { startTouch=null; });
   effectCanvas.addEventListener('webglcontextlost',event => {
-    event.preventDefault(); cancelAnimationFrame(frame); cancelScene(); effectCanvas.classList.remove('is-active'); busy=false; transition=null; stage.setAttribute('aria-busy','false');
+    event.preventDefault(); cancelAnimationFrame(frame); cancelScene(); effectCanvas.classList.remove('is-active'); busy=false; transition=null; stage.setAttribute('aria-busy','false'); scheduleAutoplay();
   });
   const observer = new ResizeObserver(() => render()); observer.observe(stage);
   const headerObserver = new ResizeObserver(resize); headerObserver.observe(header);
