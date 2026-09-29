@@ -202,20 +202,23 @@
 .timeline-popup-gallery figure img{width:auto;height:auto;max-width:100%;max-height:62svh;object-fit:contain}
 
 
-/* Timeline readability, Literature full-window scrolling, 2026-09-28. */
+/* Timeline readability and Literature scrolling. */
 .timeline-shell[data-theme="live"] .continuous-thread{stroke:#740915!important}
 .timeline-shell[data-theme="live"] .timeline-arrowhead{fill:#740915!important}
 .timeline-shell[data-theme="live"] .timeline-line{background:#740915!important}
 .timeline-shell[data-theme="live"] .life-year>h2{color:#740915!important;text-shadow:0 1px 1px #fff9}
 .timeline-entry time,.timeline-entry .life-category{color:#fff!important;text-shadow:0 1px 3px #000!important}
 .timeline-entry .life-category svg{color:#fff!important}
-.ship.section-3 .archive{inset:0;width:auto;padding:0;border-radius:0;overflow:hidden}
+.ship.section-3 .archive{inset:0 auto 0 3vw;width:54vw;padding:0;border:0;border-radius:0;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;overflow:visible}
 .section-3 .section-heading{top:20px;left:clamp(18px,4vw,64px);right:auto}
 .section-3 .archive-layout{display:block;flex:1 1 auto;height:100%;min-height:0}
-.section-3 .archive-scroll{height:100%;max-height:none;overflow-y:auto;overscroll-behavior:contain;padding:130px clamp(18px,4vw,64px) 48px}
+.section-3 .archive-scroll{height:100%;max-height:none;overflow-y:auto;overscroll-behavior:contain;padding:78px 0 0}
+.section-3 .book-feature{min-height:calc(100svh - 78px);padding:24px 28px;border-radius:28px 28px 0 0;background:rgb(0 0 0 / 60%);box-shadow:0 24px 90px #000d;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 @media (max-width:760px){
+  .ship.section-3 .archive{inset:0 10px;width:auto}
   .section-3 .section-heading{top:12px;left:14px}
-  .section-3 .archive-scroll{padding:188px 18px 40px}
+  .section-3 .archive-scroll{padding:150px 0 0}
+  .section-3 .book-feature{min-height:calc(100svh - 150px);padding:18px}
 }
 
 /* Video: a shallow speech strip leaves the screen to the films. */
