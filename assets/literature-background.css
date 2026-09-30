@@ -1,15 +1,12 @@
-/* Let the Literature portrait come into view as its doors open. */
-@keyframes literature-background-arrive {
-  from { transform:translate3d(4vw,5vh,0) scale(1.14); }
-  to { transform:translate3d(0,0,0) scale(1); }
-}
-.ship.is-open.section-3 .portrait-underlay {
-  animation:literature-background-arrive 1.7s cubic-bezier(.2,.72,.2,1) .08s both;
-}
-@media (max-width:760px) {
-  @keyframes literature-background-arrive {
-    from { transform:translate3d(6vw,6vh,0) scale(1.18); }
-    to { transform:translate3d(0,0,0) scale(1); }
+/* On a phone held upright, pan across the bookshop to Dennis. */
+.ship.is-open.section-3 .portrait-underlay { animation:none; }
+@media (max-width:760px) and (orientation:portrait) {
+  @keyframes literature-bookshop-to-portrait {
+    from { background-position:0% -22svh; }
+    to { background-position:80% -22svh; }
+  }
+  .ship.is-open.section-3 .portrait-underlay {
+    animation:literature-bookshop-to-portrait 2.2s cubic-bezier(.7,0,.16,1) .08s both;
   }
 }
 @media (prefers-reduced-motion:reduce) {
