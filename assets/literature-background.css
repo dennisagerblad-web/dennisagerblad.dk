@@ -1,0 +1,17 @@
+/* Let the Literature portrait come into view as its doors open. */
+@keyframes literature-background-arrive {
+  from { transform:translate3d(4vw,5vh,0) scale(1.14); }
+  to { transform:translate3d(0,0,0) scale(1); }
+}
+.ship.is-open.section-3 .portrait-underlay {
+  animation:literature-background-arrive 1.7s cubic-bezier(.2,.72,.2,1) .08s both;
+}
+@media (max-width:760px) {
+  @keyframes literature-background-arrive {
+    from { transform:translate3d(6vw,6vh,0) scale(1.18); }
+    to { transform:translate3d(0,0,0) scale(1); }
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .ship.is-open.section-3 .portrait-underlay { animation:none; }
+}
