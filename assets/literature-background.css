@@ -1,14 +1,21 @@
-/* On a phone held upright, pan across the bookshop to Dennis. */
+/* On an upright phone, pan from the bookshop to Dennis and back. */
 .ship.is-open.section-3 .portrait-underlay { animation:none; }
 @media (max-width:760px) and (orientation:portrait) {
   @keyframes literature-bookshop-to-portrait {
     from { background-position:0% -22svh; }
     to { background-position:80% -22svh; }
   }
+  @keyframes literature-portrait-to-bookshop {
+    from { background-position:80% -22svh; }
+    to { background-position:0% -22svh; }
+  }
   .ship.is-open.section-3 .portrait-underlay {
     animation:literature-bookshop-to-portrait 2.2s cubic-bezier(.7,0,.16,1) .08s both;
   }
+  .ship.has-section.section-3:not(.is-open) .portrait-underlay {
+    animation:literature-portrait-to-bookshop 1.25s cubic-bezier(.7,0,.16,1) both;
+  }
 }
 @media (prefers-reduced-motion:reduce) {
-  .ship.is-open.section-3 .portrait-underlay { animation:none; }
+  .ship.has-section.section-3 .portrait-underlay { animation:none; }
 }
