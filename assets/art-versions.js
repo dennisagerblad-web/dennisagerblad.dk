@@ -69,7 +69,19 @@ function addSkirting(layer,hall=false){
 function roomWalls(layer){
  const old=[[[0,0],[382,187],[382,405],[0,545]],[[382,187],[898,187],[898,405],[382,405]],[[898,187],[1280,0],[1280,545],[898,405]]];
  const target=[sideQuad('left',0,DEPTH,0,roomHeight),quad(-roomWidth/2,roomWidth/2,0,roomHeight,DEPTH),sideQuad('right',0,DEPTH,0,roomHeight)];
- old.forEach((source,i)=>{const el=document.createElement('div');el.className='art-photo-wall';el.style.clipPath=`polygon(${source.map(([x,y])=>`${x}px ${y}px`).join(',')})`;el.style.transform=homography(source,target[i]);layer.append(el);});
+ old.forEach((source,i)=>{
+  // Project only this wall's bounded photo region. Transforming the entire
+  // room photograph for a side wall can place its unused pixels across the
+  // perspective horizon, producing enormous compositor bounds on WebKit.
+  const x=Math.min(...source.map(p=>p[0])),y=Math.min(...source.map(p=>p[1]));
+  const width=Math.max(...source.map(p=>p[0]))-x,height=Math.max(...source.map(p=>p[1]))-y;
+  const local=source.map(([a,b])=>[a-x,b-y]);
+  const el=document.createElement('div');el.className='art-photo-wall';
+  el.style.width=width+'px';el.style.height=height+'px';
+  el.style.backgroundPosition=`${-x}px ${-y}px`;
+  el.style.clipPath=`polygon(${local.map(([a,b])=>`${a}px ${b}px`).join(',')})`;
+  el.style.transform=homography(local,target[i]);layer.append(el);
+ });
  addSkirting(layer);
 }
 function addCeramics(layer){
@@ -89,7 +101,16 @@ function addCeramics(layer){
   // Foreground tray pedestal.
   [[[495,529],[1110,529],[1110,827],[495,827]],[[493,721],[1111,721],[1111,1060],[493,1060]]]
  ];
- faces.forEach(([source,target])=>{const face=document.createElement('img');face.src='./assets/art-podium-extended-v6.webp';face.alt='';face.width=1671;face.height=941;face.style.clipPath=`polygon(${source.map(([x,y])=>`${x}px ${y}px`).join(',')})`;face.style.transform=homography(source,target.map(([x,y])=>[x*1280/1672,y*720/941]));bases.append(face);});
+ faces.forEach(([source,target])=>{
+  const x=Math.min(...source.map(p=>p[0])),y=Math.min(...source.map(p=>p[1]));
+  const width=Math.max(...source.map(p=>p[0]))-x,height=Math.max(...source.map(p=>p[1]))-y;
+  const local=source.map(([a,b])=>[a-x,b-y]);
+  const face=document.createElement('div');face.className='art-podium-face';
+  face.style.width=width+'px';face.style.height=height+'px';
+  face.style.backgroundPosition=`${-x}px ${-y}px`;
+  face.style.clipPath=`polygon(${local.map(([a,b])=>`${a}px ${b}px`).join(',')})`;
+  face.style.transform=homography(local,target.map(([a,b])=>[a*1280/1672,b*720/941]));bases.append(face);
+ });
 }
 function ensureLayers(ship,hitMap,version){
  let backdrop=ship.querySelector('.art-photo-surfaces');if(!backdrop){backdrop=document.createElement('div');backdrop.className='art-photo-surfaces';backdrop.innerHTML='<div class="art-photo-ceiling"></div><img class="art-photo-floor" src="./assets/art-floor-soft-v4.webp" alt="">';ship.prepend(backdrop);}
@@ -140,8 +161,10 @@ function ensureCatHotspot() {
   hotspot.addEventListener('click', () => catDialog.showModal());
   hitMap.append(hotspot);
 }
+let activeMotion=false,queuedDestination=null,travelAnimation=null;
 let scheduled = false;
-function update() {
+function update(force=false) {
+  if(activeMotion && force!==true)return;
   const artOpen = !!document.querySelector('.ship.section-4.is-open .art-room');
   document.body.classList.toggle('art-gallery-open', artOpen);
   document.body.classList.toggle('art-version-2', artOpen && selectedVersion === 2);
@@ -171,10 +194,14 @@ function captureRoom(ship) {
  if(surfaces){const copy=surfaces.cloneNode(true);copy.style.display='block';frame.append(copy);}
 
  const map=ship.querySelector('.art-hit-map'),source=map?.querySelector(`.art-preserved-layer[data-room="${selectedVersion}"]`);
- if(source){const copy=source.cloneNode(true);copy.style.display='block';frame.append(copy);}
+ // Move the existing art layer; duplicating perspective images exhausts
+ // mobile compositor memory during a three-room journey.
+ if(source)frame.append(source);
  ship.append(frame);return frame;
 }
-let activeMotion=false,queuedDestination=null;
+// Release the compositor layers if the viewport or section changes mid-flight.
+window.addEventListener('resize',()=>travelAnimation?.cancel());
+window.addEventListener('pagehide',()=>travelAnimation?.cancel());
 async function navigateGallery(destination) {
  const ship=document.querySelector('.ship.section-4.is-open');
  if(!ship)return;
@@ -186,15 +213,27 @@ async function navigateGallery(destination) {
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  if(reduced){selectedVersion=destination;update();sessionStorage.setItem('dennis-art-version',String(destination));return;}
  activeMotion=true;
- const strip=document.createElement('div');strip.className='art-travel-strip';ship.append(strip);
- const frames=[captureRoom(ship)];
- for(const next of steps){selectedVersion=next;update();frames.push(captureRoom(ship));}
- const width=ship.clientWidth;
- frames.forEach((frame,i)=>{frame.style.transform=`translateX(${i*direction*width}px)`;strip.append(frame);});
- document.body.classList.add('art-travelling');
- // One animation for the whole journey: the passage has no intermediate pause.
- await strip.animate([{transform:'translateX(0)'},{transform:`translateX(${-direction*width*steps.length}px)`}],{duration:1050*steps.length,easing:'cubic-bezier(.35,0,.65,1)',fill:'forwards'}).finished.catch(()=>{});
- strip.remove();document.body.classList.remove('art-travelling');activeMotion=false;
+ const strip=document.createElement('div');strip.className='art-travel-strip';
+ try {
+  ship.append(strip);
+  const frames=[captureRoom(ship)];
+  for(const next of steps){selectedVersion=next;update(true);frames.push(captureRoom(ship));}
+  const width=ship.clientWidth;
+  frames.forEach((frame,i)=>{frame.style.transform=`translateX(${i*direction*width}px)`;strip.append(frame);});
+  document.body.classList.add('art-travelling');
+  // One continuous journey; cancel afterwards so finished animations do not
+  // retain the photographic room copies and their GPU textures.
+  if(typeof strip.animate==='function'){
+   travelAnimation=strip.animate([{transform:'translateX(0)'},{transform:`translateX(${-direction*width*steps.length}px)`}],{duration:1050*steps.length,easing:'cubic-bezier(.35,0,.65,1)',fill:'forwards'});
+   await travelAnimation.finished.catch(()=>{});
+  }
+ } finally {
+  travelAnimation?.cancel();travelAnimation=null;
+  const map=ship.querySelector('.art-hit-map');
+  if(map)strip.querySelectorAll('.art-preserved-layer').forEach(layer=>map.append(layer));
+  strip.remove();document.body.classList.remove('art-travelling');activeMotion=false;
+  selectedVersion=destination;update();
+ }
  if(token===travelToken)sessionStorage.setItem('dennis-art-version',String(destination));
  const pending=queuedDestination;queuedDestination=null;
  if(pending!==null && pending!==selectedVersion)navigateGallery(pending);

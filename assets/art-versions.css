@@ -1,4 +1,4 @@
-/* Kunst 1 keeps its original photograph. The two trials share a quiet room. */
+/* Published photographic galleries and passage. */
 body:is(.art-version-2, .art-version-3) .ship.section-4 { background: #bfc1c3; }
 body:is(.art-version-2, .art-version-3) .ship.section-4::before,
 body:is(.art-version-2, .art-version-3) .ship.section-4::after { opacity: 0; }
@@ -126,7 +126,7 @@ body.art-version-3 .art-hotspot:nth-child(7) {left:12% !important;top:57% !impor
 body.art-version-3 .art-hotspot:nth-child(8) {left:34% !important;top:62% !important;width:28% !important;height:38% !important;}
 body.art-version-3 .art-hotspot:nth-child(9) {left:57% !important;top:51% !important;width:14% !important;height:37% !important;}
 body.art-version-3 .art-hotspot:nth-child(10) {left:73% !important;top:59% !important;width:15% !important;height:41% !important;}
-.art-slide-frame {position:absolute;inset:0;overflow:hidden;pointer-events:none;background:#171511;z-index:3;}
+.art-slide-frame {position:absolute;inset:0;contain:layout paint;overflow:hidden;pointer-events:none;background:#171511;z-index:3;}
 .art-slide-frame .art-preserved-layer {display:block !important;}
 .art-slide-frame .art-photo-surfaces {display:block;}
 body.art-travelling .art-hit-map,body.art-travelling .ship.section-4>.art-photo-surfaces {visibility:hidden;}
@@ -166,4 +166,4 @@ body.art-version-3 .art-hotspot:nth-child(9) {left:57% !important;top:52% !impor
 body.art-version-3 .art-hotspot:nth-child(10) {left:74% !important;top:60% !important;width:17% !important;}
 
 .art-podium-extensions{position:absolute;left:0;top:0;width:1280px;height:720px;transform:translate(102px,168px) scale(.84);transform-origin:0 0;pointer-events:none;}
-.art-podium-extensions img{position:absolute;left:0;top:0;width:1671px;height:941px;max-width:none;transform-origin:0 0;}
+.art-podium-face{position:absolute;left:0;top:0;background:url('./art-podium-extended-v6.webp') no-repeat;background-size:1671px 941px;transform-origin:0 0;}
