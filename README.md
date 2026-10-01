@@ -45,3 +45,7 @@ De gamle sider i `200_calendar/`, `onewebmedia/` og lignende mapper er et
 separat historisk arkiv. Deres filadresser er bevaret, fordi gamle links og
 slideshowposter stadig kan bruge dem. De hentes ikke samlet, når forsiden
 åbnes. Undlad at flytte eller slette dem uden at kontrollere henvisningerne.
+
+
+## Offentligt galleri, 1. oktober 2026
+Kunst åbner Galleri 1. Navigationen indeholder kun Galleri 1, Gang og Galleri 2. Galleri 0 findes kun i den lokale kunst2-proeve-mappe og må aldrig genindføres offentligt. Fotografiske rumlag styres i assets/art-versions.js og assets/art-versions.css. Kunstværker og popupvisning styres i assets/art-viewer.js; originalerne i archive/art og content/art/originals skal bevares uændret ved senere rumredigering.

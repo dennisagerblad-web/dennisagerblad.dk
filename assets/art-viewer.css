@@ -1,0 +1,19 @@
+.art-focus-viewer{position:fixed;inset:0;margin:0;padding:0;width:100vw;height:100dvh;max-width:none;max-height:none;border:0;background:transparent;color:white;overflow:hidden;}
+.art-focus-viewer::backdrop{background:transparent;}
+.art-focus-shade{position:absolute;inset:0;background:rgba(9,7,6,.86);}
+.art-focus-stage{position:absolute;inset:0;overflow:hidden;touch-action:pan-y;}
+.art-focus-image{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0;object-fit:fill;box-shadow:0 12px 48px #0005;}
+.art-focus-peek{cursor:pointer;opacity:.75;}
+.art-focus-header{position:absolute;display:flex;align-items:center;justify-content:space-between;gap:16px;height:40px;color:#fff;text-shadow:0 2px 6px #000;}
+.art-focus-header h2{font-family:Georgia,serif;font-size:clamp(17px,2vw,27px);line-height:1.15;font-weight:600;}
+.art-focus-close{flex:none;font:36px/1 Arial,sans-serif;width:44px;height:44px;cursor:pointer;color:#fff;}
+.art-focus-previous,.art-focus-next{position:absolute;top:50%;width:42px;height:56px;font:48px/1 Georgia,serif;color:white;background:#0005;cursor:pointer;border-radius:6px;}
+.art-focus-previous{left:4px;}.art-focus-next{right:4px;}
+.art-focus-count{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:14px;color:#fff;}
+body.art-focus-open .art-version-chooser,body.art-focus-open .museum-warning{visibility:hidden;}
+.art-focus-viewer button:focus-visible{outline:2px solid white;outline-offset:3px;}
+
+/* Remove only the external black strips. Preserve pink frame and four metal tabs. */
+.art-original[src*="IMG0010_"],.art-focus-image[src*="IMG0010_"]{
+ clip-path:polygon(0% 9.1%,1.2% 9.1%,1.2% 0%,9.6% 0%,9.6% 9.1%,90.2% 9.1%,90.2% 0%,99% 0%,99% 9.1%,100% 9.1%,100% 91%,99% 91%,99% 100%,90.2% 100%,90.2% 91%,9.6% 91%,9.6% 100%,1.2% 100%,1.2% 91%,0% 91%);
+}

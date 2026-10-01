@@ -1,0 +1,209 @@
+// Published galleries: Galleri 1, Gang and Galleri 2. Galleri 0 stays local.
+
+const chooser = document.createElement('div');
+chooser.className = 'art-version-chooser';
+chooser.setAttribute('role', 'tablist');
+chooser.setAttribute('aria-label', 'Vælg kunstgalleri');
+const versions = [2, 4, 3];
+// One permanent marker; only its transform changes when a tab is selected.
+const marker=document.createElement('span');marker.className='art-tab-marker';marker.setAttribute('aria-hidden','true');marker.innerHTML='<span class="art-tab-glow"></span>';chooser.append(marker);
+const buttons = versions.map(version => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.textContent = version === 4 ? `Gang` : `Galleri ${version-1}`;
+  button.id=`art-gallery-tab-${version}`;button.setAttribute('role','tab');button.setAttribute('aria-controls','art-gallery-panel');
+  button.addEventListener('pointerenter',()=>hintGlow(version));
+  button.addEventListener('focus',()=>hintGlow(version));
+  button.addEventListener('click', () => {
+    navigateGallery(version);
+  });
+  chooser.append(button);
+  return button;
+});
+document.body.append(chooser);
+
+const storedVersion = Number(sessionStorage.getItem('dennis-art-version'));
+let selectedVersion = versions.includes(storedVersion) ? storedVersion : 2;
+let tabVersion=selectedVersion;
+function hintGlow(version){const direction=Math.sign(versions.indexOf(version)-versions.indexOf(tabVersion));chooser.style.setProperty('--glow-nudge',`${direction*7}px`);}
+function syncTabs(){
+ const index=versions.indexOf(tabVersion);chooser.style.setProperty('--active-tab',String(index));chooser.style.setProperty('--glow-nudge','0px');
+ buttons.forEach((button,i)=>{const active=i===index;button.classList.toggle('is-active',active);button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
+ const panel=document.querySelector('.ship.section-4.is-open .art-room');if(panel){panel.id='art-gallery-panel';panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',`art-gallery-tab-${tabVersion}`);}
+}
+chooser.addEventListener('pointerleave',()=>chooser.style.setProperty('--glow-nudge','0px'));
+chooser.addEventListener('focusout',event=>{if(!chooser.contains(event.relatedTarget))chooser.style.setProperty('--glow-nudge','0px');});
+// Manual activation: arrows/Home/End move focus; Enter or Space selects the room.
+chooser.addEventListener('keydown',event=>{const index=buttons.indexOf(event.target);if(index<0)return;let next=index;if(event.key==='ArrowRight')next=(index+1)%buttons.length;else if(event.key==='ArrowLeft')next=(index+buttons.length-1)%buttons.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=buttons.length-1;else return;event.preventDefault();buttons[next].focus();});
+
+const catDialog = document.createElement('dialog');
+catDialog.className = 'art-cat-dialog';
+catDialog.setAttribute('aria-label', 'To sider af en sjæl');
+catDialog.innerHTML = `<header><h2>To sider af en sjæl</h2><button type="button" aria-label="Luk katteværket">Luk ×</button></header><img src="./assets/art-cat-updated.webp" alt="To sider af en sjæl, tekstilværk med katte">`;
+catDialog.querySelector('button').addEventListener('click', () => catDialog.close());
+catDialog.addEventListener('click', event => { if (event.target === catDialog) catDialog.close(); });
+document.body.append(catDialog);
+
+// Every projection uses one camera. Original artwork pixels never enter imagegen.
+const W=1280,H=720,VP=[640,360],DEPTH=8.6;
+const camera=5.8, roomWidth=8, roomHeight=3.4, focal=1280*camera/roomWidth;
+const point=(x,y,z)=>[VP[0]+focal*x/(camera+z),VP[1]+focal*(roomHeight/2-y)/(camera+z)];
+function homography(src,dst){
+ const rows=[];src.forEach(([x,y],i)=>{const[u,v]=dst[i];rows.push([x,y,1,0,0,0,-u*x,-u*y,u],[0,0,0,x,y,1,-v*x,-v*y,v]);});
+ for(let c=0;c<8;c++){let p=c;for(let r=c+1;r<8;r++)if(Math.abs(rows[r][c])>Math.abs(rows[p][c]))p=r;[rows[c],rows[p]]=[rows[p],rows[c]];const d=rows[c][c];for(let k=c;k<9;k++)rows[c][k]/=d;for(let r=0;r<8;r++){if(r===c)continue;const f=rows[r][c];for(let k=c;k<9;k++)rows[r][k]-=f*rows[c][k];}}
+ const[a,b,c,d,e,f,g,h]=rows.map(r=>r[8]);return `matrix3d(${[a,d,0,g,b,e,0,h,0,0,1,0,c,f,0,1].join(',')})`;
+}
+const quad=(x0,x1,y0,y1,z)=>[point(x0,y1,z),point(x1,y1,z),point(x1,y0,z),point(x0,y0,z)];
+function sideQuad(side,z,len,bottom,top){const x=side==='left'?-roomWidth/2:roomWidth/2;const q=[point(x,top,z),point(x,top,z+len),point(x,bottom,z+len),point(x,bottom,z)];return side==='left'?q:[q[1],q[0],q[3],q[2]];}
+function image(layer,src,corners,width=300,height=300){const el=document.createElement('img');el.src=src;el.alt='';el.className='art-original';el.dataset.galleryQuad=JSON.stringify(corners);el.style.width=width+'px';el.style.height=height+'px';el.style.transform=homography([[0,0],[width,0],[width,height],[0,height]],corners);layer.append(el);return el;}
+// One physical skirting height for rooms and passage; the opaque foot overlaps
+// the floor slightly so anti-aliased image edges cannot expose the slide background.
+const skirtingHeight=.16,skirtingFoot=-.025;
+function addSkirting(layer,hall=false){
+ const corners=hall?[quad(-4,4,skirtingFoot,skirtingHeight,0)]:[
+ sideQuad('left',0,DEPTH,skirtingFoot,skirtingHeight),
+ quad(-4,4,skirtingFoot,skirtingHeight,DEPTH),
+ sideQuad('right',0,DEPTH,skirtingFoot,skirtingHeight)];
+ corners.forEach(q=>image(layer,'./assets/art-white-skirting-v1.webp',q,1024,128));
+}
+function roomWalls(layer){
+ const old=[[[0,0],[382,187],[382,405],[0,545]],[[382,187],[898,187],[898,405],[382,405]],[[898,187],[1280,0],[1280,545],[898,405]]];
+ const target=[sideQuad('left',0,DEPTH,0,roomHeight),quad(-roomWidth/2,roomWidth/2,0,roomHeight,DEPTH),sideQuad('right',0,DEPTH,0,roomHeight)];
+ old.forEach((source,i)=>{const el=document.createElement('div');el.className='art-photo-wall';el.style.clipPath=`polygon(${source.map(([x,y])=>`${x}px ${y}px`).join(',')})`;el.style.transform=homography(source,target[i]);layer.append(el);});
+ addSkirting(layer);
+}
+function addCeramics(layer){
+ const display=document.createElement('img');display.className='art-photographic-ceramics';display.src='./assets/art-ceramics-near-v5.webp';display.alt='';layer.append(display);
+ // Use only the generated photographic white faces. The existing glass and
+ // ceramic photographs stay at their original coordinates, with unchanged pixels.
+ const bases=document.createElement('div');bases.className='art-podium-extensions';layer.append(bases);
+ const faces=[
+  // Rear pedestal: the foreground tray occludes its left portion.
+  [[[1111,308],[1307,308],[1307,572],[1111,572]],[[1112,502],[1308,502],[1308,815],[1112,815]]],
+  // Left pedestal side and front.
+  [[[304,447],[360,401],[360,707],[304,782]],[[304,638],[360,593],[360,955],[304,1030]]],
+  [[[42,448],[304,448],[304,782],[42,782]],[[41,639],[304,639],[304,1030],[41,1030]]],
+  // Right pedestal side and front.
+  [[[1335,426],[1381,474],[1381,787],[1335,711]],[[1335,618],[1380,668],[1380,1015],[1335,940]]],
+  [[[1381,475],[1638,475],[1638,787],[1381,787]],[[1380,669],[1640,669],[1640,1015],[1380,1015]]],
+  // Foreground tray pedestal.
+  [[[495,529],[1110,529],[1110,827],[495,827]],[[493,721],[1111,721],[1111,1060],[493,1060]]]
+ ];
+ faces.forEach(([source,target])=>{const face=document.createElement('img');face.src='./assets/art-podium-extended-v6.webp';face.alt='';face.width=1671;face.height=941;face.style.clipPath=`polygon(${source.map(([x,y])=>`${x}px ${y}px`).join(',')})`;face.style.transform=homography(source,target.map(([x,y])=>[x*1280/1672,y*720/941]));bases.append(face);});
+}
+function ensureLayers(ship,hitMap,version){
+ let backdrop=ship.querySelector('.art-photo-surfaces');if(!backdrop){backdrop=document.createElement('div');backdrop.className='art-photo-surfaces';backdrop.innerHTML='<div class="art-photo-ceiling"></div><img class="art-photo-floor" src="./assets/art-floor-soft-v4.webp" alt="">';ship.prepend(backdrop);}
+ backdrop.querySelector('.art-photo-ceiling').style.background=version===4 ? 'url(./assets/art-hall-ceiling-v1.webp) 0 0 / 1024px 1024px no-repeat' : '';
+ const scale=ship.clientWidth/W,height=ship.clientHeight/scale,offset=(height-H)/2;
+ const near=Math.max(-5.75,focal*(roomHeight/2)/(height/2+10)-camera);
+ for(const [selector,y] of [['.art-photo-ceiling',roomHeight],['.art-photo-floor',0]]){
+  const el=backdrop.querySelector(selector);let q=[point(-roomWidth/2,y,near),point(roomWidth/2,y,near),point(roomWidth/2,y,DEPTH),point(-roomWidth/2,y,DEPTH)].map(([x,y])=>[x*scale,(y+offset)*scale]);
+  if(version===4){
+   const far=point(0,y,0)[1],nearY=H/2+(y===0?1:-1)*(height/2+10),factor=(nearY-VP[1])/(far-VP[1]);
+   q=[[640-640*factor,nearY],[640+640*factor,nearY],[1280,far],[0,far]].map(([x,y])=>[x*scale,(y+offset)*scale]);
+  }
+  el.style.transform=homography([[0,0],[1024,0],[1024,1024],[0,1024]],q);
+ }
+ let layer=hitMap.querySelector(`.art-preserved-layer[data-room="${version}"]`);
+ if(!layer){layer=document.createElement('div');layer.className='art-preserved-layer';layer.dataset.room=version;layer.setAttribute('aria-hidden','true');if(version!==4)roomWalls(layer);
+ if(version===2){[4,5,6,7,8,9].forEach((n,i)=>image(layer,`./archive/art/IMG_418${n}.jpg`,sideQuad('left',.12+i*1.04,1,1.1,2.3),300,360));
+ image(layer,'./archive/art/selfportrait_01.jpg',sideQuad('right',.3,1.2,1.1,2.3));
+ image(layer,'./archive/art/selfportrait_02.jpg',sideQuad('right',1.8,1.2,1.1,2.3));
+ const installation=document.createElement('img');installation.className='art-installation-original';installation.src='./assets/art2-fixed-installation-v2.webp';installation.alt='';layer.append(installation);
+ const bench=document.createElement('div');bench.className='art-fixed-bench';layer.append(bench);
+ }else if(version===4){
+ const hallTop=point(0,roomHeight,0)[1],hallBottom=point(0,0,0)[1],panelTop=point(0,skirtingHeight,0)[1];
+ for(const [name,a,b,top,bottom] of [['art-hall-photo',75,512,hallTop,hallBottom]]){
+  const el=document.createElement('div');el.className=name;
+  const src=[[0,a],[W,a],[W,b],[0,b]],dst=[[0,top],[W,top],[W,bottom],[0,bottom]];
+  el.style.clipPath=`polygon(${src.map(([x,y])=>`${x}px ${y}px`).join(',')})`;
+  el.style.transform=homography(src,dst);layer.append(el);
+ }
+ addSkirting(layer,true);
+ [1,2,3,4,5,6].forEach((n,i)=>image(layer,`./archive/art/IMG0010_0${n}.jpg`,[[310+(i%3)*225,220+Math.floor(i/3)*155],[510+(i%3)*225,220+Math.floor(i/3)*155],[510+(i%3)*225,343+Math.floor(i/3)*155],[310+(i%3)*225,343+Math.floor(i/3)*155]],500,307));
+ image(layer,'./assets/art-pige.webp',[[1030,240],[1192,240],[1192,456],[1030,456]],300,400);
+ }else{[1,2,3,4,5,6].forEach((n,i)=>image(layer,`./archive/art/${n}_400.jpg`,sideQuad('left',.05+i*1.4,1.2,1.1,2.3)));['hipie','hands','raab','finger','hair','wispher'].forEach((f,i)=>image(layer,`./archive/art/${f}.jpg`,sideQuad('right',.05+(5-i)*1.4,1.2,1.1,2.3)));image(layer,'./assets/art-cat-updated.webp',quad(-2.4,2.4,.30,.30+4.8*1106/1860,DEPTH),1860,1106);addCeramics(layer);}
+ hitMap.append(layer);}
+ layer.style.setProperty('--art-scale',String(hitMap.clientWidth/W));
+}
+window.addEventListener('resize',()=>update());
+
+function ensureCatHotspot() {
+  const hitMap = document.querySelector('.ship.section-4.is-open .art-hit-map');
+  if (!hitMap) return;
+  if (hitMap.querySelector('.art-cat-hotspot')) return;
+  const hotspot = document.createElement('button');
+  hotspot.type = 'button';
+  hotspot.className = 'art-hotspot art-cat-hotspot';
+  hotspot.setAttribute('aria-label', 'Åbn To sider af en sjæl');
+  hotspot.style.cssText = 'left:38%;top:30%;width:25%;height:33%;';
+  hotspot.addEventListener('click', () => catDialog.showModal());
+  hitMap.append(hotspot);
+}
+let scheduled = false;
+function update() {
+  const artOpen = !!document.querySelector('.ship.section-4.is-open .art-room');
+  document.body.classList.toggle('art-gallery-open', artOpen);
+  document.body.classList.toggle('art-version-2', artOpen && selectedVersion === 2);
+  document.body.classList.toggle('art-version-3', artOpen && selectedVersion === 3);
+  document.body.classList.toggle('art-version-4', artOpen && selectedVersion === 4);
+  if (artOpen && selectedVersion > 1) {
+    const hitMap=document.querySelector('.ship.section-4.is-open .art-hit-map');
+    if(hitMap) ensureLayers(hitMap.closest('.ship'),hitMap,selectedVersion);
+    if (selectedVersion === 3) ensureCatHotspot();
+    if (selectedVersion === 4) ensurePigeHotspot(hitMap);
+  }
+  else if (catDialog.open) catDialog.close();
+  syncTabs();
+}
+new MutationObserver(() => {
+  if (scheduled) return;
+  scheduled = true;
+  requestAnimationFrame(() => { scheduled = false; update(); });
+}).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['class'] });
+update();
+
+// Navigation order is preserved even when travelling past the passage.
+let travelToken=0;
+function captureRoom(ship) {
+ const frame=document.createElement('div');frame.className='art-slide-frame';
+ const surfaces=ship.querySelector('.art-photo-surfaces');
+ if(surfaces){const copy=surfaces.cloneNode(true);copy.style.display='block';frame.append(copy);}
+
+ const map=ship.querySelector('.art-hit-map'),source=map?.querySelector(`.art-preserved-layer[data-room="${selectedVersion}"]`);
+ if(source){const copy=source.cloneNode(true);copy.style.display='block';frame.append(copy);}
+ ship.append(frame);return frame;
+}
+let activeMotion=false,queuedDestination=null;
+async function navigateGallery(destination) {
+ const ship=document.querySelector('.ship.section-4.is-open');
+ if(!ship)return;
+ tabVersion=destination;syncTabs();
+ if(activeMotion){queuedDestination=destination;return;}
+ if(destination===selectedVersion)return;
+ const token=++travelToken,from=versions.indexOf(selectedVersion),to=versions.indexOf(destination),direction=Math.sign(to-from);
+ const steps=direction>0?versions.slice(from+1,to+1):versions.slice(to,from).reverse();
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(reduced){selectedVersion=destination;update();sessionStorage.setItem('dennis-art-version',String(destination));return;}
+ activeMotion=true;
+ const strip=document.createElement('div');strip.className='art-travel-strip';ship.append(strip);
+ const frames=[captureRoom(ship)];
+ for(const next of steps){selectedVersion=next;update();frames.push(captureRoom(ship));}
+ const width=ship.clientWidth;
+ frames.forEach((frame,i)=>{frame.style.transform=`translateX(${i*direction*width}px)`;strip.append(frame);});
+ document.body.classList.add('art-travelling');
+ // One animation for the whole journey: the passage has no intermediate pause.
+ await strip.animate([{transform:'translateX(0)'},{transform:`translateX(${-direction*width*steps.length}px)`}],{duration:1050*steps.length,easing:'cubic-bezier(.35,0,.65,1)',fill:'forwards'}).finished.catch(()=>{});
+ strip.remove();document.body.classList.remove('art-travelling');activeMotion=false;
+ if(token===travelToken)sessionStorage.setItem('dennis-art-version',String(destination));
+ const pending=queuedDestination;queuedDestination=null;
+ if(pending!==null && pending!==selectedVersion)navigateGallery(pending);
+}
+const pigeDialog=document.createElement('dialog');pigeDialog.className='art-cat-dialog';pigeDialog.setAttribute('aria-label','Pige');pigeDialog.innerHTML='<header><h2>Pige</h2><button type="button" aria-label="Luk Pige">Luk ×</button></header><img src="./assets/art-pige.webp" alt="Pige, tekstilværk">';document.body.append(pigeDialog);pigeDialog.querySelector('button').onclick=()=>pigeDialog.close();pigeDialog.onclick=e=>{if(e.target===pigeDialog)pigeDialog.close();};
+function ensurePigeHotspot(map){
+ if(map.querySelector('.art-pige-hotspot'))return;
+ const b=document.createElement('button');b.type='button';b.className='art-hotspot art-pige-hotspot';b.setAttribute('aria-label','Åbn Pige');b.onclick=()=>pigeDialog.showModal();map.append(b);
+}
+
+import { installArtViewer } from './art-viewer.js?v=20261001-5';
+installArtViewer({getVersion:()=>selectedVersion,homography});
