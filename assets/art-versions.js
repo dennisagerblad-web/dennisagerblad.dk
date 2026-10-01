@@ -4,13 +4,14 @@ const chooser = document.createElement('div');
 chooser.className = 'art-version-chooser';
 chooser.setAttribute('role', 'tablist');
 chooser.setAttribute('aria-label', 'Vælg kunstgalleri');
-const versions = [2, 4, 3];
+const versions = [3, 4, 2];
+const roomNames={3:'Galleri 1',4:'Gang',2:'Galleri 2'};
 // One permanent marker; only its transform changes when a tab is selected.
 const marker=document.createElement('span');marker.className='art-tab-marker';marker.setAttribute('aria-hidden','true');marker.innerHTML='<span class="art-tab-glow"></span>';chooser.append(marker);
 const buttons = versions.map(version => {
   const button = document.createElement('button');
   button.type = 'button';
-  button.textContent = version === 4 ? `Gang` : `Galleri ${version-1}`;
+  button.textContent = roomNames[version];
   button.id=`art-gallery-tab-${version}`;button.setAttribute('role','tab');button.setAttribute('aria-controls','art-gallery-panel');
   button.addEventListener('pointerenter',()=>hintGlow(version));
   button.addEventListener('focus',()=>hintGlow(version));
@@ -22,12 +23,14 @@ const buttons = versions.map(version => {
 });
 document.body.append(chooser);
 
-const storedVersion = Number(sessionStorage.getItem('dennis-art-version'));
-let selectedVersion = versions.includes(storedVersion) ? storedVersion : 2;
+const storedVersion = Number(sessionStorage.getItem('dennis-art-room-order-v2'));
+let selectedVersion = versions.includes(storedVersion) ? storedVersion : 3;
 let tabVersion=selectedVersion;
 function hintGlow(version){const direction=Math.sign(versions.indexOf(version)-versions.indexOf(tabVersion));chooser.style.setProperty('--glow-nudge',`${direction*7}px`);}
 function syncTabs(){
- const index=versions.indexOf(tabVersion);chooser.style.setProperty('--active-tab',String(index));chooser.style.setProperty('--glow-nudge','0px');
+ const index=versions.indexOf(tabVersion);chooser.style.setProperty('--glow-nudge','0px');
+ const activeButton=buttons[index];
+ if(activeButton?.offsetWidth){chooser.style.setProperty('--marker-left',activeButton.offsetLeft+'px');chooser.style.setProperty('--marker-width',activeButton.offsetWidth+'px');}
  buttons.forEach((button,i)=>{const active=i===index;button.classList.toggle('is-active',active);button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
  const panel=document.querySelector('.ship.section-4.is-open .art-room');if(panel){panel.id='art-gallery-panel';panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',`art-gallery-tab-${tabVersion}`);}
 }
@@ -204,29 +207,52 @@ function captureRoom(ship) {
 // Release the compositor layers if the viewport or section changes mid-flight.
 window.addEventListener('resize',()=>travelAnimation?.cancel());
 window.addEventListener('pagehide',()=>travelAnimation?.cancel());
-async function navigateGallery(destination) {
+// Decode the destination before travelling, so newly revealed artworks never
+// arrive after the room. This keeps the original artwork layers intact.
+async function prepareJourney(ship,steps){
+ const map=ship.querySelector('.art-hit-map');
+ for(const room of steps)ensureLayers(ship,map,room);
+ ensureLayers(ship,map,selectedVersion);
+ const images=[...map.querySelectorAll('.art-preserved-layer img')];
+ await Promise.all(images.map(img=>img.decode().catch(()=>{})));
+ const backgrounds=['art-walls-warm-v2.webp','art-white-skirting-v1.webp','art-ceiling-shadow-v5.webp','art-floor-soft-v4.webp','art-hall-wall-v2.webp','art-hall-ceiling-v1.webp','art2-room-photo-v3.webp','art-podium-extended-v6.webp'];
+ await Promise.all(backgrounds.map(src=>{const img=new Image();img.src='./assets/'+src;return img.decode().catch(()=>{});}));
+}
+async function navigateGallery(destination,gesture=null) {
  const ship=document.querySelector('.ship.section-4.is-open');
  if(!ship)return;
  tabVersion=destination;syncTabs();
- if(activeMotion){queuedDestination=destination;return;}
+ if(activeMotion){if(!gesture)queuedDestination=destination;return;}
  if(destination===selectedVersion)return;
- const token=++travelToken,from=versions.indexOf(selectedVersion),to=versions.indexOf(destination),direction=Math.sign(to-from);
+ const origin=selectedVersion,token=++travelToken,from=versions.indexOf(origin),to=versions.indexOf(destination),direction=Math.sign(to-from);
  const steps=direction>0?versions.slice(from+1,to+1):versions.slice(to,from).reverse();
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
- if(reduced){selectedVersion=destination;update();sessionStorage.setItem('dennis-art-version',String(destination));return;}
  activeMotion=true;
  const strip=document.createElement('div');strip.className='art-travel-strip';
+ let finalRoom=destination;
  try {
+  await prepareJourney(ship,steps);
+  if(!ship.matches('.is-open')){finalRoom=origin;return;}
+  if(reduced && !gesture)return;
   ship.append(strip);
   const frames=[captureRoom(ship)];
   for(const next of steps){selectedVersion=next;update(true);frames.push(captureRoom(ship));}
   const width=ship.clientWidth;
   frames.forEach((frame,i)=>{frame.style.transform=`translateX(${i*direction*width}px)`;strip.append(frame);});
   document.body.classList.add('art-travelling');
-  // One continuous journey; cancel afterwards so finished animations do not
-  // retain the photographic room copies and their GPU textures.
-  if(typeof strip.animate==='function'){
-   travelAnimation=strip.animate([{transform:'translateX(0)'},{transform:`translateX(${-direction*width*steps.length}px)`}],{duration:1050*steps.length,easing:'cubic-bezier(.35,0,.65,1)',fill:'forwards'});
+  let start=0,duration=1050*steps.length;
+  if(gesture){
+   gesture.strip=strip;gesture.width=width;gesture.direction=direction;
+   gesture.paint();
+   await gesture.finished;
+   start=gesture.offset;
+   const commit=!gesture.cancelled && gesture.dx*direction<0 && (Math.abs(gesture.dx)>Math.min(60,width*.18) || (Math.abs(gesture.dx)>20 && Math.abs(gesture.velocity)>.45));
+   if(!commit)finalRoom=origin;
+   duration=reduced?0:Math.max(180,420*(1-Math.min(1,Math.abs(start)/width)));
+  }
+  const end=finalRoom===origin?0:-direction*width*steps.length;
+  if(duration && typeof strip.animate==='function'){
+   travelAnimation=strip.animate([{transform:`translateX(${start}px)`},{transform:`translateX(${end}px)`}],{duration,easing:'cubic-bezier(.35,0,.65,1)',fill:'forwards'});
    await travelAnimation.finished.catch(()=>{});
   }
  } finally {
@@ -234,12 +260,48 @@ async function navigateGallery(destination) {
   const map=ship.querySelector('.art-hit-map');
   if(map)strip.querySelectorAll('.art-preserved-layer').forEach(layer=>map.append(layer));
   strip.remove();document.body.classList.remove('art-travelling');activeMotion=false;
-  selectedVersion=destination;update();
+  selectedVersion=finalRoom;tabVersion=finalRoom;update();
+  if(token===travelToken)sessionStorage.setItem('dennis-art-room-order-v2',String(finalRoom));
+  const pending=queuedDestination;queuedDestination=null;
+  if(pending!==null && pending!==selectedVersion)navigateGallery(pending);
  }
- if(token===travelToken)sessionStorage.setItem('dennis-art-version',String(destination));
- const pending=queuedDestination;queuedDestination=null;
- if(pending!==null && pending!==selectedVersion)navigateGallery(pending);
 }
+// Horizontal touch drags follow the finger; vertical gestures remain vertical.
+let roomGesture=null,suppressClickUntil=0;
+document.addEventListener('pointerdown',event=>{
+ if(event.pointerType==='mouse' || activeMotion || document.querySelector('dialog[open]'))return;
+ const room=event.target.closest('.ship.section-4.is-open .art-room');if(!room)return;
+ roomGesture={id:event.pointerId,room,x:event.clientX,y:event.clientY,dx:0,lastX:event.clientX,lastTime:event.timeStamp,velocity:0,started:false,released:false,cancelled:false,offset:0};
+});
+document.addEventListener('pointermove',event=>{
+ const g=roomGesture;if(!g||event.pointerId!==g.id)return;
+ g.dx=event.clientX-g.x;const dy=event.clientY-g.y;
+ if(!g.started){
+  if(Math.abs(dy)>12&&Math.abs(dy)>Math.abs(g.dx)){roomGesture=null;return;}
+  if(Math.abs(g.dx)<12||Math.abs(g.dx)<Math.abs(dy))return;
+  const direction=g.dx<0?1:-1,next=versions[versions.indexOf(selectedVersion)+direction];
+  if(next===undefined){roomGesture=null;return;}
+  g.started=true;g.room.setPointerCapture(g.id);
+  g.finished=new Promise(resolve=>g.finish=resolve);
+  g.paint=()=>{if(!g.strip)return;g.offset=Math.max(-g.width,Math.min(g.width,g.dx));if(g.offset*g.direction>0)g.offset*=.15;g.strip.style.transform=`translateX(${g.offset}px)`;};
+  navigateGallery(next,g);
+ }
+ const dt=event.timeStamp-g.lastTime;if(dt>0)g.velocity=(event.clientX-g.lastX)/dt;
+ g.lastX=event.clientX;g.lastTime=event.timeStamp;g.paint();event.preventDefault();
+},{passive:false});
+function releaseRoomGesture(event){
+ const g=roomGesture;if(!g||event.pointerId!==g.id)return;roomGesture=null;
+ if(!g.started)return;
+ g.cancelled=event.type==='pointercancel';g.released=true;
+ if(event.timeStamp-g.lastTime>100)g.velocity=0;
+ suppressClickUntil=performance.now()+600;
+ g.finish();
+ if(g.room.hasPointerCapture(g.id))g.room.releasePointerCapture(g.id);
+}
+document.addEventListener('pointerup',releaseRoomGesture);
+document.addEventListener('pointercancel',releaseRoomGesture);
+document.addEventListener('click',event=>{if(performance.now()<suppressClickUntil&&event.target.closest('.art-room')){event.preventDefault();event.stopImmediatePropagation();}},true);
+
 const pigeDialog=document.createElement('dialog');pigeDialog.className='art-cat-dialog';pigeDialog.setAttribute('aria-label','Pige');pigeDialog.innerHTML='<header><h2>Pige</h2><button type="button" aria-label="Luk Pige">Luk ×</button></header><img src="./assets/art-pige.webp" alt="Pige, tekstilværk">';document.body.append(pigeDialog);pigeDialog.querySelector('button').onclick=()=>pigeDialog.close();pigeDialog.onclick=e=>{if(e.target===pigeDialog)pigeDialog.close();};
 function ensurePigeHotspot(map){
  if(map.querySelector('.art-pige-hotspot'))return;
