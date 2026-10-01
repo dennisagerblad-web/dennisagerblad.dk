@@ -167,3 +167,8 @@ body.art-version-3 .art-hotspot:nth-child(10) {left:74% !important;top:60% !impo
 
 .art-podium-extensions{position:absolute;left:0;top:0;width:1280px;height:720px;transform:translate(102px,168px) scale(.84);transform-origin:0 0;pointer-events:none;}
 .art-podium-face{position:absolute;left:0;top:0;background:url('./art-podium-extended-v6.webp') no-repeat;background-size:1671px 941px;transform-origin:0 0;}
+
+/* Keep the selected room behind the assembling homepage during close. */
+.ship.has-section.section-4:not(.is-open) .art-room {pointer-events:none;}
+.ship.has-section.section-4:not(.is-open) .art-page-heading,
+.ship.has-section.section-4:not(.is-open) .art-hover-label {visibility:hidden;}

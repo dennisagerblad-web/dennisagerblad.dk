@@ -166,12 +166,14 @@ let scheduled = false;
 function update(force=false) {
   if(activeMotion && force!==true)return;
   const artOpen = !!document.querySelector('.ship.section-4.is-open .art-room');
+  // has-section remains until the homepage pieces have finished closing.
+  const artPresent = !!document.querySelector('.ship.has-section.section-4 .art-room');
   document.body.classList.toggle('art-gallery-open', artOpen);
-  document.body.classList.toggle('art-version-2', artOpen && selectedVersion === 2);
-  document.body.classList.toggle('art-version-3', artOpen && selectedVersion === 3);
-  document.body.classList.toggle('art-version-4', artOpen && selectedVersion === 4);
-  if (artOpen && selectedVersion > 1) {
-    const hitMap=document.querySelector('.ship.section-4.is-open .art-hit-map');
+  document.body.classList.toggle('art-version-2', artPresent && selectedVersion === 2);
+  document.body.classList.toggle('art-version-3', artPresent && selectedVersion === 3);
+  document.body.classList.toggle('art-version-4', artPresent && selectedVersion === 4);
+  if (artPresent && selectedVersion > 1) {
+    const hitMap=document.querySelector('.ship.has-section.section-4 .art-hit-map');
     if(hitMap) ensureLayers(hitMap.closest('.ship'),hitMap,selectedVersion);
     if (selectedVersion === 3) ensureCatHotspot();
     if (selectedVersion === 4) ensurePigeHotspot(hitMap);
