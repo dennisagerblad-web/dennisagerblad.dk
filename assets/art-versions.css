@@ -174,3 +174,15 @@ body.art-version-3 .art-hotspot:nth-child(10) {left:74% !important;top:60% !impo
 .ship.has-section.section-4:not(.is-open) .art-hover-label {visibility:hidden;}
 
 .ship.section-4.is-open .art-room {touch-action:pan-y;}
+
+/* Keep one flat painter order when the room moves into its animated frame.
+   Perspective wall transforms must never composite over the foreground art. */
+.art-preserved-layer {isolation:isolate;transform-style:flat;z-index:1;}
+.art-photo-wall,.art-hall-photo {z-index:0;}
+.art-original {z-index:2;}
+.art-original.art-skirting {z-index:1;}
+.art-installation-original,.art-fixed-bench {z-index:3;}
+.art-photographic-ceramics {z-index:4;}
+.art-podium-extensions {z-index:5;}
+.art-slide-frame {isolation:isolate;transform-style:flat;}
+.art-slide-frame .art-photo-surfaces {z-index:0;}

@@ -67,7 +67,7 @@ function addSkirting(layer,hall=false){
  sideQuad('left',0,DEPTH,skirtingFoot,skirtingHeight),
  quad(-4,4,skirtingFoot,skirtingHeight,DEPTH),
  sideQuad('right',0,DEPTH,skirtingFoot,skirtingHeight)];
- corners.forEach(q=>image(layer,'./assets/art-white-skirting-v1.webp',q,1024,128));
+ corners.forEach(q=>image(layer,'./assets/art-white-skirting-v1.webp',q,1024,128).classList.add('art-skirting'));
 }
 function roomWalls(layer){
  const old=[[[0,0],[382,187],[382,405],[0,545]],[[382,187],[898,187],[898,405],[382,405]],[[898,187],[1280,0],[1280,545],[898,405]]];
