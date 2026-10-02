@@ -191,6 +191,8 @@ new MutationObserver(() => {
 }).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['class'] });
 update();
 
+// Animate layout positions, not a transformed ancestor of perspective photos.
+// WebKit can reorder projective descendants while their ancestor is composited.
 // Navigation order is preserved even when travelling past the passage.
 let travelToken=0;
 function captureRoom(ship) {
@@ -238,7 +240,7 @@ async function navigateGallery(destination,gesture=null) {
   const frames=[captureRoom(ship)];
   for(const next of steps){selectedVersion=next;update(true);frames.push(captureRoom(ship));}
   const width=ship.clientWidth;
-  frames.forEach((frame,i)=>{frame.style.transform=`translateX(${i*direction*width}px)`;strip.append(frame);});
+  frames.forEach((frame,i)=>{frame.style.left=`${i*direction*width}px`;strip.append(frame);});
   document.body.classList.add('art-travelling');
   let start=0,duration=1050*steps.length;
   if(gesture){
@@ -252,7 +254,7 @@ async function navigateGallery(destination,gesture=null) {
   }
   const end=finalRoom===origin?0:-direction*width*steps.length;
   if(duration && typeof strip.animate==='function'){
-   travelAnimation=strip.animate([{transform:`translateX(${start}px)`},{transform:`translateX(${end}px)`}],{duration,easing:'cubic-bezier(.35,0,.65,1)',fill:'forwards'});
+   travelAnimation=strip.animate([{left:`${start}px`},{left:`${end}px`}],{duration,easing:'cubic-bezier(.35,0,.65,1)',fill:'forwards'});
    await travelAnimation.finished.catch(()=>{});
   }
  } finally {
@@ -283,7 +285,7 @@ document.addEventListener('pointermove',event=>{
   if(next===undefined){roomGesture=null;return;}
   g.started=true;g.room.setPointerCapture(g.id);
   g.finished=new Promise(resolve=>g.finish=resolve);
-  g.paint=()=>{if(!g.strip)return;g.offset=Math.max(-g.width,Math.min(g.width,g.dx));if(g.offset*g.direction>0)g.offset*=.15;g.strip.style.transform=`translateX(${g.offset}px)`;};
+  g.paint=()=>{if(!g.strip)return;g.offset=Math.max(-g.width,Math.min(g.width,g.dx));if(g.offset*g.direction>0)g.offset*=.15;g.strip.style.left=`${g.offset}px`;};
   navigateGallery(next,g);
  }
  const dt=event.timeStamp-g.lastTime;if(dt>0)g.velocity=(event.clientX-g.lastX)/dt;
