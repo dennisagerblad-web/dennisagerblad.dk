@@ -18,8 +18,14 @@
     <script type="module" src="./assets/art-versions-v8.js?v=20261002-gallery-complete-rooms-8"></script>
     <link rel="stylesheet" href="./assets/art-versions-v8.css?v=20261002-gallery-complete-rooms-8">
     <link rel="stylesheet" href="./assets/art-viewer.css?v=20261002-gallery-complete-rooms-8">
+    <style>
+      .art-boot-loading{display:none;position:fixed;inset:0;z-index:1;background:#d3cec6;color:#302c28;align-items:center;justify-content:center;font:18px Georgia,serif;pointer-events:none;}
+      body:not(:has(.art-version-chooser)):has(.ship.section-4.is-open) .art-boot-loading{display:flex;}
+      .art-boot-loading button{position:absolute;top:14px;right:20px;color:#302c28;background:none;border:0;font:32px Arial,sans-serif;cursor:pointer;pointer-events:auto;}
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <div class="art-boot-loading" role="status">Galleriet indlæses…<button type="button" aria-label="Luk galleriet under indlæsning" onclick="document.querySelector('.ship [aria-label=&quot;Tilbage til menu&quot;]')?.click()">×</button></div>
   </body>
 </html>
