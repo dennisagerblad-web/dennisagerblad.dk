@@ -11,6 +11,19 @@ export function timelineDate(date, fallback = '') {
   return month ? `${Number(match[3])}. ${month} ${match[1]}` : fallback;
 }
 
+export function scrollTimelineTop() {
+  stopKeepingYearInView?.();
+  lastChosenYear = null;
+  const scroller = document.querySelector('.section-5 .archive-scroll');
+  if (!scroller) return;
+  scroller.style.scrollBehavior = 'auto';
+  scroller.scrollTo({
+    top: 0,
+    behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+  });
+  history.replaceState(null, '', `${location.pathname}${location.search}`);
+}
+
 export function scrollTimelineYear(category, year, updateHash = false) {
   if (!updateHash && lastChosenYear?.category === category && performance.now() - lastChosenYear.at < 1500) return;
   lastChosenYear = updateHash ? { category, at:performance.now() } : null;
@@ -23,27 +36,42 @@ export function scrollTimelineYear(category, year, updateHash = false) {
   const oldestYear = [...shell.querySelectorAll('.life-year[id]')].at(-1);
   const scrollToBottom = updateHash && target === oldestYear;
 
-  function placeYear() {
-    scroller.style.scrollBehavior = 'auto';
+  function yearPosition() {
     if (scrollToBottom) {
-      scroller.scrollTop = scroller.scrollHeight - scroller.clientHeight;
-      return;
+      return scroller.scrollHeight - scroller.clientHeight;
     }
     const scrollerTop = scroller.getBoundingClientRect().top;
     const stickyTop = Number.parseFloat(getComputedStyle(controls).top) || 0;
     const offset = Math.max(0, stickyTop) + controls.getBoundingClientRect().height + 12;
     const targetTop = target.getBoundingClientRect().top - scrollerTop + scroller.scrollTop;
-    // Override the base sheet's smooth behavior even during initial loading.
-    scroller.scrollTop = Math.max(0, targetTop - offset);
+    return Math.max(0, targetTop - offset);
   }
-  placeYear();
+  const animate = updateHash && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const placeYear = () => {
+    scroller.style.scrollBehavior = 'auto';
+    scroller.scrollTop = yearPosition();
+  };
+  if (animate) scroller.scrollTo({ top: yearPosition(), behavior: 'smooth' });
+  else placeYear();
   if (!updateHash) return;
   history.replaceState(null, '', `#timeline-${category}-${year}`);
 
   // Eager thumbnails can finish after an immediate year click. Keep the chosen
   // year anchored while their reserved boxes and the opening archive settle.
   let frame = 0;
-  const schedule = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(placeYear); };
+  let animating = animate;
+  const finishAnimation = () => {
+    if (!animating) return;
+    animating = false;
+    placeYear();
+  };
+  if (animating) scroller.addEventListener('scrollend', finishAnimation, { once:true });
+  const finishFallback = setTimeout(finishAnimation, 1200);
+  const schedule = () => {
+    if (animating) return;
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(placeYear);
+  };
   const observer = new ResizeObserver(schedule);
   observer.observe(shell);
   observer.observe(scroller);
@@ -55,6 +83,8 @@ export function scrollTimelineYear(category, year, updateHash = false) {
   const stop = () => {
     observer.disconnect();
     cancelAnimationFrame(frame);
+    clearTimeout(finishFallback);
+    scroller.removeEventListener('scrollend', finishAnimation);
     clearTimeout(timeout);
     clearInterval(settle);
     for (const image of pending) {
@@ -66,7 +96,11 @@ export function scrollTimelineYear(category, year, updateHash = false) {
   };
   for (const type of ['wheel','touchstart','pointerdown','keydown']) scroller.addEventListener(type, stop, { once:true });
   let attempts = 0;
-  const settle = setInterval(() => { placeYear(); if (++attempts === 15) clearInterval(settle); }, 50);
+  const settle = setInterval(() => {
+    if (animating) return;
+    placeYear();
+    if (++attempts === 15) clearInterval(settle);
+  }, 50);
   const timeout = setTimeout(stop, 5000);
   stopKeepingYearInView = stop;
 }
