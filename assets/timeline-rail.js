@@ -5,6 +5,52 @@ const mobileLandscape = matchMedia('(max-width: 1100px) and (max-height: 650px) 
 let pending = 0;
 let pendingPill = 0;
 
+function updatePosition(rail, firstYear) {
+  const shell = firstYear.closest('.timeline-shell');
+  const scroller = firstYear.closest('.archive-scroll');
+  const controls = shell?.querySelector('.timeline-controls');
+  if (!shell || !scroller || !controls) return;
+
+  const links = [...rail.querySelectorAll('a')];
+  const stops = links.map((link, index) => {
+    const target = index ? document.getElementById(link.getAttribute('href')?.slice(1)) : null;
+    if (index && !target) return null;
+    return {
+      link,
+      y: link.offsetTop + link.offsetHeight / 2,
+      position: target
+        ? target.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop
+        : 0,
+    };
+  }).filter(Boolean);
+  if (!stops.length) return;
+
+  let marker = rail.querySelector('.timeline-year-position');
+  if (!marker) {
+    marker = document.createElement('span');
+    marker.className = 'timeline-year-position';
+    marker.setAttribute('aria-hidden', 'true');
+    rail.append(marker);
+  }
+
+  const stickyOffset = Math.max(0, Number.parseFloat(getComputedStyle(controls).top) || 0)
+    + controls.getBoundingClientRect().height + 12;
+  const position = scroller.scrollTop + stickyOffset;
+  const atBottom = scroller.scrollTop >= scroller.scrollHeight - scroller.clientHeight - 2;
+  let index = 0;
+  while (index < stops.length - 1 && position + 2 >= stops[index + 1].position) index++;
+  const next = stops[Math.min(index + 1, stops.length - 1)];
+  const fraction = next === stops[index] || atBottom ? 0
+    : Math.max(0, Math.min(1, (position - stops[index].position) / (next.position - stops[index].position || 1)));
+  const y = atBottom ? stops.at(-1).y : stops[index].y + (next.y - stops[index].y) * fraction;
+  rail.style.setProperty('--timeline-year-marker-y', `${y}px`);
+  links.forEach((link, linkIndex) => link.classList.toggle('is-current', linkIndex === (atBottom ? links.length - 1 : index)));
+
+  const margin = 14;
+  if (y - rail.scrollTop < margin) rail.scrollTop = Math.max(0, y - margin);
+  else if (y - rail.scrollTop > rail.clientHeight - margin) rail.scrollTop = y - rail.clientHeight + margin;
+}
+
 function updateRail() {
   pending = 0;
   const rail = document.querySelector('.timeline-year-rail');
@@ -18,6 +64,7 @@ function updateRail() {
     rail.style.removeProperty('--timeline-rail-top');
   }
   rail.classList.add('is-with-timeline');
+  updatePosition(rail, firstYear);
 }
 
 function scheduleRail() {

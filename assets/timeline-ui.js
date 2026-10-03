@@ -7,7 +7,7 @@ let cancelTimedScroll;
 let lastTopAt = -Infinity;
 const timedMobileScroll = matchMedia('(max-width: 760px), (max-width: 1100px) and (max-height: 650px) and (orientation: landscape)');
 
-function scrollForOneSecond(scroller, destination, onFinish) {
+function scrollWithEaseOut(scroller, destination, duration, onFinish) {
   cancelTimedScroll?.();
   scroller.style.scrollBehavior = 'auto';
   const start = scroller.scrollTop;
@@ -28,8 +28,8 @@ function scrollForOneSecond(scroller, destination, onFinish) {
   cancelTimedScroll = stop;
   const tick = now => {
     if (started === undefined) started = now;
-    const progress = Math.min(1, (now - started) / 1000);
-    const eased = progress < .5 ? 2 * progress * progress : 1 - 2 * (1 - progress) * (1 - progress);
+    const progress = Math.min(1, (now - started) / duration);
+    const eased = 1 - Math.pow(1 - progress, 3);
     scroller.scrollTop = start + (end - start) * eased;
     if (progress < 1) frame = requestAnimationFrame(tick);
     else {
@@ -57,7 +57,7 @@ export function scrollTimelineTop() {
   if (!scroller) return;
   scroller.style.scrollBehavior = 'auto';
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) scroller.scrollTop = 0;
-  else if (timedMobileScroll.matches) scrollForOneSecond(scroller, 0);
+  else if (timedMobileScroll.matches) scrollWithEaseOut(scroller, 0, 1000);
   else scroller.scrollTo({ top: 0, behavior: 'smooth' });
   history.replaceState(null, '', `${location.pathname}${location.search}`);
 }
@@ -96,9 +96,10 @@ export function scrollTimelineYear(category, year, updateHash = false) {
   const finishAnimation = () => {
     if (!animating) return;
     animating = false;
-    placeYear();
+    const correction = yearPosition();
+    if (Math.abs(correction - scroller.scrollTop) > 2) scrollWithEaseOut(scroller, correction, 260);
   };
-  if (animate && timedMobileScroll.matches) scrollForOneSecond(scroller, yearPosition(), finishAnimation);
+  if (animate && timedMobileScroll.matches) scrollWithEaseOut(scroller, yearPosition(), 1000, finishAnimation);
   else if (animate) {
     scroller.scrollTo({ top: yearPosition(), behavior: 'smooth' });
     scroller.addEventListener('scrollend', finishAnimation, { once:true });
@@ -112,7 +113,10 @@ export function scrollTimelineYear(category, year, updateHash = false) {
   const schedule = () => {
     if (animating) return;
     cancelAnimationFrame(frame);
-    frame = requestAnimationFrame(placeYear);
+    frame = requestAnimationFrame(() => {
+      const correction = yearPosition();
+      if (Math.abs(correction - scroller.scrollTop) > 2) scrollWithEaseOut(scroller, correction, 260);
+    });
   };
   const observer = new ResizeObserver(schedule);
   observer.observe(shell);
@@ -128,7 +132,6 @@ export function scrollTimelineYear(category, year, updateHash = false) {
     clearTimeout(finishFallback);
     scroller.removeEventListener('scrollend', finishAnimation);
     clearTimeout(timeout);
-    clearInterval(settle);
     for (const image of pending) {
       image.removeEventListener('load', schedule);
       image.removeEventListener('error', schedule);
@@ -137,12 +140,6 @@ export function scrollTimelineYear(category, year, updateHash = false) {
     if (stopKeepingYearInView === stop) stopKeepingYearInView = null;
   };
   for (const type of ['wheel','touchstart','pointerdown','keydown']) scroller.addEventListener(type, stop, { once:true });
-  let attempts = 0;
-  const settle = setInterval(() => {
-    if (animating) return;
-    placeYear();
-    if (++attempts === 15) clearInterval(settle);
-  }, 50);
   const timeout = setTimeout(stop, 5000);
   stopKeepingYearInView = stop;
 }

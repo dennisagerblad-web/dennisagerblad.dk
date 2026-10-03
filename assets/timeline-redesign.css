@@ -109,10 +109,10 @@
 .section-5 .timeline-groups button:focus-visible { transform: none; }
 .section-5 .timeline-groups button:focus-visible { outline: 2px solid #d7f3ff; outline-offset: 1px; }
 
-/* Rene årstal står fast til højre og slutter over ansigtet, der åbner forsiden. */
+/* Årstal ligger mellem tidslinjen og ansigtet i portalens lag. */
 .timeline-year-rail {
   position: fixed;
-  z-index: 90;
+  z-index: 60;
   top: clamp(130px, 18svh, 170px);
   right: 6px;
   display: flex;
@@ -136,7 +136,7 @@
   justify-content: flex-end;
   width: 100%;
   min-height: 31px;
-  padding: 0 2px;
+  padding: 0 12px 0 2px;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -157,6 +157,27 @@
   transform: translateX(-4px);
 }
 .timeline-year-rail a:focus-visible { outline: 1px solid #fff; outline-offset: -1px; }
+.timeline-year-rail a.is-current {
+  text-decoration: underline;
+  text-shadow: 0 1px 3px #000, 0 0 7px #fff;
+}
+.timeline-year-position {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 12px;
+  background: #080808;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  filter: drop-shadow(0 0 2px #fff);
+  pointer-events: none;
+  transform: translateY(calc(var(--timeline-year-marker-y, 16px) - 6px));
+}
+.section-5 .timeline-shell[data-theme="art"] .life-year > h2 {
+  color: #edff28 !important;
+  text-shadow: 0 0 5px #f5ff84, 0 0 15px #d7fb21 !important;
+}
 .section-5 .calendar-biography {
   width: min(calc(100% - 66px), var(--bubble-max-width, 800px));
   margin-top: 14px;
@@ -272,7 +293,8 @@
     width: 48px;
     max-height: calc(100svh - 68px);
   }
-  .timeline-year-rail a { justify-content: flex-start; }
+  .timeline-year-rail a { justify-content: flex-start; padding: 0 2px 0 12px; }
+  .timeline-year-position { right: auto; left: 0; transform: translateY(calc(var(--timeline-year-marker-y, 16px) - 6px)) scaleX(-1); }
   .timeline-year-rail a:hover,
   .timeline-year-rail a:focus-visible { transform: translateX(4px); }
 }
