@@ -117,6 +117,7 @@
   right: 6px;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: flex-end;
   justify-content: flex-start;
   gap: 2px;
@@ -128,8 +129,7 @@
   scrollbar-width: thin;
   background: transparent;
 }
-.timeline-year-rail a,
-.timeline-shell[data-theme="live"] .timeline-year-rail a {
+.section-5 .timeline-year-rail a {
   display: flex;
   flex: none;
   align-items: center;
@@ -140,16 +140,16 @@
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: #fff;
+  color: #fff !important;
   box-shadow: none;
-  text-shadow: 0 1px 3px #000, 0 0 5px #000;
+  text-shadow: 0 1px 2px #000, 0 0 4px #000, 0 0 6px #000 !important;
   font: 700 12px/1 Arial, sans-serif;
   text-decoration: none;
   touch-action: manipulation;
 }
-.timeline-year-rail a:hover,
-.timeline-year-rail a:focus-visible {
-  color: #fff;
+.section-5 .timeline-year-rail a:hover,
+.section-5 .timeline-year-rail a:focus-visible {
+  color: #fff !important;
   background: transparent;
   text-decoration: none;
 }
@@ -217,13 +217,13 @@
   .timeline-year-rail {
     top: var(--timeline-rail-top, clamp(105px, 15svh, 135px));
     right: 0;
-    width: 48px;
+    width: 58px;
     max-height: calc(88svh - var(--timeline-rail-top, 135px));
     visibility: hidden;
     pointer-events: none;
   }
   .timeline-year-rail.is-with-timeline { visibility: visible; pointer-events: auto; }
-  .timeline-year-rail a { min-height: 40px; font-size: 14px; }
+  .section-5 .timeline-year-rail a { min-height: 40px; font-size: 16px; }
   .section-5 .calendar-biography {
     width: calc(100% + 40px);
     max-width: none;
@@ -259,6 +259,7 @@
 @media (max-height: 650px) and (orientation: landscape) {
   .section-5 .timeline-shell { padding-top: 12px; }
   .section-5 .calendar-biography { display: block; margin-top: 12px; }
+  .section-5 .continuous-timeline { padding-top: 75px; }
   .section-5 .timeline-controls { top: 4px; margin-bottom: 8px; padding: 0; }
   .timeline-year-rail { top: 70px; max-height: min(240px, calc(100svh - 80px)); }
 }
@@ -267,13 +268,20 @@
 }
 @media (max-width: 1100px) and (max-height: 650px) and (orientation: landscape) {
   .section-5 .timeline-shell { padding-top: 14px; }
+  .section-5 .calendar-biography {
+    width: min(calc(100% - 78px), var(--bubble-max-width, 800px));
+    margin-left: calc(10vw + 20px);
+  }
+  .section-5 .timeline-shell[data-theme="word"] .calendar-biography {
+    width: calc(100% - 78px);
+  }
   .section-5 .timeline-controls {
     top: 14px;
     width: max-content;
     max-width: calc(100vw - 100px);
     height: var(--timeline-mobile-height, 42px);
     justify-content: flex-end;
-    margin: 0 20px 74px auto;
+    margin: 0 20px 10px auto;
     transform: none;
   }
   .section-5 .timeline-groups { transform: scale(var(--timeline-mobile-scale, 1)); transform-origin: top right; }
@@ -282,15 +290,20 @@
     right: auto;
     left: 0;
     align-items: flex-start;
-    width: 48px;
+    width: 58px;
     max-height: calc(100svh - 68px);
   }
+  .section-5 .timeline-year-rail a { font-size: 16px; }
   .timeline-year-rail a { justify-content: flex-start; padding: 0 2px 0 12px; }
   .timeline-year-position { right: auto; left: 0; transform: translateY(calc(var(--timeline-year-marker-y, 16px) - 6px)) scaleX(-1); }
 }
 @media (max-width: 760px) and (max-height: 650px) and (orientation: landscape) {
   .section-5 .timeline-shell { padding-top: 12px; }
-  .section-5 .timeline-controls { top: 12px; margin-bottom: 60px; }
+  .section-5 .timeline-controls { top: 12px; margin-bottom: 10px; }
+  .section-5 .calendar-biography { width: calc(100% - 10px); margin-left: 30px; }
+  .section-5 .continuous-timeline { width: calc(100% - 58px); margin-left: 58px; }
+  .section-5 .timeline-year-rail { flex-wrap: nowrap; gap: 2px; }
+  .section-5 .timeline-year-rail a { min-height: 36px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .section-5 .timeline-groups::before,
