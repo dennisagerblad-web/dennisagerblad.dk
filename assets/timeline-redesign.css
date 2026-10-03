@@ -248,14 +248,14 @@
   .section-5 .timeline-shell { padding-top: 62px; }
 }
 @media (max-width: 1100px) and (max-height: 650px) and (orientation: landscape) {
-  .section-5 .timeline-shell { padding-top: 80px; }
+  .section-5 .timeline-shell { padding-top: 14px; }
   .section-5 .timeline-controls {
-    top: 80px;
+    top: 14px;
     width: max-content;
     max-width: calc(100vw - 100px);
     height: var(--timeline-mobile-height, 42px);
     justify-content: flex-end;
-    margin: 0 20px 8px auto;
+    margin: 0 20px 74px auto;
     transform: none;
   }
   .section-5 .timeline-groups { transform: scale(var(--timeline-mobile-scale, 1)); transform-origin: top right; }
@@ -272,8 +272,8 @@
   .timeline-year-rail a:focus-visible { transform: translateX(4px); }
 }
 @media (max-width: 760px) and (max-height: 650px) and (orientation: landscape) {
-  .section-5 .timeline-shell { padding-top: 64px; }
-  .section-5 .timeline-controls { top: 64px; }
+  .section-5 .timeline-shell { padding-top: 12px; }
+  .section-5 .timeline-controls { top: 12px; margin-bottom: 60px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .section-5 .timeline-groups::before,
