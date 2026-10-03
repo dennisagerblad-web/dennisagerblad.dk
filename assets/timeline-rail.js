@@ -28,6 +28,15 @@ function updatePill() {
   const group = root?.querySelector('.section-5 .timeline-groups');
   const active = group?.querySelector('button.active');
   if (!active) return;
+  const controls = group.closest('.timeline-controls');
+  if (mobile.matches && controls) {
+    const scale = (innerWidth - 80) / group.offsetWidth;
+    group.style.setProperty('--timeline-mobile-scale', scale);
+    controls.style.setProperty('--timeline-mobile-height', `${group.offsetHeight * scale}px`);
+  } else {
+    group.style.removeProperty('--timeline-mobile-scale');
+    controls?.style.removeProperty('--timeline-mobile-height');
+  }
   group.style.setProperty('--timeline-pill-x', `${active.offsetLeft}px`);
   group.style.setProperty('--timeline-pill-width', `${active.offsetWidth}px`);
   group.classList.add('has-measured-pill');
@@ -47,6 +56,7 @@ if (root) {
   root.addEventListener('scroll', scheduleRail, true);
 }
 mobile.addEventListener('change', scheduleRail);
+mobile.addEventListener('change', schedulePill);
 addEventListener('resize', () => { scheduleRail(); schedulePill(); });
 document.fonts?.ready.then(() => { scheduleRail(); schedulePill(); });
 scheduleRail();
