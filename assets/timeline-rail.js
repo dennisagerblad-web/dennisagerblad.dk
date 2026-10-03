@@ -44,7 +44,6 @@ function updatePosition(rail, firstYear) {
     : Math.max(0, Math.min(1, (position - stops[index].position) / (next.position - stops[index].position || 1)));
   const y = atBottom ? stops.at(-1).y : stops[index].y + (next.y - stops[index].y) * fraction;
   rail.style.setProperty('--timeline-year-marker-y', `${y}px`);
-  links.forEach((link, linkIndex) => link.classList.toggle('is-current', linkIndex === (atBottom ? links.length - 1 : index)));
 
   const margin = 14;
   if (y - rail.scrollTop < margin) rail.scrollTop = Math.max(0, y - margin);
