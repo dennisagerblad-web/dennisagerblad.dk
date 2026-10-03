@@ -1,6 +1,7 @@
 // Show the mobile year list with the timeline, after the introduction bubble.
 const root = document.getElementById('root');
 const mobile = matchMedia('(max-width: 760px)');
+const mobileLandscape = matchMedia('(max-width: 1100px) and (max-height: 650px) and (orientation: landscape)');
 let pending = 0;
 let pendingPill = 0;
 
@@ -29,8 +30,10 @@ function updatePill() {
   const active = group?.querySelector('button.active');
   if (!active) return;
   const controls = group.closest('.timeline-controls');
-  if (mobile.matches && controls) {
-    const scale = (innerWidth - 80) / group.offsetWidth;
+  if ((mobile.matches || mobileLandscape.matches) && controls) {
+    const scale = mobileLandscape.matches
+      ? Math.min(1.25, (innerWidth - 100) / group.offsetWidth)
+      : (innerWidth - 40) / group.offsetWidth;
     group.style.setProperty('--timeline-mobile-scale', scale);
     controls.style.setProperty('--timeline-mobile-height', `${group.offsetHeight * scale}px`);
   } else {
@@ -57,6 +60,7 @@ if (root) {
 }
 mobile.addEventListener('change', scheduleRail);
 mobile.addEventListener('change', schedulePill);
+mobileLandscape.addEventListener('change', schedulePill);
 addEventListener('resize', () => { scheduleRail(); schedulePill(); });
 document.fonts?.ready.then(() => { scheduleRail(); schedulePill(); });
 scheduleRail();

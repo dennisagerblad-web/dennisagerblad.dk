@@ -88,7 +88,7 @@
   border: 0;
   border-radius: 999px;
   background: transparent;
-  color: #b7c6da;
+  color: #fff;
   text-shadow: 0 1px 5px #06122550;
   font: 500 11px/1.15 Arial, sans-serif;
   letter-spacing: .14em;
@@ -178,7 +178,7 @@
   .section-5 .timeline-shell { width: 100%; margin: 0; padding-top: 76px; }
   .section-5 .timeline-controls {
     top: 8px;
-    width: calc(100vw - 80px);
+    width: calc(100vw - 40px);
     max-width: none;
     height: var(--timeline-mobile-height, 38px);
     display: flex;
@@ -205,7 +205,7 @@
     top: var(--timeline-rail-top, clamp(105px, 15svh, 135px));
     right: 2px;
     width: 48px;
-    max-height: min(360px, calc(76svh - var(--timeline-rail-top, 135px)));
+    max-height: calc(88svh - var(--timeline-rail-top, 135px));
     visibility: hidden;
     pointer-events: none;
   }
@@ -232,7 +232,7 @@
   .section-5 .timeline-shell[data-theme="live"] .timeline-groups button.active { padding-inline: 7px; }
 }
 @media (max-width: 760px) and (max-height: 700px) and (orientation: portrait) {
-  .timeline-year-rail { max-height: min(360px, calc(82svh - var(--timeline-rail-top, 105px))); }
+  .timeline-year-rail { max-height: calc(94svh - var(--timeline-rail-top, 105px)); }
   .section-5 .calendar-biography { margin-top: 90px; }
   .is-open.section-5 .face-piece-shadow {
     transform: translate(44vw, calc(40vh + 45px)) rotate(7deg) scale(.86);
@@ -246,7 +246,22 @@
 }
 @media (max-width: 760px) and (max-height: 650px) and (orientation: landscape) {
   .section-5 .timeline-shell { padding-top: 62px; }
-  .timeline-year-rail { top: 145px; max-height: min(240px, calc(76svh - 145px)); }
+}
+@media (max-width: 1100px) and (max-height: 650px) and (orientation: landscape) {
+  .section-5 .timeline-controls {
+    width: max-content;
+    max-width: calc(100vw - 100px);
+    height: var(--timeline-mobile-height, 42px);
+    justify-content: flex-end;
+    margin: 0 20px 8px auto;
+    transform: none;
+  }
+  .section-5 .timeline-groups { transform: scale(var(--timeline-mobile-scale, 1)); transform-origin: top right; }
+  .timeline-year-rail { top: 64px; right: 2px; width: 48px; max-height: calc(100svh - 68px); }
+  .is-open.section-5 .face-piece-shadow { transform: translate(28vw, 18vh) rotate(9deg) scale(.72); }
+}
+@media (max-width: 760px) and (max-height: 650px) and (orientation: landscape) {
+  .is-open.section-5 .face-piece-shadow { transform: translate(30vw, 40vh) rotate(7deg) scale(.86); }
 }
 @media (prefers-reduced-motion: reduce) {
   .section-5 .timeline-groups::before,

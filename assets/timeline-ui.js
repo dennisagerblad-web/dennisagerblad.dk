@@ -3,6 +3,42 @@ export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=timeli
 const months = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
 let stopKeepingYearInView;
 let lastChosenYear;
+let cancelTimedScroll;
+let lastTopAt = -Infinity;
+const timedMobileScroll = matchMedia('(max-width: 760px), (max-width: 1100px) and (max-height: 650px) and (orientation: landscape)');
+
+function scrollForOneSecond(scroller, destination, onFinish) {
+  cancelTimedScroll?.();
+  scroller.style.scrollBehavior = 'auto';
+  const start = scroller.scrollTop;
+  const end = Math.max(0, Math.min(destination, scroller.scrollHeight - scroller.clientHeight));
+  if (Math.abs(end - start) < 1) {
+    scroller.scrollTop = end;
+    onFinish?.();
+    return;
+  }
+  let frame = 0;
+  let started;
+  const stop = () => {
+    cancelAnimationFrame(frame);
+    for (const type of ['wheel', 'touchstart', 'pointerdown', 'keydown']) scroller.removeEventListener(type, stop);
+    if (cancelTimedScroll === stop) cancelTimedScroll = null;
+  };
+  for (const type of ['wheel', 'touchstart', 'pointerdown', 'keydown']) scroller.addEventListener(type, stop, { once: true });
+  cancelTimedScroll = stop;
+  const tick = now => {
+    if (started === undefined) started = now;
+    const progress = Math.min(1, (now - started) / 1000);
+    const eased = progress < .5 ? 2 * progress * progress : 1 - 2 * (1 - progress) * (1 - progress);
+    scroller.scrollTop = start + (end - start) * eased;
+    if (progress < 1) frame = requestAnimationFrame(tick);
+    else {
+      stop();
+      onFinish?.();
+    }
+  };
+  frame = requestAnimationFrame(tick);
+}
 
 export function timelineDate(date, fallback = '') {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date || '');
@@ -12,22 +48,26 @@ export function timelineDate(date, fallback = '') {
 }
 
 export function scrollTimelineTop() {
+  if (performance.now() - lastTopAt < 300) return;
+  lastTopAt = performance.now();
   stopKeepingYearInView?.();
+  cancelTimedScroll?.();
   lastChosenYear = null;
   const scroller = document.querySelector('.section-5 .archive-scroll');
   if (!scroller) return;
   scroller.style.scrollBehavior = 'auto';
-  scroller.scrollTo({
-    top: 0,
-    behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-  });
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) scroller.scrollTop = 0;
+  else if (timedMobileScroll.matches) scrollForOneSecond(scroller, 0);
+  else scroller.scrollTo({ top: 0, behavior: 'smooth' });
   history.replaceState(null, '', `${location.pathname}${location.search}`);
 }
 
 export function scrollTimelineYear(category, year, updateHash = false) {
+  if (updateHash && lastChosenYear?.category === category && lastChosenYear.year === year && performance.now() - lastChosenYear.at < 300) return;
   if (!updateHash && lastChosenYear?.category === category && performance.now() - lastChosenYear.at < 1500) return;
-  lastChosenYear = updateHash ? { category, at:performance.now() } : null;
+  lastChosenYear = updateHash ? { category, year, at:performance.now() } : null;
   stopKeepingYearInView?.();
+  cancelTimedScroll?.();
   const scroller = document.querySelector('.section-5 .archive-scroll');
   const target = document.getElementById(`timeline-${category}-${year}`);
   const shell = target?.closest('.timeline-shell');
@@ -51,13 +91,6 @@ export function scrollTimelineYear(category, year, updateHash = false) {
     scroller.style.scrollBehavior = 'auto';
     scroller.scrollTop = yearPosition();
   };
-  if (animate) scroller.scrollTo({ top: yearPosition(), behavior: 'smooth' });
-  else placeYear();
-  if (!updateHash) return;
-  history.replaceState(null, '', `#timeline-${category}-${year}`);
-
-  // Eager thumbnails can finish after an immediate year click. Keep the chosen
-  // year anchored while their reserved boxes and the opening archive settle.
   let frame = 0;
   let animating = animate;
   const finishAnimation = () => {
@@ -65,8 +98,17 @@ export function scrollTimelineYear(category, year, updateHash = false) {
     animating = false;
     placeYear();
   };
-  if (animating) scroller.addEventListener('scrollend', finishAnimation, { once:true });
-  const finishFallback = setTimeout(finishAnimation, 1200);
+  if (animate && timedMobileScroll.matches) scrollForOneSecond(scroller, yearPosition(), finishAnimation);
+  else if (animate) {
+    scroller.scrollTo({ top: yearPosition(), behavior: 'smooth' });
+    scroller.addEventListener('scrollend', finishAnimation, { once:true });
+  } else placeYear();
+  if (!updateHash) return;
+  history.replaceState(null, '', `#timeline-${category}-${year}`);
+
+  // Eager thumbnails can finish after an immediate year click. Keep the chosen
+  // year anchored while their reserved boxes and the opening archive settle.
+  const finishFallback = setTimeout(finishAnimation, timedMobileScroll.matches ? 1300 : 1200);
   const schedule = () => {
     if (animating) return;
     cancelAnimationFrame(frame);
