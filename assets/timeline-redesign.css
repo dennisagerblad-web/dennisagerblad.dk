@@ -226,6 +226,11 @@
     max-width: none;
     margin-top: clamp(90px, 12svh, 115px);
   }
+  .section-5 .timeline-shell:is([data-theme="live"], [data-theme="music"], [data-theme="press"]) .calendar-biography p {
+    --bubble-copy-left: 14%;
+    --bubble-copy-right: 8%;
+    text-wrap: wrap;
+  }
 }
 @media (max-width: 360px) {
   .section-5 .timeline-groups button,
