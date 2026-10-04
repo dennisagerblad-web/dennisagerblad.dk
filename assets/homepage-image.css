@@ -1,0 +1,13 @@
+/* Responsive homepage photo, generated from the user's corrected original. */
+.ship .face-stack .door-panel {
+  background-image: linear-gradient(#08040825, #08040818), url("../homepage-pizza-wide-20261004.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+@media (max-width: 760px) and (orientation: portrait) {
+  .ship .face-stack .door-panel {
+    background-image: linear-gradient(#08040825, #08040818), url("../homepage-pizza-portrait-20261004.jpg") !important;
+    background-position: center !important;
+  }
+}
