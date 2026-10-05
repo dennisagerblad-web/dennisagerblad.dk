@@ -24,7 +24,16 @@ export function installArtViewer({getVersion,homography}){
  function sourceFor(src){return wallImages().find(el=>new URL(el.src).href===new URL(src,location.href).href);}
  function corners(el){const layer=el.closest('.art-preserved-layer'),r=layer.getBoundingClientRect(),scale=r.width/1280;return JSON.parse(el.dataset.galleryQuad).map(([x,y])=>[r.left+x*scale,r.top+y*scale]);}
  function origin(src){const el=sourceFor(src);if(el)return corners(el);return state.origin;}
- function target(img){const many=state.files.length>1,wMax=innerWidth*(many?.86:.94),hMax=Math.max(100,innerHeight-124),ratio=img.naturalWidth/img.naturalHeight,w=Math.min(wMax,hMax*ratio),h=w/ratio;return {x:(innerWidth-w)/2,y:68+(innerHeight-92-h)/2,w,h};}
+ const mobileLandscape=()=>innerWidth>innerHeight&&innerWidth<=1000;
+ function target(img){
+  const many=state.files.length>1,landscape=mobileLandscape(),ratio=img.naturalWidth/img.naturalHeight;
+  const wMax=innerWidth*(many?.86:.94);
+  let hMax=Math.max(100,innerHeight-124);
+  // Keep the current artwork and its adjacent previews fully in frame on a
+  // phone held sideways; otherwise the first/last preview gets clipped.
+  if(landscape&&many)hMax=Math.min(hMax,(innerWidth-48)/(3*ratio));
+  const w=Math.min(wMax,hMax*ratio),h=w/ratio;return {x:(innerWidth-w)/2,y:68+(innerHeight-92-h)/2,w,h};
+ }
  function matrix(q,img){return homography(rectangle(0,0,img.naturalWidth,img.naturalHeight),q);}
  async function animate(el,frames,duration=650){if(reduced())return;await el.animate(frames,{duration,easing:'cubic-bezier(.22,.7,.2,1)',fill:'none'}).finished.catch(()=>{});}
  // Interpolate projected corners rather than decomposing perspective matrices.
@@ -35,7 +44,12 @@ export function installArtViewer({getVersion,homography}){
   await new Promise(resolve=>{const start=performance.now();function frame(now){const progress=Math.min(1,(now-start)/duration),ease=1-Math.pow(1-progress,3);const q=from.map((corner,i)=>corner.map((n,j)=>n+(to[i][j]-n)*ease));img.style.transform=matrix(q,img);if(progress<1)requestAnimationFrame(frame);else resolve();}requestAnimationFrame(frame);});
  }
  function removePeeks(){++peekSequence;peeks.forEach(img=>img.remove());peeks=[];}
- function setHeader(t){header.style.left=t.x+'px';header.style.top=Math.max(12,t.y-48)+'px';header.style.width=t.w+'px';previous.hidden=state.index===0;next.hidden=state.index===state.files.length-1;count.textContent=state.files.length>1?`${state.index+1} / ${state.files.length}`:'';}
+ function setHeader(t){
+  const landscape=mobileLandscape(),margin=landscape?Math.max(20,innerWidth*.075):0;
+  header.style.left=(landscape?margin:t.x)+'px';header.style.top=Math.max(12,t.y-48)+'px';
+  header.style.width=(landscape?innerWidth-margin*2:t.w)+'px';
+  previous.hidden=state.index===0;next.hidden=state.index===state.files.length-1;count.textContent=state.files.length>1?`${state.index+1} / ${state.files.length}`:'';
+ }
  async function picture(src,cls){const img=new Image();img.className=cls;img.draggable=false;img.alt=state.title;img.src=fullQuality[src]||src;await img.decode();img.style.width=img.naturalWidth+'px';img.style.height=img.naturalHeight+'px';return img;}
  async function drawPeek(){
   removePeeks();const request=peekSequence,current=state;

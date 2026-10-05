@@ -12,6 +12,8 @@
 .art-focus-count{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:14px;color:#fff;}
 body.art-focus-open .art-version-chooser,body.art-focus-open .museum-warning{visibility:hidden;}
 .art-focus-viewer button:focus-visible{outline:2px solid white;outline-offset:3px;}
+.art-focus-viewer .art-focus-close{appearance:none;border:0;border-radius:50%;background:transparent;padding:0;}
+.art-focus-viewer .art-focus-close:focus-visible{outline:none;box-shadow:none;}
 
 /* Remove only the external black strips. Preserve pink frame and four metal tabs. */
 .art-original[src*="IMG0010_"],.art-focus-image[src*="IMG0010_"]{
