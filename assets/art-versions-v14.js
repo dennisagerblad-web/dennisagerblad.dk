@@ -191,13 +191,16 @@ function ensureCatHotspot() {
   hotspot.addEventListener('click', () => catDialog.showModal());
   hitMap.append(hotspot);
 }
-let activeMotion=false,queuedDestination=null,travelAnimation=null;
+let activeMotion=false,queuedDestination=null,travelAnimation=null,lastGalleryMap=null;
 let scheduled = false;
 function update(force=false) {
   if(activeMotion && force!==true)return;
   const artOpen = !!document.querySelector('.ship.section-4.is-open .art-room');
   // has-section remains until the homepage pieces have finished closing.
   const artPresent = !!document.querySelector('.ship.has-section.section-4 .art-room');
+  const currentMap=document.querySelector('.ship.has-section.section-4 .art-hit-map');
+  if(artPresent&&currentMap)lastGalleryMap=currentMap;
+  else if(!artPresent&&lastGalleryMap){openingRooms.delete(lastGalleryMap);lastGalleryMap=null;}
   document.body.classList.toggle('art-gallery-open', artOpen);
   document.body.classList.toggle('art-version-2', artPresent && selectedVersion === 2);
   document.body.classList.toggle('art-version-3', artPresent && selectedVersion === 3);
@@ -209,7 +212,8 @@ function update(force=false) {
     if (selectedVersion === 4) ensurePigeHotspot(hitMap);
   }
   else if (catDialog.open) catDialog.close();
-  if(!artPresent&&!activeMotion&&!snapshotPreparation)releaseSnapshots();
+  // Keep finished room canvases while visitors browse other sections. Reopening
+  // Kunst can then reuse them instead of rebuilding the gallery from scratch.
   syncTabs();
 }
 function galleryStructureChanged(records){
