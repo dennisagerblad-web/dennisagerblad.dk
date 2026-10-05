@@ -402,7 +402,7 @@ async function prepareSnapshots(ship,map){
    if(snapshotKey(ship)!==key)throw new Error('Gallery viewport changed during preparation');
    roomSnapshots={key,frames};return roomSnapshots;
   }catch(error){for(const frame of frames.values()){const canvas=frame.querySelector('canvas');canvas.width=canvas.height=1;}throw error;}
-  finally{selectedVersion=origin;tabVersion=queuedDestination??origin;update(true);if(roomTexture)roomTexture.width=roomTexture.height=1;}
+  finally{selectedVersion=origin;tabVersion=origin;update(true);if(roomTexture)roomTexture.width=roomTexture.height=1;}
  })();
  snapshotPreparation=pending;
  try{return await pending;}finally{snapshotPreparation=null;}
@@ -413,7 +413,7 @@ window.addEventListener('pagehide',()=>travelAnimation?.cancel());
 async function navigateGallery(destination,gesture=null) {
  const ship=document.querySelector('.ship.section-4.is-open');
  if(!ship)return;
- if(ship.classList.contains('art-images-loading')){if(!gesture){queuedDestination=destination;tabVersion=destination;syncTabs();}return;}
+ if(ship.classList.contains('art-images-loading')){if(!gesture)queuedDestination=destination;return;}
  if(activeMotion){if(!gesture)queuedDestination=destination;return;}
  if(destination===selectedVersion)return;
  const origin=selectedVersion,token=++travelToken,from=versions.indexOf(origin),to=versions.indexOf(destination),direction=Math.sign(to-from);
