@@ -302,7 +302,9 @@ function ensureOpeningReady(ship,map){
  warmGalleryImages();ship.classList.add('art-images-loading');chooser.setAttribute('aria-busy','true');syncTabs();
  const pending=waitForOpeningMotion(ship).then(()=>{
   if(!ship.matches('.is-open') || !map.isConnected)return;
-  return prepareSnapshots(ship,map);
+  // The first visible room and the first tab are the likely first trip.
+  // Prepare only that pair before enabling queued navigation.
+  return prepareSnapshots(ship,map,[...new Set([selectedVersion,versions[0]])]);
  }).then(()=>{
   ship.classList.remove('art-images-loading');chooser.removeAttribute('aria-busy');warmingPhotos=[];syncTabs();
   const destination=queuedDestination;queuedDestination=null;
@@ -390,20 +392,21 @@ function snapshotKey(ship){return `${ship.clientWidth}:${ship.clientHeight}:${de
 function releaseSnapshots(){
  if(roomSnapshots){for(const frame of roomSnapshots.frames.values()){const canvas=frame.querySelector('canvas');canvas.width=canvas.height=1;}roomSnapshots=null;}
 }
-async function prepareSnapshots(ship,map){
+async function prepareSnapshots(ship,map,rooms=versions){
  const key=snapshotKey(ship);
- if(roomSnapshots?.key===key)return roomSnapshots;
- if(snapshotPreparation){await snapshotPreparation;return prepareSnapshots(ship,map);}
+ if(roomSnapshots?.key!==key){releaseSnapshots();roomSnapshots={key,frames:new Map()};}
+ if(snapshotPreparation){await snapshotPreparation;return prepareSnapshots(ship,map,rooms);}
+ const missing=rooms.filter(room=>!roomSnapshots.frames.has(room));
+ if(!missing.length)return roomSnapshots;
  const origin=selectedVersion,frames=new Map();
  const pending=(async()=>{
-  releaseSnapshots();
-  for(const room of versions)ensureLayers(ship,map,room);
+  for(const room of missing)ensureLayers(ship,map,room);
   ensureLayers(ship,map,origin);
-  await Promise.all(versions.map(room=>readyRoom(ship,map,room)));
+  await Promise.all(missing.map(room=>readyRoom(ship,map,room)));
   try{
-   for(const room of versions){frames.set(room,await captureRoom(ship,room));}
+   for(const room of missing){frames.set(room,await captureRoom(ship,room));}
    if(snapshotKey(ship)!==key)throw new Error('Gallery viewport changed during preparation');
-   roomSnapshots={key,frames};return roomSnapshots;
+   for(const [room,frame] of frames)roomSnapshots.frames.set(room,frame);return roomSnapshots;
   }catch(error){for(const frame of frames.values()){const canvas=frame.querySelector('canvas');canvas.width=canvas.height=1;}throw error;}
   finally{selectedVersion=origin;tabVersion=origin;update(true);if(roomTexture)roomTexture.width=roomTexture.height=1;}
  })();
@@ -427,7 +430,7 @@ async function navigateGallery(destination,gesture=null) {
  let finalRoom=destination;
  try {
   ship.querySelector('.art-travel-error')?.remove();
-  const snapshots=await prepareSnapshots(ship,ship.querySelector('.art-hit-map'));
+  const snapshots=await prepareSnapshots(ship,ship.querySelector('.art-hit-map'),[...new Set([origin,...steps])]);
   if(!ship.matches('.is-open')){finalRoom=origin;return;}
   const width=ship.clientWidth;
   [origin,...steps].forEach((room,i)=>{const frame=snapshots.frames.get(room);frame.style.left=`${i*direction*width}px`;strip.append(frame);});
