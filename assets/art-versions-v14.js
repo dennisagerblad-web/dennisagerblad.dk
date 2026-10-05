@@ -289,6 +289,9 @@ function warmGalleryImages(){
   const photo=new Image();photo.decoding='async';photo.fetchPriority='low';photo.src=src;warmingPhotos.push(photo);
  }
 }
+// Start warming the gallery's local photos during the initial page load so
+// opening Kunst does not first compete for every room image on the user's click.
+warmGalleryImages();
 let nextGalleryYield=0;
 async function yieldGalleryWork(){
  if(performance.now()<nextGalleryYield)return;
