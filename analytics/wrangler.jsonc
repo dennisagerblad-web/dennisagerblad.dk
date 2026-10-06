@@ -1,0 +1,14 @@
+{
+  "name": "dennis-layout-statistik",
+  "main": "layout-worker.js",
+  "compatibility_date": "2026-10-06",
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "dennisagerblad.dk/_stats/*", "zone_name": "dennisagerblad.dk" },
+    { "pattern": "www.dennisagerblad.dk/_stats/*", "zone_name": "dennisagerblad.dk" }
+  ],
+  "d1_databases": [
+    { "binding": "DB", "database_name": "dennis-layout-statistik", "database_id": "2c670e95-8be9-409c-89d0-6e0ceeee1bc1" }
+  ],
+  "secrets": { "required": ["REPORT_PASSWORD"] }
+}

@@ -7,7 +7,7 @@ let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20260928-1',
+  '../content/timeline/galleries.json?v=20261006-independent-1',
   '../content/timeline/image-metadata.json?v=20260928-1',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');

@@ -3152,8 +3152,8 @@ export const timelineEntries = [
     "category": "Modeshow",
     "title": "Jeg gik model for Barbara í Gongini under Københavns modeuge.",
     "group": "live",
-    "href": "./200_calendar/2008/08_08_09_modeshow/modeshow.html",
-    "thumbnail": "./200_calendar/2008/08_08_09_modeshow/dennis_karinajoenson.jpg",
+    "href": "./archive/legacy/200_calendar/2008/08_08_09_modeshow/modeshow.html",
+    "thumbnail": "./archive/legacy/200_calendar/2008/08_08_09_modeshow/dennis_karinajoenson.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/4794aba94a1719e1.webp"
   },
   {
@@ -3334,8 +3334,8 @@ export const timelineEntries = [
     "category": "Blog",
     "title": "Jeg er også Dansker, Freddy Hagens Blog, Danmark.",
     "group": "media",
-    "href": "./200_calendar/2008/08_05_27_dansker/dansker.html",
-    "thumbnail": "./200_calendar/2008/08_05_27_dansker/dennis.jpg",
+    "href": "./archive/legacy/200_calendar/2008/08_05_27_dansker/dansker.html",
+    "thumbnail": "./archive/legacy/200_calendar/2008/08_05_27_dansker/dennis.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/d38ffb791405a0b5.webp"
   },
   {
@@ -3898,11 +3898,11 @@ export const timelineEntries = [
     "date": "2005-07-02",
     "display": "02.07.2005",
     "year": 2005,
-    "category": "Arkiv",
+    "category": "Tidslinje",
     "title": "Fødselsdagsfest, København.",
     "group": "media",
-    "href": "./200_calendar/2005/05_07_02_foedselsdag_riga/dennis_agerblad.html",
-    "thumbnail": "./200_calendar/2005/05_07_02_foedselsdag_riga/foedselsdagfest.jpg",
+    "href": "./archive/legacy/200_calendar/2005/05_07_02_foedselsdag_riga/dennis_agerblad.html",
+    "thumbnail": "./archive/legacy/200_calendar/2005/05_07_02_foedselsdag_riga/foedselsdagfest.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/ca75b64d89eadb55.webp"
   },
   {
@@ -5096,8 +5096,8 @@ export const timelineEntries = [
     "category": "Tekstildesign",
     "title": "Listastevna, Thorshavn, Færøerne.",
     "group": "art",
-    "href": "./200_calendar/2002/02_08_03_listastevna/listastevna.html",
-    "thumbnail": "./200_calendar/2002/02_08_03_listastevna/dennis_agerblad_listastevna_01.jpg",
+    "href": "./archive/legacy/200_calendar/2002/02_08_03_listastevna/listastevna.html",
+    "thumbnail": "./archive/legacy/200_calendar/2002/02_08_03_listastevna/dennis_agerblad_listastevna_01.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/f7c9ecc39111246d.webp"
   },
   {
@@ -5486,17 +5486,17 @@ export const timelineEntries = [
     "title": "Selvbiografi: Jeg blev født og fik navnet Robin Ova Tolfsen.",
     "group": "media",
     "href": null,
-    "thumbnail": "./200_calendar/1970/Robin_4_aar_02.jpg",
+    "thumbnail": "./archive/legacy/200_calendar/1970/Robin_4_aar_02.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/70d02de2376c5fc8.webp",
     "biography": [
       {
         "type": "image",
-        "src": "./200_calendar/1970/Robin_4_aar_02.jpg",
+        "src": "./archive/legacy/200_calendar/1970/Robin_4_aar_02.jpg",
         "caption": "Robin, 4 år"
       },
       {
         "type": "image",
-        "src": "./200_calendar/1970/biografi_01.jpg",
+        "src": "./archive/legacy/200_calendar/1970/biografi_01.jpg",
         "caption": "Robin, 6 år"
       },
       {
@@ -5505,7 +5505,7 @@ export const timelineEntries = [
       },
       {
         "type": "image",
-        "src": "./200_calendar/1970/biografi_02.jpg",
+        "src": "./archive/legacy/200_calendar/1970/biografi_02.jpg",
         "caption": "Robin på fjeldtoppen"
       },
       {
@@ -5514,7 +5514,7 @@ export const timelineEntries = [
       },
       {
         "type": "image",
-        "src": "./200_calendar/1970/biografi_03.jpg",
+        "src": "./archive/legacy/200_calendar/1970/biografi_03.jpg",
         "caption": "Mit værelse"
       },
       {
@@ -5523,7 +5523,7 @@ export const timelineEntries = [
       },
       {
         "type": "image",
-        "src": "./200_calendar/1970/biografi_05.jpg",
+        "src": "./archive/legacy/200_calendar/1970/biografi_05.jpg",
         "caption": "Robin, 14 år"
       },
       {
@@ -5532,12 +5532,12 @@ export const timelineEntries = [
       },
       {
         "type": "image",
-        "src": "./200_calendar/1970/biografi_07.jpg",
+        "src": "./archive/legacy/200_calendar/1970/biografi_07.jpg",
         "caption": "Dennis Agerblad, 15 år, Vestmanna skole"
       },
       {
         "type": "image",
-        "src": "./200_calendar/1970/biografi_04.jpg",
+        "src": "./archive/legacy/200_calendar/1970/biografi_04.jpg",
         "caption": "Alene"
       },
       {
@@ -5546,7 +5546,7 @@ export const timelineEntries = [
       },
       {
         "type": "image",
-        "src": "./200_calendar/1970/biografi_06.jpg",
+        "src": "./archive/legacy/200_calendar/1970/biografi_06.jpg",
         "caption": "Dennis Agerblad, 15 år"
       },
       {
@@ -5559,7 +5559,7 @@ export const timelineEntries = [
       },
       {
         "type": "image",
-        "src": "./200_calendar/1970/biografi_robin.jpg",
+        "src": "./archive/legacy/200_calendar/1970/biografi_robin.jpg",
         "caption": "Ova, 22 år"
       },
       {
