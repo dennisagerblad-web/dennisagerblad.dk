@@ -225,3 +225,8 @@
   .timeline-popup-biography-dialog { width:calc(100vw - 20px); max-height:calc(100dvh - 20px); }
   .timeline-popup-biography { padding:18px; }
 }
+
+/* Native pause control in the existing supplementary row. */
+.tg-rotation { padding:6px 0; min-height:32px; border:0; background:transparent; color:inherit; font:inherit; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.tg-rotation:disabled { cursor:default; text-decoration:none; }
+.tg-supplementary:has(> .tg-rotation[hidden]:only-child) { display:none; }

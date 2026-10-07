@@ -28,3 +28,7 @@ opener.focus(); cleanup = context.aaOpenDialog(close); opener.isConnected = fals
 // Existing inert state is preserved when opening above an already inert root.
 root.inert = true; cleanup = context.aaOpenDialog(close); cleanup(); flush(); assert.equal(root.inert, true);
 console.log('PASS: focus wrapping, hidden controls, opener restoration, recreated thumbnails, effect replay, inert restoration');
+
+// Capture the opener before React removes it from the document.
+root.inert=false; opener.isConnected=false; document.activeElement=null; cleanup=context.aaOpenDialog(close,opener); cleanup(); flush(); assert.equal(document.activeElement,replacement);
+console.log('PASS: explicitly captured opener survives pre-effect removal');

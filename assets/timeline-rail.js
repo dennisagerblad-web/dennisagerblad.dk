@@ -74,6 +74,12 @@ function updateRail() {
   } else {
     rail.style.removeProperty('--timeline-rail-top');
   }
+  const linkWidths=[...rail.querySelectorAll('a')].map(link=>{
+    const range=document.createRange(); range.selectNodeContents(link);
+    return range.getBoundingClientRect().width + 14;
+  });
+  const minimum=mobile.matches?58:48;
+  rail.style.width=`${Math.ceil(Math.max(minimum,...linkWidths))}px`;
   rail.classList.add('is-with-timeline');
   updatePosition(rail, firstYear);
 }
@@ -89,17 +95,22 @@ function updatePill() {
   if (!active) return;
   const controls = group.closest('.timeline-controls');
   if ((mobile.matches || mobileLandscape.matches) && controls) {
-    const scale = mobileLandscape.matches
+    const largeText=mobilePortrait.matches && parseFloat(getComputedStyle(active).fontSize)>13;
+    if(group.classList.contains('has-large-text')!==largeText) group.classList.toggle('has-large-text',largeText);
+    const scale = largeText ? 1 : mobileLandscape.matches
       ? Math.min(1.25, (innerWidth - 100) / group.offsetWidth)
       : (innerWidth - 40) / group.offsetWidth;
     group.style.setProperty('--timeline-mobile-scale', scale);
     controls.style.setProperty('--timeline-mobile-height', `${group.offsetHeight * scale}px`);
   } else {
+    group.classList.remove('has-large-text');
     group.style.removeProperty('--timeline-mobile-scale');
     controls?.style.removeProperty('--timeline-mobile-height');
   }
   group.style.setProperty('--timeline-pill-x', `${active.offsetLeft}px`);
   group.style.setProperty('--timeline-pill-width', `${active.offsetWidth}px`);
+  group.style.setProperty('--timeline-pill-y', `${active.offsetTop}px`);
+  group.style.setProperty('--timeline-pill-height', `${active.offsetHeight}px`);
   group.classList.add('has-measured-pill');
 }
 

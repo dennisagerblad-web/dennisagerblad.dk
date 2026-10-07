@@ -1,0 +1,8 @@
+/* Reflow for long words when users enlarge text. */
+.section-0 .record-meta :is(h2,p),
+.section-3 .book-copy h3 { overflow-wrap:anywhere; }
+.section-5 .life-copy time { white-space:normal; overflow-wrap:anywhere; }
+.section-5 .life-copy .life-category { white-space:normal; overflow-wrap:anywhere; flex-wrap:wrap; }
+/* Decorative automatic movement finishes within five seconds. */
+.atmosphere { animation-duration:4.8s; animation-iteration-count:1; }
+.dancing-note { animation-iteration-count:3; }

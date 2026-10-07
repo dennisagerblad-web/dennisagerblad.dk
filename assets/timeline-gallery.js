@@ -221,7 +221,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   header.append(date, title, details);
   const close = button('×','Luk billedvisning', () => cleanup()); close.className = 'tg-close';
   const viewer = el('div','tg-viewer');
-  const stage = el('div','tg-stage'); stage.setAttribute('aria-roledescription','karrusel');
+  const stage = el('div','tg-stage'); stage.setAttribute('role','group'); stage.setAttribute('aria-roledescription','karrusel');
   stage.dataset.effect=effectName;
   stage.setAttribute('aria-label','Billeder fra '+title.textContent);
   const poster = el('canvas', 'tg-poster'); poster.setAttribute('role','img');
@@ -236,20 +236,39 @@ export function openTimelineGallery(entry, group, theme = {}) {
   // Credits and supplementary links belong with the text, so the photograph
   // meets both sides and the bottom of the popup without a footer strip.
   const supplementary=el('div','tg-supplementary'); header.append(supplementary);
+  const rotation=button('Start billedskift','Start automatiske billedskift',toggleRotation); rotation.className='tg-rotation'; rotation.hidden=true;
+  supplementary.prepend(rotation);
   stage.append(previous,next,announcement); viewer.append(stage);
   dialog.append(close,header,viewer); overlay.append(dialog); document.body.append(overlay);
-  close.focus({preventScroll:true});
-  let closed = false, index = 0, items = [], media = {}, drawing = null, request = 0;
+  let closed = false, index = 0, items = [], media = {}, descriptions = [], drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
-  let scene = null, drag = null;
+  let scene = null, drag = null, paused = true, rotationPointerPaused = null;
   const mobile = matchMedia('(max-width: 760px), (max-width: 1100px) and (max-height: 600px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cache = new Map();
   function scheduleAutoplay(delay = 2000) {
     clearTimeout(autoplayTimer);
-    if (closed || reduced.matches || items.length < 2) return;
+    if (closed || paused || reduced.matches || items.length < 2) return;
     autoplayTimer = window.setTimeout(() => { autoplayTimer = 0; navigate(1); }, delay);
   }
+  function updateRotation() {
+    rotation.textContent=reduced.matches?'Billedskift på pause':paused?'Start billedskift':'Pause billedskift';
+    rotation.setAttribute('aria-label',reduced.matches?'Automatiske billedskift er slået fra ved reduceret bevægelse':paused?'Start automatiske billedskift':'Sæt automatiske billedskift på pause');
+    rotation.disabled=reduced.matches;
+    announcement.setAttribute('aria-live',paused?'polite':'off');
+  }
+  function pauseRotation() { paused=true; clearTimeout(autoplayTimer); updateRotation(); }
+  function toggleRotation() {
+    if (reduced.matches) return;
+    paused=rotationPointerPaused===null?!paused:!rotationPointerPaused; rotationPointerPaused=null; clearTimeout(autoplayTimer); updateRotation();
+    if (!paused) scheduleAutoplay();
+  }
+  rotation.addEventListener('pointerdown',()=>{rotationPointerPaused=paused;});
+  rotation.addEventListener('pointercancel',()=>{rotationPointerPaused=null;});
+  dialog.addEventListener('focusin',pauseRotation);
+  dialog.addEventListener('mouseenter',pauseRotation);
+  updateRotation();
+  close.focus({preventScroll:true});
   function imageAt(i) {
     const src = items[i];
     if (!cache.has(src)) cache.set(src,new Promise((resolve,reject) => {
@@ -292,7 +311,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
   function paint(composition) {
     poster.width = composition.width; poster.height = composition.height;
     poster.getContext('2d').drawImage(composition,0,0); drawing = composition;
-    poster.setAttribute('aria-label',`${title.textContent} — billede ${index+1} af ${items.length}`);
+    const description=descriptions[index] || media[items[index]]?.description;
+    poster.setAttribute('aria-label',`${typeof description==='string' && description.trim() ? description.trim() : title.textContent} — billede ${index+1} af ${items.length}`);
   }
   function announce() { announcement.textContent = `Billede ${index+1} af ${items.length}`; stage.dataset.index=String(index); }
   function prefetch() {
@@ -431,7 +451,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function resize() { cancelAnimationFrame(layoutFrame); layoutFrame=requestAnimationFrame(() => { layout(); render(); }); }
   closeActive = cleanup;
-  function motionPreferenceChanged() { clearTimeout(autoplayTimer); if (!reduced.matches) scheduleAutoplay(); }
+  function motionPreferenceChanged() { pauseRotation(); }
   reduced.addEventListener('change',motionPreferenceChanged);
   window.addEventListener('keydown',keydown,true); mobile.addEventListener('change',resize); window.addEventListener('resize',resize); window.visualViewport?.addEventListener('resize',resize);
   overlay.addEventListener('click',event => { if (event.target === overlay) cleanup(); });
@@ -484,7 +504,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   function populate(data) {
     if (closed) return;
     const gallery = data.entries?.[`${entry.date}|${entry.category}|${entry.title}`];
-    media = data.media || {};
+    media = data.media || {}; descriptions=Array.isArray(gallery?.imageDescriptions)?gallery.imageDescriptions:[];
     title.textContent = entry.title;
     const paragraphs = gallery?.details || (entry.details ? [entry.details] : []);
     const longCopy = entry.date !== '2012-10-12' && paragraphs.join(' ').length > 700 && paragraphs.length > 1;
@@ -513,7 +533,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     }
     if (entry.popupHref) link(entry.popupLabel || 'Se linket ↗',entry.popupHref);
     if (items.length) {
-      previous.hidden=next.hidden=items.length<2;
+      previous.hidden=next.hidden=items.length<2; rotation.hidden=items.length<2; updateRotation();
       layout(); render();
     } else { stage.hidden=true; layout(); }
   }
