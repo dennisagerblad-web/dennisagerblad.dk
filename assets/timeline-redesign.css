@@ -170,6 +170,14 @@
   color: #edff28 !important;
   text-shadow: none !important;
 }
+.section-5 .timeline-shell[data-theme="art"] .timeline-entry time,
+.section-5 .timeline-shell[data-theme="art"] .timeline-entry .life-category {
+  color: #fff !important;
+  text-shadow: 0 1px 3px #000 !important;
+}
+.section-5 .timeline-shell[data-theme="art"] .timeline-entry .life-category {
+  font-weight: inherit !important;
+}
 .section-5 .calendar-biography {
   width: min(calc(100% - 66px), var(--bubble-max-width, 800px));
   margin-top: 14px;
@@ -254,6 +262,29 @@
   .section-5 .calendar-biography { margin-top: 90px; }
   .is-open.section-5 .face-piece-shadow {
     transform: translate(44vw, calc(40vh + 45px)) rotate(7deg) scale(.86);
+  }
+}
+@media (max-width: 760px) and (orientation: portrait) {
+  /* Keep the year list 20px below the sticky tabs and clear of the return face. */
+  .section-5 .section-heading { top: 0; }
+  .section-5 .timeline-shell { padding-top: 56px; }
+  .section-5 .calendar-biography {
+    width: calc(100% - 37px);
+    max-width: none;
+    margin: max(48px, calc(15svh - 23px), calc(32svh - 176px)) 0 8px -16px;
+  }
+  .section-5 .continuous-timeline { padding-top: 40px; }
+  .section-5 .timeline-year-rail {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 2px;
+    max-height: min(336px, calc(64svh - var(--timeline-rail-top, 105px)));
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .is-open.section-5 .face-piece-shadow {
+    transform: translate(36vw, calc(14vh + 140px)) rotate(7deg) scale(.9);
   }
 }
 @media (max-height: 650px) and (orientation: landscape) {
