@@ -19,3 +19,9 @@ body.art-focus-open .art-version-chooser,body.art-focus-open .museum-warning{vis
 .art-original[src*="IMG0010_"],.art-focus-image[src*="IMG0010_"]{
  clip-path:polygon(0% 9.1%,1.2% 9.1%,1.2% 0%,9.6% 0%,9.6% 9.1%,90.2% 9.1%,90.2% 0%,99% 0%,99% 9.1%,100% 9.1%,100% 91%,99% 91%,99% 100%,90.2% 100%,90.2% 91%,9.6% 91%,9.6% 100%,1.2% 100%,1.2% 91%,0% 91%);
 }
+
+/* Use the full viewer area in both orientations, with controls above the art. */
+.art-focus-header{top:max(8px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));height:44px;z-index:2;}
+.art-focus-header h2{min-width:0;margin:0;}
+.art-focus-count{bottom:max(8px,env(safe-area-inset-bottom));}
+@media(max-height:450px){.art-focus-header h2{font-size:20px;}.art-focus-count{font-size:12px;}}

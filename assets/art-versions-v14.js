@@ -511,7 +511,7 @@ function ensurePigeHotspot(map){
  const b=document.createElement('button');b.type='button';b.className='art-hotspot art-pige-hotspot';b.setAttribute('aria-label','Åbn Pige');b.onclick=()=>pigeDialog.showModal();map.append(b);
 }
 
-import { installArtViewer } from './art-viewer.js?v=20261004-art-viewer-landscape-1';
+import { installArtViewer } from './art-viewer.js?v=20261007-art-viewer-max-size-2';
 installArtViewer({getVersion:()=>selectedVersion,homography});
 
 update();
