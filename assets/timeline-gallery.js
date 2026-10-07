@@ -247,7 +247,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   const cache = new Map();
   function scheduleAutoplay(delay = 2000) {
     clearTimeout(autoplayTimer);
-    if (closed || items.length < 2) return;
+    if (closed || reduced.matches || items.length < 2) return;
     autoplayTimer = window.setTimeout(() => { autoplayTimer = 0; navigate(1); }, delay);
   }
   function imageAt(i) {
@@ -423,7 +423,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   function cleanup() {
     if (closed) return;
     closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect();
-    transition?.destroy(); cache.clear(); window.removeEventListener('keydown',keydown,true);
+    transition?.destroy(); cache.clear(); reduced.removeEventListener('change',motionPreferenceChanged); window.removeEventListener('keydown',keydown,true);
     mobile.removeEventListener('change',resize); window.removeEventListener('resize',resize); window.visualViewport?.removeEventListener('resize',resize); overlay.remove();
     if (root) root.inert = oldInert;
     document.body.style.overflow = oldOverflow;
@@ -431,6 +431,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function resize() { cancelAnimationFrame(layoutFrame); layoutFrame=requestAnimationFrame(() => { layout(); render(); }); }
   closeActive = cleanup;
+  function motionPreferenceChanged() { clearTimeout(autoplayTimer); if (!reduced.matches) scheduleAutoplay(); }
+  reduced.addEventListener('change',motionPreferenceChanged);
   window.addEventListener('keydown',keydown,true); mobile.addEventListener('change',resize); window.addEventListener('resize',resize); window.visualViewport?.addEventListener('resize',resize);
   overlay.addEventListener('click',event => { if (event.target === overlay) cleanup(); });
   stage.addEventListener('pointerdown',event => {

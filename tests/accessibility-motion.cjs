@@ -1,0 +1,14 @@
+const fs = require('node:fs');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+const source = fs.readFileSync('assets/timeline-gallery.js', 'utf8');
+const schedule = source.slice(source.indexOf('  function scheduleAutoplay'), source.indexOf('  function imageAt'));
+const preference = source.match(/function motionPreferenceChanged\(\) \{[^\n]+\}/)[0];
+let scheduled = [], cleared = [];
+const state = { closed: false, items: ['a','b'], reduced: {matches: true}, autoplayTimer: 12, navigate() {}, clearTimeout(id) { cleared.push(id); }, window: {setTimeout(fn, delay) { scheduled.push({fn,delay}); return scheduled.length; }} };
+const context = vm.createContext(state); vm.runInContext(schedule + preference, context);
+context.scheduleAutoplay(); assert.equal(scheduled.length, 0); assert.deepEqual(cleared,[12]);
+state.reduced.matches = false; context.motionPreferenceChanged(); assert.equal(scheduled.length,1);
+state.reduced.matches = true; context.motionPreferenceChanged(); assert.equal(scheduled.length,1); assert.equal(cleared.at(-1),1);
+state.reduced.matches = false; state.closed = true; context.scheduleAutoplay(); assert.equal(scheduled.length,1);
+console.log('PASS: reduced-motion prevents autoplay, preference change cancels pending timer, closed gallery does not restart');
