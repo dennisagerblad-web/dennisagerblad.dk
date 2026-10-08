@@ -1,14 +1,14 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20260928-1';
+import { timelineDate } from './timeline-ui.js?v=20261008-scene-2015-release-2';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261008-scene-2015-1',
-  '../content/timeline/image-metadata.json?v=20261008-scene-2015-1',
+  '../content/timeline/galleries.json?v=20261008-scene-2015-release-2',
+  '../content/timeline/image-metadata.json?v=20261008-scene-2015-release-2',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();
@@ -221,7 +221,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   header.append(date, title, details);
   const close = button('×','Luk billedvisning', () => cleanup()); close.className = 'tg-close';
   const viewer = el('div','tg-viewer');
-  const stage = el('div','tg-stage'); stage.setAttribute('aria-roledescription','karrusel');
+  const stage = el('div','tg-stage'); stage.setAttribute('role','group'); stage.setAttribute('aria-roledescription','karrusel');
   stage.dataset.effect=effectName;
   stage.setAttribute('aria-label','Billeder fra '+title.textContent);
   const poster = el('canvas', 'tg-poster'); poster.setAttribute('role','img');
@@ -236,20 +236,39 @@ export function openTimelineGallery(entry, group, theme = {}) {
   // Credits and supplementary links belong with the text, so the photograph
   // meets both sides and the bottom of the popup without a footer strip.
   const supplementary=el('div','tg-supplementary'); header.append(supplementary);
-  stage.append(previous,next,announcement); viewer.append(stage);
+  const rotation=button('','Start automatiske billedskift',toggleRotation); rotation.className='tg-rotation'; rotation.hidden=true;
+
+  stage.append(previous,next,announcement,rotation); viewer.append(stage);
   dialog.append(close,header,viewer); overlay.append(dialog); document.body.append(overlay);
-  close.focus({preventScroll:true});
-  let closed = false, index = 0, items = [], media = {}, drawing = null, request = 0;
+  let closed = false, index = 0, items = [], media = {}, descriptions = [], drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
-  let scene = null, drag = null;
+  let scene = null, drag = null, paused = false, rotationPointerPaused = null;
   const mobile = matchMedia('(max-width: 760px), (max-width: 1100px) and (max-height: 600px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cache = new Map();
   function scheduleAutoplay(delay = 2000) {
     clearTimeout(autoplayTimer);
-    if (closed || items.length < 2) return;
+    if (closed || paused || reduced.matches || items.length < 2) return;
     autoplayTimer = window.setTimeout(() => { autoplayTimer = 0; navigate(1); }, delay);
   }
+  function updateRotation() {
+    rotation.innerHTML='<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="white" stroke-width="2.5"/>'+(paused||reduced.matches?'<path fill="white" d="M16 11L29 20L16 29Z"/>':'<path fill="white" d="M13 11H18V29H13ZM22 11H27V29H22Z"/>')+'</svg>';
+    rotation.dataset.state=paused||reduced.matches?'paused':'playing';
+    rotation.setAttribute('aria-label',reduced.matches?'Automatiske billedskift er slået fra ved reduceret bevægelse':paused?'Start automatiske billedskift':'Sæt automatiske billedskift på pause');
+    rotation.disabled=reduced.matches;
+    announcement.setAttribute('aria-live',paused?'polite':'off');
+  }
+  function pauseRotation() { paused=true; clearTimeout(autoplayTimer); updateRotation(); }
+  function toggleRotation() {
+    if (reduced.matches) return;
+    paused=rotationPointerPaused===null?!paused:!rotationPointerPaused; rotationPointerPaused=null; clearTimeout(autoplayTimer); updateRotation();
+    if (!paused) scheduleAutoplay();
+  }
+  rotation.addEventListener('pointerdown',()=>{rotationPointerPaused=paused;});
+  rotation.addEventListener('pointercancel',()=>{rotationPointerPaused=null;});
+
+  updateRotation();
+  close.focus({preventScroll:true});
   function imageAt(i) {
     const src = items[i];
     if (!cache.has(src)) cache.set(src,new Promise((resolve,reject) => {
@@ -292,7 +311,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
   function paint(composition) {
     poster.width = composition.width; poster.height = composition.height;
     poster.getContext('2d').drawImage(composition,0,0); drawing = composition;
-    poster.setAttribute('aria-label',`${title.textContent} — billede ${index+1} af ${items.length}`);
+    const description=descriptions[index] || media[items[index]]?.description;
+    poster.setAttribute('aria-label',`${typeof description==='string' && description.trim() ? description.trim() : title.textContent} — billede ${index+1} af ${items.length}`);
   }
   function announce() { announcement.textContent = `Billede ${index+1} af ${items.length}`; stage.dataset.index=String(index); }
   function prefetch() {
@@ -414,7 +434,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
       event.preventDefault(); event.stopImmediatePropagation(); navigate(event.key === 'ArrowRight' ? 1 : -1);
     }
     if (event.key === 'Tab') {
-      const focusable = [...dialog.querySelectorAll('button,a[href],iframe,summary')].filter(n => !n.disabled && n.getClientRects().length);
+      const focusable = [...dialog.querySelectorAll('button,a[href],iframe,summary')].filter(n => !n.disabled && n.tabIndex>=0 && n.getClientRects().length);
       const first = focusable[0], last = focusable.at(-1);
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
@@ -423,7 +443,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   function cleanup() {
     if (closed) return;
     closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect();
-    transition?.destroy(); cache.clear(); window.removeEventListener('keydown',keydown,true);
+    transition?.destroy(); cache.clear(); reduced.removeEventListener('change',motionPreferenceChanged); window.removeEventListener('keydown',keydown,true);
     mobile.removeEventListener('change',resize); window.removeEventListener('resize',resize); window.visualViewport?.removeEventListener('resize',resize); overlay.remove();
     if (root) root.inert = oldInert;
     document.body.style.overflow = oldOverflow;
@@ -431,6 +451,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function resize() { cancelAnimationFrame(layoutFrame); layoutFrame=requestAnimationFrame(() => { layout(); render(); }); }
   closeActive = cleanup;
+  function motionPreferenceChanged() { pauseRotation(); }
+  reduced.addEventListener('change',motionPreferenceChanged);
   window.addEventListener('keydown',keydown,true); mobile.addEventListener('change',resize); window.addEventListener('resize',resize); window.visualViewport?.addEventListener('resize',resize);
   overlay.addEventListener('click',event => { if (event.target === overlay) cleanup(); });
   stage.addEventListener('pointerdown',event => {
@@ -482,7 +504,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   function populate(data) {
     if (closed) return;
     const gallery = data.entries?.[`${entry.date}|${entry.category}|${entry.title}`];
-    media = data.media || {};
+    media = data.media || {}; descriptions=Array.isArray(gallery?.imageDescriptions)?gallery.imageDescriptions:[];
     title.textContent = entry.title;
     const paragraphs = gallery?.details || (entry.details ? [entry.details] : []);
     const longCopy = entry.date !== '2012-10-12' && paragraphs.join(' ').length > 700 && paragraphs.length > 1;
@@ -501,9 +523,9 @@ export function openTimelineGallery(entry, group, theme = {}) {
       supplementary.append(p);
     }
     if (entry.videoId) {
-      const video=el('iframe','tg-video'); video.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(entry.videoId)}`;
+      const video=el('iframe','tg-video'); video.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(entry.videoId)}?enablejsapi=1&playsinline=1&origin=${encodeURIComponent(location.origin)}`;
       video.title=entry.title; video.referrerPolicy='strict-origin-when-cross-origin'; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
-      dialog.insertBefore(video,viewer);
+      const videoFrame=el('div','video-frame');videoFrame.append(video);dialog.insertBefore(videoFrame,viewer);
       const youtube=el('a','tg-video-link','Se videoen på YouTube');
       youtube.href=`https://www.youtube.com/watch?v=${encodeURIComponent(entry.videoId)}`;
       youtube.target='_blank'; youtube.rel='noreferrer';
@@ -511,7 +533,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     }
     if (entry.popupHref) link(entry.popupLabel || 'Se linket ↗',entry.popupHref);
     if (items.length) {
-      previous.hidden=next.hidden=items.length<2;
+      previous.hidden=next.hidden=items.length<2; rotation.hidden=items.length<2; updateRotation();
       layout(); render();
     } else { stage.hidden=true; layout(); }
   }

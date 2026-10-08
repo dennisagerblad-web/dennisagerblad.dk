@@ -84,7 +84,18 @@ export function installArtViewer({getVersion,homography}){
  document.addEventListener('click',event=>{const button=event.target.closest('.ship.section-4.is-open .art-hotspot');if(!button)return;const title=button.getAttribute('aria-label')?.replace(/^Åbn /,'');if(!sets[title])return;event.preventDefault();event.stopImmediatePropagation();const files=title==='Selvportrætter'&&getVersion()===2?[...sets[title]].reverse():sets[title];open(button,event,title,files);},true);
  close.onclick=shut;previous.onclick=()=>move(-1);next.onclick=()=>move(1);shade.onclick=shut;
  dialog.addEventListener('cancel',e=>{e.preventDefault();shut();});
- dialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();move(1);}if(e.key==='ArrowLeft'){e.preventDefault();move(-1);}});
+ dialog.addEventListener('keydown',e=>{
+  if(e.key==='Escape')e.stopPropagation();
+  if(e.key==='Tab'){
+   const controls=[close,previous,next].filter(button=>!button.hidden&&!button.disabled&&button.getClientRects().length);
+   const index=controls.indexOf(document.activeElement);
+   e.preventDefault();
+   const target=index<0?(e.shiftKey?controls.at(-1):controls[0]):controls[(index+(e.shiftKey?-1:1)+controls.length)%controls.length];
+   target?.focus();
+  }
+  if(e.key==='ArrowRight'){e.preventDefault();move(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();move(-1);}
+ });
  dialog.addEventListener('pointerdown',e=>{pointerStart={x:e.clientX,y:e.clientY};});
  dialog.addEventListener('pointerup',e=>{if(!pointerStart)return;const dx=e.clientX-pointerStart.x,dy=e.clientY-pointerStart.y;pointerStart=null;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){e.preventDefault();move(dx<0?1:-1);}});
  function layout(){if(!state||busy||!primary)return;const t=target(primary);primary.style.transform=matrix(rectangle(t.x,t.y,t.w,t.h),primary);setHeader(t);drawPeek();}

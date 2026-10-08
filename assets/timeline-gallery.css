@@ -227,6 +227,11 @@
   .timeline-popup-biography { padding:18px; }
 }
 
+/* Small playback control in the photograph's lower right corner. */
+.tg-rotation { position:absolute;right:12px;bottom:12px;z-index:4;width:44px;height:44px;padding:2px;border:0;border-radius:50%;background:transparent;cursor:pointer;filter:drop-shadow(0 2px 3px #000); }
+.tg-rotation svg {display:block;width:40px;height:40px;}
+.tg-rotation:disabled {cursor:default;}
+
 .timeline-popup-gallery figcaption a { text-decoration:underline; text-underline-offset:3px; }
 
 /* Images sit directly inside every timeline popup without a separate box. */

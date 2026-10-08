@@ -31,7 +31,7 @@ function syncTabs(){
  const index=versions.indexOf(tabVersion);chooser.style.setProperty('--glow-nudge','0px');
  const activeButton=buttons[index];
  if(activeButton?.offsetWidth){chooser.style.setProperty('--marker-left',activeButton.offsetLeft+'px');chooser.style.setProperty('--marker-width',activeButton.offsetWidth+'px');}
- buttons.forEach((button,i)=>{button.disabled=false;const active=i===index;button.classList.toggle('is-active',active);button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
+ buttons.forEach((button,i)=>{button.disabled=false;const active=i===index;button.classList.toggle('is-active',active);button.setAttribute('aria-selected',String(active));button.tabIndex=0;});
  const panel=document.querySelector('.ship.section-4.is-open .art-room');if(panel){panel.id='art-gallery-panel';panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',`art-gallery-tab-${tabVersion}`);}
 }
 function syncTravelTabs(position){
@@ -42,7 +42,7 @@ function syncTravelTabs(position){
  chooser.style.setProperty('--marker-left',left+'px');chooser.style.setProperty('--marker-width',width+'px');chooser.style.setProperty('--glow-nudge','0px');
  chooser.dataset.roomPosition=String(p);
  tabVersion=versions[Math.round(p)];
- buttons.forEach((button,i)=>{const active=i===Math.round(p);button.classList.toggle('is-active',active);button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
+ buttons.forEach((button,i)=>{const active=i===Math.round(p);button.classList.toggle('is-active',active);button.setAttribute('aria-selected',String(active));button.tabIndex=0;});
  const panel=document.querySelector('.ship.section-4.is-open .art-room');if(panel)panel.setAttribute('aria-labelledby',`art-gallery-tab-${tabVersion}`);
 }
 function animateRoomTravel(start,end,duration,paint){
@@ -66,7 +66,7 @@ chooser.addEventListener('keydown',event=>{const index=buttons.indexOf(event.tar
 const catDialog = document.createElement('dialog');
 catDialog.className = 'art-cat-dialog';
 catDialog.setAttribute('aria-label', 'To sider af en sjæl');
-catDialog.innerHTML = `<header><h2>To sider af en sjæl</h2><button type="button" aria-label="Luk katteværket">Luk ×</button></header><img src="./assets/art-cat-updated.webp" alt="To sider af en sjæl, tekstilværk med katte">`;
+catDialog.innerHTML = `<header><h2>To sider af en sjæl</h2><button type="button" aria-label="Luk katteværket">×</button></header><img src="./assets/art-cat-updated.webp" alt="To sider af en sjæl, tekstilværk med katte">`;
 catDialog.querySelector('button').addEventListener('click', () => catDialog.close());
 catDialog.addEventListener('click', event => { if (event.target === catDialog) catDialog.close(); });
 document.body.append(catDialog);
@@ -505,13 +505,13 @@ document.addEventListener('pointerup',releaseRoomGesture);
 document.addEventListener('pointercancel',releaseRoomGesture);
 document.addEventListener('click',event=>{if(performance.now()<suppressClickUntil&&event.target.closest('.art-room')){event.preventDefault();event.stopImmediatePropagation();}},true);
 
-const pigeDialog=document.createElement('dialog');pigeDialog.className='art-cat-dialog';pigeDialog.setAttribute('aria-label','Pige');pigeDialog.innerHTML='<header><h2>Pige</h2><button type="button" aria-label="Luk Pige">Luk ×</button></header><img src="./assets/art-pige.webp" alt="Pige, tekstilværk">';document.body.append(pigeDialog);pigeDialog.querySelector('button').onclick=()=>pigeDialog.close();pigeDialog.onclick=e=>{if(e.target===pigeDialog)pigeDialog.close();};
+const pigeDialog=document.createElement('dialog');pigeDialog.className='art-cat-dialog';pigeDialog.setAttribute('aria-label','Pige');pigeDialog.innerHTML='<header><h2>Pige</h2><button type="button" aria-label="Luk Pige">×</button></header><img src="./assets/art-pige.webp" alt="Pige, tekstilværk">';document.body.append(pigeDialog);pigeDialog.querySelector('button').onclick=()=>pigeDialog.close();pigeDialog.onclick=e=>{if(e.target===pigeDialog)pigeDialog.close();};
 function ensurePigeHotspot(map){
  if(map.querySelector('.art-pige-hotspot'))return;
  const b=document.createElement('button');b.type='button';b.className='art-hotspot art-pige-hotspot';b.setAttribute('aria-label','Åbn Pige');b.onclick=()=>pigeDialog.showModal();map.append(b);
 }
 
-import { installArtViewer } from './art-viewer.js?v=20261007-art-viewer-max-size-2';
+import { installArtViewer } from './art-viewer.js?v=20261008-aa-focus-wrap-1';
 installArtViewer({getVersion:()=>selectedVersion,homography});
 
 update();

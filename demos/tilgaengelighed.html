@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="da">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prøv tilgængeligheden · Dennis Agerblad</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eeeae4;color:#24211f;font:16px/1.4 system-ui,sans-serif}main{max-width:930px;margin:auto;padding:16px;display:grid;grid-template-columns:minmax(260px,1fr) 417px;gap:24px;align-items:start}h1{font-size:25px;line-height:1.15;margin:0 0 8px}p{margin:0 0 10px}.intro{font-size:15px}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:7px}button{min-height:44px;padding:7px 10px;border:1px solid #75675d;border-radius:7px;background:white;color:#24211f;font:inherit;cursor:pointer}button:hover{background:#fff5e8}button[aria-pressed=true]{background:#24211f;color:white}button:focus-visible,a:focus-visible{outline:3px solid #075fc1;outline-offset:3px}#status{background:#fff;padding:10px 12px;border-left:4px solid #075fc1;margin:10px 0 6px;min-height:64px}#focus{font-size:13px;overflow-wrap:anywhere;margin:0}#text-controls{margin-top:8px}#text-controls[hidden]{display:none}.note{font-size:13px;margin:6px 0 0;color:#5c534c}.phone{padding:12px;background:#24211f;border-radius:24px;width:417px;position:sticky;top:16px}iframe{display:block;width:393px;height:852px;border:0;border-radius:14px;background:#090708}.caption{color:#fff;font-size:12px;text-align:center;margin:7px 0 0}@media(max-width:760px){main{display:flex;flex-direction:column;padding:12px;gap:12px}.guide{width:100%;position:sticky;top:0;z-index:5;background:#eeeae4;padding:8px 0}.phone{position:static;width:min(417px,100%);align-self:center}iframe{width:100%}h1{font-size:23px}}
+</style>
+<main>
+<div class="guide">
+<h1>Prøv tilgængeligheden</h1>
+<p class="intro">Vælg en knap. Prøven vises i telefonrammen.</p>
+<div class="buttons" aria-label="Vælg en prøve">
+<button disabled id="try-focus" aria-pressed="false">1. Fokus</button>
+<button disabled id="try-keys" aria-pressed="false">2. Tab / Escape</button>
+<button disabled id="try-pause" aria-pressed="false">3. Pause</button>
+<button disabled id="try-text" aria-pressed="false">4. Større tekst</button>
+</div>
+<div id="status" role="status">Start med at klikke på »1. Fokus«. Tryk derefter på Tab på dit tastatur.</div>
+<p id="focus">Her vises navnet på den knap, der har fokus.</p>
+<div id="text-controls" hidden><div class="buttons"><button disabled id="normal" aria-pressed="true">100 % tekst</button><button disabled id="large" aria-pressed="false">200 % tekst</button></div><p class="note">Kun teksten forstørres i denne prøve.</p></div>
+</div>
+<div class="phone"><iframe id="preview" src="/" title="Prøv hjemmesiden her"></iframe><p class="caption">Lokal mobilvisning · ikke udgivet</p></div>
+</main>
+<script src="tilgaengelighed.js?v=20261008-focus-navigation-10"></script>
+</html>

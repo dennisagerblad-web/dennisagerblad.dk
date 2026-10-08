@@ -345,3 +345,11 @@
   .section-5 .timeline-groups button,
   .timeline-year-rail a { transition: none; }
 }
+
+/* At enlarged text sizes, keep the full font size and let tabs wrap. */
+@media (max-width:760px) and (orientation:portrait) {
+  .section-5 .timeline-groups.has-large-text { width:100%; flex-wrap:wrap; transform:none; }
+  .section-5 .timeline-shell:has(.timeline-groups.has-large-text) .calendar-biography { width:calc(100% - 86px); }
+  .section-5 .timeline-groups.has-large-text::before,
+  .section-5 .timeline-groups.has-large-text::after { top:var(--timeline-pill-y,3px); height:var(--timeline-pill-height,32px); }
+}
