@@ -226,3 +226,11 @@
   .timeline-popup-biography-dialog { width:calc(100vw - 20px); max-height:calc(100dvh - 20px); }
   .timeline-popup-biography { padding:18px; }
 }
+
+/* Face The Strange: photos sit directly on the overlay, with the poster link underneath. */
+.timeline-popup-face-the-strange { background:transparent; box-shadow:none; }
+.timeline-popup-face-the-strange .timeline-popup-header { background:var(--timeline-deep); }
+.timeline-popup-face-the-strange .timeline-popup-summary { background:transparent; }
+.timeline-popup-face-the-strange .timeline-popup-gallery img { width:auto; align-self:center; border:0; box-shadow:none; }
+.timeline-popup-face-the-strange .timeline-popup-gallery figcaption { margin:12px 0 0; }
+.timeline-popup-face-the-strange .timeline-popup-gallery figcaption a { color:#fff; font:16px/1.4 system-ui,sans-serif; text-decoration:underline; text-underline-offset:3px; }

@@ -125,6 +125,29 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/8093067ba54b9a88.webp"
   },
   {
+    "date": "2025-11-28",
+    "display": "28.11.2025",
+    "year": 2025,
+    "category": "Radiointerview",
+    "title": "maður:glotti i Leitisstein, Kringvarp Føroya",
+    "group": "press",
+    "href": null,
+    "details": "Interview i færøsk radio om det nye album “STEV”.",
+    "thumbnail": "./archive/timeline/press/2025-11-28-leitisstein-radio.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/182619212b13521c.webp",
+    "images": [
+      "./archive/timeline/press/2025-11-28-leitisstein-radio.webp",
+      "./archive/timeline/press/2025-11-28-leitisstein-01.webp",
+      "./archive/timeline/press/2025-11-28-leitisstein-02.webp"
+    ],
+    "imageLinks": {
+      "./archive/timeline/press/2025-11-28-leitisstein-radio.webp": {
+        "href": "https://kvf.fo/ljod/sending/leitisstein?sid=200676",
+        "label": "Hør interviewet hos Kringvarp Føroya"
+      }
+    }
+  },
+  {
     "date": "2025-10-29",
     "display": "29.10.2025",
     "year": 2025,
@@ -1422,9 +1445,27 @@ export const timelineEntries = [
     "year": 2017,
     "category": "Film",
     "title": "Face The Strange, film om Knud Vesterskov",
-    "group": "media",
+    "group": "press",
     "href": null,
-    "details": "Kenzo og jeg medvirker i filmen."
+    "details": "Kenzo og jeg medvirker i filmen.",
+    "images": [
+      "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp",
+      "./archive/timeline/press/2017-01-01-face-the-strange-kenzo-dennis.webp",
+      "./archive/timeline/performance/2016-06-04-04.webp",
+      "./archive/timeline/performance/2016-06-04-05.webp",
+      "./archive/timeline/performance/2016-06-04-01.webp",
+      "./archive/timeline/performance/2016-06-04-02.webp",
+      "./archive/timeline/performance/2016-06-04-03.webp"
+    ],
+    "thumbnail": "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp",
+    "thumbnailFit": "contain",
+    "thumbnailPreview": "./assets/timeline-thumbs/ac1dd6a87f03c8d2.webp",
+    "imageLinks": {
+      "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp": {
+        "href": "https://www.imdb.com/title/tt7127986/",
+        "label": "Face The Strange på IMDb"
+      }
+    }
   },
   {
     "date": "2016-12-23",
@@ -1496,17 +1537,6 @@ export const timelineEntries = [
     "title": "Jeg optrådte med mit band på Chantals House of Shame i Berlin.",
     "group": "live",
     "href": null
-  },
-  {
-    "date": "2016-06-04",
-    "category": "Film",
-    "title": "Medvirken i Knuds film",
-    "group": "live",
-    "href": null,
-    "year": 2016,
-    "display": "04.06.2016",
-    "thumbnail": "./archive/timeline/performance/2016-06-04-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/3322defaa4dadedb.webp"
   },
   {
     "date": "2016-06-02",

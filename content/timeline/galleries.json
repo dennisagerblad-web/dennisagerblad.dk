@@ -3235,17 +3235,6 @@
         "./archive/timeline/performance/2016-05-20-03.webp"
       ]
     },
-    "2016-06-04|Film|Medvirken i Knuds film": {
-      "title": "Medvirken i Knuds film",
-      "details": [],
-      "images": [
-        "./archive/timeline/performance/2016-06-04-01.webp",
-        "./archive/timeline/performance/2016-06-04-02.webp",
-        "./archive/timeline/performance/2016-06-04-03.webp",
-        "./archive/timeline/performance/2016-06-04-04.webp",
-        "./archive/timeline/performance/2016-06-04-05.webp"
-      ]
-    },
     "2016-08-20|Happening|Pride Brud": {
       "title": "Pride Brud",
       "details": [],
@@ -3261,6 +3250,32 @@
       "images": [
         "./archive/timeline/performance/2017-03-30-01.webp",
         "./archive/timeline/performance/2017-03-30-02.webp"
+      ]
+    },
+    "2017-01-01|Film|Face The Strange, film om Knud Vesterskov": {
+      "title": "Face The Strange, film om Knud Vesterskov",
+      "details": [
+        "Kenzo og jeg medvirker i filmen."
+      ],
+      "images": [
+        "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp",
+        "./archive/timeline/press/2017-01-01-face-the-strange-kenzo-dennis.webp",
+        "./archive/timeline/performance/2016-06-04-04.webp",
+        "./archive/timeline/performance/2016-06-04-05.webp",
+        "./archive/timeline/performance/2016-06-04-01.webp",
+        "./archive/timeline/performance/2016-06-04-02.webp",
+        "./archive/timeline/performance/2016-06-04-03.webp"
+      ]
+    },
+    "2025-11-28|Radiointerview|maður:glotti i Leitisstein, Kringvarp Føroya": {
+      "title": "maður:glotti i Leitisstein, Kringvarp Føroya",
+      "details": [
+        "Interview i færøsk radio om det nye album “STEV”."
+      ],
+      "images": [
+        "./archive/timeline/press/2025-11-28-leitisstein-radio.webp",
+        "./archive/timeline/press/2025-11-28-leitisstein-01.webp",
+        "./archive/timeline/press/2025-11-28-leitisstein-02.webp"
       ]
     }
   }
