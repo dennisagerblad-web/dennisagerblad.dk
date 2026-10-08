@@ -451,11 +451,6 @@
       "details": [],
       "images": []
     },
-    "2015-07-27|Liveoptræden|Jeg optrådte med mit band til LGBT Pride i Tórshavn.": {
-      "title": "Jeg optrådte med mit band til LGBT Pride i Tórshavn.",
-      "details": [],
-      "images": []
-    },
     "2015-05-30|Liveoptræden og samtale|Jeg optrådte og deltog i en samtale med mit band på Doma Festival i Sofia.": {
       "title": "Jeg optrådte og deltog i en samtale med mit band på Doma Festival i Sofia.",
       "details": [],
@@ -3290,6 +3285,57 @@
         "./archive/timeline/press/2015-01-31-illegal-magazine-04.webp",
         "./archive/timeline/press/2015-01-31-illegal-magazine-05.webp",
         "./archive/timeline/press/2015-01-31-illegal-magazine-06.webp"
+      ]
+    },
+    "2015-04-10|Fest|Fødselsdagsfest hos mig": {
+      "title": "Fødselsdagsfest hos mig",
+      "details": [
+        "Jeg blev 45 år."
+      ],
+      "images": [
+        "./archive/timeline/performance/2015-04-10-01.webp",
+        "./archive/timeline/performance/2015-04-10-02.webp",
+        "./archive/timeline/performance/2015-04-10-03.webp",
+        "./archive/timeline/performance/2015-04-10-04.webp",
+        "./archive/timeline/performance/2015-04-10-05.webp",
+        "./archive/timeline/performance/2015-04-10-06.webp",
+        "./archive/timeline/performance/2015-04-10-07.webp"
+      ]
+    },
+    "2015-08-22|Fest|Dudes & Divas, Bøssehuset": {
+      "title": "Dudes & Divas, Bøssehuset",
+      "details": [
+        "Fest i Bøssehuset på Christiania."
+      ],
+      "images": [
+        "./archive/timeline/performance/2015-08-22-01.webp",
+        "./archive/timeline/performance/2015-08-22-02.webp",
+        "./archive/timeline/performance/2015-08-22-03.webp"
+      ]
+    },
+    "2015-03-06|Fest|Fest hos Marquien": {
+      "title": "Fest hos Marquien",
+      "details": [
+        "Til fest hos Marquien på Frederiksberg."
+      ],
+      "images": [
+        "./archive/timeline/performance/2015-03-06-01.webp",
+        "./archive/timeline/performance/2015-03-06-02.webp",
+        "./archive/timeline/performance/2015-03-06-03.webp",
+        "./archive/timeline/performance/2015-03-06-04.webp",
+        "./archive/timeline/performance/2015-03-06-05.webp",
+        "./archive/timeline/performance/2015-03-06-06.webp",
+        "./archive/timeline/performance/2015-03-06-07.webp",
+        "./archive/timeline/performance/2015-03-06-08.webp"
+      ]
+    },
+    "2015-07-27|Liveoptræden|LGBT+ Føroya Pride-show, Tórshavn": {
+      "title": "LGBT+ Føroya Pride-show, Tórshavn",
+      "details": [
+        "Jeg sang med på en af Terji Krossteigs sange."
+      ],
+      "images": [
+        "./archive/timeline/performance/2015-07-27-01.webp"
       ]
     }
   }

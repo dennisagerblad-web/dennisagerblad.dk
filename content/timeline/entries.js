@@ -1625,6 +1625,23 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/1cdf1e40b6534d11.webp"
   },
   {
+    "year": 2015,
+    "group": "live",
+    "href": null,
+    "date": "2015-08-22",
+    "display": "22.08.2015",
+    "category": "Fest",
+    "title": "Dudes & Divas, Bøssehuset",
+    "details": "Fest i Bøssehuset på Christiania.",
+    "thumbnail": "./archive/timeline/performance/2015-08-22-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/c9a5fd0154963111.webp",
+    "images": [
+      "./archive/timeline/performance/2015-08-22-01.webp",
+      "./archive/timeline/performance/2015-08-22-02.webp",
+      "./archive/timeline/performance/2015-08-22-03.webp"
+    ]
+  },
+  {
     "date": "2015-08-17",
     "display": "17.08.2015",
     "year": 2015,
@@ -1638,9 +1655,15 @@ export const timelineEntries = [
     "display": "27.07.2015",
     "year": 2015,
     "category": "Liveoptræden",
-    "title": "Jeg optrådte med mit band til LGBT Pride i Tórshavn.",
+    "title": "LGBT+ Føroya Pride-show, Tórshavn",
     "group": "live",
-    "href": null
+    "href": null,
+    "details": "Jeg sang med på en af Terji Krossteigs sange.",
+    "thumbnail": "./archive/timeline/performance/2015-07-27-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/64183538fba4422a.webp",
+    "images": [
+      "./archive/timeline/performance/2015-07-27-01.webp"
+    ]
   },
   {
     "date": "2015-05-30",
@@ -1650,6 +1673,49 @@ export const timelineEntries = [
     "title": "Jeg optrådte og deltog i en samtale med mit band på Doma Festival i Sofia.",
     "group": "live",
     "href": null
+  },
+  {
+    "year": 2015,
+    "group": "live",
+    "href": null,
+    "date": "2015-04-10",
+    "display": "10.04.2015",
+    "category": "Fest",
+    "title": "Fødselsdagsfest hos mig",
+    "details": "Jeg blev 45 år.",
+    "thumbnail": "./archive/timeline/performance/2015-04-10-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/ed20da3c1e2e254a.webp",
+    "images": [
+      "./archive/timeline/performance/2015-04-10-01.webp",
+      "./archive/timeline/performance/2015-04-10-02.webp",
+      "./archive/timeline/performance/2015-04-10-03.webp",
+      "./archive/timeline/performance/2015-04-10-04.webp",
+      "./archive/timeline/performance/2015-04-10-05.webp",
+      "./archive/timeline/performance/2015-04-10-06.webp",
+      "./archive/timeline/performance/2015-04-10-07.webp"
+    ]
+  },
+  {
+    "year": 2015,
+    "group": "live",
+    "href": null,
+    "date": "2015-03-06",
+    "display": "06.03.2015",
+    "category": "Fest",
+    "title": "Fest hos Marquien",
+    "details": "Til fest hos Marquien på Frederiksberg.",
+    "thumbnail": "./archive/timeline/performance/2015-03-06-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/713e21c9c258a6a8.webp",
+    "images": [
+      "./archive/timeline/performance/2015-03-06-01.webp",
+      "./archive/timeline/performance/2015-03-06-02.webp",
+      "./archive/timeline/performance/2015-03-06-03.webp",
+      "./archive/timeline/performance/2015-03-06-04.webp",
+      "./archive/timeline/performance/2015-03-06-05.webp",
+      "./archive/timeline/performance/2015-03-06-06.webp",
+      "./archive/timeline/performance/2015-03-06-07.webp",
+      "./archive/timeline/performance/2015-03-06-08.webp"
+    ]
   },
   {
     "date": "2015-02-21",

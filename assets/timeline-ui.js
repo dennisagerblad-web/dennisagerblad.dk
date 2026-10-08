@@ -1,4 +1,4 @@
-export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=20261008-illegal-magazine-1';
+export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=20261008-scene-2015-1';
 
 const months = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
 let stopKeepingYearInView;
