@@ -527,7 +527,7 @@ function ensureDunstHotspots(map){
  });
 }
 
-import { installArtViewer } from './art-viewer.js?v=20261008-kunst-i-dunst-1';
+import { installArtViewer } from './art-viewer.js?v=20261008-dunst-spacing-3';
 installArtViewer({getVersion:()=>selectedVersion,homography});
 
 update();

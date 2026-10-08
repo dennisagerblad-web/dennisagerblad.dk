@@ -25,12 +25,13 @@ export function installArtViewer({getVersion,homography}){
  function sourceFor(src){return wallImages().find(el=>new URL(el.src).href===new URL(src,location.href).href);}
  function corners(el){const layer=el.closest('.art-preserved-layer'),r=layer.getBoundingClientRect(),scale=r.width/1280;return JSON.parse(el.dataset.galleryQuad).map(([x,y])=>[r.left+x*scale,r.top+y*scale]);}
  function origin(src){const el=sourceFor(src);if(el)return corners(el);return state.origin;}
+ const imageGap=()=>state?.title==='kunst i dunst, Kollager, 30×30 cm'?32:10;
  function target(img){
   const many=state.files.length>1,ratio=img.naturalWidth/img.naturalHeight;
   const viewport=dialog.getBoundingClientRect(),heading=header.getBoundingClientRect();
   const width=dialog.clientWidth||innerWidth,height=dialog.clientHeight||innerHeight;
   // Reserve only a sliver for neighbors; never fit three full artworks.
-  const inset=Math.max(many?28:12,heading.left-viewport.left,width-(heading.right-viewport.left));
+  const inset=Math.max(many?imageGap()+18:12,heading.left-viewport.left,width-(heading.right-viewport.left));
   const top=Math.max(52,heading.bottom-viewport.top)+8,bottom=many?30:12;
   const wMax=Math.max(1,width-inset*2),hMax=Math.max(1,height-top-bottom);
   const w=Math.min(wMax,hMax*ratio),h=w/ratio;
@@ -57,7 +58,7 @@ export function installArtViewer({getVersion,homography}){
   const images=await Promise.all(neighbors.map(delta=>picture(current.files[current.index+delta],'art-focus-image art-focus-peek')));
   if(state!==current||request!==peekSequence)return;
   const t=target(primary);
-  images.forEach((img,i)=>{const delta=neighbors[i],h=t.h,w=h*img.naturalWidth/img.naturalHeight,x=delta<0?t.x-10-w:t.x+t.w+10;img.style.transform=matrix(rectangle(x,t.y,w,h),img);img.setAttribute('aria-label',delta<0?'Vis forrige billede':'Vis næste billede');img.onclick=()=>move(delta);stage.append(img);});
+  images.forEach((img,i)=>{const delta=neighbors[i],h=t.h,w=h*img.naturalWidth/img.naturalHeight,x=delta<0?t.x-imageGap()-w:t.x+t.w+imageGap();img.style.transform=matrix(rectangle(x,t.y,w,h),img);img.setAttribute('aria-label',delta<0?'Vis forrige billede':'Vis næste billede');img.onclick=()=>move(delta);stage.append(img);});
   peeks=images;
  }
  function hideWall(){wallImages().forEach(el=>el.style.visibility=el===sourceFor(state.files[state.index])?'hidden':'');}
