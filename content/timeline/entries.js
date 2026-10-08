@@ -125,6 +125,29 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/8093067ba54b9a88.webp"
   },
   {
+    "date": "2025-11-28",
+    "display": "28.11.2025",
+    "year": 2025,
+    "category": "Radiointerview",
+    "title": "maður:glotti i Leitisstein, Kringvarp Føroya",
+    "group": "press",
+    "href": null,
+    "details": "Interview i færøsk radio om det nye album “STEV”.",
+    "thumbnail": "./archive/timeline/press/2025-11-28-leitisstein-radio.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/182619212b13521c.webp",
+    "images": [
+      "./archive/timeline/press/2025-11-28-leitisstein-radio.webp",
+      "./archive/timeline/press/2025-11-28-leitisstein-01.webp",
+      "./archive/timeline/press/2025-11-28-leitisstein-02.webp"
+    ],
+    "imageLinks": {
+      "./archive/timeline/press/2025-11-28-leitisstein-radio.webp": {
+        "href": "https://kvf.fo/ljod/sending/leitisstein?sid=200676",
+        "label": "Hør interviewet hos Kringvarp Føroya"
+      }
+    }
+  },
+  {
     "date": "2025-10-29",
     "display": "29.10.2025",
     "year": 2025,
@@ -1334,6 +1357,19 @@ export const timelineEntries = [
     "href": null
   },
   {
+    "date": "2017-05-10",
+    "category": "Fotosession",
+    "title": "Fotos af Sarah Rachel Rignel Fresco",
+    "creditName": "Sarah Rachel Rignel Fresco",
+    "creditPrefix": "Foto:",
+    "group": "live",
+    "href": null,
+    "year": 2017,
+    "display": "10.05.2017",
+    "thumbnail": "./archive/timeline/performance/2017-05-10-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/1303a85c7b347ca9.webp"
+  },
+  {
     "date": "2017-05-08",
     "display": "08.05.2017",
     "year": 2017,
@@ -1354,6 +1390,33 @@ export const timelineEntries = [
     "title": "Duet med Hairwerk med sangen Blomser til Kønspolitisk Mekodigrandprix, Bøssehuset",
     "group": "live",
     "href": null
+  },
+  {
+    "date": "2017-03-30",
+    "category": "Optræden",
+    "title": "Medvirken i Eivørs musikvideo “In My Shoes”",
+    "details": "Styling: Hairwerk Hugh Mongous.",
+    "group": "live",
+    "href": null,
+    "year": 2017,
+    "display": "30.03.2017",
+    "thumbnail": "./archive/timeline/performance/2017-03-30-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/25940fd49fb5adc4.webp",
+    "videoId": "ILgM-NpNBWo"
+  },
+  {
+    "date": "2017-03-25",
+    "category": "Melodigrandprix",
+    "title": "Kønspolitisk Melodigrandprix, Bøssehuset",
+    "details": "Jeg sang “Jeg er en transvestit”.",
+    "creditName": "Thomas Sabroe",
+    "creditPrefix": "Foto:",
+    "group": "live",
+    "href": null,
+    "year": 2017,
+    "display": "25.03.2017",
+    "thumbnail": "./archive/timeline/performance/2017-03-25-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/832acdd35e734dc3.webp"
   },
   {
     "date": "2017-03-24",
@@ -1382,9 +1445,27 @@ export const timelineEntries = [
     "year": 2017,
     "category": "Film",
     "title": "Face The Strange, film om Knud Vesterskov",
-    "group": "media",
+    "group": "press",
     "href": null,
-    "details": "Kenzo og jeg medvirker i filmen."
+    "details": "Kenzo og jeg medvirker i filmen.",
+    "images": [
+      "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp",
+      "./archive/timeline/press/2017-01-01-face-the-strange-kenzo-dennis.webp",
+      "./archive/timeline/performance/2016-06-04-04.webp",
+      "./archive/timeline/performance/2016-06-04-05.webp",
+      "./archive/timeline/performance/2016-06-04-01.webp",
+      "./archive/timeline/performance/2016-06-04-02.webp",
+      "./archive/timeline/performance/2016-06-04-03.webp"
+    ],
+    "thumbnail": "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp",
+    "thumbnailFit": "contain",
+    "thumbnailPreview": "./assets/timeline-thumbs/ac1dd6a87f03c8d2.webp",
+    "imageLinks": {
+      "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp": {
+        "href": "https://www.imdb.com/title/tt7127986/",
+        "label": "Face The Strange på IMDb"
+      }
+    }
   },
   {
     "date": "2016-12-23",
@@ -1415,13 +1496,15 @@ export const timelineEntries = [
     "details": "Jeg sang 3 sange til eventet Scala."
   },
   {
-    "date": "2016-08-06",
-    "display": "06.08.2016",
+    "date": "2016-08-20",
+    "display": "20.08.2016",
     "year": 2016,
     "category": "Happening",
     "title": "Pride Brud",
     "group": "live",
-    "href": null
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2016-08-20-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/9b970c6ec0d9ab99.webp"
   },
   {
     "date": "2016-07-16",
@@ -1442,7 +1525,9 @@ export const timelineEntries = [
     "category": "Optræden",
     "title": "Blomster optræden, Roskilde Festival",
     "group": "live",
-    "href": null
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2016-06-26-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/8aa877df11b9e4c1.webp"
   },
   {
     "date": "2016-06-09",
@@ -1463,6 +1548,18 @@ export const timelineEntries = [
     "href": null
   },
   {
+    "date": "2016-05-20",
+    "category": "Optræden",
+    "title": "Performance i Kapellet",
+    "details": "Jeg var hyret til at forstyrre en julefrokost i Kapellet.",
+    "group": "live",
+    "href": null,
+    "year": 2016,
+    "display": "20.05.2016",
+    "thumbnail": "./archive/timeline/performance/2016-05-20-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/e1135c64069a8f76.webp"
+  },
+  {
     "date": "2016-04-24",
     "display": "24.04.2016",
     "year": 2016,
@@ -1479,6 +1576,17 @@ export const timelineEntries = [
     "title": "Jeg optrådte med mit band til Kønspolitisk Melodigrandprix i Bøssehuset.",
     "group": "live",
     "href": null
+  },
+  {
+    "date": "2016-04-16",
+    "category": "Optræden",
+    "title": "Depeche Mode på Von Fressen",
+    "group": "live",
+    "href": null,
+    "year": 2016,
+    "display": "16.04.2016",
+    "thumbnail": "./archive/timeline/performance/2016-04-16-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/9d17d56d3d5c5cf1.webp"
   },
   {
     "date": "2016-03-10",
@@ -1565,20 +1673,30 @@ export const timelineEntries = [
     "date": "2015-02-01",
     "display": "01.02.2015",
     "year": 2015,
-    "category": "Magasin",
-    "title": "Forsidefoto",
-    "group": "media",
-    "href": null,
-    "details": "Jeg er coverbilledet."
-  },
-  {
-    "date": "2015-02-01",
-    "display": "01.02.2015",
-    "year": 2015,
     "category": "Se & Hør",
     "title": "Interview om at gå videre i Talent",
     "group": "media",
     "href": null
+  },
+  {
+    "date": "2015-01-31",
+    "display": "31.01.2015",
+    "year": 2015,
+    "category": "Magasin",
+    "title": "På forsiden af Illegal Magazine",
+    "group": "press",
+    "href": null,
+    "details": "Jeg var på coveret. Styling: Hairwerk Hugh Mongous.",
+    "thumbnail": "./archive/timeline/press/2015-01-31-illegal-magazine-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/6cfd6c835819e6ab.webp",
+    "images": [
+      "./archive/timeline/press/2015-01-31-illegal-magazine-01.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-02.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-03.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-04.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-05.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-06.webp"
+    ]
   },
   {
     "date": "2015-01-24",
@@ -3306,17 +3424,6 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/dcdf279f8031c61a.webp"
   },
   {
-    "date": "2008-07-01",
-    "display": "01.07.2008",
-    "year": 2008,
-    "category": "Digital udgivelse",
-    "title": "Jeg udgav mit første album med Dennis Agerblad Band: “Danske Dunst Shows”.",
-    "group": "music",
-    "href": "./archive/legacy/200_calendar/2008/08_07_02_band_cd/da_band.html",
-    "thumbnail": "./archive/timeline/dennis-agerblad-band.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/321d128b1b361eaa.webp"
-  },
-  {
     "date": "2008-06-12",
     "display": "12.06.2008",
     "year": 2008,
@@ -3402,8 +3509,8 @@ export const timelineEntries = [
     "title": "Jeg udgav “I Wanna Pose”, en digital single med to sange sammen med Minimal Martin.",
     "group": "music",
     "href": "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/cd_i_wanna_pose.html",
-    "thumbnail": "./archive/timeline/i-wanna-pose.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/36160df0d1a4c9b4.webp"
+    "thumbnail": "./archive/music/i-wanna-pose.jpg",
+    "thumbnailPreview": "./archive/music/i-wanna-pose.jpg"
   },
   {
     "date": "2007-11-21",

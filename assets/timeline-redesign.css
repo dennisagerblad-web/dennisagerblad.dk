@@ -170,6 +170,9 @@
   color: #edff28 !important;
   text-shadow: none !important;
 }
+.section-5 .timeline-shell[data-theme="press"] .life-year > h2 {
+  color: #000 !important;
+}
 .section-5 .timeline-shell[data-theme="art"] .timeline-entry time,
 .section-5 .timeline-shell[data-theme="art"] .timeline-entry .life-category {
   color: #fff !important;

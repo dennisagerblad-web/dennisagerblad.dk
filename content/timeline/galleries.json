@@ -577,15 +577,19 @@
       ],
       "images": []
     },
-    "2016-08-06|Happening|Pride Brud": {
-      "title": "Pride Brud",
-      "details": [],
-      "images": []
-    },
     "2016-06-26|Optræden|Blomster optræden, Roskilde Festival": {
       "title": "Blomster optræden, Roskilde Festival",
       "details": [],
-      "images": []
+      "images": [
+        "./archive/timeline/performance/2016-06-26-01.webp",
+        "./archive/timeline/performance/2016-06-26-02.webp",
+        "./archive/timeline/performance/2016-06-26-03.webp"
+      ],
+      "imageDescriptions": [
+        "Personer på stylter med farverige balloner.",
+        "Malet ansigt omgivet af blomster, med et glas i hænderne.",
+        "Blåmalet ansigt omgivet af roser."
+      ]
     },
     "2016-06-09|Liveoptræden|Jeg optrådte med mit band på Chantals House of Shame i Berlin.": {
       "title": "Jeg optrådte med mit band på Chantals House of Shame i Berlin.",
@@ -4880,6 +4884,156 @@
         "Person i orange minikjole og pink strømper rækker armene op.",
         "Person i orange minikjole læner sig over bordet med munden åben.",
         "Smilende person i orange minikjole løfter et rør chips."
+      ]
+    },
+    "2017-03-25|Melodigrandprix|Kønspolitisk Melodigrandprix, Bøssehuset": {
+      "title": "Kønspolitisk Melodigrandprix, Bøssehuset",
+      "details": [
+        "Jeg sang “Jeg er en transvestit”."
+      ],
+      "images": [
+        "./archive/timeline/performance/2017-03-25-01.webp"
+      ],
+      "imageDescriptions": [
+        "Person ved mikrofonen løfter en blond paryk."
+      ]
+    },
+    "2017-05-10|Fotosession|Fotos af Sarah Rachel Rignel Fresco": {
+      "title": "Fotos af Sarah Rachel Rignel Fresco",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2017-05-10-01.webp",
+        "./archive/timeline/performance/2017-05-10-02.webp",
+        "./archive/timeline/performance/2017-05-10-03.webp",
+        "./archive/timeline/performance/2017-05-10-04.webp",
+        "./archive/timeline/performance/2017-05-10-05.webp",
+        "./archive/timeline/performance/2017-05-10-06.webp"
+      ],
+      "imageDescriptions": [
+        "Person sidder med krydsede ben og tæppe over hovedet.",
+        "Person i gult skjuler ansigtet bag en vifte.",
+        "Portræt med gul og lilla ansigtsmaling.",
+        "Person i gul frynsekjole og lilla paryk på en skammel.",
+        "Person i gul frynsekjole sidder på gulvet.",
+        "Person med briller og tæppe over hovedet."
+      ]
+    },
+    "2016-04-16|Optræden|Depeche Mode på Von Fressen": {
+      "title": "Depeche Mode på Von Fressen",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2016-04-16-01.webp",
+        "./archive/timeline/performance/2016-04-16-02.webp",
+        "./archive/timeline/performance/2016-04-16-03.webp",
+        "./archive/timeline/performance/2016-04-16-04.webp"
+      ],
+      "imageDescriptions": [
+        "To personer med høje sorte parykker og ansigtsmaling.",
+        "To personer poserer, den ene med malet ansigt og briller.",
+        "Person i gul frakke og høj hat på gaden.",
+        "Person med høj hat og guldbluse foran et spejl."
+      ]
+    },
+    "2016-05-20|Optræden|Performance i Kapellet": {
+      "title": "Performance i Kapellet",
+      "details": [
+        "Jeg var hyret til at forstyrre en julefrokost i Kapellet."
+      ],
+      "images": [
+        "./archive/timeline/performance/2016-05-20-01.webp",
+        "./archive/timeline/performance/2016-05-20-02.webp",
+        "./archive/timeline/performance/2016-05-20-03.webp"
+      ],
+      "imageDescriptions": [
+        "Person i rød prikket kjole løfter et glas blandt venner.",
+        "Person i rød prikket kjole løfter et glas ved bordet.",
+        "Person i rød prikket kjole og briller med et glas."
+      ]
+    },
+    "2016-08-20|Happening|Pride Brud": {
+      "title": "Pride Brud",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2016-08-20-01.webp"
+      ],
+      "imageDescriptions": [
+        "Person i hvid brudekjole og stor hovedbeklædning blandt publikum."
+      ]
+    },
+    "2017-03-30|Optræden|Medvirken i Eivørs musikvideo “In My Shoes”": {
+      "title": "Medvirken i Eivørs musikvideo “In My Shoes”",
+      "details": [
+        "Styling: Hairwerk Hugh Mongous."
+      ],
+      "images": [
+        "./archive/timeline/performance/2017-03-30-01.webp",
+        "./archive/timeline/performance/2017-03-30-02.webp"
+      ],
+      "imageDescriptions": [
+        "To personer, den ene i lyserød kjole og høj hovedbeklædning.",
+        "Person i lyserød kjole og høj hovedbeklædning."
+      ]
+    },
+    "2017-01-01|Film|Face The Strange, film om Knud Vesterskov": {
+      "title": "Face The Strange, film om Knud Vesterskov",
+      "details": [
+        "Kenzo og jeg medvirker i filmen."
+      ],
+      "images": [
+        "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp",
+        "./archive/timeline/press/2017-01-01-face-the-strange-kenzo-dennis.webp",
+        "./archive/timeline/performance/2016-06-04-04.webp",
+        "./archive/timeline/performance/2016-06-04-05.webp",
+        "./archive/timeline/performance/2016-06-04-01.webp",
+        "./archive/timeline/performance/2016-06-04-02.webp",
+        "./archive/timeline/performance/2016-06-04-03.webp"
+      ],
+      "imageDescriptions": [
+        "Filmplakat til Face The Strange.",
+        "To personer med mørkt hår og kraftig makeup.",
+        "To personer med sorte parykker og kraftig makeup.",
+        "Fotostriber med to personer, der laver grimasser.",
+        "Person i pink trikot løfter benene over hovedet.",
+        "Person i pink trikot og lange sorte støvler på gaden.",
+        "Person i pink trikot ligger på fortovet."
+      ]
+    },
+    "2025-11-28|Radiointerview|maður:glotti i Leitisstein, Kringvarp Føroya": {
+      "title": "maður:glotti i Leitisstein, Kringvarp Føroya",
+      "details": [
+        "Interview i færøsk radio om det nye album “STEV”."
+      ],
+      "images": [
+        "./archive/timeline/press/2025-11-28-leitisstein-radio.webp",
+        "./archive/timeline/press/2025-11-28-leitisstein-01.webp",
+        "./archive/timeline/press/2025-11-28-leitisstein-02.webp"
+      ],
+      "imageDescriptions": [
+        "Tre smilende personer, den midterste med grønne briller.",
+        "To personer i et radiostudie.",
+        "Radiostudie med mikrofoner og computer."
+      ]
+    },
+    "2015-01-31|Magasin|På forsiden af Illegal Magazine": {
+      "title": "På forsiden af Illegal Magazine",
+      "details": [
+        "Jeg var på coveret. Styling: Hairwerk Hugh Mongous."
+      ],
+      "images": [
+        "./archive/timeline/press/2015-01-31-illegal-magazine-01.webp",
+        "./archive/timeline/press/2015-01-31-illegal-magazine-02.webp",
+        "./archive/timeline/press/2015-01-31-illegal-magazine-03.webp",
+        "./archive/timeline/press/2015-01-31-illegal-magazine-04.webp",
+        "./archive/timeline/press/2015-01-31-illegal-magazine-05.webp",
+        "./archive/timeline/press/2015-01-31-illegal-magazine-06.webp"
+      ],
+      "imageDescriptions": [
+        "Forsiden af Illegal Magazine med teksten Kvinder & Stoffer.",
+        "Portræt med langt gråt hår foran en gylden baggrund.",
+        "Person med gråt hår og guldhandsker foran gylden baggrund.",
+        "Sort-hvidt portræt med langt hår og handsker.",
+        "Smilende person med langt hår og handsker i sort-hvid.",
+        "Flere eksemplarer af Illegal Magazine."
       ]
     }
   }
