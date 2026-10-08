@@ -32,3 +32,10 @@ console.log('PASS: focus wrapping, hidden controls, opener restoration, recreate
 // Capture the opener before React removes it from the document.
 root.inert=false; opener.isConnected=false; document.activeElement=null; cleanup=context.aaOpenDialog(close,opener); cleanup(); flush(); assert.equal(document.activeElement,replacement);
 console.log('PASS: explicitly captured opener survives pre-effect removal');
+
+// API-controlled YouTube iframes are not keyboard stops in the dialog.
+const playerFrame={...node('YouTube'),tagName:'IFRAME',tabIndex:-1};
+const archiveFrame={...node('Arkiv'),tagName:'IFRAME',tabIndex:0};
+const videoDialog={querySelectorAll:()=>[close,playerFrame,next,archiveFrame]};
+assert.deepEqual(Array.from(context.aaFocusable(videoDialog)),[close,next,archiveFrame]);
+console.log('PASS: API-controlled video iframe is skipped; archive iframe stays available');

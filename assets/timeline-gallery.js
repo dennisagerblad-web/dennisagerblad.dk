@@ -7,7 +7,7 @@ let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261006-independent-1',
+  '../content/timeline/galleries.json?v=20261008-descriptions-5',
   '../content/timeline/image-metadata.json?v=20260928-1',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
@@ -236,13 +236,13 @@ export function openTimelineGallery(entry, group, theme = {}) {
   // Credits and supplementary links belong with the text, so the photograph
   // meets both sides and the bottom of the popup without a footer strip.
   const supplementary=el('div','tg-supplementary'); header.append(supplementary);
-  const rotation=button('Start billedskift','Start automatiske billedskift',toggleRotation); rotation.className='tg-rotation'; rotation.hidden=true;
-  supplementary.prepend(rotation);
-  stage.append(previous,next,announcement); viewer.append(stage);
+  const rotation=button('','Start automatiske billedskift',toggleRotation); rotation.className='tg-rotation'; rotation.hidden=true;
+
+  stage.append(previous,next,announcement,rotation); viewer.append(stage);
   dialog.append(close,header,viewer); overlay.append(dialog); document.body.append(overlay);
   let closed = false, index = 0, items = [], media = {}, descriptions = [], drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
-  let scene = null, drag = null, paused = true, rotationPointerPaused = null;
+  let scene = null, drag = null, paused = false, rotationPointerPaused = null;
   const mobile = matchMedia('(max-width: 760px), (max-width: 1100px) and (max-height: 600px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cache = new Map();
@@ -252,7 +252,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
     autoplayTimer = window.setTimeout(() => { autoplayTimer = 0; navigate(1); }, delay);
   }
   function updateRotation() {
-    rotation.textContent=reduced.matches?'Billedskift på pause':paused?'Start billedskift':'Pause billedskift';
+    rotation.innerHTML='<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="white" stroke-width="2.5"/>'+(paused||reduced.matches?'<path fill="white" d="M16 11L29 20L16 29Z"/>':'<path fill="white" d="M13 11H18V29H13ZM22 11H27V29H22Z"/>')+'</svg>';
+    rotation.dataset.state=paused||reduced.matches?'paused':'playing';
     rotation.setAttribute('aria-label',reduced.matches?'Automatiske billedskift er slået fra ved reduceret bevægelse':paused?'Start automatiske billedskift':'Sæt automatiske billedskift på pause');
     rotation.disabled=reduced.matches;
     announcement.setAttribute('aria-live',paused?'polite':'off');
@@ -265,8 +266,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   rotation.addEventListener('pointerdown',()=>{rotationPointerPaused=paused;});
   rotation.addEventListener('pointercancel',()=>{rotationPointerPaused=null;});
-  dialog.addEventListener('focusin',pauseRotation);
-  dialog.addEventListener('mouseenter',pauseRotation);
+
   updateRotation();
   close.focus({preventScroll:true});
   function imageAt(i) {
@@ -434,7 +434,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
       event.preventDefault(); event.stopImmediatePropagation(); navigate(event.key === 'ArrowRight' ? 1 : -1);
     }
     if (event.key === 'Tab') {
-      const focusable = [...dialog.querySelectorAll('button,a[href],iframe,summary')].filter(n => !n.disabled && n.getClientRects().length);
+      const focusable = [...dialog.querySelectorAll('button,a[href],iframe,summary')].filter(n => !n.disabled && n.tabIndex>=0 && n.getClientRects().length);
       const first = focusable[0], last = focusable.at(-1);
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
@@ -523,9 +523,9 @@ export function openTimelineGallery(entry, group, theme = {}) {
       supplementary.append(p);
     }
     if (entry.videoId) {
-      const video=el('iframe','tg-video'); video.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(entry.videoId)}`;
+      const video=el('iframe','tg-video'); video.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(entry.videoId)}?enablejsapi=1&playsinline=1&origin=${encodeURIComponent(location.origin)}`;
       video.title=entry.title; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
-      dialog.insertBefore(video,viewer);
+      const videoFrame=el('div','video-frame');videoFrame.append(video);dialog.insertBefore(videoFrame,viewer);
       const youtube=el('a','tg-video-link','Se videoen på YouTube');
       youtube.href=`https://www.youtube.com/watch?v=${encodeURIComponent(entry.videoId)}`;
       youtube.target='_blank'; youtube.rel='noreferrer';

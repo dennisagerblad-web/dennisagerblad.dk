@@ -40,6 +40,11 @@ function scrollWithEaseOut(scroller, destination, duration, onFinish) {
   frame = requestAnimationFrame(tick);
 }
 
+export function stopTimelineMotion() {
+  stopKeepingYearInView?.();
+  cancelTimedScroll?.();
+}
+
 export function timelineDate(date, fallback = '') {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date || '');
   if (!match) return fallback;

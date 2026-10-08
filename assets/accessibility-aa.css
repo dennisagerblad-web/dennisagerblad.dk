@@ -1,8 +1,44 @@
 /* Reflow for long words when users enlarge text. */
-.section-0 .record-meta :is(h2,p),
-.section-3 .book-copy h3 { overflow-wrap:anywhere; }
+.section-0 .record-meta :is(h2,p,span),
+.section-3 .book-copy :is(h3,p) { overflow-wrap:anywhere; }
 .section-5 .life-copy time { white-space:normal; overflow-wrap:anywhere; }
 .section-5 .life-copy .life-category { white-space:normal; overflow-wrap:anywhere; flex-wrap:wrap; }
 /* Decorative automatic movement finishes within five seconds. */
 .atmosphere { animation-duration:4.8s; animation-iteration-count:1; }
 .dancing-note { animation-iteration-count:3; }
+
+/* One keyboard focus treatment across the current website. */
+:root { --aa-focus-dark:#061b57; --aa-focus-bright:#eaff00; }
+body :is(a,button,input,select,textarea,summary,[tabindex]):focus-visible,
+body iframe.aa-frame-focused {
+  outline:2px dashed var(--aa-focus-bright) !important;
+  outline-offset:2px !important;
+  box-shadow:0 0 0 2px var(--aa-focus-dark) !important;
+}
+body :is(h1,h2,h3,h4,h5,h6,[role="group"],.performance-viewer):focus {
+  outline:none !important; box-shadow:none !important;
+}
+/* Keep both lines inside artwork hit areas and close buttons with clipped parents. */
+body :is(.art-hotspot):focus-visible {
+  outline-offset:-4px !important;
+  box-shadow:inset 0 0 0 2px var(--aa-focus-dark) !important;
+}
+/* The photographic room layers otherwise cover the focused hit area's lines. */
+.art-hotspot:focus-visible { z-index:5; }
+/* The return face is a polygon: draw the focus lines along its actual edge. */
+body .panel-0:focus-visible { outline:none !important; box-shadow:none !important; }
+.aa-face-focus { position:absolute;inset:0;width:100%;height:100%;pointer-events:none;visibility:hidden; }
+.panel-0:focus-visible .aa-face-focus { visibility:visible; }
+.aa-face-focus polygon { fill:none;vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-dasharray:8 5; }
+.aa-face-focus .aa-face-dark { stroke:var(--aa-focus-dark);stroke-width:8px; }
+.aa-face-focus .aa-face-bright { stroke:var(--aa-focus-bright);stroke-width:4px; }
+.aa-video-entry { position:absolute;top:6px;left:6px;z-index:10;padding:6px 9px;background:var(--aa-focus-dark);color:white;clip-path:inset(50%);width:1px;height:1px;overflow:hidden; }
+.aa-video-entry:focus-visible { clip-path:none;width:auto;height:auto;max-width:calc(100% - 12px);overflow:visible; }
+.video-frame,.timeline-video-viewer { position:relative; }
+
+/* Equal circular focus geometry on every close cross. */
+body :is(.art-focus-close,.tg-close,.timeline-popup-close,.performance-lightbox-close,.art-series-close,button[aria-label^="Luk"]) {
+  width:44px !important;height:44px !important;min-width:44px !important;min-height:44px !important;
+  padding:0 !important;border-radius:50% !important;
+}
+body .life-year[tabindex="-1"]:focus {outline:none !important;box-shadow:none !important;}
