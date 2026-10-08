@@ -1673,20 +1673,30 @@ export const timelineEntries = [
     "date": "2015-02-01",
     "display": "01.02.2015",
     "year": 2015,
-    "category": "Magasin",
-    "title": "Forsidefoto",
-    "group": "media",
-    "href": null,
-    "details": "Jeg er coverbilledet."
-  },
-  {
-    "date": "2015-02-01",
-    "display": "01.02.2015",
-    "year": 2015,
     "category": "Se & Hør",
     "title": "Interview om at gå videre i Talent",
     "group": "media",
     "href": null
+  },
+  {
+    "date": "2015-01-31",
+    "display": "31.01.2015",
+    "year": 2015,
+    "category": "Magasin",
+    "title": "På forsiden af Illegal Magazine",
+    "group": "press",
+    "href": null,
+    "details": "Jeg var på coveret. Styling: Hairwerk Hugh Mongous.",
+    "thumbnail": "./archive/timeline/press/2015-01-31-illegal-magazine-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/6cfd6c835819e6ab.webp",
+    "images": [
+      "./archive/timeline/press/2015-01-31-illegal-magazine-01.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-02.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-03.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-04.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-05.webp",
+      "./archive/timeline/press/2015-01-31-illegal-magazine-06.webp"
+    ]
   },
   {
     "date": "2015-01-24",
