@@ -171,8 +171,13 @@ function ensureLayers(ship,hitMap,version){
   el.style.transform=homography(src,dst);layer.append(el);
  }
  addSkirting(layer,true);
- [1,2,3,4,5,6].forEach((n,i)=>image(layer,`./archive/art/IMG0010_0${n}.jpg`,[[310+(i%3)*225,220+Math.floor(i/3)*155],[510+(i%3)*225,220+Math.floor(i/3)*155],[510+(i%3)*225,343+Math.floor(i/3)*155],[310+(i%3)*225,343+Math.floor(i/3)*155]],500,307));
- image(layer,'./assets/art-pige.webp',[[1030,240],[1192,240],[1192,456],[1030,456]],300,400);
+ [1,2,3,4,5,6].forEach((n,i)=>image(layer,`./archive/art/IMG0010_0${n}.jpg`,[[80+(i%3)*225,220+Math.floor(i/3)*155],[280+(i%3)*225,220+Math.floor(i/3)*155],[280+(i%3)*225,343+Math.floor(i/3)*155],[80+(i%3)*225,343+Math.floor(i/3)*155]],500,307));
+ image(layer,'./assets/art-pige.webp',[[800,240],[962,240],[962,456],[800,456]],300,400);
+ // Six 30 cm originals on the same frontal wall, using its physical camera scale.
+ [1,2,3,4,5,6].forEach((n,i)=>{
+  const x=2.45+(i%2)*.40,bottom=2.02-Math.floor(i/2)*.40;
+  image(layer,`./assets/art-dunst-0${n}.webp`,quad(x,x+.30,bottom,bottom+.30,0),1024,1024);
+ });
  }else{[1,2,3,4,5,6].forEach((n,i)=>image(layer,`./archive/art/${n}_400.jpg`,sideQuad('left',.05+i*1.4,1.2,1.1,2.3)));['hipie','hands','raab','finger','hair','wispher'].forEach((f,i)=>image(layer,`./archive/art/${f}.jpg`,sideQuad('right',.05+(5-i)*1.4,1.2,1.1,2.3)));image(layer,'./assets/art-cat-updated.webp',quad(-2.4,2.4,.30,.30+4.8*1106/1860,DEPTH),1860,1106);addCeramics(layer);}
  hitMap.append(layer);}
  layer.style.setProperty('--art-scale',String(hitMap.clientWidth/W));
@@ -209,7 +214,7 @@ function update(force=false) {
     const hitMap=document.querySelector('.ship.has-section.section-4 .art-hit-map');
     if(hitMap){warmGalleryImages();ensureLayers(hitMap.closest('.ship'),hitMap,selectedVersion);if(artOpen)ensureOpeningReady(hitMap.closest('.ship'),hitMap);}
     if (selectedVersion === 3) ensureCatHotspot();
-    if (selectedVersion === 4) ensurePigeHotspot(hitMap);
+    if (selectedVersion === 4) {ensurePigeHotspot(hitMap);ensureDunstHotspots(hitMap);}
   }
   else if (catDialog.open) catDialog.close();
   // Keep finished room canvases while visitors browse other sections. Reopening
@@ -287,7 +292,7 @@ function waitForOpeningMotion(ship){
 let warmingStarted=false,warmingPhotos=[];
 function warmGalleryImages(){
  if(warmingStarted)return;warmingStarted=true;
- const assets=['art-walls-warm-v2.webp','art-white-skirting-v1.webp','art-floor-soft-v4.webp','art-hall-ceiling-v1.webp','art-ceiling-shadow-v5.webp','art-hall-wall-v2.webp','art2-room-photo-v3.webp','art-podium-extended-v6.webp','art2-fixed-installation-v2.webp','art-cat-updated.webp','art-pige.webp'];
+ const assets=[...[1,2,3,4,5,6].map(n=>`art-dunst-0${n}.webp`),'art-walls-warm-v2.webp','art-white-skirting-v1.webp','art-floor-soft-v4.webp','art-hall-ceiling-v1.webp','art-ceiling-shadow-v5.webp','art-hall-wall-v2.webp','art2-room-photo-v3.webp','art-podium-extended-v6.webp','art2-fixed-installation-v2.webp','art-cat-updated.webp','art-pige.webp'];
  const originals=[...[4,5,6,7,8,9].map(n=>`IMG_418${n}.jpg`),...[1,2,3,4,5,6].flatMap(n=>[`${n}_400.jpg`,`IMG0010_0${n}.jpg`]),'selfportrait_01.jpg','selfportrait_02.jpg',...['hipie','hands','raab','finger','hair','wispher'].map(n=>n+'.jpg')];
  for(const src of [...assets.map(n=>'./assets/'+n),...originals.map(n=>'./archive/art/'+n)]){
   const photo=new Image();photo.decoding='async';photo.fetchPriority='low';photo.src=src;warmingPhotos.push(photo);
@@ -511,7 +516,18 @@ function ensurePigeHotspot(map){
  const b=document.createElement('button');b.type='button';b.className='art-hotspot art-pige-hotspot';b.setAttribute('aria-label','Åbn Pige');b.onclick=()=>pigeDialog.showModal();map.append(b);
 }
 
-import { installArtViewer } from './art-viewer.js?v=20261008-aa-focus-wrap-1';
+function ensureDunstHotspots(map){
+ if(map.querySelector('.art-dunst-hotspot'))return;
+ map.querySelectorAll('.art-preserved-layer[data-room="4"] .art-original[src*="art-dunst-"]').forEach((photo,index)=>{
+  const corners=JSON.parse(photo.dataset.galleryQuad),xs=corners.map(p=>p[0]),ys=corners.map(p=>p[1]);
+  const b=document.createElement('button');b.type='button';b.className='art-hotspot art-dunst-hotspot';
+  b.setAttribute('aria-label','Åbn kunst i dunst, Kollager, 30×30 cm');b.dataset.artSeriesIndex=String(index);
+  b.style.cssText=`left:${Math.min(...xs)/W*100}%;top:${Math.min(...ys)/H*100}%;width:${(Math.max(...xs)-Math.min(...xs))/W*100}%;height:${(Math.max(...ys)-Math.min(...ys))/H*100}%;`;
+  map.append(b);
+ });
+}
+
+import { installArtViewer } from './art-viewer.js?v=20261008-kunst-i-dunst-1';
 installArtViewer({getVersion:()=>selectedVersion,homography});
 
 update();

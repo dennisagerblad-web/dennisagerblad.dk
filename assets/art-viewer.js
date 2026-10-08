@@ -4,6 +4,7 @@ const sets={
  'Selvportrætter i Trashdrag':Array.from({length:6},(_,i)=>archive+`IMG_${4184+i}.jpg`),
  'Færøske Selvportrætter':['hipie','hands','raab','finger','hair','wispher'].map(n=>archive+n+'.jpg'),
  'Det Skjulte Kys':Array.from({length:6},(_,i)=>archive+`${i+1}_400.jpg`),
+ 'kunst i dunst, Kollager, 30×30 cm':Array.from({length:6},(_,i)=>`./assets/art-dunst-0${i+1}.webp`),
  'Maleriserie':Array.from({length:6},(_,i)=>archive+`IMG0010_0${i+1}.jpg`),
  'Selvportrætter':['selfportrait_01.jpg','selfportrait_02.jpg'].map(n=>archive+n),
  'Voksen Dukke Leg':['CIMG1156.jpg','CIMG1159.jpg','CIMG1162.jpg','CIMG0125.jpg','DSC09669.jpg','DSC09777.jpg','DSC09832.jpg'].map(n=>archive+n),
@@ -11,7 +12,7 @@ const sets={
  'Pige':['./assets/art-pige.webp'],
  'To sider af en sjæl':['./assets/art-cat-updated.webp']
 };
-const fullQuality={'./assets/art-pige.webp':'./content/art/originals/pige.png','./assets/art-cat-updated.webp':'./content/art/originals/to-sider-af-en-sjael.jpg'};
+const fullQuality={...Object.fromEntries(Array.from({length:6},(_,i)=>[`./assets/art-dunst-0${i+1}.webp`,archive+`kunst-i-dunst/0${i+1}.webp`])),'./assets/art-pige.webp':'./content/art/originals/pige.webp','./assets/art-cat-updated.webp':'./content/art/originals/to-sider-af-en-sjael.webp'};
 const rectangle=(x,y,w,h)=>[[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
 export function installArtViewer({getVersion,homography}){
  const dialog=document.createElement('dialog');dialog.className='art-focus-viewer';
@@ -63,7 +64,7 @@ export function installArtViewer({getVersion,homography}){
  async function open(button,event,title,files){
   if(busy||state)return;busy=true;const token=++sequence;
   const candidates=wallImages().filter(el=>files.some(src=>new URL(src,location.href).href===el.src));
-  let index=0;if(candidates.length){const chosen=candidates.reduce((best,el)=>{const r=el.getBoundingClientRect(),d=Math.hypot(event.clientX-(r.left+r.width/2),event.clientY-(r.top+r.height/2));return !best||d<best.d?{el,d}:best;},null).el;index=files.findIndex(src=>new URL(src,location.href).href===chosen.src);}
+  let index=0;if(button.dataset.artSeriesIndex!==undefined){index=Number(button.dataset.artSeriesIndex);}else if(candidates.length){const chosen=candidates.reduce((best,el)=>{const r=el.getBoundingClientRect(),d=Math.hypot(event.clientX-(r.left+r.width/2),event.clientY-(r.top+r.height/2));return !best||d<best.d?{el,d}:best;},null).el;index=files.findIndex(src=>new URL(src,location.href).href===chosen.src);}
   else if(title==='Kongeligt Porcelæn'){const n=[...button.parentElement.children].indexOf(button);index=({6:4,7:0,8:2,9:7})[n]??0;}
   const r=button.getBoundingClientRect();state={title,files,index,button,origin:rectangle(r.left,r.top,r.width,r.height)};
   try{primary=await picture(files[index],'art-focus-image art-focus-primary');if(token!==sequence)return;

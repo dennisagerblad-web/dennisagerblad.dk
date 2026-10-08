@@ -202,3 +202,9 @@ body.art-version-3 .art-hotspot:nth-child(10) {left:74% !important;top:60% !impo
 
 /* The marker uses the room position directly; no independent easing or delay. */
 .art-version-chooser.is-following-room .art-tab-marker{transition:none;}
+
+/* Passage artwork groups have separate click regions. */
+body.art-version-4 .art-hit-map .art-hotspot:nth-child(4){left:6.25% !important;top:30.55% !important;width:50.8% !important;height:38.62% !important;}
+body.art-version-4 .art-hit-map .art-hotspot.art-pige-hotspot{left:62.5% !important;top:33.33% !important;width:12.66% !important;height:30% !important;}
+body.art-version-4 .art-hit-map .art-hotspot.art-dunst-hotspot{display:block;}
+body:not(.art-version-4) .art-hit-map .art-hotspot.art-dunst-hotspot{display:none;}
