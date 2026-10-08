@@ -417,15 +417,14 @@
       ],
       "images": []
     },
-    "2016-08-06|Happening|Pride Brud": {
-      "title": "Pride Brud",
-      "details": [],
-      "images": []
-    },
     "2016-06-26|Optræden|Blomster optræden, Roskilde Festival": {
       "title": "Blomster optræden, Roskilde Festival",
       "details": [],
-      "images": []
+      "images": [
+        "./archive/timeline/performance/2016-06-26-01.webp",
+        "./archive/timeline/performance/2016-06-26-02.webp",
+        "./archive/timeline/performance/2016-06-26-03.webp"
+      ]
     },
     "2016-06-09|Liveoptræden|Jeg optrådte med mit band på Chantals House of Shame i Berlin.": {
       "title": "Jeg optrådte med mit band på Chantals House of Shame i Berlin.",
@@ -3192,6 +3191,76 @@
         "./archive/timeline/performance/2026-08-08-04.webp",
         "./archive/timeline/performance/2026-08-08-05.webp",
         "./archive/timeline/performance/2026-08-08-06.webp"
+      ]
+    },
+    "2017-03-25|Melodigrandprix|Kønspolitisk Melodigrandprix, Bøssehuset": {
+      "title": "Kønspolitisk Melodigrandprix, Bøssehuset",
+      "details": [
+        "Jeg sang “Jeg er en transvestit”."
+      ],
+      "images": [
+        "./archive/timeline/performance/2017-03-25-01.webp"
+      ]
+    },
+    "2017-05-10|Fotosession|Fotos af Sarah Rachel Rignel Fresco": {
+      "title": "Fotos af Sarah Rachel Rignel Fresco",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2017-05-10-01.webp",
+        "./archive/timeline/performance/2017-05-10-02.webp",
+        "./archive/timeline/performance/2017-05-10-03.webp",
+        "./archive/timeline/performance/2017-05-10-04.webp",
+        "./archive/timeline/performance/2017-05-10-05.webp",
+        "./archive/timeline/performance/2017-05-10-06.webp"
+      ]
+    },
+    "2016-04-16|Optræden|Depeche Mode på Von Fressen": {
+      "title": "Depeche Mode på Von Fressen",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2016-04-16-01.webp",
+        "./archive/timeline/performance/2016-04-16-02.webp",
+        "./archive/timeline/performance/2016-04-16-03.webp",
+        "./archive/timeline/performance/2016-04-16-04.webp"
+      ]
+    },
+    "2016-05-20|Optræden|Performance i Kapellet": {
+      "title": "Performance i Kapellet",
+      "details": [
+        "Jeg var hyret til at forstyrre en julefrokost i Kapellet."
+      ],
+      "images": [
+        "./archive/timeline/performance/2016-05-20-01.webp",
+        "./archive/timeline/performance/2016-05-20-02.webp",
+        "./archive/timeline/performance/2016-05-20-03.webp"
+      ]
+    },
+    "2016-06-04|Film|Medvirken i Knuds film": {
+      "title": "Medvirken i Knuds film",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2016-06-04-01.webp",
+        "./archive/timeline/performance/2016-06-04-02.webp",
+        "./archive/timeline/performance/2016-06-04-03.webp",
+        "./archive/timeline/performance/2016-06-04-04.webp",
+        "./archive/timeline/performance/2016-06-04-05.webp"
+      ]
+    },
+    "2016-08-20|Happening|Pride Brud": {
+      "title": "Pride Brud",
+      "details": [],
+      "images": [
+        "./archive/timeline/performance/2016-08-20-01.webp"
+      ]
+    },
+    "2017-03-30|Optræden|Medvirken i Eivørs musikvideo “In My Shoes”": {
+      "title": "Medvirken i Eivørs musikvideo “In My Shoes”",
+      "details": [
+        "Styling: Hairwerk Hugh Mongous."
+      ],
+      "images": [
+        "./archive/timeline/performance/2017-03-30-01.webp",
+        "./archive/timeline/performance/2017-03-30-02.webp"
       ]
     }
   }
