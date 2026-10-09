@@ -154,26 +154,39 @@ body:has(.section-5 .timeline-search.is-open) .timeline-year-rail { visibility: 
     transform: none;
   }
 }
-@media (max-width: 1100px) and (max-height: 650px) and (orientation: landscape) {
+@media (min-width: 761px) and (max-width: 1100px) and (max-height: 650px) and (orientation: landscape) {
   .section-5 .timeline-controls:has(.timeline-search) {
-    top: 104px;
-    width: calc(100vw - 40px);
-    max-width: none;
-    margin: 0 20px 10px;
+    top: 88px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 10px;
     justify-content: space-between;
     gap: 12px;
   }
-  .section-5 .timeline-search { flex: 0 0 230px; }
+  /* Reserve the tabs' scaled visual width as well as their layout width. */
+  .section-5 .timeline-search { flex: 0 1 auto; width: min(230px, calc(100% - 440px)); min-width: 140px; max-width: 230px; }
   .section-5 .timeline-groups { flex: none; }
   .section-5 .timeline-search-results {
-    top: calc(100% + 8px);
+    top: calc(100% + 18px);
     right: auto;
     left: 0;
-    width: min(420px, calc(100vw - 40px));
+    width: min(420px, calc(100vw - 160px));
     transform: none;
   }
 }
 @media (max-width: 760px) and (max-height: 650px) and (orientation: landscape) {
-  .section-5 .timeline-controls:has(.timeline-search) { align-items: flex-end; }
-  .section-5 .timeline-search-results { width: min(420px, calc(100vw - 40px)); }
+  .section-5 .timeline-controls:has(.timeline-search) {
+    top: 64px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 10px;
+    align-items: center;
+  }
+  .section-5 .timeline-search { align-self: center; width: 100%; }
+  .section-5 .timeline-search-results {
+    right: 50%;
+    left: auto;
+    width: min(420px, 100%);
+    transform: translateX(50%);
+  }
 }

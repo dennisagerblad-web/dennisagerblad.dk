@@ -1,5 +1,5 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261009-popup-layout-5';
-import { scrollTimelineYear } from './timeline-ui.js?v=20261009-popup-layout-5';
+import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {
@@ -72,13 +72,32 @@ async function goToResult(result, input, search) {
     }
   }
   if (!event) return;
-  scrollTimelineYear(result.group, result.entry.year);
+  stopTimelineMotion();
   const scroller = event.closest('.archive-scroll');
   const controls = event.closest('.timeline-shell')?.querySelector('.timeline-controls');
   if (!scroller || !controls) return;
-  const offset = (parseFloat(getComputedStyle(controls).top) || 0) + controls.getBoundingClientRect().height + 16;
-  const top = event.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop - offset;
-  scroller.scrollTo({ top: Math.max(0, top), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  // The target can move as thumbnails load or the category finishes laying out.
+  // Keep its actual visible edge below the sticky tabs, then stop on user input.
+  let cancelled = false;
+  const position = () => {
+    if (cancelled || !event.isConnected) return;
+    const gap = event.getBoundingClientRect().top - controls.getBoundingClientRect().bottom - 16;
+    if (Math.abs(gap) > 2) {
+      scroller.style.scrollBehavior = 'auto';
+      scroller.scrollTop += gap;
+    }
+  };
+  const cancelPositioning = () => { cancelled = true; };
+  for (const type of ['wheel', 'touchstart', 'pointerdown', 'keydown']) {
+    scroller.addEventListener(type, cancelPositioning, { once: true, passive: true });
+  }
+  position();
+  requestAnimationFrame(position);
+  for (const delay of [180, 500, 1100]) setTimeout(position, delay);
+  setTimeout(() => {
+    cancelled = true;
+    for (const type of ['wheel', 'touchstart', 'pointerdown', 'keydown']) scroller.removeEventListener(type, cancelPositioning);
+  }, 1200);
   highlighted?.classList.remove('timeline-search-hit');
   event.classList.add('timeline-search-hit');
   highlighted = event;
@@ -106,19 +125,17 @@ function mountSearch() {
     if (!mobile.matches) {
       search.style.width = '';
       controls.style.transform = '';
-      if (mobileLandscape.matches) {
-        controls.style.transform = `translateX(${20 - controls.getBoundingClientRect().left}px)`;
-      }
       return;
     }
     controls.style.transform = '';
+    if (mobileLandscape.matches) {
+      search.style.width = '';
+      return;
+    }
     const tabsWidth = groupTabs.offsetWidth;
     if (!tabsWidth) return;
-    const scale = mobileLandscape.matches
-      ? Math.min(1.25, (innerWidth - 100) / tabsWidth)
-      : (innerWidth - 40) / tabsWidth;
+    const scale = (innerWidth - 40) / tabsWidth;
     search.style.width = `${tabsWidth * scale}px`;
-    if (mobileLandscape.matches) controls.style.transform = `translateX(${20 - controls.getBoundingClientRect().left}px)`;
   };
   const scheduleWidth = () => {
     cancelAnimationFrame(pendingWidth);
