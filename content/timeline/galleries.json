@@ -5071,11 +5071,9 @@
         "Person med blond paryk og briller løfter begge arme."
       ]
     },
-    "2015-03-06|Fest|Fest hos Marquien": {
-      "title": "Fest hos Marquien",
-      "details": [
-        "Til fest hos Marquien på Frederiksberg."
-      ],
+    "2015-03-06|Fest|Fest hos Marquien på Frederiksberg": {
+      "title": "Fest hos Marquien på Frederiksberg",
+      "details": [],
       "images": [
         "./archive/timeline/performance/2015-03-06-01.webp",
         "./archive/timeline/performance/2015-03-06-02.webp",

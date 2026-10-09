@@ -242,3 +242,67 @@
 .timeline-popup-face-the-strange .timeline-popup-gallery img { width:auto; align-self:center; }
 .timeline-popup-face-the-strange .timeline-popup-gallery figcaption { margin:12px 0 0; }
 .timeline-popup-face-the-strange .timeline-popup-gallery figcaption a { color:#fff; font:16px/1.4 system-ui,sans-serif; text-decoration:underline; text-underline-offset:3px; }
+
+/* One spacing and type system for all Timeline dialogs. */
+.timeline-overlay { padding:32px; }
+.timeline-overlay :is(.timeline-popup,.tg-dialog) {
+  box-sizing:border-box;
+  border-radius:16px;
+  padding:20px;
+  max-width:calc(100vw - 64px);
+  max-height:calc(100dvh - 64px);
+  overflow:auto;
+  scrollbar-width:thin;
+  font-family:Helvetica,Arial,sans-serif;
+}
+.timeline-overlay :is(.timeline-popup,.tg-dialog) :is(h2,p,time,a,button,summary,figcaption) {
+  font-family:Helvetica,Arial,sans-serif;
+}
+.timeline-overlay :is(.timeline-popup-header,.tg-header) {
+  padding:0;
+  margin:0 0 20px;
+  max-height:none;
+  overflow:visible;
+  display:flow-root;
+}
+.timeline-overlay :is(.timeline-popup-header,.tg-header) :is(.tg-date,.timeline-popup-date) { margin-top:0; }
+.timeline-overlay :is(.timeline-popup-header,.tg-header) h2 { padding-right:28px; }
+.timeline-overlay :is(.timeline-popup-close,.tg-close) { top:8px;right:8px; }
+.timeline-overlay .timeline-popup :is(.timeline-popup-summary,.timeline-release-page,.timeline-video-viewer,.timeline-popup-biography) {
+  flex:none;
+  padding:0;
+  margin:0;
+  max-height:none;
+  overflow:visible;
+}
+.timeline-popup .timeline-popup-gallery { grid-template-columns:1fr; }
+.timeline-popup :is(.timeline-popup-gallery,.timeline-popup-summary,.timeline-popup-biography) figure { width:100%;max-height:none; }
+.timeline-popup :is(.timeline-popup-gallery,.timeline-popup-summary,.timeline-popup-biography) figure img {
+  width:100%;height:auto;max-width:100%;max-height:none;object-fit:contain;
+}
+.timeline-popup .timeline-release-page img { width:100%;height:auto;max-height:none; }
+.timeline-popup :is(.timeline-video-player,iframe) { width:100%;max-width:100%;max-height:none;border:0;box-shadow:none; }
+.tg-dialog .tg-viewer { margin:0; }
+.tg-dialog .tg-stage { background:transparent; }
+.tg-dialog .video-frame { margin:0 0 16px; }
+.tg-dialog .tg-video { width:100%;height:auto;margin:0; }
+.tg-dialog[data-entry-date="2017-03-30"] .tg-video { width:100%;height:auto;margin:0; }
+.tg-dialog .tg-video-link { width:fit-content;max-width:100%;margin:0 0 20px; }
+@media (max-width:760px), (max-width:1100px) and (max-height:600px) {
+  .timeline-overlay { padding:16px; }
+  .timeline-overlay :is(.timeline-popup,.tg-dialog) {
+    width:calc(100vw - 32px);
+    max-width:calc(100vw - 32px);
+    max-height:calc(100dvh - 32px);
+    border-radius:16px;
+  }
+}
+/* Pointer interaction does not show the keyboard focus marker. */
+html[data-aa-input="pointer"] .timeline-overlay :is(a,button,iframe,[tabindex]):focus {
+  outline:none !important;box-shadow:none !important;
+}
+
+/* YouTube keeps focus feedback on its own controls, not around the whole video. */
+body .timeline-overlay iframe:is(.timeline-video-player,.tg-video) { outline:none !important;box-shadow:none !important; }
+.timeline-popup .timeline-youtube-link { margin:0; }
+.timeline-popup .timeline-popup-biography p { max-width:none; }

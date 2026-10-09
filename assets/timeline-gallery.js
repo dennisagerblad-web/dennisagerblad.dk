@@ -1,14 +1,14 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20261008-scene-2015-release-2';
+import { timelineDate } from './timeline-ui.js?v=20261009-popup-layout-5';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261008-scene-2015-release-2',
-  '../content/timeline/image-metadata.json?v=20261008-scene-2015-release-2',
+  '../content/timeline/galleries.json?v=20261009-popup-layout-5',
+  '../content/timeline/image-metadata.json?v=20261009-popup-layout-5',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();
@@ -36,10 +36,9 @@ export const galleryEffects = Object.freeze({
 });
 export const timelineEffects = Object.freeze({ live:'Morph', art:'Paint' });
 
-// Fit the complete photo in the frame and keep small archive images at their
-// original CSS pixel size. The remaining field receives the blurred backdrop.
+// Use all available space while preserving the complete photograph.
 export function containRect(imageWidth, imageHeight, frameWidth, frameHeight) {
-  const scale = Math.min(frameWidth / imageWidth, frameHeight / imageHeight, 1);
+  const scale = Math.min(frameWidth / imageWidth, frameHeight / imageHeight);
   const width = imageWidth * scale, height = imageHeight * scale;
   return [(frameWidth-width)/2, (frameHeight-height)/2, width, height];
 }
@@ -55,23 +54,22 @@ export function galleryRatio(items, media, viewportRatio = 4/3) {
   return majority.length ? Math.exp(majority.reduce((sum,r)=>sum+Math.log(r),0)/majority.length) : 1;
 }
 
-function compose(image, w, h) {
+function compose(image, w, h, useBackdrop) {
   const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h;
   const ctx = canvas.getContext('2d');
   const pixelRatio = Math.min(devicePixelRatio || 1, 2);
   const frameWidth = w / pixelRatio, frameHeight = h / pixelRatio;
-  // Every Scene and Kunst photo stays whole. A blurred copy of that same
-  // photo fills the frame behind it, including for high-resolution originals.
-  const backdrop = document.createElement('canvas'); backdrop.width = 48; backdrop.height = Math.max(16, Math.round(48*h/w));
-  const bg = backdrop.getContext('2d');
-  const scale = Math.max(backdrop.width/image.naturalWidth,backdrop.height/image.naturalHeight)*1.18;
-  bg.drawImage(image,(backdrop.width-image.naturalWidth*scale)/2,(backdrop.height-image.naturalHeight*scale)/2,image.naturalWidth*scale,image.naturalHeight*scale);
-  ctx.save(); ctx.filter = `blur(${Math.max(12,w*.025)}px) brightness(.64)`;
-  const bleed = Math.ceil(w*.08);
-  ctx.drawImage(backdrop,-bleed,-bleed,w+bleed*2,h+bleed*2); ctx.restore();
-  // Display archival scans at no more than their natural CSS pixel size.
-  // This leaves their original detail intact while the same image fills the
-  // unused field as a soft, enlarged backdrop.
+  // Only multi-image transitions need a blurred image behind the whole photo.
+  if (useBackdrop) {
+    const backdrop = document.createElement('canvas'); backdrop.width = 48; backdrop.height = Math.max(16, Math.round(48*h/w));
+    const bg = backdrop.getContext('2d');
+    const scale = Math.max(backdrop.width/image.naturalWidth,backdrop.height/image.naturalHeight)*1.18;
+    bg.drawImage(image,(backdrop.width-image.naturalWidth*scale)/2,(backdrop.height-image.naturalHeight*scale)/2,image.naturalWidth*scale,image.naturalHeight*scale);
+    ctx.save(); ctx.filter = `blur(${Math.max(12,w*.025)}px) brightness(.64)`;
+    const bleed = Math.ceil(w*.08);
+    ctx.drawImage(backdrop,-bleed,-bleed,w+bleed*2,h+bleed*2); ctx.restore();
+  }
+  // Fit the sharp photograph to the available frame, also for smaller originals.
   const [x,y,iw,ih] = containRect(image.naturalWidth,image.naturalHeight,frameWidth,frameHeight);
   ctx.drawImage(image,x*pixelRatio,y*pixelRatio,iw*pixelRatio,ih*pixelRatio);
   return canvas;
@@ -233,8 +231,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   previous.hidden=next.hidden=true;
   const announcement=el('span','tg-sr-only'); announcement.setAttribute('aria-live','polite');
   announcement.setAttribute('aria-atomic','true');
-  // Credits and supplementary links belong with the text, so the photograph
-  // meets both sides and the bottom of the popup without a footer strip.
+  // Credits and supplementary links stay with the text above the photograph.
   const supplementary=el('div','tg-supplementary'); header.append(supplementary);
   const rotation=button('','Start automatiske billedskift',toggleRotation); rotation.className='tg-rotation'; rotation.hidden=true;
 
@@ -282,27 +279,27 @@ export function openTimelineGallery(entry, group, theme = {}) {
     if (closed) return;
     const vh=window.visualViewport?.height || innerHeight, vw=document.documentElement.clientWidth;
     const compact=mobile.matches;
-    const margin=compact ? 0 : 32;
-    const maxW=vw-margin*2;
-    // This event has six portraits and one landscape image. On desktop the
-    // landscape deserves a broad viewing area; portrait viewports keep their
-    // natural tall frame. The image composition still preserves every photo.
+    const margin=compact ? 16 : 32;
+    const padding=40;
+    const maxW=Math.min(vw-margin*2,1200);
     const measuredRatio=galleryRatio(items,media,vw/vh);
     const ratio=entry.date==='2026-08-08' && !compact ? Math.max(measuredRatio,1.5) : measuredRatio;
-    const readableWidth=Math.min(maxW,360);
+    // Mobile keeps its 16px outer margin. Fit the whole photo below the heading,
+    // including short landscape screens, without changing its proportions.
     let width=maxW;
-    for(let i=0;i<8;i++) {
-      dialog.style.width=`${width}px`;
-      const available=Math.max(1,vh-margin*2-header.offsetHeight);
-      // A short viewport or a long heading must not squeeze the entire popup
-      // below the original width of a 360px archive scan.
-      const frameRatio=Math.max(ratio,readableWidth/available);
-      dialog.style.setProperty('--tg-ratio',String(frameRatio));
-      const nextWidth=Math.max(1,Math.min(maxW,available*frameRatio));
-      if(Math.abs(nextWidth-width)<1) break;
-      width=nextWidth;
+    if (!compact) {
+      for(let i=0;i<8;i++) {
+        dialog.style.width=`${width}px`;
+        const available=Math.max(1,vh-margin*2-padding-header.getBoundingClientRect().height-20);
+        const nextWidth=Math.min(maxW,Math.max(360,available*ratio+padding));
+        if(Math.abs(nextWidth-width)<1) break;
+        width=nextWidth;
+      }
     }
     dialog.style.width=`${Math.floor(width)}px`;
+    const available=Math.max(120,vh-margin*2-padding-header.getBoundingClientRect().height-20);
+    const frameRatio=compact ? Math.max(ratio,(width-padding)/available) : ratio;
+    dialog.style.setProperty('--tg-ratio',String(frameRatio));
   }
   function size() {
     const r = stage.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1,2);
@@ -357,7 +354,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     imageAt(session.target).then(image => {
       if (closed || scene !== session) return;
       const [w,h] = size();
-      session.after = compose(image,w,h);
+      session.after = compose(image,w,h,items.length > 1);
       if (drawing && drawing.width === w && drawing.height === h && !reduced.matches) {
         transition ||= createTransition(effectCanvas);
         if (transition) {
@@ -389,7 +386,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
       const image = await imageAt(index);
       if (closed || ticket !== request) return;
       const [w,h] = size();
-      const composed = compose(image,w,h);
+      const composed = compose(image,w,h,items.length > 1);
       status.hidden = true; poster.hidden = false;
       const before = drawing; paint(composed); announce();
       if (direction && before && before.width === w && before.height === h && !reduced.matches) {

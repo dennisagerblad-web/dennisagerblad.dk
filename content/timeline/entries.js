@@ -1702,8 +1702,7 @@ export const timelineEntries = [
     "date": "2015-03-06",
     "display": "06.03.2015",
     "category": "Fest",
-    "title": "Fest hos Marquien",
-    "details": "Til fest hos Marquien på Frederiksberg.",
+    "title": "Fest hos Marquien på Frederiksberg",
     "thumbnail": "./archive/timeline/performance/2015-03-06-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/713e21c9c258a6a8.webp",
     "images": [
@@ -3462,8 +3461,7 @@ export const timelineEntries = [
     "title": "\"land\" - tredje album med min færøske duo maður:glotti.",
     "group": "music",
     "href": "./archive/legacy/200_calendar/2008/08_07_17_land/madurglotti_land.html",
-    "thumbnail": "./archive/timeline/land.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/5667152e7827ccc4.webp",
+    "thumbnail": "./archive/music/land.jpg",
     "albumKey": "land"
   },
   {

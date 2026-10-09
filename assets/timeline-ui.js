@@ -1,4 +1,4 @@
-export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=20261008-scene-2015-release-2';
+export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=20261009-popup-layout-5';
 
 const months = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
 let stopKeepingYearInView;

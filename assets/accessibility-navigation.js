@@ -117,10 +117,19 @@ function schedule() {
 }
 new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','open']});
 window.addEventListener('resize',schedule); schedule();
-// A cross-origin player's internal buttons keep its own styles. The frame remains marked.
+// Keep keyboard focus visible without leaving a frame after a touch or mouse click.
+document.documentElement.dataset.aaInput='pointer';
+document.addEventListener('pointerdown',()=>{
+  document.documentElement.dataset.aaInput='pointer';syncFrameFocus();
+},true);
+document.addEventListener('keydown',event=>{
+  if (['Tab','Enter',' ','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.key)) {
+    document.documentElement.dataset.aaInput='keyboard';syncFrameFocus();
+  }
+},true);
 function syncFrameFocus() {
   const active=document.activeElement;
-  for (const frame of document.querySelectorAll('iframe')) frame.classList.toggle('aa-frame-focused', frame===active);
+  for (const frame of document.querySelectorAll('iframe')) frame.classList.toggle('aa-frame-focused', frame===active && document.documentElement.dataset.aaInput==='keyboard');
 }
 window.addEventListener('blur',()=>setTimeout(syncFrameFocus,0));
 document.addEventListener('focusin',syncFrameFocus);
