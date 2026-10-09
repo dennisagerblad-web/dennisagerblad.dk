@@ -2,6 +2,7 @@
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
 import { timelineDate } from './timeline-ui.js?v=20261009-popup-layout-5';
+import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
@@ -225,7 +226,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
   const poster = el('canvas', 'tg-poster'); poster.setAttribute('role','img');
   const effectCanvas = el('canvas', 'tg-effect'); effectCanvas.setAttribute('aria-hidden','true');
   const status = el('p','tg-status','Henter billeder …'); status.setAttribute('role','status');
-  stage.append(poster,effectCanvas,status);
+  const zoomImage = el('img','tg-zoom-image'); zoomImage.alt = ''; zoomImage.setAttribute('aria-hidden','true');
+  stage.append(poster,effectCanvas,status,zoomImage);
   const previous = button('', 'Forrige billede', () => navigate(-1)); previous.className='tg-arrow tg-previous';
   const next = button('', 'Næste billede', () => navigate(1)); next.className='tg-arrow tg-next';
   previous.hidden=next.hidden=true;
@@ -240,11 +242,17 @@ export function openTimelineGallery(entry, group, theme = {}) {
   let closed = false, index = 0, items = [], media = {}, descriptions = [], drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
   let scene = null, drag = null, paused = false, rotationPointerPaused = null;
+  const zoom = attachPinchZoom(stage, (scale,x,y) => {
+    zoomImage.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+    stage.classList.toggle('is-zoomed', scale > 1.01);
+  }, () => { cancelScene(); startTouch = null; pauseRotation(); });
   const mobile = matchMedia('(max-width: 760px), (max-width: 1100px) and (max-height: 600px)');
   const portraitMobile = matchMedia('(max-width: 760px) and (orientation: portrait)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cache = new Map();
-  const shouldBackdrop = image => items.length > 1 && (!portraitMobile.matches || image.naturalWidth/image.naturalHeight > 1.4);
+  const shouldBackdrop = image => portraitMobile.matches
+    ? image.naturalWidth / image.naturalHeight > 1.4
+    : items.length > 1;
   function scheduleAutoplay(delay = 2000) {
     clearTimeout(autoplayTimer);
     if (closed || paused || reduced.matches || items.length < 2) return;
@@ -314,6 +322,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   function paint(composition) {
     poster.width = composition.width; poster.height = composition.height;
     poster.getContext('2d').drawImage(composition,0,0); drawing = composition;
+    zoomImage.src = absolute(items[index]);
     const description=descriptions[index] || media[items[index]]?.description;
     poster.setAttribute('aria-label',`${typeof description==='string' && description.trim() ? description.trim() : title.textContent} — billede ${index+1} af ${items.length}`);
   }
@@ -439,6 +448,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function navigate(direction) {
     if (busy || drag || items.length < 2) return;
+    zoom.reset();
     clearTimeout(autoplayTimer);
     if (group === 'live') {
       const started = performance.now();
@@ -462,7 +472,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function cleanup() {
     if (closed) return;
-    closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect();
+    closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); zoom.reset(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect();
     transition?.destroy(); cache.clear(); reduced.removeEventListener('change',motionPreferenceChanged); window.removeEventListener('keydown',keydown,true);
     mobile.removeEventListener('change',resize); window.removeEventListener('resize',resize); window.visualViewport?.removeEventListener('resize',resize); overlay.remove();
     if (root) root.inert = oldInert;
@@ -476,7 +486,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   window.addEventListener('keydown',keydown,true); mobile.addEventListener('change',resize); window.addEventListener('resize',resize); window.visualViewport?.addEventListener('resize',resize);
   overlay.addEventListener('click',event => { if (event.target === overlay) cleanup(); });
   stage.addEventListener('pointerdown',event => {
-    if (group !== 'live' || busy || items.length < 2 || !drawing || !event.isPrimary || event.button !== 0 || event.target.closest('button')) return;
+    if (group !== 'live' || busy || items.length < 2 || !drawing || zoom.isZoomed() || zoom.isPinching() || !event.isPrimary || event.button !== 0 || event.target.closest('button')) return;
     drag = { id:event.pointerId, x:event.clientX, y:event.clientY, width:stage.clientWidth, horizontal:false };
     stage.setPointerCapture(event.pointerId);
   });
@@ -505,7 +515,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   stage.addEventListener('lostpointercapture',event => releaseDrag(event,true));
   stage.addEventListener('touchstart',event => { if (group !== 'live') startTouch = event.touches.length === 1 ? [event.touches[0].clientX,event.touches[0].clientY] : null; },{passive:true});
   stage.addEventListener('touchend',event => {
-    if (!startTouch) return;
+    if (!startTouch || zoom.isZoomed() || zoom.isPinching()) return;
     const dx=event.changedTouches[0].clientX-startTouch[0],dy=event.changedTouches[0].clientY-startTouch[1];
     if (Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy)*1.3) navigate(dx<0?1:-1);
     startTouch=null;

@@ -41,4 +41,9 @@ body :is(.art-focus-close,.tg-close,.timeline-popup-close,.performance-lightbox-
   width:44px !important;height:44px !important;min-width:44px !important;min-height:44px !important;
   padding:0 !important;border-radius:50% !important;
 }
+body .art-focus-viewer .art-focus-close:focus-visible {
+  outline: 2px solid #fff !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+}
 body .life-year[tabindex="-1"]:focus {outline:none !important;box-shadow:none !important;}

@@ -2,6 +2,8 @@
 .art-focus-viewer::backdrop{background:transparent;}
 .art-focus-shade{position:absolute;inset:0;background:rgba(9,7,6,.86);}
 .art-focus-stage{position:absolute;inset:0;overflow:hidden;touch-action:pan-y;}
+@media (pointer:coarse){.art-focus-stage{touch-action:none;}}
+.art-focus-stage.is-zoomed .art-focus-peek{visibility:hidden;}
 .art-focus-image{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0;object-fit:fill;box-shadow:0 12px 48px #0005;}
 .art-focus-peek{cursor:pointer;opacity:.75;}
 .art-focus-header{position:absolute;display:flex;align-items:center;justify-content:space-between;gap:16px;height:40px;color:#fff;text-shadow:0 2px 6px #000;}

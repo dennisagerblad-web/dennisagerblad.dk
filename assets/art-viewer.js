@@ -1,4 +1,5 @@
 // Local photographic gallery viewer. Art pixels are never regenerated.
+import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 const archive='./archive/art/';
 const sets={
  'Selvportrætter i Trashdrag':Array.from({length:6},(_,i)=>archive+`IMG_${4184+i}.jpg`),
@@ -20,6 +21,10 @@ export function installArtViewer({getVersion,homography}){
  document.body.append(dialog);
  const stage=dialog.querySelector('.art-focus-stage'),header=dialog.querySelector('header'),shade=dialog.querySelector('.art-focus-shade'),close=dialog.querySelector('.art-focus-close'),previous=dialog.querySelector('.art-focus-previous'),next=dialog.querySelector('.art-focus-next'),count=dialog.querySelector('.art-focus-count');
  let state=null,primary=null,peeks=[],busy=false,pointerStart=null,sequence=0,peekSequence=0;
+ const zoom=attachPinchZoom(stage,(scale,x,y)=>{
+  stage.style.transform=`translate(${x}px, ${y}px) scale(${scale})`;
+  stage.classList.toggle('is-zoomed',scale>1.01);
+ },()=>{pointerStart=null;},true);
  const reduced=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
  const wallImages=()=>[...document.querySelectorAll(`.art-preserved-layer[data-room="${getVersion()}"] .art-original[data-gallery-quad]`)];
  function sourceFor(src){return wallImages().find(el=>new URL(el.src).href===new URL(src,location.href).href);}
@@ -74,10 +79,10 @@ export function installArtViewer({getVersion,homography}){
    await drawPeek();close.focus();
   }catch(error){console.error('Unable to open artwork',error);await finish();}finally{busy=false;layout();}
  }
- async function move(delta){if(!state||busy)return;const index=state.index+delta;if(index<0||index>=state.files.length)return;busy=true;const old=primary,t=target(old);try{const img=await picture(state.files[index],'art-focus-image art-focus-primary');removePeeks();state.index=index;primary=img;stage.append(img);const nt=target(img),end=matrix(rectangle(nt.x,nt.y,nt.w,nt.h),img);img.style.transform=end;setHeader(nt);hideWall();await Promise.all([animate(old,[{transform:old.style.transform,opacity:1},{transform:matrix(rectangle(t.x-delta*innerWidth,t.y,t.w,t.h),old),opacity:0}],420),animate(img,[{transform:matrix(rectangle(nt.x+delta*innerWidth,nt.y,nt.w,nt.h),img),opacity:.5},{transform:end,opacity:1}],420)]);old.remove();await drawPeek();}finally{busy=false;layout();}}
- async function finish(){if(!state)return;wallImages().forEach(el=>el.style.visibility='');const button=state.button;state=null;primary=null;removePeeks();dialog.close();stage.replaceChildren();document.body.classList.remove('art-focus-open');button?.focus();}
+ async function move(delta){if(!state||busy)return;const index=state.index+delta;if(index<0||index>=state.files.length)return;zoom.reset();busy=true;const old=primary,t=target(old);try{const img=await picture(state.files[index],'art-focus-image art-focus-primary');removePeeks();state.index=index;primary=img;stage.append(img);const nt=target(img),end=matrix(rectangle(nt.x,nt.y,nt.w,nt.h),img);img.style.transform=end;setHeader(nt);hideWall();await Promise.all([animate(old,[{transform:old.style.transform,opacity:1},{transform:matrix(rectangle(t.x-delta*innerWidth,t.y,t.w,t.h),old),opacity:0}],420),animate(img,[{transform:matrix(rectangle(nt.x+delta*innerWidth,nt.y,nt.w,nt.h),img),opacity:.5},{transform:end,opacity:1}],420)]);old.remove();await drawPeek();}finally{busy=false;layout();}}
+ async function finish(){if(!state)return;zoom.reset();wallImages().forEach(el=>el.style.visibility='');const button=state.button;state=null;primary=null;removePeeks();dialog.close();stage.replaceChildren();document.body.classList.remove('art-focus-open');button?.focus();}
  async function shut(){
-  if(!state||busy)return;busy=true;removePeeks();const img=primary,t=target(img),from=rectangle(t.x,t.y,t.w,t.h);let to=origin(state.files[state.index]);
+  if(!state||busy)return;zoom.reset();busy=true;removePeeks();const img=primary,t=target(img),from=rectangle(t.x,t.y,t.w,t.h);let to=origin(state.files[state.index]);
   const installation=state.title==='Voksen Dukke Leg';
   if(installation){const r=state.button.getBoundingClientRect(),scale=Math.min(r.width/t.w,r.height/t.h),w=t.w*scale,h=t.h*scale;to=rectangle(r.left+(r.width-w)/2,r.top+(r.height-h)/2,w,h);}
   await Promise.all([animateArtwork(img,from,to),...((installation||state.title==='Kongeligt Porcelæn')?[animate(img,[{opacity:1},{opacity:0}])]:[]),animate(shade,[{opacity:1},{opacity:0}]),animate(header,[{opacity:1},{opacity:0}])]);
@@ -98,8 +103,8 @@ export function installArtViewer({getVersion,homography}){
   if(e.key==='ArrowRight'){e.preventDefault();move(1);}
   if(e.key==='ArrowLeft'){e.preventDefault();move(-1);}
  });
- dialog.addEventListener('pointerdown',e=>{pointerStart={x:e.clientX,y:e.clientY};});
- dialog.addEventListener('pointerup',e=>{if(!pointerStart)return;const dx=e.clientX-pointerStart.x,dy=e.clientY-pointerStart.y;pointerStart=null;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){e.preventDefault();move(dx<0?1:-1);}});
+ dialog.addEventListener('pointerdown',e=>{if(!zoom.isZoomed()&&!zoom.isPinching())pointerStart={x:e.clientX,y:e.clientY};});
+ dialog.addEventListener('pointerup',e=>{if(!pointerStart||zoom.isZoomed()||zoom.isPinching())return;const dx=e.clientX-pointerStart.x,dy=e.clientY-pointerStart.y;pointerStart=null;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){e.preventDefault();move(dx<0?1:-1);}});
  function layout(){if(!state||busy||!primary)return;const t=target(primary);primary.style.transform=matrix(rectangle(t.x,t.y,t.w,t.h),primary);setHeader(t);drawPeek();}
  window.addEventListener('resize',layout);
 }

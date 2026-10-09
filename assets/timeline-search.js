@@ -11,6 +11,7 @@ const groupIcons = {
 };
 const root = document.getElementById('root');
 const mobile = matchMedia('(max-width: 760px)');
+const portraitMobile = matchMedia('(max-width: 760px) and (orientation: portrait)');
 const mobileLandscape = matchMedia('(max-width: 1100px) and (max-height: 650px) and (orientation: landscape)');
 const normalize = value => String(value ?? '')
   .toLocaleLowerCase('da-DK')
@@ -95,16 +96,29 @@ function mountSearch() {
   const syncWidth = () => {
     pendingWidth = 0;
     if (!groupTabs?.isConnected || !search.isConnected) return;
-    if (!mobile.matches) {
-      search.style.width = '';
+    if (portraitMobile.matches) {
+      controls.style.transform = '';
+      const heading = root.querySelector('.section-5 .section-heading');
+      const free = controls.getBoundingClientRect().right - (heading?.getBoundingClientRect().right || 0) - 8;
+      search.style.width = `${Math.max(130, free)}px`;
       return;
     }
+    if (!mobile.matches) {
+      search.style.width = '';
+      controls.style.transform = '';
+      if (mobileLandscape.matches) {
+        controls.style.transform = `translateX(${20 - controls.getBoundingClientRect().left}px)`;
+      }
+      return;
+    }
+    controls.style.transform = '';
     const tabsWidth = groupTabs.offsetWidth;
     if (!tabsWidth) return;
     const scale = mobileLandscape.matches
       ? Math.min(1.25, (innerWidth - 100) / tabsWidth)
       : (innerWidth - 40) / tabsWidth;
     search.style.width = `${tabsWidth * scale}px`;
+    if (mobileLandscape.matches) controls.style.transform = `translateX(${20 - controls.getBoundingClientRect().left}px)`;
   };
   const scheduleWidth = () => {
     cancelAnimationFrame(pendingWidth);
@@ -125,10 +139,15 @@ function mountSearch() {
   input.setAttribute('aria-controls', 'timeline-search-results');
   input.setAttribute('aria-expanded', 'false');
   input.value = query;
+  const clearButton = document.createElement('button');
+  clearButton.type = 'button';
+  clearButton.className = 'timeline-search-clear';
+  clearButton.setAttribute('aria-label', 'Ryd søgning');
+  clearButton.textContent = '×';
   const panel = document.createElement('div');
   panel.className = 'timeline-search-results';
   panel.id = 'timeline-search-results';
-  field.append(icon, input);
+  field.append(icon, input, clearButton);
   search.append(field, panel);
   controls.prepend(search);
   if (groupTabs) {
@@ -143,8 +162,17 @@ function mountSearch() {
     input.setAttribute('aria-expanded', 'false');
   }
 
+  function fitResults() {
+    if (!search.classList.contains('is-open')) return;
+    const viewport = window.visualViewport;
+    const bottom = (viewport?.offsetTop || 0) + (viewport?.height || innerHeight);
+    const top = panel.getBoundingClientRect().top;
+    panel.style.maxHeight = `${Math.max(72, Math.min(430, bottom - top - 12))}px`;
+  }
+
   function render() {
     query = input.value;
+    clearButton.hidden = !query.length;
     panel.replaceChildren();
     const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
     if (!terms.length) return close();
@@ -192,13 +220,28 @@ function mountSearch() {
     }
     search.classList.add('is-open');
     input.setAttribute('aria-expanded', 'true');
+    requestAnimationFrame(fitResults);
   }
 
+  clearButton.addEventListener('click', () => {
+    input.value = '';
+    render();
+    input.focus();
+  });
+  window.visualViewport?.addEventListener('resize', fitResults);
+  window.visualViewport?.addEventListener('scroll', fitResults);
+  addEventListener('resize', fitResults);
   input.addEventListener('input', render);
   input.addEventListener('focus', () => { if (query.trim()) render(); });
   input.addEventListener('keydown', event => {
     if (event.key === 'Escape') { close(); input.blur(); }
     if (event.key === 'Enter') {
+      if (matchMedia('(pointer: coarse)').matches || mobile.matches || mobileLandscape.matches) {
+        event.preventDefault();
+        input.blur();
+        requestAnimationFrame(fitResults);
+        return;
+      }
       const first = panel.querySelector('li button');
       if (first) { event.preventDefault(); first.click(); }
     }
