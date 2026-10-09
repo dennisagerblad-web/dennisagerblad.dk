@@ -203,7 +203,11 @@ function mountSearch() {
       if (first) { event.preventDefault(); first.click(); }
     }
   });
-  document.addEventListener('pointerdown', event => { if (!search.contains(event.target)) close(); });
+  document.addEventListener('pointerdown', event => {
+    if (search.contains(event.target)) return;
+    close();
+    if (document.activeElement === input) input.blur();
+  });
   if (query.trim()) render();
 }
 

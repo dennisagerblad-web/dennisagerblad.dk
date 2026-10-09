@@ -59,15 +59,15 @@ function compose(image, w, h, useBackdrop) {
   const ctx = canvas.getContext('2d');
   const pixelRatio = Math.min(devicePixelRatio || 1, 2);
   const frameWidth = w / pixelRatio, frameHeight = h / pixelRatio;
-  // Only multi-image transitions need a blurred image behind the whole photo.
+  ctx.imageSmoothingQuality = 'high';
+  // Draw from the original image. Enlarging a 48px copy made visible stair steps.
   if (useBackdrop) {
-    const backdrop = document.createElement('canvas'); backdrop.width = 48; backdrop.height = Math.max(16, Math.round(48*h/w));
-    const bg = backdrop.getContext('2d');
-    const scale = Math.max(backdrop.width/image.naturalWidth,backdrop.height/image.naturalHeight)*1.18;
-    bg.drawImage(image,(backdrop.width-image.naturalWidth*scale)/2,(backdrop.height-image.naturalHeight*scale)/2,image.naturalWidth*scale,image.naturalHeight*scale);
-    ctx.save(); ctx.filter = `blur(${Math.max(12,w*.025)}px) brightness(.64)`;
-    const bleed = Math.ceil(w*.08);
-    ctx.drawImage(backdrop,-bleed,-bleed,w+bleed*2,h+bleed*2); ctx.restore();
+    const scale = Math.max(w/image.naturalWidth,h/image.naturalHeight)*1.16;
+    const width = image.naturalWidth*scale, height = image.naturalHeight*scale;
+    ctx.save();
+    ctx.filter = `blur(${Math.max(18,Math.min(w,h)*.045)}px) brightness(.64)`;
+    ctx.drawImage(image,(w-width)/2,(h-height)/2,width,height);
+    ctx.restore();
   }
   // Fit the sharp photograph to the available frame, also for smaller originals.
   const [x,y,iw,ih] = containRect(image.naturalWidth,image.naturalHeight,frameWidth,frameHeight);
@@ -241,8 +241,10 @@ export function openTimelineGallery(entry, group, theme = {}) {
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
   let scene = null, drag = null, paused = false, rotationPointerPaused = null;
   const mobile = matchMedia('(max-width: 760px), (max-width: 1100px) and (max-height: 600px)');
+  const portraitMobile = matchMedia('(max-width: 760px) and (orientation: portrait)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cache = new Map();
+  const shouldBackdrop = image => items.length > 1 && (!portraitMobile.matches || image.naturalWidth/image.naturalHeight > 1.4);
   function scheduleAutoplay(delay = 2000) {
     clearTimeout(autoplayTimer);
     if (closed || paused || reduced.matches || items.length < 2) return;
@@ -275,7 +277,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     }));
     return cache.get(src);
   }
-  function layout() {
+  function layout(slideIndex = index, image = null) {
     if (closed) return;
     const vh=window.visualViewport?.height || innerHeight, vw=document.documentElement.clientWidth;
     const compact=mobile.matches;
@@ -283,7 +285,11 @@ export function openTimelineGallery(entry, group, theme = {}) {
     const padding=40;
     const maxW=Math.min(vw-margin*2,1200);
     const measuredRatio=galleryRatio(items,media,vw/vh);
-    const ratio=entry.date==='2026-08-08' && !compact ? Math.max(measuredRatio,1.5) : measuredRatio;
+    const dimensions=media[items[slideIndex]];
+    const imageWidth=image?.naturalWidth || dimensions?.width;
+    const imageHeight=image?.naturalHeight || dimensions?.height;
+    const slideRatio=imageWidth > 0 && imageHeight > 0 ? imageWidth/imageHeight : measuredRatio;
+    const ratio=portraitMobile.matches ? (slideRatio > 1.4 ? 4/3 : slideRatio) : entry.date==='2026-08-08' && !compact ? Math.max(measuredRatio,1.5) : measuredRatio;
     // Mobile keeps its 16px outer margin. Fit the whole photo below the heading,
     // including short landscape screens, without changing its proportions.
     let width=maxW;
@@ -298,7 +304,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     }
     dialog.style.width=`${Math.floor(width)}px`;
     const available=Math.max(120,vh-margin*2-padding-header.getBoundingClientRect().height-20);
-    const frameRatio=compact ? Math.max(ratio,(width-padding)/available) : ratio;
+    const frameRatio=compact && !portraitMobile.matches ? Math.max(ratio,(width-padding)/available) : ratio;
     dialog.style.setProperty('--tg-ratio',String(frameRatio));
   }
   function size() {
@@ -324,6 +330,12 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function finishScene(session, commit) {
     if (scene !== session || closed) return;
+    if (!commit && portraitMobile.matches) {
+      effectCanvas.classList.remove('is-active');
+      scene = null; busy = false; stage.setAttribute('aria-busy','false');
+      layout(index); render();
+      return;
+    }
     if (commit) { index = session.target; paint(session.after); announce(); }
     effectCanvas.classList.remove('is-active');
     scene = null; busy = false; stage.setAttribute('aria-busy','false'); prefetch();
@@ -351,14 +363,17 @@ export function openTimelineGallery(entry, group, theme = {}) {
     scene = session; busy = true; ++request;
     cancelAnimationFrame(frame); effectCanvas.classList.remove('is-active');
     stage.setAttribute('aria-busy','true');
-    imageAt(session.target).then(image => {
+    Promise.all([imageAt(index),imageAt(session.target)]).then(([currentImage,image]) => {
       if (closed || scene !== session) return;
+      if (portraitMobile.matches) layout(session.target,image);
       const [w,h] = size();
-      session.after = compose(image,w,h,items.length > 1);
-      if (drawing && drawing.width === w && drawing.height === h && !reduced.matches) {
+      const before=portraitMobile.matches ? compose(currentImage,w,h,shouldBackdrop(currentImage)) : drawing;
+      if (portraitMobile.matches) paint(before);
+      session.after = compose(image,w,h,shouldBackdrop(image));
+      if (before && before.width === w && before.height === h && !reduced.matches) {
         transition ||= createTransition(effectCanvas);
         if (transition) {
-          transition.prepare(drawing,session.after,effectName,direction);
+          transition.prepare(before,session.after,effectName,direction);
           transition.draw(session.progress); effectCanvas.classList.add('is-active'); session.animated = true;
         }
       }
@@ -375,7 +390,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     });
     return session;
   }
-  async function render(direction = 0) {
+  async function render(direction = 0, previousIndex = null) {
     const ticket = ++request;
     clearTimeout(autoplayTimer);
     cancelScene();
@@ -385,10 +400,17 @@ export function openTimelineGallery(entry, group, theme = {}) {
     try {
       const image = await imageAt(index);
       if (closed || ticket !== request) return;
+      if (portraitMobile.matches) layout(index,image);
       const [w,h] = size();
-      const composed = compose(image,w,h,items.length > 1);
+      let before = drawing;
+      if (direction && previousIndex !== null && before && (before.width !== w || before.height !== h)) {
+        const previousImage = await imageAt(previousIndex);
+        if (closed || ticket !== request) return;
+        before = compose(previousImage,w,h,shouldBackdrop(previousImage));
+      }
+      const composed = compose(image,w,h,shouldBackdrop(image));
       status.hidden = true; poster.hidden = false;
-      const before = drawing; paint(composed); announce();
+      paint(composed); announce();
       if (direction && before && before.width === w && before.height === h && !reduced.matches) {
         transition ||= createTransition(effectCanvas);
         if (transition) {
@@ -422,8 +444,9 @@ export function openTimelineGallery(entry, group, theme = {}) {
       const started = performance.now();
       settleScene(beginScene(direction),1,started); return;
     }
+    const previousIndex = index;
     index = (index+direction+items.length)%items.length;
-    render(direction);
+    render(direction,previousIndex);
   }
   function keydown(event) {
     if (event.key === 'Escape') { event.preventDefault(); event.stopImmediatePropagation(); cleanup(); }
@@ -491,7 +514,11 @@ export function openTimelineGallery(entry, group, theme = {}) {
   effectCanvas.addEventListener('webglcontextlost',event => {
     event.preventDefault(); cancelAnimationFrame(frame); cancelScene(); effectCanvas.classList.remove('is-active'); busy=false; transition=null; stage.setAttribute('aria-busy','false'); scheduleAutoplay();
   });
-  const observer = new ResizeObserver(() => render()); observer.observe(stage);
+  const observer = new ResizeObserver(() => {
+    if (scene || busy || stage.getAttribute('aria-busy') === 'true') return;
+    const [w,h] = size();
+    if (!drawing || drawing.width !== w || drawing.height !== h) render();
+  }); observer.observe(stage);
   const headerObserver = new ResizeObserver(resize); headerObserver.observe(header);
   function link(label, href) {
     const url = new URL(href,assetBase);

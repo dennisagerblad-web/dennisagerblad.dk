@@ -44,7 +44,8 @@ body .section-5 .timeline-search input:focus-visible {
   font: 14px/1.3 Arial, sans-serif;
 }
 .section-5 .timeline-search input::placeholder { color: #d8e7f4; opacity: .9; }
-.section-5 .timeline-search input::-webkit-search-cancel-button { cursor: pointer; }
+.section-5 .timeline-search input::-webkit-search-cancel-button { display: none; -webkit-appearance: none; }
+.section-5 .timeline-search input::-ms-clear { display: none; }
 .section-5 .timeline-search-results {
   position: absolute;
   top: calc(100% + 8px);
@@ -94,7 +95,18 @@ body:has(.section-5 .timeline-search.is-open) .timeline-year-rail { visibility: 
 .section-5 .timeline-search-result-word { --result-accent: #d0b5f2; }
 .section-5 .timeline-search-result-press { --result-accent: #d3d5e2; }
 .section-5 .timeline-search-result-title { display: block; font: 14px/1.3 Arial, sans-serif; }
-.section-5 .life-event.timeline-search-hit .life-copy { outline: 3px solid #fff3a0; outline-offset: 5px; border-radius: 8px; }
+.section-5 .timeline-shell[data-theme="live"] { --timeline-search-hit-color: #ed4053; }
+.section-5 .timeline-shell[data-theme="music"] { --timeline-search-hit-color: #2799ee; }
+.section-5 .timeline-shell[data-theme="art"] { --timeline-search-hit-color: #ffdb31; }
+.section-5 .timeline-shell[data-theme="word"] { --timeline-search-hit-color: #a253df; }
+.section-5 .timeline-shell[data-theme="press"] { --timeline-search-hit-color: #000; }
+.section-5 .life-event.timeline-search-hit .life-copy { outline: 3px solid var(--timeline-search-hit-color, #ffdb31); outline-offset: 5px; border-radius: 8px; }
+.section-5 .timeline-shell[data-theme="press"] .life-event.timeline-search-hit .life-copy { box-shadow: 0 0 0 5px #fffd; }
+
+/* iOS zooms the page when a focused search field uses text below 16px. */
+@media (pointer: coarse) {
+  .section-5 .timeline-search input { font-size: 16px; }
+}
 
 @media (max-width: 760px) {
   .section-5 .timeline-controls:has(.timeline-search) {
@@ -106,7 +118,7 @@ body:has(.section-5 .timeline-search.is-open) .timeline-year-rail { visibility: 
   }
   .section-5 .timeline-search { flex: none; width: 100%; }
   .section-5 .timeline-search-field { min-height: 44px; }
-  .section-5 .timeline-search input { min-height: 42px; }
+  .section-5 .timeline-search input { min-height: 42px; font-size: 16px; }
   .section-5 .timeline-search-results {
     top: calc(100% + var(--timeline-mobile-height, 38px) + 16px);
     right: 50%;
