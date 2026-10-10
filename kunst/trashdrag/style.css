@@ -50,3 +50,5 @@ body{isolation:isolate}body>header{position:relative;text-shadow:0 1px 4px #000;
 .exhibition-portrait{grid-template-columns:.663fr .75fr .75fr .75fr .75fr .793fr .75fr}
 .gallery .photo img{width:100%;height:auto;object-fit:contain;display:block}
 @media(max-width:760px){.exhibition-landscape,.exhibition-portrait{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}.exhibition-landscape .photo{aspect-ratio:3/2}.exhibition-portrait .photo{aspect-ratio:3/4}.gallery .photo img{height:100%;object-position:center}}
+
+.portraits .photo img{filter:drop-shadow(2px 4px 5px rgb(0 0 0 / 45%))}
