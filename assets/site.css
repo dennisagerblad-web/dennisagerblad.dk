@@ -312,7 +312,7 @@
 
 .section-0 .music-speech-bubble::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url("./music-bubble-left.webp") center / 100% 100% no-repeat;transform:none}
 @media(max-width:760px) and (orientation:portrait){.section-0 .archive .music-speech-bubble{background:none}.section-0 .music-speech-bubble::before{background-image:url("./video-bubble-mobile.webp");transform:none}}
-@media(max-height:500px) and (orientation:landscape){.section-0 .archive .music-speech-bubble{width:calc(100% - 320px);margin:0 140px 8px auto;padding:20px 30px 24px 60px;font-size:20px}}
+@media(max-height:500px) and (orientation:landscape){.section-0 .archive .music-speech-bubble{width:calc(100% - 320px);margin:0 140px 8px auto;padding:28px 38px 28px 120px;font-size:19px}}
 
 @media(max-height:500px) and (orientation:landscape){.ship.is-open.section-0 .portrait-underlay{background-position:14% -38svh}}
 
