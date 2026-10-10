@@ -31,7 +31,7 @@
     link.textContent = 'Trashdrag på Listaskálin';
     link.dataset.trashdragLink = '';
     link.style.cssText = 'color:inherit;text-decoration:underline;text-underline-offset:3px';
-    paragraph.append(document.createElement('br'), link);
+    paragraph.append(document.createTextNode(' '), link);
   }
   new MutationObserver(installLink).observe(document.getElementById('root'), {childList:true,subtree:true});
   installLink();
