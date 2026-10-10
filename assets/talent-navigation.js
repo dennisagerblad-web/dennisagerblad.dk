@@ -3,8 +3,8 @@
   const talentPath = '/video/danmark-har-talent/';
   if (window.parent !== window && location.pathname === talentPath) {
     const section = new URLSearchParams(location.search).get('from') === 'Video' ? 'Video' : 'Tidslinjen';
-    for (const link of document.querySelectorAll('a.back, footer a')) {
-      link.textContent = '← Tilbage til ' + section;
+    for (const link of document.querySelectorAll('a.back')) {
+      link.textContent = '← Tilbage';
       link.addEventListener('click', event => {
         event.preventDefault();
         window.parent.postMessage({ type: 'dennis-close-talent' }, location.origin);

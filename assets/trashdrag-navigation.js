@@ -3,7 +3,7 @@
   const trashdragPath = '/kunst/trashdrag/';
   if (window.parent !== window && location.pathname === trashdragPath) {
     const section = 'Kunst';
-    for (const link of document.querySelectorAll('header a, footer a')) {
+    for (const link of document.querySelectorAll('header a')) {
       link.textContent = '← Tilbage';
       link.addEventListener('click', event => {
         event.preventDefault();

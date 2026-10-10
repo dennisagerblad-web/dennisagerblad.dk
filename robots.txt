@@ -5,3 +5,5 @@ Disallow: /gritt
 
 
 # Check venligst syntax med : http://www.searchengineworld.com/cgi-bin/robotcheck.cgi
+
+Sitemap: https://dennisagerblad.dk/sitemap.xml

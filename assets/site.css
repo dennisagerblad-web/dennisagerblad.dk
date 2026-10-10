@@ -234,7 +234,8 @@
   height:auto;
   margin:5px 9vw 5px auto;
   padding:0;
-  background:transparent url("./video-bubble-wide.webp") center / 100% 100% no-repeat;
+  position:relative;isolation:isolate;
+  background:none;
   color:#251a12;
   font:400 clamp(18px,1.8vw,23px)/1.02 "Caveat Timeline","Bradley Hand",cursive;
   text-align:center;
@@ -279,3 +280,42 @@
 @media (max-width:1100px) and (max-height:500px) and (orientation:landscape){
   .section-1 .video-grid{grid-template-columns:minmax(0,1fr);gap:8px}
 }
+
+/* Musik: the portrait looks over the covers, with its introduction in a speech bubble. */
+.ship.is-open.section-0 .portrait-underlay{background-position:14% -43svh;background-size:auto 145svh;background-repeat:no-repeat;background-color:#07121c}
+.section-0 .archive .music-speech-bubble{
+  box-sizing:border-box;
+  width:min(74%,1060px);
+  max-width:none;
+  margin:56px 0 8px auto;
+  padding:32px 44px 32px 130px;
+  position:relative;isolation:isolate;
+  background:none;
+  color:#251a12;
+  font:400 clamp(20px,1.6vw,23px)/1.2 "Caveat Timeline","Bradley Hand",cursive;
+  text-align:center;
+  text-shadow:none;
+  overflow-wrap:break-word;
+}
+.section-0 .music-speech-bubble a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:760px) and (orientation:portrait){
+  .ship.is-open.section-0 .portrait-underlay{background-position:14% -49svh}
+  .section-0 .archive .music-speech-bubble{
+    width:100%;margin:65px 0 8px;padding:60px 48px 46px;
+    background-image:url("./video-bubble-mobile.webp");
+    font-size:21px;
+  }
+}
+@media(max-height:500px) and (orientation:landscape){
+  .section-0 .archive .music-speech-bubble{width:76%;margin:0 0 8px auto;padding:54px 48px 38px;font-size:20px}
+}
+
+.section-0 .music-speech-bubble::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url("./music-bubble-left.webp") center / 100% 100% no-repeat;transform:none}
+@media(max-width:760px) and (orientation:portrait){.section-0 .archive .music-speech-bubble{background:none}.section-0 .music-speech-bubble::before{background-image:url("./video-bubble-mobile.webp");transform:none}}
+@media(max-height:500px) and (orientation:landscape){.section-0 .archive .music-speech-bubble{width:calc(100% - 320px);margin:0 140px 8px auto;padding:20px 30px 24px 60px;font-size:20px}}
+
+@media(max-height:500px) and (orientation:landscape){.ship.is-open.section-0 .portrait-underlay{background-position:14% -38svh}}
+
+/* Leave a small gap between the Musik bubble tip and the glasses. */
+@media(min-width:761px){.section-0 .music-speech-bubble::before{left:44px}}
+@media(max-height:500px) and (orientation:landscape){.section-0 .music-speech-bubble::before{left:44px}}
