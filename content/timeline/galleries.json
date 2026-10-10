@@ -5098,21 +5098,21 @@
         "Vi sang sangen Fantasi."
       ],
       "images": [
-        "./content/talent/semifinale/01.jpg",
-        "./content/talent/semifinale/02.jpg",
-        "./content/talent/semifinale/03.jpg",
-        "./content/talent/semifinale/04.jpg",
-        "./content/talent/semifinale/05.jpg",
-        "./content/talent/semifinale/06.jpg",
-        "./content/talent/semifinale/07.jpg",
-        "./content/talent/semifinale/08.jpg",
-        "./content/talent/semifinale/09.jpg",
-        "./content/talent/semifinale/10.jpg",
-        "./content/talent/semifinale/11.jpg",
-        "./content/talent/semifinale/12.jpg",
-        "./content/talent/semifinale/13.jpg",
-        "./content/talent/semifinale/14.jpg",
-        "./content/talent/semifinale/15.jpg"
+        "./content/talent/semifinale/01.webp",
+        "./content/talent/semifinale/02.webp",
+        "./content/talent/semifinale/03.webp",
+        "./content/talent/semifinale/04.webp",
+        "./content/talent/semifinale/05.webp",
+        "./content/talent/semifinale/06.webp",
+        "./content/talent/semifinale/07.webp",
+        "./content/talent/semifinale/08.webp",
+        "./content/talent/semifinale/09.webp",
+        "./content/talent/semifinale/10.webp",
+        "./content/talent/semifinale/11.webp",
+        "./content/talent/semifinale/12.webp",
+        "./content/talent/semifinale/13.webp",
+        "./content/talent/semifinale/14.webp",
+        "./content/talent/semifinale/15.webp"
       ],
       "imageDescriptions": [
         "Sceneshow",
@@ -5136,7 +5136,7 @@
       "title": "Interview om at gå videre i Talent",
       "details": [],
       "images": [
-        "./content/talent/presse/01.jpg"
+        "./content/talent/presse/01.webp"
       ],
       "imageDescriptions": [
         "Se og hor"
@@ -5148,12 +5148,12 @@
         "Vi sang sangen Giv Den Gas."
       ],
       "images": [
-        "./content/talent/liveshow/01.jpeg",
-        "./content/talent/liveshow/02.jpg",
-        "./content/talent/liveshow/03.jpg",
-        "./content/talent/liveshow/04.jpg",
-        "./content/talent/liveshow/05.jpg",
-        "./content/talent/liveshow/06.jpg"
+        "./content/talent/liveshow/01.webp",
+        "./content/talent/liveshow/02.webp",
+        "./content/talent/liveshow/03.webp",
+        "./content/talent/liveshow/04.webp",
+        "./content/talent/liveshow/05.webp",
+        "./content/talent/liveshow/06.webp"
       ],
       "imageDescriptions": [
         "Bandfoto ved talentvæg",
@@ -5170,15 +5170,15 @@
         "Vi sang sangen Selleri."
       ],
       "images": [
-        "./content/talent/audition/01.png",
-        "./content/talent/audition/02.png",
-        "./content/talent/audition/03.png",
-        "./content/talent/audition/04.png",
-        "./content/talent/audition/05.jpg",
-        "./content/talent/audition/06.png",
-        "./content/talent/audition/07.jpg",
-        "./content/talent/audition/08.png",
-        "./content/talent/audition/09.png"
+        "./content/talent/audition/01.webp",
+        "./content/talent/audition/02.webp",
+        "./content/talent/audition/03.webp",
+        "./content/talent/audition/04.webp",
+        "./content/talent/audition/05.webp",
+        "./content/talent/audition/06.webp",
+        "./content/talent/audition/07.webp",
+        "./content/talent/audition/08.webp",
+        "./content/talent/audition/09.webp"
       ],
       "imageDescriptions": [
         "Dennis Agerblad Band i Talent",

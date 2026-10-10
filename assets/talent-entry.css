@@ -3,3 +3,13 @@
 .section-1 .talent-entry-text{position:absolute;inset:auto 0 0;padding:30px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.92));color:#ffe66a;font:bold 14px/1.35 Arial,sans-serif;text-shadow:0 1px 2px #000;z-index:1}
 .section-1 .talent-entry:focus-visible{outline:3px solid #ffe66a;outline-offset:4px}
 @media(max-width:760px){.section-1 .talent-entry-text{font-size:16px;padding:36px 14px 12px}}
+
+/* Fit the Se og Hør clipping and its link inside the viewport. */
+.timeline-overlay .timeline-popup:has(img[src*="content/talent/presse/"]) {height:calc(100dvh - 64px);display:flex;flex-direction:column;overflow:hidden;}
+.timeline-overlay .timeline-popup:has(img[src*="content/talent/presse/"]) .timeline-popup-header {flex:none;margin-bottom:12px;}
+.timeline-overlay .timeline-popup:has(img[src*="content/talent/presse/"]) .timeline-popup-summary {flex:1;min-height:0;display:flex;flex-direction:column;gap:12px;}
+.timeline-overlay .timeline-popup:has(img[src*="content/talent/presse/"]) .timeline-popup-gallery {flex:1;min-height:0;display:flex;}
+.timeline-overlay .timeline-popup:has(img[src*="content/talent/presse/"]) figure {height:100%;min-height:0;margin:0;display:flex;justify-content:center;}
+.timeline-overlay .timeline-popup:has(img[src*="content/talent/presse/"]) figure img {width:100%;height:100%;max-height:100%;object-fit:contain;}
+.timeline-overlay .timeline-popup:has(img[src*="content/talent/presse/"]) .timeline-popup-link {flex:none;align-self:center;margin:0;padding:6px 0;color:#fff;font:400 15px/1.4 Helvetica,Arial,sans-serif;text-transform:none;letter-spacing:normal;text-align:center;}
+@media(max-width:760px),(max-height:600px) { .timeline-overlay .timeline-popup:has(img[src*="content/talent/presse/"]) {height:calc(100dvh - 32px);} }
