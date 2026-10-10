@@ -1,4 +1,4 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261010-talent-release-4';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261010-talent-release-5';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
