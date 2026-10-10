@@ -27,7 +27,7 @@ body{isolation:isolate}body>header{position:relative;text-shadow:0 1px 4px #000;
 @media(max-width:600px){.room-section{margin-left:-16px;margin-right:-16px}.black-room{aspect-ratio:1.244444}.room-copy,.page-footer{padding-left:16px;padding-right:16px}}
 
 .room-sign{width:15.5%;max-width:195px;transform:rotate(-2deg);margin:0 auto 7px}
-@media(max-width:600px){.room-sign{width:40%}}
+@media(max-width:600px){.room-sign{width:40%;max-width:390px}}
 
 /* Let the hanging sign overlap the room ceiling. */
 .room-sign{position:relative;z-index:2;margin-bottom:-28px}
