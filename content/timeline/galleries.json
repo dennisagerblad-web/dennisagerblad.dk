@@ -621,21 +621,6 @@
       "details": [],
       "images": []
     },
-    "2015-02-21|TV2|Danmark Har Talent - Semifinale Liveshow": {
-      "title": "Danmark Har Talent - Semifinale Liveshow",
-      "details": [],
-      "images": []
-    },
-    "2015-01-24|TV2|Danmark Har Talent - Kvartfinale Liveshow": {
-      "title": "Danmark Har Talent - Kvartfinale Liveshow",
-      "details": [],
-      "images": []
-    },
-    "2015-01-10|TV2|Danmark Har Talent - Audition": {
-      "title": "Danmark Har Talent - Audition",
-      "details": [],
-      "images": []
-    },
     "2014-10-05|Happening|Vonk, Malmø": {
       "title": "Vonk, Malmø",
       "details": [],
@@ -5105,6 +5090,106 @@
       ],
       "imageDescriptions": [
         "To personer synger på en scene foran regnbueflag; den ene spiller guitar, den anden bærer sort kjole og ansigtsmaling."
+      ]
+    },
+    "2015-02-21|TV2|Danmark Har Talent - Semifinale Liveshow": {
+      "title": "Danmark Har Talent - Semifinale Liveshow",
+      "details": [
+        "Vi sang sangen Fantasi."
+      ],
+      "images": [
+        "./content/talent/semifinale/01.jpg",
+        "./content/talent/semifinale/02.jpg",
+        "./content/talent/semifinale/03.jpg",
+        "./content/talent/semifinale/04.jpg",
+        "./content/talent/semifinale/05.jpg",
+        "./content/talent/semifinale/06.jpg",
+        "./content/talent/semifinale/07.jpg",
+        "./content/talent/semifinale/08.jpg",
+        "./content/talent/semifinale/09.jpg",
+        "./content/talent/semifinale/10.jpg",
+        "./content/talent/semifinale/11.jpg",
+        "./content/talent/semifinale/12.jpg",
+        "./content/talent/semifinale/13.jpg",
+        "./content/talent/semifinale/14.jpg",
+        "./content/talent/semifinale/15.jpg"
+      ],
+      "imageDescriptions": [
+        "Sceneshow",
+        "Dennis Agerblad",
+        "Athena Lady",
+        "Delores Duchess LaCour",
+        "Hairwerk Hugh Mongous",
+        "Moma Van Vest",
+        "Monstrene venter",
+        "Børnefans 1",
+        "Børnefans 2",
+        "Børnefans 3",
+        "Fanplakat 1",
+        "Fanplakat 2",
+        "Fanplakat 3",
+        "Fanplakat 4",
+        "Fanplakat 5"
+      ]
+    },
+    "2015-01-25|Se & Hør|Interview om at gå videre i Talent": {
+      "title": "Interview om at gå videre i Talent",
+      "details": [],
+      "images": [
+        "./content/talent/presse/01.jpg"
+      ],
+      "imageDescriptions": [
+        "Se og hor"
+      ]
+    },
+    "2015-01-24|TV2|Danmark Har Talent - Første Liveshow": {
+      "title": "Danmark Har Talent - Første Liveshow",
+      "details": [
+        "Vi sang sangen Giv Den Gas."
+      ],
+      "images": [
+        "./content/talent/liveshow/01.jpeg",
+        "./content/talent/liveshow/02.jpg",
+        "./content/talent/liveshow/03.jpg",
+        "./content/talent/liveshow/04.jpg",
+        "./content/talent/liveshow/05.jpg",
+        "./content/talent/liveshow/06.jpg"
+      ],
+      "imageDescriptions": [
+        "Bandfoto ved talentvæg",
+        "Areal",
+        "Athena Lady 1",
+        "Dennis Agerblad 1",
+        "Hairwerk Hugh Mongous",
+        "Moma Van Vest 1"
+      ]
+    },
+    "2015-01-10|TV2|Danmark Har Talent - Audition": {
+      "title": "Danmark Har Talent - Audition",
+      "details": [
+        "Vi sang sangen Selleri."
+      ],
+      "images": [
+        "./content/talent/audition/01.png",
+        "./content/talent/audition/02.png",
+        "./content/talent/audition/03.png",
+        "./content/talent/audition/04.png",
+        "./content/talent/audition/05.jpg",
+        "./content/talent/audition/06.png",
+        "./content/talent/audition/07.jpg",
+        "./content/talent/audition/08.png",
+        "./content/talent/audition/09.png"
+      ],
+      "imageDescriptions": [
+        "Dennis Agerblad Band i Talent",
+        "Anders 2",
+        "Anders Hairwerk 1",
+        "Dennis 2",
+        "Dennis Agerblad11",
+        "Hairwerk 1",
+        "IMG_7074",
+        "Knud 2",
+        "Povilas"
       ]
     }
   }

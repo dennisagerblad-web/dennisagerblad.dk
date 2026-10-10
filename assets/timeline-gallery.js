@@ -1,15 +1,15 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20261009-popup-layout-5';
+import { timelineDate } from './timeline-ui.js?v=20261010-talent-release-2';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261009-popup-layout-5',
-  '../content/timeline/image-metadata.json?v=20261009-popup-layout-5',
+  '../content/timeline/galleries.json?v=20261010-talent-release-2',
+  '../content/timeline/image-metadata.json?v=20261010-talent-release-2',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();

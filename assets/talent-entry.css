@@ -1,0 +1,5 @@
+.section-1 .video-frame .talent-entry{position:absolute;inset:0;width:100%;height:100%;display:block;padding:0;background:#000;isolation:isolate}
+.section-1 .video-frame .talent-entry img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform:none;z-index:0}
+.section-1 .talent-entry-text{position:absolute;inset:auto 0 0;padding:30px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.92));color:#ffe66a;font:bold 14px/1.35 Arial,sans-serif;text-shadow:0 1px 2px #000;z-index:1}
+.section-1 .talent-entry:focus-visible{outline:3px solid #ffe66a;outline-offset:4px}
+@media(max-width:760px){.section-1 .talent-entry-text{font-size:16px;padding:36px 14px 12px}}
