@@ -282,17 +282,17 @@
 }
 
 /* Musik: the portrait looks over the covers, with its introduction in a speech bubble. */
-.ship.is-open.section-0 .portrait-underlay{background-position:14% -43svh;background-size:auto 145svh;background-repeat:no-repeat;background-color:#07121c}
+.ship.is-open.section-0 .portrait-underlay{background-position:14% -46svh;background-size:auto 145svh;background-repeat:no-repeat;background-color:#07121c}
 .section-0 .archive .music-speech-bubble{
   box-sizing:border-box;
-  width:min(74%,1060px);
+  width:min(calc(100% - 45svh - 60px),820px);
   max-width:none;
-  margin:56px 0 8px auto;
-  padding:32px 44px 32px 130px;
+  margin:16px auto 8px calc(45svh - 4vw + 60px);
+  padding:30px 48px 28px 160px;
   position:relative;isolation:isolate;
   background:none;
   color:#251a12;
-  font:400 clamp(20px,1.6vw,23px)/1.2 "Caveat Timeline","Bradley Hand",cursive;
+  font:400 clamp(20px,1.5vw,21px)/1.2 "Caveat Timeline","Bradley Hand",cursive;
   text-align:center;
   text-shadow:none;
   overflow-wrap:break-word;
@@ -319,3 +319,5 @@
 /* Leave a small gap between the Musik bubble tip and the glasses. */
 @media(min-width:761px){.section-0 .music-speech-bubble::before{left:44px}}
 @media(max-height:500px) and (orientation:landscape){.section-0 .music-speech-bubble::before{left:44px}}
+
+@media(min-width:761px) and (min-height:501px){.section-0 .record-grid{margin-top:24px}}
