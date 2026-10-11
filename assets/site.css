@@ -317,3 +317,13 @@
  .section-0 .archive .music-speech-bubble{width:100%;margin:105px 0 12px;padding:72px 56px 54px}
  .section-0 .music-speech-bubble::before{background-image:url("./video-bubble-mobile.webp")}
 }
+
+/* Mobile return head: lower placement in Video, Literature and Performance. */
+@media(max-width:760px) and (orientation:portrait){
+ .ship.is-open.section-1 .face-piece-shadow{transform:translate(36vw,24vh) rotate(7deg) scale(.9)}
+ .ship.is-open.section-3 .face-piece-shadow{transform:translate(36vw,13vh) rotate(7deg) scale(.9)}
+ .ship.is-open.section-2:not(.gallery-open) .face-piece-shadow{transform:translate(36vw,13vh) rotate(7deg) scale(.9)}
+}
+@media(min-width:761px) and (max-width:1100px) and (max-height:500px) and (orientation:landscape){
+ .ship.is-open.section-3 .face-piece-shadow{transform:translate(42vw,20vh) rotate(9deg) scale(.72)}
+}
