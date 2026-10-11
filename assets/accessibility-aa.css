@@ -47,3 +47,7 @@ body .art-focus-viewer .art-focus-close:focus-visible {
   box-shadow: none !important;
 }
 body .life-year[tabindex="-1"]:focus {outline:none !important;box-shadow:none !important;}
+
+/* Programmatic return focus after pointer/touch use must not show keyboard rings. */
+html[data-aa-input="pointer"] body :is(a,button,input,select,textarea,summary,[tabindex]):focus{outline:none !important;box-shadow:none !important}
+html[data-aa-input="pointer"] .aa-face-focus{visibility:hidden !important}

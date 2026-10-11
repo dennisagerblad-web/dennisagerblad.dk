@@ -327,3 +327,8 @@
 @media(min-width:761px) and (max-width:1100px) and (max-height:500px) and (orientation:landscape){
  .ship.is-open.section-3 .face-piece-shadow{transform:translate(42vw,20vh) rotate(9deg) scale(.72)}
 }
+
+/* Fit the Video speech artwork to the measured text field. */
+.section-1 .archive .scrolling-intro{background-image:url("./video-bubble-wide.webp");background-size:100% 100%;background-repeat:no-repeat;background-position:center}
+@media(max-width:950px) and (orientation:landscape){.section-1 .archive .scrolling-intro{background-image:url("./video-bubble-right.png")}}
+@media(max-width:760px) and (orientation:portrait){.section-1 .archive .scrolling-intro{background-image:url("./video-bubble-mobile.webp")}}

@@ -3,3 +3,5 @@
 .landing-share[data-input="pointer"] :focus{outline:none;box-shadow:none}
 
 .landing-close{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:44px;height:44px;padding:0;border:0;background:transparent;color:#ffe66a;cursor:pointer}.landing-close svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.5}.landing-close:focus-visible{outline:3px solid #ffe66a;outline-offset:3px}.landing-close[data-input="pointer"]:focus{outline:none}
+
+html[data-aa-input="pointer"] :is(a,button,input,[tabindex]):focus{outline:none !important;box-shadow:none !important}

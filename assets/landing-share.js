@@ -1,3 +1,7 @@
+// Track interaction mode for dialog autofocus and restored focus.
+document.documentElement.dataset.aaInput='pointer';
+document.addEventListener('pointerdown',()=>{document.documentElement.dataset.aaInput='pointer'},true);
+document.addEventListener('keydown',event=>{if(['Tab','Enter',' ','ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key))document.documentElement.dataset.aaInput='keyboard'},true);
 // Share the public canonical page URL, including from an embedded exhibition.
 (() => {
   const url=document.querySelector('link[rel="canonical"]')?.href;
