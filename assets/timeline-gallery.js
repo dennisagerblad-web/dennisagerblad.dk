@@ -3,6 +3,7 @@
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
 import { timelineDate } from './timeline-ui.js?v=20261010-talent-release-5';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
+import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
 let dataPromise;
 let closeActive;
 const assetBase = new URL('../', import.meta.url);
@@ -557,7 +558,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
       supplementary.append(p);
     }
     if (entry.videoId) {
-      const video=el('iframe','tg-video'); video.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(entry.videoId)}?enablejsapi=1&playsinline=1&origin=${encodeURIComponent(location.origin)}`;
+      const video=el('iframe','tg-video'); video.src=videoEmbedURL(entry.videoId);
       video.title=entry.title; video.referrerPolicy='strict-origin-when-cross-origin'; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
       const videoFrame=el('div','video-frame');videoFrame.append(video);dialog.insertBefore(videoFrame,viewer);
       const youtube=el('a','tg-video-link','Se videoen på YouTube');

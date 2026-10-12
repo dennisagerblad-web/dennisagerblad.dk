@@ -6,6 +6,7 @@
   const documentURLs = new WeakMap([[document, location.href]]);
   const originalAttributes = new WeakMap();
   const originalSchema = new WeakMap();
+  const videoURLs = new WeakMap();
   const menuWords = { Musik: 'Music', Video: 'Video', Performance: 'Performance', Litteratur: 'Literature', Kunst: 'Art', Tidslinje: 'Timeline' };
   const menuFiles = { Musik: 'music-rays.svg', Video: 'video-rays.svg', Performance: 'performance-rays.svg', Litteratur: 'literature-rays.svg', Kunst: 'art-rays.svg', Tidslinje: 'timeline-rays.svg' };
   let language = new URL(location.href).searchParams.get('lang');
@@ -104,11 +105,14 @@
     for (const frame of doc.querySelectorAll('iframe[src]')) {
       const url = new URL(frame.getAttribute('src'), documentURLs.get(doc));
       if (!/(^|\.)youtube(?:-nocookie)?\.com$/.test(url.hostname)) continue;
-      updateAttribute(frame, 'src', value => {
-        const embed = new URL(value, documentURLs.get(doc));
-        embed.searchParams.set('hl', language === 'en' ? 'en' : 'da');
-        return embed.href;
-      });
+      url.searchParams.set('hl', language === 'en' ? 'en' : 'da');
+      const previous = videoURLs.get(frame);
+      if (previous === url.href) continue;
+      // Never assign src on an attached YouTube iframe. In WebKit that turns
+      // each player into a Back-button destination, sometimes at the top level.
+      // replace also covers existing players when the visitor changes language.
+      if ((previous || frame.src) !== url.href) frame.contentWindow?.location.replace(url.href);
+      videoURLs.set(frame, url.href);
     }
     for (const anchor of doc.querySelectorAll('a[href]')) {
       const href = anchor.getAttribute('href');
@@ -195,6 +199,7 @@
     // Same-origin historical documents embedded in current-site popups.
     document.addEventListener('load', event => {
       if (event.target.tagName !== 'IFRAME') return;
+      if (new URL(event.target.src, location.href).origin !== location.origin) return;
       try {
         const doc = event.target.contentDocument;
         if (doc?.body && !doc.documentElement.dataset.siteLanguage) {
