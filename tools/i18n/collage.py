@@ -21,3 +21,16 @@ for word,chars in [('literature','LiTERATURE'),('timeline','TiMELiNE')]:
 for source,name in [('menu-collage-v4/music.png','music.png'),('menu-collage-v4/art.png','art.png')]:
  (out/name).write_bytes((root/source).read_bytes())
 print('English collage graphics generated.')
+
+# Add yellow and pink hand-cut rays to every English menu word.
+import re
+for name,source in [('music','menu-english/music.png'),('art','menu-english/art.png'),('video','menu-original/video.png'),('performance','menu-edited/performance.png'),('literature','menu-english/literature.svg'),('timeline','menu-english/timeline.svg')]:
+ path=root/source
+ if path.suffix=='.svg':
+  data=path.read_bytes();header=data.decode().split('>')[0];w=float(re.search(r'width="([0-9.]+)"',header)[1]);h=float(re.search(r'height="([0-9.]+)"',header)[1]);mime='image/svg+xml'
+ else:
+  im=Image.open(path);w,h=im.size;buf=io.BytesIO();im.save(buf,format='WEBP',quality=90,method=6);data=buf.getvalue();mime='image/webp'
+ pad=h*.12;W=w+2*pad;H=h+2*pad
+ rays=f'<path d="M{w*.19+pad} {pad*.65}l{-pad*.25} {-pad*.55}m{pad*.5} {pad*.45}l{pad*.1} {-pad*.65}" stroke="#ffe33b"/><path d="M{w*.84+pad} {h+pad*.7}l{pad*.4} {pad*.6}m{-pad*.1} {-pad*.9}l{pad*.65} {pad*.25}" stroke="#ff9dd1"/>'
+ encoded=base64.b64encode(data).decode()
+ (out/f'{name}-rays.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}"><image x="{pad}" y="{pad}" width="{w}" height="{h}" href="data:{mime};base64,{encoded}"/><g fill="none" stroke-width="{h*.023}" stroke-linecap="square">{rays}</g></svg>')

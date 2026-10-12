@@ -7,7 +7,7 @@
   const originalAttributes = new WeakMap();
   const originalSchema = new WeakMap();
   const menuWords = { Musik: 'Music', Video: 'Video', Performance: 'Performance', Litteratur: 'Literature', Kunst: 'Art', Tidslinje: 'Timeline' };
-  const menuFiles = { Musik: 'music.png', Video: '../menu-original/video.png', Performance: '../menu-edited/performance.png', Litteratur: 'literature.svg', Kunst: 'art.png', Tidslinje: 'timeline.svg' };
+  const menuFiles = { Musik: 'music-rays.svg', Video: 'video-rays.svg', Performance: 'performance-rays.svg', Litteratur: 'literature-rays.svg', Kunst: 'art-rays.svg', Tidslinje: 'timeline-rays.svg' };
   let language = new URL(location.href).searchParams.get('lang');
   if (!['da', 'en'].includes(language)) {
     try { language = localStorage.getItem('dennis-language'); } catch {}
