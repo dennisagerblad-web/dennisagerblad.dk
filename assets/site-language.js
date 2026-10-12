@@ -8,7 +8,9 @@
   const originalSchema = new WeakMap();
   const videoURLs = new WeakMap();
   const menuWords = { Musik: 'Music', Video: 'Video', Performance: 'Performance', Litteratur: 'Literature', Kunst: 'Art', Tidslinje: 'Timeline' };
-  const menuFiles = { Musik: 'music-rays.svg', Video: 'video-rays.svg', Performance: 'performance-rays.svg', Litteratur: 'literature-rays.svg', Kunst: 'art-rays.svg', Tidslinje: 'timeline-rays.svg' };
+  // Artwork and rays are image-generated; VIDEO and PERFORMANCE share one
+  // image between languages. No SVG letter cropping or code-drawn accents.
+  const menuFiles = { Musik: 'music.webp', Video: 'video.webp', Performance: 'performance.webp', Litteratur: 'literature.webp', Kunst: 'art.webp', Tidslinje: 'timeline.webp' };
   let language = new URL(location.href).searchParams.get('lang');
   if (!['da', 'en'].includes(language)) {
     try { language = localStorage.getItem('dennis-language'); } catch {}
@@ -89,7 +91,8 @@
       image.dataset.languageWord = word;
       image.dataset.danishSrc = image.getAttribute('src');
     }
-    const source = language === 'en' ? new URL(`menu-english/${menuFiles[word]}?v=20261012-menu-letters-3`, siteRoot).href : image.dataset.danishSrc;
+    const sharedArtwork = word === 'Video' || word === 'Performance';
+    const source = language === 'en' || sharedArtwork ? new URL(`menu-imagegen/20261012/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
     if (image.getAttribute('src') !== source) image.setAttribute('src', source);
   }
   function apply(doc = document) {

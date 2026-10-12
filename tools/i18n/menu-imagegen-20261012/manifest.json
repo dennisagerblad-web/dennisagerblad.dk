@@ -1,0 +1,128 @@
+[
+  {
+    "word": "music",
+    "original": "tools/i18n/menu-imagegen-20261012/originals/music.png",
+    "source_dimensions": [
+      1838,
+      856
+    ],
+    "source_bytes": 1374969,
+    "website": "menu-imagegen/20261012/music.webp",
+    "dimensions": [
+      1100,
+      512
+    ],
+    "bytes": 104904,
+    "alpha_bounds": [
+      5,
+      11,
+      1092,
+      512
+    ]
+  },
+  {
+    "word": "art",
+    "original": "tools/i18n/menu-imagegen-20261012/originals/art.png",
+    "source_dimensions": [
+      1839,
+      855
+    ],
+    "source_bytes": 1749990,
+    "website": "menu-imagegen/20261012/art.webp",
+    "dimensions": [
+      768,
+      357
+    ],
+    "bytes": 86772,
+    "alpha_bounds": [
+      31,
+      9,
+      758,
+      350
+    ]
+  },
+  {
+    "word": "timeline",
+    "original": "tools/i18n/menu-imagegen-20261012/originals/timeline.png",
+    "source_dimensions": [
+      2098,
+      750
+    ],
+    "source_bytes": 1667989,
+    "website": "menu-imagegen/20261012/timeline.webp",
+    "dimensions": [
+      1600,
+      572
+    ],
+    "bytes": 246420,
+    "alpha_bounds": [
+      0,
+      6,
+      1577,
+      572
+    ]
+  },
+  {
+    "word": "literature",
+    "original": "tools/i18n/menu-imagegen-20261012/originals/literature.png",
+    "source_dimensions": [
+      2097,
+      750
+    ],
+    "source_bytes": 1218995,
+    "website": "menu-imagegen/20261012/literature.webp",
+    "dimensions": [
+      1600,
+      572
+    ],
+    "bytes": 143298,
+    "alpha_bounds": [
+      12,
+      25,
+      1586,
+      572
+    ]
+  },
+  {
+    "word": "video",
+    "original": "tools/i18n/menu-imagegen-20261012/originals/video.png",
+    "source_dimensions": [
+      1838,
+      856
+    ],
+    "source_bytes": 1277550,
+    "website": "menu-imagegen/20261012/video.webp",
+    "dimensions": [
+      1100,
+      512
+    ],
+    "bytes": 104390,
+    "alpha_bounds": [
+      0,
+      2,
+      1076,
+      512
+    ]
+  },
+  {
+    "word": "performance",
+    "original": "tools/i18n/menu-imagegen-20261012/originals/performance.png",
+    "source_dimensions": [
+      2014,
+      780
+    ],
+    "source_bytes": 981343,
+    "website": "menu-imagegen/20261012/performance.webp",
+    "dimensions": [
+      1600,
+      620
+    ],
+    "bytes": 149120,
+    "alpha_bounds": [
+      13,
+      6,
+      1589,
+      620
+    ]
+  }
+]
