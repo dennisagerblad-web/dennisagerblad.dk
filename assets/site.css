@@ -367,10 +367,11 @@
  .section-2 .archive .scrolling-intro{margin-top:220px}
 }
 @media(max-width:1100px) and (max-height:650px) and (orientation:landscape){
- .section-2 .archive .scrolling-intro{padding-top:55px;padding-bottom:48px;font-size:22px;line-height:1.2}
+ /* The drawn tail sits above the white field. Center copy inside that field. */
+ .section-2 .archive .scrolling-intro{padding-top:63px;padding-bottom:40px;font-size:22px;line-height:1.2}
 }
 @media(max-width:700px) and (max-height:650px) and (orientation:landscape){
- .section-2 .archive .scrolling-intro{padding-top:43px;padding-bottom:36px;font-size:19px}
+ .section-2 .archive .scrolling-intro{padding-top:51px;padding-bottom:28px;font-size:19px}
 }
 @media(max-width:1100px) and (max-height:650px) and (orientation:landscape){
  .ship.is-open.section-2:not(.gallery-open) .face-piece-shadow{transform:translate(42vw,42vh) rotate(9deg) scale(.72)}
