@@ -13,7 +13,7 @@ document.addEventListener('pointerdown', event => {
   closePanel();
 }, true);
 function info(dialog) {
-  const title=dialog.querySelector('h2')?.textContent?.trim();
+  const title=(window.DennisLanguage?.sourceText(dialog.querySelector('h2')) || dialog.querySelector('h2')?.textContent)?.trim();
   const date=dialog.dataset.entryDate || dialog.querySelector('time')?.getAttribute('datetime');
   const entry=timelineEntries.find(e=>e.date===date && (e.title===title || e.shortTitle===title));
   if(!entry)return null;
@@ -21,6 +21,7 @@ function info(dialog) {
   const url=new URL('/',location.origin);
   url.searchParams.set('opslag',[entry.date,entry.category,entry.title].join('|'));
   url.hash=`timeline-${group}-${entry.year}`;
+  if(window.DennisLanguage?.current==='en')url.searchParams.set('lang','en');
   return {entry,url:url.href,publicUrl:url.href};
 }
 function add(dialog) {
@@ -49,9 +50,9 @@ if(key){
   let step=0,attempts=0;
   const timer=setInterval(()=>{
    if(++attempts>100){clearInterval(timer);return;}
-   if(step===0){const b=[...document.querySelectorAll('.main-menu button,nav[aria-label="Hovedmenu"] button')].find(b=>b.textContent.trim()==='Tidslinje'||b.getAttribute('aria-label')==='Tidslinje');if(b){b.click();step=1;}return;}
-   if(step===1){const b=[...document.querySelectorAll('.timeline-groups button')].find(b=>b.textContent.trim()===names[group]);if(b){b.click();step=2;}return;}
-   const b=[...document.querySelectorAll('button.timeline-entry')].find(b=>b.textContent.includes(entry.title)&&b.querySelector(`time[datetime="${entry.date}"]`));
+   if(step===0){const b=[...document.querySelectorAll('.main-menu button,.face-menu button')].find(b=>b.classList.contains('menu-5')||(window.DennisLanguage?.sourceAttribute(b,'aria-label')||b.getAttribute('aria-label'))==='Tidslinje');if(b){b.click();step=1;}return;}
+   if(step===1){const b=[...document.querySelectorAll('.timeline-groups button')].find(b=>(window.DennisLanguage?.sourceText(b)||b.textContent).trim()===names[group]);if(b){b.click();step=2;}return;}
+   const b=[...document.querySelectorAll('button.timeline-entry')].find(b=>(window.DennisLanguage?.sourceText(b)||b.textContent).includes(entry.title)&&b.querySelector(`time[datetime="${entry.date}"]`));
    if(b){
     const showEntry = () => {
       if (!b.isConnected) return;

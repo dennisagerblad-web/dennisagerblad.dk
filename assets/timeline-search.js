@@ -59,7 +59,7 @@ async function goToResult(result, input, search) {
   search.classList.remove('is-open');
   input.setAttribute('aria-expanded', 'false');
   const tab = [...document.querySelectorAll('.section-5 .timeline-groups button')]
-    .find(button => button.textContent.trim() === labels[result.group]);
+    .find(button => (window.DennisLanguage?.sourceText(button) || button.textContent).trim() === labels[result.group]);
   if (!tab) return;
   if (!tab.classList.contains('active')) tab.click();
 
@@ -193,7 +193,7 @@ function mountSearch() {
     panel.replaceChildren();
     const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
     if (!terms.length) return close();
-    const matches = entries.filter(result => terms.every(term => result.searchable.includes(term)));
+    const matches = entries.filter(result => terms.every(term => (result.searchable+' '+normalize([result.entry.title,result.entry.shortTitle,result.entry.popupTitle,result.entry.details,result.entry.category].map(text=>window.DennisLanguage?.english(text || '') || text).join(' '))).includes(term)));
     const count = document.createElement('div');
     count.className = 'timeline-search-count';
     count.setAttribute('aria-live', 'polite');

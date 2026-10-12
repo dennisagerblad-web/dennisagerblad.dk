@@ -527,7 +527,7 @@ function ensureDunstHotspots(map){
  });
 }
 
-import { installArtViewer } from './art-viewer.js?v=20261009-search-zoom-2';
+import { installArtViewer } from './art-viewer.js?v=20261012-language-1';
 installArtViewer({getVersion:()=>selectedVersion,homography});
 
 update();

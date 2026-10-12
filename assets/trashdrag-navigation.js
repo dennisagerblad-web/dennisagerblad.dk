@@ -57,13 +57,13 @@
     dialog.style.cssText = 'position:fixed;inset:0;margin:0;padding:0;border:0;width:100vw;max-width:none;height:100dvh;max-height:none;background:#000;overflow:hidden';
     frame = document.createElement('iframe');
     frame.title = 'Trashdrag på Listaskálin – tilbage til ' + section;
-    frame.src = trashdragPath + '?from=' + encodeURIComponent(section);
+    frame.src = window.DennisLanguage?.localURL(trashdragPath + '?from=' + encodeURIComponent(section)) || trashdragPath + '?from=' + encodeURIComponent(section);
     frame.style.cssText = 'display:block;border:0;width:100%;height:100%';
     frame.allow = 'fullscreen; autoplay; encrypted-media; picture-in-picture';
     dialog.append(frame); document.body.append(dialog);
     dialog.addEventListener('cancel', event => { event.preventDefault(); back(); });
     dialog.showModal();
-    history.pushState({ ...history.state, dennisTrashdragPanel: true }, '', trashdragPath);
+    history.pushState({ ...history.state, dennisTrashdragPanel: true }, '', window.DennisLanguage?.localURL(trashdragPath) || trashdragPath);
   }, true);
   window.addEventListener('message', event => {
     if (event.origin === location.origin && event.source === frame?.contentWindow && event.data?.type === 'dennis-close-trashdrag') back();

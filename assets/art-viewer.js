@@ -88,7 +88,7 @@ export function installArtViewer({getVersion,homography}){
   await Promise.all([animateArtwork(img,from,to),...((installation||state.title==='Kongeligt Porcelæn')?[animate(img,[{opacity:1},{opacity:0}])]:[]),animate(shade,[{opacity:1},{opacity:0}]),animate(header,[{opacity:1},{opacity:0}])]);
   await finish();busy=false;
  }
- document.addEventListener('click',event=>{const button=event.target.closest('.ship.section-4.is-open .art-hotspot');if(!button)return;const title=button.getAttribute('aria-label')?.replace(/^Åbn /,'');if(!sets[title])return;event.preventDefault();event.stopImmediatePropagation();const files=title==='Selvportrætter'&&getVersion()===2?[...sets[title]].reverse():sets[title];open(button,event,title,files);},true);
+ document.addEventListener('click',event=>{const button=event.target.closest('.ship.section-4.is-open .art-hotspot');if(!button)return;const title=(window.DennisLanguage?.sourceAttribute(button,'aria-label')||button.getAttribute('aria-label'))?.replace(/^Åbn /,'');if(!sets[title])return;event.preventDefault();event.stopImmediatePropagation();const files=title==='Selvportrætter'&&getVersion()===2?[...sets[title]].reverse():sets[title];open(button,event,title,files);},true);
  close.onclick=shut;previous.onclick=()=>move(-1);next.onclick=()=>move(1);shade.onclick=shut;
  dialog.addEventListener('cancel',e=>{e.preventDefault();shut();});
  dialog.addEventListener('keydown',e=>{

@@ -4,7 +4,8 @@ document.addEventListener('pointerdown',()=>{document.documentElement.dataset.aa
 document.addEventListener('keydown',event=>{if(['Tab','Enter',' ','ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key))document.documentElement.dataset.aaInput='keyboard'},true);
 // Share the public canonical page URL, including from an embedded exhibition.
 (() => {
-  const url=document.querySelector('link[rel="canonical"]')?.href;
+  const canonical=document.querySelector('link[rel="canonical"]')?.href;
+  const url=canonical ? (window.DennisLanguage?.localURL(canonical) || canonical) : null;
   if(!url)return;
   let row=document.querySelector('body > header');
   if(!row){

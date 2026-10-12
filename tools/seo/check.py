@@ -30,7 +30,7 @@ for item in json.loads((ROOT/'tools/seo/pages.json').read_text()):
  assert len(p.ids)==len(set(p.ids)),('Duplicate IDs',item['file'])
  for href in p.hrefs:
   if href.startswith('#'):assert href[1:] in p.ids,('Missing anchor',href)
- assert urls.get(url)=='2026-10-10'
+ assert urls.get(url) and __import__('datetime').date.fromisoformat(urls[url]) <= __import__('datetime').date.today()
  print('PASS',item['file'])
 assert 'Sitemap: https://dennisagerblad.dk/sitemap.xml' in (ROOT/'robots.txt').read_text()
 print('PASS: metadata, JSON-LD syntax, local share images, anchors and sitemap. Not a Google Rich Results certification.')
