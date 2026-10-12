@@ -9,5 +9,8 @@ body:has(.ship.has-section)>.language-tabs{display:none}
 @media(prefers-reduced-motion:reduce){.language-tab-marker{transition:none}}
 
 html[lang="en"] body button[aria-label^="Close "]{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;padding:0!important;border-radius:50%!important}
-/* The short English ART word needs less width than KUNST. */
-html[lang="en"] .face-menu .menu-4{width:20%}
+/* Match ART's median ink height to MUSIC, rather than matching word widths.
+   The existing collage glyphs measure 84/364 and 72/458 of their SVG widths. */
+html[lang="en"] .face-menu .menu-4{width:16.35%}
+@media(max-width:760px){html[lang="en"] .face-menu .menu-4{width:27.25%}}
+@media(orientation:landscape) and (max-height:650px){html[lang="en"] .face-menu .menu-4{width:15%}}

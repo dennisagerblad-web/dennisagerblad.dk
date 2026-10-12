@@ -89,7 +89,7 @@
       image.dataset.languageWord = word;
       image.dataset.danishSrc = image.getAttribute('src');
     }
-    const source = language === 'en' ? new URL(`menu-english/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
+    const source = language === 'en' ? new URL(`menu-english/${menuFiles[word]}?v=20261012-menu-letters-3`, siteRoot).href : image.dataset.danishSrc;
     if (image.getAttribute('src') !== source) image.setAttribute('src', source);
   }
   function apply(doc = document) {
