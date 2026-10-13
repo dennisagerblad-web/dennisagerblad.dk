@@ -15,3 +15,10 @@ html[lang="en"] body button[aria-label^="Close "]{width:44px!important;height:44
 html[lang="en"] .face-menu .menu-4{width:16%;min-height:44px}
 @media(max-width:760px){html[lang="en"] .face-menu .menu-4{width:26.67%}}
 @media(orientation:landscape) and (max-height:650px){html[lang="en"] .face-menu .menu-4{width:14.67%;min-height:58px}}
+
+/* Identical 5 x 24 px visible strokes at every viewport; transparent margins
+   differ by colour and are accounted for by these measured image sizes. */
+html[lang="en"] .menu-point .english-menu-accent{position:absolute;pointer-events:none;object-fit:fill;max-width:none;filter:drop-shadow(1px 2px 2px #0005)}
+html[lang="en"] .menu-point .english-menu-accent-white{width:51.2px;height:51.63px}
+html[lang="en"] .menu-point .english-menu-accent-yellow{width:51.2px;height:40.16px}
+html[lang="en"] .menu-point .english-menu-accent-violet{width:60.95px;height:46.2px}

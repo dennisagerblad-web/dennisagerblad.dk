@@ -82,6 +82,54 @@
     values[name] = { source, last: target };
     if (target !== value) element.setAttribute(name, target);
   }
+  // Individually placed image-generated strokes, following the supplied sketch.
+  const menuAccents = {
+    Musik: [['yellow',30,12,-20],['yellow',35,10,12],['yellow',87,90,22],['yellow',93,86,-22]],
+    Video: [['violet',17,13,-65],['violet',23,17,65],['yellow',72,20,-18],['yellow',79,24,22],['violet',83,90,20],['violet',87,92,-24]],
+    Kunst: [['violet',25,12,65],['violet',34,15,-65],['violet',76,93,24],['violet',86,91,-24]],
+    Litteratur: [['white',12,14,-18],['white',18,18,10],['yellow',88,16,-16],['yellow',93,20,22],['yellow',88,92,20],['yellow',94,89,-22]],
+    Performance: [['yellow',83,22,-22],['yellow',88,17,10],['yellow',17,86,22],['yellow',23,90,-22]],
+    Tidslinje: [['white',54,15,-18],['white',60,21,20],['white',16,91,22],['white',23,96,-24]]
+  };
+  const menuInkEdges = {"Musik": [[0.24832, 0.8094], [0.22819, 0.79597], [0.20671, 0.74094], [0.48054, 0.71409]], "Video": [[0.15705, 0.74228], [0.13423, 0.73826], [0.25772, 0.92483], [0.28322, 0.94228], [0.3302, 0.94228], [0.34362, 0.94228]], "Kunst": [[0.12248, 0.84118], [0.14939, 0.86406], [0.0969, 0.88156], [0.0969, 0.83445]], "Litteratur": [[0.21853, 0.79545], [0.21678, 0.78147], [0.26748, 0.73951], [0.26748, 0.72203], [0.26748, 0.73951], [0.26748, 0.71678]], "Performance": [[0.28871, 0.71452], [0.28871, 0.7], [0.27742, 0.66774], [0.27258, 0.70806]], "Tidslinje": [[0.17308, 0.79371], [0.19755, 0.7972], [0.18007, 0.78497], [0.18007, 0.78497]]};
+  // Small individual offsets preserve the reference's hand-placed rhythm.
+  const accentRhythm = {
+    Musik: { spacing: [20,25], outward: [1,3,2,0] },
+    Video: { spacing: [23,20,24], outward: [0,2,2,0,1,3] },
+    Kunst: { spacing: [22,19], outward: [2,0,0,2] },
+    Litteratur: { spacing: [24,20,26], outward: [0,2,3,1,0,2] },
+    Performance: { spacing: [21,24], outward: [2,0,1,3] },
+    Tidslinje: { spacing: [25,20], outward: [1,3,2,0] }
+  };
+  const accentObservers = new WeakMap();
+  function positionAccents(image, word) {
+    const button = image.closest('.menu-point');
+    if (!button || !image.clientWidth || button.dataset.accentLanguage !== 'en') return;
+    const specs = menuAccents[word];
+    for (const [index, accent] of [...button.querySelectorAll('.english-menu-accent')].entries()) {
+      const [, x, , angle] = specs[index];
+      const below = index >= specs.length - 2;
+      const pair = index - index % 2;
+      const pairCentre = image.clientWidth * (specs[pair][1] + specs[pair + 1][1]) / 200;
+      const edgeValues = menuInkEdges[word].slice(pair, pair + 2).map(value => value[below ? 1 : 0]);
+      const edge = (below ? Math.max(...edgeValues) : Math.min(...edgeValues)) * image.clientHeight;
+      const radians = angle * Math.PI / 180;
+      const halfHeight = (24 * Math.abs(Math.cos(radians)) + 5 * Math.abs(Math.sin(radians))) / 2;
+      const rhythm = accentRhythm[word];
+      const halfSpacing = rhythm.spacing[pair / 2] / 2;
+      const outward = rhythm.outward[index];
+      if (pair === 0 && (word === 'Video' || word === 'Kunst')) {
+        const right = word === 'Kunst';
+        const halfWidth = (24 * Math.abs(Math.sin(radians)) + 5 * Math.abs(Math.cos(radians))) / 2;
+        const sideX = image.clientWidth * (right ? .8525 : .14125);
+        accent.style.left = `${image.offsetLeft + sideX + (right ? 1 : -1) * (5 + halfWidth + outward)}px`;
+        accent.style.top = `${image.offsetTop + image.clientHeight * (right ? .5 : .4) + (index % 2 ? halfSpacing : -halfSpacing)}px`;
+        continue;
+      }
+      accent.style.left = `${image.offsetLeft + pairCentre + (index % 2 ? halfSpacing : -halfSpacing)}px`;
+      accent.style.top = `${image.offsetTop + edge + (below ? 1 : -1) * (5 + halfHeight + outward)}px`;
+    }
+  }
   function updateMenu(image) {
     let word = image.dataset.languageWord;
     if (!word) {
@@ -91,9 +139,26 @@
       image.dataset.languageWord = word;
       image.dataset.danishSrc = image.getAttribute('src');
     }
-    const sharedArtwork = word === 'Video' || word === 'Performance';
-    const source = language === 'en' || sharedArtwork ? new URL(`menu-imagegen/20261012/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
+    const source = language === 'en' ? new URL(`menu-imagegen/20261013/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
     if (image.getAttribute('src') !== source) image.setAttribute('src', source);
+    const button = image.closest('.menu-point');
+    if (button && button.dataset.accentLanguage !== language) {
+      button.dataset.accentLanguage = language;
+      for (const accent of button.querySelectorAll('.english-menu-accent')) accent.remove();
+      if (language === 'en') for (const [index, [colour, x, y, angle]] of (menuAccents[word] || []).entries()) {
+        const accent = document.createElement('img');
+        accent.className = `english-menu-accent english-menu-accent-${colour}`; accent.alt = ''; accent.setAttribute('aria-hidden', 'true'); accent.draggable = false;
+        accent.src = new URL(`menu-imagegen/20261013/stroke-${colour}-rough.webp`, siteRoot).href;
+        accent.style.transform = `translate(-50%,-50%) rotate(${angle}deg)`;
+        button.append(accent);
+      }
+      if (!accentObservers.has(image)) {
+        const observer = new ResizeObserver(() => positionAccents(image, word));
+        observer.observe(image); accentObservers.set(image, observer);
+        image.addEventListener('load', () => positionAccents(image, word));
+      }
+      positionAccents(image, word);
+    }
   }
   function apply(doc = document) {
     if (!documentURLs.has(doc)) documentURLs.set(doc, doc.location.href);
