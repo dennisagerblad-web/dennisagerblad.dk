@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-14",
+  "source": "Owner manually checked Daniel Svanberg Bøtcher / Danny Boy faces/photos in the local review and explicitly confirmed completion.",
+  "photoCount": 8,
+  "newAssociations": 3,
+  "galleryPlacements": 10,
+  "reviewView": {
+    "mode": "faces",
+    "page": 22,
+    "filter": "all",
+    "query": ""
+  },
+  "totalPhotoRecords": 8,
+  "records": [
+    {
+      "src": "./archive/timeline/performance/2019-08-10-02.jpg",
+      "people": [
+        "danny-boy"
+      ],
+      "events": [
+        {
+          "date": "2019-08-10",
+          "title": "East is East, Teateret ved Sorte Hest"
+        }
+      ]
+    },
+    {
+      "src": "./archive/timeline/performance/2019-08-10-01.jpg",
+      "people": [
+        "danny-boy"
+      ],
+      "events": [
+        {
+          "date": "2019-08-10",
+          "title": "East is East, Teateret ved Sorte Hest"
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09707.jpg",
+      "people": [
+        "danny-boy"
+      ],
+      "events": [
+        {
+          "date": "2009-07-17",
+          "title": "Voksen Dukke Leg, 036, København, Danmark."
+        },
+        {
+          "date": "2009-07-03",
+          "title": "Voksen dukke leg, 036, Sølvgade 36, København."
+        },
+        {
+          "date": "2009-07-03",
+          "title": "Voksen Dukke Leg, 036, København, Danmark."
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2007/07_05_12_bmr/dennis_04.jpg",
+      "people": [
+        "danny-boy"
+      ],
+      "events": [
+        {
+          "date": "2007-05-12",
+          "title": "Broken Mirror Records-lanceringsfest, Warehouse 9, København."
+        }
+      ]
+    },
+    {
+      "src": "./archive/timeline/performance/2006-12-15-dennis-daniel.webp",
+      "people": [
+        "danny-boy"
+      ],
+      "events": [
+        {
+          "date": "2006-12-15",
+          "title": "Rode Rage Røvhuls-Pyramide-Dunst-fest, København."
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/IMG_8791.jpg",
+      "people": [
+        "danny-boy"
+      ],
+      "events": [
+        {
+          "date": "2006-04-01",
+          "title": "Dunst Gender Bender Bingo, København"
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8677.jpg",
+      "people": [
+        "danny-boy"
+      ],
+      "events": [
+        {
+          "date": "2006-03-23",
+          "title": "Natfilmfestivalen, København"
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8679.jpg",
+      "people": [
+        "danny-boy"
+      ],
+      "events": [
+        {
+          "date": "2006-03-23",
+          "title": "Natfilmfestivalen, København"
+        }
+      ]
+    }
+  ]
+}
