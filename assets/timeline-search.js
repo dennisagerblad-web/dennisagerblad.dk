@@ -1,10 +1,10 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261014-stable-mobile-gallery-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
-import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261014-be-queer-copy-1';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261014-stable-mobile-gallery-1';
+import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261014-all-persons-anatomy-1';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261014-all-persons-anatomy-1';
 
-import {findTimelinePeople} from './timeline-search-people.js?v=20261014-stable-mobile-gallery-1';
+import {findTimelinePeople} from './timeline-search-people.js?v=20261014-all-persons-anatomy-1';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {
@@ -51,17 +51,19 @@ let imageSearchReady=false;
 const sourceURL=src => new URL(src,new URL('../',import.meta.url)).href;
 const photoIdentity=src => { const url=new URL(sourceURL(src));url.search='';url.hash='';return url.href; };
 loadTimelineGalleryData().then(async data => {
-  const [thumbnailData,lookData,peopleData,videoData]=await Promise.allSettled([
+  const [thumbnailData,lookData,peopleData,videoData,bodyData]=await Promise.allSettled([
     fetch(new URL('../content/timeline/search-thumbnails.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/own-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/people.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/people.json?v=20261014-all-persons-anatomy-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/video-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/body-features.json?v=20261014-all-persons-anatomy-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
   ]);
   const videoFacts=videoData.status==='fulfilled' ? videoData.value.videos || {} : {};
   const people=peopleData.status==='fulfilled' ? peopleData.value : {};
   const photoPeople=new Map(Object.entries(people.photos || {}).map(([src,record])=>[photoIdentity(src),record]));
   const thumbnails=thumbnailData.status==='fulfilled' ? thumbnailData.value.thumbnails || {} : {};
   const looks=new Map(Object.entries(lookData.status==='fulfilled' ? lookData.value.photos || {} : {}).map(([src,facts])=>[photoIdentity(src),facts]));
+  const anatomy=new Map(Object.entries(bodyData.status==='fulfilled' ? bodyData.value.photos || {} : {}).map(([src,facts])=>[photoIdentity(src),facts]));
   const nativeDescriptions=new Map();
   const nativeSizes=new Map(Object.entries(data.media).map(([src,size])=>[sourceURL(src),size]));
   for (const gallery of Object.values(data.entries)) {
@@ -80,7 +82,7 @@ loadTimelineGalleryData().then(async data => {
     result.images=sources.map((src,index)=>{
       const description=gallery?.imageDescriptions?.[index] || nativeDescriptions.get(sourceURL(src)) || biography.find(part=>part.src===src)?.caption || '';
       const record=photoPeople.get(photoIdentity(src));
-      return {src,description,thumbnail:thumbnails[src] || src,look:looks.get(photoIdentity(src)),people:[...new Set([...(record?.people || []),...findTimelinePeople(description)])],peopleLooks:record?.looks};
+      return {src,description,thumbnail:thumbnails[src] || src,look:looks.get(photoIdentity(src)),anatomy:anatomy.get(photoIdentity(src)),people:[...new Set([...(record?.people || []),...findTimelinePeople(description)])],peopleLooks:record?.looks};
     }).filter(image=>image.description);
     result.people=[...new Set([...result.people,...findTimelinePeople(result.galleryDetails.join(' ')),...(people.entries?.[`${entry.date}|${entry.category}|${entry.title}`] || []),...result.images.flatMap(image=>image.people)])];
     const video=entry.videoId && videoFacts[entry.videoId];

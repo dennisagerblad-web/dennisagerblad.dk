@@ -1,6 +1,11 @@
 // Names and aliases supplied by the site owner. Photo identities need explicit evidence.
 export const timelinePerformers = [
   {
+    "id": "rudi",
+    "name": "Rudi",
+    "aliases": ["Rudi"]
+  },
+  {
     "id": "tove-hansen",
     "name": "Tove Hansen",
     "aliases": [

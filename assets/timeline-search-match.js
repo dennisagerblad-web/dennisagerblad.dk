@@ -1,4 +1,4 @@
-import {extractTimelinePeopleQuery,findTimelinePeople} from './timeline-search-people.js?v=20261013-hair-video-search-12';
+import {extractTimelinePeopleQuery,findTimelinePeople} from './timeline-search-people.js?v=20261014-all-persons-anatomy-1';
 // Shared text matching for event copy and the existing, non-visible image descriptions.
 export function normalizeTimelineSearch(value) {
   return String(value ?? '').toLocaleLowerCase('da-DK')
@@ -109,12 +109,14 @@ export function parseTimelineSearchQuery(query) {
 function matchesReviewedFacts(image, filters, people=[]) {
   if(!filters.length) return true;
   const appearance=filters.some(fact=>!fact.startsWith('show:') && !fact.startsWith('setting:'));
-  const subjects=appearance && people.length ? people : ['dennis'];
-  return subjects.every(subject=>{
+  const anatomyOnly=filters.every(fact=>fact.startsWith('body:') || fact.startsWith('nudity:'));
+  const anatomy=(image.anatomy || []).filter(facts=>facts.reviewed && facts.subject);
+  const matchSubject=subject=>{
     const facts=subject==='dennis' ? image.look : image.peopleLooks?.[subject];
-    if(!facts?.reviewed || facts.subject==='unknown') return false;
-    if(appearance && facts.subject!==subject) return false;
-    const tags=new Set(facts.tags);
+    const validLook=facts?.reviewed && facts.subject!=='unknown' && (!appearance || facts.subject===subject);
+    const body=anatomy.filter(facts=>facts.subject===subject);
+    if(!validLook && !body.length) return false;
+    const tags=new Set([...(validLook ? facts.tags : []),...body.flatMap(facts=>facts.tags)]);
     return filters.every(fact=>{
     // Owner-approved costume anatomy participates in the same searches,
     // while its alt text and review tags explicitly describe the costume.
@@ -128,7 +130,16 @@ function matchesReviewedFacts(image, filters, people=[]) {
     }
     return tags.has(fact);
     });
-  });
+  };
+  // Unqualified anatomy searches include any reviewed pictured person.
+  // Keep every requested fact on one person, even in a group photograph.
+  if(anatomyOnly && !people.length) {
+    const subjects=new Set(['dennis',...Object.keys(image.peopleLooks || {}),...anatomy.map(facts=>facts.subject)]);
+    return [...subjects].some(matchSubject);
+  }
+  // Ordinary looks still describe Dennis, or the explicitly named performer.
+  const subjects=appearance && people.length ? people : ['dennis'];
+  return subjects.every(matchSubject);
 }
 export function matchTimelineResult(result, query, english = value => value) {
   const {terms,filters=[],people=[],peopleAny=[]}=Array.isArray(query) ? {terms:query} : query;
