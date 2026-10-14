@@ -309,3 +309,9 @@ html[data-aa-input="pointer"] .timeline-overlay :is(a,button,iframe,[tabindex]):
 body .timeline-overlay iframe:is(.timeline-video-player,.tg-video) { outline:none !important;box-shadow:none !important; }
 .timeline-popup .timeline-youtube-link { margin:0; }
 .timeline-popup .timeline-popup-biography p { max-width:none; }
+
+/* Landscape slideshow dimensions come from the whole image series. */
+@media (max-width:1100px) and (max-height:600px) and (orientation:landscape) {
+  .timeline-overlay.tg-overlay { padding:20px; }
+  .timeline-overlay .tg-dialog { max-width:calc(100vw - 40px); }
+}

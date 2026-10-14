@@ -14,8 +14,8 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261013-daniel-natfilm-17',
-  '../content/timeline/image-metadata.json?v=20261013-daniel-natfilm-17',
+  '../content/timeline/galleries.json?v=20261014-stable-mobile-gallery-1',
+  '../content/timeline/image-metadata.json?v=20261014-stable-mobile-gallery-1',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();
@@ -59,6 +59,12 @@ export function galleryRatio(items, media, viewportRatio = 4/3) {
   const usePortrait=portrait.length>landscape.length || (portrait.length===landscape.length && viewportRatio<1);
   const majority=usePortrait ? portrait : landscape;
   return majority.length ? Math.exp(majority.reduce((sum,r)=>sum+Math.log(r),0)/majority.length) : 1;
+}
+
+// One envelope for the entire slideshow, independent of the selected slide.
+export function mobileGalleryRatios(items, media) {
+  const ratios=items.map(src=>media[src]).filter(m=>m?.width>0 && m?.height>0).map(m=>m.width/m.height);
+  return {tallest:ratios.length ? Math.min(...ratios) : 3/4, widest:ratios.length ? Math.max(...ratios) : 4/3};
 }
 
 function compose(image, w, h, useBackdrop) {
@@ -219,6 +225,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   overlay.dataset.theme = group;
   Object.entries(theme).forEach(([key,value]) => overlay.style.setProperty(key,value));
   const dialog = el('section', 'tg-dialog'); dialog.setAttribute('role','dialog');
+  dialog.style.visibility='hidden';
   dialog.dataset.entryDate = entry.date;
   dialog.setAttribute('aria-modal','true'); dialog.setAttribute('aria-labelledby','tg-title');
   const header = el('header', 'tg-header');
@@ -250,6 +257,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   let closed = false, index = 0, items = [], media = {}, descriptions = [], drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
   let scene = null, drag = null, paused = false, rotationPointerPaused = null;
+  let mobileLayoutKey;
   const zoom = attachPinchZoom(stage, (scale,x,y) => {
     zoomImage.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
     stage.classList.toggle('is-zoomed', scale > 1.01);
@@ -258,9 +266,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   const portraitMobile = matchMedia('(max-width: 760px) and (orientation: portrait)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cache = new Map();
-  const shouldBackdrop = image => portraitMobile.matches
-    ? image.naturalWidth / image.naturalHeight > 1.4
-    : items.length > 1;
+  const shouldBackdrop = image => items.length > 1;
   function scheduleAutoplay(delay = 2000) {
     clearTimeout(autoplayTimer);
     if (closed || paused || reduced.matches || items.length < 2) return;
@@ -283,7 +289,6 @@ export function openTimelineGallery(entry, group, theme = {}) {
   rotation.addEventListener('pointercancel',()=>{rotationPointerPaused=null;});
 
   updateRotation();
-  close.focus({preventScroll:true});
   function imageAt(i) {
     const src = items[i];
     if (!cache.has(src)) cache.set(src,new Promise((resolve,reject) => {
@@ -293,35 +298,64 @@ export function openTimelineGallery(entry, group, theme = {}) {
     }));
     return cache.get(src);
   }
-  function layout(slideIndex = index, image = null) {
-    if (closed) return;
+  function layout() {
+    if (closed || !items.length) return;
     const vh=window.visualViewport?.height || innerHeight, vw=document.documentElement.clientWidth;
-    const compact=mobile.matches;
-    const margin=compact ? 16 : 32;
+    const compact=mobile.matches, portrait=portraitMobile.matches;
     const padding=40;
-    const maxW=Math.min(vw-margin*2,1200);
-    const measuredRatio=galleryRatio(items,media,vw/vh);
-    const dimensions=media[items[slideIndex]];
-    const imageWidth=image?.naturalWidth || dimensions?.width;
-    const imageHeight=image?.naturalHeight || dimensions?.height;
-    const slideRatio=imageWidth > 0 && imageHeight > 0 ? imageWidth/imageHeight : measuredRatio;
-    const ratio=portraitMobile.matches ? (slideRatio > 1.4 ? 4/3 : slideRatio) : entry.date==='2026-08-08' && !compact ? Math.max(measuredRatio,1.5) : measuredRatio;
-    // Mobile keeps its 16px outer margin. Fit the whole photo below the heading,
-    // including short landscape screens, without changing its proportions.
-    let width=maxW;
-    if (!compact) {
-      for(let i=0;i<8;i++) {
-        dialog.style.width=`${width}px`;
-        const available=Math.max(1,vh-margin*2-padding-header.getBoundingClientRect().height-20);
-        const nextWidth=Math.min(maxW,Math.max(360,available*ratio+padding));
-        if(Math.abs(nextWidth-width)<1) break;
-        width=nextWidth;
+    if (compact) {
+      // Safari toolbar movement and image loading cannot resize an open popup.
+      // Rotation changes the viewport width and receives a fresh calculation.
+      const key=`${vw}:${portrait}`;
+      if (mobileLayoutKey===key) return;
+      mobileLayoutKey=key;
+      const margin=portrait ? 16 : 20;
+      const maxW=vw-margin*2, maxH=vh-margin*2;
+      const {tallest,widest}=mobileGalleryRatios(items,media);
+      header.style.maxHeight=`${Math.floor(maxH*.34)}px`;
+      header.style.overflow='auto';
+      const flowHeight=node=>{
+        const style=getComputedStyle(node);
+        if (style.position==='absolute' || style.position==='fixed' || style.display==='none') return 0;
+        return node.getBoundingClientRect().height+(parseFloat(style.marginTop)||0)+(parseFloat(style.marginBottom)||0);
+      };
+      const extra=()=>[...dialog.children].filter(node=>node!==header && node!==viewer && node!==close).reduce((sum,node)=>sum+flowHeight(node),0);
+      let width=maxW;
+      if (!portrait) {
+        // Solve width and wrapped-header height together before displaying it.
+        for(let i=0;i<12;i++) {
+          dialog.style.width=`${width}px`;
+          const available=Math.max(1,maxH-padding-flowHeight(header)-extra());
+          const nextWidth=Math.min(maxW,Math.max(padding+44,available*widest+padding));
+          if(Math.abs(nextWidth-width)<.5) break;
+          width=nextWidth;
+        }
       }
+      dialog.style.width=`${Math.floor(width)}px`;
+      const available=Math.max(1,maxH-padding-flowHeight(header)-extra());
+      const frameHeight=portrait ? Math.min((Math.floor(width)-padding)/tallest,available) : available;
+      stage.style.height=`${frameHeight}px`;
+      stage.style.aspectRatio='auto';
+      dialog.style.height=`${portrait ? padding+flowHeight(header)+extra()+frameHeight : maxH}px`;
+      dialog.style.maxHeight=`${maxH}px`;
+      return;
+    }
+    mobileLayoutKey=null;
+    header.style.maxHeight=''; header.style.overflow='';
+    dialog.style.height=''; dialog.style.maxHeight=''; stage.style.height=''; stage.style.aspectRatio='';
+    const margin=32, maxW=Math.min(vw-margin*2,1200);
+    const measuredRatio=galleryRatio(items,media,vw/vh);
+    const ratio=entry.date==='2026-08-08' ? Math.max(measuredRatio,1.5) : measuredRatio;
+    let width=maxW;
+    for(let i=0;i<8;i++) {
+      dialog.style.width=`${width}px`;
+      const available=Math.max(1,vh-margin*2-padding-header.getBoundingClientRect().height-20);
+      const nextWidth=Math.min(maxW,Math.max(360,available*ratio+padding));
+      if(Math.abs(nextWidth-width)<1) break;
+      width=nextWidth;
     }
     dialog.style.width=`${Math.floor(width)}px`;
-    const available=Math.max(120,vh-margin*2-padding-header.getBoundingClientRect().height-20);
-    const frameRatio=compact && !portraitMobile.matches ? Math.max(ratio,(width-padding)/available) : ratio;
-    dialog.style.setProperty('--tg-ratio',String(frameRatio));
+    dialog.style.setProperty('--tg-ratio',String(ratio));
   }
   function size() {
     const r = stage.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1,2);
@@ -347,12 +381,6 @@ export function openTimelineGallery(entry, group, theme = {}) {
   }
   function finishScene(session, commit) {
     if (scene !== session || closed) return;
-    if (!commit && portraitMobile.matches) {
-      effectCanvas.classList.remove('is-active');
-      scene = null; busy = false; stage.setAttribute('aria-busy','false');
-      layout(index); render();
-      return;
-    }
     if (commit) { index = session.target; paint(session.after); announce(); }
     effectCanvas.classList.remove('is-active');
     scene = null; busy = false; stage.setAttribute('aria-busy','false'); prefetch();
@@ -382,10 +410,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
     stage.setAttribute('aria-busy','true');
     Promise.all([imageAt(index),imageAt(session.target)]).then(([currentImage,image]) => {
       if (closed || scene !== session) return;
-      if (portraitMobile.matches) layout(session.target,image);
       const [w,h] = size();
-      const before=portraitMobile.matches ? compose(currentImage,w,h,shouldBackdrop(currentImage)) : drawing;
-      if (portraitMobile.matches) paint(before);
+      const before=drawing || compose(currentImage,w,h,shouldBackdrop(currentImage));
       session.after = compose(image,w,h,shouldBackdrop(image));
       if (before && before.width === w && before.height === h && !reduced.matches) {
         transition ||= createTransition(effectCanvas);
@@ -417,7 +443,6 @@ export function openTimelineGallery(entry, group, theme = {}) {
     try {
       const image = await imageAt(index);
       if (closed || ticket !== request) return;
-      if (portraitMobile.matches) layout(index,image);
       const [w,h] = size();
       let before = drawing;
       if (direction && previousIndex !== null && before && (before.width !== w || before.height !== h)) {
@@ -579,6 +604,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
       previous.hidden=next.hidden=items.length<2; rotation.hidden=items.length<2; updateRotation();
       layout(); render();
     } else { stage.hidden=true; layout(); }
+    dialog.style.visibility=''; close.focus({preventScroll:true});
   }
   loadData().then(populate).catch(() => populate({}));
 }
