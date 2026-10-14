@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-14",
+  "source": "Owner manually checked Athena Lady faces/photos in the local review and explicitly confirmed completion.",
+  "photoCount": 5,
+  "newAssociations": 5,
+  "galleryPlacements": 5,
+  "reviewView": {
+    "mode": "faces",
+    "page": 14,
+    "filter": "all",
+    "query": ""
+  },
+  "totalPhotoRecords": 5,
+  "records": [
+    {
+      "src": "./archive/timeline/performance/2023-08-12-02.webp",
+      "people": [
+        "athena-lady"
+      ],
+      "events": [
+        {
+          "date": "2023-08-12",
+          "title": "Sommerfest, Bøssehuset"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/semifinale/15.webp",
+      "people": [
+        "athena-lady"
+      ],
+      "events": [
+        {
+          "date": "2015-02-21",
+          "title": "Danmark Har Talent - Semifinale Liveshow"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/semifinale/03.webp",
+      "people": [
+        "athena-lady"
+      ],
+      "events": [
+        {
+          "date": "2015-02-21",
+          "title": "Danmark Har Talent - Semifinale Liveshow"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/semifinale/09.webp",
+      "people": [
+        "athena-lady"
+      ],
+      "events": [
+        {
+          "date": "2015-02-21",
+          "title": "Danmark Har Talent - Semifinale Liveshow"
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_07_08_shave_your_pet/IMG_0086.jpg",
+      "people": [
+        "athena-lady"
+      ],
+      "events": [
+        {
+          "date": "2006-07-08",
+          "title": "Shave Your Pet, Dunst-fest, København."
+        }
+      ]
+    }
+  ]
+}
