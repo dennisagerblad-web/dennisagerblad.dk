@@ -1,10 +1,10 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261014-stable-mobile-gallery-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
-import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261014-all-persons-anatomy-1';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261014-all-persons-anatomy-1';
+import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261014-berlin-search-1';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261014-berlin-search-1';
 
-import {findTimelinePeople} from './timeline-search-people.js?v=20261014-all-persons-anatomy-1';
+import {findTimelinePeople} from './timeline-search-people.js?v=20261014-berlin-search-1';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {
@@ -54,9 +54,9 @@ loadTimelineGalleryData().then(async data => {
   const [thumbnailData,lookData,peopleData,videoData,bodyData]=await Promise.allSettled([
     fetch(new URL('../content/timeline/search-thumbnails.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/own-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/people.json?v=20261014-all-persons-anatomy-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/people.json?v=20261014-berlin-search-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/video-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/body-features.json?v=20261014-all-persons-anatomy-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/body-features.json?v=20261014-berlin-search-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
   ]);
   const videoFacts=videoData.status==='fulfilled' ? videoData.value.videos || {} : {};
   const people=peopleData.status==='fulfilled' ? peopleData.value : {};
@@ -77,7 +77,7 @@ loadTimelineGalleryData().then(async data => {
     const gallery=data.entries[`${entry.date}|${entry.category}|${entry.title}`];
     const biography=(entry.biography || []).filter(part=>part.type==='image');
     const sources=gallery?.images || entry.images || biography.map(part=>part.src);
-    result.galleryDetails=gallery?.details || [];
+    result.galleryDetails=gallery?.searchDetails || gallery?.details || [];
     result.searchable+=' '+normalize(result.galleryDetails.join(' '));
     result.images=sources.map((src,index)=>{
       const description=gallery?.imageDescriptions?.[index] || nativeDescriptions.get(sourceURL(src)) || biography.find(part=>part.src===src)?.caption || '';
