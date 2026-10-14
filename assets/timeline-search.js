@@ -1,10 +1,10 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261014-stable-mobile-gallery-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
-import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261014-ariel-confirmed-1';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261014-ariel-confirmed-1';
+import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261014-all-names-confirmed-1';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261014-all-names-confirmed-1';
 
-import {findTimelinePeople} from './timeline-search-people.js?v=20261014-ariel-confirmed-1';
+import {findTimelinePeople} from './timeline-search-people.js?v=20261014-all-names-confirmed-1';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {
@@ -54,9 +54,9 @@ loadTimelineGalleryData().then(async data => {
   const [thumbnailData,lookData,peopleData,videoData,bodyData]=await Promise.allSettled([
     fetch(new URL('../content/timeline/search-thumbnails.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/own-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/people.json?v=20261014-ariel-confirmed-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/people.json?v=20261014-all-names-confirmed-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/video-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/body-features.json?v=20261014-ariel-confirmed-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/body-features.json?v=20261014-all-names-confirmed-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
   ]);
   const videoFacts=videoData.status==='fulfilled' ? videoData.value.videos || {} : {};
   const people=peopleData.status==='fulfilled' ? peopleData.value : {};
@@ -72,6 +72,9 @@ loadTimelineGalleryData().then(async data => {
       if(description)nativeDescriptions.set(sourceURL(src),description);
     });
   }
+  for(const [identity,record] of photoPeople) {
+    if(record.description)nativeDescriptions.set(identity,record.description);
+  }
   for(const result of entries) {
     const entry=result.entry;
     const gallery=data.entries[`${entry.date}|${entry.category}|${entry.title}`];
@@ -80,7 +83,7 @@ loadTimelineGalleryData().then(async data => {
     result.galleryDetails=gallery?.searchDetails || gallery?.details || [];
     result.searchable+=' '+normalize(result.galleryDetails.join(' '));
     result.images=sources.map((src,index)=>{
-      const description=gallery?.imageDescriptions?.[index] || nativeDescriptions.get(sourceURL(src)) || biography.find(part=>part.src===src)?.caption || '';
+      const description=gallery?.imageDescriptions?.[index] || nativeDescriptions.get(sourceURL(src)) || photoPeople.get(photoIdentity(src))?.description || biography.find(part=>part.src===src)?.caption || '';
       const record=photoPeople.get(photoIdentity(src));
       return {src,description,thumbnail:thumbnails[src] || src,look:looks.get(photoIdentity(src)),anatomy:anatomy.get(photoIdentity(src)),people:[...new Set([...(record?.people || []),...findTimelinePeople(description)])],peopleLooks:record?.looks};
     }).filter(image=>image.description);
@@ -94,7 +97,7 @@ loadTimelineGalleryData().then(async data => {
     const url=sourceURL(image.getAttribute('src'));
     const size=nativeSizes.get(url);
     if(size?.width && size?.height){image.width=size.width;image.height=size.height;}
-    const description=nativeDescriptions.get(url);
+    const description=nativeDescriptions.get(url) || nativeDescriptions.get(photoIdentity(url));
     const alt=window.DennisLanguage?.current==='en' ? window.DennisLanguage.english(description) || description : description;
     if(alt && image.alt!==alt)image.alt=alt;
   });

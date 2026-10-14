@@ -2,7 +2,8 @@
   "photos": {
     "./archive/timeline/combined/B30-2002_08_03_listastevna.png": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_07.jpg": {
@@ -12,57 +13,82 @@
     },
     "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/gruppe_01.jpg": {
       "people": [
-        "moma-van-vest"
+        "moma-van-vest",
+        "dennis",
+        "di-leila",
+        "miss-fish"
       ]
     },
     "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/gruppe_02.jpg": {
       "people": [
         "moma-van-vest",
         "ramona-macho",
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "di-leila",
+        "miss-fish"
       ]
     },
     "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/gruppe_03.jpg": {
       "people": [
         "moma-van-vest",
         "ramona-macho",
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis",
+        "di-leila",
+        "miss-fish",
+        "puta"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_05.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_02.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_04.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis",
+        "miss-fish"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/hairwerk_dennis_01.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/hairwerk_dennis_02.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/wig_04.jpg": {
       "people": [
         "hairwerk",
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "the-thom"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/trappen_01.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis",
+        "johnny-warehouse",
+        "liebling-siebling",
+        "miss-fish",
+        "puta",
+        "ramona-macho",
+        "stimulundia",
+        "the-thom"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_08_04_nykoebing_falster/17.jpg": {
@@ -72,27 +98,33 @@
     },
     "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_02.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis",
+        "liebling-siebling"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1587.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1744.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1729.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1813.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1821.jpg": {
@@ -102,44 +134,53 @@
     },
     "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1824.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1826.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2708.jpg": {
       "people": [
         "hairwerk",
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "miss-fish"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/gina_dennis_show.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3588.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3587.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN6070.jpg": {
       "people": [
         "hairwerk",
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "lene-leth-lebbe"
       ]
     },
     "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7339_a.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7381.jpg": {
@@ -165,37 +206,44 @@
     },
     "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/DSCN5689.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/05.jpg": {
       "people": [
-        "maria-maud"
+        "maria-maud",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8707_b.jpg": {
       "people": [
-        "moma-van-vest"
+        "moma-van-vest",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/IMG_8791.jpg": {
       "people": [
-        "danny-boy"
+        "danny-boy",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8859.jpg": {
       "people": [
-        "moma-van-vest"
+        "moma-van-vest",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8864.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8863.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/HPIM1657.jpg": {
@@ -215,12 +263,14 @@
     },
     "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8878.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8903.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_06_03_machine/IMG_9438.jpg": {
@@ -230,63 +280,79 @@
     },
     "./archive/legacy/200_calendar/2006/06_06_03_machine/IMG_9441.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "pipaluk"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_06_17_spanien/07.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis",
+        "miss-fish",
+        "the-thom"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0263.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0291.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0269.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2007/07_05_12_bmr/dennis_03.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis",
+        "miss-fish"
       ]
     },
     "./archive/legacy/200_calendar/2007/07_05_12_bmr/dennis_04.jpg": {
       "people": [
-        "danny-boy"
+        "danny-boy",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2008/08_09_20_band_show/IMG_2357.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2008/08_09_20_band_show/IMG_2368.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0452.jpg": {
       "people": [
         "delores",
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0454.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0455.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "gina-la-mirage"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0469.jpg": {
@@ -297,7 +363,9 @@
     "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0446.jpg": {
       "people": [
         "delores",
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "alexis",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0460.jpg": {
@@ -307,53 +375,67 @@
     },
     "./archive/legacy/200_calendar/2009/09_07_31_dunst/maria_dennis_lene.jpg": {
       "people": [
-        "maria-maud"
+        "maria-maud",
+        "dennis",
+        "lene-leth-lebbe"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2441.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/show_02.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/show_01.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0312.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0320.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0369.jpg": {
       "people": [
-        "bent-jacobsen"
+        "bent-jacobsen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2010/10_09_23_heinrich/dennis_hairwerk.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2010/10_09_23_heinrich/dunst.jpg": {
       "people": [
         "hairwerk",
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_01.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "liebling-siebling"
       ]
     },
     "./archive/legacy/200_calendar/2011/11_06_04_distortion/distortion_03.jpg": {
@@ -368,12 +450,14 @@
     },
     "./archive/timeline/performance/2006-12-15-dennis-daniel.webp": {
       "people": [
-        "danny-boy"
+        "danny-boy",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8679.jpg": {
       "people": [
-        "danny-boy"
+        "danny-boy",
+        "dennis"
       ],
       "looks": {
         "danny-boy": {
@@ -391,7 +475,8 @@
     },
     "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8677.jpg": {
       "people": [
-        "danny-boy"
+        "danny-boy",
+        "dennis"
       ],
       "looks": {
         "danny-boy": {
@@ -414,112 +499,147 @@
     },
     "./archive/legacy/200_calendar/2002/02_11_09_for_fest/2002_11_09_fest_02.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2002/02_11_09_for_fest/2002_11_09_fest_05.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "anders-clausen",
+        "dennis",
+        "puta"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_01_09_ski_ore/ski_hotel_05.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_01_09_ski_ore/ski_tog_03.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "puta"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_08.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "puta"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_fest_02.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_scooter_01.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "puta"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_scooter_08.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "puta"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/Image01.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 032.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 033.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 036.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 037.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 038.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 056.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 057.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_05_29_eurogames/dennis_ramona_01.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_05_29_eurogames/gruppe_01.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "miss-fish",
+        "puta",
+        "stimulundia"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_05_29_eurogames/gruppe_02.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "miss-fish",
+        "stimulundia"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/wig_02.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "miss-fish",
+        "stimulundia",
+        "the-thom"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image01.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image02.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image03.jpg": {
@@ -529,17 +649,20 @@
     },
     "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image07.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image08.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image12.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image15.jpg": {
@@ -549,12 +672,14 @@
     },
     "./archive/legacy/200_calendar/2003/03_11_22_snip/snip_dennis_04.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_11_22_snip/snip_dennis_08.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_11_22_snip/snip_ramona_02.jpg": {
@@ -564,47 +689,61 @@
     },
     "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0265.jpg": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis"
       ]
     },
     "./archive/timeline/combined/B15-2002_09_08_design.png": {
       "people": [
-        "ramona-macho"
+        "ramona-macho",
+        "dennis",
+        "miss-fish"
       ]
     },
     "./archive/legacy/200_calendar/2000/00_08_14_frk_verden/2000_08_14_missworld_03.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis",
+        "tina-von-kina"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 059.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_11_15_shadow_people/shadow_people_02.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis",
+        "miss-fish",
+        "the-thom"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1540.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1541.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_08_27_universitetet/uni_03.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis",
+        "madam"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2615.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2646_02.jpg": {
@@ -614,62 +753,76 @@
     },
     "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2702.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_10_08_kulturnat_knud/kafe_knud_01.jpg": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/timeline/combined/B07-2002_06_01_flyer.png": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis"
       ]
     },
     "./archive/timeline/combined/B18-2002_10_11_electical.png": {
       "people": [
-        "johnny-warehouse"
+        "johnny-warehouse",
+        "dennis"
       ]
     },
     "./archive/timeline/hollywood-or-bollywood-2022.jpeg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis"
       ]
     },
     "./archive/timeline/lgbt-ghana-fundraiser-2022.jpeg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis"
       ]
     },
     "./archive/timeline/performance/2018-10-14-01.jpg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis"
       ]
     },
     "./archive/timeline/performance/2018-10-14-02.jpg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis"
       ]
     },
     "./archive/timeline/performance/2018-10-14-03.jpg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis"
       ]
     },
     "./archive/timeline/performance/2018-10-14-04.jpg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis"
       ]
     },
     "./archive/timeline/performance/2022-05-06-02.jpg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis"
       ]
     },
     "./archive/timeline/peter-vadim-50-2022-01.jpeg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis",
+        "trine-syberg"
       ]
     },
     "./archive/timeline/peter-vadim-50-2022-03.jpeg": {
@@ -679,22 +832,28 @@
     },
     "./archive/timeline/peter-vadim-50-2022-05.jpeg": {
       "people": [
-        "florence"
+        "florence",
+        "dennis"
       ]
     },
     "./archive/timeline/combined/B08-2002_06_01_flyer.png": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis",
+        "miss-fish"
       ]
     },
     "./archive/timeline/performance/2026-06-05-05.jpg": {
       "people": [
-        "hairwerk"
+        "hairwerk",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/HPIM0354.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2008/08_04_04_camp_x/dennis1.jpg": {
@@ -715,13 +874,16 @@
       "people": [
         "tove-hansen",
         "gina-la-mirage",
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1091.jpg": {
       "people": [
         "tove-hansen",
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1095.jpg": {
@@ -737,17 +899,20 @@
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1130.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1132.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1155.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1156.jpg": {
@@ -768,7 +933,8 @@
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09748.jpg": {
       "people": [
         "tove-hansen",
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09761.jpg": {
@@ -780,7 +946,9 @@
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09771.jpg": {
       "people": [
         "tove-hansen",
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09775.jpg": {
@@ -797,12 +965,15 @@
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09889.jpg": {
       "people": [
         "tove-hansen",
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0323.jpg": {
       "people": [
-        "tove-hansen"
+        "tove-hansen",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2011/11_06_04_distortion/Dennis_Agerblad_Band_Live_Distortion.gif": {
@@ -834,17 +1005,21 @@
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1111.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1127.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1139.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1162.jpg": {
@@ -864,12 +1039,15 @@
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09872.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09880.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09949.jpg": {
@@ -885,7 +1063,8 @@
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/blomster.jpg": {
       "people": [
         "gina-la-mirage",
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/gina.jpg": {
@@ -901,13 +1080,15 @@
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/gras.jpg": {
       "people": [
         "gina-la-mirage",
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/live_01.jpg": {
       "people": [
         "gina-la-mirage",
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/live_02.jpg": {
@@ -918,12 +1099,14 @@
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/live_04.jpg": {
       "people": [
         "gina-la-mirage",
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/live_05.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_04_warehouse9/gina_carsten_spar.jpg": {
@@ -938,12 +1121,14 @@
     },
     "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/04.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/06.jpg": {
       "people": [
-        "gina-la-mirage"
+        "gina-la-mirage",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09707.jpg": {
@@ -953,17 +1138,20 @@
     },
     "./archive/timeline/performance/2019-08-10-01.jpg": {
       "people": [
-        "danny-boy"
+        "danny-boy",
+        "dennis"
       ]
     },
     "./archive/timeline/performance/2019-08-10-02.jpg": {
       "people": [
-        "danny-boy"
+        "danny-boy",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_08.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2362.jpg": {
@@ -973,32 +1161,38 @@
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2357.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2326.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2438.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2361.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2427.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2348.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2346.jpg": {
@@ -1023,7 +1217,8 @@
     },
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/live_03.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis"
       ]
     },
     "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/delores.jpg": {
@@ -1033,12 +1228,16 @@
     },
     "./archive/legacy/200_calendar/2008/08_09_20_band_show/IMG_2366.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2008/08_09_20_band_show/IMG_2356.jpg": {
       "people": [
-        "delores"
+        "delores",
+        "dennis",
+        "soede-car-o-lina"
       ]
     },
     "./archive/legacy/200_calendar/2008/08_04_04_camp_x/dennis4.jpg": {
@@ -1048,12 +1247,15 @@
     },
     "./archive/timeline/performance/2023-08-12-02.webp": {
       "people": [
-        "athena-lady"
+        "athena-lady",
+        "dennis"
       ]
     },
     "./content/talent/semifinale/15.webp": {
       "people": [
-        "athena-lady"
+        "athena-lady",
+        "delores",
+        "dennis"
       ]
     },
     "./content/talent/semifinale/03.webp": {
@@ -1063,12 +1265,15 @@
     },
     "./content/talent/semifinale/09.webp": {
       "people": [
-        "athena-lady"
+        "athena-lady",
+        "dennis",
+        "hairwerk"
       ]
     },
     "./archive/legacy/200_calendar/2006/06_07_08_shave_your_pet/IMG_0086.jpg": {
       "people": [
-        "athena-lady"
+        "athena-lady",
+        "dennis"
       ]
     },
     "./content/talent/liveshow/02.webp": {
@@ -1078,17 +1283,26 @@
     },
     "./content/talent/semifinale/13.webp": {
       "people": [
-        "areal"
+        "areal",
+        "dennis",
+        "hairwerk",
+        "moma-van-vest",
+        "povilas-bastys"
       ]
     },
     "./content/talent/audition/05.webp": {
       "people": [
-        "areal"
+        "areal",
+        "dennis",
+        "hairwerk",
+        "moma-van-vest",
+        "povilas-bastys"
       ]
     },
     "./content/talent/audition/03.webp": {
       "people": [
-        "areal"
+        "areal",
+        "hairwerk"
       ]
     },
     "./archive/timeline/performance/2015-03-06-07.webp": {
@@ -1098,7 +1312,11 @@
     },
     "./content/talent/semifinale/14.webp": {
       "people": [
-        "areal"
+        "areal",
+        "dennis",
+        "hairwerk",
+        "moma-van-vest",
+        "povilas-bastys"
       ]
     },
     "./content/talent/audition/02.webp": {
@@ -1108,12 +1326,4664 @@
     },
     "./content/talent/audition/01.webp": {
       "people": [
-        "areal"
+        "areal",
+        "dennis",
+        "hairwerk",
+        "moma-van-vest",
+        "povilas-bastys"
       ]
     },
     "./content/talent/audition/07.webp": {
       "people": [
-        "areal"
+        "areal",
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-14-02.webp": {
+      "people": [
+        "blomst",
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-14-03.webp": {
+      "people": [
+        "blomst",
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/timeline/performance/2024-08-10-02.webp": {
+      "people": [
+        "blomst",
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/timeline/performance/2024-08-10-03.webp": {
+      "people": [
+        "blomst",
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/timeline/performance/2020-12-04-01.jpg": {
+      "people": [
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/timeline/performance/2026-09-11-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2026-09-11-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-12-19-02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-25-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-25-03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-07-25-03.jpg": {
+      "people": [
+        "dennis",
+        "kristin-nolsoee-bech",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/timeline/performance/2025-07-25-02.jpg": {
+      "people": [
+        "dennis",
+        "kristin-nolsoee-bech",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-14-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/literature/2024-11-10-01.webp": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Kirken i Møllegade På billedet ses Dennis Agerblad."
+    },
+    "./archive/timeline/performance/2024-05-31-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-05-31-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/literature/2023-08-15-03.webp": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Litteratur i Bøssehuset På billedet ses Dennis Agerblad."
+    },
+    "./archive/timeline/literature/2023-06-05-01.webp": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Det Lilla Rum, Nørrebro På billedet ses Dennis Agerblad."
+    },
+    "./archive/timeline/literature/2023-06-05-02.webp": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Det Lilla Rum, Nørrebro På billedet ses Dennis Agerblad."
+    },
+    "./archive/timeline/tennis-sladderblad-2023-01.jpeg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/tennis-sladderblad-2023-02.jpeg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/peter-vadim-50-2022-04.jpeg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2021-10-22-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2020-03-07-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-05-17-04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2017-05-10-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2017-05-10-05.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2017-03-25-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-06-26-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-06-26-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-08-22-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./content/talent/semifinale/01.webp": {
+      "people": [
+        "athena-lady",
+        "delores",
+        "dennis",
+        "moma-van-vest"
+      ]
+    },
+    "./content/talent/presse/01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_03_06_stubnitz/P3077533.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2335.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_09_04_warehouse9/show_02.jpg": {
+      "people": [
+        "dennis",
+        "gina-la-mirage"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_30_madurglotti/koncert_600.gif": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09916.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_03_13_vaarframsyning/CIMG0164-copy.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_03_13_vaarframsyning/dsc0029.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_03_13_vaarframsyning/CIMG0167.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_09_06_co-lab_performance/04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_09_06_co-lab_performance/02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_19_dennis/dennis_scene_02.jpg": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_19_dennis/dennis_red_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_19_dennis/barbara_vang_02.jpg": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_18_madurglotti/06_mureldur.jpg": {
+      "people": [
+        "dennis",
+        "madur-glotti"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_06_12_jolene/IMG_2958.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_04_04_camp_x/dennis5.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9761.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_17_spanien/IMG_9581.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_17_spanien/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_05_11_berghain/file_15.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_05_11_berghain/file_52.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/IMG_8729.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_01_15_transer_paa_glatis/IMG_8296.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/DSCN5816.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/HPIM0355.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina",
+        "tove-hansen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/IMG_6774.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/009_na.jpg": {
+      "people": [
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_02_12_stille_aften_med_dunst/IMG_5174.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_31_homophobia_newyear/IMG_4585.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/dennis_dive_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2595_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_27_universitetet/uni_01.jpg": {
+      "people": [
+        "dennis",
+        "hairwerk",
+        "johnny-warehouse",
+        "madam",
+        "miss-fish",
+        "the-thom"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_11.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_53.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_54.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1735.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1747.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1830.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_dennis_02.jpg": {
+      "people": [
+        "bjarne-pigen",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_03_27_supamolli/supamolli_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_11_22_snip/snip_dennis_07.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_11_22_snip/snip_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_09_20_skidt_kommer_til/dscn3527.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_30_turist_trap/tourist_trap_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2446.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2487.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2595.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2572.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2389.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2594.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/parade_nicu.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_04_nykoebing_falster/03_08_04_nykoebing_06.jpg": {
+      "people": [
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04c.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_09.jpg": {
+      "people": [
+        "dennis",
+        "stimulundia"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04b.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/queeruption_berlin_01.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_04_26_primate_nite/primate_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_03_22_robbery/2003_03_22_robbery_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_17.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/lefreak_dennis_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/02_11_16_tissemand_06.jpg": {
+      "people": [
+        "dennis",
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/lefreak_ramona_dennis.jpg": {
+      "people": [
+        "dennis",
+        "ramona-macho"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/the_singing_assholes_01.jpg": {
+      "people": [
+        "dennis",
+        "ian-christensen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/02_11_16_tissemand_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/dennis_agerblad_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/2002_10_19_filmfestival_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/2002_10_19_filmfestival_06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/2002_10_19_filmfestival_05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_14_electro_i_dunst/elektro_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_raadhuspladsen_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/parade_2002_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_raadhuspladsen_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/dennis_fest_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/dennis_hverdag_03.jpg": {
+      "people": [
+        "bjarne-pigen",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_fest_08.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/dennis_fest_05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_fest_06.jpg": {
+      "people": [
+        "anders-clausen",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_hverdag_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1994/d_red_0222.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1994/1994_red_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1987/1987_michael_jackson_05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1970/biografi_04.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Alene På billedet ses Dennis Agerblad."
+    },
+    "./archive/legacy/200_calendar/1970/biografi_06.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Dennis Agerblad, 15 år"
+    },
+    "./archive/legacy/200_calendar/1970/Robin_4_aar_02.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Robin, 4 år På billedet ses Dennis Agerblad."
+    },
+    "./archive/legacy/200_calendar/1970/biografi_07.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Dennis Agerblad, 15 år, Vestmanna skole"
+    },
+    "./archive/legacy/200_calendar/1970/biografi_01.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Robin, 6 år På billedet ses Dennis Agerblad."
+    },
+    "./archive/legacy/200_calendar/1970/biografi_robin.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Ova, 22 år På billedet ses Dennis Agerblad."
+    },
+    "./400_gallery/dennis_agerblad_blue_blond.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Dennis Agerblad, 30 år"
+    },
+    "./archive/legacy/200_calendar/1970/biografi_02.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Robin på fjeldtoppen På billedet ses Dennis Agerblad."
+    },
+    "./archive/legacy/200_calendar/1970/biografi_03.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Mit værelse På billedet ses Dennis Agerblad."
+    },
+    "./archive/legacy/200_calendar/1970/biografi_05.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Robin, 14 år På billedet ses Dennis Agerblad."
+    },
+    "./archive/legacy/200_calendar/2003/03_03_22_robbery/2003_03_22_flyer_robbery.gif": {
+      "people": [
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_30_turist_trap/03_08_30_tourist_trap_03.jpg": {
+      "people": [
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/Queerfestival1 lille.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_bjarne_02.jpg": {
+      "people": [
+        "bjarne-pigen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_03.jpg": {
+      "people": [
+        "lene-leth-lebbe"
+      ]
+    },
+    "./content/talent/semifinale/06.webp": {
+      "people": [
+        "moma-van-vest"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/parade_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_05_thursday_itch_03/03_06_05_thursday_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_03_22_robbery/2003_03_22_robbery_06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_fest_06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-12-19-03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_19_sangerindepavillion/klud.jpg": {
+      "people": [
+        "fru-klud"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/IMG_6773.jpg": {
+      "people": [
+        "moma-van-vest"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_04_10_cross_dress/06_anders_wickstroem.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2555.jpg": {
+      "people": [
+        "puta"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-29-03.jpg": {
+      "people": [
+        "trine-trasch"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/Queerfestival4 lille.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/timeline/performance/2026-08-08-01.webp": {
+      "people": [
+        "blomst",
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/timeline/performance/2026-08-08-02.webp": {
+      "people": [
+        "blomst",
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/timeline/performance/2020-12-04-02.jpg": {
+      "people": [
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/timeline/performance/2019-10-19-02.jpg": {
+      "people": [
+        "dennis",
+        "hairwerk",
+        "ramona-macho"
+      ]
+    },
+    "./content/talent/semifinale/05.webp": {
+      "people": [
+        "hairwerk"
+      ]
+    },
+    "./content/talent/semifinale/07.webp": {
+      "people": [
+        "hairwerk"
+      ]
+    },
+    "./content/talent/semifinale/08.webp": {
+      "people": [
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./content/talent/semifinale/12.webp": {
+      "people": [
+        "areal",
+        "dennis",
+        "hairwerk",
+        "moma-van-vest",
+        "povilas-bastys"
+      ]
+    },
+    "./content/talent/liveshow/05.webp": {
+      "people": [
+        "hairwerk"
+      ]
+    },
+    "./content/talent/liveshow/01.webp": {
+      "people": [
+        "hairwerk"
+      ]
+    },
+    "./content/talent/audition/06.webp": {
+      "people": [
+        "hairwerk",
+        "moma-van-vest"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/03.jpg": {
+      "people": [
+        "delores",
+        "hairwerk"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/02.jpg": {
+      "people": [
+        "hairwerk",
+        "moma-van-vest"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/07.jpg": {
+      "people": [
+        "delores",
+        "hairwerk"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/03.jpg": {
+      "people": [
+        "dennis",
+        "hairwerk",
+        "paul-jensen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/04.jpg": {
+      "people": [
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_12_12_klima/dunst.jpg": {
+      "people": [
+        "dennis",
+        "hairwerk",
+        "ramona-macho"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/IMG_6770.jpg": {
+      "people": [
+        "hairwerk",
+        "nikolaj-tange-lange",
+        "ramona-macho",
+        "the-thom"
+      ]
+    },
+    "./archive/timeline/performance/2026-08-08-04.webp": {
+      "people": [
+        "blomst",
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-14-04.webp": {
+      "people": [
+        "blomst"
+      ]
+    },
+    "./archive/timeline/performance/2026-09-11-03-v2.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2026-08-08-06.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2026-08-08-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2026-07-18-04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2026-07-18-03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2026-07-18-02.jpg": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/timeline/performance/2026-06-05-02.jpg": {
+      "people": [
+        "dennis",
+        "lago",
+        "tutu-wanna"
+      ]
+    },
+    "./archive/timeline/performance/2026-06-05-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2026-06-05-04.jpg": {
+      "people": [
+        "dennis",
+        "lulu-celeste"
+      ]
+    },
+    "./archive/timeline/performance/2025-12-19-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-12-19-04.jpg": {
+      "people": [
+        "dennis",
+        "rebekka-fjams-du-nord"
+      ]
+    },
+    "./archive/timeline/press/2025-11-28-leitisstein-01.webp": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/timeline/performance/2025-11-28-04.webp": {
+      "people": [
+        "dennis",
+        "kristin-nolsoee-bech",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/timeline/performance/2025-11-28-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/press/2025-11-28-leitisstein-radio.webp": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/timeline/performance/2025-11-28-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-29-04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-29-05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-29-07.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-29-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-29-06.jpg": {
+      "people": [
+        "blomst",
+        "dennis",
+        "kastanje",
+        "lea",
+        "ramona-macho",
+        "trine-trasch"
+      ]
+    },
+    "./archive/timeline/performance/2025-08-09-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-08-09-02.jpg": {
+      "people": [
+        "dennis",
+        "gitte-plads"
+      ]
+    },
+    "./archive/timeline/performance/2025-08-09-03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-07-25-01.jpg": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/timeline/performance/2025-07-12-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-05-10-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-05-10-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2025-05-10-03.jpg": {
+      "people": [
+        "dennis",
+        "per",
+        "trine-syberg"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-03.webp": {
+      "people": [
+        "dennis",
+        "tutu-wanna"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-06.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-10.webp": {
+      "people": [
+        "biker",
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-08.webp": {
+      "people": [
+        "biker",
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-05.webp": {
+      "people": [
+        "dennis",
+        "falula"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-04.webp": {
+      "people": [
+        "dennis",
+        "falula"
+      ]
+    },
+    "./archive/timeline/performance/2024-10-18-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-10-18-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-10-18-03.webp": {
+      "people": [
+        "dennis",
+        "tutu-wanna"
+      ]
+    },
+    "./archive/timeline/performance/2024-10-18-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-05-31-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-05-31-05.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-05-31-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-05-31-06.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-05-18-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2024-05-18-02.webp": {
+      "people": [
+        "dennis",
+        "tutu-wanna"
+      ]
+    },
+    "./archive/timeline/performance/2023-12-01-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-12-01-02.webp": {
+      "people": [
+        "dennis",
+        "lars-gade"
+      ]
+    },
+    "./archive/timeline/performance/2023-12-01-01.webp": {
+      "people": [
+        "dennis",
+        "lars-gade"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-28-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-28-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-28-03.webp": {
+      "people": [
+        "dennis",
+        "flemming"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-28-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-20-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-20-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-20-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-20-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-08.webp": {
+      "people": [
+        "dennis",
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-06.webp": {
+      "people": [
+        "dennis",
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-04.webp": {
+      "people": [
+        "dennis",
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-09.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-05.webp": {
+      "people": [
+        "dennis",
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-01.webp": {
+      "people": [
+        "dennis",
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-17-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-17-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-17-06.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-17-04.webp": {
+      "people": [
+        "dennis",
+        "smilla-flemming"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-17-05.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-12-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-12-05.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-12-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2023-05-27-04.jpg": {
+      "people": [
+        "dennis",
+        "siv-ova-tolfsen",
+        "unni-ova-tolfsen"
+      ]
+    },
+    "./archive/timeline/performance/2023-05-27-06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2022-10-21-01.jpg": {
+      "people": [
+        "dennis",
+        "katrine"
+      ]
+    },
+    "./archive/timeline/valgplakater-2022-01.jpeg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/valgplakater-2022-04.jpeg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/valgplakater-2022-02.jpeg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/boessernes-danmarkshistorie-2021.jpeg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2021-10-22-02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black-2.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-i-hvid.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2021-08-14-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2020-12-18-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2020-10-16-02.jpg": {
+      "people": [
+        "blomst",
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2020-03-07-02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-12-05-02.jpg": {
+      "people": [
+        "dennis",
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2019-12-05-01.jpg": {
+      "people": [
+        "dennis",
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2019-10-19-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-08-10-03.jpg": {
+      "people": [
+        "danny-boy",
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-08-10-06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-08-10-05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-08-10-04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-05-17-02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-05-17-03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-05-17-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2019-02-22-01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2017-05-10-06.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2017-05-10-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2017-05-10-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2017-05-10-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2017-03-30-01.webp": {
+      "people": [
+        "dennis",
+        "eivoer"
+      ]
+    },
+    "./archive/timeline/performance/2017-03-30-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/press/2017-01-01-face-the-strange-kenzo-dennis.webp": {
+      "people": [
+        "dennis",
+        "kenzo"
+      ]
+    },
+    "./archive/timeline/performance/2016-06-04-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-06-04-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-06-04-04.webp": {
+      "people": [
+        "dennis",
+        "lene-leth-lebbe"
+      ]
+    },
+    "./archive/timeline/performance/2016-06-04-05.webp": {
+      "people": [
+        "dennis",
+        "lene-leth-lebbe"
+      ]
+    },
+    "./archive/timeline/performance/2016-06-04-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-05-20-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-05-20-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-05-20-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-04-16-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-04-16-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-04-16-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2016-04-16-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-08-22-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-08-22-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-04-10-03.webp": {
+      "people": [
+        "dennis",
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/timeline/performance/2015-04-10-07.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-04-10-04.webp": {
+      "people": [
+        "dennis",
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/timeline/performance/2015-04-10-02.webp": {
+      "people": [
+        "dennis",
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/timeline/performance/2015-04-10-01.webp": {
+      "people": [
+        "dennis",
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/timeline/performance/2015-04-10-06.webp": {
+      "people": [
+        "dennis",
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/timeline/performance/2015-03-06-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-03-06-08.webp": {
+      "people": [
+        "dennis",
+        "marquien"
+      ]
+    },
+    "./archive/timeline/performance/2015-03-06-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-03-06-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-03-06-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./content/talent/semifinale/02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./content/talent/semifinale/10.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/press/2015-01-31-illegal-magazine-05.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/press/2015-01-31-illegal-magazine-01.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/press/2015-01-31-illegal-magazine-04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/press/2015-01-31-illegal-magazine-03.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/press/2015-01-31-illegal-magazine-06.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/press/2015-01-31-illegal-magazine-02.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./content/talent/liveshow/04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./content/talent/audition/04.webp": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_12_01_jule_tarm_tarm/DAband_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_12_01_jule_tarm_tarm/DAband_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_11_22_keramik/Dennis_Agerblad_Band.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_10_12_ke12/Dennis-Agerblad-Snoribolla_Genturnar.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/07.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/09.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/10.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/12.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/13.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/07.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/08.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_04_20_found_on_corner/Fr._Hr._Agerblad.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_03_03_faeroesk_out_night/OUTNIGHT2_DK_plakat_600.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_03_01_resturang/02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_03_01_resturang/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_03_01_resturang/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_02_17_strikkeklub/strikkeklub.jpg": {
+      "people": [
+        "dennis",
+        "gitte-plads"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_19_sangerindepavillion/dennis_synger.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_19_sangerindepavillion/nis_synger.jpg": {
+      "people": [
+        "bisgaard",
+        "dennis",
+        "gitte-plads"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_19_sangerindepavillion/dennis.jpg": {
+      "people": [
+        "dennis",
+        "fru-klud"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_09.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_04_distortion/kenneth_risgaard_01.jpg": {
+      "people": [
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_03_06_loeves_bogcafe/anna_petri_dennis_agerblad_lille.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_01_18_poetiske_bureau/performerne_01.jpg": {
+      "people": [
+        "dennis",
+        "johan-martin-christiansen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_01_18_poetiske_bureau/performerne_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0348.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0347.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0370.jpg": {
+      "people": [
+        "dennis",
+        "lene-leth-lebbe"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0322.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0351.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0361.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0352.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0350.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_03_06_stubnitz/P3077514.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2358.jpg": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2376.jpg": {
+      "people": [
+        "dennis",
+        "djuna-barnes"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_09_04_warehouse9/dennis_carsten_spar.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/dennis_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/dennis.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_31_dunst/slibling_dennis.jpg": {
+      "people": [
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09666.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09904.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09892.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09745.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1099.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09983.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1168.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1167.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0443.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_03_13_vaarframsyning/dsc0145.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_03_13_vaarframsyning/dsc0191.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_09_06_co-lab_performance/performance_flyer.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_09_06_co-lab_performance/05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_09_06_co-lab_performance/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_09_06_co-lab_performance/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_08_09_modeshow/dennis_karinajoenson.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_08_09_modeshow/02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_08_09_modeshow/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_19_dennis/barbara_vang_01.jpg": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_19_dennis/06_mureldur.jpg": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_19_dennis/07_mureldur.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_18_madurglotti/01_mureldur.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_18_madurglotti/07_mureldur.jpg": {
+      "people": [
+        "dennis",
+        "terji-krossteig"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_18_madurglotti/dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_18_madurglotti/03_mureldur.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_18_madurglotti/05_mureldur.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_07_18_madurglotti/dennis_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_06_12_jolene/IMG_2954.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_04_04_camp_x/dennis2.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_10_19_eggen/dennis_agerblad_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_09_15_sabaah_dunst/Scan 021.jpg": {
+      "people": [
+        "dennis",
+        "petruska"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_09_15_sabaah_dunst/dennis_agerblad_3.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_09_15_sabaah_dunst/Scan 003.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_09_15_sabaah_dunst/dennis_agerblad_4.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_09_15_sabaah_dunst/Scan 010.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_09_15_sabaah_dunst/Scan 016.jpg": {
+      "people": [
+        "dennis",
+        "rosa-lux"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_09_15_sabaah_dunst/Scan 012.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_05_12_bmr/_MG_2869.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_05_12_bmr/_MG_2902.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_05_12_bmr/img_2895.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_05_12_bmr/release-party-006.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_05_12_bmr/dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_05_12_bmr/dennis_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_12_15_pyramide/IMG_0836.jpg": {
+      "people": [
+        "dennis",
+        "lene-leth-lebbe",
+        "petruska"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_12_15_pyramide/dennis_agerblad_neglelak.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6586.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6583.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6542.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6535.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6545.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6569.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0258.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0238.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0236.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_08_shave_your_pet/IMG_0109.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_08_shave_your_pet/IMG_0161.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_08_shave_your_pet/2006_07_08_pet.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_08_shave_your_pet/IMG_0075.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_08_shave_your_pet/IMG_0126.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9757.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9765.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/scan0001.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9750.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9782.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9852.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/Queerfestival2 lille.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9747.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_17_spanien/04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_17_spanien/06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_17_spanien/05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_17_spanien/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_03_machine/2006_06_03_machine_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_03_machine/IMG_9447.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_05_11_berghain/file_72.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_05_05_lars/2006_05_05_lars_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_05_05_lars/2006_05_05_lars_02.jpg": {
+      "people": [
+        "dennis",
+        "lars-von-trier",
+        "lene-leth-lebbe",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_05_05_lars/IMG_1170.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_28_amsterdam/IMG_9119.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_28_amsterdam/IMG_9083.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_28_amsterdam/IMG_9122.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_28_amsterdam/2006_04_28_amsterdam.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_28_amsterdam/IMG_9124.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/HPIM1683.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/IMG_8757.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/IMG_8727.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/IMG_8728.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/IMG_8738.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8714.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8712.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8691.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8716.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8664.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8689.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/04.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_01_15_transer_paa_glatis/IMG_8269.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_01_15_transer_paa_glatis/IMG_8267.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_01_15_transer_paa_glatis/IMG_8268.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_01_15_transer_paa_glatis/IMG_8297.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_01_15_transer_paa_glatis/IMG_8273.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7463.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7485.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/HPIM4370.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7476.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/DSCN5688.jpg": {
+      "people": [
+        "dennis",
+        "lene-leth-lebbe"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/HPIM4367.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7496.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7445.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7423.jpg": {
+      "people": [
+        "andreas-tange-lange",
+        "dennis",
+        "nikolaj-tange-lange"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/IMG_6725.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/IMG_6769.jpg": {
+      "people": [
+        "dennis",
+        "moma-van-vest",
+        "ramona-macho"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/IMG_6731.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_08_13_private_parts/IMG_6594.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_08_13_private_parts/IMG_6601.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_08_13_private_parts/IMG_6595.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_08_13_private_parts/HPIM2479.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_08_13_private_parts/HPIM2683.jpg": {
+      "people": [
+        "alexis",
+        "dennis",
+        "tina-trasch",
+        "ulle-dulle"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_06_11_polen_demo/IMG_6238.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_06_11_polen_demo/hunter_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/011_na.jpg": {
+      "people": [
+        "dennis",
+        "the-thom"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/008_na.jpg": {
+      "people": [
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/020_na.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/IMG_6166.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/IMG_6162.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN6099.jpg": {
+      "people": [
+        "dennis",
+        "rudi"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN5622.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN5623.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN6129.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN6131.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN5792.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_02_12_stille_aften_med_dunst/IMG_5198.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_02_12_stille_aften_med_dunst/IMG_5086.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_02_12_stille_aften_med_dunst/IMG_5177.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_02_12_stille_aften_med_dunst/IMG_5180.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_31_homophobia_newyear/IMG_4539.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_31_homophobia_newyear/IMG_4541.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_31_homophobia_newyear/IMG_4576.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/531.jpg": {
+      "people": [
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/CRW_0421.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/IMG_4329.jpg": {
+      "people": [
+        "dennis",
+        "mads-ananda-lodahl"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/IMG_4256.jpg": {
+      "people": [
+        "dennis",
+        "madam"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/427.jpg": {
+      "people": [
+        "bob",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/556.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/CRW_0422.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/CRW_0657.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_11_26_spejder/IMG_4067.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_11_26_spejder/spejder_jj_029.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_11_26_spejder/IMG_4114.jpg": {
+      "people": [
+        "dennis",
+        "ramona-macho"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_11_26_spejder/IMG_4001.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_11_26_spejder/IMG_4068.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_11_13_just_music/just_10.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_11_13_just_music/just_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3583.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3618.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3551.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3608.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3577.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3548.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3558.jpg": {
+      "people": [
+        "anders-clausen",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3614.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3578.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3580.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_08_kulturnat_knud/kafe_knud_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/dennis_show_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/klon_14.jpg": {
+      "people": [
+        "dennis",
+        "jan-rolsted",
+        "miss-fish",
+        "soede-car-o-lina",
+        "tue"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/klon_03.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/dennis_show_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2583.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2654.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2510.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2585.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_27_universitetet/dennis_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_27_universitetet/dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_27_universitetet/madam_dennis.jpg": {
+      "people": [
+        "dennis",
+        "madam"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_13.jpg": {
+      "people": [
+        "dennis",
+        "signe"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_09.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_12.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1837.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1836.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/kulturhavn_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1779.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_04_playing_tourist/IMG_1683.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_04_playing_tourist/IMG_1697.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_17_belgrade_pride/demonstration_09.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_17_belgrade_pride/demonstration_02.jpg": {
+      "people": [
+        "bjarne-pigen",
+        "dennis",
+        "johnny-warehouse",
+        "liebling-siebling",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/nag_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1572.jpg": {
+      "people": [
+        "dennis",
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1611.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1590.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1570.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1569.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1537.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1515.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1542.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1536.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_02_homophobia_berlin/homophobia_dennis_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_02_homophobia_berlin/homophobia_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_02_homophobia_berlin/homophobia_dennis_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_03_distortion/bus_35.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_03_distortion/bus_25.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_03_distortion/bus_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_03_distortion/bus_29.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_03_distortion/bus_26.jpg": {
+      "people": [
+        "dennis",
+        "madam"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_dennis_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_05_01_silo/Image41.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_05_01_silo/Image40.jpg": {
+      "people": [
+        "bjarne-pigen",
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_05_01_silo/Image64.jpg": {
+      "people": [
+        "bjarne-pigen",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_05_01_silo/Image09.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_05_01_silo/Image47.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_05_01_silo/Image02.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_05_01_silo/Image04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_05_01_silo/dennis_agerblad.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_04_10_cross_dress/cross_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_04_10_cross_dress/cross_dennis_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_03_27_supamolli/thom_dennis.jpg": {
+      "people": [
+        "dennis",
+        "the-thom"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_03_27_supamolli/supamolli_dennis_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_01_17_cockpitt_farvel/dennis_line_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_11_29_bryggen/dennis_bryggen_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_11_29_bryggen/dennis_bryggen_01.jpg": {
+      "people": [
+        "dennis",
+        "ernalise",
+        "johnny-warehouse",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_11_22_snip/snip_dennis_skridt_12.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_11_22_snip/snip_dennis_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_11_15_shadow_people/dennis_agerblad.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_11_15_shadow_people/shadow_people_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_09_20_skidt_kommer_til/dscn3528.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_09_20_skidt_kommer_til/dscn3514.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_09_20_skidt_kommer_til/dscn3475.jpg": {
+      "people": [
+        "dennis",
+        "ramona-macho"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_09_20_skidt_kommer_til/flyer_filmhuset_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_30_turist_trap/tourist_trap_den_pat_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_30_turist_trap/tourist_trap_dennis_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_30_turist_trap/03_08_30_tourist_trap_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_30_turist_trap/tourist_trap_bar_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_30_turist_trap/tourist_trap_dennis_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2549.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/dennis_agerblad_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2573.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/DSCN2355.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/dennis_agerblad_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2406.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2405.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_04_nykoebing_falster/03_08_04_nykoebing_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/wigstockholm_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/wig_dennis_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_17.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish",
+        "the-thom"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/dennis_07.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/2003_sankt_hans_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/sankt_hans_05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/2003_sankt_hans_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/2003_sankt_hans_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_15_bevar_christiania/flyer_bevar_christiania.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/pinse_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_08.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/pinse_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/pinse_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_05_thursday_itch_03/03_06_05_thursday_04.jpg": {
+      "people": [
+        "dennis",
+        "johnny-warehouse",
+        "liebling-siebling",
+        "the-thom"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_29_eurogames/dennis_bjarnepigen.jpg": {
+      "people": [
+        "bjarne-pigen",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_08.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_05.jpg": {
+      "people": [
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_04.jpg": {
+      "people": [
+        "dennis",
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_09.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_07.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_04_04_cafe_rust/2003_04_04_cafe_rust_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_04_04_cafe_rust/2003_04_04_cafe_rust_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_04_04_cafe_rust/2003_04_04_cafe_rust_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_04_04_cafe_rust/2003_04_04_cafe_rust_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_03_22_robbery/2003_03_22_robbery_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_03_22_robbery/2003_03_22_robbery_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_03_22_robbery/2003_03_22_robbery_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_12.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_15.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_16.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_11.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_07.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_13.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_10.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_08.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_22_arty_farty/2003_02_22_arty_farty_09.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 055.jpg": {
+      "people": [
+        "dennis",
+        "ramona-macho"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_02_08_oscar/dunstoscar 058.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_fest_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_fest_05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_scooter_07.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_scooter_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_scooter_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_fest_03.jpg": {
+      "people": [
+        "dennis",
+        "robert-fux"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_casino_01.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_casino_13.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_casino_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_casino_14.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_casino_05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_09_ski_ore/ski_tog_05.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_09_ski_ore/ski_hotel_06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B26-2002_12_31_newyear.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_31_nytaar/2002_12_31_newyear_04.gif": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_31_nytaar/2002_12_31_newyear_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_31_nytaar/2002_12_31_newyear_03.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_grr-itt_05.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/timeline/combined/B24-2002_12_20_grr-itt.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_grr-itt_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_grr-itt_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_01_world_aids_day/2002_12_01_aidsday_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_01_world_aids_day/2002_12_01_aidsday_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_01_world_aids_day/2002_12_01_aidsday_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_01_world_aids_day/2002_12_01_aidsday_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/flyer_fest_06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/02_11_16_tissemand_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B39-2002_11_16_freakshow.png": {
+      "people": [
+        "dennis",
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_16_lefreak/02_11_16_tissemand_03.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_09_for_fest/2002_11_09_fest_03.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_09_for_fest/2002_11_09_fest_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_11_09_for_fest/2002_11_09_fest_06.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/2002_10_19_filmfestival_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B21-2002_10_19_filmfestival.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B38-2002_10_19_filmfestival.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_11_electrical_record_opening/2002_10_11_electical_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B17-2002_10_11_electical.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_11_kulturnatten/2002_10_11_kulturnat_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B20-2002_10_11_kulturnat.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_11_kulturnatten/2002_10_11_kulturnat_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_11_kulturnatten/2002_10_11_kulturnat_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_14_electro_i_dunst/2002_09_14_dunst_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_14_electro_i_dunst/elektro_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_14_electro_i_dunst/elektro_04.jpg": {
+      "people": [
+        "dennis",
+        "ole-cairo"
+      ]
+    },
+    "./archive/timeline/combined/B36-2002_09_08_design.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B16-2002_09_08_design.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_10.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_11.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_09.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_mermaid_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_09_08_designskolen/2002_09_08_design_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B13-2002_08_17_mermaid.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_mermaid_06.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_mermaid_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/parade_2002_05.jpg": {
+      "people": [
+        "anders-juhl-nielsen",
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B12-2002_08_17_mermaid.png": {
+      "people": [
+        "anders-juhl-nielsen",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_17_mermaid_pride/2002_08_17_mermaid_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_fest_09.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_fest_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B09-2002_hverdag.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_strand_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B10-2002_strand.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_fest_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_strand_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/dennis_hverdag_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/dennis_fest_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/dennis_hverdag_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B33-2002_hverdag.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B11-2002_strand.png": {
+      "people": [
+        "anders-clausen",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_strand_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_fest_10.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B31-2002_08_03_listastevna.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B28-2002_08_03_listastevna.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B29-2002_08_03_listastevna.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B32-2002_06_08_cabaret..png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_06_08_gay_night_cabaret/2002_06_08_cabaret._11.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_06_08_gay_night_cabaret/2002_06_08_cabaret._05.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_06_08_gay_night_cabaret/2002_06_08_cabaret._10.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B06-2002_06_01_flyer.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_05_25_i_byen/2002_05_25_i_byen_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_05_25_i_byen/2002_05_25_i_byen_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_05_25_i_byen/2002_05_25_i_byen_01.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_05_25_i_byen/2002_05_25_i_byen_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B04-2000_halloween.png": {
+      "people": [
+        "dennis",
+        "malle",
+        "tina-von-kina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2000/00_10_31_halloween/2000_halloween_01.jpg": {
+      "people": [
+        "dennis",
+        "hairwerk"
+      ]
+    },
+    "./archive/legacy/200_calendar/2000/00_10_31_halloween/2000_halloween_02.jpg": {
+      "people": [
+        "dennis",
+        "tina-von-kina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2000/00_10_31_halloween/2000_halloween_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B05-2000_halloween.png": {
+      "people": [
+        "dennis",
+        "malle"
+      ]
+    },
+    "./archive/legacy/200_calendar/2000/00_08_14_frk_verden/2000_08_14_missworld_02.jpg": {
+      "people": [
+        "dennis",
+        "tina-von-kina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2000/00_08_14_frk_verden/2000_08_14_missworld_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1994/1994_red_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1994/1994_red_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B01-1991_birthday.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/combined/B03-1991_birthday.png": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1987/1987_michael_jackson_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1987/1987_michael_jackson_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1987/1987_michael_jackson_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1987/1987_michael_jackson_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1983/nina_hagen_dennis_agerblad.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1983/1983_12_15_nina_hagen_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1979/1979_strip_022.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1979/1979_strip_0111.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1979/1979_strip_011.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1979/1979_strip_02.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1979/1979_strip_03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/1979/1979_strip_033.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-07-27-01.webp": {
+      "people": [
+        "terji-krossteig"
+      ]
+    },
+    "./archive/timeline/performance/2015-04-10-05.webp": {
+      "people": [
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/puta_03.jpg": {
+      "people": [
+        "dennis",
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/puta_02.jpg": {
+      "people": [
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/ski_scooter_05.jpg": {
+      "people": [
+        "puta"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-02.webp": {
+      "people": [
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2023-10-06-07.webp": {
+      "people": [
+        "florence"
+      ]
+    },
+    "./archive/timeline/performance/2021-04-25-02.jpg": {
+      "people": [
+        "florence"
+      ]
+    },
+    "./content/talent/liveshow/06.webp": {
+      "people": [
+        "moma-van-vest"
+      ]
+    },
+    "./content/talent/audition/08.webp": {
+      "people": [
+        "moma-van-vest"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/02.jpg": {
+      "people": [
+        "moma-van-vest"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09714.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09859.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09855.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09856.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1101.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09676.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9763.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/Queerfestival3 lille.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8885.jpg": {
+      "people": [
+        "lene-leth-lebbe",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8891.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/HPIM1681.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7392.jpg": {
+      "people": [
+        "lene-leth-lebbe",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7429.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7391.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3530.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3534.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3533.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3570.jpg": {
+      "people": [
+        "marilyn-not-monroe",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/klon_06.jpg": {
+      "people": [
+        "jan-rolsted",
+        "soede-car-o-lina",
+        "tue"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/klon_09.jpg": {
+      "people": [
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1140.jpg": {
+      "people": [
+        "gina-la-mirage",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/timeline/performance/2023-05-27-03.jpg": {
+      "people": [
+        "siv-ova-tolfsen",
+        "unni-ova-tolfsen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/DSC09712.jpg": {
+      "people": [
+        "torhild-tolfsen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_08_09_modeshow/01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/HPIM1664.jpg": {
+      "people": [
+        "boy-george"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/klon_02.jpg": {
+      "people": [
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/klon_07.jpg": {
+      "people": [
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/wig_01.jpg": {
+      "people": [
+        "the-thom"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/flyer_02.jpg": {
+      "people": [
+        "liebling-siebling",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_06_11_polen_demo/hunter_04.jpg": {
+      "people": [
+        "andreas-tange-lange",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/klon_08.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_17_belgrade_pride/demonstration_08.jpg": {
+      "people": [
+        "bjarne-pigen",
+        "liebling-siebling",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/Dscn2546.jpg": {
+      "people": [
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_grr-itt_01.jpg": {
+      "people": [
+        "gritt-uldall-jessen",
+        "miss-fish"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/klon_04.jpg": {
+      "people": [
+        "dennis",
+        "soede-car-o-lina"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_04.jpg": {
+      "people": [
+        "liebling-siebling"
+      ]
+    },
+    "./archive/legacy/200_calendar/1991/1991_birthday_05.jpg": {
+      "people": [
+        "erling-victor",
+        "jan-rolsted",
+        "siv-ova-tolfsen"
+      ]
+    },
+    "./archive/timeline/combined/B02-1991_birthday.png": {
+      "people": [
+        "jan-rolsted"
+      ]
+    },
+    "./archive/legacy/200_calendar/1991/1991_birthday_03.jpg": {
+      "people": [
+        "jan-rolsted"
+      ]
+    },
+    "./archive/timeline/combined/B25-2002_12_20_flyer_grr-itt.png": {
+      "people": [
+        "dennis",
+        "gritt-uldall-jessen",
+        "ramona-macho"
+      ]
+    },
+    "./archive/timeline/peter-vadim-50-2022-02.jpeg": {
+      "people": [
+        "madam"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_05_thursday_itch_03/03_06_05_thursday_03.jpg": {
+      "people": [
+        "johnny-warehouse"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2359.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/03.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/timeline/performance/2015-03-06-06.webp": {
+      "people": [
+        "miss-miller"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-07.webp": {
+      "people": [
+        "biker"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-18.webp": {
+      "people": [
+        "biker"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_bjarne_01.jpg": {
+      "people": [
+        "bjarne-pigen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_29_eurogames/2003_05_29_eurogames_02.jpg": {
+      "people": [
+        "bjarne-pigen"
+      ]
+    },
+    "./archive/timeline/performance/2026-07-18-05.jpg": {
+      "people": [
+        "niels-arge-galan"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-01.webp": {
+      "people": [
+        "tutu-wanna"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-17-02.webp": {
+      "people": [
+        "tutu-wanna"
+      ]
+    },
+    "./content/talent/semifinale/04.webp": {
+      "people": [
+        "delores"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_04_distortion/distortion_01.jpg": {
+      "people": [
+        "lene-leth-lebbe"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_09_20_skidt_kommer_til/dscn3479.jpg": {
+      "people": [
+        "madam"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/hr_fru_dunst_flyer.jpg": {
+      "people": [
+        "madam"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0459.jpg": {
+      "people": [
+        "alexis",
+        "andreas-tange-lange"
+      ]
+    },
+    "./archive/timeline/performance/2023-05-27-05.jpg": {
+      "people": [
+        "gitte-plads",
+        "krisser",
+        "maria-maud",
+        "unni-ova-tolfsen"
+      ]
+    },
+    "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp": {
+      "people": [
+        "moma-van-vest"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/04.jpg": {
+      "people": [
+        "moma-van-vest"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/05.jpg": {
+      "people": [
+        "moma-van-vest",
+        "paul-jensen"
+      ]
+    },
+    "./content/talent/liveshow/03.webp": {
+      "people": [
+        "athena-lady"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_10_12_ke12/Mamma_Petruska-Snoribolla_Genturnar.jpg": {
+      "people": [
+        "petruska"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/08.jpg": {
+      "people": [
+        "petruska"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/05.jpg": {
+      "people": [
+        "petruska"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0425.jpg": {
+      "people": [
+        "petruska"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9767.jpg": {
+      "people": [
+        "petruska"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_05_29_eurogames/2003_05_29_eurogames_01.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_06_12_jolene/IMG_2945.jpg": {
+      "people": [
+        "bryn",
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/554.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/11.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_09_04_warehouse9/show_01.jpg": {
+      "people": [
+        "dennis",
+        "miss-fish"
+      ]
+    },
+    "./archive/timeline/performance/2015-03-06-05.webp": {
+      "people": [
+        "kenneth-cockwhore"
+      ]
+    },
+    "./archive/timeline/performance/2024-12-21-09.webp": {
+      "people": [
+        "biker"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_19_sangerindepavillion/nis.jpg": {
+      "people": [
+        "gitte-plads"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_19_sangerindepavillion/bisgaard.jpg": {
+      "people": [
+        "bisgaard"
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/07.jpg": {
+      "people": [
+        "athena-lady",
+        "fru-klud"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/CIMG1159.jpg": {
+      "people": [
+        "gina-la-mirage"
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0439.jpg": {
+      "people": [
+        "alexis",
+        "tina-trasch"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9752.jpg": {
+      "people": [
+        "maria-maud"
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_05_11_berghain/file_13.jpg": {
+      "people": [
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_02_12_stille_aften_med_dunst/flyer_jazz_forside.jpg": {
+      "people": [
+        "prinsesse-hans"
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_05_frankrig/be_queer_frankrig_flyer.jpg": {
+      "people": [
+        "divine"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_02_homophobia_berlin/homophobia_show_05.jpg": {
+      "people": [
+        "stimulundia"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_03_distortion/mod_christiansborg_03.jpg": {
+      "people": [
+        "bjarne-pigen"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_08.jpg": {
+      "people": [
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_09_20_skidt_kommer_til/dscn3483.jpg": {
+      "people": [
+        "puta"
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_04.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3622.jpg": {
+      "people": [
+        "dennis"
+      ]
+    },
+    "./content/talent/audition/09.webp": {
+      "people": [
+        "povilas-bastys"
+      ]
+    },
+    "./archive/timeline/performance/2026-06-05-03.jpg": {
+      "people": [
+        "flemming",
+        "fru-direktoer-elsa-kragh-madsen",
+        "per"
+      ]
+    },
+    "./archive/timeline/performance/2025-10-29-02.jpg": {
+      "people": [
+        "trine-trasch"
+      ]
+    },
+    "./archive/timeline/performance/2023-09-27-03.webp": {
+      "people": [
+        "krisser"
+      ]
+    },
+    "./archive/timeline/performance/2023-09-27-04.webp": {
+      "people": [
+        "flemming"
+      ]
+    },
+    "./archive/timeline/performance/2023-09-27-01.webp": {
+      "people": [
+        "bisgaard"
+      ]
+    },
+    "./archive/timeline/performance/2023-09-27-02.webp": {
+      "people": [
+        "lotte"
+      ]
+    },
+    "./archive/timeline/performance/2023-08-12-03.webp": {
+      "people": [
+        "blomst"
       ]
     }
   },
