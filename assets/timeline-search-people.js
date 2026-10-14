@@ -60,9 +60,9 @@ export const timelinePerformers = [
   },
   {
     "id": "areal",
-    "name": "Areal",
+    "name": "Ariel",
     "aliases": [
-      "Areal"
+      "Ariel"
     ]
   },
   {
@@ -183,7 +183,7 @@ const namePattern=text=>new RegExp(`(^|[^\\p{L}\\p{N}])${text.split(' ').map(esc
 export function findTimelinePeople(text) {
   const normalized=normalizePersonName(text);
   // Common nouns require explicit people records, not appearance prose.
-  return [...new Set(aliases.filter(alias=>!['blomst','areal'].includes(alias.id) && namePattern(alias.text).test(normalized)).map(alias=>alias.id))];
+  return [...new Set(aliases.filter(alias=>alias.id!=='blomst' && namePattern(alias.text).test(normalized)).map(alias=>alias.id))];
 }
 export function extractTimelinePeopleQuery(query) {
   let text=foldPersonText(query);
