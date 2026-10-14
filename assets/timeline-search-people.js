@@ -696,8 +696,7 @@ export const timelinePerformers = [
     "name": "maður:glotti",
     "aliases": [
       "maður:glotti"
-    ],
-    "explicitOnly": true
+    ]
   }
 ];
 

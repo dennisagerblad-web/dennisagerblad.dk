@@ -22,6 +22,7 @@ const assert=require('node:assert/strict');const fs=require('node:fs');
  assert.deepEqual(search('flo').map(r=>r.entry.title),search('Florence').map(r=>r.entry.title));
  assert.deepEqual(find('En lilla blomst på et stort areal.'),[]);
  assert.deepEqual(find('Ariel optræder.'),['areal'],'Correct drag name keeps existing photo identity');
+ assert.deepEqual(find('Udgivelse med maður:glotti'),['madur-glotti'],'Existing band title mentions remain searchable');
  assert.deepEqual(parse('Ariel').people,['areal']);
  assert.deepEqual(parse('Areal').people,[],'Incorrect spelling is not a performer name');
  assert.ok(search('Blomst').some(r=>r.matchedImages.length),'Owner-confirmed Blomst photos are searchable');
