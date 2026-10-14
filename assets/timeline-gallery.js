@@ -6,11 +6,16 @@ import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
 let dataPromise;
 let closeActive;
+let requestedSearchImage;
+export const loadTimelineGalleryData = () => loadData();
+export function selectTimelineSearchImage(entry, src) {
+  requestedSearchImage={key:`${entry.date}|${entry.category}|${entry.title}`,src,expires:Date.now()+5000};
+}
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261010-alt-text-1',
-  '../content/timeline/image-metadata.json?v=20261010-talent-release-5',
+  '../content/timeline/galleries.json?v=20261013-daniel-natfilm-17',
+  '../content/timeline/image-metadata.json?v=20261013-daniel-natfilm-17',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();
@@ -202,6 +207,8 @@ function createTransition(canvas) {
 
 export function openTimelineGallery(entry, group, theme = {}) {
   closeActive?.();
+  const searchImage=requestedSearchImage?.key===`${entry.date}|${entry.category}|${entry.title}` && requestedSearchImage.expires>Date.now() ? requestedSearchImage.src : null;
+  requestedSearchImage=null;
   const effectName=timelineEffects[group] || 'Grow';
   const opener = document.activeElement;
   const root = document.getElementById('root');
@@ -550,6 +557,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
       details.append(more);
     } else paragraphs.forEach(text => details.append(el('p','',text)));
     items = gallery?.images || entry.images || (entry.thumbnail ? [entry.thumbnail] : []);
+    if (searchImage) { index=Math.max(0,items.indexOf(searchImage)); paused=true; }
     if (entry.creditName) {
       const p=el('p','tg-credit',`${entry.creditPrefix || 'Foto:'} `);
       if (entry.creditHref) {

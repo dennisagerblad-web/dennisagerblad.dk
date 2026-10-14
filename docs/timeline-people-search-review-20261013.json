@@ -1,0 +1,809 @@
+{
+  "date": "2026-10-13",
+  "identityRule": "Only explicit existing photo captions or already named alt text; never filename, styling or general programme alone. Source photos visually reviewed in four contact sheets.",
+  "photos": {
+    "./archive/timeline/combined/B30-2002_08_03_listastevna.png": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2002/02_08_03_listastevna/listastevna.html",
+          "caption": "Hairwerk & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_07.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2002/02_08_03_listastevna/listastevna.html",
+          "caption": "Dennis Agerblad & Hairwerk."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/gruppe_01.jpg": {
+      "people": [
+        "moma-van-vest"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2002/02_10_19_filmfestival/filmfestival.html",
+          "caption": "Puta, Johnny Warehouse, Ramona Macho, Miss Fish, Knud Vesterskov, Di Laila, Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/gruppe_02.jpg": {
+      "people": [
+        "moma-van-vest"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2002/02_10_19_filmfestival/filmfestival.html",
+          "caption": "Puta, Miss Fish, Dennis Agerblad, Di Laila, Johnny Warehouse, Knud Vesterskov, Girl, Ramona Macho."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/gruppe_03.jpg": {
+      "people": [
+        "moma-van-vest"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2002/02_10_19_filmfestival/filmfestival.html",
+          "caption": "Puta, Johnny Warehouse, Miss Fish, Knud Vesterskov, Di Laila, Dennis Agerblad, Ramona Macho."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_05.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2003/03_06_08_pinsefest/pinsefest.html",
+          "caption": "Dennis Agerblad, Hairwerk & Miss Fish."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_02.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2003/03_06_08_pinsefest/pinsefest.html",
+          "caption": "Dennis Agerblad & Hairwerk."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_04.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2003/03_06_08_pinsefest/pinsefest.html",
+          "caption": "Dennis Agerblad, Hairwerk & Miss Fish."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/hairwerk_dennis_01.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2003/03_06_24_sankt_hans/sankt_hans.html",
+          "caption": "Hairwerk & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/hairwerk_dennis_02.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2003/03_06_24_sankt_hans/sankt_hans.html",
+          "caption": "Hairwerk & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/wig_04.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2003/03_08_01_wigstockholm/dennis_agerblad.html",
+          "caption": "The Thom, Ramona Macho, Miss Fish, Hairwerk & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/trappen_01.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2003/03_08_01_wigstockholm/dennis_agerblad.html",
+          "caption": "Liebling Siebling, Latterlige Luzy, Puta, Dennis Agerblad, The Thom, Miss Fish, Ramona Macho, Stimulundia & Hairwerk."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2003/03_08_04_nykoebing_falster/17.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2003/03_08_04_nykoebing_falster/dennis_agerblad.html",
+          "caption": "Hairwerk & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_02.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_06_04_queeruption/dennis_agerblad.html",
+          "caption": "Hairwerk, Dennis Agerblad & Liebling Siebling."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/IMG_1587.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_07_15_nag_nag_nag/dennis_agerblad.html",
+          "caption": "Dennis Agerblad, Puta, Hairwerk & Stimulundia."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1744.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_08_05_kulturhavn/dennis_agerblad.html",
+          "caption": "Dennis Agerblad & Tove Hansen."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1729.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_08_05_kulturhavn/dennis_agerblad.html",
+          "caption": "Tove Hansen & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1813.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_08_05_kulturhavn/dennis_agerblad.html",
+          "caption": "Tove Hansen & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1821.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_08_05_kulturhavn/dennis_agerblad.html",
+          "caption": "Tove Hansen & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1824.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_08_05_kulturhavn/dennis_agerblad.html",
+          "caption": "Tove Hansen & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_08_05_kulturhavn/IMG_1826.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_08_05_kulturhavn/dennis_agerblad.html",
+          "caption": "Tove Hansen & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/IMG_2708.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/dennis_agerblad.html",
+          "caption": "Hairwerk in yellow, Johnny Warehouse in violet, Dennis Agerblad in blue, Miss Fish in white."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/gina_dennis_show.jpg": {
+      "people": [
+        "gina-la-mirage"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_10_23_fnat_02/dennis_agerblad.html",
+          "caption": "Gina La Mirage & Dennis Agerblad Show."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3588.jpg": {
+      "people": [
+        "gina-la-mirage"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_10_23_fnat_02/dennis_agerblad.html",
+          "caption": "Dennis Agerblad & Gina La Mirage"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3587.jpg": {
+      "people": [
+        "gina-la-mirage"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2004/04_10_23_fnat_02/dennis_agerblad.html",
+          "caption": "Dennis Agerblad & Gina La Mirage"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN6070.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2005/05_05_05_frankrig/dennis_agerblad.html",
+          "caption": "Ramona Macho, Dennis Agerblad, Hairwerk & Lene Leth Lebbe."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7339_a.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2005/05_10_07_be_queer_02/dennis_agerblad_01.html",
+          "caption": "Dennis Agerblad & Tove Hansen."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7381.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2005/05_10_07_be_queer_02/dennis_agerblad_01.html",
+          "caption": "Tove Hansen pose. Rudi in orange pose in the back."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7337.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2005/05_10_07_be_queer_02/dennis_agerblad_01.html",
+          "caption": "Tove Hansen after the show"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/DSCN5729.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2005/05_10_07_be_queer_02/dennis_agerblad_02.html",
+          "caption": "Tove Hansen & Dennis Agerblad"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/HPIM4362.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2005/05_10_07_be_queer_02/dennis_agerblad_02.html",
+          "caption": "Tove Hansen"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/DSCN5689.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2005/05_10_07_be_queer_02/dennis_agerblad_02.html",
+          "caption": "Tove Hansen og Søde CAR O'lina"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/05.jpg": {
+      "people": [
+        "maria-maud"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/dennis_agerblad.html",
+          "caption": "Maria Maud & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/IMG_8707_b.jpg": {
+      "people": [
+        "moma-van-vest"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/dennis_agerblad.html",
+          "caption": "Knud Vesterskov, Dennis Agerblad & ?"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/IMG_8791.jpg": {
+      "people": [
+        "danny-boy"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_01_gender_bender_bingo/dennis_agerblad.html",
+          "caption": "Dennis Agerblad & Daniel Svanberg Bøtcher."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8859.jpg": {
+      "people": [
+        "moma-van-vest"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
+          "caption": "Knud Vesterskov and Dennis Agerblad"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8864.jpg": {
+      "people": [
+        "gina-la-mirage"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
+          "caption": "Dennis Agerblad and Gina La Mirage."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8863.jpg": {
+      "people": [
+        "gina-la-mirage"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
+          "caption": "Dennis Agerblad, Gina La Mirage and Birgitte."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/HPIM1657.jpg": {
+      "people": [
+        "gina-la-mirage"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
+          "caption": "Gina La Mirage"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/HPIM1658.jpg": {
+      "people": [
+        "gina-la-mirage"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
+          "caption": "Gina La Mirage"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8881.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
+          "caption": "Delores Düchess La Cour"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8878.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
+          "caption": "Delores Düchess La Cour and Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8903.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
+          "caption": "Delores Düchess La Cour and Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_03_machine/IMG_9438.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_06_03_machine/2006_06_03_machine_01.html",
+          "caption": "Delores Düchess La Cour"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_03_machine/IMG_9441.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_06_03_machine/2006_06_03_machine_01.html",
+          "caption": "Pipaluk og Delores Düchess La Cour."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_06_17_spanien/07.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_06_17_spanien/index.html",
+          "caption": "Backing: Hairwerk, Miss Fish, The Thom. Lead: Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0263.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_07_22_csd_berlin/dennis_agerblad.html",
+          "caption": "Hairwerk and Dennis Agerblad"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0291.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_07_22_csd_berlin/dennis_agerblad.html",
+          "caption": "Hairwerk, Ramona Macho and Dennis Agerblad"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0269.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2006/06_07_22_csd_berlin/dennis_agerblad.html",
+          "caption": "Hairwerk, Ramona Macho and Dennis Agerblad"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_05_12_bmr/dennis_03.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2007/07_05_12_bmr/broken_mirror.html",
+          "caption": "Hairwerk, Dennis Agerblad and Miss Fish."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2007/07_05_12_bmr/dennis_04.jpg": {
+      "people": [
+        "danny-boy"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2007/07_05_12_bmr/broken_mirror.html",
+          "caption": "Dennis Agerblad and Daniel Svanberg Bøtcher."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_09_20_band_show/IMG_2357.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2008/08_09_20_band_show/show.html",
+          "caption": "Søde Car O'lina, Dennis Agerblad & Delores Düchess La Cour. -"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2008/08_09_20_band_show/IMG_2368.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2008/08_09_20_band_show/show.html",
+          "caption": "Dennis Agerblad & Delores Düchess La Cour. -"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0452.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2009/09_04_17_vega/vega.html",
+          "caption": "Delores Düches La Cour, Dennis Agerblad & Gina Jet."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0454.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2009/09_04_17_vega/vega.html",
+          "caption": "Dennis Agerblad & Delores Düches La Cour."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0455.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2009/09_04_17_vega/vega.html",
+          "caption": "Delores Düches La Cour & Gina Jet."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0469.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2009/09_04_17_vega/vega.html",
+          "caption": "Delores Düches La Cour."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0446.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2009/09_04_17_vega/vega.html",
+          "caption": "Delores Düches La Cour, Alexis & Dennis Agerblad."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_04_17_vega/CIMG0460.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2009/09_04_17_vega/vega.html",
+          "caption": "Hairwerk."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_07_31_dunst/maria_dennis_lene.jpg": {
+      "people": [
+        "maria-maud"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2009/09_07_31_dunst/dunst.html",
+          "caption": "Maria Maud, Dennis Agerblad, Lene Leth Lebe"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2009/09_09_11_jolene/CIMG2441.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2009/09_09_11_jolene/jolene.html",
+          "caption": "Delores Düchess La Cour & Dennis Agerblad Show på Jolene."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/show_02.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/index.html",
+          "caption": "Tove Hansen, Dennis Agerblad & Søde CAR O'lina."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/show_01.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/index.html",
+          "caption": "Tove Hansen, Dennis Agerblad & Søde CAR O'lina."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0312.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/index.html",
+          "caption": "Tove Hansen & Søde CAR O'lina."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0320.jpg": {
+      "people": [
+        "tove-hansen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/index.html",
+          "caption": "Dennis Agerblad, Søde CAR O'lina & Tove Hansen"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0369.jpg": {
+      "people": [
+        "bent-jacobsen"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/index.html",
+          "caption": "Bent Jacobsen, Dennis Agerblad & Christian."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_09_23_heinrich/dennis_hairwerk.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2010/10_09_23_heinrich/index.html",
+          "caption": "Dennis Agerblad & Hairwerk sang en sang. Sabaah is a group of young homosexual, bisexual and transsexual people with ethnic backgrounds other than Danish."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2010/10_09_23_heinrich/dunst.jpg": {
+      "people": [
+        "hairwerk"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2010/10_09_23_heinrich/index.html",
+          "caption": "Vært: Master Fatman, dunst: Antoni, Ramona Macho, Liebling Siebling, Søde CAR O'lina, Vibeke, Dennis Agerblad, Hairwerk."
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_01.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2011/11_06_04_distortion/index.html",
+          "caption": "Slibling & Delores Dúchess La Cour"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2011/11_06_04_distortion/distortion_03.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2011/11_06_04_distortion/index.html",
+          "caption": "Delores Dúchess La Cour & Lene Leth Lebbe"
+        }
+      ]
+    },
+    "./archive/legacy/200_calendar/2012/2012_10_12_ke12/Delores-Duchess-La-Cour-Snoribolla_Genturnar.jpg": {
+      "people": [
+        "delores"
+      ],
+      "evidence": [
+        {
+          "source": "archive/legacy/200_calendar/2012/2012_10_12_ke12/index.html",
+          "caption": "Delores Düchess La Cour"
+        }
+      ]
+    }
+  },
+  "excluded": [
+    {
+      "src": "./archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/2002_12_20_grr-itt_02.jpg",
+      "reason": "General programme, styling or audio feature is not proof of pictured identity."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/IMG_6769.jpg",
+      "reason": "General programme, styling or audio feature is not proof of pictured identity."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2008/08_04_04_camp_x/flyer_02.jpg",
+      "reason": "General programme, styling or audio feature is not proof of pictured identity."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2009/09_12_12_klima/dunst.jpg",
+      "reason": "General programme, styling or audio feature is not proof of pictured identity."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2021/sjael_paa_daase_5/Dennis-Agerblad-in-black-2.jpg",
+      "reason": "General programme, styling or audio feature is not proof of pictured identity."
+    }
+  ]
+}

@@ -1,5 +1,10 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261010-talent-release-5';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261013-daniel-natfilm-17';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
+
+import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261013-daniel-natfilm-17';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261013-daniel-natfilm-17';
+
+import {findTimelinePeople} from './timeline-search-people.js?v=20261013-daniel-natfilm-17';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {
@@ -13,13 +18,7 @@ const root = document.getElementById('root');
 const mobile = matchMedia('(max-width: 760px)');
 const portraitMobile = matchMedia('(max-width: 760px) and (orientation: portrait)');
 const mobileLandscape = matchMedia('(max-width: 1100px) and (max-height: 650px) and (orientation: landscape)');
-const normalize = value => String(value ?? '')
-  .toLocaleLowerCase('da-DK')
-  .normalize('NFD')
-  .replace(/[\u0300-\u036f]/g, '')
-  .replaceAll('æ', 'ae')
-  .replaceAll('ø', 'o')
-  .replaceAll('å', 'aa');
+
 
 // Keep this category routing in step with the published TimelineView in site-app.js.
 function timelineGroup(entry) {
@@ -42,9 +41,64 @@ const entries = timelineEntries.flatMap(entry => {
   return [{
     entry, group, ordinal,
     title: entry.shortTitle || entry.title,
+    people: findTimelinePeople([entry.title,entry.shortTitle,entry.popupTitle,entry.details].join(' ')),
     searchable: normalize([entry.title, entry.shortTitle, entry.popupTitle, entry.details, entry.category, entry.date, entry.display, entry.year].join(' ')),
   }];
 });
+
+let refreshSearch;
+let imageSearchReady=false;
+const sourceURL=src => new URL(src,new URL('../',import.meta.url)).href;
+const photoIdentity=src => { const url=new URL(sourceURL(src));url.search='';url.hash='';return url.href; };
+loadTimelineGalleryData().then(async data => {
+  const [thumbnailData,lookData,peopleData,videoData]=await Promise.allSettled([
+    fetch(new URL('../content/timeline/search-thumbnails.json?v=20261013-daniel-natfilm-17',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/own-look-features.json?v=20261013-daniel-natfilm-17',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/people.json?v=20261013-daniel-natfilm-17',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/video-look-features.json?v=20261013-daniel-natfilm-17',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+  ]);
+  const videoFacts=videoData.status==='fulfilled' ? videoData.value.videos || {} : {};
+  const people=peopleData.status==='fulfilled' ? peopleData.value : {};
+  const photoPeople=new Map(Object.entries(people.photos || {}).map(([src,record])=>[photoIdentity(src),record]));
+  const thumbnails=thumbnailData.status==='fulfilled' ? thumbnailData.value.thumbnails || {} : {};
+  const looks=new Map(Object.entries(lookData.status==='fulfilled' ? lookData.value.photos || {} : {}).map(([src,facts])=>[photoIdentity(src),facts]));
+  const nativeDescriptions=new Map();
+  const nativeSizes=new Map(Object.entries(data.media).map(([src,size])=>[sourceURL(src),size]));
+  for (const gallery of Object.values(data.entries)) {
+    gallery.images.forEach((src,index)=>{
+      const description=gallery.imageDescriptions?.[index];
+      if(description)nativeDescriptions.set(sourceURL(src),description);
+    });
+  }
+  for(const result of entries) {
+    const entry=result.entry;
+    const gallery=data.entries[`${entry.date}|${entry.category}|${entry.title}`];
+    const biography=(entry.biography || []).filter(part=>part.type==='image');
+    const sources=gallery?.images || entry.images || biography.map(part=>part.src);
+    result.galleryDetails=gallery?.details || [];
+    result.searchable+=' '+normalize(result.galleryDetails.join(' '));
+    result.images=sources.map((src,index)=>{
+      const description=gallery?.imageDescriptions?.[index] || nativeDescriptions.get(sourceURL(src)) || biography.find(part=>part.src===src)?.caption || '';
+      const record=photoPeople.get(photoIdentity(src));
+      return {src,description,thumbnail:thumbnails[src] || src,look:looks.get(photoIdentity(src)),people:[...new Set([...(record?.people || []),...findTimelinePeople(description)])],peopleLooks:record?.looks};
+    }).filter(image=>image.description);
+    result.people=[...new Set([...result.people,...findTimelinePeople(result.galleryDetails.join(' ')),...(people.entries?.[`${entry.date}|${entry.category}|${entry.title}`] || []),...result.images.flatMap(image=>image.people)])];
+    const video=entry.videoId && videoFacts[entry.videoId];
+    result.videos=video ? [{kind:'video',videoId:entry.videoId,src:entry.thumbnail,thumbnail:entry.thumbnailPreview || entry.thumbnail,description:video.description,thumbnailAlt:video.thumbnailAlt,look:video,people:[]}] : [];
+  }
+  // Native Presse/Ord popups use the same alt descriptions as the image search.
+  // This writes only the alt attribute, never a caption or paragraph.
+  const syncAlt=()=>document.querySelectorAll('.timeline-popup img').forEach(image=>{
+    const url=sourceURL(image.getAttribute('src'));
+    const size=nativeSizes.get(url);
+    if(size?.width && size?.height){image.width=size.width;image.height=size.height;}
+    const description=nativeDescriptions.get(url);
+    const alt=window.DennisLanguage?.current==='en' ? window.DennisLanguage.english(description) || description : description;
+    if(alt && image.alt!==alt)image.alt=alt;
+  });
+  new MutationObserver(syncAlt).observe(document.body,{childList:true,subtree:true});
+  syncAlt(); imageSearchReady=true; refreshSearch?.();
+}).catch(()=>{ imageSearchReady=true; refreshSearch?.(); });
 
 let query = '';
 let highlighted;
@@ -102,6 +156,35 @@ async function goToResult(result, input, search) {
   event.classList.add('timeline-search-hit');
   highlighted = event;
   setTimeout(() => event.classList.remove('timeline-search-hit'), 5000);
+  const image=result.matchedImages?.[0];
+  const video=result.matchedVideos?.[0];
+  if (image || video) {
+    if (image && (result.group==='live' || result.group==='art')) selectTimelineSearchImage(result.entry,image.src);
+    const opener=event.querySelector('button');
+    if (!opener) return;
+    opener.focus({preventScroll:true}); opener.click();
+    if (image && result.group!=='live' && result.group!=='art') {
+      for(let attempt=0;attempt<30;attempt++) {
+        await new Promise(resolve=>requestAnimationFrame(resolve));
+        const target=[...document.querySelectorAll('.timeline-popup img')].find(node=>node.src===sourceURL(image.src));
+        if(target){
+          const popup=target.closest('.timeline-popup');
+          const close=popup.querySelector('.timeline-popup-close');
+          // Keep the normal close control visible when a deep photo is selected.
+          const placeClose=()=>{
+            const rect=popup.getBoundingClientRect();
+            close.style.position='fixed';close.style.top=`${rect.top+8}px`;close.style.right=`${innerWidth-rect.right+8}px`;
+          };
+          placeClose();
+          const resize=new ResizeObserver(placeClose);resize.observe(popup);
+          const removal=new MutationObserver(()=>{if(!popup.isConnected){resize.disconnect();removal.disconnect();}});
+          removal.observe(document.body,{childList:true});
+          popup.scrollTop+=target.getBoundingClientRect().top-popup.getBoundingClientRect().top-52;
+          break;
+        }
+      }
+    }
+  }
 }
 
 function mountSearch() {
@@ -191,13 +274,13 @@ function mountSearch() {
     query = input.value;
     clearButton.hidden = !query.length;
     panel.replaceChildren();
-    const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
-    if (!terms.length) return close();
-    const matches = entries.filter(result => terms.every(term => (result.searchable+' '+normalize([result.entry.title,result.entry.shortTitle,result.entry.popupTitle,result.entry.details,result.entry.category].map(text=>window.DennisLanguage?.english(text || '') || text).join(' '))).includes(term)));
+    const parsed = parseTimelineSearchQuery(query);
+    if (!parsed.terms.length && !parsed.filters.length && !parsed.people.length && !parsed.peopleAny.length) return close();
+    const matches = entries.map(result=>matchTimelineResult(result,parsed,text=>window.DennisLanguage?.english(text) || text)).filter(Boolean);
     const count = document.createElement('div');
     count.className = 'timeline-search-count';
     count.setAttribute('aria-live', 'polite');
-    count.textContent = matches.length ? `${matches.length} ${matches.length === 1 ? 'resultat' : 'resultater'} fra hele tidslinjen` : 'Ingen resultater';
+    count.textContent = matches.length ? `${matches.length} ${matches.length === 1 ? 'resultat' : 'resultater'} fra hele tidslinjen` : imageSearchReady ? 'Ingen resultater' : 'Søger også i billeder …';
     panel.append(count);
     if (matches.length) {
       const list = document.createElement('ul');
@@ -222,8 +305,22 @@ function mountSearch() {
         const title = document.createElement('span');
         title.className = 'timeline-search-result-title';
         title.textContent = result.title;
-        button.append(meta, title);
-        button.addEventListener('click', () => goToResult(result, input, search));
+        const copy=document.createElement('span');copy.className='timeline-search-result-copy';copy.append(meta,title);
+        button.append(copy);
+        const matchedMedia=[...result.matchedImages,...(result.matchedVideos || [])];
+        if(matchedMedia.length) {
+          const photos=document.createElement('span');photos.className='timeline-search-result-photos';
+          for(const image of matchedMedia.slice(0,3)) {
+            const thumb=document.createElement('img');thumb.src=image.thumbnail;thumb.alt=image.thumbnailAlt || image.description;thumb.loading='lazy';thumb.decoding='async';thumb.width=52;thumb.height=62;thumb.dataset.source=image.src;photos.append(thumb);
+          }
+          button.classList.add('has-image-match');button.append(photos);
+        }
+        button.addEventListener('click', event => {
+          const source=event.target.closest('img')?.dataset.source;
+          const selected=result.matchedImages.find(image=>image.src===source);
+          const selectedVideo=result.matchedVideos?.find(video=>video.src===source);
+          goToResult(selected ? {...result,matchedImages:[selected],matchedVideos:[]} : selectedVideo ? {...result,matchedImages:[],matchedVideos:[selectedVideo]} : result,input,search);
+        });
         item.append(button);
         list.append(item);
       }
@@ -268,6 +365,7 @@ function mountSearch() {
     close();
     if (document.activeElement === input) input.blur();
   });
+  refreshSearch=render;
   if (query.trim()) render();
 }
 

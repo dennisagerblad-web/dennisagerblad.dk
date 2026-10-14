@@ -51,3 +51,11 @@ slideshowposter stadig kan bruge dem. De hentes ikke samlet, når forsiden
 Kunst åbner Galleri 1. Navigationen indeholder kun Galleri 1, Gang og Galleri 2. Galleri 0 findes kun i den lokale kunst2-proeve-mappe og må aldrig genindføres offentligt. Fotografiske rumlag styres i assets/art-versions.js og assets/art-versions.css. Kunstværker og popupvisning styres i assets/art-viewer.js; originalerne i archive/art og content/art/originals skal bevares uændret ved senere rumredigering.
 
 Galleri 1 er rummet med keramik og katteværket; Galleri 2 er rummet med tøjinstallationen. Rækkefølgen er Galleri 1, Gang, Galleri 2. På mobil følger rummene et vandret træk, og kunsten bliver indlæst før overgangen starter.
+
+## Udgivelse af tidslinjerettelser
+
+Fra 14. oktober 2026 ønsker Dennis, at hver afsluttet rettelse i tidslinjen
+bliver lagt live som en del af arbejdet. Der skal ikke spørges om særskilt
+udgivelsesgodkendelse for tidslinjerettelser. Kontroller først rettelsen,
+foren den med den nyeste version på origin/main, og bekræft derefter, at
+udgivelsen er afsluttet, og at de offentlige filer og funktioner er opdateret.

@@ -1,0 +1,660 @@
+{
+  "reviewDate": "2026-10-13",
+  "reviewedGreenSources": 76,
+  "correctedSources": 23,
+  "correctedAltPlacements": 23,
+  "changes": [
+    {
+      "src": "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0323.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:red",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "outfit:green",
+        "outfit:red",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "appearance:pink",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "outfit:pink",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/gina_dennis_show.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3588.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3587.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3614.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3622.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3618.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3580.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3577.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3578.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3558.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3583.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3548.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "pose:lying",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "pose:lying",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_10_23_fnat_02/IMG_3551.jpg",
+      "before": [
+        "appearance:green",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image01.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image02.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image04.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image07.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image08.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image12.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/Image15.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/02.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_10_30_Den Anden Opera/05.jpg",
+      "before": [
+        "appearance:green",
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:green",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:grey",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Only clearly visible green on Dennis counts. Neutral patterned clothing and colour casts do not establish green."
+    }
+  ]
+}

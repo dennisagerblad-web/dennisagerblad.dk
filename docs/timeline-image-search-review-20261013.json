@@ -1,0 +1,100 @@
+{
+  "review": "Visually checked against the source photos; descriptions remain alt text only.",
+  "images": [
+    {
+      "src": "./archive/timeline/performance/2024-12-21-02.webp",
+      "before": "Sanger i rød prikket kjole gennem telefonrammen “BASKUB”.",
+      "description": "Person med blond paryk, briller og rød kjole med hvide prikker står i en papramme med teksten “BASKUB”."
+    },
+    {
+      "src": "./archive/timeline/performance/2024-12-21-06.webp",
+      "before": "Person i rød prikket kjole løfter armene.",
+      "description": "Person med blond paryk, blåmalet skæg og rød kjole med hvide prikker løfter begge arme."
+    },
+    {
+      "src": "./archive/timeline/performance/2024-12-21-10.webp",
+      "before": "Optrædende i prikket kjole gestikulerer bag en person med kasket.",
+      "description": "Person i rød kjole med hvide prikker gestikulerer bag en person med kasket og ternet skjorte."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-08-17-01.webp",
+      "before": "To personer poserer i musekostume og rød prikket kjole.",
+      "description": "To personer poserer i musekostume og rød kjole med hvide prikker og en stor rød sløjfe."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-08-17-03.webp",
+      "before": "Person i rød prikket kjole og stor rød sløjfe.",
+      "description": "Person i rød kjole med hvide prikker, hvid krave, blond paryk og stor rød sløjfe står foran en scene."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-08-17-04.webp",
+      "before": "To personer poserer i mørk kjole og prikket kjole.",
+      "description": "To personer poserer ved et bord i mørk kjole og rød kjole med hvide prikker."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/10.jpg",
+      "before": "Portræt med mørk krøllet paryk og rød prikket krave.",
+      "description": "Portræt med mørk krøllet paryk, lyserød øjenskygge og rød krave med hvide prikker."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_08_04_nykoebing_falster/03_08_04_nykoebing_01.jpg",
+      "before": "Person med grå garnparyk og grøn prikket skjorte.",
+      "description": "Person med grå garnparyk og grøn skjorte med mørke prikker sidder blandt andre personer."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_casino_02.jpg",
+      "before": "Person i rød prikket dragt holder en rød støvle.",
+      "description": "Person med blond krøllet paryk og rød dragt med hvide prikker holder en rød støvle."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_casino_05.jpg",
+      "before": "Person i prikket top står ved et roulettebord.",
+      "description": "Person med blond krøllet paryk og rød top med hvide prikker står ved et roulettebord."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/ski_casino_14.jpg",
+      "before": "Portræt med krøllet blond paryk og prikket top.",
+      "description": "Portræt med blond krøllet paryk, rød læbestift og rød top med hvide prikker."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_01_09_ski_ore/ski_hotel_06.jpg",
+      "before": "Smilende person med krøllet paryk og prikket top.",
+      "description": "Smilende person med blond krøllet paryk og mørkerød top med lyse prikker."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-10-20-01.webp",
+      "before": "Portræt med blond paryk og stor rødprikket sløjfe.",
+      "description": "Portræt med blond krøllet paryk, briller, blåmalet skæg og store røde sløjfer med hvide prikker."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-10-20-02.webp",
+      "before": "Person i rødprikket kjole breder stoffet ud.",
+      "description": "Person med blond paryk og store røde sløjfer breder en rød kjole med hvide prikker ud."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-10-20-03.webp",
+      "before": "Person i rødprikket kjole løfter armene.",
+      "description": "Person med blond paryk, briller og rød kjole med hvide prikker løfter armene."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-10-20-04.webp",
+      "before": "Person i rødprikket kjole bæres af en medspiller.",
+      "description": "Person i rød kjole med hvide prikker og store røde sløjfer bæres af en medspiller i mørk dragt med hvide prikker."
+    },
+    {
+      "src": "./archive/timeline/performance/2016-05-20-01.webp",
+      "before": "Person i rød prikket kjole løfter et glas blandt venner.",
+      "description": "Person med brun paryk, briller og rød kjole med hvide prikker løfter et glas blandt venner."
+    },
+    {
+      "src": "./archive/timeline/performance/2016-05-20-02.webp",
+      "before": "Person i rød prikket kjole løfter et glas ved bordet.",
+      "description": "Person med brun paryk, briller og rød kjole med hvide prikker løfter et glas ved bordet."
+    },
+    {
+      "src": "./archive/timeline/performance/2016-05-20-03.webp",
+      "before": "Person i rød prikket kjole og briller med et glas.",
+      "description": "Person med brun paryk, briller og rød kjole med hvide prikker holder et glas."
+    }
+  ]
+}

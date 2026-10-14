@@ -1,0 +1,1131 @@
+{
+  "reviewDate": "2026-10-13",
+  "reviewedYellowSources": 138,
+  "correctedSources": 37,
+  "correctedAltPlacements": 26,
+  "scope": "Only visible colour in Dennis own look. Stage lighting, backgrounds, blond hair, skin and uncertain cream/beige clothing do not imply yellow. Explicit yellow shoes and makeup remain searchable.",
+  "changes": [
+    {
+      "src": "./archive/timeline/performance/2026-09-11-03-v2.webp",
+      "before": [
+        "appearance:brown",
+        "appearance:green",
+        "appearance:yellow",
+        "clothing:dress",
+        "clothing:nylon-costume",
+        "glasses:green",
+        "glasses:present",
+        "microphone:handheld",
+        "outfit:brown",
+        "outfit:yellow",
+        "setting:stage",
+        "show:performance",
+        "show:solo",
+        "stage:alone"
+      ],
+      "after": [
+        "appearance:brown",
+        "appearance:green",
+        "clothing:dress",
+        "clothing:nylon-costume",
+        "glasses:green",
+        "glasses:present",
+        "microphone:handheld",
+        "outfit:brown",
+        "setting:stage",
+        "show:performance",
+        "show:solo",
+        "stage:alone"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/press/2025-11-28-leitisstein-radio.webp",
+      "before": [
+        "appearance:green",
+        "appearance:yellow",
+        "clothing:scarf",
+        "gaze:direct",
+        "glasses:green",
+        "glasses:present",
+        "hair:bald",
+        "mouth:open",
+        "outfit:yellow"
+      ],
+      "after": [
+        "appearance:green",
+        "clothing:scarf",
+        "gaze:direct",
+        "glasses:green",
+        "glasses:present",
+        "hair:bald",
+        "mouth:open",
+        "outfit:green"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/press/2025-11-28-leitisstein-01.webp",
+      "before": [
+        "appearance:blue",
+        "appearance:brown",
+        "appearance:green",
+        "appearance:yellow",
+        "glasses:green",
+        "glasses:present",
+        "hair:bald",
+        "look:brown",
+        "outfit:blue",
+        "outfit:brown",
+        "outfit:yellow"
+      ],
+      "after": [
+        "appearance:blue",
+        "appearance:brown",
+        "appearance:green",
+        "glasses:green",
+        "glasses:present",
+        "hair:bald",
+        "look:brown",
+        "outfit:blue",
+        "outfit:brown",
+        "outfit:green"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/tennis-sladderblad-2023-01.jpeg",
+      "before": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "look:brown",
+        "microphone:handheld",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "outfit:yellow",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "look:brown",
+        "microphone:handheld",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/tennis-sladderblad-2023-02.jpeg",
+      "before": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "heels:high",
+        "heels:present",
+        "heels:yellow",
+        "look:brown",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "outfit:yellow",
+        "setting:outdoor",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "heels:high",
+        "heels:present",
+        "heels:yellow",
+        "look:brown",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "setting:outdoor",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-05-27-03.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "heels:present",
+        "heels:yellow",
+        "look:brown",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "outfit:yellow",
+        "setting:outdoor",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "heels:present",
+        "heels:yellow",
+        "look:brown",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "setting:outdoor",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-05-27-04.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "gaze:direct",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "look:brown",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "outfit:yellow",
+        "setting:outdoor",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "gaze:direct",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "look:brown",
+        "makeup:yellow",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "setting:outdoor",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-05-27-05.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "look:brown",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "outfit:yellow",
+        "setting:outdoor",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "look:brown",
+        "makeup:yellow",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "setting:outdoor",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/performance/2023-05-27-06.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "gaze:direct",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "look:brown",
+        "mouth:open",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "outfit:yellow",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "appearance:black",
+        "appearance:brown",
+        "appearance:orange",
+        "appearance:yellow",
+        "gaze:direct",
+        "glasses:black",
+        "glasses:present",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "look:brown",
+        "makeup:yellow",
+        "mouth:open",
+        "outfit:black",
+        "outfit:brown",
+        "outfit:orange",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/performance/2019-12-05-01.jpg",
+      "before": [
+        "appearance:brown",
+        "appearance:gold",
+        "appearance:yellow",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:present",
+        "makeup:classic",
+        "outfit:brown",
+        "outfit:gold",
+        "outfit:yellow"
+      ],
+      "after": [
+        "appearance:brown",
+        "appearance:gold",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:present",
+        "makeup:classic",
+        "outfit:brown",
+        "outfit:gold"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/performance/2019-12-05-02.jpg",
+      "before": [
+        "appearance:brown",
+        "appearance:gold",
+        "appearance:yellow",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:present",
+        "makeup:classic",
+        "outfit:brown",
+        "outfit:gold",
+        "outfit:yellow"
+      ],
+      "after": [
+        "appearance:brown",
+        "appearance:gold",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:present",
+        "makeup:classic",
+        "outfit:brown",
+        "outfit:gold"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/performance/2019-02-22-01.jpg",
+      "before": [
+        "appearance:red",
+        "appearance:yellow",
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:red",
+        "outfit:yellow",
+        "setting:stage",
+        "show:performance",
+        "show:solo",
+        "stage:alone",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:pink",
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:pink",
+        "setting:stage",
+        "show:performance",
+        "show:solo",
+        "stage:alone",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6545.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "outfit:yellow",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6535.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "outfit:yellow",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6542.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "outfit:yellow",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_11_03_hjerter_i_foedesovs/IMG_6569.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "outfit:yellow",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "clothing:dress",
+        "clothing:outerwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/scan0001.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "heels:high",
+        "heels:present",
+        "heels:yellow",
+        "outfit:yellow",
+        "pattern:flowers"
+      ],
+      "after": [
+        "appearance:yellow",
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "heels:high",
+        "heels:present",
+        "heels:yellow",
+        "pattern:flowers"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/IMG_9852.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "outfit:yellow",
+        "pattern:flowers"
+      ],
+      "after": [
+        "clothing:dress",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "pattern:flowers"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/IMG_6162.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:yellow",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "mouth:open",
+        "outfit:black",
+        "outfit:yellow",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:black",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "mouth:open",
+        "outfit:black",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/IMG_6166.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:yellow",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "mouth:open",
+        "outfit:black",
+        "outfit:yellow",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:black",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "mouth:open",
+        "outfit:black",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/008_na.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:yellow",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:black",
+        "outfit:yellow",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:black",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:black",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/011_na.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:yellow",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:black",
+        "outfit:yellow",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:black",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:black",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/009_na.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:yellow",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:black",
+        "outfit:yellow",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:black",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:black",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_05_30_queeruption_8/020_na.jpg",
+      "before": [
+        "appearance:black",
+        "appearance:yellow",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "mouth:open",
+        "outfit:black",
+        "outfit:yellow",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:black",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "mouth:open",
+        "outfit:black",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_12_31_homophobia_newyear/IMG_4585.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:yellow",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_03.jpg",
+      "before": [
+        "appearance:grey",
+        "appearance:yellow",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "makeup:classic",
+        "microphone:handheld",
+        "outfit:grey",
+        "outfit:yellow",
+        "setting:stage",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "makeup:classic",
+        "microphone:handheld",
+        "outfit:grey",
+        "setting:stage",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_04.jpg",
+      "before": [
+        "appearance:grey",
+        "appearance:yellow",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "microphone:handheld",
+        "outfit:grey",
+        "outfit:yellow",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:grey",
+        "clothing:dress",
+        "clothing:outerwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "microphone:handheld",
+        "outfit:grey",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_05.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "microphone:handheld",
+        "outfit:yellow",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "microphone:handheld",
+        "setting:stage",
+        "show:group",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_06.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "microphone:handheld",
+        "outfit:yellow",
+        "setting:stage",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "microphone:handheld",
+        "setting:stage",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_07.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "glasses:absent",
+        "hair:dark",
+        "hair:short",
+        "microphone:handheld",
+        "mouth:open",
+        "outfit:yellow",
+        "setting:stage",
+        "show:performance"
+      ],
+      "after": [
+        "clothing:dress",
+        "glasses:absent",
+        "hair:dark",
+        "hair:short",
+        "microphone:handheld",
+        "mouth:open",
+        "setting:stage",
+        "show:performance"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_05_23_queeruption_berlin/2003_05_23_queerupti_08.jpg",
+      "before": [
+        "appearance:yellow",
+        "clothing:dress",
+        "clothing:underwear",
+        "glasses:absent",
+        "hair:dark",
+        "hair:short",
+        "microphone:handheld",
+        "mouth:open",
+        "outfit:yellow",
+        "setting:stage",
+        "show:performance"
+      ],
+      "after": [
+        "clothing:dress",
+        "clothing:underwear",
+        "glasses:absent",
+        "hair:dark",
+        "hair:short",
+        "microphone:handheld",
+        "mouth:open",
+        "setting:stage",
+        "show:performance"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_02_08_oscar/Image01.jpg",
+      "before": [
+        "appearance:yellow",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "outfit:yellow",
+        "wig:present",
+        "wig:short"
+      ],
+      "after": [
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "wig:present",
+        "wig:short"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_01.jpg",
+      "before": [
+        "appearance:yellow",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:yellow",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "gaze:direct",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_02.jpg",
+      "before": [
+        "appearance:yellow",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:yellow",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_03.jpg",
+      "before": [
+        "appearance:yellow",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:yellow",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04b.jpg",
+      "before": [
+        "appearance:pink",
+        "appearance:yellow",
+        "clothing:nylon-costume",
+        "clothing:underwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "heels:high",
+        "heels:present",
+        "heels:white",
+        "outfit:pink",
+        "outfit:yellow",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "after": [
+        "appearance:pink",
+        "clothing:nylon-costume",
+        "clothing:underwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "heels:high",
+        "heels:present",
+        "heels:white",
+        "outfit:pink",
+        "show:performance",
+        "wig:long",
+        "wig:present"
+      ],
+      "reason": "Yellow must be visibly present on Dennis, not inferred from lighting, blond hair, skin or cream clothing."
+    },
+    {
+      "src": "./archive/timeline/performance/2026-07-18-03.jpg",
+      "before": [
+        "appearance:brown",
+        "appearance:red",
+        "appearance:yellow",
+        "clothing:scarf",
+        "glasses:present",
+        "outfit:brown",
+        "outfit:red",
+        "outfit:yellow",
+        "setting:stage",
+        "show:group",
+        "show:performance"
+      ],
+      "after": [
+        "appearance:brown",
+        "appearance:red",
+        "clothing:scarf",
+        "glasses:present",
+        "outfit:brown",
+        "outfit:red",
+        "setting:stage",
+        "show:group",
+        "show:performance"
+      ],
+      "reason": "Green stage lighting obscures yellow; visible colour must be established on this photo."
+    }
+  ]
+}
