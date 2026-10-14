@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-14",
+  "source": "Owner manually checked Ariel faces/photos in the local review and explicitly confirmed completion. Internal person id areal retained to preserve existing tags.",
+  "photoCount": 9,
+  "newAssociations": 9,
+  "galleryPlacements": 9,
+  "reviewView": {
+    "mode": "faces",
+    "page": 9,
+    "filter": "all",
+    "query": ""
+  },
+  "totalPhotoRecords": 9,
+  "records": [
+    {
+      "src": "./content/talent/liveshow/02.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-01-24",
+          "title": "Danmark Har Talent - Første Liveshow"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/semifinale/13.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-02-21",
+          "title": "Danmark Har Talent - Semifinale Liveshow"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/audition/05.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-01-10",
+          "title": "Danmark Har Talent - Audition"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/audition/03.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-01-10",
+          "title": "Danmark Har Talent - Audition"
+        }
+      ]
+    },
+    {
+      "src": "./archive/timeline/performance/2015-03-06-07.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-03-06",
+          "title": "Fest hos Marquien på Frederiksberg"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/semifinale/14.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-02-21",
+          "title": "Danmark Har Talent - Semifinale Liveshow"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/audition/02.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-01-10",
+          "title": "Danmark Har Talent - Audition"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/audition/01.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-01-10",
+          "title": "Danmark Har Talent - Audition"
+        }
+      ]
+    },
+    {
+      "src": "./content/talent/audition/07.webp",
+      "people": [
+        "areal"
+      ],
+      "events": [
+        {
+          "date": "2015-01-10",
+          "title": "Danmark Har Talent - Audition"
+        }
+      ]
+    }
+  ]
+}
