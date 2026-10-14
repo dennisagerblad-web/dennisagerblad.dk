@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-14",
+  "source": "Owner checked Hairwerk Hugh Mongous faces/photos in the local review and confirmed completion of this batch.",
+  "photoCount": 11,
+  "newAssociations": 2,
+  "galleryPlacements": 11,
+  "records": [
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/2003_06_08_pinse_04.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2003-06-08",
+          "title": "Helligånds Dunst fest, Bøssehuset, Christiania, København."
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_05_05_frankrig/DSCN6070.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2005-05-05",
+          "title": "Dunst på Be Queer # 1, Dunkerque, Frankrig."
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/wig_04.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2003-08-01",
+          "title": "WigStockholm, Gaypride Fesival, Stockholm."
+        }
+      ]
+    },
+    {
+      "src": "./archive/timeline/performance/2026-06-05-05.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2026-06-05",
+          "title": "Kønspolitisk Melodigrandprix"
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2007/07_05_12_bmr/dennis_03.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2007-05-12",
+          "title": "Broken Mirror Records-lanceringsfest, Warehouse 9, København."
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0263.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2006-07-22",
+          "title": "CSD-fest, Berlin."
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_08_04_nykoebing_falster/17.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2003-08-04",
+          "title": "Byfest, Nykøbing Falster."
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_06_24_sankt_hans/hairwerk_dennis_01.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2003-06-24",
+          "title": "Dunst-modeoptræden, Sankt Hans, Bøssehuset, Christiania, København."
+        }
+      ]
+    },
+    {
+      "src": "./archive/timeline/combined/B30-2002_08_03_listastevna.png",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2002-08-03",
+          "title": "Listastevna, Thorshavn, Færøerne."
+        }
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2002/02_08_03_listastevna/2002_08_03_listastevna_07.jpg",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2002-08-03",
+          "title": "Listastevna, Thorshavn, Færøerne."
+        }
+      ]
+    },
+    {
+      "src": "./archive/timeline/combined/B08-2002_06_01_flyer.png",
+      "people": [
+        "hairwerk"
+      ],
+      "events": [
+        {
+          "date": "2002-06-01",
+          "title": "Dunst happening, København."
+        }
+      ]
+    }
+  ]
+}
