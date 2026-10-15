@@ -41,13 +41,13 @@
     },
     {
       "date": "2006-07-22",
-      "src": "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0269.jpg",
-      "subject": "dennis",
+      "src": "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0291.jpg",
+      "subject": "unidentified-csd-adult",
       "tags": [
         "body:testicles-visible",
         "nudity:visible"
       ],
-      "verification": "Owner explicitly confirmed this event and anatomy on 2026-10-15; existing photographs visually inspected before indexing."
+      "verification": "Corrected by owner on 2026-10-15: the close-up with two faces beside a belly and red briefs showing one testicle. Visually checked; no identity assigned to the person between the two faces."
     },
     {
       "date": "2004-04-10",
@@ -58,6 +58,33 @@
         "nudity:visible"
       ],
       "verification": "Owner explicitly confirmed this event and anatomy on 2026-10-15; existing photographs visually inspected before indexing."
+    }
+  ],
+  "replacedPhotos": [
+    {
+      "incorrectSrc": "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0269.jpg",
+      "correctSrc": "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0291.jpg",
+      "reason": "Owner identified the intended close-up; removed unsupported anatomy claim from full-body photo."
+    }
+  ],
+  "excludedPhotos": [
+    {
+      "date": "2008-07-19",
+      "src": "./archive/legacy/200_calendar/2008/08_07_19_dennis/barbara_vang_02.jpg",
+      "removedTags": [
+        "body:bare-torso",
+        "nudity:visible"
+      ],
+      "reason": "Owner explicitly excludes this event from anatomy/nudity searches on 2026-10-15."
+    },
+    {
+      "date": "2003-04-26",
+      "src": "./archive/legacy/200_calendar/2003/03_04_26_primate_nite/primate_dennis_01.jpg",
+      "removedTags": [
+        "body:bare-torso",
+        "nudity:visible"
+      ],
+      "reason": "Owner explicitly excludes this event from anatomy/nudity searches on 2026-10-15."
     }
   ]
 }

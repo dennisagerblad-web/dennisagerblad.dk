@@ -6554,13 +6554,11 @@
       "tags": [
         "appearance:black",
         "appearance:orange",
-        "body:bare-torso",
         "clothing:dress",
         "glasses:absent",
         "hair:light",
         "hair:long",
         "microphone:handheld",
-        "nudity:visible",
         "outfit:black",
         "outfit:orange",
         "setting:stage",
@@ -13320,11 +13318,9 @@
       "subject": "dennis",
       "tags": [
         "appearance:brown",
-        "body:bare-torso",
         "clothing:nylon-costume",
         "clothing:underwear",
         "look:brown",
-        "nudity:visible",
         "outfit:brown"
       ]
     },

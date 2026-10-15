@@ -18,7 +18,16 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  for(const word of ['røv','nosser','røvhul','nøgen','hud','nøgenhed','penis','bare balder','testikler','røvhullet','nøgne']) assert.deepEqual(sources(word),shared,'Shared reviewed collection: '+word);
  const additions=JSON.parse(fs.readFileSync('docs/timeline-body-search-review-20261015.json'));
  for(const photo of additions.photos) assert.ok(shared.includes(photo.src),'Requested image matches: '+photo.src);
- assert.ok(new Set(shared).size>=41,'Preserve existing collection and add four newly indexed photos');
+ assert.equal(new Set(shared).size,39,'Preserve confirmed collection and remove the two owner-excluded photos');
+ for(const photo of additions.excludedPhotos) {
+  assert.ok(!shared.includes(photo.src),'Excluded photo: '+photo.src);
+  assert.ok(!search('hud').some(r=>r.entry.date===photo.date),'Excluded event: '+photo.date);
+ }
+ for(const photo of additions.replacedPhotos) {
+  assert.ok(!shared.includes(photo.incorrectSrc),'Wrong CSD image removed');
+  assert.ok(shared.includes(photo.correctSrc),'Correct CSD close-up included');
+ }
+ assert.equal(anatomy[additions.replacedPhotos[0].correctSrc][0].subject,'unidentified-csd-adult','Do not assign the central person anatomy to Dennis');
  assert.ok(search('Sang Pik Nok').some(r=>r.entry.date==='2019-05-17'),'Song-title queries still work');
  assert.ok(search('Stiv pik til alle').some(r=>r.entry.group==='art'),'Printed phrase queries still work');
  const fixture={entry:{title:'Pik og røv'},searchable:normalize('Pik og røv'),images:[
@@ -40,7 +49,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  for(const word of additions.synonyms)assert.equal(match(videoResult,parse(word)).matchedVideos.length,1,'Confirmed Video Video remains in collection: '+word);
  assert.ok(search('pik 2005').every(r=>r.entry.year===2005));
  assert.ok(search('røv grønne briller').every(r=>r.matchedImages.every(i=>i.look.tags.includes('glasses:green'))));
- for(const r of report.photos){assert.ok(f[r.src].subject==='dennis');r.tags.forEach(tag=>assert.ok(f[r.src].tags.includes(tag)));}
+ for(const r of report.photos.filter(r=>!additions.excludedPhotos.some(p=>p.src===r.src))){assert.ok(f[r.src].subject==='dennis');r.tags.forEach(tag=>assert.ok(f[r.src].tags.includes(tag)));}
  for(const r of report.costumePhotos){assert.ok(f[r.src].subject==='dennis');r.tags.forEach(tag=>assert.ok(f[r.src].tags.includes(tag)));}
  for(const id of [276,1047,1048,1049,1050,1113,1114,1116,1117,1120])assert.ok(sources('pik').includes(inventory[id].src),'Approved costume penis '+id);
  assert.ok(sources('røv').includes(inventory[1118].src),'Approved costume buttocks');
