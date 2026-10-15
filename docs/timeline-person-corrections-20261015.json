@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-15",
+  "source": "Explicit owner corrections for the identified photographs. No identities inferred from facial resemblance.",
+  "removedSceneEntries": [
+    {
+      "date": "2009-07-17",
+      "category": "Optræden",
+      "title": "Voksen Dukke Leg, 036, København, Danmark.",
+      "group": "live"
+    },
+    {
+      "date": "2009-07-03",
+      "category": "Optræden",
+      "title": "Voksen Dukke Leg, 036, København, Danmark.",
+      "group": "live"
+    }
+  ],
+  "preservedArtEntry": {
+    "date": "2009-07-03",
+    "category": "Udstilling",
+    "title": "Voksen dukke leg, 036, Sølvgade 36, København.",
+    "group": "art"
+  },
+  "photoCorrections": [
+    {
+      "src": "./archive/legacy/200_calendar/2006/06_05_11_berghain/file_13.jpg",
+      "person": "ramona-macho",
+      "name": "Ramona Macho",
+      "evidence": "Owner identified Ramona as the person with the pink umbrella.",
+      "description": "Tre personer i kostumer; den ene har lange, mørke stoffrynser omkring hovedet. Dennis har brun kjole og håret skjult af kostumet. Ramona Macho står med en lyserød paraply. På billedet ses også Puta.",
+      "english": "Three people in costume; one has long, dark fabric fringes around the head. Dennis wears a brown dress and his hair is hidden by the costume. Ramona Macho is holding a pink umbrella. Puta is also pictured."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_04_10_cross_dress/06_anders_wickstroem.jpg",
+      "person": "liebling-siebling",
+      "name": "Liebling Siebling",
+      "evidence": "Owner identified Liebling as the person onstage with Dennis, with bare buttocks."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_07_02_homophobia_berlin/homophobia_show_05.jpg",
+      "person": "liebling-siebling",
+      "name": "Liebling Siebling",
+      "evidence": "Owner identified Liebling as the person touching his buttocks."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2010/10_09_23_heinrich/dunst.jpg",
+      "person": "liebling-siebling",
+      "name": "Liebling Siebling",
+      "evidence": "Owner identified Liebling on the landscape photograph of the stage."
+    }
+  ]
+}

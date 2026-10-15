@@ -3042,18 +3042,6 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/18ce9de184f944a2.webp"
   },
   {
-    "date": "2009-07-17",
-    "display": "17.07.2009",
-    "year": 2009,
-    "category": "Optræden",
-    "title": "Voksen Dukke Leg, 036, København, Danmark.",
-    "group": "live",
-    "href": "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/dukke.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/86c8b0d0e89bbf.jpg",
-    "thumbnailShape": "wide",
-    "thumbnailPreview": "./assets/timeline-thumbs/dbd1bd3762a821d0.webp"
-  },
-  {
     "date": "2009-07-04",
     "display": "04.07.2009",
     "year": 2009,
@@ -3072,18 +3060,6 @@ export const timelineEntries = [
     "category": "Udstilling",
     "title": "Voksen dukke leg, 036, Sølvgade 36, København.",
     "group": "art",
-    "href": "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/dukke.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/86c8b0d0e89bbf.jpg",
-    "thumbnailShape": "wide",
-    "thumbnailPreview": "./assets/timeline-thumbs/dbd1bd3762a821d0.webp"
-  },
-  {
-    "date": "2009-07-03",
-    "display": "03.07.2009",
-    "year": 2009,
-    "category": "Optræden",
-    "title": "Voksen Dukke Leg, 036, København, Danmark.",
-    "group": "live",
     "href": "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/dukke.html",
     "thumbnail": "./archive/timeline/generated-thumbs/86c8b0d0e89bbf.jpg",
     "thumbnailShape": "wide",
