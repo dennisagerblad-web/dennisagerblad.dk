@@ -17189,6 +17189,20 @@
         "wig:long",
         "wig:present"
       ]
+    },
+    "./assets/timeline-media/la-extreme-circus-2006-portrait-20261015.webp": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "appearance:brown",
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:short",
+        "look:brown",
+        "makeup:classic",
+        "outfit:brown"
+      ]
     }
   }
 }

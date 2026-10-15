@@ -1,6 +1,6 @@
 import {videoEmbedURL} from "./video-embed-url.js?v=20261012-video-history-1";
 import { timelineEntries } from "../content/timeline/entries.js?v=20261015-shared-body-search-1";
-import {openTimelineGallery} from "./timeline-gallery.js?v=20261015-performer-thumbnails-4";
+import {openTimelineGallery} from "./timeline-gallery.js?v=20261015-extreme-photo-1";
 import {timelineDate, timelineThumbDimensions, scrollTimelineYear, scrollTimelineTop} from "./timeline-ui.js?v=20261010-talent-release-5";
 
 // Keep an embedded frame's initial src stable across section rerenders. Language
