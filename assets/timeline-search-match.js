@@ -169,3 +169,15 @@ export function matchTimelineResult(result, query, english = value => value) {
   return eventMatch || matchedImages.length || matchedVideos.length
     ? {...result,matchedImages,matchedVideos} : null;
 }
+
+// Display an event's own Timeline thumbnail when the query matched its text.
+// This never changes photo/person/appearance matching or claims a photo match.
+export function timelineSearchResultMedia(result) {
+  const matched=[...(result.matchedImages || []),...(result.matchedVideos || [])];
+  if(matched.length) return matched;
+  const entry=result.entry;
+  const src=entry.thumbnail || entry.thumbnailPreview;
+  if(src) return [{kind:'timeline-thumbnail',src,thumbnail:entry.thumbnailPreview || src,thumbnailAlt:result.timelineThumbnailAlt || result.title || entry.shortTitle || entry.title}];
+  const image=result.images?.[0];
+  return image ? [{...image,kind:'timeline-thumbnail',thumbnail:image.thumbnail || image.src,thumbnailAlt:image.thumbnailAlt || image.description}] : [];
+}
