@@ -11,11 +11,12 @@
   // English words use individually art-directed, image-generated newspaper clippings.
   // Danish originals and approved image-generated rays remain unchanged.
   const menuFiles = { Musik: 'music.webp', Video: 'video.webp', Performance: 'performance.webp', Litteratur: 'literature-v2.webp', Kunst: 'art.webp', Tidslinje: 'timeline.webp' };
-  let language = new URL(location.href).searchParams.get('lang');
+  const languageDefault = window.DennisLanguageDefault;
+  let language = languageDefault?.current || new URL(location.href).searchParams.get('lang');
   if (!['da', 'en'].includes(language)) {
     try { language = localStorage.getItem('dennis-language'); } catch {}
   }
-  language = language === 'en' ? 'en' : 'da';
+  language = language === 'da' ? 'da' : 'en';
   const months = { januar: 'January', februar: 'February', marts: 'March', april: 'April', maj: 'May', juni: 'June', juli: 'July', august: 'August', september: 'September', oktober: 'October', november: 'November', december: 'December' };
   function english(text) {
     if (Object.hasOwn(dictionary, text)) return dictionary[text];
@@ -51,8 +52,7 @@
   function localURL(value, base = documentURLs.get(document)) {
     const url = new URL(value, base);
     if (url.origin !== location.origin && url.hostname !== 'dennisagerblad.dk') return url.href;
-    if (language === 'en') url.searchParams.set('lang', 'en');
-    else url.searchParams.delete('lang');
+    url.searchParams.set('lang', language);
     return url.href;
   }
   function sourceText(element) {
@@ -218,9 +218,10 @@
   }
   function setLanguage(next) {
     language = next;
+    languageDefault?.choose(next);
     try { localStorage.setItem('dennis-language', language); } catch {}
     const url = new URL(location.href);
-    if (language === 'en') url.searchParams.set('lang', 'en'); else url.searchParams.delete('lang');
+    url.searchParams.set('lang', language);
     history.replaceState(history.state, '', url);
     apply();
     syncTabs();
@@ -263,6 +264,13 @@
   }
   function boot() {
     mountTabs(); apply();
+    languageDefault?.ready.then(next => {
+      if (languageDefault.current !== next || language === next) return;
+      language = next;
+      apply(); syncTabs();
+      dispatchEvent(new CustomEvent('dennis-language-change', { detail: { language } }));
+      dispatchEvent(new Event('resize'));
+    });
     new MutationObserver(schedule).observe(document.body, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ['alt', 'title', 'aria-label', 'placeholder', 'href', 'src'] });
     // Same-origin historical documents embedded in current-site popups.
     document.addEventListener('load', event => {
