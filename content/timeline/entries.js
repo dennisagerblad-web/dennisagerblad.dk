@@ -1905,8 +1905,8 @@ export const timelineEntries = [
     "title": "Dragnight, Rådhuspladsen, København",
     "group": "live",
     "href": null,
-    "thumbnail": "./assets/timeline-media/dragnight-2014-01-20261015.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/2014-08-29-20261015.webp",
+    "thumbnail": "./assets/timeline-media/dragnight-2014-03-20261015.jpg",
+    "thumbnailPreview": "./assets/timeline-thumbs/2014-08-29-dennis-green-20261015.webp",
     "images": [
       "./assets/timeline-media/dragnight-2014-01-20261015.jpg",
       "./assets/timeline-media/dragnight-2014-02-20261015.jpg",
