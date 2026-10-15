@@ -79,6 +79,65 @@
       "evidence": "Owner confirmed the three-person group photograph from this event on 2026-10-15. Use this photo in person-search results.",
       "description": "Tre personer i røde narrekostumer og hvid ansigtsmaling. Dennis med rødt og hvidt tøj uden briller. Han ser direkte mod kameraet. På billedet ses Dennis Agerblad. På billedet ses også Hairwerk Hugh Mongous og Moma Van Vest (Knud Vesterskov).",
       "english": "Three people in red jester costumes and white face paint. Dennis with red and white clothes without glasses. He looks directly at the camera. Dennis Agerblad is pictured. Hairwerk Hugh Mongous and Moma Van Vest (Knud Vesterskov) are also pictured."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_09.jpg",
+      "person": "miss-fish",
+      "name": "Miss Fish",
+      "evidence": "Owner selected this exact photograph for this person search on 2026-10-15.",
+      "description": "To optrædende løfter armene foran gardin. Dennis med lang lys paryk og hvid kjole uden briller. På billedet ses Dennis Agerblad. På billedet ses også Miss Fish.",
+      "english": "Two performers raise their arms in front of the curtain. Dennis with long light wig and white dress without glasses. Dennis Agerblad is pictured. Miss Fish is also pictured."
+    },
+    {
+      "src": "./archive/timeline/peter-vadim-50-2022-01.jpeg",
+      "person": "johnny-warehouse",
+      "name": "Johnny Warehouse",
+      "evidence": "Owner selected this exact photograph for this person search on 2026-10-15.",
+      "description": "Flere optrædende står foran et gyldent scenegardin. Dennis med lang lys paryk, briller og gul kjole. På billedet ses Florence. På billedet ses Dennis Agerblad og Trine Syberg. På billedet ses også Johnny Warehouse.",
+      "english": "Several performers stand in front of a golden stage curtain. Dennis with long light wig, glasses and yellow dress. Florence is pictured. Dennis Agerblad and Trine Syberg are pictured. Johnny Warehouse is also pictured."
+    },
+    {
+      "src": "./archive/timeline/peter-vadim-50-2022-02.jpeg",
+      "person": "hairwerk",
+      "name": "Hairwerk Hugh Mongous",
+      "evidence": "Owner selected this exact photograph for this person search on 2026-10-15.",
+      "description": "Gruppe af optrædende i kjoler foran et gyldent gardin. Dennis med lang lys paryk og gul kjole. På billedet ses mAdam. På billedet ses også Hairwerk Hugh Mongous.",
+      "english": "Group of performers in dresses before a golden curtain. Dennis with long light wig and yellow dress. mAdam is pictured. Hairwerk Hugh Mongous is also pictured."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2007/07_10_19_eggen/tina_trasch.jpg",
+      "person": "tina-trasch",
+      "name": "Tina Trasch",
+      "evidence": "Owner selected this exact photograph for this person search on 2026-10-15.",
+      "description": "Person i hvid dragt løfter armene ved en stige. På billedet ses også Tina Trasch.",
+      "english": "Person in white suit raises arms by a ladder. Tina Trasch is also pictured."
+    },
+    {
+      "src": "./archive/timeline/video-thumbs/2005-12-01-welcome-to-dunst.jpg",
+      "person": "delores",
+      "name": "Delores Duchess LaCour",
+      "kind": "video-poster",
+      "evidence": "Owner requested this existing Timeline video poster under this person search on 2026-10-15. Video association does not identify a face in the poster.",
+      "description": "Videominiature til “Welcome to Dunst”: Tre personer i kostumer med lyst hår og hovedbeklædninger.",
+      "english": "Video thumbnail for “Welcome to Dunst”: Three people in costume with light hair and headdresses."
+    },
+    {
+      "src": "./archive/timeline/video-thumbs/2005-12-01-fightclub.jpg",
+      "person": "delores",
+      "name": "Delores Duchess LaCour",
+      "kind": "video-poster",
+      "evidence": "Owner requested this existing Timeline video poster under this person search on 2026-10-15. Video association does not identify a face in the poster.",
+      "description": "Videominiature til “Fightclub by Dennis & Delores”: To kostumeklædte personer i et mørkt rum.",
+      "english": "Video thumbnail for “Fightclub by Dennis & Delores”: Two costumed people in a dark room."
+    },
+    {
+      "src": "./archive/timeline/video-thumbs/2017-01-31-jeg-er-tove-hansen.jpg",
+      "person": "tove-hansen",
+      "name": "Tove Hansen",
+      "kind": "video-poster",
+      "evidence": "Owner requested this existing Timeline video poster under this person search on 2026-10-15. Video association does not identify a face in the poster.",
+      "description": "Videominiature til “Jeg Er Tove Hansen”: Person med lang blond paryk foran grønne træer.",
+      "english": "Video thumbnail for “Jeg Er Tove Hansen”: A person with a long blonde wig in front of green trees."
     }
   ]
 }

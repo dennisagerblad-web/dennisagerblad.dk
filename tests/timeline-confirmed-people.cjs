@@ -14,11 +14,11 @@ const fs = require('node:fs');
   const results = timelineEntries.map(entry => {
     const g = galleries[`${entry.date}|${entry.category}|${entry.title}`];
     const biography = (entry.biography || []).filter(p => p.type === 'image');
-    const sources = g?.images || entry.images || biography.map(p => p.src);
+    const sources = g?.images || entry.images || (biography.length ? biography.map(p => p.src) : entry.videoId && entry.thumbnail ? [entry.thumbnail] : []);
     const images = sources.map((src,i) => {
       const key = src.split('?')[0], record = records[key];
       const description = g?.imageDescriptions[i] || descriptions.get(key) || record?.description || biography.find(p => p.src === src)?.caption || '';
-      return {src,description,people:[...new Set([...(record?.people || []),...find(description)])],look:looks[key],peopleLooks:record?.looks};
+      return {src,description,people:[...new Set([...(record?.people || []),...(entry.videoId && src===entry.thumbnail ? record?.videoPeople || [] : []),...find(description)])],look:looks[key],peopleLooks:record?.looks};
     }).filter(p => p.description);
     return {entry,images,galleryDetails:g?.searchDetails || g?.details || [],searchable:normalize(entry.title+' '+entry.details)};
   });
@@ -43,6 +43,7 @@ const fs = require('node:fs');
     }
   }
 
+  assert.deepEqual(parse('Tina Trash').people,parse('Tina Trasch').people,'Owner spelling aliases find the same performer');
   assert.ok(!timelinePerformers.some(p => review.excludedReviewLabels.includes(p.name)));
   for (const word of ['Per','Bob','Blomst','Divine']) {
     assert.deepEqual(find(`En blomst, en bob og et beløb per person. Divine.`),[]);

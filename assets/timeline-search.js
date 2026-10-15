@@ -1,10 +1,10 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261015-person-corrections-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
-import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261015-band-person-photos-3';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261015-shared-body-search-1';
+import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261015-performer-thumbnails-4';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261015-performer-thumbnails-4';
 
-import {findTimelinePeople} from './timeline-search-people.js?v=20261015-person-corrections-1';
+import {findTimelinePeople} from './timeline-search-people.js?v=20261015-performer-thumbnails-4';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {
@@ -54,7 +54,7 @@ loadTimelineGalleryData().then(async data => {
   const [thumbnailData,lookData,peopleData,videoData,bodyData]=await Promise.allSettled([
     fetch(new URL('../content/timeline/search-thumbnails.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/own-look-features.json?v=20261015-body-photo-corrections-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/people.json?v=20261015-band-person-photos-3',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/people.json?v=20261015-performer-thumbnails-4',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/video-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/body-features.json?v=20261015-body-photo-corrections-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
   ]);
@@ -79,13 +79,16 @@ loadTimelineGalleryData().then(async data => {
     const entry=result.entry;
     const gallery=data.entries[`${entry.date}|${entry.category}|${entry.title}`];
     const biography=(entry.biography || []).filter(part=>part.type==='image');
-    const sources=gallery?.images || entry.images || biography.map(part=>part.src);
+    // A confirmed video association can show the existing poster without claiming
+    // that the named person is the face pictured in that poster.
+    const sources=gallery?.images || entry.images || (biography.length ? biography.map(part=>part.src) : entry.videoId && entry.thumbnail ? [entry.thumbnail] : []);
     result.galleryDetails=gallery?.searchDetails || gallery?.details || [];
     result.searchable+=' '+normalize(result.galleryDetails.join(' '));
     result.images=sources.map((src,index)=>{
       const description=gallery?.imageDescriptions?.[index] || nativeDescriptions.get(sourceURL(src)) || photoPeople.get(photoIdentity(src))?.description || biography.find(part=>part.src===src)?.caption || '';
       const record=photoPeople.get(photoIdentity(src));
-      return {src,description,thumbnail:thumbnails[src] || src,look:looks.get(photoIdentity(src)),anatomy:anatomy.get(photoIdentity(src)),people:[...new Set([...(record?.people || []),...findTimelinePeople(description)])],peopleLooks:record?.looks};
+      const poster=entry.videoId && src===entry.thumbnail;
+      return {src,kind:poster ? 'video-poster' : 'image',description,thumbnail:thumbnails[src] || (poster && entry.thumbnailPreview) || src,look:looks.get(photoIdentity(src)),anatomy:anatomy.get(photoIdentity(src)),people:[...new Set([...(record?.people || []),...(poster ? record?.videoPeople || [] : []),...findTimelinePeople(description)])],peopleLooks:record?.looks};
     }).filter(image=>image.description);
     result.people=[...new Set([...result.people,...findTimelinePeople(result.galleryDetails.join(' ')),...(people.entries?.[`${entry.date}|${entry.category}|${entry.title}`] || []),...result.images.flatMap(image=>image.people)])];
     const video=entry.videoId && videoFacts[entry.videoId];
@@ -168,7 +171,7 @@ async function goToResult(result, input, search) {
     const opener=event.querySelector('button');
     if (!opener) return;
     opener.focus({preventScroll:true}); opener.click();
-    if (image && result.group!=='live' && result.group!=='art') {
+    if (image && image.kind!=='video-poster' && result.group!=='live' && result.group!=='art') {
       for(let attempt=0;attempt<30;attempt++) {
         await new Promise(resolve=>requestAnimationFrame(resolve));
         const target=[...document.querySelectorAll('.timeline-popup img')].find(node=>node.src===sourceURL(image.src));

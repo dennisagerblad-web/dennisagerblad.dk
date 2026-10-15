@@ -823,7 +823,8 @@
       "people": [
         "florence",
         "dennis",
-        "trine-syberg"
+        "trine-syberg",
+        "johnny-warehouse"
       ]
     },
     "./archive/timeline/peter-vadim-50-2022-03.jpeg": {
@@ -4260,7 +4261,8 @@
     },
     "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_09.jpg": {
       "people": [
-        "dennis"
+        "dennis",
+        "miss-fish"
       ]
     },
     "./archive/legacy/200_calendar/2004/04_08_07_coma/coma_12.jpg": {
@@ -5698,7 +5700,8 @@
     },
     "./archive/timeline/peter-vadim-50-2022-02.jpeg": {
       "people": [
-        "madam"
+        "madam",
+        "hairwerk"
       ]
     },
     "./archive/legacy/200_calendar/2003/03_06_05_thursday_itch_03/03_06_05_thursday_03.jpg": {
@@ -5993,6 +5996,32 @@
       "people": [
         "blomst"
       ]
+    },
+    "./archive/legacy/200_calendar/2007/07_10_19_eggen/tina_trasch.jpg": {
+      "people": [
+        "tina-trasch"
+      ]
+    },
+    "./archive/timeline/video-thumbs/2005-12-01-welcome-to-dunst.jpg": {
+      "people": [],
+      "videoPeople": [
+        "delores"
+      ],
+      "description": "Videominiature til “Welcome to Dunst”: Tre personer i kostumer med lyst hår og hovedbeklædninger."
+    },
+    "./archive/timeline/video-thumbs/2005-12-01-fightclub.jpg": {
+      "people": [],
+      "videoPeople": [
+        "delores"
+      ],
+      "description": "Videominiature til “Fightclub by Dennis & Delores”: To kostumeklædte personer i et mørkt rum."
+    },
+    "./archive/timeline/video-thumbs/2017-01-31-jeg-er-tove-hansen.jpg": {
+      "people": [],
+      "videoPeople": [
+        "tove-hansen"
+      ],
+      "description": "Videominiature til “Jeg Er Tove Hansen”: Person med lang blond paryk foran grønne træer."
     }
   },
   "entries": {}

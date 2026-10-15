@@ -429,7 +429,8 @@ export const timelinePerformers = [
     "id": "tina-trasch",
     "name": "Tina Trasch",
     "aliases": [
-      "Tina Trasch"
+      "Tina Trasch",
+      "Tina Trash"
     ]
   },
   {
