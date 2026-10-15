@@ -2,7 +2,7 @@ import { timelineEntries } from '../content/timeline/entries.js?v=20261015-perso
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
 import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261015-performer-thumbnails-4';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261015-tennis-suggestion-6';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261015-dennis-suggestion-7';
 
 import {findTimelinePeople} from './timeline-search-people.js?v=20261015-performer-thumbnails-4';
 
