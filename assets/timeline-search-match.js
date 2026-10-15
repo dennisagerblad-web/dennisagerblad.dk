@@ -181,3 +181,11 @@ export function timelineSearchResultMedia(result) {
   const image=result.images?.[0];
   return image ? [{...image,kind:'timeline-thumbnail',thumbnail:image.thumbnail || image.src,thumbnailAlt:image.thumbnailAlt || image.description}] : [];
 }
+
+// The owner's name alone has a dedicated suggestion rather than a name search.
+export function timelineSearchNameSuggestion(query, results) {
+  if(!/^dennis\s+agerblad[.!?]*$/u.test(normalizeTimelineSearch(query).trim())) return null;
+  const target=results.find(result=>result.entry.date==='2023-05-27' && result.entry.group==='live' && result.entry.title==='Kønspolitisk Melodigrandprix, Bøssehuset');
+  const matches=target ? [{...target,matchedImages:timelineSearchResultMedia({...target,matchedImages:[],matchedVideos:[]}),matchedVideos:[]}] : [];
+  return {message:'Intet resultat. Mener du måske Tennis Sladderblad',matches};
+}

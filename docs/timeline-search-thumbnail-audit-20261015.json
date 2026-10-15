@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "policy": "Preserve exact matched photos and videos; otherwise display the existing Timeline entry thumbnail without creating new person or appearance matches. Entries with no Timeline image remain text until the owner chooses another treatment.",
+  "policy": "Preserve exact matched photos and videos; otherwise display the existing Timeline entry thumbnail without creating new person or appearance matches. Owner confirmed on 2026-10-15 that entries without images should remain unchanged; their future Timeline images will automatically appear in search.",
   "entriesWithTimelineImage": 388,
   "entriesWithoutTimelineImage": 89,
   "withoutImage": [

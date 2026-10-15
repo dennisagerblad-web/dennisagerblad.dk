@@ -2,7 +2,7 @@ import { timelineEntries } from '../content/timeline/entries.js?v=20261015-perso
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
 import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261015-performer-thumbnails-4';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia} from './timeline-search-match.js?v=20261015-all-search-thumbnails-5';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261015-tennis-suggestion-6';
 
 import {findTimelinePeople} from './timeline-search-people.js?v=20261015-performer-thumbnails-4';
 
@@ -285,11 +285,12 @@ function mountSearch() {
     panel.replaceChildren();
     const parsed = parseTimelineSearchQuery(query);
     if (!parsed.terms.length && !parsed.filters.length && !parsed.people.length && !parsed.peopleAny.length) return close();
-    const matches = entries.map(result=>matchTimelineResult(result,parsed,text=>window.DennisLanguage?.english(text) || text)).filter(Boolean);
+    const suggestion=timelineSearchNameSuggestion(query,entries);
+    const matches = suggestion ? suggestion.matches : entries.map(result=>matchTimelineResult(result,parsed,text=>window.DennisLanguage?.english(text) || text)).filter(Boolean);
     const count = document.createElement('div');
     count.className = 'timeline-search-count';
     count.setAttribute('aria-live', 'polite');
-    count.textContent = matches.length ? `${matches.length} ${matches.length === 1 ? 'resultat' : 'resultater'} fra hele tidslinjen` : imageSearchReady ? 'Ingen resultater' : 'Søger også i billeder …';
+    count.textContent = suggestion ? suggestion.message : matches.length ? `${matches.length} ${matches.length === 1 ? 'resultat' : 'resultater'} fra hele tidslinjen` : imageSearchReady ? 'Ingen resultater' : 'Søger også i billeder …';
     panel.append(count);
     if (matches.length) {
       const list = document.createElement('ul');
