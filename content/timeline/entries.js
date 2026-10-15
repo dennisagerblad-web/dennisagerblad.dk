@@ -2070,6 +2070,26 @@ export const timelineEntries = [
     "href": null
   },
   {
+    "date": "2013-11-24",
+    "display": "24.11.2013",
+    "year": 2013,
+    "category": "Optræden",
+    "title": "Champagnepiger til 2 × 40-års fødselsdag",
+    "group": "live",
+    "href": null,
+    "thumbnail": "./assets/timeline-media/champagnepiger-2013-01-20261015.webp",
+    "images": [
+      "./assets/timeline-media/champagnepiger-2013-01-20261015.webp",
+      "./assets/timeline-media/champagnepiger-2013-02-20261015.webp",
+      "./assets/timeline-media/champagnepiger-2013-03-20261015.webp",
+      "./assets/timeline-media/champagnepiger-2013-04-20261015.webp",
+      "./assets/timeline-media/champagnepiger-2013-05-20261015.webp",
+      "./assets/timeline-media/champagnepiger-2013-06-20261015.webp",
+      "./assets/timeline-media/champagnepiger-2013-07-20261015.webp"
+    ],
+    "thumbnailPreview": "./assets/timeline-thumbs/champagnepiger-2013-01-20261015.webp"
+  },
+  {
     "date": "2013-10-09",
     "display": "09.10.2013",
     "year": 2013,
