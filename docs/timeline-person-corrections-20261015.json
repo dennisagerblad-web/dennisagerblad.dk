@@ -47,6 +47,38 @@
       "person": "liebling-siebling",
       "name": "Liebling Siebling",
       "evidence": "Owner identified Liebling on the landscape photograph of the stage."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2012/2012_12_01_jule_tarm_tarm/DAband_01.jpg",
+      "person": "hairwerk",
+      "name": "Hairwerk Hugh Mongous",
+      "evidence": "Owner confirmed the three-person group photograph from this event on 2026-10-15. Use this photo in person-search results.",
+      "description": "Tre optrædende i røde og sorte kostumer. Dennis med rødt og sort tøj uden briller. På billedet ses Dennis Agerblad. På billedet ses også Hairwerk Hugh Mongous og Moma Van Vest (Knud Vesterskov).",
+      "english": "Three performers in red and black costumes. Dennis with red and black clothes without glasses. Dennis Agerblad is pictured. Hairwerk Hugh Mongous and Moma Van Vest (Knud Vesterskov) are also pictured."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2012/2012_12_01_jule_tarm_tarm/DAband_01.jpg",
+      "person": "moma-van-vest",
+      "name": "Moma Van Vest (Knud Vesterskov)",
+      "evidence": "Owner confirmed the three-person group photograph from this event on 2026-10-15. Use this photo in person-search results.",
+      "description": "Tre optrædende i røde og sorte kostumer. Dennis med rødt og sort tøj uden briller. På billedet ses Dennis Agerblad. På billedet ses også Hairwerk Hugh Mongous og Moma Van Vest (Knud Vesterskov).",
+      "english": "Three performers in red and black costumes. Dennis with red and black clothes without glasses. Dennis Agerblad is pictured. Hairwerk Hugh Mongous and Moma Van Vest (Knud Vesterskov) are also pictured."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2012/2012_11_22_keramik/Dennis_Agerblad_Band.jpg",
+      "person": "hairwerk",
+      "name": "Hairwerk Hugh Mongous",
+      "evidence": "Owner confirmed the three-person group photograph from this event on 2026-10-15. Use this photo in person-search results.",
+      "description": "Tre personer i røde narrekostumer og hvid ansigtsmaling. Dennis med rødt og hvidt tøj uden briller. Han ser direkte mod kameraet. På billedet ses Dennis Agerblad. På billedet ses også Hairwerk Hugh Mongous og Moma Van Vest (Knud Vesterskov).",
+      "english": "Three people in red jester costumes and white face paint. Dennis with red and white clothes without glasses. He looks directly at the camera. Dennis Agerblad is pictured. Hairwerk Hugh Mongous and Moma Van Vest (Knud Vesterskov) are also pictured."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2012/2012_11_22_keramik/Dennis_Agerblad_Band.jpg",
+      "person": "moma-van-vest",
+      "name": "Moma Van Vest (Knud Vesterskov)",
+      "evidence": "Owner confirmed the three-person group photograph from this event on 2026-10-15. Use this photo in person-search results.",
+      "description": "Tre personer i røde narrekostumer og hvid ansigtsmaling. Dennis med rødt og hvidt tøj uden briller. Han ser direkte mod kameraet. På billedet ses Dennis Agerblad. På billedet ses også Hairwerk Hugh Mongous og Moma Van Vest (Knud Vesterskov).",
+      "english": "Three people in red jester costumes and white face paint. Dennis with red and white clothes without glasses. He looks directly at the camera. Dennis Agerblad is pictured. Hairwerk Hugh Mongous and Moma Van Vest (Knud Vesterskov) are also pictured."
     }
   ]
 }

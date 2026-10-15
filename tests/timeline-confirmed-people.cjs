@@ -31,6 +31,18 @@ const fs = require('node:fs');
     }
   }
   assert.equal(checked,review.manualNamedAssociations);
+  const corrections=read('docs/timeline-person-corrections-20261015.json').photoCorrections;
+  for(const correction of corrections) {
+    const found=new Set(results.flatMap(r=>match(r,parse(correction.name))?.matchedImages || []).map(p=>p.src.split('?')[0]));
+    assert.ok(found.has(correction.src),'Owner photo correction: '+correction.name+' '+correction.src);
+  }
+  for(const date of ['2012-12-01','2012-11-22']) {
+    const event=results.find(r=>r.entry.date===date);
+    for(const query of ['Hairwerk','Moma Van Vest','Knud Vesterskov']) {
+      assert.deepEqual(match(event,parse(query)).matchedImages.map(i=>i.src),[event.images[0].src],'Three-person group is the exact matching image: '+date+' '+query);
+    }
+  }
+
   assert.ok(!timelinePerformers.some(p => review.excludedReviewLabels.includes(p.name)));
   for (const word of ['Per','Bob','Blomst','Divine']) {
     assert.deepEqual(find(`En blomst, en bob og et beløb per person. Divine.`),[]);
