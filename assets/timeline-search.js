@@ -1,8 +1,8 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261015-person-corrections-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261009-popup-layout-5';
 
-import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261015-person-corrections-1';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261015-person-corrections-1';
+import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261015-shared-body-search-1';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult} from './timeline-search-match.js?v=20261015-shared-body-search-1';
 
 import {findTimelinePeople} from './timeline-search-people.js?v=20261015-person-corrections-1';
 
@@ -56,7 +56,7 @@ loadTimelineGalleryData().then(async data => {
     fetch(new URL('../content/timeline/own-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/people.json?v=20261015-person-corrections-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/video-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/body-features.json?v=20261015-person-corrections-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/body-features.json?v=20261015-shared-body-search-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
   ]);
   const videoFacts=videoData.status==='fulfilled' ? videoData.value.videos || {} : {};
   const people=peopleData.status==='fulfilled' ? peopleData.value : {};

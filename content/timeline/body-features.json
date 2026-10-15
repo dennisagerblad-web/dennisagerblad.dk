@@ -1,5 +1,5 @@
 {
-  "scope": "Reviewed visible anatomy of any pictured adult. Unqualified anatomy searches include every person; combined appearance or named-person searches keep facts on that same person. Anonymous records never establish an identity. Existing own-look and named-look anatomy facts remain valid.",
+  "scope": "Reviewed visible anatomy and nudity of pictured adults, including owner-approved costume depictions. The requested words pik, røv, nosser, røvhul, nøgen and hud share one search collection. Exact anatomy tags remain image-specific; named-person or appearance combinations keep facts on that same person. Anonymous records never establish an identity.",
   "photos": {
     "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/dennis_show_02.jpg": [
       {
@@ -37,6 +37,56 @@
         "subject": "unidentified-smegma-model",
         "tags": [
           "body:penis-visible",
+          "nudity:visible"
+        ]
+      }
+    ],
+    "./archive/legacy/200_calendar/2003/03_03_22_robbery/2003_03_22_robbery_06.jpg": [
+      {
+        "reviewed": true,
+        "subject": "dennis",
+        "tags": [
+          "body:penis-visible",
+          "nudity:visible"
+        ]
+      }
+    ],
+    "./archive/legacy/200_calendar/2003/03_03_22_robbery/2003_03_22_robbery_04.jpg": [
+      {
+        "reviewed": true,
+        "subject": "dennis",
+        "tags": [
+          "body:buttocks-visible",
+          "nudity:visible"
+        ]
+      }
+    ],
+    "./archive/legacy/200_calendar/2003/03_08_30_turist_trap/2003_08_30_tourist_trap.jpg": [
+      {
+        "reviewed": true,
+        "subject": "unidentified-tourist-trap-model",
+        "tags": [
+          "body:penis-visible",
+          "nudity:visible"
+        ]
+      }
+    ],
+    "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/IMG_0269.jpg": [
+      {
+        "reviewed": true,
+        "subject": "dennis",
+        "tags": [
+          "body:testicles-visible",
+          "nudity:visible"
+        ]
+      }
+    ],
+    "./archive/legacy/200_calendar/2004/04_04_10_cross_dress/06_anders_wickstroem.jpg": [
+      {
+        "reviewed": true,
+        "subject": "dennis",
+        "tags": [
+          "body:buttocks-visible",
           "nudity:visible"
         ]
       }

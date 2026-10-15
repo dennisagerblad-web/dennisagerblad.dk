@@ -80,11 +80,12 @@ export function parseTimelineSearchQuery(query) {
   take('raab(?:e|er|ende)?','mouth:open');
   take('tørklaede(?:r|t)?','clothing:scarf');
   take('klassisk\\s+makeup|smukke?\\s+ansigt(?:er)?','makeup:classic');
-  take('nøgenhed|nøg(?:en|ne|ent)|nudity|naked|nude','nudity:visible');
-  // Keep known song/poster phrases searchable as titles. Bare anatomy queries
-  // require visually reviewed exposure rather than lyrics or printed words.
-  if(!/\b(?:pik\s+nok|gratis\s+pik\s+og\s+pat|stiv\s+pik\s+til\s+alle)\b/u.test(text)) take('pik(?:ken|ke)?|penis(?:sen)?','body:penis-visible');
-  take('(?:bare\\s+)?(?:røv(?:en)?|rumpe(?:n)?|balder(?:ne)?|bagdel(?:en)?|buttocks)','body:buttocks-visible');
+  // These owner-requested synonyms share the entire reviewed nudity/anatomy
+  // collection. Preserve exact source facts; ordinary skin is not a review tag.
+  take('nøgenhed|nøg(?:en|ne|ent)|nudity|naked|nude|hud(?:en)?|skin|nosser(?:ne)?|testikler(?:ne)?|testicles?|røvhul(?:let|ler)?|anus','nudity:any');
+  // Keep known song/poster phrases searchable as titles rather than anatomy.
+  if(!/\b(?:pik\s+nok|gratis\s+pik\s+og\s+pat|stiv\s+pik\s+til\s+alle)\b/u.test(text)) take('pik(?:ken|ke)?|penis(?:sen)?','nudity:any');
+  take('(?:bare\\s+)?(?:røv(?:en)?|rumpe(?:n)?|balder(?:ne)?|bagdel(?:en)?|buttocks)','nudity:any');
   take('bar(?:e)?\\s+overkrop|topløs|topless','body:bare-torso');
   take('overtøj','clothing:outerwear');
   take('undertøj','clothing:underwear');
@@ -118,6 +119,7 @@ function matchesReviewedFacts(image, filters, people=[]) {
     if(!validLook && !body.length) return false;
     const tags=new Set([...(validLook ? facts.tags : []),...body.flatMap(facts=>facts.tags)]);
     return filters.every(fact=>{
+    if(fact==='nudity:any') return ['nudity:visible','body:penis-visible','body:buttocks-visible','body:testicles-visible','body:anus-visible','body:bare-torso','costume:nudity','costume:penis','costume:buttocks','costume:testicles'].some(tag=>tags.has(tag));
     // Owner-approved costume anatomy participates in the same searches,
     // while its alt text and review tags explicitly describe the costume.
     const costumeEquivalent={'nudity:visible':'costume:nudity','body:penis-visible':'costume:penis','body:buttocks-visible':'costume:buttocks'}[fact];
