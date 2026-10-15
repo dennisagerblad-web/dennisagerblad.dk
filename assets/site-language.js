@@ -8,9 +8,9 @@
   const originalSchema = new WeakMap();
   const videoURLs = new WeakMap();
   const menuWords = { Musik: 'Music', Video: 'Video', Performance: 'Performance', Litteratur: 'Literature', Kunst: 'Art', Tidslinje: 'Timeline' };
-  // Artwork and rays are image-generated; VIDEO and PERFORMANCE share one
-  // image between languages. No SVG letter cropping or code-drawn accents.
-  const menuFiles = { Musik: 'music.webp', Video: 'video.webp', Performance: 'performance.webp', Litteratur: 'literature.webp', Kunst: 'art.webp', Tidslinje: 'timeline.webp' };
+  // English words use individually art-directed, image-generated newspaper clippings.
+  // Danish originals and approved image-generated rays remain unchanged.
+  const menuFiles = { Musik: 'music.webp', Video: 'video.webp', Performance: 'performance.webp', Litteratur: 'literature-v2.webp', Kunst: 'art.webp', Tidslinje: 'timeline.webp' };
   let language = new URL(location.href).searchParams.get('lang');
   if (!['da', 'en'].includes(language)) {
     try { language = localStorage.getItem('dennis-language'); } catch {}
@@ -91,7 +91,7 @@
     Performance: [['yellow',83,22,-22],['yellow',88,17,10],['yellow',17,86,22],['yellow',23,90,-22]],
     Tidslinje: [['white',54,15,-18],['white',60,21,20],['white',16,91,22],['white',23,96,-24]]
   };
-  const menuInkEdges = {"Musik": [[0.24832, 0.8094], [0.22819, 0.79597], [0.20671, 0.74094], [0.48054, 0.71409]], "Video": [[0.15705, 0.74228], [0.13423, 0.73826], [0.25772, 0.92483], [0.28322, 0.94228], [0.3302, 0.94228], [0.34362, 0.94228]], "Kunst": [[0.12248, 0.84118], [0.14939, 0.86406], [0.0969, 0.88156], [0.0969, 0.83445]], "Litteratur": [[0.21853, 0.79545], [0.21678, 0.78147], [0.26748, 0.73951], [0.26748, 0.72203], [0.26748, 0.73951], [0.26748, 0.71678]], "Performance": [[0.28871, 0.71452], [0.28871, 0.7], [0.27742, 0.66774], [0.27258, 0.70806]], "Tidslinje": [[0.17308, 0.79371], [0.19755, 0.7972], [0.18007, 0.78497], [0.18007, 0.78497]]};
+  const menuInkEdges = {"Musik": [[0.10179, 0.8], [0.15536, 0.79643], [0.16429, 0.8625], [0.16071, 0.82857]], "Video": [[0.18143, 0.86286], [0.17286, 0.84286], [0.22571, 0.81714], [0.19429, 0.87143], [0.19143, 0.87429], [0.19143, 0.88]], "Kunst": [[0.14286, 0.84714], [0.13, 0.85571], [0.19286, 0.87286], [0.19286, 0.87714]], "Litteratur": [[0.17984, 0.80654], [0.20981, 0.80926], [0.23978, 0.80381], [0.26431, 0.80926], [0.23978, 0.80381], [0.26431, 0.80926]], "Performance": [[0.24625, 0.76445], [0.24625, 0.76445], [0.20128, 0.74732], [0.20128, 0.74518]], "Tidslinje": [[0.17345, 0.79872], [0.17345, 0.84368], [0.13704, 0.79015], [0.17559, 0.80728]]};
   // Small individual offsets preserve the reference's hand-placed rhythm.
   const accentRhythm = {
     Musik: { spacing: [20,25], outward: [1,3,2,0] },
@@ -121,7 +121,7 @@
       if (pair === 0 && (word === 'Video' || word === 'Kunst')) {
         const right = word === 'Kunst';
         const halfWidth = (24 * Math.abs(Math.sin(radians)) + 5 * Math.abs(Math.cos(radians))) / 2;
-        const sideX = image.clientWidth * (right ? .8525 : .14125);
+        const sideX = image.clientWidth * (right ? .913 : .051);
         accent.style.left = `${image.offsetLeft + sideX + (right ? 1 : -1) * (5 + halfWidth + outward)}px`;
         accent.style.top = `${image.offsetTop + image.clientHeight * (right ? .5 : .4) + (index % 2 ? halfSpacing : -halfSpacing)}px`;
         continue;
@@ -139,7 +139,7 @@
       image.dataset.languageWord = word;
       image.dataset.danishSrc = image.getAttribute('src');
     }
-    const source = language === 'en' ? new URL(`menu-imagegen/20261013/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
+    const source = language === 'en' ? new URL(`menu-imagegen/20261015/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
     if (image.getAttribute('src') !== source) image.setAttribute('src', source);
     const button = image.closest('.menu-point');
     if (button && button.dataset.accentLanguage !== language) {
