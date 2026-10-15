@@ -1904,7 +1904,17 @@ export const timelineEntries = [
     "category": "Liveoptræden",
     "title": "Dragnight, Rådhuspladsen, København",
     "group": "live",
-    "href": null
+    "href": null,
+    "thumbnail": "./assets/timeline-media/dragnight-2014-01-20261015.jpg",
+    "thumbnailPreview": "./assets/timeline-thumbs/2014-08-29-20261015.webp",
+    "images": [
+      "./assets/timeline-media/dragnight-2014-01-20261015.jpg",
+      "./assets/timeline-media/dragnight-2014-02-20261015.jpg",
+      "./assets/timeline-media/dragnight-2014-03-20261015.jpg",
+      "./assets/timeline-media/dragnight-2014-04-20261015.jpg",
+      "./assets/timeline-media/dragnight-2014-05-20261015.jpg"
+    ],
+    "details": "Fotos: Tejs Lindhardt."
   },
   {
     "date": "2014-07-09",
@@ -1970,22 +1980,22 @@ export const timelineEntries = [
     "href": null
   },
   {
-    "date": "2014-05-09",
-    "display": "09.05.2014",
-    "year": 2014,
-    "category": "Liveoptræden",
-    "title": "Melodigrandprix, Bøssehuset, Christiania",
-    "group": "live",
-    "href": null
-  },
-  {
     "date": "2014-05-02",
     "display": "02.05.2014",
     "year": 2014,
     "category": "Liveoptræden",
     "title": "Melodigrandprix, Bøssehuset, Christiania",
     "group": "live",
-    "href": null
+    "href": null,
+    "thumbnail": "./assets/timeline-media/melodigrandprix-2014-01-20261015.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2014-05-02-20261015.webp",
+    "images": [
+      "./assets/timeline-media/melodigrandprix-2014-01-20261015.webp",
+      "./assets/timeline-media/melodigrandprix-2014-02-20261015.webp",
+      "./assets/timeline-media/melodigrandprix-2014-03-20261015.webp",
+      "./assets/timeline-media/melodigrandprix-2014-04-20261015.webp"
+    ],
+    "details": "Jeg sang Straight World Order."
   },
   {
     "date": "2014-04-04",

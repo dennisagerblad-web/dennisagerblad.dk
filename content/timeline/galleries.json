@@ -628,8 +628,23 @@
     },
     "2014-08-29|Liveoptræden|Dragnight, Rådhuspladsen, København": {
       "title": "Dragnight, Rådhuspladsen, København",
-      "details": [],
-      "images": []
+      "details": [
+        "Fotos: Tejs Lindhardt."
+      ],
+      "images": [
+        "./assets/timeline-media/dragnight-2014-01-20261015.jpg",
+        "./assets/timeline-media/dragnight-2014-02-20261015.jpg",
+        "./assets/timeline-media/dragnight-2014-03-20261015.jpg",
+        "./assets/timeline-media/dragnight-2014-04-20261015.jpg",
+        "./assets/timeline-media/dragnight-2014-05-20261015.jpg"
+      ],
+      "imageDescriptions": [
+        "Optrædende med langt lyst hår, lilla kostume og en stor lilla hovedpynt på scenen. På billedet ses Ariel.",
+        "Optrædende i grøn fjerkjole og grøn hovedpynt synger i mikrofon. Flere optrædende ses bagved. På billedet ses Dennis Agerblad og Rebekka Fjams Du Nord.",
+        "Nærbillede af en optrædende med grøn makeup, grøn hovedpynt og mikrofon. På billedet ses Dennis Agerblad.",
+        "Optrædende med skæg, rød hovedpynt og rødbrunt kostume taler i mikrofon. På billedet ses Hairwerk Hugh Mongous.",
+        "To optrædende i røde og grønne kostumer står sammen med mikrofoner og papirer på scenen. På billedet ses Dennis Agerblad og Hairwerk Hugh Mongous."
+      ]
     },
     "2014-06-06|Optræden|Jeg optrådte med Ramona Macho til en privat fest.": {
       "title": "Jeg optrådte med Ramona Macho til en privat fest.",
@@ -653,8 +668,21 @@
     },
     "2014-05-02|Liveoptræden|Melodigrandprix, Bøssehuset, Christiania": {
       "title": "Melodigrandprix, Bøssehuset, Christiania",
-      "details": [],
-      "images": []
+      "details": [
+        "Jeg sang Straight World Order."
+      ],
+      "images": [
+        "./assets/timeline-media/melodigrandprix-2014-01-20261015.webp",
+        "./assets/timeline-media/melodigrandprix-2014-02-20261015.webp",
+        "./assets/timeline-media/melodigrandprix-2014-03-20261015.webp",
+        "./assets/timeline-media/melodigrandprix-2014-04-20261015.webp"
+      ],
+      "imageDescriptions": [
+        "Nærbillede af en optrædende med sølvfarvet kostume, sølvhovedtelefoner og sort ansigtsmaling. En anden person ses i baggrunden. På billedet ses Dennis Agerblad.",
+        "To optrædende poserer sammen; den ene har blå briller og blomstret kjole, den anden lyst hår, hvid kjole og rødbrun jakke. På billedet ses Delores Duchess LaCour og Moma Van Vest (Knud Vesterskov).",
+        "To optrædende med farverig ansigtsmaling, blå briller og lyst hår poserer i et mørkt lokale. På billedet ses Delores Duchess LaCour og Moma Van Vest (Knud Vesterskov).",
+        "En optrædende i blomstret kjole og blå briller læner sig mod en anden i hvid kjole og rødbrun jakke. På billedet ses Delores Duchess LaCour og Moma Van Vest (Knud Vesterskov)."
+      ]
     },
     "2013-12-21|Liveoptræden|Juleshow, Bøssehuset, Christiania": {
       "title": "Juleshow, Bøssehuset, Christiania",
