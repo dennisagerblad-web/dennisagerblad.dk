@@ -336,7 +336,10 @@ export function openTimelineGallery(entry, group, theme = {}) {
       const frameHeight=portrait ? Math.min((Math.floor(width)-padding)/tallest,available) : available;
       stage.style.height=`${frameHeight}px`;
       stage.style.aspectRatio='auto';
-      dialog.style.height=`${portrait ? padding+flowHeight(header)+extra()+frameHeight : maxH}px`;
+      const belowImages=viewer.querySelector('.tg-video-after-images');
+      const belowHeight=belowImages ? flowHeight(belowImages) : 0;
+      const portraitHeight=padding+flowHeight(header)+extra()+frameHeight;
+      dialog.style.height=`${portrait ? (belowImages ? Math.min(maxH,portraitHeight+belowHeight) : portraitHeight) : maxH}px`;
       dialog.style.maxHeight=`${maxH}px`;
       return;
     }
@@ -592,12 +595,17 @@ export function openTimelineGallery(entry, group, theme = {}) {
     }
     if (entry.videoId) {
       const video=el('iframe','tg-video'); video.src=videoEmbedURL(entry.videoId);
-      video.title=entry.title; video.referrerPolicy='strict-origin-when-cross-origin'; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
-      const videoFrame=el('div','video-frame');videoFrame.append(video);dialog.insertBefore(videoFrame,viewer);
+      video.title=entry.videoTitle || entry.title; video.referrerPolicy='strict-origin-when-cross-origin'; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
+      const videoFrame=el('div','video-frame');videoFrame.append(video);
       const youtube=el('a','tg-video-link','Se videoen på YouTube');
       youtube.href=`https://www.youtube.com/watch?v=${encodeURIComponent(entry.videoId)}`;
       youtube.target='_blank'; youtube.rel='noreferrer';
-      dialog.insertBefore(youtube,viewer);
+      if (entry.videoAfterImages) {
+        const belowImages=el('div','tg-video-after-images');
+        belowImages.append(videoFrame,youtube); viewer.append(belowImages);
+      } else {
+        dialog.insertBefore(videoFrame,viewer); dialog.insertBefore(youtube,viewer);
+      }
     }
     if (entry.popupHref) link(entry.popupLabel || 'Se linket ↗',entry.popupHref);
     if (items.length) {

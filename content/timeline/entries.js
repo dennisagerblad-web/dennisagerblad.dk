@@ -1995,7 +1995,10 @@ export const timelineEntries = [
       "./assets/timeline-media/melodigrandprix-2014-03-20261015.webp",
       "./assets/timeline-media/melodigrandprix-2014-04-20261015.webp"
     ],
-    "details": "Jeg sang Straight World Order."
+    "details": "Jeg sang Straight World Order.",
+    "videoId": "iP4osFcJ4gI",
+    "videoTitle": "Straight World Order - Dennis Agerblad",
+    "videoAfterImages": true
   },
   {
     "date": "2014-04-04",
