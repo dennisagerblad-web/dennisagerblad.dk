@@ -698,6 +698,13 @@ export const timelinePerformers = [
     "aliases": [
       "maður:glotti"
     ]
+  },
+  {
+    "id": "nat-zyrik",
+    "name": "Nat Zyrik",
+    "aliases": [
+      "Nat Zyrik"
+    ]
   }
 ];
 

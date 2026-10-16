@@ -1,0 +1,6 @@
+/* Landing pages opened from a Timeline entry retain the visible Timeline behind them. */
+.timeline-landing-popup{position:fixed;inset:0;margin:auto;padding:0;border:0;width:min(86vw,900px);height:86dvh;max-width:none;max-height:840px;border-radius:9px;background:#000;overflow:hidden;box-shadow:0 24px 100px #0009}
+.timeline-landing-popup::backdrop{background:#09090bbf;backdrop-filter:blur(12px)}
+@media(max-width:760px){.timeline-landing-popup{width:calc(100vw - 32px);height:calc(100dvh - 64px)}}
+@media(orientation:landscape) and (max-height:600px){.timeline-landing-popup{width:calc(100vw - 40px);height:calc(100dvh - 32px)}}
+.section-5 a.timeline-entry.has-archive .life-description{text-decoration:underline;text-decoration-color:var(--timeline-accent);text-underline-offset:4px}

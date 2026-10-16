@@ -1,7 +1,6 @@
-// Open Talent over the current section, retaining its state and scroll position.
+// Open an existing landing page over the current section, retaining its state and scroll position.
 (() => {
   const pages = {'/performance/bol-mig-i-mit-numsehul/': 'Bol Mig I Mit Numsehul', '/video/danmark-har-talent/': 'Dennis Agerblad Band i Danmark har talent', '/video/koebenhavns-vaerste-trash-drag/': 'Københavns værste trash drag'};
-  const talentPath = location.pathname;
   if (window.parent !== window && pages[location.pathname]) {
     const section = new URLSearchParams(location.search).get('from') === 'Video' ? 'Video' : 'Tidslinjen';
     for (const link of document.querySelectorAll('a.back')) {
@@ -11,6 +10,11 @@
         window.parent.postMessage({ type: 'dennis-close-talent' }, location.origin);
       });
     }
+    window.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || event.defaultPrevented) return;
+      event.preventDefault();
+      window.parent.postMessage({ type: 'dennis-close-talent' }, location.origin);
+    });
     // Chapter links scroll inside the panel without adding extra history entries.
     document.addEventListener('click', event => {
       const link = event.target.closest('a[href^="#"]');
@@ -23,7 +27,7 @@
     }
     return;
   }
-  if (location.pathname !== '/' && location.pathname !== '/index.html') return;
+  if (!/^\/(?:index\.html|(?:musik|video|performance|kunst|litteratur|tidslinje)\/?)?$/.test(location.pathname)) return;
   let dialog, frame, sourceLink;
   const close = () => {
     if (!dialog) return;
@@ -44,7 +48,9 @@
     const section = link.closest('.section-1') ? 'Video' : 'Tidslinjen';
     dialog = document.createElement('dialog');
     dialog.setAttribute('aria-label', pages[destination]);
-    dialog.style.cssText = 'position:fixed;inset:0;margin:0;padding:0;border:0;width:100vw;max-width:none;height:100dvh;max-height:none;background:#000;overflow:hidden';
+    const timelinePopup = !!link.closest('.section-5') && destination === '/video/koebenhavns-vaerste-trash-drag/';
+    if (timelinePopup) dialog.className = 'timeline-landing-popup';
+    else dialog.style.cssText = 'position:fixed;inset:0;margin:0;padding:0;border:0;width:100vw;max-width:none;height:100dvh;max-height:none;background:#000;overflow:hidden';
     frame = document.createElement('iframe');
     frame.title = pages[destination] + ' – tilbage til ' + section;
     frame.src = window.DennisLanguage?.localURL(destination + '?from=' + encodeURIComponent(section)) || destination + '?from=' + encodeURIComponent(section);
@@ -52,6 +58,7 @@
     frame.allow = 'fullscreen; autoplay; encrypted-media; picture-in-picture';
     dialog.append(frame); document.body.append(dialog);
     dialog.addEventListener('cancel', event => { event.preventDefault(); back(); });
+    if (timelinePopup) dialog.addEventListener('click', event => { if (event.target === dialog) back(); });
     dialog.showModal();
     history.pushState({ ...history.state, dennisTalentPanel: true }, '', window.DennisLanguage?.localURL(destination) || destination);
   }, true);

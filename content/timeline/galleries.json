@@ -626,11 +626,6 @@
         "En optrædende i blomstret kjole og blå briller læner sig mod en anden i hvid kjole og rødbrun jakke. På billedet ses Delores Duchess LaCour og Moma Van Vest (Knud Vesterskov)."
       ]
     },
-    "2013-09-07|Liveoptræden|Manifest, København Ø": {
-      "title": "Manifest, København Ø",
-      "details": [],
-      "images": []
-    },
     "2013-08-22|Liveoptræden|Dragnight, Rådhuspladsen, København": {
       "title": "Dragnight, Rådhuspladsen, København",
       "details": [],
@@ -648,8 +643,21 @@
     },
     "2013-05-17|Liveoptræden|Melodigrandprix, Bøssehuset, Christiania": {
       "title": "Melodigrandprix, Bøssehuset, Christiania",
-      "details": [],
-      "images": []
+      "details": [
+        "Melodigrandprix i Bøssehuset."
+      ],
+      "images": [
+        "./archive/timeline/performance/2013-05-17-01.webp",
+        "./archive/timeline/performance/2013-05-17-02.webp",
+        "./archive/timeline/performance/2013-05-17-03.webp",
+        "./archive/timeline/performance/2013-05-17-04.webp"
+      ],
+      "imageDescriptions": [
+        "Person med mørk krøllet paryk og lys skjorte holder et rundt strengeinstrument med et langt skaft under farvede scenelys. På billedet ses Dennis Agerblad.",
+        "Person med mørk krøllet paryk holder et rundt strengeinstrument og åbner munden vidt foran en væg med et hjerte og en regnbue. På billedet ses Dennis Agerblad.",
+        "En person med lang blond paryk og lys kjole står ved siden af en person med mørk krøllet paryk og et rundt strengeinstrument på en scene. På billedet ses Dennis Agerblad, Ariel.",
+        "To personer med kraftig scenemakeup poserer tæt sammen; den ene har gråsort paryk og sort top, mens den anden har bar overkrop og mørk krøllet paryk. På billedet ses Blomst, Dennis Agerblad."
+      ]
     },
     "2013-05-04|Liveoptræden|Jeg optrådte med mit band på Block 66 i Kødbyen.": {
       "title": "Jeg optrådte med mit band på Block 66 i Kødbyen.",
@@ -880,16 +888,34 @@
     },
     "2012-03-01|Optræden|Resturang 3, Frederiksberg.": {
       "title": "Resturang 3, Frederiksberg.",
-      "details": [],
+      "details": [
+        "Jeg sang Forelsket I Et Dyr på Resturang 3."
+      ],
       "images": [
+        "./archive/timeline/performance/2012-03-01-01.webp",
+        "./archive/timeline/performance/2012-03-01-02.webp",
+        "./archive/timeline/performance/2012-03-01-03.webp",
+        "./archive/timeline/performance/2012-03-01-04.webp",
+        "./archive/timeline/performance/2012-03-01-05.webp",
+        "./archive/legacy/200_calendar/2012/2012_03_01_resturang/03.jpg?v=20261016-resturang-1",
+        "./archive/timeline/performance/2012-03-01-07.webp",
+        "./archive/timeline/performance/2012-03-01-08.webp",
+        "./archive/timeline/performance/2012-03-01-09.webp",
         "./archive/legacy/200_calendar/2012/2012_03_01_resturang/01.jpg",
-        "./archive/legacy/200_calendar/2012/2012_03_01_resturang/02.jpg",
-        "./archive/legacy/200_calendar/2012/2012_03_01_resturang/03.jpg"
+        "./archive/legacy/200_calendar/2012/2012_03_01_resturang/02.jpg"
       ],
       "imageDescriptions": [
+        "Person med lys pageparyk, gul og orange bluse, perlekæder og blåt forklæde synger i en mikrofon tæt ved siddende gæster. På billedet ses Dennis Agerblad.",
+        "Person med lys pageparyk og langt blåt og lyst forklæde synger i en mikrofon foran publikum på en lille scene. På billedet ses Dennis Agerblad.",
+        "Person i lyst tøj ligger på siden på et tæppe med kjolen løftet over lyserødt undertøj på et trægulv i rødt scenelys. På billedet ses Dennis Agerblad.",
+        "Nærbillede af en person med lys pageparyk, mørk øjenmakeup, perlekæder og blåt forklæde mod en mørk baggrund. På billedet ses Dennis Agerblad.",
+        "Person med lys pageparyk, blåt forklæde, lyse bukser, stribede strømper og håndtaske står med benene spredt foran andre deltagere. En synlig penis ses under den løftede kjole. På billedet ses Dennis Agerblad, Liebling Siebling.",
+        "Person med lys pageparyk, perlekæder, gulorange bluse og blåt forklæde ses i varmt scenelys mod en mørk baggrund. På billedet ses Dennis Agerblad.",
+        "Person med lys pageparyk og perlekæder synger i en håndholdt mikrofon og løfter den anden hånd i blåt og orange scenelys. På billedet ses Dennis Agerblad.",
+        "Et hestehoved ligger på et lyserødt tæppe på et trægulv i lilla scenelys.",
+        "Fem personer i lange kjoler og et lyst jakkesæt står samlet på en scene; et hestehoved ligger på gulvet foran dem. På billedet ses Dennis Agerblad.",
         "Smilende person med sølvfarvet paryk i en rund åbning. Dennis med kort grå paryk og rødt og hvidt tøj uden briller. Han ser direkte mod kameraet. På billedet ses Dennis Agerblad.",
-        "Person med sølvfarvet paryk, håndtaske og perlekæder. Dennis med kort grå paryk og flerfarvet kjole uden briller. På billedet ses Dennis Agerblad.",
-        "Person med sølvfarvet paryk i mørkt rødt lys. Dennis med kort grå paryk og flerfarvet kjole uden briller. På billedet ses Dennis Agerblad."
+        "Person med sølvfarvet paryk, håndtaske og perlekæder. Dennis med kort grå paryk og flerfarvet kjole uden briller. På billedet ses Dennis Agerblad."
       ]
     },
     "2012-02-17|Optræden|Strikkeklub for Transer, Bøssehuset, Christiania, København.": {
@@ -1756,7 +1782,7 @@
         "Sanger i kort khakifarvet kjole læner sig frem med en mikrofon på scenen. På billedet ses Dennis Agerblad.",
         "Sanger i en kort rødbrun kjole og stribede strømper holder en mikrofon på en mørk scene. På billedet ses Dennis Agerblad.",
         "Smilende person med kort sort hår i en khakifarvet skjorte foran en mørk væg. På billedet ses Dennis Agerblad.",
-        "Person med lang lyserød paryk, kraftig øjenmakeup og mønstret hætte i et mørkt rum.",
+        "Person med lang lyserød paryk, kraftig øjenmakeup og mønstret hætte i et mørkt rum. På billedet ses Nat Zyrik.",
         "Optrædende med sort paryk og mørk ansigtsudsmykning synger i grøn og blå belysning. På billedet ses Alexis.",
         "Performer i lyst tøj, hat og solbriller synger i mikrofon med den ene arm løftet. På billedet ses Miss Fish.",
         "Optrædende med langt, strittende hovedpynt bevæger sig på scenen i rødt lys. På billedet ses Hairwerk Hugh Mongous.",
@@ -4980,6 +5006,57 @@
       "details": [],
       "images": [],
       "imageDescriptions": []
+    },
+    "2013-08-30|Parade|Pride Parade, København": {
+      "title": "Pride Parade, København",
+      "details": [
+        "Jeg gik rundt i paraden og filmede min musikvideo Lesbisk Sadist.",
+        "Videooptagelser: Cho Hae."
+      ],
+      "images": [
+        "./archive/timeline/performance/2013-08-30-01.webp",
+        "./archive/timeline/performance/2013-08-30-02.webp",
+        "./archive/timeline/performance/2013-08-30-03.webp",
+        "./archive/timeline/performance/2013-08-30-04.webp"
+      ],
+      "imageDescriptions": [
+        "Person med blond paryk og lyseblå hårsløjfe står i en kort ferskenfarvet kjole og lyse knæstrømper ved en hvid varevogn med regnbueflag. På billedet ses Dennis Agerblad.",
+        "Nærbillede af en person med blond paryk, lyseblå hårsløjfe, mørk øjenmakeup og rød læbestift, der vender sig mod kameraet. På billedet ses Dennis Agerblad.",
+        "Person i en ferskenfarvet kjole ligger på gaden ved en cykel, mens andre paradedeltageres ben ses i baggrunden. På billedet ses Dennis Agerblad.",
+        "Person med blond paryk, lyseblå hårsløjfe, sortmalede tænder og ferskenfarvet kjole laver en grimasse foran byhuse og en blå himmel. På billedet ses Dennis Agerblad."
+      ]
+    },
+    "2013-09-07|Liveoptræden|Manifest – Sex Party, Parken Stadion": {
+      "title": "Manifest – Sex Party, Parken Stadion",
+      "details": [
+        "Jeg sang et par frække sange til Manifest – Sex Party i Parken Stadion."
+      ],
+      "images": [
+        "./archive/timeline/performance/2013-09-07-01.webp",
+        "./archive/timeline/performance/2013-09-07-02.webp",
+        "./archive/timeline/performance/2013-09-07-03.webp"
+      ],
+      "imageDescriptions": [
+        "Person i en lang vinrød kjole med høj slids og sorte højhælede støvler poserer med hånden i siden i en smal gang. På billedet ses Dennis Agerblad.",
+        "Person med høj lilla hårtop, vinrød kjole og sorte højhælede støvler står mellem to vægge med armene strakt ud. På billedet ses Dennis Agerblad.",
+        "Nærbillede af en person med lilla hårtop, kraftig sort øjenmakeup, ansigtspiercinger, øreringe og vinrød blondetop i en gang. På billedet ses Dennis Agerblad."
+      ]
+    },
+    "2012-02-20|Filmoptagelser|Ulovlige filmoptagelser på Oslobåden": {
+      "title": "Ulovlige filmoptagelser på Oslobåden",
+      "details": [
+        "Ulovlige filmoptagelser på Oslobåden."
+      ],
+      "images": [
+        "./archive/timeline/performance/2012-02-20-01.webp",
+        "./archive/timeline/performance/2012-02-20-02.webp",
+        "./archive/timeline/performance/2012-02-20-03.webp"
+      ],
+      "imageDescriptions": [
+        "To personer med blonde parykker står foran en dør til et konferencecenter; den ene har en kort farverig kjole, den anden en lang vinrød pailletkjole og håndtaske. På billedet ses Dennis Agerblad.",
+        "Person med blond paryk, perlekæde og lang vinrød pailletkjole står i en døråbning med en flaske i hånden. På billedet ses Dennis Agerblad.",
+        "Nærbillede af to personer med blonde parykker og kraftig makeup; den ene har lyst mønstret tøj, den anden vinrød pailletkjole, perlekæde og blå cirkler omkring øjnene. På billedet ses Delores Duchess LaCour, Dennis Agerblad."
+      ]
     }
   }
 }

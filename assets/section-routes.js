@@ -81,7 +81,10 @@
   });
   observer.observe(root, { childList: true, attributes: true, attributeFilter: ['class'], subtree: true });
   openInitial();
-  window.addEventListener('popstate', () => location.reload());
+  window.addEventListener('popstate', () => {
+    // Closing a landing-page popup restores this same section and its scroll.
+    if (currentSection()?.slug !== pathSection()?.slug) location.reload();
+  });
 
   const wrap = document.createElement('div');
   wrap.className = 'section-share';

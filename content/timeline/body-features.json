@@ -100,6 +100,16 @@
           "nudity:visible"
         ]
       }
+    ],
+    "./archive/timeline/performance/2012-03-01-05.webp": [
+      {
+        "reviewed": true,
+        "subject": "unidentified-resturang-adult",
+        "tags": [
+          "body:penis-visible",
+          "nudity:visible"
+        ]
+      }
     ]
   }
 }

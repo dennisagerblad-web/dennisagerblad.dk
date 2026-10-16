@@ -10,10 +10,14 @@
       "originalBytes": 26756,
       "webBytes": 20964,
       "confirmedExistingPeople": [],
-      "descriptionDA": "Person med lang lyserød paryk, kraftig øjenmakeup og mønstret hætte i et mørkt rum.",
-      "descriptionEN": "A person with a long pink wig, dramatic eye makeup and a patterned hood in a dark room.",
-      "confirmedPeople": [],
-      "confirmedNames": [],
+      "descriptionDA": "Person med lang lyserød paryk, kraftig øjenmakeup og mønstret hætte i et mørkt rum. På billedet ses Nat Zyrik.",
+      "descriptionEN": "A person with a long pink wig, dramatic eye makeup and a patterned hood in a dark room. Pictured: Nat Zyrik.",
+      "confirmedPeople": [
+        "nat-zyrik"
+      ],
+      "confirmedNames": [
+        "Nat Zyrik"
+      ],
       "reviewPhotoId": "broken-mirror-01"
     },
     {
@@ -213,10 +217,8 @@
   },
   "ownerReview": {
     "completed": true,
-    "revision": 12,
-    "source": "Local photo review; owner replied færdig on 2026-10-16",
-    "unidentifiedPhotos": [
-      1
-    ]
+    "revision": 15,
+    "source": "Local photo review; owner confirmed the additional name on 2026-10-16",
+    "unidentifiedPhotos": []
   }
 }

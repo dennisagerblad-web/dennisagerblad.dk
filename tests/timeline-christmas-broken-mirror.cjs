@@ -42,7 +42,7 @@ const {execFileSync} = require('node:child_process');
       assert.ok(match(result,parse(name))?.matchedImages.some(p=>p.src===photo.src),'Name finds its confirmed photo: '+name);
     }
   }
-  for(const [name,count] of [['Dennis Agerblad',3],['Alexis',1],['Miss Fish',1],['Hairwerk',2],['Andreas Tange Lange',2]]) assert.equal(match(result,parse(name)).matchedImages.length,count,name+' has no unrelated batch photos');
+  for(const [name,count] of [['Nat Zyrik',1],['Dennis Agerblad',3],['Alexis',1],['Miss Fish',1],['Hairwerk',2],['Andreas Tange Lange',2]]) assert.equal(match(result,parse(name)).matchedImages.length,count,name+' has no unrelated batch photos');
   assert.equal(match(result,parse('Andreas Tange Lange røv')).matchedImages[0].src,batch.photos[6].src);
   assert.equal(match(result,parse('Dennis Agerblad røv')),null,'Anatomy remains attached to the confirmed person');
   console.log('PASS: one Christmas show per year, all merged media and old links preserved; ten photos with aligned bilingual descriptions, previews, geometry and exact owner-confirmed people searches');

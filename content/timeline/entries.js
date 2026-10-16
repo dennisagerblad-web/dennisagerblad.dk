@@ -2061,9 +2061,20 @@ export const timelineEntries = [
     "display": "07.09.2013",
     "year": 2013,
     "category": "Liveoptræden",
-    "title": "Manifest, København Ø",
+    "title": "Manifest – Sex Party, Parken Stadion",
     "group": "live",
-    "href": null
+    "href": null,
+    "shareAliases": [
+      "2013-09-07|Liveoptræden|Manifest, København Ø"
+    ],
+    "details": "Jeg sang et par frække sange til Manifest – Sex Party i Parken Stadion.",
+    "thumbnail": "./archive/timeline/performance/2013-09-07-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2013-09-07-01-20261016.webp",
+    "images": [
+      "./archive/timeline/performance/2013-09-07-01.webp",
+      "./archive/timeline/performance/2013-09-07-02.webp",
+      "./archive/timeline/performance/2013-09-07-03.webp"
+    ]
   },
   {
     "date": "2013-09-05",
@@ -2076,6 +2087,29 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/video-thumbs/2013-09-05-midnight-lover.jpg",
     "videoId": "yA2AV9pDvn8",
     "thumbnailPreview": "./assets/timeline-thumbs/0728b3931e407d4d.webp"
+  },
+  {
+    "date": "2013-08-30",
+    "display": "30.08.2013",
+    "year": 2013,
+    "category": "Parade",
+    "title": "Pride Parade, København",
+    "group": "live",
+    "href": null,
+    "details": "Jeg gik rundt i paraden og filmede min musikvideo Lesbisk Sadist.",
+    "thumbnail": "./archive/timeline/performance/2013-08-30-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/pride-2013-08-30-01.webp",
+    "images": [
+      "./archive/timeline/performance/2013-08-30-01.webp",
+      "./archive/timeline/performance/2013-08-30-02.webp",
+      "./archive/timeline/performance/2013-08-30-03.webp",
+      "./archive/timeline/performance/2013-08-30-04.webp"
+    ],
+    "creditName": "Casten Bastholm",
+    "creditPrefix": "Fotos:",
+    "videoId": "6yDZTMn4AtQ",
+    "videoTitle": "Lesbisk Sadist – musikvideo",
+    "videoAfterImages": true
   },
   {
     "date": "2013-08-22",
@@ -2114,7 +2148,10 @@ export const timelineEntries = [
     "category": "Optræden",
     "title": "Distortion, København",
     "group": "live",
-    "href": null
+    "href": null,
+    "landingPage": "/video/koebenhavns-vaerste-trash-drag/",
+    "thumbnail": "./assets/trashdrag-distortion-closeup.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/distortion-2013-05-30.webp"
   },
   {
     "date": "2013-05-25",
@@ -2135,7 +2172,21 @@ export const timelineEntries = [
     "category": "Liveoptræden",
     "title": "Melodigrandprix, Bøssehuset, Christiania",
     "group": "live",
-    "href": null
+    "href": null,
+    "details": "Melodigrandprix i Bøssehuset.",
+    "thumbnail": "./archive/timeline/performance/2013-05-17-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2013-05-17-01-20261016.webp",
+    "images": [
+      "./archive/timeline/performance/2013-05-17-01.webp",
+      "./archive/timeline/performance/2013-05-17-02.webp",
+      "./archive/timeline/performance/2013-05-17-03.webp",
+      "./archive/timeline/performance/2013-05-17-04.webp"
+    ],
+    "creditName": "Michael Netjeaff",
+    "creditPrefix": "Fotos:",
+    "videoId": "5egu-7Rnq5U",
+    "videoTitle": "Svans – musikvideo",
+    "videoAfterImages": true
   },
   {
     "date": "2013-05-04",
@@ -2419,8 +2470,39 @@ export const timelineEntries = [
     "title": "Resturang 3, Frederiksberg.",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_03_01_resturang/index.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/001aad268048a2.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/c5e40b54098f6a12.webp"
+    "thumbnail": "./archive/timeline/performance/2012-03-01-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2012-03-01-01-20261016.webp",
+    "details": "Jeg sang Forelsket I Et Dyr på Resturang 3.",
+    "images": [
+      "./archive/timeline/performance/2012-03-01-01.webp",
+      "./archive/timeline/performance/2012-03-01-02.webp",
+      "./archive/timeline/performance/2012-03-01-03.webp",
+      "./archive/timeline/performance/2012-03-01-04.webp",
+      "./archive/timeline/performance/2012-03-01-05.webp",
+      "./archive/legacy/200_calendar/2012/2012_03_01_resturang/03.jpg?v=20261016-resturang-1",
+      "./archive/timeline/performance/2012-03-01-07.webp",
+      "./archive/timeline/performance/2012-03-01-08.webp",
+      "./archive/timeline/performance/2012-03-01-09.webp",
+      "./archive/legacy/200_calendar/2012/2012_03_01_resturang/01.jpg",
+      "./archive/legacy/200_calendar/2012/2012_03_01_resturang/02.jpg"
+    ]
+  },
+  {
+    "date": "2012-02-20",
+    "display": "20.02.2012",
+    "year": 2012,
+    "category": "Filmoptagelser",
+    "title": "Ulovlige filmoptagelser på Oslobåden",
+    "group": "live",
+    "href": null,
+    "details": "Ulovlige filmoptagelser på Oslobåden.",
+    "thumbnail": "./archive/timeline/performance/2012-02-20-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2012-02-20-01-20261016.webp",
+    "images": [
+      "./archive/timeline/performance/2012-02-20-01.webp",
+      "./archive/timeline/performance/2012-02-20-02.webp",
+      "./archive/timeline/performance/2012-02-20-03.webp"
+    ]
   },
   {
     "date": "2012-02-17",

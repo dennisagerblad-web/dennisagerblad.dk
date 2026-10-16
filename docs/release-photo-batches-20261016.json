@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-16",
+  "scope": [
+    "Distortion landing page as a bounded Timeline popup with thumbnail and permanent underline",
+    "Nat Zyrik confirmed on Broken Mirror photo 1",
+    "Five Timeline galleries with 23 supplied optimized photos",
+    "Owner-confirmed people and content search labels",
+    "Svans and Lesbisk Sadist below their slideshows"
+  ],
+  "ownerReviewRevision": 36,
+  "passed": [
+    "tests/timeline-2012-2013-galleries.cjs",
+    "tests/timeline-body-search.cjs",
+    "tests/timeline-christmas-broken-mirror.cjs",
+    "tests/timeline-people-search.cjs",
+    "tools/seo/check.py: 12 pages",
+    "Changed JavaScript syntax",
+    "git diff --check",
+    "Browser: Ariel 2013 search opens photo 3 of the Melodigrandprix gallery with Svans below slideshow",
+    "Previous scoped desktop/mobile portrait and landscape gallery checks"
+  ],
+  "sourceOriginalsPreserved": true,
+  "suppliedPhotos": 23,
+  "deliveryBytes": 3171166,
+  "originalBytes": 44609339,
+  "existingBaselineFailuresDocument": "docs/release-checks-20261016.json"
+}
