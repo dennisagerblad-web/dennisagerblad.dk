@@ -18,7 +18,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  for(const word of ['røv','nosser','røvhul','nøgen','hud','nøgenhed','penis','bare balder','testikler','røvhullet','nøgne']) assert.deepEqual(sources(word),shared,'Shared reviewed collection: '+word);
  const additions=JSON.parse(fs.readFileSync('docs/timeline-body-search-review-20261015.json'));
  for(const photo of additions.photos) assert.ok(shared.includes(photo.src),'Requested image matches: '+photo.src);
- assert.equal(new Set(shared).size,39,'Preserve confirmed collection and remove the two owner-excluded photos');
+ assert.equal(new Set(shared).size,40,'Preserve confirmed collection and add the owner-confirmed Broken Mirror photo');
+ assert.deepEqual(sources('Andreas Tange Lange røv'),['./archive/timeline/performance/2007-12-15-07.webp']);
  for(const photo of additions.excludedPhotos) {
   assert.ok(!shared.includes(photo.src),'Excluded photo: '+photo.src);
   assert.ok(!search('hud').some(r=>r.entry.date===photo.date),'Excluded event: '+photo.date);

@@ -27,7 +27,7 @@ export function installArtViewer({getVersion,homography}){
  },()=>{pointerStart=null;},true);
  const reduced=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
  const wallImages=()=>[...document.querySelectorAll(`.art-preserved-layer[data-room="${getVersion()}"] .art-original[data-gallery-quad]`)];
- function sourceFor(src){return wallImages().find(el=>new URL(el.src).href===new URL(src,location.href).href);}
+ function sourceFor(src){return wallImages().find(el=>new URL(el.src).href===new URL(src,document.baseURI).href);}
  function corners(el){const layer=el.closest('.art-preserved-layer'),r=layer.getBoundingClientRect(),scale=r.width/1280;return JSON.parse(el.dataset.galleryQuad).map(([x,y])=>[r.left+x*scale,r.top+y*scale]);}
  function origin(src){const el=sourceFor(src);if(el)return corners(el);return state.origin;}
  const imageGap=()=>state?.title==='kunst i dunst, Kollager, 30×30 cm'?32:10;
@@ -69,8 +69,8 @@ export function installArtViewer({getVersion,homography}){
  function hideWall(){wallImages().forEach(el=>el.style.visibility=el===sourceFor(state.files[state.index])?'hidden':'');}
  async function open(button,event,title,files){
   if(busy||state)return;busy=true;const token=++sequence;
-  const candidates=wallImages().filter(el=>files.some(src=>new URL(src,location.href).href===el.src));
-  let index=0;if(button.dataset.artSeriesIndex!==undefined){index=Number(button.dataset.artSeriesIndex);}else if(candidates.length){const chosen=candidates.reduce((best,el)=>{const r=el.getBoundingClientRect(),d=Math.hypot(event.clientX-(r.left+r.width/2),event.clientY-(r.top+r.height/2));return !best||d<best.d?{el,d}:best;},null).el;index=files.findIndex(src=>new URL(src,location.href).href===chosen.src);}
+  const candidates=wallImages().filter(el=>files.some(src=>new URL(src,document.baseURI).href===el.src));
+  let index=0;if(button.dataset.artSeriesIndex!==undefined){index=Number(button.dataset.artSeriesIndex);}else if(candidates.length){const chosen=candidates.reduce((best,el)=>{const r=el.getBoundingClientRect(),d=Math.hypot(event.clientX-(r.left+r.width/2),event.clientY-(r.top+r.height/2));return !best||d<best.d?{el,d}:best;},null).el;index=files.findIndex(src=>new URL(src,document.baseURI).href===chosen.src);}
   else if(title==='Kongeligt Porcelæn'){const n=[...button.parentElement.children].indexOf(button);index=({6:4,7:0,8:2,9:7})[n]??0;}
   const r=button.getBoundingClientRect();state={title,files,index,button,origin:rectangle(r.left,r.top,r.width,r.height)};
   try{primary=await picture(files[index],'art-focus-image art-focus-primary');if(token!==sequence)return;

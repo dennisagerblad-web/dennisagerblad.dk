@@ -1,7 +1,7 @@
 /* Named timeline effects: Grow, Paint and Morph.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20261015-champagne-2013-1';
+import { timelineDate } from './timeline-ui.js?v=20261016-broken-mirror-christmas-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
 let dataPromise;
@@ -14,8 +14,8 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261015-champagne-2013-1',
-  '../content/timeline/image-metadata.json?v=20261015-champagne-2013-1',
+  '../content/timeline/galleries.json?v=20261016-broken-mirror-christmas-1',
+  '../content/timeline/image-metadata.json?v=20261016-broken-mirror-christmas-1',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();
@@ -67,20 +67,61 @@ export function mobileGalleryRatios(items, media) {
   return {tallest:ratios.length ? Math.min(...ratios) : 3/4, widest:ratios.length ? Math.max(...ratios) : 4/3};
 }
 
+const backdropCache = new WeakMap();
+function blurredBackdrop(image, w, h) {
+  const cached = backdropCache.get(image);
+  if (cached?.width === w && cached?.height === h) return cached.canvas;
+  // Blur a small copy in pixels, so the backdrop also works in browsers that
+  // do not implement CanvasRenderingContext2D.filter.
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.max(1, Math.ceil(w / 8));
+  canvas.height = Math.max(1, Math.ceil(h / 8));
+  const ctx = canvas.getContext('2d');
+  const scale = Math.max(canvas.width / image.naturalWidth, canvas.height / image.naturalHeight) * 1.16;
+  const width = image.naturalWidth * scale, height = image.naturalHeight * scale;
+  ctx.drawImage(image, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
+  const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const temporary = new Uint8ClampedArray(pixels.data.length);
+  const radius = Math.max(2, Math.round(Math.min(w, h) * .045 / 8));
+  const blur = (source, target, horizontal) => {
+    const length = horizontal ? canvas.width : canvas.height;
+    const lines = horizontal ? canvas.height : canvas.width;
+    const stride = horizontal ? 4 : canvas.width * 4;
+    const divisor = radius * 2 + 1;
+    for (let line = 0; line < lines; line++) {
+      const start = horizontal ? line * canvas.width * 4 : line * 4;
+      for (let channel = 0; channel < 4; channel++) {
+        let sum = 0;
+        for (let offset = -radius; offset <= radius; offset++) {
+          sum += source[start + clamp(offset, 0, length - 1) * stride + channel];
+        }
+        for (let position = 0; position < length; position++) {
+          target[start + position * stride + channel] = sum / divisor;
+          sum += source[start + Math.min(length - 1, position + radius + 1) * stride + channel]
+            - source[start + Math.max(0, position - radius) * stride + channel];
+        }
+      }
+    }
+  };
+  for (let pass = 0; pass < 3; pass++) {
+    blur(pixels.data, temporary, true);
+    blur(temporary, pixels.data, false);
+  }
+  ctx.putImageData(pixels, 0, 0);
+  backdropCache.set(image, { width: w, height: h, canvas });
+  return canvas;
+}
+
 function compose(image, w, h, useBackdrop) {
   const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h;
   const ctx = canvas.getContext('2d');
   const pixelRatio = Math.min(devicePixelRatio || 1, 2);
   const frameWidth = w / pixelRatio, frameHeight = h / pixelRatio;
   ctx.imageSmoothingQuality = 'high';
-  // Draw from the original image. Enlarging a 48px copy made visible stair steps.
   if (useBackdrop) {
-    const scale = Math.max(w/image.naturalWidth,h/image.naturalHeight)*1.16;
-    const width = image.naturalWidth*scale, height = image.naturalHeight*scale;
-    ctx.save();
-    ctx.filter = `blur(${Math.max(18,Math.min(w,h)*.045)}px) brightness(.64)`;
-    ctx.drawImage(image,(w-width)/2,(h-height)/2,width,height);
-    ctx.restore();
+    ctx.drawImage(blurredBackdrop(image, w, h), 0, 0, w, h);
+    ctx.fillStyle = 'rgba(0,0,0,.36)';
+    ctx.fillRect(0, 0, w, h);
   }
   // Fit the sharp photograph to the available frame, also for smaller originals.
   const [x,y,iw,ih] = containRect(image.naturalWidth,image.naturalHeight,frameWidth,frameHeight);

@@ -22,7 +22,7 @@ document.addEventListener('keydown',event=>{if(['Tab','Enter',' ','ArrowLeft','A
   const copy=document.createElement('button');copy.type='button';copy.textContent='Kopiér link';
   const status=document.createElement('p');status.className='landing-share-status';status.setAttribute('role','status');
   copy.addEventListener('click',async()=>{
-    try{await navigator.clipboard.writeText(url);status.textContent='Linket er kopieret';}
+    try{await navigator.clipboard.writeText(url);status.textContent='Link til denne side er kopieret';}
     catch{
       let input=panel.querySelector('input');
       if(!input){input=document.createElement('input');input.readOnly=true;input.value=url;input.setAttribute('aria-label','Link til siden');panel.prepend(input);}

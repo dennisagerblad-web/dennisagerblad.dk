@@ -1,0 +1,42 @@
+{
+  "policy": "One Christmas-show entry per year; latest existing date retained; all gallery photos and confirmed people preserved; old share keys retained as aliases.",
+  "groups": [
+    {
+      "year": 2024,
+      "keptDate": "2024-12-21",
+      "title": "Juleshow – Bøssehuset og Scoop Models",
+      "sourceEntries": [
+        "2024-12-21|Optræden|Juleshow, Bøssehuset",
+        "2024-12-14|Optræden|Scoop Models Juleshow"
+      ],
+      "newKey": "2024-12-21|Optræden|Juleshow – Bøssehuset og Scoop Models",
+      "preservedImages": 15
+    },
+    {
+      "year": 2016,
+      "keptDate": "2016-12-23",
+      "title": "Juleshow, Bøssehuset",
+      "sourceEntries": [
+        "2016-12-23|Optræden|Juleshow, Bøssehuset",
+        "2016-10-23|Optræden|Juleshow, Bøssehuset"
+      ],
+      "newKey": "2016-12-23|Optræden|Juleshow, Bøssehuset",
+      "preservedImages": 0
+    },
+    {
+      "year": 2013,
+      "keptDate": "2013-12-21",
+      "title": "Juleshow, Bøssehuset, Christiania",
+      "sourceEntries": [
+        "2013-12-21|Liveoptræden|Juleshow, Bøssehuset, Christiania",
+        "2013-12-20|Liveoptræden|Juleshow, Bøssehuset, Christiania",
+        "2013-12-14|Liveoptræden|Juleshow, Bøssehuset, Christiania",
+        "2013-12-07|Liveoptræden|Juleshow, Bøssehuset, Christiania",
+        "2013-12-06|Liveoptræden|Juleshow, Bøssehuset, Christiania"
+      ],
+      "newKey": "2013-12-21|Liveoptræden|Juleshow, Bøssehuset, Christiania",
+      "preservedImages": 0
+    }
+  ],
+  "removedEntries": 6
+}

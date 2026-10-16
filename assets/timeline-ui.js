@@ -110,7 +110,7 @@ export function scrollTimelineYear(category, year, updateHash = false) {
     scroller.addEventListener('scrollend', finishAnimation, { once:true });
   } else placeYear();
   if (!updateHash) return;
-  history.replaceState(null, '', `#timeline-${category}-${year}`);
+  history.replaceState(null, '', `${location.pathname}${location.search}#timeline-${category}-${year}`);
 
   // Eager thumbnails can finish after an immediate year click. Keep the chosen
   // year anchored while their reserved boxes and the opening archive settle.

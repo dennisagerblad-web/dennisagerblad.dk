@@ -1,5 +1,5 @@
-import { stopTimelineMotion } from './timeline-ui.js?v=20261010-talent-release-5';
-import { timelineEntries } from '../content/timeline/entries.js?v=20261010-talent-release-5';
+import { stopTimelineMotion } from './timeline-ui.js?v=20261016-broken-mirror-christmas-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261016-broken-mirror-christmas-1';
 const icon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v5C6 8 3 12 3 20c3-5 6-7 11-7v5l8-7z"/></svg>';
 let activePanel;
 function closePanel() {
@@ -34,7 +34,7 @@ function add(dialog) {
   const url=document.createElement('input');url.readOnly=true;url.value=details.publicUrl;url.setAttribute('aria-label','Link til opslaget');
   const copy=document.createElement('button');copy.type='button';copy.textContent='Kopiér link';
   const status=document.createElement('p');status.className='site-share-status';status.setAttribute('role','status');
-  copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(details.publicUrl);status.textContent='Linket er kopieret';}catch{panel.insertBefore(url,copy);url.focus();url.select();status.textContent='Kopiér det markerede link';}});
+  copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(details.publicUrl);status.textContent='Link til denne side er kopieret';}catch{panel.insertBefore(url,copy);url.focus();url.select();status.textContent='Kopiér det markerede link';}});
   panel.append(copy);
   if(navigator.share && matchMedia('(pointer: coarse)').matches){const native=document.createElement('button');native.type='button';native.textContent='Del via …';native.addEventListener('click',async()=>{try{await navigator.share({title:details.entry.title,url:details.publicUrl});}catch(e){if(e.name!=='AbortError')status.textContent='Brug Kopiér link i stedet';}});panel.append(native);}
   panel.append(status);dialog.append(button,panel);
@@ -44,7 +44,7 @@ function add(dialog) {
 const observer=new MutationObserver(()=>document.querySelectorAll('.timeline-popup,.tg-dialog').forEach(add));observer.observe(document.body,{childList:true,subtree:true});
 const key=new URLSearchParams(location.search).get('opslag');
 if(key){
- const entry=timelineEntries.find(e=>[e.date,e.category,e.title].join('|')===key);
+ const entry=timelineEntries.find(e=>[e.date,e.category,e.title].join('|')===key || e.shareAliases?.includes(key));
  if(entry){
   const group=entry.group==='media'?'press':entry.group;const names={live:'Scene',music:'Musik',art:'Kunst',word:'Ord',press:'Presse'};
   let step=0,attempts=0;

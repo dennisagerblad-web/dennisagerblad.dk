@@ -1,7 +1,7 @@
 import {videoEmbedURL} from "./video-embed-url.js?v=20261012-video-history-1";
-import { timelineEntries } from "../content/timeline/entries.js?v=20261015-champagne-2013-1";
-import {openTimelineGallery} from "./timeline-gallery.js?v=20261015-champagne-2013-1";
-import {timelineDate, timelineThumbDimensions, scrollTimelineYear, scrollTimelineTop} from "./timeline-ui.js?v=20261015-champagne-2013-1";
+import { timelineEntries } from "../content/timeline/entries.js?v=20261016-broken-mirror-christmas-1";
+import {openTimelineGallery} from "./timeline-gallery.js?v=20261016-broken-mirror-christmas-1";
+import {timelineDate, timelineThumbDimensions, scrollTimelineYear, scrollTimelineTop} from "./timeline-ui.js?v=20261016-broken-mirror-christmas-1";
 
 // Keep an embedded frame's initial src stable across section rerenders. Language
 // changes use replacement navigation in site-language.js, never a new src.

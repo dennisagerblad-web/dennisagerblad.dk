@@ -15,7 +15,7 @@ function updatePosition(rail, firstYear) {
 
   const links = [...rail.querySelectorAll('a')];
   const stops = links.map((link, index) => {
-    const target = index ? document.getElementById(link.getAttribute('href')?.slice(1)) : null;
+    const target = index ? document.getElementById(link.hash.slice(1)) : null;
     if (index && !target) return null;
     return {
       link,

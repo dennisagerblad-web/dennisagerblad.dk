@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-16",
+  "scope": [
+    "Direct section routes and sharing controls",
+    "Christmas shows consolidated per year",
+    "Broken Mirror 2007 photo update and confirmed names",
+    "Carousel backdrop blur and heading/share close fade"
+  ],
+  "passed": [
+    "tests/timeline-christmas-broken-mirror.cjs",
+    "tests/timeline-body-search.cjs",
+    "tests/timeline-people-search.cjs",
+    "tools/seo/check.py",
+    "Changed JavaScript syntax",
+    "git diff --check",
+    "Browser: direct Music route, share copy message, home return",
+    "Browser: Broken Mirror popup, new photo navigation, mobile 390x844 backdrop"
+  ],
+  "existingBaselineFailures": [
+    {
+      "test": "tests/timeline-image-search.cjs",
+      "failure": "Missing reviewed appearance facts for dragnight-2014-03-20261015.jpg",
+      "alsoReproducedAt": "0512c19"
+    },
+    {
+      "test": "tests/timeline-confirmed-people.cjs",
+      "failure": "Historical 2006 Spain photo 06.jpg expected in search fixture but not found",
+      "alsoReproducedAt": "0512c19"
+    }
+  ]
+}

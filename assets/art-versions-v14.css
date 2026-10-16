@@ -178,7 +178,8 @@ body.art-version-3 .art-hotspot:nth-child(10) {left:74% !important;top:60% !impo
 
 /* Keep the selected room behind the assembling homepage during close. */
 .ship.has-section.section-4:not(.is-open) .art-room {pointer-events:none;}
-.ship.has-section.section-4:not(.is-open) .art-page-heading,
+.art-page-heading {transition:opacity .45s;}
+.ship.has-section.section-4:not(.is-open) .art-page-heading {opacity:0;}
 .ship.has-section.section-4:not(.is-open) .art-hover-label {visibility:hidden;}
 
 .ship.section-4.is-open .art-room {touch-action:pan-y;}

@@ -1,6 +1,7 @@
 // Local translations. Artwork, recordings and external sites keep their original language.
 (() => {
   const siteRoot = new URL('../', document.currentScript.src);
+  const sectionEntry = /^\/(?:musik|video|performance|kunst|litteratur|tidslinje)\/?$/.test(location.pathname);
   const dictionary = window.DennisEnglish || {};
   const originalText = new WeakMap();
   const documentURLs = new WeakMap([[document, location.href]]);
@@ -186,7 +187,7 @@
       const href = anchor.getAttribute('href');
       if (!href || href.startsWith('#') || /^(mailto:|tel:|javascript:)/i.test(href)) continue;
       const url = new URL(href, documentURLs.get(doc));
-      if ((url.origin === location.origin || url.hostname === 'dennisagerblad.dk') && !/\.[a-z0-9]{2,5}$/i.test(url.pathname)) updateAttribute(anchor, 'href', value => localURL(value, documentURLs.get(doc)));
+      if ((url.origin === location.origin || url.hostname === 'dennisagerblad.dk') && !/\.[a-z0-9]{2,5}$/i.test(url.pathname)) updateAttribute(anchor, 'href', value => localURL(value, sectionEntry && doc === document && !value.startsWith('#') ? siteRoot : documentURLs.get(doc)));
     }
     // Page title and social descriptions use the same reviewed translations.
     for (const element of doc.querySelectorAll('title,meta[name="description"],meta[property="og:title"],meta[property="og:description"],meta[property="og:image:alt"],meta[name="twitter:title"],meta[name="twitter:description"],meta[name="twitter:image:alt"]')) {

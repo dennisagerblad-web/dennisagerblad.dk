@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dennisagerblad.dk/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
+  <url><loc>https://dennisagerblad.dk/musik/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://dennisagerblad.dk/video/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://dennisagerblad.dk/performance/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://dennisagerblad.dk/kunst/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://dennisagerblad.dk/litteratur/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://dennisagerblad.dk/tidslinje/</loc><lastmod>2026-10-16</lastmod></url>
   <url>
     <loc>https://dennisagerblad.dk/video/danmark-har-talent/</loc>
     <lastmod>2026-10-12</lastmod>

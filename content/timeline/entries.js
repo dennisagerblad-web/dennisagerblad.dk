@@ -261,7 +261,7 @@ export const timelineEntries = [
     "display": "21.12.2024",
     "year": 2024,
     "category": "Optræden",
-    "title": "Juleshow, Bøssehuset",
+    "title": "Juleshow – Bøssehuset og Scoop Models",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2024-12-21-thumb.webp",
@@ -276,27 +276,18 @@ export const timelineEntries = [
       "./archive/timeline/performance/2024-12-21-08.webp",
       "./archive/timeline/performance/2024-12-21-09.webp",
       "./archive/timeline/performance/2024-12-21-10.webp",
-      "./archive/timeline/performance/2024-12-21-18.webp"
-    ],
-    "thumbnailPreview": "./assets/timeline-thumbs/36e3bea92784893a.webp"
-  },
-  {
-    "date": "2024-12-14",
-    "display": "14.12.2024",
-    "year": 2024,
-    "category": "Optræden",
-    "title": "Scoop Models Juleshow",
-    "group": "live",
-    "href": null,
-    "thumbnail": "./archive/timeline/performance/2024-12-14-thumb.webp",
-    "images": [
+      "./archive/timeline/performance/2024-12-21-18.webp",
       "./archive/timeline/performance/2024-12-14-01.webp",
       "./archive/timeline/performance/2024-12-14-02.webp",
       "./archive/timeline/performance/2024-12-14-03.webp",
       "./archive/timeline/performance/2024-12-14-04.webp"
     ],
-    "details": "Jeg var go-go-danser til Scoop Models’ juleshow.",
-    "thumbnailPreview": "./assets/timeline-thumbs/b874ecde162cf43a.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/36e3bea92784893a.webp",
+    "details": "Juleshow i Bøssehuset og go-go-optræden til Scoop Models’ juleshow.",
+    "shareAliases": [
+      "2024-12-21|Optræden|Juleshow, Bøssehuset",
+      "2024-12-14|Optræden|Scoop Models Juleshow"
+    ]
   },
   {
     "date": "2024-11-10",
@@ -1474,16 +1465,10 @@ export const timelineEntries = [
     "category": "Optræden",
     "title": "Juleshow, Bøssehuset",
     "group": "live",
-    "href": null
-  },
-  {
-    "group": "live",
-    "date": "2016-10-23",
-    "display": "23.10.2016",
-    "year": 2016,
-    "category": "Optræden",
-    "title": "Juleshow, Bøssehuset",
-    "href": null
+    "href": null,
+    "shareAliases": [
+      "2016-10-23|Optræden|Juleshow, Bøssehuset"
+    ]
   },
   {
     "date": "2016-09-17",
@@ -2031,43 +2016,13 @@ export const timelineEntries = [
     "category": "Liveoptræden",
     "title": "Juleshow, Bøssehuset, Christiania",
     "group": "live",
-    "href": null
-  },
-  {
-    "date": "2013-12-20",
-    "display": "20.12.2013",
-    "year": 2013,
-    "category": "Liveoptræden",
-    "title": "Juleshow, Bøssehuset, Christiania",
-    "group": "live",
-    "href": null
-  },
-  {
-    "date": "2013-12-14",
-    "display": "14.12.2013",
-    "year": 2013,
-    "category": "Liveoptræden",
-    "title": "Juleshow, Bøssehuset, Christiania",
-    "group": "live",
-    "href": null
-  },
-  {
-    "date": "2013-12-07",
-    "display": "07.12.2013",
-    "year": 2013,
-    "category": "Liveoptræden",
-    "title": "Juleshow, Bøssehuset, Christiania",
-    "group": "live",
-    "href": null
-  },
-  {
-    "date": "2013-12-06",
-    "display": "06.12.2013",
-    "year": 2013,
-    "category": "Liveoptræden",
-    "title": "Juleshow, Bøssehuset, Christiania",
-    "group": "live",
-    "href": null
+    "href": null,
+    "shareAliases": [
+      "2013-12-20|Liveoptræden|Juleshow, Bøssehuset, Christiania",
+      "2013-12-14|Liveoptræden|Juleshow, Bøssehuset, Christiania",
+      "2013-12-07|Liveoptræden|Juleshow, Bøssehuset, Christiania",
+      "2013-12-06|Liveoptræden|Juleshow, Bøssehuset, Christiania"
+    ]
   },
   {
     "date": "2013-11-24",
@@ -3607,7 +3562,22 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/flyer.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/6771d439da651440.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/6771d439da651440.webp",
+    "images": [
+      "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/02.jpg?v=20261016-broken-mirror-1",
+      "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/01.jpg?v=20261016-broken-mirror-1",
+      "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/03.jpg?v=20261016-broken-mirror-1",
+      "./archive/timeline/performance/2007-12-15-01.webp",
+      "./archive/timeline/performance/2007-12-15-02.webp",
+      "./archive/timeline/performance/2007-12-15-04.webp",
+      "./archive/timeline/performance/2007-12-15-05.webp",
+      "./archive/timeline/performance/2007-12-15-06.webp",
+      "./archive/timeline/performance/2007-12-15-07.webp",
+      "./archive/timeline/performance/2007-12-15-10.webp",
+      "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/flyer.jpg"
+    ],
+    "creditName": "Freddy",
+    "creditPrefix": "Fotos:"
   },
   {
     "date": "2007-12-15",

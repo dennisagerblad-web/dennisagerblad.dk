@@ -263,7 +263,7 @@ function readyPhoto(img){
  decodedPhotos.set(img,pending);return pending;
 }
 async function travelPhoto(src){
- const url=new URL(src,location.href).href;
+ const url=new URL(src,document.baseURI).href;
  if(!travelPhotos.has(url)){
   const img=new Image();img.src=url;
   travelPhotos.set(url,readyPhoto(img).catch(error=>{travelPhotos.delete(url);throw error;}));
@@ -527,7 +527,7 @@ function ensureDunstHotspots(map){
  });
 }
 
-import { installArtViewer } from './art-viewer.js?v=20261012-language-1';
+import { installArtViewer } from './art-viewer.js?v=20261016-direct-route-1';
 installArtViewer({getVersion:()=>selectedVersion,homography});
 
 update();
