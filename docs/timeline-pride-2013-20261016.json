@@ -11,24 +11,40 @@
     {
       "number": 1,
       "original": "1148323_10151805948447528_538719164_n.jpg",
-      "src": "./archive/timeline/performance/2013-08-30-01.webp",
-      "thumbnail": "./assets/timeline-thumbs/pride-2013-08-30-01.webp",
-      "searchThumbnail": "./assets/timeline-search-thumbs/pride-2013-08-30-01.webp",
-      "originalWidth": 641,
-      "originalHeight": 960,
-      "width": 641,
-      "height": 960,
-      "originalBytes": 115047,
-      "webBytes": 128838,
+      "src": "./archive/timeline/performance/2013-08-30-01.webp?v=20261016-pride-crop-1",
+      "thumbnail": "./assets/timeline-thumbs/pride-2013-08-30-01.webp?v=20261016-pride-crop-1",
+      "searchThumbnail": "./assets/timeline-search-thumbs/pride-2013-08-30-01.webp?v=20261016-pride-crop-1",
+      "originalWidth": 635,
+      "originalHeight": 954,
+      "width": 635,
+      "height": 954,
+      "originalBytes": 196494,
+      "webBytes": 127630,
       "descriptionDA": "Person med blond paryk og lyseblå hårsløjfe står i en kort ferskenfarvet kjole og lyse knæstrømper ved en hvid varevogn med regnbueflag. På billedet ses Dennis Agerblad.",
       "descriptionEN": "A person with a blonde wig and pale blue hair bow stands in a short peach dress and pale knee socks beside a white van with a rainbow flag. Pictured: Dennis Agerblad.",
-      "color": "#7f7472",
+      "color": "#7f7471",
       "confirmedPeople": [
         "dennis"
       ],
       "confirmedNames": [
         "Dennis Agerblad"
-      ]
+      ],
+      "previousVersions": [
+        {
+          "src": "./archive/timeline/performance/2013-08-30-01.webp",
+          "width": 641,
+          "height": 960,
+          "originalWidth": 641,
+          "originalHeight": 960,
+          "originalBytes": 115047,
+          "webBytes": 128838,
+          "descriptionDA": "Person med blond paryk og lyseblå hårsløjfe står i en kort ferskenfarvet kjole og lyse knæstrømper ved en hvid varevogn med regnbueflag. På billedet ses Dennis Agerblad.",
+          "descriptionEN": "A person with a blonde wig and pale blue hair bow stands in a short peach dress and pale knee socks beside a white van with a rainbow flag. Pictured: Dennis Agerblad."
+        }
+      ],
+      "bytes": 196494,
+      "hash": "8dbce7606690397abbe25c883a3a753ecb56970139bbd4d4c2d83f092126aa5e",
+      "ownerCroppedReplacement": "2026-10-16"
     },
     {
       "number": 2,

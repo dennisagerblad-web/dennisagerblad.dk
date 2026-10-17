@@ -504,17 +504,17 @@
           "number": 7,
           "name": "07.png",
           "width": 1800,
-          "height": 1794,
-          "bytes": 4590288,
-          "hash": "ee31c41210c45e46b2a4bc106e63533712729d2cbe328db8f7fafbe60b4520c0",
+          "height": 1797,
+          "bytes": 4012269,
+          "hash": "2d20676de45f2f84a63ee8edf99dbb26562d64a0e86d9436119819c6925333dc",
           "original": "07.png",
-          "src": "./archive/timeline/performance/2012-03-01-07.webp",
-          "thumbnail": "./assets/timeline-thumbs/2012-03-01-07-20261016.webp",
-          "searchThumbnail": "./assets/timeline-search-thumbs/2012-03-01-07-20261016.webp",
-          "originalWidth": 1872,
+          "src": "./archive/timeline/performance/2012-03-01-07.webp?v=20261016-resturang-crop-1",
+          "thumbnail": "./assets/timeline-thumbs/2012-03-01-07-20261016.webp?v=20261016-resturang-crop-1",
+          "searchThumbnail": "./assets/timeline-search-thumbs/2012-03-01-07-20261016.webp?v=20261016-resturang-crop-1",
+          "originalWidth": 1869,
           "originalHeight": 1866,
-          "originalBytes": 4590288,
-          "webBytes": 138820,
+          "originalBytes": 4012269,
+          "webBytes": 139270,
           "color": "#4a2431",
           "reviewPhotoId": "batch-4-07",
           "existingReplacement": false,
@@ -524,9 +524,24 @@
           "confirmedNames": [
             "Dennis Agerblad"
           ],
-          "descriptionDA": "Person med lys pageparyk og perlekæder synger i en håndholdt mikrofon og løfter den anden hånd i blåt og orange scenelys. På billedet ses Dennis Agerblad.",
-          "descriptionEN": "A person with a pale bob wig and pearl necklaces sings into a handheld microphone and raises their other hand in blue and orange stage lighting. Pictured: Dennis Agerblad.",
-          "confirmedContentLabels": []
+          "descriptionDA": "Nærbillede af en person med lys pageparyk og perlekæder, der synger med en hånd løftet ved ansigtet i blåt og orange scenelys. På billedet ses Dennis Agerblad.",
+          "descriptionEN": "Close-up of a person with a pale bob wig and pearl necklaces singing with one hand raised near their face in blue and orange stage lighting. Pictured: Dennis Agerblad.",
+          "confirmedContentLabels": [],
+          "previousVersions": [
+            {
+              "src": "./archive/timeline/performance/2012-03-01-07.webp",
+              "hash": "ee31c41210c45e46b2a4bc106e63533712729d2cbe328db8f7fafbe60b4520c0",
+              "width": 1800,
+              "height": 1794,
+              "originalWidth": 1872,
+              "originalHeight": 1866,
+              "originalBytes": 4590288,
+              "webBytes": 138820,
+              "descriptionDA": "Person med lys pageparyk og perlekæder synger i en håndholdt mikrofon og løfter den anden hånd i blåt og orange scenelys. På billedet ses Dennis Agerblad.",
+              "descriptionEN": "A person with a pale bob wig and pearl necklaces sings into a handheld microphone and raises their other hand in blue and orange stage lighting. Pictured: Dennis Agerblad."
+            }
+          ],
+          "ownerCroppedReplacement": "2026-10-16"
         },
         {
           "number": 8,

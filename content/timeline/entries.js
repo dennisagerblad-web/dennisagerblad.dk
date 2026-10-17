@@ -1358,7 +1358,7 @@ export const timelineEntries = [
     "year": 2017,
     "display": "10.05.2017",
     "thumbnail": "./archive/timeline/performance/2017-05-10-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/1303a85c7b347ca9.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/0f9aae0cef554145.webp"
   },
   {
     "date": "2017-05-08",
@@ -1392,7 +1392,7 @@ export const timelineEntries = [
     "year": 2017,
     "display": "30.03.2017",
     "thumbnail": "./archive/timeline/performance/2017-03-30-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/25940fd49fb5adc4.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/a2f0757e20996a09.webp",
     "videoId": "ILgM-NpNBWo"
   },
   {
@@ -1450,7 +1450,7 @@ export const timelineEntries = [
     ],
     "thumbnail": "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/ac1dd6a87f03c8d2.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/34c1f29d5290ea23.webp",
     "imageLinks": {
       "./archive/timeline/press/2017-01-01-face-the-strange-poster.webp": {
         "href": "https://www.imdb.com/title/tt7127986/",
@@ -1489,7 +1489,7 @@ export const timelineEntries = [
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2016-08-20-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/9b970c6ec0d9ab99.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/c27a0146fe91a13f.webp"
   },
   {
     "date": "2016-07-16",
@@ -1512,7 +1512,7 @@ export const timelineEntries = [
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2016-06-26-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/8aa877df11b9e4c1.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/5650dde699b830a6.webp"
   },
   {
     "date": "2016-06-09",
@@ -1542,7 +1542,7 @@ export const timelineEntries = [
     "year": 2016,
     "display": "20.05.2016",
     "thumbnail": "./archive/timeline/performance/2016-05-20-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/e1135c64069a8f76.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/61687a6d73eb7297.webp"
   },
   {
     "date": "2016-04-24",
@@ -1571,7 +1571,7 @@ export const timelineEntries = [
     "year": 2016,
     "display": "16.04.2016",
     "thumbnail": "./archive/timeline/performance/2016-04-16-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/9d17d56d3d5c5cf1.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/f7ad3bdf656c82a0.webp"
   },
   {
     "date": "2016-03-10",
@@ -1618,8 +1618,8 @@ export const timelineEntries = [
     "category": "Fest",
     "title": "Dudes & Divas, Bøssehuset",
     "details": "Fest i Bøssehuset på Christiania.",
-    "thumbnail": "./archive/timeline/performance/2015-08-22-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/c9a5fd0154963111.webp",
+    "thumbnail": "./archive/timeline/performance/2015-08-22-03.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/3bfa4ab1b19cf51c.webp",
     "images": [
       "./archive/timeline/performance/2015-08-22-01.webp",
       "./archive/timeline/performance/2015-08-22-02.webp",
@@ -1645,7 +1645,7 @@ export const timelineEntries = [
     "href": null,
     "details": "Jeg sang med på en af Terji Krossteigs sange.",
     "thumbnail": "./archive/timeline/performance/2015-07-27-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/64183538fba4422a.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/f213c450d6b927e3.webp",
     "images": [
       "./archive/timeline/performance/2015-07-27-01.webp"
     ]
@@ -1668,8 +1668,8 @@ export const timelineEntries = [
     "category": "Fest",
     "title": "Fødselsdagsfest hos mig",
     "details": "Jeg blev 45 år.",
-    "thumbnail": "./archive/timeline/performance/2015-04-10-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/ed20da3c1e2e254a.webp",
+    "thumbnail": "./archive/timeline/performance/2015-04-10-04.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/c08bbaaf1ac96a1d.webp",
     "images": [
       "./archive/timeline/performance/2015-04-10-01.webp",
       "./archive/timeline/performance/2015-04-10-02.webp",
@@ -1689,7 +1689,7 @@ export const timelineEntries = [
     "category": "Fest",
     "title": "Fest hos Marquien på Frederiksberg",
     "thumbnail": "./archive/timeline/performance/2015-03-06-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/713e21c9c258a6a8.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/e4eedb6f2a81e4e6.webp",
     "images": [
       "./archive/timeline/performance/2015-03-06-01.webp",
       "./archive/timeline/performance/2015-03-06-02.webp",
@@ -1709,8 +1709,8 @@ export const timelineEntries = [
     "title": "Danmark Har Talent - Semifinale Liveshow",
     "group": "live",
     "href": null,
-    "thumbnail": "./content/talent/semifinale/01-thumb.webp",
-    "thumbnailPreview": "./content/talent/semifinale/01-thumb.webp",
+    "thumbnail": "./content/talent/semifinale/07.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/e2faa97483e3467e.webp",
     "thumbnailFit": "contain",
     "images": [
       "./content/talent/semifinale/01.webp",
@@ -1743,7 +1743,7 @@ export const timelineEntries = [
     "href": null,
     "details": "Jeg var på coveret. Styling: Hairwerk Hugh Mongous.",
     "thumbnail": "./archive/timeline/press/2015-01-31-illegal-magazine-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/6cfd6c835819e6ab.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/5d71f352c2bf4024.webp",
     "images": [
       "./archive/timeline/press/2015-01-31-illegal-magazine-01.webp",
       "./archive/timeline/press/2015-01-31-illegal-magazine-02.webp",
@@ -1762,7 +1762,7 @@ export const timelineEntries = [
     "group": "press",
     "href": null,
     "thumbnail": "./content/talent/presse/01-thumb.webp",
-    "thumbnailPreview": "./content/talent/presse/01-thumb.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2d140a1d25895213.webp",
     "thumbnailFit": "contain",
     "images": [
       "./content/talent/presse/01.webp"
@@ -1778,8 +1778,8 @@ export const timelineEntries = [
     "title": "Danmark Har Talent - Første Liveshow",
     "group": "live",
     "href": null,
-    "thumbnail": "./content/talent/liveshow/01-thumb.webp",
-    "thumbnailPreview": "./content/talent/liveshow/01-thumb.webp",
+    "thumbnail": "./content/talent/liveshow/03.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/781d8c2088501bd7.webp",
     "thumbnailFit": "contain",
     "images": [
       "./content/talent/liveshow/01.webp",
@@ -1819,8 +1819,8 @@ export const timelineEntries = [
     "title": "Danmark Har Talent - Audition",
     "group": "live",
     "href": null,
-    "thumbnail": "./content/talent/audition/01-thumb.webp",
-    "thumbnailPreview": "./content/talent/audition/01-thumb.webp",
+    "thumbnail": "./content/talent/audition/03.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/da519548df34dc8e.webp",
     "thumbnailFit": "contain",
     "images": [
       "./content/talent/audition/01.webp",
@@ -1891,7 +1891,7 @@ export const timelineEntries = [
     "group": "live",
     "href": null,
     "thumbnail": "./assets/timeline-media/dragnight-2014-03-20261015.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/2014-08-29-dennis-green-20261015.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/42ad0a5cc3e626bf.webp",
     "images": [
       "./assets/timeline-media/dragnight-2014-03-20261015.jpg",
       "./assets/timeline-media/dragnight-2014-02-20261015.jpg",
@@ -1973,7 +1973,7 @@ export const timelineEntries = [
     "group": "live",
     "href": null,
     "thumbnail": "./assets/timeline-media/melodigrandprix-2014-01-20261015.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/2014-05-02-20261015.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/467fbf241e9d300e.webp",
     "images": [
       "./assets/timeline-media/melodigrandprix-2014-01-20261015.webp",
       "./assets/timeline-media/melodigrandprix-2014-02-20261015.webp",
@@ -2042,7 +2042,7 @@ export const timelineEntries = [
       "./assets/timeline-media/champagnepiger-2013-06-20261015.webp",
       "./assets/timeline-media/champagnepiger-2013-07-20261015.webp"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/champagnepiger-2013-01-20261015.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/148b770dd5c77d48.webp"
   },
   {
     "date": "2013-10-09",
@@ -2068,8 +2068,8 @@ export const timelineEntries = [
       "2013-09-07|Liveoptræden|Manifest, København Ø"
     ],
     "details": "Jeg sang et par frække sange til Manifest – Sex Party i Parken Stadion.",
-    "thumbnail": "./archive/timeline/performance/2013-09-07-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/2013-09-07-01-20261016.webp",
+    "thumbnail": "./archive/timeline/performance/2013-09-07-03.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/07a1e17910de9340.webp",
     "images": [
       "./archive/timeline/performance/2013-09-07-01.webp",
       "./archive/timeline/performance/2013-09-07-02.webp",
@@ -2097,11 +2097,11 @@ export const timelineEntries = [
     "group": "live",
     "href": null,
     "details": "Jeg gik rundt i paraden og filmede min musikvideo Lesbisk Sadist.",
-    "thumbnail": "./archive/timeline/performance/2013-08-30-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/pride-2013-08-30-01.webp",
+    "thumbnail": "./archive/timeline/performance/2013-08-30-02.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/531ed6a83d470135.webp",
     "images": [
-      "./archive/timeline/performance/2013-08-30-01.webp",
       "./archive/timeline/performance/2013-08-30-02.webp",
+      "./archive/timeline/performance/2013-08-30-01.webp?v=20261016-pride-crop-1",
       "./archive/timeline/performance/2013-08-30-03.webp",
       "./archive/timeline/performance/2013-08-30-04.webp"
     ],
@@ -2109,7 +2109,8 @@ export const timelineEntries = [
     "creditPrefix": "Fotos:",
     "videoId": "6yDZTMn4AtQ",
     "videoTitle": "Lesbisk Sadist – musikvideo",
-    "videoAfterImages": true
+    "videoAfterImages": true,
+    "thumbnailFit": "contain"
   },
   {
     "date": "2013-08-22",
@@ -2151,7 +2152,7 @@ export const timelineEntries = [
     "href": null,
     "landingPage": "/video/koebenhavns-vaerste-trash-drag/",
     "thumbnail": "./assets/trashdrag-distortion-closeup.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/distortion-2013-05-30.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/8343b4fabda3d410.webp"
   },
   {
     "date": "2013-05-25",
@@ -2175,7 +2176,7 @@ export const timelineEntries = [
     "href": null,
     "details": "Melodigrandprix i Bøssehuset.",
     "thumbnail": "./archive/timeline/performance/2013-05-17-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/2013-05-17-01-20261016.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/0bbe927a28018766.webp",
     "images": [
       "./archive/timeline/performance/2013-05-17-01.webp",
       "./archive/timeline/performance/2013-05-17-02.webp",
@@ -2323,23 +2324,12 @@ export const timelineEntries = [
     "date": "2012-08-17",
     "display": "17.08.2012",
     "year": 2012,
-    "category": "Happening",
-    "title": "Slaget Om København, København.",
-    "group": "live",
-    "href": "./archive/legacy/200_calendar/2012/2012_08_17_slaget_om_kbh/index.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/51a421952b85dd.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/48cca490909aa360.webp"
-  },
-  {
-    "date": "2012-08-17",
-    "display": "17.08.2012",
-    "year": 2012,
     "category": "Liveoptræden",
     "title": "Pridens GMP, Rådhuspladsen, København.",
     "group": "live",
-    "href": "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/index.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/dbd13d73740262.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/b060474072f95932.webp"
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2012-08-17-01.jpg",
+    "thumbnailPreview": "./assets/timeline-thumbs/5661af3dab0f1051.webp"
   },
   {
     "date": "2012-08-15",
@@ -2349,8 +2339,8 @@ export const timelineEntries = [
     "title": "Dragnight 2012, Rådhuspladsen, København.",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/index.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/d8ecd545d66e7c.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/9331d4ca1f779430.webp"
+    "thumbnail": "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/07.jpg",
+    "thumbnailPreview": "./assets/timeline-thumbs/6ffcd17f66079097.webp"
   },
   {
     "date": "2012-08-12",
@@ -2381,8 +2371,8 @@ export const timelineEntries = [
     "title": "Zentropa Jubilæums fest, Zentropa, København.",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/index.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/4c02bab3ce6d4e.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/cd0a14f7f9e82d20.webp"
+    "thumbnail": "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/02.jpg",
+    "thumbnailPreview": "./assets/timeline-thumbs/faca6b987032e637.webp"
   },
   {
     "date": "2012-04-23",
@@ -2404,8 +2394,9 @@ export const timelineEntries = [
     "title": "Found On Corner, Dybbølsgade 59, København.",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_04_20_found_on_corner/index.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/13bcde7e04d34d.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/092c0a97e0c1f12c.webp"
+    "thumbnail": "./archive/timeline/press/2012-04-20-found-on-corner-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/6ec67011dd58bc97.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2012-04-18",
@@ -2471,7 +2462,7 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_03_01_resturang/index.html",
     "thumbnail": "./archive/timeline/performance/2012-03-01-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/2012-03-01-01-20261016.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/3d6530efd608f949.webp",
     "details": "Jeg sang Forelsket I Et Dyr på Resturang 3.",
     "images": [
       "./archive/timeline/performance/2012-03-01-01.webp",
@@ -2480,7 +2471,7 @@ export const timelineEntries = [
       "./archive/timeline/performance/2012-03-01-04.webp",
       "./archive/timeline/performance/2012-03-01-05.webp",
       "./archive/legacy/200_calendar/2012/2012_03_01_resturang/03.jpg?v=20261016-resturang-1",
-      "./archive/timeline/performance/2012-03-01-07.webp",
+      "./archive/timeline/performance/2012-03-01-07.webp?v=20261016-resturang-crop-1",
       "./archive/timeline/performance/2012-03-01-08.webp",
       "./archive/timeline/performance/2012-03-01-09.webp",
       "./archive/legacy/200_calendar/2012/2012_03_01_resturang/01.jpg",
@@ -2496,8 +2487,8 @@ export const timelineEntries = [
     "group": "live",
     "href": null,
     "details": "Ulovlige filmoptagelser på Oslobåden.",
-    "thumbnail": "./archive/timeline/performance/2012-02-20-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/2012-02-20-01-20261016.webp",
+    "thumbnail": "./archive/timeline/performance/2012-02-20-03.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/7de2a26dac79b20c.webp",
     "images": [
       "./archive/timeline/performance/2012-02-20-01.webp",
       "./archive/timeline/performance/2012-02-20-02.webp",
@@ -2650,8 +2641,10 @@ export const timelineEntries = [
     "title": "Jeg udgav mit debutalbum med sange af Tóroddur Poulsen.",
     "group": "music",
     "href": "./archive/legacy/200_calendar/2011/11_09_03_sproghoved/cd_sproghoved.html",
-    "thumbnail": "./archive/timeline/sproghoved.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/8332f1e9fd3f4203.webp"
+    "details": "Billeder fra udgivelsen af mit soloalbum Dennis Agerblad sings Tóroddur Poulsen.",
+    "thumbnail": "./archive/timeline/music/2011-09-03-release-01.webp",
+    "thumbnailFit": "contain",
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-09-03-release-preview.webp"
   },
   {
     "date": "2011-08-20",
@@ -2755,9 +2748,11 @@ export const timelineEntries = [
     "category": "Katalog",
     "title": "Artlap Kursus Katalog, København.",
     "group": "media",
+    "details": "Forsiden af ArtLap-kataloget for efteråret 2011.",
     "href": "./archive/legacy/200_calendar/2011/11_07_01_artlap_katalog/index.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/fc5aee951cd9d9.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/20a35caabbe282ec.webp"
+    "thumbnail": "./archive/timeline/press/2011-07-01-artlap-katalog.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/3a67edd9fc94aaf9.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2011-06-25",
@@ -2776,11 +2771,12 @@ export const timelineEntries = [
     "display": "24.06.2011",
     "year": 2011,
     "category": "TV",
-    "title": "Bøsserup Pigegarden, Godmorgen Danmark, TV2.",
+    "title": "Bøsserup Pigegarde i Godmorgen Danmark, TV2, København.",
     "group": "media",
-    "href": "./archive/legacy/200_calendar/2011/11_06_24_godmorgen_danmark/index.html",
-    "thumbnail": "./archive/legacy/200_calendar/2011/11_06_24_godmorgen_danmark/logo.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/41ab2708eb1178d1.webp"
+    "href": null,
+    "thumbnail": "./archive/timeline/press/2011-06-24-godmorgen-danmark-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/c217749f1cb39dc7.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2011-06-19",
@@ -2794,15 +2790,16 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/160161715fc60279.webp"
   },
   {
-    "date": "2011-06-18",
-    "display": "18.06.2011",
+    "date": "2011-06-17",
+    "display": "17.06.2011",
     "year": 2011,
     "category": "Liveoptræden",
-    "title": "Bøsserup Pigegarde, Strøget, København, Danmark.",
+    "title": "Bøsserup Pigegarde, Strøget, København.",
     "group": "live",
-    "href": "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/index.html",
-    "thumbnail": "./archive/timeline/generated-thumbs/6c36c2398ca315.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/263c54f906c5fdba.webp"
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2011-06-17-01.webp",
+    "thumbnailFit": "contain",
+    "thumbnailPreview": "./assets/timeline-thumbs/558c32f811674fd0.webp"
   },
   {
     "date": "2011-06-04",
@@ -2816,13 +2813,28 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/dbe99ee7b6a91433.webp"
   },
   {
+    "date": "2011-05-27",
+    "display": "27.05.2011",
+    "year": 2011,
+    "category": "Liveoptræden",
+    "title": "Tranny Lounge, Warehouse 9, København.",
+    "group": "live",
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2011-05-27-01.webp",
+    "thumbnailFit": "contain",
+    "thumbnailPreview": "./assets/timeline-thumbs/539eb2eb97e6fe39.webp"
+  },
+  {
     "date": "2011-04-30",
     "display": "30.04.2011",
     "year": 2011,
     "category": "Liveoptræden",
     "title": "Live optræden til Kinky Salon, København, Danmark.",
     "group": "live",
-    "href": null
+    "href": null,
+    "thumbnail": "./archive/timeline/press/2011-04-30-kinky-salon-01.webp",
+    "thumbnailFit": "contain",
+    "thumbnailPreview": "./assets/timeline-thumbs/5329cd75f2b8ddc5.webp"
   },
   {
     "date": "2011-03-06",
@@ -3418,7 +3430,7 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2008/08_08_09_modeshow/modeshow.html",
     "thumbnail": "./archive/legacy/200_calendar/2008/08_08_09_modeshow/dennis_karinajoenson.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/4794aba94a1719e1.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/6cd23ae3d06d826a.webp"
   },
   {
     "date": "2008-08-05",
@@ -3543,7 +3555,8 @@ export const timelineEntries = [
     "group": "music",
     "href": "./archive/legacy/200_calendar/2008/08_07_17_land/madurglotti_land.html",
     "thumbnail": "./archive/music/land.jpg",
-    "albumKey": "land"
+    "albumKey": "land",
+    "thumbnailPreview": "./assets/timeline-thumbs/f368e7dc950d23a1.webp"
   },
   {
     "date": "2008-07-17",
@@ -3588,7 +3601,7 @@ export const timelineEntries = [
     "group": "media",
     "href": "./archive/legacy/200_calendar/2008/08_05_27_dansker/dansker.html",
     "thumbnail": "./archive/legacy/200_calendar/2008/08_05_27_dansker/dennis.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/d38ffb791405a0b5.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/4c9ae7d0fc0ab0b5.webp"
   },
   {
     "group": "art",
@@ -3670,7 +3683,7 @@ export const timelineEntries = [
     "group": "music",
     "href": "./archive/legacy/200_calendar/2007/07_12_15_broken_mirror/cd_i_wanna_pose.html",
     "thumbnail": "./archive/music/i-wanna-pose.jpg",
-    "thumbnailPreview": "./archive/music/i-wanna-pose.jpg"
+    "thumbnailPreview": "./assets/timeline-thumbs/53f3335acead5300.webp"
   },
   {
     "date": "2007-11-21",
@@ -4170,7 +4183,7 @@ export const timelineEntries = [
     "group": "media",
     "href": "./archive/legacy/200_calendar/2005/05_07_02_foedselsdag_riga/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2005/05_07_02_foedselsdag_riga/foedselsdagfest.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/ca75b64d89eadb55.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/efbd978431547577.webp"
   },
   {
     "date": "2005-06-11",
@@ -5365,7 +5378,7 @@ export const timelineEntries = [
     "group": "art",
     "href": "./archive/legacy/200_calendar/2002/02_08_03_listastevna/listastevna.html",
     "thumbnail": "./archive/legacy/200_calendar/2002/02_08_03_listastevna/dennis_agerblad_listastevna_01.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/f7c9ecc39111246d.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/8d286ee1cdfe8759.webp"
   },
   {
     "date": "2002-06-08",
@@ -5754,7 +5767,7 @@ export const timelineEntries = [
     "group": "media",
     "href": null,
     "thumbnail": "./archive/legacy/200_calendar/1970/Robin_4_aar_02.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/70d02de2376c5fc8.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/c86ec7f10fba71af.webp",
     "biography": [
       {
         "type": "image",

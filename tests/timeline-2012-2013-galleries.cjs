@@ -13,7 +13,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  const docs=[read('docs/timeline-pride-2013-20261016.json'),...read('docs/timeline-four-photo-batches-20261016.json').batches];
  let checked=0;
  for(const batch of docs) for(const photo of batch.photos){
-  const src=photo.src,key=src.split('?')[0];assert.ok(fs.existsSync(key),src);assert.ok(fs.existsSync(thumbs[src]));assert.ok(looks[key]?.reviewed);assert.ok(metadata[src]?.width>0);assert.ok(metadata[src]?.height>0);assert.equal(lang[photo.descriptionDA],photo.descriptionEN);assert.ok(Object.values(galleries).some(g=>g.images.some((s,i)=>s===src&&g.imageDescriptions[i]===photo.descriptionDA)));
+  const src=photo.src,key=src.split('?')[0];assert.ok(fs.existsSync(key),src);assert.ok(fs.existsSync(thumbs[src].split('?')[0]));assert.ok(looks[key]?.reviewed);assert.ok(metadata[src]?.width>0);assert.ok(metadata[src]?.height>0);assert.equal(lang[photo.descriptionDA],photo.descriptionEN);assert.ok(Object.values(galleries).some(g=>g.images.some((s,i)=>s===src&&g.imageDescriptions[i]===photo.descriptionDA)));
   for(const id of photo.confirmedPeople || [])assert.ok(people[key]?.people.includes(id));checked++;
  }
  const {parseTimelineSearchQuery:parse,matchTimelineResult:match,normalizeTimelineSearch:normalize}=await import('../assets/timeline-search-match.js');
@@ -23,7 +23,9 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  const found=q=>[...new Set(results.map(r=>match(r,parse(q))).filter(Boolean).flatMap(r=>r.matchedImages.map(i=>i.src)).filter(src=>supplied.has(src)))];
  for(const [name,count] of [['Dennis Agerblad',22],['Ariel',1],['Blomst',1],['Delores Duchess LaCour',1],['Liebling Siebling',1]])assert.equal(found(name).length,count,'Owner-confirmed photo search: '+name);
  assert.deepEqual(found('Hestehoved').sort(),['./archive/timeline/performance/2012-03-01-08.webp','./archive/timeline/performance/2012-03-01-09.webp']);
- assert.deepEqual(found('Pik'),['./archive/timeline/performance/2012-03-01-05.webp']);
+ assert.deepEqual(found('Pik').sort(),['./archive/timeline/performance/2012-03-01-05.webp']);
+ assert.deepEqual(found('Røv').sort(),['./archive/timeline/performance/2012-03-01-03.webp']);
+ assert.deepEqual(found('Dennis Agerblad Røv Resturang'),['./archive/timeline/performance/2012-03-01-03.webp']);
  assert.equal(parse('Pik').people.length,0,'Body content is not a person');
  const rest=entries.find(e=>e.date==='2012-03-01'&&e.group==='live');for(const n of ['01.jpg','02.jpg'])assert.ok(rest.images.includes('./archive/legacy/200_calendar/2012/2012_03_01_resturang/'+n));assert.ok(rest.details.includes('Forelsket I Et Dyr'));
  console.log('PASS: five galleries, 23 supplied photos, preserved existing images, no duplicate replacements, bilingual descriptions, optimized previews, confirmed tags and videos below slideshows');

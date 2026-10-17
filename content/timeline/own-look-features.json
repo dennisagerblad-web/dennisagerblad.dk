@@ -4123,11 +4123,6 @@
         "wig:short"
       ]
     },
-    "./archive/legacy/200_calendar/2012/2012_08_17_slaget_om_kbh/01.jpg": {
-      "reviewed": true,
-      "subject": "context",
-      "tags": []
-    },
     "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/01.jpg": {
       "reviewed": true,
       "subject": "dennis",
@@ -4554,132 +4549,6 @@
         "setting:outdoor",
         "wig:present",
         "wig:short"
-      ]
-    },
-    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/02.jpg": {
-      "reviewed": true,
-      "subject": "dennis",
-      "tags": [
-        "appearance:black",
-        "appearance:red",
-        "appearance:white",
-        "appearance:yellow",
-        "clothing:dress",
-        "glasses:absent",
-        "hair:black",
-        "hair:dark",
-        "hair:short",
-        "outfit:black",
-        "outfit:red",
-        "outfit:white",
-        "outfit:yellow",
-        "setting:outdoor",
-        "wig:present",
-        "wig:short"
-      ]
-    },
-    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/03.jpg": {
-      "reviewed": true,
-      "subject": "dennis",
-      "tags": [
-        "appearance:black",
-        "appearance:red",
-        "appearance:white",
-        "appearance:yellow",
-        "clothing:dress",
-        "glasses:absent",
-        "hair:black",
-        "hair:dark",
-        "hair:short",
-        "outfit:black",
-        "outfit:red",
-        "outfit:white",
-        "outfit:yellow",
-        "pose:dancing",
-        "setting:outdoor",
-        "wig:present",
-        "wig:short"
-      ]
-    },
-    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/04.jpg": {
-      "reviewed": true,
-      "subject": "dennis",
-      "tags": [
-        "appearance:black",
-        "appearance:red",
-        "appearance:white",
-        "appearance:yellow",
-        "clothing:dress",
-        "glasses:absent",
-        "hair:black",
-        "hair:dark",
-        "hair:short",
-        "mouth:open",
-        "outfit:black",
-        "outfit:red",
-        "outfit:white",
-        "outfit:yellow",
-        "setting:outdoor",
-        "wig:present",
-        "wig:short"
-      ]
-    },
-    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/05.jpg": {
-      "reviewed": true,
-      "subject": "dennis",
-      "tags": [
-        "appearance:black",
-        "appearance:red",
-        "appearance:white",
-        "appearance:yellow",
-        "clothing:dress",
-        "glasses:absent",
-        "hair:black",
-        "hair:dark",
-        "hair:short",
-        "outfit:black",
-        "outfit:red",
-        "outfit:white",
-        "outfit:yellow",
-        "setting:outdoor",
-        "wig:present",
-        "wig:short"
-      ]
-    },
-    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/06.jpg": {
-      "reviewed": true,
-      "subject": "dennis",
-      "tags": [
-        "appearance:black",
-        "appearance:red",
-        "appearance:white",
-        "appearance:yellow",
-        "clothing:dress",
-        "gaze:direct",
-        "glasses:absent",
-        "hair:black",
-        "hair:dark",
-        "hair:short",
-        "mouth:open",
-        "outfit:black",
-        "outfit:red",
-        "outfit:white",
-        "outfit:yellow",
-        "setting:outdoor",
-        "wig:present",
-        "wig:short"
-      ]
-    },
-    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/07.jpg": {
-      "reviewed": true,
-      "subject": "unknown",
-      "tags": []
-    },
-    "./archive/legacy/200_calendar/2011/11_06_18_pigegarden/08.jpg": {
-      "reviewed": true,
-      "subject": "context",
-      "tags": [
-        "setting:outdoor"
       ]
     },
     "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_08.jpg": {
@@ -17372,6 +17241,74 @@
       "reviewed": true,
       "subject": "unknown",
       "tags": []
+    },
+    "./assets/timeline-media/dragnight-2014-03-20261015.jpg": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "appearance:green",
+        "glasses:absent",
+        "microphone:handheld",
+        "outfit:green",
+        "setting:stage",
+        "show:performance",
+        "show:solo",
+        "stage:alone"
+      ]
+    },
+    "./assets/timeline-media/dragnight-2014-02-20261015.jpg": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "appearance:green",
+        "glasses:absent",
+        "microphone:handheld",
+        "outfit:green",
+        "setting:stage",
+        "show:group",
+        "show:performance"
+      ]
+    },
+    "./assets/timeline-media/dragnight-2014-04-20261015.jpg": {
+      "reviewed": true,
+      "subject": "context",
+      "tags": [
+        "appearance:red",
+        "microphone:handheld",
+        "outfit:red",
+        "setting:stage",
+        "show:performance",
+        "show:solo",
+        "stage:alone"
+      ]
+    },
+    "./assets/timeline-media/dragnight-2014-05-20261015.jpg": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "appearance:green",
+        "glasses:absent",
+        "microphone:handheld",
+        "outfit:green",
+        "setting:stage",
+        "show:group",
+        "show:performance"
+      ]
+    },
+    "./assets/timeline-media/dragnight-2014-01-20261015.jpg": {
+      "reviewed": true,
+      "subject": "context",
+      "tags": [
+        "appearance:purple",
+        "clothing:dress",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "outfit:purple",
+        "setting:stage",
+        "wig:long",
+        "wig:present"
+      ]
     }
   }
 }

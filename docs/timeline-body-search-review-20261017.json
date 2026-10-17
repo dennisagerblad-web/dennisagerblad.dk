@@ -1,0 +1,14 @@
+{
+  "request": "Owner requested that searches for nosser and testikler return the 2011-06-04 Distortion closing party image showing Lene Leth Lebbe in a padded costume with artificial testicles.",
+  "photos": [
+    {
+      "date": "2011-06-04",
+      "src": "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_03.jpg",
+      "subject": "lene-leth-lebbe",
+      "tags": [
+        "costume:testicles"
+      ],
+      "verification": "Matched against the user's supplied screenshot and the existing gallery image. The visible testicles are costume padding, not real anatomy."
+    }
+  ]
+}

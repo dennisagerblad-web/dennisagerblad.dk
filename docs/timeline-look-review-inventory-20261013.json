@@ -1826,13 +1826,7 @@
     "title": "Transe Træf, Bådhusträffen, Sverige.",
     "category": "Liveoptræden"
   },
-  {
-    "id": 261,
-    "src": "./archive/legacy/200_calendar/2012/2012_08_17_slaget_om_kbh/01.jpg",
-    "date": "2012-08-17",
-    "title": "Slaget Om København, København.",
-    "category": "Happening"
-  },
+  null,
   {
     "id": 262,
     "src": "./archive/legacy/200_calendar/2012/2012_08_17_melodigrandprix/01.jpg",
@@ -8804,5 +8798,40 @@
     "date": "2022-10-12",
     "title": "Jeg stiller op til statsminister",
     "category": "Kunst"
+  },
+  {
+    "id": 1258,
+    "src": "./assets/timeline-media/dragnight-2014-03-20261015.jpg",
+    "date": "2014-08-29",
+    "title": "Dragnight, Rådhuspladsen, København",
+    "category": "Liveoptræden"
+  },
+  {
+    "id": 1259,
+    "src": "./assets/timeline-media/dragnight-2014-02-20261015.jpg",
+    "date": "2014-08-29",
+    "title": "Dragnight, Rådhuspladsen, København",
+    "category": "Liveoptræden"
+  },
+  {
+    "id": 1260,
+    "src": "./assets/timeline-media/dragnight-2014-04-20261015.jpg",
+    "date": "2014-08-29",
+    "title": "Dragnight, Rådhuspladsen, København",
+    "category": "Liveoptræden"
+  },
+  {
+    "id": 1261,
+    "src": "./assets/timeline-media/dragnight-2014-05-20261015.jpg",
+    "date": "2014-08-29",
+    "title": "Dragnight, Rådhuspladsen, København",
+    "category": "Liveoptræden"
+  },
+  {
+    "id": 1262,
+    "src": "./assets/timeline-media/dragnight-2014-01-20261015.jpg",
+    "date": "2014-08-29",
+    "title": "Dragnight, Rådhuspladsen, København",
+    "category": "Liveoptræden"
   }
 ]

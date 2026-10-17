@@ -1,5 +1,5 @@
 {
-  "scope": "Reviewed visible anatomy and nudity of pictured adults, including owner-approved costume depictions. The requested words pik, røv, nosser, røvhul, nøgen and hud share one search collection. Exact anatomy tags remain image-specific; named-person or appearance combinations keep facts on that same person. Anonymous records never establish an identity.",
+  "scope": "Reviewed visible anatomy and nudity of pictured adults, including owner-approved costume depictions. Search groups are separated into penis, testicles, rear anatomy, and general bare-body imagery. Exact anatomy tags remain image-specific; named-person or appearance combinations keep facts on that same person. Anonymous records never establish an identity.",
   "photos": {
     "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/dennis_show_02.jpg": [
       {
@@ -108,6 +108,51 @@
         "tags": [
           "body:penis-visible",
           "nudity:visible"
+        ]
+      }
+    ],
+    "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/08.jpg": [
+      {
+        "reviewed": true,
+        "subject": "unidentified-dragnight-adult",
+        "tags": [
+          "nudity:visible"
+        ],
+        "ownerSearchLabels": [
+          "Pik"
+        ]
+      }
+    ],
+    "./archive/timeline/performance/2012-03-01-03.webp": [
+      {
+        "reviewed": true,
+        "subject": "dennis",
+        "tags": [
+          "costume:buttocks"
+        ],
+        "ownerSearchLabels": [
+          "Røv"
+        ]
+      }
+    ],
+    "./archive/timeline/performance/2015-04-10-04.webp": [
+      {
+        "reviewed": true,
+        "subject": "unidentified-birthday-costume",
+        "tags": [
+          "costume:penis"
+        ],
+        "ownerSearchLabels": [
+          "Pik"
+        ]
+      }
+    ],
+    "./archive/legacy/200_calendar/2011/11_06_04_distortion/freddy_03.jpg": [
+      {
+        "reviewed": true,
+        "subject": "lene-leth-lebbe",
+        "tags": [
+          "costume:testicles"
         ]
       }
     ]

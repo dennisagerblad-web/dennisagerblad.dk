@@ -1,8 +1,8 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261016-photo-batches-2';
-import { stopTimelineMotion } from './timeline-ui.js?v=20261016-photo-batches-2';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261017-cd-release-fit-2';
+import { stopTimelineMotion } from './timeline-ui.js?v=20261017-talent-thumbs-1';
 
-import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261016-photo-batches-2';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261016-photo-batches-2';
+import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261017-cd-release-fit-2';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261017-split-body-search-1';
 
 import {findTimelinePeople} from './timeline-search-people.js?v=20261016-photo-batches-2';
 
@@ -52,11 +52,11 @@ const sourceURL=src => new URL(src,new URL('../',import.meta.url)).href;
 const photoIdentity=src => { const url=new URL(sourceURL(src));url.search='';url.hash='';return url.href; };
 loadTimelineGalleryData().then(async data => {
   const [thumbnailData,lookData,peopleData,videoData,bodyData]=await Promise.allSettled([
-    fetch(new URL('../content/timeline/search-thumbnails.json?v=20261016-photo-batches-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/search-thumbnails.json?v=20261017-cd-release-fit-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/own-look-features.json?v=20261016-photo-batches-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/people.json?v=20261016-photo-batches-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/video-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/body-features.json?v=20261016-photo-batches-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/body-features.json?v=20261017-split-body-search-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
   ]);
   const videoFacts=videoData.status==='fulfilled' ? videoData.value.videos || {} : {};
   const people=peopleData.status==='fulfilled' ? peopleData.value : {};

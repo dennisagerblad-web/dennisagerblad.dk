@@ -80,12 +80,16 @@ export function parseTimelineSearchQuery(query) {
   take('raab(?:e|er|ende)?','mouth:open');
   take('tørklaede(?:r|t)?','clothing:scarf');
   take('klassisk\\s+makeup|smukke?\\s+ansigt(?:er)?','makeup:classic');
-  // These owner-requested synonyms share the entire reviewed nudity/anatomy
-  // collection. Preserve exact source facts; ordinary skin is not a review tag.
-  take('nøgenhed|nøg(?:en|ne|ent)|nudity|naked|nude|hud(?:en)?|skin|nosser(?:ne)?|testikler(?:ne)?|testicles?|røvhul(?:let|ler)?|anus','nudity:any');
+  // Keep search groups specific: visible penis, testicles, rear anatomy, and
+  // general bare-body imagery each use their own reviewed facts.
+  take('nosser(?:ne)?|testikler(?:ne)?|testicles?','body:testicles-visible');
+  take('røvhul(?:let|ler)?|numsehul(?:let|ler)?|anus','anatomy:rear');
+  // These words describe a generally bare body, including reviewed costume
+  // depictions. They do not make a photo match the specific anatomy groups.
+  take('nøgenhed|nøg(?:en|ne|ent)|nudity|naked|nude|hud(?:en)?|skin|bar(?:e)?(?:\\s+(?:krop(?:pe)?|overkrop|hud))?','nudity:any');
   // Keep known song/poster phrases searchable as titles rather than anatomy.
-  if(!/\b(?:pik\s+nok|gratis\s+pik\s+og\s+pat|stiv\s+pik\s+til\s+alle)\b/u.test(text)) take('pik(?:ken|ke)?|penis(?:sen)?','nudity:any');
-  take('(?:bare\\s+)?(?:røv(?:en)?|rumpe(?:n)?|balder(?:ne)?|bagdel(?:en)?|buttocks)','nudity:any');
+  if(!/\b(?:pik\s+nok|gratis\s+pik\s+og\s+pat|stiv\s+pik\s+til\s+alle)\b/u.test(text)) take('pik(?:ken|ke)?|penis(?:sen)?','body:penis-visible');
+  take('(?:bare\\s+)?(?:røv(?:en)?|rumpe(?:n)?|balder(?:ne)?|bagdel(?:en)?|buttocks)','anatomy:rear');
   take('bar(?:e)?\\s+overkrop|topløs|topless','body:bare-torso');
   take('overtøj','clothing:outerwear');
   take('undertøj','clothing:underwear');
@@ -110,7 +114,7 @@ export function parseTimelineSearchQuery(query) {
 function matchesReviewedFacts(image, filters, people=[]) {
   if(!filters.length) return true;
   const appearance=filters.some(fact=>!fact.startsWith('show:') && !fact.startsWith('setting:'));
-  const anatomyOnly=filters.every(fact=>fact.startsWith('body:') || fact.startsWith('nudity:'));
+  const anatomyOnly=filters.every(fact=>fact.startsWith('body:') || fact.startsWith('nudity:') || fact.startsWith('anatomy:'));
   const anatomy=(image.anatomy || []).filter(facts=>facts.reviewed && facts.subject);
   const matchSubject=subject=>{
     const facts=subject==='dennis' ? image.look : image.peopleLooks?.[subject];
@@ -120,10 +124,12 @@ function matchesReviewedFacts(image, filters, people=[]) {
     const tags=new Set([...(validLook ? facts.tags : []),...body.flatMap(facts=>facts.tags)]);
     return filters.every(fact=>{
     if(fact==='nudity:any') return ['nudity:visible','body:penis-visible','body:buttocks-visible','body:testicles-visible','body:anus-visible','body:bare-torso','costume:nudity','costume:penis','costume:buttocks','costume:testicles'].some(tag=>tags.has(tag));
+    if(fact==='anatomy:rear') return ['body:buttocks-visible','body:anus-visible','costume:buttocks'].some(tag=>tags.has(tag));
     // Owner-approved costume anatomy participates in the same searches,
     // while its alt text and review tags explicitly describe the costume.
-    const costumeEquivalent={'nudity:visible':'costume:nudity','body:penis-visible':'costume:penis','body:buttocks-visible':'costume:buttocks'}[fact];
+    const costumeEquivalent={'nudity:visible':'costume:nudity','body:penis-visible':'costume:penis','body:buttocks-visible':'costume:buttocks','body:testicles-visible':'costume:testicles'}[fact];
     if(costumeEquivalent && tags.has(costumeEquivalent)) return true;
+    if(fact==='body:penis-visible' && body.some(facts=>(facts.ownerSearchLabels||[]).some(label=>/^pik(?:ken)?$/iu.test(label)))) return true;
     if(fact==='hair:blond') return tags.has('hair:blond') || (tags.has('hair:light') && !tags.has('hair:grey'));
     if(fact==='hair:dark') return tags.has(fact) || tags.has('hair:brown') || tags.has('hair:black');
     if(fact.startsWith('appearance:')) {
