@@ -24,8 +24,6 @@ body>.section-share.is-closing{opacity:0}
 .section-heading>.section-share .section-share-feedback{left:0;right:auto}
 .ship.section-0 .section-heading>.section-share{top:50%;left:auto;right:calc(100% + 8px);transform:translateY(-50%)}
 .ship.section-0 .section-share-feedback{left:auto;right:0}
-.section-index{padding:32px;max-width:800px;margin:auto;color:#e8e8db;font:18px/1.5 Helvetica,Arial,sans-serif}
-.section-index h1{font-size:2em;font-weight:700}.section-index a{color:#ffe66a;text-decoration:underline}
 @media (max-width:760px) and (orientation:portrait){
   .ship.section-0 .section-heading>.section-share{top:calc(100% + 2px);left:0;right:auto;transform:none}
   .art-page-heading>.section-share{top:calc(100% + 2px);left:0;right:auto;transform:none}
