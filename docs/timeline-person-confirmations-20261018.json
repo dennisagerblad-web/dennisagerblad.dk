@@ -1,0 +1,636 @@
+{
+  "reviewDate": "2026-10-18",
+  "savedRevision": 154,
+  "photoCount": 49,
+  "manualNamedAssociations": 81,
+  "newPeople": [
+    {
+      "id": "vera",
+      "name": "Vera",
+      "aliases": [
+        "Vera"
+      ]
+    },
+    {
+      "id": "rune-gartner",
+      "name": "Rune Gartner",
+      "aliases": [
+        "Rune Gartner"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "src": "./archive/timeline/performance/2012-08-17-08.jpg",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-08-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2012-08-17-07.jpg",
+      "people": [
+        "dennis",
+        "vera"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Vera"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-08-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2012-08-17-06.jpg",
+      "people": [
+        "dennis",
+        "vera"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Vera"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-08-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2012-08-17-05.jpg",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-08-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2012-08-17-04.jpg",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-08-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2012-08-17-03.jpg",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-08-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2012-08-17-02.jpg",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-08-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2012-08-17-01.jpg",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-08-17"
+    },
+    {
+      "src": "./archive/timeline/press/2012-04-20-found-on-corner-05.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-04-20"
+    },
+    {
+      "src": "./archive/timeline/press/2012-04-20-found-on-corner-04.webp",
+      "people": [
+        "dennis",
+        "delores"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Delores Duchess LaCour"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-04-20"
+    },
+    {
+      "src": "./archive/timeline/press/2012-04-20-found-on-corner-03.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-04-20"
+    },
+    {
+      "src": "./archive/timeline/press/2012-04-20-found-on-corner-02.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-04-20"
+    },
+    {
+      "src": "./archive/timeline/press/2012-04-20-found-on-corner-01.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2012-04-20"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-10.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-09.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-08.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-07.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-06.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-05.webp",
+      "people": [
+        "dennis",
+        "maria-maud"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Maria Maud"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-04.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-03.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-02.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/music/2011-09-03-release-01.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-09-03"
+    },
+    {
+      "src": "./archive/timeline/press/2011-07-01-artlap-katalog.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-07-01"
+    },
+    {
+      "src": "./archive/timeline/press/2011-06-24-godmorgen-danmark-05.webp",
+      "people": [
+        "dennis",
+        "delores",
+        "fru-klud",
+        "athena-lady",
+        "areal",
+        "rebekka-fjams-du-nord"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Delores Duchess LaCour",
+        "Fru Klud",
+        "Athena Lady",
+        "Ariel",
+        "Rebekka Fjams Du Nord"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-24"
+    },
+    {
+      "src": "./archive/timeline/press/2011-06-24-godmorgen-danmark-04.webp",
+      "people": [
+        "dennis",
+        "athena-lady",
+        "fru-klud",
+        "delores",
+        "blomst",
+        "areal"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Athena Lady",
+        "Fru Klud",
+        "Delores Duchess LaCour",
+        "Blomst",
+        "Ariel"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-24"
+    },
+    {
+      "src": "./archive/timeline/press/2011-06-24-godmorgen-danmark-03.webp",
+      "people": [
+        "dennis",
+        "athena-lady",
+        "fru-klud",
+        "delores",
+        "areal"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Athena Lady",
+        "Fru Klud",
+        "Delores Duchess LaCour",
+        "Ariel"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-24"
+    },
+    {
+      "src": "./archive/timeline/press/2011-06-24-godmorgen-danmark-02.webp",
+      "people": [
+        "dennis",
+        "athena-lady",
+        "fru-klud",
+        "delores"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Athena Lady",
+        "Fru Klud",
+        "Delores Duchess LaCour"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-24"
+    },
+    {
+      "src": "./archive/timeline/press/2011-06-24-godmorgen-danmark-01.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-24"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-13.webp",
+      "people": [
+        "athena-lady",
+        "fru-klud"
+      ],
+      "names": [
+        "Athena Lady",
+        "Fru Klud"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-12.webp",
+      "people": [
+        "fru-klud",
+        "rune-gartner"
+      ],
+      "names": [
+        "Fru Klud",
+        "Rune Gartner"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-11.webp",
+      "people": [
+        "fru-klud"
+      ],
+      "names": [
+        "Fru Klud"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-09.webp",
+      "people": [
+        "rune-gartner"
+      ],
+      "names": [
+        "Rune Gartner"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-08.webp",
+      "people": [
+        "rune-gartner"
+      ],
+      "names": [
+        "Rune Gartner"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-07.webp",
+      "people": [
+        "rune-gartner"
+      ],
+      "names": [
+        "Rune Gartner"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-06.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-05.webp",
+      "people": [
+        "rune-gartner"
+      ],
+      "names": [
+        "Rune Gartner"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-04.webp",
+      "people": [
+        "dennis",
+        "rune-gartner"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Rune Gartner"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-03.webp",
+      "people": [
+        "dennis",
+        "rune-gartner"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Rune Gartner"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-02.webp",
+      "people": [
+        "dennis",
+        "rune-gartner",
+        "fru-klud"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Rune Gartner",
+        "Fru Klud"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-06-17-01.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-06-17"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-05-27-06.webp",
+      "people": [
+        "dennis",
+        "ole-cairo"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Ole Cairo"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-05-27"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-05-27-05.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-05-27"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-05-27-04.webp",
+      "people": [
+        "dennis",
+        "hairwerk",
+        "paul-jensen"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Hairwerk Hugh Mongous",
+        "Paul Jensen"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-05-27"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-05-27-03.webp",
+      "people": [
+        "liebling-siebling"
+      ],
+      "names": [
+        "Liebling Siebling"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-05-27"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-05-27-02.webp",
+      "people": [
+        "dennis",
+        "ramona-macho"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Ramona Macho"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-05-27"
+    },
+    {
+      "src": "./archive/timeline/performance/2011-05-27-01.webp",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-05-27"
+    },
+    {
+      "src": "./archive/timeline/press/2011-04-30-kinky-salon-02.webp",
+      "people": [
+        "dennis",
+        "ramona-macho"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Ramona Macho"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-04-30"
+    },
+    {
+      "src": "./archive/timeline/press/2011-04-30-kinky-salon-01.webp",
+      "people": [
+        "ramona-macho"
+      ],
+      "names": [
+        "Ramona Macho"
+      ],
+      "confirmation": "Manually selected by Dennis in the existing photo review",
+      "date": "2011-04-30"
+    }
+  ],
+  "photosWithoutSelectedNames": [
+    "./archive/timeline/performance/2011-06-17-14.webp",
+    "./archive/timeline/performance/2011-06-17-10.webp"
+  ],
+  "validation": {
+    "confirmedAssociations": "All 81 associations pass actual query parser and result matcher; Danish and English alt text aligned.",
+    "registeredNames": "Existing name and alias regression checks pass.",
+    "preexistingLegacyTest": "timeline-confirmed-people.cjs reports the same absent legacy Bøsserup Pigegarde photo 06 on unmodified HEAD and this update; owner previously replaced that gallery."
+  }
+}

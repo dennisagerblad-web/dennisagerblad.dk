@@ -14,7 +14,7 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261017-godmorgen-title-2',
+  '../content/timeline/galleries.json?v=20261018-confirmed-people-1',
   '../content/timeline/image-metadata.json?v=20261017-godmorgen-title-2',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');

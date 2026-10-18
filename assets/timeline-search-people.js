@@ -705,6 +705,20 @@ export const timelinePerformers = [
     "aliases": [
       "Nat Zyrik"
     ]
+  },
+  {
+    "id": "vera",
+    "name": "Vera",
+    "aliases": [
+      "Vera"
+    ]
+  },
+  {
+    "id": "rune-gartner",
+    "name": "Rune Gartner",
+    "aliases": [
+      "Rune Gartner"
+    ]
   }
 ];
 
