@@ -107,6 +107,7 @@
     const url = new URL(`https://dennisagerblad.dk/${section.slug}/`);
     const language = window.DennisLanguage?.current || document.documentElement.lang;
     url.searchParams.set('lang', language === 'en' ? 'en' : 'da');
+    if (section.slug === 'tidslinje') window.DennisTimelinePosition?.addToUrl(url);
     return url.href;
   };
   const icon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v5C6 8 3 12 3 20c3-5 6-7 11-7v5l8-7z"/></svg>';
@@ -182,5 +183,13 @@
     setMetadata(currentSection());
   });
   window.addEventListener('resize', updateShare);
+  window.addEventListener('dennis-timeline-position-ready', updateShare);
+  // Keep copy-link, context-menu and modified-click destinations current too.
+  let shareScrollFrame = 0;
+  root.addEventListener('scroll', event => {
+    if (!event.target.matches?.('.archive-scroll') || currentSection()?.slug !== 'tidslinje' || shareScrollFrame) return;
+    shareScrollFrame = requestAnimationFrame(() => { shareScrollFrame = 0; link.href = shareUrl(); });
+  }, true);
+  for (const type of ['pointerdown', 'focus', 'contextmenu']) link.addEventListener(type, () => { link.href = shareUrl(); });
   updateShare();
 })();

@@ -16,6 +16,9 @@ Desktop uses the widest photograph to size the whole gallery, so mixed series re
 
 Clicking a search-result photograph opens that exact image directly with automatic playback paused. The existing play control starts playback, while the arrows allow manual navigation. Search passes the image directly to the gallery instead of relaying it through the Timeline event's click handler.
 
+The Timeline's main DEL link includes the current tab (`fane`) and first readable event (`ved`, the existing date/category/title identity). `assets/timeline-position.js` restores that tab and positions the event below its sticky controls, without opening a popup. This uses an event anchor instead of a pixel offset so shared links work across screen sizes. The existing per-popup `opslag` links keep opening their popups.
+
+
 In mobile portrait the popup uses the full viewport width minus the existing 16px outer margins. Its image area's desired height comes from the tallest image in the series, capped by the visible viewport after the header and 20px inner padding. In mobile landscape the popup uses the available viewport height minus 20px outer margins on each edge; its width uses the available viewport width minus the same 20px outer margins, leaving the header room and preserving image height. Every photograph is proportionally contained at the largest size within this fixed frame, retaining the complete image. Multiple-image galleries retain their transition backdrop; single images have none. Header overflow is scrollable so images retain space. These rules were clarified by Dennis on 2026-10-14.
 
 ## Rebuilding media metadata
