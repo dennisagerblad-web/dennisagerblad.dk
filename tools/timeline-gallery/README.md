@@ -14,6 +14,8 @@ Each event gets an independent gallery. Its popup heading is `title`, with descr
 
 Desktop uses the widest photograph to size the whole gallery, so mixed series retain enough room for landscape photos. Mobile slideshow geometry is computed once for the whole gallery and stays fixed through every image change, animation, drag cancellation and image load. Do not size a popup from the selected slide. Rotation is the only reason to recalculate mobile geometry; Safari toolbar-height changes do not resize an open popup.
 
+Normal gallery openings always start with the event thumbnail when it belongs to the series, keeping the image and its description together.
+
 Clicking a search-result photograph opens that exact image directly with automatic playback paused. The existing play control starts playback, while the arrows allow manual navigation. Search passes the image directly to the gallery instead of relaying it through the Timeline event's click handler.
 
 The Timeline's main DEL link includes the current tab (`fane`) and first readable event (`ved`, the existing date/category/title identity). `assets/timeline-position.js` restores that tab and positions the event below its sticky controls, without opening a popup. This uses an event anchor instead of a pixel offset so shared links work across screen sizes. The existing per-popup `opslag` links keep opening their popups.

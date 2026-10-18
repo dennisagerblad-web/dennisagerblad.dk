@@ -14,7 +14,7 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261018-sproghoved-1',
+  '../content/timeline/galleries.json?v=20261018-thumb-first-1',
   '../content/timeline/image-metadata.json?v=20261018-sproghoved-1',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
@@ -246,6 +246,16 @@ function createTransition(canvas) {
     },
     draw(p) { gl.uniform1f(progress, p); gl.drawArrays(gl.TRIANGLES, 0, 6); }, destroy,
   };
+}
+
+// Keep a gallery's chosen thumbnail first without separating descriptions
+// from their images. Search openings still select their requested photograph.
+export function thumbnailFirst(images, descriptions, thumbnail) {
+  const identity = src => { const url = new URL(absolute(src)); url.search = ''; url.hash = ''; return url.href; };
+  const first = thumbnail ? images.findIndex(src => identity(src) === identity(thumbnail)) : -1;
+  const order = images.map((_, i) => i);
+  if (first > 0) order.unshift(...order.splice(first, 1));
+  return { images: order.map(i => images[i]), descriptions: order.map(i => descriptions[i]) };
 }
 
 export function openTimelineGallery(entry, group, theme = {}, options = {}) {
@@ -613,6 +623,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       details.append(more);
     } else paragraphs.forEach(text => details.append(el('p','',text)));
     items = gallery?.images || entry.images || (entry.thumbnail ? [entry.thumbnail] : []);
+    ({ images: items, descriptions } = thumbnailFirst(items, descriptions, entry.thumbnail));
     if (searchImage) {
       const identity=src=>{const url=new URL(absolute(src));url.search='';url.hash='';return url.href;};
       index=Math.max(0,items.findIndex(src=>identity(src)===identity(searchImage)));
