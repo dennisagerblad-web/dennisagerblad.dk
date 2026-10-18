@@ -2731,6 +2731,20 @@ export const timelineEntries = [
     "href": null
   },
   {
+    "date": "2011-07-10",
+    "display": "10.07.2011",
+    "year": 2011,
+    "category": "Musikvideooptagelser",
+    "title": "Optagelser af musikvideoen Sproghoved, Bøssehuset.",
+    "group": "music",
+    "gallery": true,
+    "href": null,
+    "details": "Optagelser af musikvideoen Sproghoved i Bøssehuset.",
+    "thumbnail": "./archive/timeline/music/2011-07-10-sproghoved-01.webp",
+    "thumbnailFit": "contain",
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-07-10-sproghoved-01.webp"
+  },
+  {
     "date": "2011-07-09",
     "display": "09.07.2011",
     "year": 2011,

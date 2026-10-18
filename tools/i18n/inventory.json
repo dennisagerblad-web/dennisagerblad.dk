@@ -18385,5 +18385,322 @@
     "origins": [
       "content/timeline/galleries.json"
     ]
+  },
+  {
+    "id": 2572,
+    "da": "Nærbillede af en person med sort øjenmakeup, der får lagt mørkerød læbestift.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2573,
+    "da": "En person lægger makeup på en siddende person med sort kasket, solbriller og ternet skjorte.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2574,
+    "da": "To personer arbejder med makeup foran en mørk baggrund under musikvideooptagelserne.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2575,
+    "da": "En person med lilla paryk og lilla tøj holder blomster foran en mørk baggrund.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2576,
+    "da": "En person i neongul kjole bærer en metallisk hovedbeklædning med hængende pynt.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2577,
+    "da": "En person med turkis paryk, bar overkrop og grønne bånd poserer foran en mørk baggrund.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2578,
+    "da": "En person med bar overkrop og sølvfarvet tøj holder armene ud til siderne bag en træstol.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2579,
+    "da": "En person med lyserød paryk og stribet top holder hænderne bag hovedet under diskokugler.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2580,
+    "da": "Flere kostumerede medvirkende, blandt andet i turkis kjole og rødt korset, står sammen under optagelserne.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2581,
+    "da": "En person i rød kjole og lys paryk holder armene ud under en diskokugle.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2582,
+    "da": "En person i oppusteligt orange kostume og orange paryk læner sig til siden og smiler.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2583,
+    "da": "En person med kort lyserød paryk og rødt tørklæde er svøbt i et regnbuefarvet pailletklæde.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2584,
+    "da": "En person med lyserød makeup og paryk poserer i et kraftigt lyserødt flæsekostume.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2585,
+    "da": "En person med stor rød paryk og rødt frynsekostume løfter en hånd foran andre medvirkende.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2586,
+    "da": "En person med metallisk ansigtsmakeup bærer sølvfarvet kappe og et stribet klæde over hovedet.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2587,
+    "da": "En person med rød paryk, rødt skørt og bar ryg står på trægulvet, fotograferet bagfra.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2588,
+    "da": "En person med briller og mønstret skjorte arbejder med et kamera under optagelserne.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2589,
+    "da": "Et kamera på stativ står mellem kostumerede medvirkende og borde med tøj og udstyr.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2590,
+    "da": "En kamerafører og flere kostumerede medvirkende står og sidder omkring et bord under optagelserne.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2591,
+    "da": "En gruppe kostumerede medvirkende står sammen på Bøssehusets trægulv under musikvideooptagelserne.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2592,
+    "da": "Musikvideooptagelser",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2593,
+    "da": "Optagelser af musikvideoen Sproghoved, Bøssehuset.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2594,
+    "da": "Optagelser af musikvideoen Sproghoved i Bøssehuset.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2595,
+    "da": "Nærbillede af en person med sort øjenmakeup, der får lagt mørkerød læbestift. På billedet ses Dennis Agerblad.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2596,
+    "da": "En person lægger makeup på en siddende person med sort kasket, solbriller og ternet skjorte. På billedet ses Dennis Agerblad og Hairwerk Hugh Mongous.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2597,
+    "da": "To personer arbejder med makeup foran en mørk baggrund under musikvideooptagelserne. På billedet ses Dennis Agerblad og Hairwerk Hugh Mongous.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2598,
+    "da": "En person med lilla paryk og lilla tøj holder blomster foran en mørk baggrund. På billedet ses Florence.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2599,
+    "da": "En person i neongul kjole bærer en metallisk hovedbeklædning med hængende pynt. På billedet ses Athena Lady.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2600,
+    "da": "En person med turkis paryk, bar overkrop og grønne bånd poserer foran en mørk baggrund. På billedet ses Anders Berlin.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2601,
+    "da": "En person med bar overkrop og sølvfarvet tøj holder armene ud til siderne bag en træstol. På billedet ses Daniel USA.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2602,
+    "da": "Flere kostumerede medvirkende, blandt andet i turkis kjole og rødt korset, står sammen under optagelserne. På billedet ses Mikkeline, Florence og Liebling Siebling.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2603,
+    "da": "En person i rød kjole og lys paryk holder armene ud under en diskokugle. På billedet ses Ramona Macho.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2604,
+    "da": "En person i oppusteligt orange kostume og orange paryk læner sig til siden og smiler. På billedet ses Mark.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2605,
+    "da": "En person med kort lyserød paryk og rødt tørklæde er svøbt i et regnbuefarvet pailletklæde. På billedet ses Blomst.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2606,
+    "da": "En person med lyserød makeup og paryk poserer i et kraftigt lyserødt flæsekostume. På billedet ses Nat Zyrik.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2607,
+    "da": "En person med stor rød paryk og rødt frynsekostume løfter en hånd foran andre medvirkende. På billedet ses Liebling Siebling og Florence.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2608,
+    "da": "En person med metallisk ansigtsmakeup bærer sølvfarvet kappe og et stribet klæde over hovedet. På billedet ses Mathuresh.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2609,
+    "da": "En person med rød paryk, rødt skørt og bar ryg står på trægulvet, fotograferet bagfra. På billedet ses Birgitte.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2610,
+    "da": "En person med briller og mønstret skjorte arbejder med et kamera under optagelserne. På billedet ses Danny Boy (Daniel Svanberg Bøtcher).",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2611,
+    "da": "Et kamera på stativ står mellem kostumerede medvirkende og borde med tøj og udstyr. På billedet ses Dennis Agerblad, Danny Boy (Daniel Svanberg Bøtcher), Hairwerk Hugh Mongous og Florence.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2612,
+    "da": "En kamerafører og flere kostumerede medvirkende står og sidder omkring et bord under optagelserne. På billedet ses Danny Boy (Daniel Svanberg Bøtcher) og Unni Ova Tolfsen.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2613,
+    "da": "En gruppe kostumerede medvirkende står sammen på Bøssehusets trægulv under musikvideooptagelserne. På billedet ses Søren B Meisterbrau, Florence, Athena Lady, Birgitte og Dennis Agerblad.",
+    "origins": [
+      "content/timeline/galleries.json"
+    ]
   }
 ]

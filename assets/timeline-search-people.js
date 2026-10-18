@@ -719,6 +719,56 @@ export const timelinePerformers = [
     "aliases": [
       "Rune Gartner"
     ]
+  },
+  {
+    "id": "anders-berlin",
+    "name": "Anders Berlin",
+    "aliases": [
+      "Anders Berlin"
+    ]
+  },
+  {
+    "id": "daniel-usa",
+    "name": "Daniel USA",
+    "aliases": [
+      "Daniel USA"
+    ]
+  },
+  {
+    "id": "mikkeline",
+    "name": "Mikkeline",
+    "aliases": [
+      "Mikkeline"
+    ]
+  },
+  {
+    "id": "mark",
+    "name": "Mark",
+    "aliases": [
+      "Mark"
+    ],
+    "explicitOnly": true
+  },
+  {
+    "id": "mathuresh",
+    "name": "Mathuresh",
+    "aliases": [
+      "Mathuresh"
+    ]
+  },
+  {
+    "id": "birgitte",
+    "name": "Birgitte",
+    "aliases": [
+      "Birgitte"
+    ]
+  },
+  {
+    "id": "soren-b-meisterbrau",
+    "name": "Søren B Meisterbrau",
+    "aliases": [
+      "Søren B Meisterbrau"
+    ]
   }
 ];
 
