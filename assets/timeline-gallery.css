@@ -5,6 +5,7 @@
 .tg-overlay[data-theme="art"] .tg-dialog { background:#452c0c; }
 .tg-overlay[data-theme="live"] .tg-stage { background:#410c12; }
 .tg-overlay[data-theme="art"] .tg-stage { background:#452c0c; }
+.tg-overlay:not([data-theme="live"]):not([data-theme="art"]) :is(.tg-dialog,.tg-stage) { background:var(--timeline-deep,#171719); }
 .tg-dialog * { box-sizing:border-box; }
 .tg-header { padding:clamp(18px,2vw,30px); padding-right:70px; max-height:min(45dvh,400px); overflow:auto; scrollbar-width:thin; overscroll-behavior:contain; }
 .tg-header h2 { margin:0; color:#fff; font:500 clamp(22px,2vw,34px)/1.2 Georgia,serif; text-wrap:balance; }

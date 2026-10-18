@@ -1,8 +1,8 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261017-cd-release-fit-2';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261017-talent-thumbs-1';
 
-import {loadTimelineGalleryData, selectTimelineSearchImage} from './timeline-gallery.js?v=20261018-confirmed-people-1';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261018-confirmed-people-1';
+import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261018-selected-photo-1';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261018-selected-photo-1';
 
 import {findTimelinePeople} from './timeline-search-people.js?v=20261018-confirmed-people-1';
 
@@ -53,10 +53,10 @@ const photoIdentity=src => { const url=new URL(sourceURL(src));url.search='';url
 loadTimelineGalleryData().then(async data => {
   const [thumbnailData,lookData,peopleData,videoData,bodyData]=await Promise.allSettled([
     fetch(new URL('../content/timeline/search-thumbnails.json?v=20261017-cd-release-fit-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/own-look-features.json?v=20261016-photo-batches-2',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/own-look-features.json?v=20261018-selected-photo-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/people.json?v=20261018-confirmed-people-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/video-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/body-features.json?v=20261017-split-body-search-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/body-features.json?v=20261018-selected-photo-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
   ]);
   const videoFacts=videoData.status==='fulfilled' ? videoData.value.videos || {} : {};
   const people=peopleData.status==='fulfilled' ? peopleData.value : {};
@@ -168,7 +168,17 @@ async function goToResult(result, input, search) {
   const image=result.matchedImages?.[0];
   const video=result.matchedVideos?.[0];
   if (image || video || result.entry.landingPage) {
-    if (image && (result.group==='live' || result.group==='art')) selectTimelineSearchImage(result.entry,image.src);
+    if (image && image.kind!=='video-poster') {
+      const data=await loadTimelineGalleryData();
+      const gallery=data.entries[`${result.entry.date}|${result.entry.category}|${result.entry.title}`];
+      if ((gallery?.images || result.entry.images || []).some(src=>photoIdentity(src)===photoIdentity(image.src))) {
+        const shell=event.closest('.timeline-shell');
+        const style=getComputedStyle(shell);
+        const theme=Object.fromEntries(['accent','line','soft','deep','year-rgb'].map(name=>['--timeline-'+name,style.getPropertyValue('--timeline-'+name)]));
+        openTimelineGallery(result.entry,result.group,theme,{initialImage:image.src,autoplay:false});
+        return;
+      }
+    }
     const opener=event.querySelector('button, a');
     if (!opener) return;
     opener.focus({preventScroll:true}); opener.click();

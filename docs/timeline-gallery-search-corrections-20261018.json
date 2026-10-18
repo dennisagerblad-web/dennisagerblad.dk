@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-18",
+  "galleryOrder": [
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7476.jpg",
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7496.jpg"
+  ],
+  "bodyCorrections": [
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7476.jpg",
+      "lookTags": [
+        "appearance:black",
+        "body:testicles-visible",
+        "clothing:underwear",
+        "gaze:direct",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "nudity:visible",
+        "outfit:black",
+        "wig:present",
+        "wig:short"
+      ],
+      "searches": [
+        "nosser",
+        "testikler",
+        "nøgen"
+      ],
+      "excludedSearches": [
+        "pik",
+        "penis"
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7496.jpg",
+      "lookTags": [
+        "appearance:black",
+        "body:testicles-visible",
+        "clothing:underwear",
+        "glasses:absent",
+        "hair:black",
+        "hair:dark",
+        "hair:short",
+        "nudity:visible",
+        "outfit:black",
+        "wig:present",
+        "wig:short"
+      ],
+      "searches": [
+        "nosser",
+        "testikler",
+        "nøgen"
+      ],
+      "excludedSearches": [
+        "pik",
+        "penis"
+      ]
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2003/03_01_12_ski_ore/ski_swim_05.jpg",
+      "lookTags": [
+        "appearance:red",
+        "body:bare-torso",
+        "clothing:underwear",
+        "glasses:absent",
+        "hair:light",
+        "hair:long",
+        "nudity:visible",
+        "outfit:red",
+        "wig:long",
+        "wig:present"
+      ],
+      "searches": [
+        "nøgen"
+      ],
+      "excludedSearches": [
+        "røv",
+        "røvhul",
+        "numsehul"
+      ]
+    }
+  ],
+  "layout": "Desktop uses the widest photograph; mobile landscape uses the available viewport width and height, while mobile portrait retains the tallest-photo envelope. All images remain contained without cropping.",
+  "searchOpening": "Selected photograph opens directly with autoplay paused. Play starts automatic transitions; manual navigation remains available."
+}

@@ -14,7 +14,7 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261018-confirmed-people-1',
+  '../content/timeline/galleries.json?v=20261018-selected-photo-1',
   '../content/timeline/image-metadata.json?v=20261017-godmorgen-title-2',
 ].map(path => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
@@ -50,15 +50,11 @@ export function containRect(imageWidth, imageHeight, frameWidth, frameHeight) {
   return [(frameWidth-width)/2, (frameHeight-height)/2, width, height];
 }
 
-// Majority orientation determines the frame on every device. A tie follows
-// the viewport; square photos are neutral. Resolution does not affect voting.
+// The widest photograph determines the desktop envelope for the whole series.
+// Portrait photographs still fit in full, without changing the popup per slide.
 export function galleryRatio(items, media, viewportRatio = 4/3) {
   const ratios = items.map(src => media[src]).filter(m => m?.width > 0 && m?.height > 0).map(m => m.width / m.height);
-  if (!ratios.length) return 4/3;
-  const portrait=ratios.filter(r=>r<1), landscape=ratios.filter(r=>r>1);
-  const usePortrait=portrait.length>landscape.length || (portrait.length===landscape.length && viewportRatio<1);
-  const majority=usePortrait ? portrait : landscape;
-  return majority.length ? Math.exp(majority.reduce((sum,r)=>sum+Math.log(r),0)/majority.length) : 1;
+  return ratios.length ? Math.max(...ratios) : 4/3;
 }
 
 // One envelope for the entire slideshow, independent of the selected slide.
@@ -252,9 +248,9 @@ function createTransition(canvas) {
   };
 }
 
-export function openTimelineGallery(entry, group, theme = {}) {
+export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   closeActive?.();
-  const searchImage=requestedSearchImage?.key===`${entry.date}|${entry.category}|${entry.title}` && requestedSearchImage.expires>Date.now() ? requestedSearchImage.src : null;
+  const searchImage=options.initialImage || (requestedSearchImage?.key===`${entry.date}|${entry.category}|${entry.title}` && requestedSearchImage.expires>Date.now() ? requestedSearchImage.src : null);
   requestedSearchImage=null;
   const effectName=timelineEffects[group] || 'Grow';
   const opener = document.activeElement;
@@ -297,7 +293,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
   dialog.append(close,header,viewer); overlay.append(dialog); document.body.append(overlay);
   let closed = false, index = 0, items = [], media = {}, descriptions = [], drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
-  let scene = null, drag = null, paused = false, rotationPointerPaused = null;
+  let scene = null, drag = null, paused = options.autoplay===false || !!searchImage, rotationPointerPaused = null;
   let mobileLayoutKey;
   const zoom = attachPinchZoom(stage, (scale,x,y) => {
     zoomImage.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
@@ -352,7 +348,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
       mobileLayoutKey=key;
       const margin=portrait ? 16 : 20;
       const maxW=vw-margin*2, maxH=vh-margin*2;
-      const {tallest,widest}=mobileGalleryRatios(items,media);
+      const {tallest}=mobileGalleryRatios(items,media);
       header.style.maxHeight=`${Math.floor(maxH*.34)}px`;
       header.style.overflow='auto';
       const flowHeight=node=>{
@@ -362,16 +358,8 @@ export function openTimelineGallery(entry, group, theme = {}) {
       };
       const extra=()=>[...dialog.children].filter(node=>node!==header && node!==viewer && node!==close).reduce((sum,node)=>sum+flowHeight(node),0);
       let width=maxW;
-      if (!portrait) {
-        // Solve width and wrapped-header height together before displaying it.
-        for(let i=0;i<12;i++) {
-          dialog.style.width=`${width}px`;
-          const available=Math.max(1,maxH-padding-flowHeight(header)-extra());
-          const nextWidth=Math.min(maxW,Math.max(padding+44,available*widest+padding));
-          if(Math.abs(nextWidth-width)<.5) break;
-          width=nextWidth;
-        }
-      }
+      // Use the full landscape width. Shrinking the dialog to the image ratio
+      // wraps the header into more lines and needlessly reduces image height.
       dialog.style.width=`${Math.floor(width)}px`;
       const available=Math.max(1,maxH-padding-flowHeight(header)-extra());
       const frameHeight=portrait ? Math.min((Math.floor(width)-padding)/tallest,available) : available;
@@ -388,8 +376,7 @@ export function openTimelineGallery(entry, group, theme = {}) {
     header.style.maxHeight=''; header.style.overflow='';
     dialog.style.height=''; dialog.style.maxHeight=''; stage.style.height=''; stage.style.aspectRatio='';
     const margin=32, maxW=Math.min(vw-margin*2,1200);
-    const measuredRatio=galleryRatio(items,media,vw/vh);
-    const ratio=entry.date==='2026-08-08' ? Math.max(measuredRatio,1.5) : measuredRatio;
+    const ratio=galleryRatio(items,media,vw/vh);
     let width=maxW;
     for(let i=0;i<8;i++) {
       dialog.style.width=`${width}px`;
@@ -626,7 +613,10 @@ export function openTimelineGallery(entry, group, theme = {}) {
       details.append(more);
     } else paragraphs.forEach(text => details.append(el('p','',text)));
     items = gallery?.images || entry.images || (entry.thumbnail ? [entry.thumbnail] : []);
-    if (searchImage) { index=Math.max(0,items.indexOf(searchImage)); paused=true; }
+    if (searchImage) {
+      const identity=src=>{const url=new URL(absolute(src));url.search='';url.hash='';return url.href;};
+      index=Math.max(0,items.findIndex(src=>identity(src)===identity(searchImage)));
+    }
     if (entry.creditName) {
       const p=el('p','tg-credit',`${entry.creditPrefix || 'Foto:'} `);
       if (entry.creditHref) {

@@ -123,7 +123,7 @@ function matchesReviewedFacts(image, filters, people=[]) {
     if(!validLook && !body.length) return false;
     const tags=new Set([...(validLook ? facts.tags : []),...body.flatMap(facts=>facts.tags)]);
     return filters.every(fact=>{
-    if(fact==='nudity:any') return ['nudity:visible','body:penis-visible','body:buttocks-visible','body:testicles-visible','body:anus-visible','body:bare-torso','costume:nudity','costume:penis','costume:buttocks','costume:testicles'].some(tag=>tags.has(tag));
+    if(fact==='nudity:any') return ['nudity:visible','body:penis-visible','body:buttocks-visible','body:testicles-visible','body:anus-visible','body:bare-torso','costume:nudity','costume:penis','costume:buttocks','costume:testicles'].some(tag=>tags.has(tag)) || body.some(facts=>(facts.ownerSearchLabels||[]).some(label=>/^(?:pik|penis|nosser|testikler|røv|røvhul|numsehul)$/iu.test(label)));
     if(fact==='anatomy:rear') return ['body:buttocks-visible','body:anus-visible','costume:buttocks'].some(tag=>tags.has(tag));
     // Owner-approved costume anatomy participates in the same searches,
     // while its alt text and review tags explicitly describe the costume.

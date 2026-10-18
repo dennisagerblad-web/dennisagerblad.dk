@@ -155,6 +155,26 @@
           "costume:testicles"
         ]
       }
+    ],
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7476.jpg": [
+      {
+        "reviewed": true,
+        "subject": "dennis",
+        "tags": [
+          "body:testicles-visible",
+          "nudity:visible"
+        ]
+      }
+    ],
+    "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7496.jpg": [
+      {
+        "reviewed": true,
+        "subject": "dennis",
+        "tags": [
+          "body:testicles-visible",
+          "nudity:visible"
+        ]
+      }
     ]
   }
 }

@@ -16,6 +16,17 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  const sources=q=>search(q).flatMap(r=>r.matchedImages.map(i=>i.src));
  const shared=sources('nøgen');
  const penis=sources('pik'),testicles=sources('nosser'),rear=sources('røv');
+ const corrections=JSON.parse(fs.readFileSync('docs/timeline-gallery-search-corrections-20261018.json'));
+ const correctedSources=new Set(corrections.bodyCorrections.map(r=>r.src));
+ for(const src of new Set([...penis,...testicles,...rear])) assert.ok(shared.includes(src),'General nudity includes every specific anatomy result: '+src);
+ for(const correction of corrections.bodyCorrections) {
+  for(const query of correction.searches) assert.ok(sources(query).includes(correction.src),query+': '+correction.src);
+  for(const query of correction.excludedSearches) assert.ok(!sources(query).includes(correction.src),query+' excludes '+correction.src);
+ }
+ const beQueer=real.find(r=>r.entry.date==='2005-10-08');
+ assert.deepEqual(beQueer.images.slice(0,2).map(i=>i.src),corrections.galleryOrder);
+ assert.equal(beQueer.images[0].src,beQueer.entry.thumbnail,'The thumbnail is the first slide');
+ assert.ok(!search('røv').some(r=>r.entry.date==='2003-01-12'),'Ski trip is excluded from rear-anatomy results');
  for(const word of ['pik','penis','penissen']) assert.deepEqual(sources(word),penis,'Penis search group: '+word);
  for(const word of ['nosser','nosserne','testikler','testiklerne','testicles']) assert.deepEqual(sources(word),testicles,'Testicles search group: '+word);
  for(const word of ['røv','røven','røvhul','røvhullet','numsehul','numsehullet','anus','balder','rumpe']) assert.deepEqual(sources(word),rear,'Rear anatomy search group: '+word);
@@ -73,7 +84,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  for(const word of ['nosser','røv','røvhul','numsehul'])assert.equal(match(videoResult,parse(word)),null,'Video is not added to unrelated anatomy groups: '+word);
  assert.ok(search('pik 2005').every(r=>r.entry.year===2005));
  assert.ok(search('røv grønne briller').every(r=>r.matchedImages.every(i=>i.look.tags.includes('glasses:green'))));
- for(const r of report.photos.filter(r=>!additions.excludedPhotos.some(p=>p.src===r.src))){assert.ok(f[r.src].subject==='dennis');r.tags.forEach(tag=>assert.ok(f[r.src].tags.includes(tag)));}
+ for(const r of report.photos.filter(r=>!correctedSources.has(r.src)&&!additions.excludedPhotos.some(p=>p.src===r.src))){assert.ok(f[r.src].subject==='dennis');r.tags.forEach(tag=>assert.ok(f[r.src].tags.includes(tag)));}
  for(const r of report.costumePhotos){assert.ok(f[r.src].subject==='dennis');r.tags.forEach(tag=>assert.ok(f[r.src].tags.includes(tag)));}
  for(const id of [276,1047,1048,1049,1050,1113,1114,1116,1117,1120])assert.ok(sources('pik').includes(inventory[id].src),'Approved costume penis '+id);
  assert.ok(sources('røv').includes(inventory[1118].src),'Approved costume buttocks');
