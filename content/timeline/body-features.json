@@ -175,6 +175,17 @@
           "nudity:visible"
         ]
       }
+    ],
+    "./archive/legacy/200_calendar/2012/2012_02_17_strikkeklub/strikkeklub.jpg": [
+      {
+        "reviewed": true,
+        "subject": "unidentified-adult-strikkeklub",
+        "tags": [
+          "nudity:visible",
+          "body:bare-torso"
+        ],
+        "evidence": "Dennis confirmed on 19 October 2026: a naked man lies on the table in the Strikkeklub poster. No identity inferred."
+      }
     ]
   }
 }
