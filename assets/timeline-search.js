@@ -1,4 +1,4 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261019-lyd-copy-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261019-review-press-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261018-sproghoved-1';
 
 import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261019-word-slides-1';
@@ -22,7 +22,7 @@ const mobileLandscape = matchMedia('(max-width: 1100px) and (max-height: 650px) 
 
 // Keep this category routing in step with the published TimelineView in site-app.js.
 function timelineGroup(entry) {
-  if (['2013-02-12', '2011-08-14', '2008-05-23', '2007-11-10'].includes(entry.date)) return 'press';
+  if (['2012-04-18', '2013-02-12', '2011-08-14', '2008-05-23', '2007-11-10'].includes(entry.date)) return 'press';
   if (entry.title === 'Fjøllini Dansa, København.' || entry.title === 'Loco Mama, MIX-Copenhagen BLOG' || /video marathon/i.test(entry.category)) return 'press';
   if (/video|youtube/i.test(entry.category)) return 'music';
   if (/artist talk/i.test(entry.title)) return 'word';

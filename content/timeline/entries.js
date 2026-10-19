@@ -2409,7 +2409,7 @@ export const timelineEntries = [
     "year": 2012,
     "category": "Anmeldelse",
     "title": "Anmeldelse af Lyd + Litteratur Festival, dag 1 – Overspring.dk",
-    "group": "word",
+    "group": "press",
     "href": "./archive/legacy/200_calendar/2012/2012_04_18_overspring/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/8b1466c5adef96.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/04c040ca30d373e4.webp",
