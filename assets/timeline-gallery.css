@@ -325,3 +325,11 @@ body .timeline-overlay iframe:is(.timeline-video-player,.tg-video) { outline:non
   max-height:none;
   display:block;
 }
+
+/* Keep text-only event information on the Timeline without a popup trigger. */
+.timeline-inline-details {
+  display:block;
+  margin-top:8px;
+  font-size:.85em;
+  line-height:1.45;
+}
