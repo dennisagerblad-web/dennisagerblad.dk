@@ -2565,10 +2565,24 @@ export const timelineEntries = [
     "date": "2011-11-06",
     "display": "06.11.2011",
     "year": 2011,
-    "category": "Optræden",
-    "title": "Det Færøske Hus, Vesterbrogade 17A,, København.",
-    "group": "live",
-    "href": null
+    "category": "Lyrikoplæsning",
+    "title": "Lyrikoplæsning i Det Færøske Hus, Vesterbrogade, København.",
+    "group": "word",
+    "href": null,
+    "gallery": true,
+    "images": [
+      "./archive/timeline/word/2011-11-06-foerohus-01.webp",
+      "./archive/timeline/word/2011-11-06-foerohus-02.webp",
+      "./archive/timeline/word/2011-11-06-foerohus-03.webp",
+      "./archive/timeline/word/2011-11-06-foerohus-04.webp"
+    ],
+    "thumbnail": "./archive/timeline/word/2011-11-06-foerohus-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-11-06-foerohus-01.webp",
+    "thumbnailFit": "contain",
+    "details": "Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen.",
+    "shareAliases": [
+      "2011-11-06|Optræden|Det Færøske Hus, Vesterbrogade 17A,, København."
+    ]
   },
   {
     "date": "2011-11-05",

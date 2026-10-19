@@ -1,4 +1,4 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261019-paludan-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261019-foerohus-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261018-sproghoved-1';
 
 const groups = ['live', 'music', 'art', 'word', 'press'];
