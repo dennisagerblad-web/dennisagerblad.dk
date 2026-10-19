@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-19",
+  "entry": {
+    "date": "2011-11-05",
+    "display": "05.11.2011",
+    "year": 2011,
+    "category": "Lyrikoplæsning",
+    "title": "Lyrikoplæsning på Café Paludan, København.",
+    "group": "word",
+    "href": null,
+    "gallery": true,
+    "images": [
+      "./archive/timeline/word/2011-11-05-paludan-01.webp",
+      "./archive/timeline/word/2011-11-05-paludan-02.webp",
+      "./archive/timeline/word/2011-11-05-paludan-03.webp",
+      "./archive/timeline/word/2011-11-05-paludan-04.webp",
+      "./archive/timeline/word/2011-11-05-paludan-05.webp",
+      "./archive/timeline/word/2011-11-05-paludan-06.webp"
+    ],
+    "thumbnail": "./archive/timeline/word/2011-11-05-paludan-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-11-05-paludan-01.webp",
+    "thumbnailFit": "contain",
+    "details": "Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen.",
+    "shareAliases": [
+      "2011-11-05|Optræden|Paludan Bogcafe, Fiolstræde, København."
+    ]
+  },
+  "photos": [
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 11 05 Cafe_Paludan/Gode/2011 11 05 Lyrik oplæsning på Cafe Paludan, København. Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen./01.png",
+      "sha256Original": "ac5e8eefa74ac180962965252bd2735048db8d293393a275f582ff19b17a8138",
+      "originalWidth": 1451,
+      "originalHeight": 1084,
+      "originalBytes": 2791012,
+      "src": "./archive/timeline/word/2011-11-05-paludan-01.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-11-05-paludan-01.webp",
+      "width": 1451,
+      "height": 1084,
+      "webBytes": 283194,
+      "thumbnailBytes": 35110,
+      "description": "To personer poserer på en café; den ene har krøllet brun paryk, ternet skjorte og lysegrøn kjole, og den anden har lyst hår, briller og sort trøje.",
+      "english": "Two people pose in a café; one wears a curly brown wig, checked shirt and light green dress, and the other has light hair, glasses and a black top.",
+      "reviewId": "pending-paludan-2011-11-05-01"
+    },
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 11 05 Cafe_Paludan/Gode/2011 11 05 Lyrik oplæsning på Cafe Paludan, København. Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen./02.png",
+      "sha256Original": "93c0151a1e9256ba27cba374fd5a9ee4cff7273e7c51f1eacb4ce30897ebb049",
+      "originalWidth": 1451,
+      "originalHeight": 1084,
+      "originalBytes": 2741262,
+      "src": "./archive/timeline/word/2011-11-05-paludan-02.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-11-05-paludan-02.webp",
+      "width": 1451,
+      "height": 1084,
+      "webBytes": 263898,
+      "thumbnailBytes": 32912,
+      "description": "To personer med krøllet brun paryk og lysegrøn kjole samt lyst hår, briller og sort trøje laver ansigter mod kameraet på en café.",
+      "english": "Two people, one wearing a curly brown wig and light green dress and the other with light hair, glasses and a black top, pull faces at the camera in a café.",
+      "reviewId": "pending-paludan-2011-11-05-02"
+    },
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 11 05 Cafe_Paludan/Gode/2011 11 05 Lyrik oplæsning på Cafe Paludan, København. Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen./03.png",
+      "sha256Original": "a28d0b9c6a598b5310f295894d7c541b7c95c5235d02eb3cbc52b6e968eec22a",
+      "originalWidth": 1451,
+      "originalHeight": 1084,
+      "originalBytes": 2693284,
+      "src": "./archive/timeline/word/2011-11-05-paludan-03.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-11-05-paludan-03.webp",
+      "width": 1451,
+      "height": 1084,
+      "webBytes": 252498,
+      "thumbnailBytes": 31602,
+      "description": "To personer sidder tæt sammen på en café; den ene har krøllet brun paryk og lysegrøn kjole, og den anden har lyst hår, briller og sort trøje.",
+      "english": "Two people sit close together in a café; one wears a curly brown wig and light green dress, and the other has light hair, glasses and a black top.",
+      "reviewId": "pending-paludan-2011-11-05-03"
+    },
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 11 05 Cafe_Paludan/Gode/2011 11 05 Lyrik oplæsning på Cafe Paludan, København. Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen./04.png",
+      "sha256Original": "c8c8c7474e001b9d514fd4f182a534c9929b42283e4b792547bccdab90d7658d",
+      "originalWidth": 1451,
+      "originalHeight": 1084,
+      "originalBytes": 2571346,
+      "src": "./archive/timeline/word/2011-11-05-paludan-04.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-11-05-paludan-04.webp",
+      "width": 1451,
+      "height": 1084,
+      "webBytes": 232200,
+      "thumbnailBytes": 36974,
+      "description": "Fem personer poserer sammen foran bogreoler på en café; personen forrest har krøllet brun paryk, ternet skjorte og lysegrøn kjole.",
+      "english": "Five people pose together in front of bookshelves in a café; the person in front wears a curly brown wig, checked shirt and light green dress.",
+      "reviewId": "pending-paludan-2011-11-05-04"
+    },
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 11 05 Cafe_Paludan/Gode/2011 11 05 Lyrik oplæsning på Cafe Paludan, København. Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen./05.png",
+      "sha256Original": "b7db375022c87cc377bd09849a577410557b00cacbd4400c7b64d78fa9d63d68",
+      "originalWidth": 1084,
+      "originalHeight": 1451,
+      "originalBytes": 2489090,
+      "src": "./archive/timeline/word/2011-11-05-paludan-05.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-11-05-paludan-05.webp",
+      "width": 1084,
+      "height": 1451,
+      "webBytes": 222932,
+      "thumbnailBytes": 35706,
+      "description": "En person med lyst hår, briller og sort trøje omfavner en siddende person med krøllet brun paryk og lysegrøn kjole.",
+      "english": "A person with light hair, glasses and a black top embraces a seated person wearing a curly brown wig and light green dress.",
+      "reviewId": "pending-paludan-2011-11-05-05"
+    },
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 11 05 Cafe_Paludan/Gode/2011 11 05 Lyrik oplæsning på Cafe Paludan, København. Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen./296304_10150351271917466_728882465_8530102_1506675821_n.jpg",
+      "sha256Original": "f45749253b5279f5f83c13632daa0d731cb6efd83552ad1948211b9604315a28",
+      "originalWidth": 600,
+      "originalHeight": 600,
+      "originalBytes": 51311,
+      "src": "./archive/timeline/word/2011-11-05-paludan-06.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-11-05-paludan-06.webp",
+      "width": 600,
+      "height": 600,
+      "webBytes": 54512,
+      "thumbnailBytes": 32354,
+      "description": "Person i lysegrøn kjole og ternet skjorte holder en mikrofon under en oplæsning foran caféens bogreoler; billedet har en hvid kant.",
+      "english": "A person wearing a light green dress and checked shirt holds a microphone during a poetry reading in front of café bookshelves; the photograph has a white border.",
+      "reviewId": "pending-paludan-2011-11-05-06"
+    }
+  ],
+  "personReview": {
+    "status": "pending",
+    "reviewURL": "http://127.0.0.1:8825/"
+  }
+}

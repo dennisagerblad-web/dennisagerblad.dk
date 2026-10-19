@@ -2574,10 +2574,26 @@ export const timelineEntries = [
     "date": "2011-11-05",
     "display": "05.11.2011",
     "year": 2011,
-    "category": "Optræden",
-    "title": "Paludan Bogcafe, Fiolstræde, København.",
-    "group": "live",
-    "href": null
+    "category": "Lyrikoplæsning",
+    "title": "Lyrikoplæsning på Café Paludan, København.",
+    "group": "word",
+    "href": null,
+    "gallery": true,
+    "images": [
+      "./archive/timeline/word/2011-11-05-paludan-01.webp",
+      "./archive/timeline/word/2011-11-05-paludan-02.webp",
+      "./archive/timeline/word/2011-11-05-paludan-03.webp",
+      "./archive/timeline/word/2011-11-05-paludan-04.webp",
+      "./archive/timeline/word/2011-11-05-paludan-05.webp",
+      "./archive/timeline/word/2011-11-05-paludan-06.webp"
+    ],
+    "thumbnail": "./archive/timeline/word/2011-11-05-paludan-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-11-05-paludan-01.webp",
+    "thumbnailFit": "contain",
+    "details": "Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen.",
+    "shareAliases": [
+      "2011-11-05|Optræden|Paludan Bogcafe, Fiolstræde, København."
+    ]
   },
   {
     "date": "2011-11-01",
