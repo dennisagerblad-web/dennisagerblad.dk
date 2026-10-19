@@ -1,8 +1,8 @@
 {
   "date": "2026-10-18",
   "entry": {
-    "date": "2011-07-10",
-    "display": "10.07.2011",
+    "date": "2011-07-09",
+    "display": "09.07.2011",
     "year": 2011,
     "category": "Musikvideooptagelser",
     "title": "Optagelser af musikvideoen Sproghoved, Bøssehuset.",
@@ -12,7 +12,11 @@
     "details": "Optagelser af musikvideoen Sproghoved i Bøssehuset.",
     "thumbnail": "./archive/timeline/music/2011-07-10-sproghoved-01.webp",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/2011-07-10-sproghoved-01.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-07-10-sproghoved-01.webp",
+    "shareAliases": [
+      "2011-07-10|Musikvideooptagelser|Optagelser af musikvideoen Sproghoved, Bøssehuset.",
+      "2011-07-09|Musikvideo-optagelse|Bøssehuset, Christiania, København."
+    ]
   },
   "photos": [
     {
@@ -679,5 +683,13 @@
         "confirmation": "Manually selected by Dennis in existing photo review; completion confirmed in chat."
       }
     ]
+  },
+  "dateCorrection": {
+    "date": "2026-10-19",
+    "confirmedBy": "Dennis in chat",
+    "eventDate": "2011-07-09",
+    "removedDuplicate": "2011-07-09|Musikvideo-optagelse|Bøssehuset, Christiania, København.",
+    "preservedImages": 20,
+    "preservedNameAssociations": 32
   }
 }

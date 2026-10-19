@@ -2731,8 +2731,8 @@ export const timelineEntries = [
     "href": null
   },
   {
-    "date": "2011-07-10",
-    "display": "10.07.2011",
+    "date": "2011-07-09",
+    "display": "09.07.2011",
     "year": 2011,
     "category": "Musikvideooptagelser",
     "title": "Optagelser af musikvideoen Sproghoved, Bøssehuset.",
@@ -2742,18 +2742,11 @@ export const timelineEntries = [
     "details": "Optagelser af musikvideoen Sproghoved i Bøssehuset.",
     "thumbnail": "./archive/timeline/music/2011-07-10-sproghoved-01.webp",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/2011-07-10-sproghoved-01.webp"
-  },
-  {
-    "date": "2011-07-09",
-    "display": "09.07.2011",
-    "year": 2011,
-    "category": "Musikvideo-optagelse",
-    "title": "Bøssehuset, Christiania, København.",
-    "group": "media",
-    "href": "./archive/legacy/200_calendar/2011/11_07_09_musikvideo/index.html",
-    "thumbnail": "./archive/timeline/sproghoved.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/8332f1e9fd3f4203.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-07-10-sproghoved-01.webp",
+    "shareAliases": [
+      "2011-07-10|Musikvideooptagelser|Optagelser af musikvideoen Sproghoved, Bøssehuset.",
+      "2011-07-09|Musikvideo-optagelse|Bøssehuset, Christiania, København."
+    ]
   },
   {
     "date": "2011-07-01",
