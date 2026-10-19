@@ -2379,12 +2379,17 @@ export const timelineEntries = [
     "display": "23.04.2012",
     "year": 2012,
     "category": "Liveoptræden",
-    "title": "Lyd + Litteratur, Hovedbilioteket, København.",
-    "group": "live",
+    "title": "Lyd + Litteratur Festival, Hovedbiblioteket, København.",
+    "group": "word",
     "href": "./archive/legacy/200_calendar/2012/2012_04_17_lyd_litteratur/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/1b8e6d0aa2e466.jpg",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/86c18a8c8c4775b5.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/86c18a8c8c4775b5.webp",
+    "shareAliases": [
+      "2012-04-23|Liveoptræden|Lyd + Litteratur, Hovedbilioteket, København."
+    ],
+    "archiveCompactHeading": true,
+    "archiveSummary": "Jeg fremførte digte af Tóroddur Poulsen kl. 17."
   },
   {
     "date": "2012-04-20",
@@ -2403,23 +2408,32 @@ export const timelineEntries = [
     "display": "18.04.2012",
     "year": 2012,
     "category": "Anmeldelse",
-    "title": "af Lyd+litteratur Festival, Overspring.dk",
-    "group": "media",
+    "title": "Anmeldelse af Lyd + Litteratur Festival, dag 1 – Overspring.dk",
+    "group": "word",
     "href": "./archive/legacy/200_calendar/2012/2012_04_18_overspring/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/8b1466c5adef96.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/04c040ca30d373e4.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/04c040ca30d373e4.webp",
+    "shareAliases": [
+      "2012-04-18|Anmeldelse|af Lyd+litteratur Festival, Overspring.dk"
+    ],
+    "archiveCompactHeading": true
   },
   {
     "date": "2012-04-17",
     "display": "17.04.2012",
     "year": 2012,
     "category": "Liveoptræden",
-    "title": "Lyd + Litteratur, Radar, Aarhus.",
-    "group": "live",
+    "title": "Lyd + Litteratur Festival, Radar, Aarhus.",
+    "group": "word",
     "href": "./archive/legacy/200_calendar/2012/2012_04_17_lyd_litteratur/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/1b8e6d0aa2e466.jpg",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/86c18a8c8c4775b5.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/86c18a8c8c4775b5.webp",
+    "shareAliases": [
+      "2012-04-17|Liveoptræden|Lyd + Litteratur, Radar, Aarhus."
+    ],
+    "archiveCompactHeading": true,
+    "archiveSummary": "Jeg fremførte digte af Tóroddur Poulsen kl. 20."
   },
   {
     "date": "2012-04-12",
