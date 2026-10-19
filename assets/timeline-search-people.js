@@ -769,6 +769,13 @@ export const timelinePerformers = [
     "aliases": [
       "Søren B Meisterbrau"
     ]
+  },
+  {
+    "id": "toroddur-poulsen",
+    "name": "Tóroddur Poulsen",
+    "aliases": [
+      "Tóroddur Poulsen"
+    ]
   }
 ];
 

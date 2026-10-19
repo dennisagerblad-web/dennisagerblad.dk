@@ -124,7 +124,93 @@
     }
   ],
   "personReview": {
-    "status": "pending",
-    "reviewURL": "http://127.0.0.1:8825/"
+    "status": "confirmed",
+    "savedRevision": 241,
+    "namedPhotos": 6,
+    "associations": 11,
+    "records": [
+      {
+        "src": "./archive/timeline/word/2011-11-05-paludan-01.webp",
+        "people": [
+          "dennis",
+          "toroddur-poulsen"
+        ],
+        "names": [
+          "Dennis Agerblad",
+          "Tóroddur Poulsen"
+        ],
+        "description": "To personer poserer på en café; den ene har krøllet brun paryk, ternet skjorte og lysegrøn kjole, og den anden har lyst hår, briller og sort trøje. På billedet ses Dennis Agerblad og Tóroddur Poulsen.",
+        "english": "Two people pose in a café; one wears a curly brown wig, checked shirt and light green dress, and the other has light hair, glasses and a black top. Pictured: Dennis Agerblad, Tóroddur Poulsen.",
+        "confirmation": "Manually selected in existing photo review; completion confirmed by owner on 2026-10-19."
+      },
+      {
+        "src": "./archive/timeline/word/2011-11-05-paludan-02.webp",
+        "people": [
+          "dennis",
+          "toroddur-poulsen"
+        ],
+        "names": [
+          "Dennis Agerblad",
+          "Tóroddur Poulsen"
+        ],
+        "description": "To personer med krøllet brun paryk og lysegrøn kjole samt lyst hår, briller og sort trøje laver ansigter mod kameraet på en café. På billedet ses Dennis Agerblad og Tóroddur Poulsen.",
+        "english": "Two people, one wearing a curly brown wig and light green dress and the other with light hair, glasses and a black top, pull faces at the camera in a café. Pictured: Dennis Agerblad, Tóroddur Poulsen.",
+        "confirmation": "Manually selected in existing photo review; completion confirmed by owner on 2026-10-19."
+      },
+      {
+        "src": "./archive/timeline/word/2011-11-05-paludan-03.webp",
+        "people": [
+          "dennis",
+          "toroddur-poulsen"
+        ],
+        "names": [
+          "Dennis Agerblad",
+          "Tóroddur Poulsen"
+        ],
+        "description": "To personer sidder tæt sammen på en café; den ene har krøllet brun paryk og lysegrøn kjole, og den anden har lyst hår, briller og sort trøje. På billedet ses Dennis Agerblad og Tóroddur Poulsen.",
+        "english": "Two people sit close together in a café; one wears a curly brown wig and light green dress, and the other has light hair, glasses and a black top. Pictured: Dennis Agerblad, Tóroddur Poulsen.",
+        "confirmation": "Manually selected in existing photo review; completion confirmed by owner on 2026-10-19."
+      },
+      {
+        "src": "./archive/timeline/word/2011-11-05-paludan-04.webp",
+        "people": [
+          "dennis",
+          "toroddur-poulsen"
+        ],
+        "names": [
+          "Dennis Agerblad",
+          "Tóroddur Poulsen"
+        ],
+        "description": "Fem personer poserer sammen foran bogreoler på en café; personen forrest har krøllet brun paryk, ternet skjorte og lysegrøn kjole. På billedet ses Dennis Agerblad og Tóroddur Poulsen.",
+        "english": "Five people pose together in front of bookshelves in a café; the person in front wears a curly brown wig, checked shirt and light green dress. Pictured: Dennis Agerblad, Tóroddur Poulsen.",
+        "confirmation": "Manually selected in existing photo review; completion confirmed by owner on 2026-10-19."
+      },
+      {
+        "src": "./archive/timeline/word/2011-11-05-paludan-05.webp",
+        "people": [
+          "dennis",
+          "toroddur-poulsen"
+        ],
+        "names": [
+          "Dennis Agerblad",
+          "Tóroddur Poulsen"
+        ],
+        "description": "En person med lyst hår, briller og sort trøje omfavner en siddende person med krøllet brun paryk og lysegrøn kjole. På billedet ses Dennis Agerblad og Tóroddur Poulsen.",
+        "english": "A person with light hair, glasses and a black top embraces a seated person wearing a curly brown wig and light green dress. Pictured: Dennis Agerblad, Tóroddur Poulsen.",
+        "confirmation": "Manually selected in existing photo review; completion confirmed by owner on 2026-10-19."
+      },
+      {
+        "src": "./archive/timeline/word/2011-11-05-paludan-06.webp",
+        "people": [
+          "dennis"
+        ],
+        "names": [
+          "Dennis Agerblad"
+        ],
+        "description": "Person i lysegrøn kjole og ternet skjorte holder en mikrofon under en oplæsning foran caféens bogreoler; billedet har en hvid kant. På billedet ses Dennis Agerblad.",
+        "english": "A person wearing a light green dress and checked shirt holds a microphone during a poetry reading in front of café bookshelves; the photograph has a white border. Pictured: Dennis Agerblad.",
+        "confirmation": "Manually selected in existing photo review; completion confirmed by owner on 2026-10-19."
+      }
+    ]
   }
 }
