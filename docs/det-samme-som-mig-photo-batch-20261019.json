@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-19",
+  "entry": {
+    "date": "2011-10-07",
+    "display": "07.10.2011",
+    "year": 2011,
+    "category": "Musikvideooptagelser",
+    "title": "Optagelser af musikvideoen Det samme som mig",
+    "group": "music",
+    "gallery": true,
+    "href": null,
+    "thumbnail": "./archive/timeline/music/2011-10-07-det-samme-som-mig-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-10-07-det-samme-som-mig-01.webp",
+    "thumbnailFit": "contain",
+    "images": [
+      "./archive/timeline/music/2011-10-07-det-samme-som-mig-01.webp",
+      "./archive/timeline/music/2011-10-07-det-samme-som-mig-02.webp",
+      "./archive/timeline/music/2011-10-07-det-samme-som-mig-03.webp",
+      "./archive/timeline/music/2011-10-07-det-samme-som-mig-04.webp"
+    ],
+    "videoId": "K73sDChiHUw",
+    "videoTitle": "Det samme som mig – musikvideo",
+    "videoAfterImages": true
+  },
+  "photos": [
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 10 07 TDC Japan/2011 10 07 Optagelser af musikvideoen Det samme som mig/IMG_2078.JPG",
+      "sha256Original": "da8c41fe91b491295504093f0e8ea1450fa2d4a6375615bd0e834c292541b9d7",
+      "originalWidth": 4320,
+      "originalHeight": 3240,
+      "originalBytes": 5642081,
+      "src": "./archive/timeline/music/2011-10-07-det-samme-som-mig-01.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-10-07-det-samme-som-mig-01.webp",
+      "width": 2200,
+      "height": 1650,
+      "webBytes": 397030,
+      "thumbnailBytes": 30116,
+      "description": "Nærbillede af en person med sort paryk, hvidt pandebånd med rød cirkel, gul øjenmakeup og rød trøje foran træer.",
+      "english": "Close-up of a person wearing a black wig, a white headband with a red circle, yellow eye makeup and a red top in front of trees."
+    },
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 10 07 TDC Japan/2011 10 07 Optagelser af musikvideoen Det samme som mig/IMG_2079.jpg",
+      "sha256Original": "ecb34cabc4beaffb23f6ceb58cb6e7fef2f772a752acf94949183ef532127eb7",
+      "originalWidth": 4320,
+      "originalHeight": 3240,
+      "originalBytes": 996243,
+      "src": "./archive/timeline/music/2011-10-07-det-samme-som-mig-02.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-10-07-det-samme-som-mig-02.webp",
+      "width": 2200,
+      "height": 1650,
+      "webBytes": 184012,
+      "thumbnailBytes": 14494,
+      "description": "Person med sort paryk, hvidt pandebånd og rød trøje fotograferer sig selv i en skov; en anden person i rødt står i baggrunden.",
+      "english": "A person wearing a black wig, white headband and red top takes a self-portrait in a forest; another person in red stands in the background."
+    },
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 10 07 TDC Japan/2011 10 07 Optagelser af musikvideoen Det samme som mig/IMG_2088.JPG",
+      "sha256Original": "b32c324de3df9bc8ae6cc74061105d1c922c6395866217c2f67ec3477306462a",
+      "originalWidth": 4320,
+      "originalHeight": 3240,
+      "originalBytes": 5080295,
+      "src": "./archive/timeline/music/2011-10-07-det-samme-som-mig-03.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-10-07-det-samme-som-mig-03.webp",
+      "width": 2200,
+      "height": 1650,
+      "webBytes": 325716,
+      "thumbnailBytes": 34648,
+      "description": "To personer med sorte parykker, hvide pandebånd med røde cirkler og røde trøjer med sorte stjerner står ved en træbygning i skoven.",
+      "english": "Two people wearing black wigs, white headbands with red circles and red tops with black stars stand beside a wooden building in the forest."
+    },
+    {
+      "source": "/Users/robintm/Pictures/Dennis Agerblad/2011/2011 10 07 TDC Japan/2011 10 07 Optagelser af musikvideoen Det samme som mig/IMG_2106.JPG",
+      "sha256Original": "7248ca0d3c50e4ec4410299a2b086d3b6c54069b289738cf9fdf55b5570d191d",
+      "originalWidth": 4320,
+      "originalHeight": 3240,
+      "originalBytes": 5664895,
+      "src": "./archive/timeline/music/2011-10-07-det-samme-som-mig-04.webp",
+      "thumbnail": "./assets/timeline-thumbs/2011-10-07-det-samme-som-mig-04.webp",
+      "width": 2200,
+      "height": 1650,
+      "webBytes": 448196,
+      "thumbnailBytes": 40504,
+      "description": "Fire personer med sorte parykker, hvide pandebånd med røde cirkler og røde trøjer poserer sammen i en skov.",
+      "english": "Four people wearing black wigs, white headbands with red circles and red tops pose together in a forest."
+    }
+  ],
+  "personReview": {
+    "status": "excluded-by-owner",
+    "reason": "Dennis explicitly requested no person tagging for this event on 19 October 2026."
+  }
+}

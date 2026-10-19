@@ -2602,6 +2602,28 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/b0444d89ecaa0540.webp"
   },
   {
+    "date": "2011-10-07",
+    "display": "07.10.2011",
+    "year": 2011,
+    "category": "Musikvideooptagelser",
+    "title": "Optagelser af musikvideoen Det samme som mig",
+    "group": "music",
+    "gallery": true,
+    "href": null,
+    "thumbnail": "./archive/timeline/music/2011-10-07-det-samme-som-mig-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2011-10-07-det-samme-som-mig-01.webp",
+    "thumbnailFit": "contain",
+    "images": [
+      "./archive/timeline/music/2011-10-07-det-samme-som-mig-01.webp",
+      "./archive/timeline/music/2011-10-07-det-samme-som-mig-02.webp",
+      "./archive/timeline/music/2011-10-07-det-samme-som-mig-03.webp",
+      "./archive/timeline/music/2011-10-07-det-samme-som-mig-04.webp"
+    ],
+    "videoId": "K73sDChiHUw",
+    "videoTitle": "Det samme som mig – musikvideo",
+    "videoAfterImages": true
+  },
+  {
     "date": "2011-09-26",
     "display": "26.09.2011",
     "year": 2011,
