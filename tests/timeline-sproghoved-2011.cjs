@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 (async()=>{
  const {timelineEntries}=await import('../content/timeline/entries.js');
  const {parseTimelineSearchQuery:parse,matchTimelineResult:match,normalizeTimelineSearch:normalize}=await import('../assets/timeline-search-match.js');
- const {findTimelinePeople:find}=await import('../assets/timeline-search-people.js');
+ const {findTimelinePeople:find,timelinePerformers}=await import('../assets/timeline-search-people.js');
  const read=p=>JSON.parse(fs.readFileSync(p));
  const batch=read('docs/sproghoved-photo-batch-20261018.json'),review=batch.personReview;
  const galleries=read('content/timeline/galleries.json').entries,people=read('content/timeline/people.json').photos;
@@ -22,5 +22,6 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  assert.equal(count,32);
  for(const person of review.newPeople){const expected=review.records.filter(r=>r.people.includes(person.id)).map(r=>r.src).sort();const actual=[...new Set(results.flatMap(r=>match(r,parse(person.name))?.matchedImages||[]).map(i=>i.src))].sort();assert.deepEqual(actual,expected,'Exact confirmed image set for '+person.name);}
  for(const src of review.unassignedPhotos)assert.equal(people[src],undefined,'No invented names on unassigned image');
+ const birk=timelinePerformers.find(p=>p.name==='Birk');assert.ok(birk);assert.deepEqual(find('Birk'),[birk.id]);assert.deepEqual(find('Anders Berlin'),[],'Incorrect name is no longer searchable as a person');assert.ok(!timelinePerformers.some(p=>p.name==='Anders Berlin'||p.aliases.includes('Anders Berlin')));
  console.log(`PASS: 20 Sproghoved photos in Musik, all ${count} confirmed photo/name matches, exact seven new name sets, aligned Danish/English descriptions; unassigned photo retained.`);
 })().catch(e=>{console.error(e);process.exitCode=1});

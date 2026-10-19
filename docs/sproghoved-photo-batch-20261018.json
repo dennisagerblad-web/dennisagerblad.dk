@@ -367,9 +367,9 @@
     "newPeople": [
       {
         "id": "anders-berlin",
-        "name": "Anders Berlin",
+        "name": "Birk",
         "aliases": [
-          "Anders Berlin"
+          "Birk"
         ]
       },
       {
@@ -490,10 +490,10 @@
           "anders-berlin"
         ],
         "names": [
-          "Anders Berlin"
+          "Birk"
         ],
-        "description": "En person med turkis paryk, bar overkrop og grønne bånd poserer foran en mørk baggrund. På billedet ses Anders Berlin.",
-        "english": "A person in a turquoise wig with a bare torso and green ribbons poses against a dark background. Pictured: Anders Berlin.",
+        "description": "En person med turkis paryk, bar overkrop og grønne bånd poserer foran en mørk baggrund. På billedet ses Birk.",
+        "english": "A person in a turquoise wig with a bare torso and green ribbons poses against a dark background. Pictured: Birk.",
         "confirmation": "Manually selected by Dennis in existing photo review; completion confirmed in chat."
       },
       {

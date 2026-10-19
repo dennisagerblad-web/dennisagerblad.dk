@@ -722,9 +722,9 @@ export const timelinePerformers = [
   },
   {
     "id": "anders-berlin",
-    "name": "Anders Berlin",
+    "name": "Birk",
     "aliases": [
-      "Anders Berlin"
+      "Birk"
     ]
   },
   {
