@@ -317,3 +317,11 @@ body .timeline-overlay iframe:is(.timeline-video-player,.tg-video) { outline:non
   .timeline-overlay.tg-overlay { padding:20px; }
   .timeline-overlay .tg-dialog { max-width:calc(100vw - 40px); }
 }
+
+/* Archive content uses the same single scrolling popup as native entries. */
+.timeline-overlay .timeline-popup-archive > iframe {
+  flex:none;
+  min-height:0;
+  max-height:none;
+  display:block;
+}
