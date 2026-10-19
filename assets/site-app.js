@@ -1,8 +1,8 @@
 import {hasTimelinePopupContent,timelineInlineDetails} from "./timeline-popup-content.js?v=20261019-no-empty-popup-1";
 import {fitTimelineArchiveFrame} from "./timeline-archive-layout.js?v=20261019-one-scroll-1";
-import {compactTimelineArchive} from "./timeline-archive-headings.js?v=20261019-lyd-copy-1";
+import {compactTimelineArchive} from "./timeline-archive-headings.js?v=20261019-flyer-ratio-1";
 import {videoEmbedURL} from "./video-embed-url.js?v=20261012-video-history-1";
-import { timelineEntries } from "../content/timeline/entries.js?v=20261019-review-press-1";
+import { timelineEntries } from "../content/timeline/entries.js?v=20261019-flyer-ratio-1";
 import {openTimelineGallery} from "./timeline-gallery.js?v=20261019-word-slides-1";
 import {timelineDate, timelineThumbDimensions, scrollTimelineYear, scrollTimelineTop} from "./timeline-ui.js?v=20261018-sproghoved-1";
 

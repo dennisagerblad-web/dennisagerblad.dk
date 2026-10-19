@@ -2389,7 +2389,8 @@ export const timelineEntries = [
       "2012-04-23|Liveoptræden|Lyd + Litteratur, Hovedbilioteket, København."
     ],
     "archiveCompactHeading": true,
-    "archiveSummary": "Jeg fremførte digte af Tóroddur Poulsen kl. 17."
+    "archiveSummary": "Jeg fremførte digte af Tóroddur Poulsen kl. 17.",
+    "archiveImageAspectRatio": "433 / 472"
   },
   {
     "date": "2012-04-20",
@@ -2433,7 +2434,8 @@ export const timelineEntries = [
       "2012-04-17|Liveoptræden|Lyd + Litteratur, Radar, Aarhus."
     ],
     "archiveCompactHeading": true,
-    "archiveSummary": "Jeg fremførte digte af Tóroddur Poulsen kl. 20."
+    "archiveSummary": "Jeg fremførte digte af Tóroddur Poulsen kl. 20.",
+    "archiveImageAspectRatio": "433 / 472"
   },
   {
     "date": "2012-04-12",

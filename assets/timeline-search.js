@@ -1,4 +1,4 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261019-review-press-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261019-flyer-ratio-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261018-sproghoved-1';
 
 import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261019-word-slides-1';
