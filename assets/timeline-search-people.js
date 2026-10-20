@@ -776,6 +776,13 @@ export const timelinePerformers = [
     "aliases": [
       "Tóroddur Poulsen"
     ]
+  },
+  {
+    "id": "adam-mvgfsu92",
+    "name": "Adam",
+    "aliases": [
+      "Adam"
+    ]
   }
 ];
 

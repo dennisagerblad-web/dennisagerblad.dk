@@ -610,7 +610,19 @@ export const timelineEntries = [
     "category": "Optræden",
     "title": "Juleoptræden med Hairwerk, Scoop Models",
     "group": "live",
-    "href": null
+    "href": null,
+    "gallery": true,
+    "images": [
+      "./archive/timeline/performance/2022-12-17-scoop-01.webp",
+      "./archive/timeline/performance/2022-12-17-scoop-02.webp",
+      "./archive/timeline/performance/2022-12-17-scoop-03.webp",
+      "./archive/timeline/performance/2022-12-17-scoop-04.webp",
+      "./archive/timeline/performance/2022-12-17-scoop-05.webp",
+      "./archive/timeline/performance/2022-12-17-scoop-06.webp"
+    ],
+    "thumbnail": "./archive/timeline/performance/2022-12-17-scoop-03.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2022-12-17-scoop-03.webp",
+    "details": "Vi var go-go-dansere til Scoop Models’ juleshow."
   },
   {
     "date": "2022-10-21",
