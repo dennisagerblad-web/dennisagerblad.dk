@@ -14,7 +14,7 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261019-word-slides-1',
+  '../content/timeline/galleries.json?v=20261020-sproghoved-popup-1',
   '../content/timeline/image-metadata.json?v=20261019-word-slides-1',
   '../content/timeline/press-galleries.json?v=20261020-press-slides-2',
 ].map((path,index) => fetch(new URL(path, import.meta.url)).then(response => {

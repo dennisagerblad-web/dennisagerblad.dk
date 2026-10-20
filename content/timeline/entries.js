@@ -2810,7 +2810,6 @@ export const timelineEntries = [
     "group": "music",
     "gallery": true,
     "href": null,
-    "details": "Optagelser af musikvideoen Sproghoved i Bøssehuset.",
     "thumbnail": "./archive/timeline/music/2011-07-10-sproghoved-01.webp",
     "thumbnailFit": "contain",
     "thumbnailPreview": "./assets/timeline-thumbs/2011-07-10-sproghoved-01.webp",
