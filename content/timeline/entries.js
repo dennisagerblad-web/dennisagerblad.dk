@@ -264,7 +264,7 @@ export const timelineEntries = [
     "display": "21.12.2024",
     "year": 2024,
     "category": "Optræden",
-    "title": "Juleshow – Bøssehuset og Scoop Models",
+    "title": "Juleshow, Bøssehuset",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2024-12-21-thumb.webp",
@@ -279,18 +279,30 @@ export const timelineEntries = [
       "./archive/timeline/performance/2024-12-21-08.webp",
       "./archive/timeline/performance/2024-12-21-09.webp",
       "./archive/timeline/performance/2024-12-21-10.webp",
-      "./archive/timeline/performance/2024-12-21-18.webp",
+      "./archive/timeline/performance/2024-12-21-18.webp"
+    ],
+    "thumbnailPreview": "./assets/timeline-thumbs/36e3bea92784893a.webp",
+    "shareAliases": [
+      "2024-12-21|Optræden|Juleshow – Bøssehuset og Scoop Models"
+    ]
+  },
+  {
+    "date": "2024-12-14",
+    "display": "14.12.2024",
+    "year": 2024,
+    "category": "Optræden",
+    "title": "Scoop Models Juleshow",
+    "group": "live",
+    "href": null,
+    "thumbnail": "./archive/timeline/performance/2024-12-14-thumb.webp",
+    "images": [
       "./archive/timeline/performance/2024-12-14-01.webp",
       "./archive/timeline/performance/2024-12-14-02.webp",
       "./archive/timeline/performance/2024-12-14-03.webp",
       "./archive/timeline/performance/2024-12-14-04.webp"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/36e3bea92784893a.webp",
-    "details": "Juleshow i Bøssehuset og go-go-optræden til Scoop Models’ juleshow.",
-    "shareAliases": [
-      "2024-12-21|Optræden|Juleshow, Bøssehuset",
-      "2024-12-14|Optræden|Scoop Models Juleshow"
-    ]
+    "details": "Jeg var go-go-danser til Scoop Models’ juleshow.",
+    "thumbnailPreview": "./assets/timeline-thumbs/b874ecde162cf43a.webp"
   },
   {
     "date": "2024-11-10",

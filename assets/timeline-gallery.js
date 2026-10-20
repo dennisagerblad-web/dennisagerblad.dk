@@ -4,7 +4,7 @@
 import { timelineDate } from './timeline-ui.js?v=20261018-sproghoved-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
-import { timelineEntries } from '../content/timeline/entries.js?v=20261020-native-popups-3';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261020-christmas-split-1';
 import { timelinePopupParagraphs, timelinePopupGroup } from './timeline-popup-content.js?v=20261020-native-popups-3';
 let dataPromise;
 let closeActive;
@@ -16,7 +16,7 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261020-sproghoved-popup-1',
+  '../content/timeline/galleries.json?v=20261020-christmas-split-1',
   '../content/timeline/image-metadata.json?v=20261019-word-slides-1',
   '../content/timeline/popup-content.json?v=20261020-native-popups-3',
 ].map((path,index) => fetch(new URL(path, import.meta.url)).then(response => {

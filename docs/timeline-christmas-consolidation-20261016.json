@@ -1,17 +1,6 @@
 {
-  "policy": "One Christmas-show entry per year; latest existing date retained; all gallery photos and confirmed people preserved; old share keys retained as aliases.",
+  "policy": "Historical Christmas-show consolidations; distinct events retain separate dates and galleries. The 2024 Bøssehuset and Scoop Models merge was reverted on 2026-10-20.",
   "groups": [
-    {
-      "year": 2024,
-      "keptDate": "2024-12-21",
-      "title": "Juleshow – Bøssehuset og Scoop Models",
-      "sourceEntries": [
-        "2024-12-21|Optræden|Juleshow, Bøssehuset",
-        "2024-12-14|Optræden|Scoop Models Juleshow"
-      ],
-      "newKey": "2024-12-21|Optræden|Juleshow – Bøssehuset og Scoop Models",
-      "preservedImages": 15
-    },
     {
       "year": 2016,
       "keptDate": "2016-12-23",
@@ -38,5 +27,19 @@
       "preservedImages": 0
     }
   ],
-  "removedEntries": 6
+  "removedEntries": 5,
+  "restoredSeparateEvents": {
+    "corrected": "2026-10-20",
+    "previousMergedKey": "2024-12-21|Optræden|Juleshow – Bøssehuset og Scoop Models",
+    "events": [
+      {
+        "key": "2024-12-21|Optræden|Juleshow, Bøssehuset",
+        "images": 11
+      },
+      {
+        "key": "2024-12-14|Optræden|Scoop Models Juleshow",
+        "images": 4
+      }
+    ]
+  }
 }

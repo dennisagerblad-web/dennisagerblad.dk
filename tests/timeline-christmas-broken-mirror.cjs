@@ -8,8 +8,21 @@ const {execFileSync} = require('node:child_process');
   const galleries = read('content/timeline/galleries.json').entries;
   const before = JSON.parse(execFileSync('git',['show','0512c19:content/timeline/galleries.json'],{maxBuffer:10e6})).entries;
   const report = read('docs/timeline-christmas-consolidation-20261016.json');
-  const shows = timelineEntries.filter(e => /juleshow/i.test(e.title));
-  assert.equal(shows.length,new Set(shows.map(e=>e.date.slice(0,4))).size,'One Christmas show per year');
+  const restored = report.restoredSeparateEvents;
+  assert.ok(!timelineEntries.some(e=>[e.date,e.category,e.title].join('|')===restored.previousMergedKey),'Distinct 2024 events are not merged');
+  for (const {key,images} of restored.events) {
+    const entry=timelineEntries.find(e=>[e.date,e.category,e.title].join('|')===key);
+    assert.ok(entry,key);
+    assert.equal(galleries[key].images.length,images,'Each event has its own complete gallery');
+    assert.deepEqual(galleries[key].images,before[key].images,'Preserve original event photo order');
+    assert.deepEqual(entry.images,galleries[key].images,'Timeline and popup use the same event photographs');
+    assert.equal(galleries[key].imageDescriptions.length,images,'Preserve every photo description');
+    assert.ok(galleries[key].images.every(src=>src.includes('/'+entry.date+'-')),'No photos from the other show');
+    assert.ok(fs.existsSync(entry.thumbnail));assert.ok(fs.existsSync(entry.thumbnailPreview));
+    for (const other of restored.events.filter(event=>event.key!==key)) assert.ok(!entry.shareAliases?.includes(other.key),'Original links retain the correct event');
+  }
+  const christmas2024=timelineEntries.find(e=>e.date==='2024-12-21');
+  assert.ok(christmas2024.shareAliases.includes(restored.previousMergedKey),'The previously shared merged URL still resolves');
   for (const group of report.groups) {
     const entry = timelineEntries.find(e=>[e.date,e.category,e.title].join('|')===group.newKey);
     assert.ok(entry,group.newKey);
@@ -45,5 +58,5 @@ const {execFileSync} = require('node:child_process');
   for(const [name,count] of [['Nat Zyrik',1],['Dennis Agerblad',3],['Alexis',1],['Miss Fish',1],['Hairwerk',2],['Andreas Tange Lange',2]]) assert.equal(match(result,parse(name)).matchedImages.length,count,name+' has no unrelated batch photos');
   assert.equal(match(result,parse('Andreas Tange Lange røv')).matchedImages[0].src,batch.photos[6].src);
   assert.equal(match(result,parse('Dennis Agerblad røv')),null,'Anatomy remains attached to the confirmed person');
-  console.log('PASS: one Christmas show per year, all merged media and old links preserved; ten photos with aligned bilingual descriptions, previews, geometry and exact owner-confirmed people searches');
+  console.log('PASS: separate 2024 Christmas events with original dates, photo sets, thumbnails and links; other Christmas media and Broken Mirror photo metadata preserved');
 })().catch(e=>{console.error(e);process.exitCode=1});
