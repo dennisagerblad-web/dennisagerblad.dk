@@ -29,5 +29,13 @@ const {fileURLToPath}=require('node:url');
     assert.equal(window.DennisLanguage.danish(original),pair.da,original+' has wrong Danish source');
     assert.equal(dictionary[pair.da],pair.en,pair.da+' has wrong English translation');
   }
+  // A credit may be split into separate text nodes by a linked/bold name.
+  for(const language of ['da','en']){
+    const document={currentScript:{src:'https://dennisagerblad.dk/assets/site-language.js'},documentElement:{},readyState:'loading',addEventListener(){}};
+    const state={URL,document,location:{href:'https://dennisagerblad.dk/?lang='+language,pathname:'/'},localStorage:{getItem(){return null}},window:{DennisEnglish:dictionary,DennisPopupDanish:aliases}};
+    vm.runInNewContext(fs.readFileSync('assets/site-language.js','utf8'),state);
+    assert.equal(state.window.DennisLanguage.translate('Udgivet af: '),language==='en'?'Released by: ':'Udgivet af: ');
+    assert.equal(state.window.DennisLanguage.danish('Released by: TUTL Records'),'Udgivet af: TUTL Records');
+  }
   console.log(`PASS: screenshot examples have one description in each language; ${Object.keys(source).length} reviewed bilingual strings; photographer credits retained`);
 })().catch(error=>{console.error(error);process.exitCode=1});

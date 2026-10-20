@@ -5,7 +5,11 @@
   const dictionary = window.DennisEnglish || {};
   const danishCopy = window.DennisPopupDanish || {};
   const reverseCopy = new Map(Object.entries(dictionary).filter(([da,en])=>da!==en).map(([da,en])=>[en,da]));
-  const danish = text => danishCopy[text] || reverseCopy.get(text) || text;
+  const creditNames={Foto:'Photo',Fotos:'Photos',Fotograf:'Photographer','Udgivet af':'Released by',Musik:'Music',Tekst:'Text',Sang:'Vocals',Kor:'Backing vocals',Kamera:'Camera',Instruktion:'Direction','Produceret af':'Produced by','Dansk oversættelse':'Danish translation'};
+  const danish = text => danishCopy[text] || reverseCopy.get(text) || String(text).replace(/^([^:]+)(\s*:\s*)/, (whole,label,separator)=>{
+    const name=Object.entries(creditNames).find(([,en])=>en.toLowerCase()===label.trim().toLowerCase());
+    return name ? name[0]+separator : whole;
+  });
   const originalText = new WeakMap();
   const documentURLs = new WeakMap([[document, location.href]]);
   const originalAttributes = new WeakMap();
@@ -24,6 +28,8 @@
   const months = { januar: 'January', februar: 'February', marts: 'March', april: 'April', maj: 'May', juni: 'June', juli: 'July', august: 'August', september: 'September', oktober: 'October', november: 'November', december: 'December' };
   function english(text) {
     if (Object.hasOwn(dictionary, text)) return dictionary[text];
+    const credit=/^([^:]+)(\s*:\s*)([\s\S]*)$/.exec(text);
+    if(credit && creditNames[credit[1]])return creditNames[credit[1]]+credit[2]+credit[3];
     const date = /^(\d+)\. (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december) (\d{4})$/.exec(text);
     if (date) return `${date[1]} ${months[date[2]]} ${date[3]}`;
     const patterns = [
