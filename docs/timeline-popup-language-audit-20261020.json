@@ -1,0 +1,772 @@
+{
+  "scope": "Timeline popup descriptions; originals and photo metadata are preserved",
+  "entriesChecked": 475,
+  "reviewedBilingualStrings": 157,
+  "changedDescriptions": [
+    {
+      "key": "2021-08-20|Liveoptræden|Kunstnersamtale på Nordatlantens Brygge.",
+      "previousParagraphs": 9,
+      "currentParagraphs": 9
+    },
+    {
+      "key": "2020-10-31|Udstilling|3 Selvportrætter i drag, Samtaler Om Tåge, Færøske kunstudstilling, Nordatlantens Brygge",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2012-12-01|Liveoptræden|JULE TA(r)M TA(r)M, Bøssehuset, Christiania, København",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2012-11-22|Happening|København Ceramics, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2012-10-12|Censureret kunstudstilling|Snoribolla Genturnar ved \"KE12\" ved Den Frie, København, Danmark.",
+      "previousParagraphs": 10,
+      "currentParagraphs": 7
+    },
+    {
+      "key": "2012-04-20|Liveoptræden|Found On Corner, Dybbølsgade 59, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2012-04-12|Digital udgivelse|Sproghoved // Málhøvd - REMIXED",
+      "previousParagraphs": 17,
+      "currentParagraphs": 17
+    },
+    {
+      "key": "2012-03-03|Liveoptræden|Færøsk Out Night, Det Færøske Hus, Vesterbrogade 17A, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2012-02-17|Optræden|Strikkeklub for Transer, Bøssehuset, Christiania, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2011-12-17|Optræden|Jule-Distortiion, Halvandet, Holmen, København.",
+      "previousParagraphs": 29,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2011-11-01|Digital udgivelse|Dun // Larm - REMIXED",
+      "previousParagraphs": 14,
+      "currentParagraphs": 14
+    },
+    {
+      "key": "2011-09-05|Musikvideo|Håb / Vón",
+      "previousParagraphs": 7,
+      "currentParagraphs": 7
+    },
+    {
+      "key": "2011-09-03|CD- og digital udgivelse|Jeg udgav mit debutalbum med sange af Tóroddur Poulsen.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2011-08-17|Optræden|Dragnight 2011, Røvhulspladsen, København.",
+      "previousParagraphs": 17,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2011-08-16|Musikvideo|Dun / Larm",
+      "previousParagraphs": 11,
+      "currentParagraphs": 11
+    },
+    {
+      "key": "2011-08-04|Musikvideo|Flaget / Flaggið",
+      "previousParagraphs": 20,
+      "currentParagraphs": 20
+    },
+    {
+      "key": "2011-06-25|Optræden|Frøken Verden, Christiania, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2011-06-19|Liveoptræden|Sangerindepavillion i Bøssehuset på Christiania, Danmark.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2011-06-04|Optræden|Distortion afslutningsfest, København, Danmark.",
+      "previousParagraphs": 16,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2011-03-06|Liveoptræden|Vesterbro kalder, Løves BogCafé, København, Danmark.",
+      "previousParagraphs": 11,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2011-01-18|Liveoptræden|Verdenspoesi, Griffenfeldsgade 52, København, Danmark.",
+      "previousParagraphs": 12,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2010-09-23|Liveoptræden|dunst overrækker Heinrich Prisen, Christiania, Danmark.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2010-07-27|Udstilling|Ólavsøku, Føroyahúsid, Vesterbrogade 17A, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2010-06-26|Liveoptræden|Jeg optrådte med mit band til Bøssehusets 39-års fødselsdag.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2010-06-03|Liveoptræden|Jeg optrådte med mit band til Distortion i København.",
+      "previousParagraphs": 15,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2010-03-06|Liveoptræden|Dunst Fest, Båden Stubnitz, København, Danmark.",
+      "previousParagraphs": 1,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-12-12|Optræden|Klima-koncert på The COme 2gether Café, Borups Højskole, København.",
+      "previousParagraphs": 9,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-09-11|Optræden|Jeg optrådte med mit band på Jolene i København.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-09-04|Optræden|Damp Stryge optræden, Lager 9, København, Danmark.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-08-22|Optræden|Færøske transvestitter på rov, Oslo, Norge.",
+      "previousParagraphs": 12,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-07-31|Optræden|Dunst optræden i Råhuset, København, Danmark.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-07-30|Liveoptræden|maður:glotti koncert, Råhuset, København, Danmark.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-07-04|Udstilling|Som Jeg Er - Homo-Bi-Trans i København, ByMuseet, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-07-03|Udstilling|Voksen dukke leg, 036, Sølvgade 36, København.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-04-17|Liveoptræden|Jeg optrådte med mit band i Lille Vega.",
+      "previousParagraphs": 12,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2009-03-13|Udstilling|Fårårsudstilling - Várframsyning, Listaskálin, Thorshavn, Færøerne.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2008-12-01|CD-udgivelse|\"Popplist 7\" En samling med 19 bands/kunstnere. maður:glotti (min færøske Duo) bidrager med 1 sang.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 6
+    },
+    {
+      "key": "2008-12-01|Digital udgivelse|\"Jólastjørnan\" Christmas single. maður:glotti (my Faroese Duo)",
+      "previousParagraphs": 7,
+      "currentParagraphs": 7
+    },
+    {
+      "key": "2008-09-20|Liveoptræden|Jeg optrådte med mit band på Warehouse 9 i København.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2008-09-06|Optræden|Færøsk Transvestit, Co-Lab, Nørre Søgade 17, København",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2008-08-09|Modeshow|Jeg gik model for Barbara í Gongini under Københavns modeuge.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2008-07-29|Gratis digital udgivelse|Jeg udgav singlen “Musclemanblað”.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2008-07-21|Presse|Manfólkaremuláta við kjólum og femininum streymi í, Dimmalætting, Færøerne.",
+      "previousParagraphs": 13,
+      "currentParagraphs": 13
+    },
+    {
+      "key": "2008-07-19|Liveoptræden|Færøernes Første Dragshow, G! mini Festival, Grundin, Gøtu, Færøerne.",
+      "previousParagraphs": 10,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2008-07-18|Liveoptræden|Min duo \"maður:glotti\" Live på \"G! mini Festival\", Gøtu, Færøerne.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2008-07-17|Musikvideo|\"Spurningurin\", maður:glotti",
+      "previousParagraphs": 2,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2008-04-04|Liveoptræden|Jeg optrådte med mit band på Camp X i Frederiksberg.",
+      "previousParagraphs": 12,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2008-01-30|Udstilling|Æggen, Trapholt, Danmark.",
+      "previousParagraphs": 8,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2007-12-15|Liveoptræden|Udgivelsesfest for Broken Mirror Records, Warehouse 9, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2007-12-15|Digital udgivelse|Jeg udgav “I Wanna Pose”, en digital single med to sange sammen med Minimal Martin.",
+      "previousParagraphs": 1,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2007-11-21|Presse|Kult-kalender, Politikken, København.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 5
+    },
+    {
+      "key": "2007-11-10|Blog|Rune Engelbreth Larsens Blog på Politikken, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2007-10-19|Udstilling|Æggen, Nordatlantens Brygge, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2007-09-15|Optræden|Dunst meets Sabaah, Råhuset, København.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2007-05-12|Liveoptræden|Broken Mirror Records-lanceringsfest, Warehouse 9, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2006-07-22|Optræden|CSD-fest, Berlin.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-07-08|Liveoptræden|Shave Your Pet, Dunst-fest, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2006-07-03|CD-udgivelse|Jeg bidrog med en sang til Dunst-opsamlingen “Shave Your Pet”.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2006-06-17|Liveoptræden|La Extreme Circus, Almeria, Spain.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-06-03|Liveoptræden|Half Mashine, Christiania, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-05-11|Liveoptræden|Smegma, Berghain, Berlin.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-05-05|Liveoptræden|Lars von Triers og Peter Aalbæks 50-års fødselsdagsfest hos Zentropa, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-05-01|Presse|Dennis Agerblad i magasinet Pan, København.",
+      "previousParagraphs": 1,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-04-12|Optræden|DJ Boy George i Vega, København.",
+      "previousParagraphs": 12,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-04-01|Optræden|Dunst Gender Bender Bingo, København",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-03-23|Optræden|Natfilmfestivalen, København",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2006-02-11|Liveoptræden|Releasefest, Dunst-cd: Odéur, Ungdomshuset, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-10-25|Presse|København filmfestival for bøsser og lesbiske",
+      "previousParagraphs": 3,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2005-10-08|Liveoptræden|Dunst på Be Queer # 2b, Stubnitz, Dunkerque, Frankrig.",
+      "previousParagraphs": 8,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-10-07|Optræden|Dunst på Be Queer # 2a, Stubnitz, Dunkerque, Frankrig.",
+      "previousParagraphs": 10,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-09-09|Liveoptræden|Ondt i Røven, Amigobar, København.",
+      "previousParagraphs": 9,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-09-03|Liveoptræden|Dunst Nakkeost, Zürich, Schweiz.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-08-13|Liveoptræden|Private Parts, Dunst-fest, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-06-11|Demonstration|Hos den polske ambassade, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-05-30|Liveoptræden|Queeruption # 8, Barcelona.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-05-05|Liveoptræden|Dunst på Be Queer # 1, Dunkerque, Frankrig.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2005-03-17|CD-udgivelse|Jeg bidrog med to sange til Dunst-opsamlingen “Odéur”.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2005-03-01|Musikvideo|Midnight Lover",
+      "previousParagraphs": 1,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2005-02-12|Liveoptræden|Stille Aften med Dunst, Cabaret, Ungdomshuset, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-12-31|Liveoptræden|Dunst-nytårsfest til \"Homophobia\", Kinzo Club, Berlin.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2004-12-18|Optræden|HR & FRU Dunst-fest – en konkurrence for queer-personligheder, Ungdomshuset, København.",
+      "previousParagraphs": 9,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2004-11-26|Optræden|Dunst-spejderfest, KFUK, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-10-23|Liveoptræden|Fnat på Kat #2, Kat Nightclub, København.",
+      "previousParagraphs": 13,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-10-23|Film|Going to Fnat",
+      "previousParagraphs": 1,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-10-08|Liveoptræden|Kulturnatten, Kafe Knud, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-09-27|Presse|Puha På Gaden, Ekstra Bladet, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 4
+    },
+    {
+      "key": "2004-09-25|Optræden|Lancering af magasinet PUHA, Bernutzbar, København.",
+      "previousParagraphs": 13,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-09-02|Liveoptræden|Optræden med The ACT, Diskotek KUPÉ, Aarhus.",
+      "previousParagraphs": 9,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-08-27|Liveoptræden|Køn i Spil, KUA, Universitet, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-08-07|Liveoptræden|COMA-fest, NIMB, København.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-08-05|Optræden|Kulturhavn, Islands Brygge, København",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-08-04|Film|Playing Tourist, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 4
+    },
+    {
+      "key": "2004-08-04|Film|Playing Tourist, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 4
+    },
+    {
+      "key": "2004-07-17|Demonstration|Demonstration ved den serbiske ambassade, København.",
+      "previousParagraphs": 39,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-07-15|Optræden|Nag Nag Nag-fest, Rust, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-07-02|Liveoptræden|Homofobi, Kinzo Club, Berlin.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-06-03|Optræden|Distortion- og Dunst-fest i en bus, Christiania, København.",
+      "previousParagraphs": 13,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-06-01|Liveoptræden|Queeruption # 6, Amsterdam.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-05-01|Liveoptræden|Silo, Dunst-fest, Islands Brygge, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-04-10|Liveoptræden|Cross Dress, Dunst-fest, Ungdomshuset, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-04-01|Presse|Artikel om Dunst i Romeo & Juliet, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2004-03-27|Liveoptræden|Dunst-optræden på Supamolli, Berlin.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2004-02-01|TV|kAnal dunst, Kanal København, København.",
+      "previousParagraphs": 9,
+      "currentParagraphs": 9
+    },
+    {
+      "key": "2004-02-01|Presse|Helsides billeder i magasinet Dansk, København.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 5
+    },
+    {
+      "key": "2003-11-29|Liveoptræden|Vært ved åbningsfesten for Nordatlantens Brygge, Bryggen, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-11-22|Optræden|SNIP Udstilling, Galleri Guggen, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-11-15|Liveoptræden|The Shadow People, Eggerslandwehr, Berlin.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2003-10-30|Happening|I teatret, Den Anden Opera, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-09-20|Liveoptræden|Når skidt kommer til ære, Filmhuset, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-08-30|Optræden|Tourist Trap, Bevar Christiania # 3 - Christiania, København.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-08-16|Film|Skøgereden, Dunst fest, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2003-08-16|Parade|Jeg gik med Dunst i paraden.",
+      "previousParagraphs": 18,
+      "currentParagraphs": 4
+    },
+    {
+      "key": "2003-08-04|Optræden|Byfest, Nykøbing Falster.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-08-01|Optræden|WigStockholm, Gaypride Fesival, Stockholm.",
+      "previousParagraphs": 8,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-06-24|Optræden|Dunst-modeoptræden, Sankt Hans, Bøssehuset, Christiania, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2003-06-08|Liveoptræden|Helligånds Dunst fest, Bøssehuset, Christiania, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2003-06-01|Presse|X-fest, Eurogames, DGI-Byen, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 4
+    },
+    {
+      "key": "2003-05-29|Optræden|Eurogames, DGI-Byen, København.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-05-23|Liveoptræden|Queeruption # 5, Berlin.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2003-05-01|Presse|Månedens billede, Out & About GayNews, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2003-03-22|Optræden|Robbery Dunst fest, Bøssehuset, Christiania, København.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-02-08|Happening|Reklame for Dunst-festen Arty Farty, Café Oscar, København.",
+      "previousParagraphs": 8,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-01-12|Happening|Dag 4, Skiferie, Åre, Sverige.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-01-11|Happening|Dag 3, Skiferie, Åre, Sverige.",
+      "previousParagraphs": 9,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-01-10|Happening|Dag 2, Skiferie, Åre, Sverige.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2003-01-09|Happening|Dag 1, Skiferie, Åre, Sverige.",
+      "previousParagraphs": 6,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-12-20|Optræden|Grrr-It præsenterer et Spetakel, Kafe Knud, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-12-01|Liveoptræden|Verdens aidsdag, Kafe Knud, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-11-16|Liveoptræden|LeFreak Dunst fest, Ungdomshuset, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-11-09|Happening|Dunst-happening, Café Heaven, København",
+      "previousParagraphs": 7,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-10-19|Optræden|Filmfestivalen i Cinemateket, København",
+      "previousParagraphs": 8,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-10-11|Optræden|Electical Records Åbning, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-10-11|Liveoptræden|Kulturnat, Kafé Knud, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-09-08|Optræden|Stemmetællere, Danmarks Designskole, København",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-08-17|Optræden|Dunst-optræden på Rådhuspladsen",
+      "previousParagraphs": 7,
+      "currentParagraphs": 2
+    },
+    {
+      "key": "2002-08-10|Optræden|Strandtøj, Frøken Verden, Den Grå Hal, Christiania, København",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-08-10|Optræden|Hverdagstøj, Frøken Verden, Den Grå Hal, Christiania, København",
+      "previousParagraphs": 3,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-08-10|Optræden|Festtøj, Frøken Verden, Den Grå Hal, Christiania, København",
+      "previousParagraphs": 14,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "2002-08-03|Tekstildesign|Listastevna, Thorshavn, Færøerne.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-06-01|Happening|Dunst happening, København.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2002-05-25|Happening|Reklame for Gay Night Cabaret, København.",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2000-11-01|CD-udgivelse|\"TUTL 2000\" En samling med 16 bands/kunstnere. maður:glotti (min færøske Duo) bidrager med 1 sang.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 7
+    },
+    {
+      "key": "2000-10-31|Optræden|Halloween, Foleys, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "2000-08-14|Optræden|Frøken Verden, Christiania, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "1999-11-01|Kunstudstilling|Separatudstilling, Færøhuset, København.",
+      "previousParagraphs": 3,
+      "currentParagraphs": 3
+    },
+    {
+      "key": "1999-04-03|Kunstudstilling|Færøsk Kunst, Den Frie Udstillings Bygning, København.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "1998-10-14|Censureret kunstudstilling|To collager på \"KE 98\" (Kunstnernes Efterårsudstilling) på Den Frie, København. Indkøbt af Københavns Kulturfond.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "1998-06-24|Kunstudstilling|Seks malerier på udstillingen \"Kønst\" i Galleri Gammelstrand, København. Seks malere og tre billedhuggere fra kunstnergruppen \"Kunstnergruppen95.dk\".",
+      "previousParagraphs": 5,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "1998-06-01|CD-udgivelse|\"Grótføroyskt\" – en opsamlingsudgivelse med 12 bands/kunstnere. maður:glotti (min færøske duo) bidrager med ét nummer.",
+      "previousParagraphs": 7,
+      "currentParagraphs": 7
+    },
+    {
+      "key": "1998-03-01|Film|Stjerne Statist i science fiction filmen \"Skyggen\", København.",
+      "previousParagraphs": 1,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "1991-04-10|Optræden|21-års fødselsdagsfest i min fars lejlighed, København.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "1987-07-07|Optræden|Michael Jackson-optræden, SMS Shoppingcenter, Tórshavn, Færøerne.",
+      "previousParagraphs": 2,
+      "currentParagraphs": 1
+    },
+    {
+      "key": "1979-06-10|Optræden|Mit første dragshow, hjemme hos min onkel, Tórshavn, Færøerne.",
+      "previousParagraphs": 4,
+      "currentParagraphs": 1
+    }
+  ]
+}

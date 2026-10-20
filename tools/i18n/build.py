@@ -66,5 +66,9 @@ for source, target in dictionary.items():
  dictionary[source] = re.sub(r'Bol mig i mit numsehul', 'Fuck me in my butthole', target, flags=re.I).replace('in my arsehole', 'in my butthole')
 for source, target in dictionary.items():
  dictionary[source] = re.sub(r'Københavns værste trash drag(?!\s*\(Copenhagen’s worst trash drag\))', lambda match: match.group(0)+' (Copenhagen’s worst trash drag)', target, flags=re.I)
-(root/'assets/site-language-data.js').write_text('// English copy for the current website. Generated from tools/i18n; reviewed copy takes precedence.\nwindow.DennisEnglish = '+json.dumps(dictionary,ensure_ascii=False,separators=(',',':'))+';\n')
+popup_danish={}
+for source,copy in json.loads((folder/'popup-reviewed.json').read_text()).items():
+ dictionary[copy['da']]=copy['en']
+ if source!=copy['da']:popup_danish[source]=copy['da']
+(root/'assets/site-language-data.js').write_text('// English copy for the current website. Generated from tools/i18n; reviewed copy takes precedence.\nwindow.DennisEnglish = '+json.dumps(dictionary,ensure_ascii=False,separators=(',',':'))+';\nwindow.DennisPopupDanish = '+json.dumps(popup_danish,ensure_ascii=False,separators=(',',':'))+';\n')
 print('Built',len(dictionary),'translations; all',len(items),'source strings covered.')

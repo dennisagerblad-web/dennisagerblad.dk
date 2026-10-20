@@ -11,11 +11,32 @@ export function timelinePopupParagraphs(entry, paragraphs) {
   const titles = [entry.title,entry.shortTitle,entry.popupTitle,entry.title?.split(',')[0]].filter(Boolean).map(withoutPrepositions);
   const dates = [entry.display,entry.date].filter(Boolean).map(normalize);
   const seen = new Set();
-  return paragraphs.filter(text => {
+  const result = paragraphs.map(text => globalThis.window?.DennisLanguage?.danish?.(text) || text).filter(text => {
     const value=normalize(text);
     if (!value || titles.includes(withoutPrepositions(text)) || dates.includes(value) || seen.has(value)) return false;
     seen.add(value); return true;
   });
+  // Short archive captions sometimes repeat an entire sentence in the article.
+  // Compare complete word sequences, so similar dates or names are not merged.
+  return result.filter((text,index) => {
+    const value=normalize(text);
+    return value.length>200 || value.split(' ').length<6 || !result.some((other,otherIndex)=>
+      otherIndex!==index && normalize(other).length>value.length && (` ${normalize(other)} `).includes(` ${value} `));
+  });
+}
+// A maintained event description replaces the archive's old per-photo captions.
+// Presse keeps the article itself; photographer credits remain independent copy.
+export function timelineGalleryDetails(curated, archive, group) {
+  const current = curated?.details || [];
+  const old = archive?.details || [];
+  if (!current.length || group === 'press') return [...current, ...old];
+  const credits = old.filter(text => /^(?:photos?|photo's|fotos?|fotograf|videooptagelser)\s*:/i.test(text))
+    .map(text => text.split(/\s+-\s+/)[0].trim())
+    .filter(text => {
+      const name = text.replace(/^[^:]+:\s*/, '').replace(/[.]+$/, '').toLocaleLowerCase('da-DK');
+      return name && !current.some(paragraph => paragraph.toLocaleLowerCase('da-DK').includes(name));
+    });
+  return [...current, ...new Set(credits)];
 }
 export function timelinePopupGroup(entry) {
   if (['2012-04-18','2013-02-12','2011-08-14','2008-05-23','2007-11-10'].includes(entry.date)) return 'press';

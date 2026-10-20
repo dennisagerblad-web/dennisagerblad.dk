@@ -3,6 +3,9 @@
   const siteRoot = new URL('../', document.currentScript.src);
   const sectionEntry = /^\/(?:musik|video|performance|kunst|litteratur|tidslinje)\/?$/.test(location.pathname);
   const dictionary = window.DennisEnglish || {};
+  const danishCopy = window.DennisPopupDanish || {};
+  const reverseCopy = new Map(Object.entries(dictionary).filter(([da,en])=>da!==en).map(([da,en])=>[en,da]));
+  const danish = text => danishCopy[text] || reverseCopy.get(text) || text;
   const originalText = new WeakMap();
   const documentURLs = new WeakMap([[document, location.href]]);
   const originalAttributes = new WeakMap();
@@ -62,11 +65,12 @@
     return [...element.childNodes].map(sourceText).join('');
   }
   function sourceAttribute(element, name) { return originalAttributes.get(element)?.[name]?.source ?? element?.getAttribute(name); }
-  window.DennisLanguage = { translate, english, localURL, sourceText, sourceAttribute, get current() { return language; } };
+  window.DennisLanguage = { translate, english, danish, localURL, sourceText, sourceAttribute, get current() { return language; } };
   function updateText(node) {
     if (!node || !node.textContent.trim() || node.parentElement?.closest('script,style,noscript,textarea,[data-no-translate]')) return;
     const previous = originalText.get(node);
-    const source = previous && node.textContent === previous.last ? previous.source : node.textContent;
+    const raw = previous && node.textContent === previous.last ? previous.source : node.textContent;
+    const source = node.parentElement?.closest('.tg-dialog') ? danish(raw) : raw;
     let target = language === 'en' && node.parentElement?.dataset.englishText ? node.parentElement.dataset.englishText : translate(source);
     if (node.parentElement?.closest('.calendar-biography')) target = target.replace('BØSSEDANMARK (GAYDENMARK)', 'BØSSEDANMARK');
     originalText.set(node, { source, last: target });

@@ -38,7 +38,7 @@ function add(dialog) {
   copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(details.publicUrl);status.textContent='Link til denne side er kopieret';}catch{panel.insertBefore(url,copy);url.focus();url.select();status.textContent='Kopiér det markerede link';}});
   panel.append(copy);
   if(navigator.share && matchMedia('(pointer: coarse)').matches){const native=document.createElement('button');native.type='button';native.textContent='Del via …';native.addEventListener('click',async()=>{try{await navigator.share({title:details.entry.title,url:details.publicUrl});}catch(e){if(e.name!=='AbortError')status.textContent='Brug Kopiér link i stedet';}});panel.append(native);}
-  panel.append(status);dialog.append(button,panel);
+  panel.append(status);(dialog.querySelector('.tg-actions') || dialog).append(button,panel);
   button.addEventListener('click',event=>{const opening=panel.hidden;if(activePanel&&activePanel!==panel)closePanel();panel.hidden=!opening;button.setAttribute('aria-expanded',String(opening));activePanel=opening?panel:null;if(opening){status.textContent='';if(event.detail===0)copy.focus();}});
   panel.addEventListener('keydown',event=>{if(event.key==='Escape'){event.stopPropagation();closePanel();button.focus();}});
 }

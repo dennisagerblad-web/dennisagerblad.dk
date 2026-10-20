@@ -5,7 +5,7 @@ import { timelineDate } from './timeline-ui.js?v=20261018-sproghoved-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
 import { timelineEntries } from '../content/timeline/entries.js?v=20261020-scoop-party-1';
-import { timelinePopupParagraphs, timelinePopupGroup } from './timeline-popup-content.js?v=20261020-native-popups-3';
+import { timelinePopupParagraphs, timelinePopupGroup, timelineGalleryDetails } from './timeline-popup-content.js?v=20261020-popup-language-1';
 let dataPromise;
 let closeActive;
 let requestedSearchImage;
@@ -19,10 +19,17 @@ const loadData = () => dataPromise ||= Promise.all([
   '../content/timeline/galleries.json?v=20261020-grandprix-copy-1',
   '../content/timeline/image-metadata.json?v=20261020-scoop-2022-1',
   '../content/timeline/popup-content.json?v=20261020-native-popups-3',
-].map((path,index) => fetch(new URL(path, import.meta.url)).then(response => {
-  if (!response.ok) throw new Error('Gallery data unavailable');
-  return response.json();
-}).catch(error => { if (index === 2) return {}; throw error; })))
+].map(async (path,index) => {
+  for (let attempt=0;attempt<2;attempt++) {
+    try {
+      const response=await fetch(new URL(path,import.meta.url),attempt ? {cache:'reload'} : {});
+      if (!response.ok) throw new Error('Gallery data unavailable');
+      return await response.json();
+    } catch (error) {
+      if (attempt) { if (index===1) return {media:{}}; throw error; }
+    }
+  }
+}))
   .then(([galleries, metadata, native]) => ({
     entries:{...galleries.entries,...Object.fromEntries(Object.entries(native.entries || {}).map(([key,record])=>{
       const curated=galleries.entries[key];
@@ -30,7 +37,7 @@ const loadData = () => dataPromise ||= Promise.all([
       const excluded=new Set(record.excludedImages || []);
       const pairs=(source.images || []).map((src,index)=>({src,description:source.imageDescriptions?.[index] || ''}))
         .filter(({src})=>!(record.group==='press' && (excluded.has(src) || /\/logoer\/|logo|krydd|oyggjaskeggi/i.test(src))));
-      return [key,{...record,...curated,details:[...(curated?.details || []),...(record.details || [])],
+      return [key,{...record,...curated,details:timelineGalleryDetails(curated,record,record.group),
         detailMarkup:record.detailMarkup,archiveDetails:record.details,
         images:pairs.map(image=>image.src),imageDescriptions:pairs.map(image=>image.description)}];
     }))},
@@ -308,7 +315,6 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   overlay.dataset.theme = group;
   Object.entries(theme).forEach(([key,value]) => overlay.style.setProperty(key,value));
   const dialog = el('section', 'tg-dialog'); dialog.setAttribute('role','dialog');
-  dialog.style.visibility='hidden';
   dialog.dataset.entryDate = entry.date;
   dialog.setAttribute('aria-modal','true'); dialog.setAttribute('aria-labelledby','tg-title');
   const header = el('header', 'tg-header');
@@ -317,6 +323,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   const date = el('time','tg-date',timelineDate(entry.date, entry.display)); date.dateTime = entry.date;
   header.append(date, title, details);
   const close = button('×','Luk billedvisning', () => cleanup()); close.className = 'tg-close';
+  const actions=el('div','tg-actions'); actions.append(close);
   const viewer = el('div','tg-viewer');
   const stage = el('div','tg-stage'); stage.setAttribute('role','group'); stage.setAttribute('aria-roledescription','karrusel');
   stage.dataset.effect=effectName;
@@ -336,7 +343,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   const rotation=button('','Start automatiske billedskift',toggleRotation); rotation.className='tg-rotation'; rotation.hidden=true;
 
   stage.append(previous,next,announcement,rotation); viewer.append(stage);
-  dialog.append(close,header,viewer); overlay.append(dialog); document.body.append(overlay);
+  dialog.append(actions,header,viewer); overlay.append(dialog); document.body.append(overlay);
   let closed = false, index = 0, items = [], media = {}, descriptions = [], composites = {}, related = {}, drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
   let scene = null, drag = null, paused = options.autoplay===false || !!searchImage, rotationPointerPaused = null;
@@ -412,7 +419,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
         frame.style.width=`min(100%,${Math.floor(available*16/9)}px)`;
         frame.style.marginLeft=frame.style.marginRight='auto';
       }
-      placeClose(); return;
+      return;
     }
     if (compact) {
       // Safari toolbar movement and image loading cannot resize an open popup.
@@ -430,7 +437,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
         if (style.position==='absolute' || style.position==='fixed' || style.display==='none') return 0;
         return node.getBoundingClientRect().height+(parseFloat(style.marginTop)||0)+(parseFloat(style.marginBottom)||0);
       };
-      const extra=()=>[...dialog.children].filter(node=>node!==header && node!==viewer && node!==close).reduce((sum,node)=>sum+flowHeight(node),0);
+      const extra=()=>[...dialog.children].filter(node=>node!==header && node!==viewer && node!==actions).reduce((sum,node)=>sum+flowHeight(node),0);
       let width=maxW;
       // Use the full landscape width. Shrinking the dialog to the image ratio
       // wraps the header into more lines and needlessly reduces image height.
@@ -444,7 +451,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       const portraitHeight=padding+flowHeight(header)+extra()+frameHeight;
       dialog.style.height=`${portrait ? (belowImages ? Math.min(maxH,portraitHeight+belowHeight) : portraitHeight) : maxH}px`;
       dialog.style.maxHeight=`${maxH}px`;
-      placeClose(); return;
+      return;
     }
     mobileLayoutKey=null;
     header.style.maxHeight=''; header.style.overflow='';
@@ -461,12 +468,6 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     }
     dialog.style.width=`${Math.floor(width)}px`;
     dialog.style.setProperty('--tg-ratio',String(ratio));
-    placeClose();
-  }
-  function placeClose() {
-    if (closed) return;
-    const rect=dialog.getBoundingClientRect();
-    close.style.position='fixed';close.style.top=`${rect.top+8}px`;close.style.right=`${innerWidth-rect.right+8}px`;
   }
   function size() {
     const r = stage.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1,2);
@@ -590,7 +591,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       if (!busy) scheduleAutoplay();
     } catch {
       if (closed || ticket !== request) return;
-      poster.hidden = true; drawing = null; announce();
+      poster.hidden = !drawing; announce();
       status.replaceChildren(document.createTextNode('Billedet kunne ikke indlæses. '),button('Prøv igen','Prøv at hente billedet igen',() => render()));
       status.hidden = false;
     } finally { if (ticket === request) stage.setAttribute('aria-busy','false'); }
@@ -621,7 +622,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   }
   function cleanup() {
     if (closed) return;
-    closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); zoom.reset(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect(); dialogObserver.disconnect();
+    closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); zoom.reset(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect();
     transition?.destroy(); cache.clear(); reduced.removeEventListener('change',motionPreferenceChanged); window.removeEventListener('keydown',keydown,true);
     mobile.removeEventListener('change',resize); window.removeEventListener('resize',resize); window.visualViewport?.removeEventListener('resize',resize); overlay.remove();
     if (root) root.inert = oldInert;
@@ -684,7 +685,6 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     mobileLayoutKey=null;
     resize();
   }); headerObserver.observe(header);
-  const dialogObserver=new ResizeObserver(placeClose);dialogObserver.observe(dialog);
   function link(label, href) {
     const url = new URL(href,assetBase);
     if (!['http:','https:',...(group==='press'?['mailto:']:[])].includes(url.protocol)) return;
@@ -756,7 +756,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       const usedLinks=new Set();
       for (const part of gallery?.albumFooter || []) {
         if (/^(?:sum\s*[-–]\s*)?nakin\?/i.test(part.text) || /^(sum|nakin\?|land|STEV)\s*[-–]/.test(part.text)) continue;
-        const p=el('p'); let rest=part.text;
+        const p=el('p'); let rest=window.DennisLanguage?.danish(part.text) || part.text;
         for (const item of gallery?.links || []) {
           if (/\/archive\/legacy\//.test(item.href) || !item.label || !rest.includes(item.label)) continue;
           const at=rest.indexOf(item.label);p.append(document.createTextNode(rest.slice(0,at)));
@@ -783,5 +783,14 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     } else { stage.hidden=true; layout(); }
     dialog.style.visibility=''; close.focus({preventScroll:true});
   }
-  loadData().then(populate).catch(() => populate({}));
+  function load() {
+    status.replaceChildren(document.createTextNode('Henter billeder …')); status.hidden=false;
+    loadData().then(populate).catch(() => {
+      if (closed) return;
+      layout();
+      status.replaceChildren(document.createTextNode('Billederne kunne ikke indlæses. '),button('Prøv igen','Prøv at hente billederne igen',load));
+      close.focus({preventScroll:true});
+    });
+  }
+  layout(); load();
 }
