@@ -32,8 +32,6 @@
 .tg-arrow:hover { filter:drop-shadow(0 1px 6px #000); }
 .tg-supplementary { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 18px; margin-top:10px; color:#c3c3c6; font:12px/1.5 system-ui,sans-serif; }
 .tg-supplementary:empty { display:none; }
-.tg-overlay[data-theme="press"] .tg-press-logos { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:12px; }
-.tg-overlay[data-theme="press"] .tg-press-logos img { width:auto; height:auto; max-width:min(100%,260px); max-height:55px; object-fit:contain; }
 .tg-supplementary a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
 .tg-credit { margin:0; font:inherit; }
 .tg-video { display:block; width:100%; aspect-ratio:16/9; border:0; margin-top:12px; }
@@ -335,3 +333,12 @@ body .timeline-overlay iframe:is(.timeline-video-player,.tg-video) { outline:non
   font-size:.85em;
   line-height:1.45;
 }
+
+/* Native article links and shared album footer; no publisher-logo panels. */
+.tg-content-link { padding:0; border:0; background:none; color:inherit; font:inherit; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.tg-album-footer { padding:20px; color:#e5e5e6; font:16px/1.5 Helvetica,Arial,sans-serif; }
+.tg-album-footer p { margin:0 0 12px; }
+.tg-album-footer a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.tg-album-nav { display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; }
+.tg-album-nav button { border:0; padding:8px 12px; color:inherit; background:#ffffff18; border-radius:6px; cursor:pointer; font:inherit; }
+.tg-album-nav button[aria-current="page"] { background:#ffffff36; }

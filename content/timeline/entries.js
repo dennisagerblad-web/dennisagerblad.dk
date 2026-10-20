@@ -967,7 +967,9 @@ export const timelineEntries = [
     "group": "music",
     "href": null,
     "thumbnail": "./archive/music/covid-19.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/6bb70c12e8f28b98.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/6bb70c12e8f28b98.webp",
+    "popupHref": "https://dennisagerblad.bandcamp.com/track/covid-19",
+    "popupLabel": "Hør sangen ↗"
   },
   {
     "date": "2020-10-16",
@@ -993,7 +995,9 @@ export const timelineEntries = [
     "group": "music",
     "href": null,
     "thumbnail": "./archive/music/love-has-no-gender.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/017a51293734a67c.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/017a51293734a67c.webp",
+    "popupHref": "https://dennisagerblad.bandcamp.com/track/love-has-no-gender",
+    "popupLabel": "Hør sangen ↗"
   },
   {
     "date": "2020-05-11",
@@ -1005,7 +1009,9 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2020-05-11-love-has-no-gender-video.jpg",
     "videoId": "djFXmc2mVNc",
-    "thumbnailPreview": "./assets/timeline-thumbs/1a00e247854b3b77.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/1a00e247854b3b77.webp",
+    "popupHref": "https://dennisagerblad.bandcamp.com/track/love-has-no-gender",
+    "popupLabel": "Hør sangen ↗"
   },
   {
     "date": "2020-04-20",
@@ -3993,7 +3999,8 @@ export const timelineEntries = [
     "category": "Film",
     "title": "Singing",
     "group": "media",
-    "href": "./archive/legacy/200_calendar/2006/06_05_31_singing/dennis_agerblad.html"
+    "href": "./archive/legacy/200_calendar/2006/06_05_31_singing/dennis_agerblad.html",
+    "popupContent": false
   },
   {
     "date": "2006-05-11",
@@ -4126,7 +4133,8 @@ export const timelineEntries = [
     "category": "Film",
     "title": "Afterskiing",
     "group": "media",
-    "href": "./archive/legacy/200_calendar/2006/06_01_15_afterskiing/dennis_agerblad_afterskiing.html"
+    "href": "./archive/legacy/200_calendar/2006/06_01_15_afterskiing/dennis_agerblad_afterskiing.html",
+    "popupContent": false
   },
   {
     "date": "2005-12-01",

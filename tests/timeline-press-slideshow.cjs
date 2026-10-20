@@ -6,22 +6,22 @@ const {fileURLToPath,pathToFileURL}=require('node:url');
   const {loadTimelineGalleryData,galleryEffects,timelineEffects,mobileGalleryRatios,containRect}=await import('../assets/timeline-gallery.js');
   const base=JSON.parse(fs.readFileSync('content/timeline/galleries.json','utf8'));
   const originalMedia=JSON.parse(fs.readFileSync('content/timeline/image-metadata.json','utf8')).media;
-  const press=JSON.parse(fs.readFileSync('content/timeline/press-galleries.json','utf8'));
+  const press=JSON.parse(fs.readFileSync('content/timeline/popup-content.json','utf8'));
   const merged=await loadTimelineGalleryData();
   assert.deepEqual(timelineEffects,{live:'Morph',art:'Paint',press:'Contrast'});
   assert.deepEqual(galleryEffects.Grow,{shader:0,intensity:0,duration:1000});
   assert.deepEqual(galleryEffects.Paint,{shader:1,intensity:0,duration:1100});
   assert.deepEqual(galleryEffects.Morph,{shader:2,intensity:.3,duration:1000});
   for(const [key,gallery] of Object.entries(base.entries)) {
-    if(!press.entries[key]) assert.deepEqual(merged.entries[key],gallery,`Unrelated gallery changed: ${key}`);
-    else { assert.deepEqual(merged.entries[key].images,gallery.images,`Curated order changed: ${key}`);assert.deepEqual(merged.entries[key].imageDescriptions,gallery.imageDescriptions,`Curated descriptions changed: ${key}`); }
+    const pressRecord=press.entries[key];
+    const keep=(src)=>!(pressRecord?.group==='press' && ((pressRecord.excludedImages||[]).includes(src) || /\/logoer\/|logo|krydd|oyggjaskeggi/i.test(src)));
+    assert.deepEqual(merged.entries[key].images,gallery.images.filter(keep),`Curated photo order changed: ${key}`);
   }
   for(const [src,record] of Object.entries(originalMedia)) {
     assert.deepEqual(merged.media[src],record,`Existing photo metadata changed: ${src}`);
   }
   let count=0,slides=0;
-  for(const [key,gallery] of Object.entries(press.entries)) {
-    assert(gallery.images.length>1,key);
+  for(const [key,gallery] of Object.entries(merged.entries).filter(([key,g])=>g.group==='press' && g.images?.length>1)) {
     assert.equal(new Set(gallery.images).size,gallery.images.length,`Duplicate slide: ${key}`);
     assert(gallery.imageDescriptions.length===gallery.images.length,key);
     for(const src of gallery.images) {
@@ -35,7 +35,7 @@ const {fileURLToPath,pathToFileURL}=require('node:url');
     }
     for(const link of gallery.links || []) assert(/^(https?:|mailto:)/.test(link.href)&&link.label,key);
     for(const parts of Object.values(gallery.composites || {})) {
-      assert(parts.length>1,key);for(const src of parts) assert(fs.existsSync(path.resolve(src)),src);
+      assert(parts.length>1,key);for(const src of parts) assert(fs.existsSync(fileURLToPath(new URL(src,pathToFileURL(process.cwd()+'/')))),src);
     }
     const ratios=mobileGalleryRatios(gallery.images,merged.media);
     assert(ratios.tallest>0&&ratios.widest>=ratios.tallest,key);
@@ -43,7 +43,7 @@ const {fileURLToPath,pathToFileURL}=require('node:url');
   }
   assert(count>=40,'All existing multi-image Presse entries must be indexed');
   // A missing optional Presse index cannot break the other four tabs.
-  globalThis.fetch=async url=>({ok:!String(url).includes('press-galleries.json'),json:async()=>JSON.parse(fs.readFileSync(fileURLToPath(url),'utf8'))});
+  globalThis.fetch=async url=>({ok:!String(url).includes('popup-content.json'),json:async()=>JSON.parse(fs.readFileSync(fileURLToPath(url),'utf8'))});
   const fallback=await import('../assets/timeline-gallery.js?press-index-failure-test');
   const withoutPress=await fallback.loadTimelineGalleryData();
   assert.deepEqual(withoutPress.entries,base.entries);

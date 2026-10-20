@@ -4,6 +4,8 @@
 import { timelineDate } from './timeline-ui.js?v=20261018-sproghoved-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261020-native-popups-3';
+import { timelinePopupParagraphs, timelinePopupGroup } from './timeline-popup-content.js?v=20261020-native-popups-3';
 let dataPromise;
 let closeActive;
 let requestedSearchImage;
@@ -16,18 +18,24 @@ const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
   '../content/timeline/galleries.json?v=20261020-sproghoved-popup-1',
   '../content/timeline/image-metadata.json?v=20261019-word-slides-1',
-  '../content/timeline/press-galleries.json?v=20261020-press-slides-2',
+  '../content/timeline/popup-content.json?v=20261020-native-popups-3',
 ].map((path,index) => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();
 }).catch(error => { if (index === 2) return {}; throw error; })))
-  .then(([galleries, metadata, press]) => ({
-    // Later curated photo replacements/order always outrank the archive index.
-    entries:{...galleries.entries,...Object.fromEntries(Object.entries(press.entries || {}).map(([key,gallery])=>{
+  .then(([galleries, metadata, native]) => ({
+    entries:{...galleries.entries,...Object.fromEntries(Object.entries(native.entries || {}).map(([key,record])=>{
       const curated=galleries.entries[key];
-      return [key,{...gallery,...curated,details:curated?.details?.length ? curated.details : gallery.details}];
+      const source=curated || record;
+      const excluded=new Set(record.excludedImages || []);
+      const pairs=(source.images || []).map((src,index)=>({src,description:source.imageDescriptions?.[index] || ''}))
+        .filter(({src})=>!(record.group==='press' && (excluded.has(src) || /\/logoer\/|logo|krydd|oyggjaskeggi/i.test(src))));
+      return [key,{...record,...curated,details:[...(curated?.details || []),...(record.details || [])],
+        detailMarkup:record.detailMarkup,archiveDetails:record.details,
+        images:pairs.map(image=>image.src),imageDescriptions:pairs.map(image=>image.description)}];
     }))},
-    media:{...metadata.media,...Object.fromEntries(Object.entries(press.media || {}).map(([src,size])=>[src,{...size,...metadata.media[src]}]))},
+    media:{...metadata.media,...Object.fromEntries(Object.entries(native.media || {}).map(([src,size])=>[src,{...size,...metadata.media[src]}]))},
+    related:native.related || {},
   }))
   .catch(error => { dataPromise = null; throw error; });
 const el = (tag, className, text) => {
@@ -52,17 +60,6 @@ export const galleryEffects = Object.freeze({
   Contrast: { shader:3, intensity:0, duration:1100 },
 });
 export const timelineEffects = Object.freeze({ live:'Morph', art:'Paint', press:'Contrast' });
-
-// Single-image and text-only Presse entries retain their existing popup.
-// The shared data is already prefetched by Timeline search before a click.
-export function openPressTimelineGallery(entry, theme, fallback) {
-  return loadData().then(data => {
-    const images=data.entries[`${entry.date}|${entry.category}|${entry.title}`]?.images || entry.images || [];
-    if (images.length > 1 || ['2011-06-24','2011-07-01'].includes(entry.date)) {
-      openTimelineGallery(entry,'press',theme);
-    } else fallback();
-  }).catch(() => fallback());
-}
 
 // Use all available space while preserving the complete photograph.
 export function containRect(imageWidth, imageHeight, frameWidth, frameHeight) {
@@ -129,7 +126,7 @@ function blurredBackdrop(image, w, h) {
   return canvas;
 }
 
-function compose(image, w, h, useBackdrop) {
+function compose(image, w, h, useBackdrop, displayRatio) {
   const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h;
   const ctx = canvas.getContext('2d');
   const pixelRatio = Math.min(devicePixelRatio || 1, 2);
@@ -141,7 +138,7 @@ function compose(image, w, h, useBackdrop) {
     ctx.fillRect(0, 0, w, h);
   }
   // Fit the sharp photograph to the available frame, also for smaller originals.
-  const [x,y,iw,ih] = containRect(image.naturalWidth,image.naturalHeight,frameWidth,frameHeight);
+  const [x,y,iw,ih] = containRect(displayRatio || image.naturalWidth,displayRatio ? 1 : image.naturalHeight,frameWidth,frameHeight);
   ctx.drawImage(image,x*pixelRatio,y*pixelRatio,iw*pixelRatio,ih*pixelRatio);
   return canvas;
 }
@@ -294,9 +291,14 @@ export function thumbnailFirst(images, descriptions, thumbnail) {
 
 export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   closeActive?.();
+  const proportion=String(entry.archiveImageAspectRatio || '').split('/').map(Number);
+  const displayRatio=proportion.length===2 && proportion.every(value=>value>0) ? proportion[0]/proportion[1] : undefined;
+  const composePhoto=(image,w,h,backdrop)=>compose(image,w,h,backdrop,displayRatio);
   const searchImage=options.initialImage || (requestedSearchImage?.key===`${entry.date}|${entry.category}|${entry.title}` && requestedSearchImage.expires>Date.now() ? requestedSearchImage.src : null);
   requestedSearchImage=null;
   const effectName=Object.hasOwn(galleryEffects,entry.galleryEffect) ? entry.galleryEffect : timelineEffects[group] || 'Grow';
+  const palettes={music:'#123d50',live:'#410c12',art:'#452c0c',word:'#34203f',press:'#2b2828'};
+  theme={'--timeline-deep':palettes[group] || '#171719',...theme};
   const opener = document.activeElement;
   const root = document.getElementById('root');
   const oldInert = root?.inert;
@@ -335,7 +337,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
 
   stage.append(previous,next,announcement,rotation); viewer.append(stage);
   dialog.append(close,header,viewer); overlay.append(dialog); document.body.append(overlay);
-  let closed = false, index = 0, items = [], media = {}, descriptions = [], composites = {}, drawing = null, request = 0;
+  let closed = false, index = 0, items = [], media = {}, descriptions = [], composites = {}, related = {}, drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
   let scene = null, drag = null, paused = options.autoplay===false || !!searchImage, rotationPointerPaused = null;
   let mobileLayoutKey;
@@ -394,10 +396,24 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     return cache.get(src);
   }
   function layout() {
-    if (closed || !items.length) return;
+    if (closed) return;
     const vh=window.visualViewport?.height || innerHeight, vw=document.documentElement.clientWidth;
     const compact=mobile.matches, portrait=portraitMobile.matches;
     const padding=40;
+    if (!items.length) {
+      const margin=compact?(portrait?16:20):32;
+      const maxH=vh-margin*2;
+      dialog.style.width=`${Math.floor(Math.min(vw-margin*2,compact?1200:900))}px`;
+      dialog.style.height=''; dialog.style.maxHeight=`${maxH}px`;
+      header.style.maxHeight=`${Math.floor(maxH*(dialog.querySelector('.video-frame') ? .5 : .85))}px`;
+      header.style.overflow='auto';
+      for (const frame of dialog.querySelectorAll('.video-frame')) {
+        const available=Math.max(100,maxH-padding-header.getBoundingClientRect().height-60);
+        frame.style.width=`min(100%,${Math.floor(available*16/9)}px)`;
+        frame.style.marginLeft=frame.style.marginRight='auto';
+      }
+      placeClose(); return;
+    }
     if (compact) {
       // Safari toolbar movement and image loading cannot resize an open popup.
       // Rotation changes the viewport width and receives a fresh calculation.
@@ -428,7 +444,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       const portraitHeight=padding+flowHeight(header)+extra()+frameHeight;
       dialog.style.height=`${portrait ? (belowImages ? Math.min(maxH,portraitHeight+belowHeight) : portraitHeight) : maxH}px`;
       dialog.style.maxHeight=`${maxH}px`;
-      return;
+      placeClose(); return;
     }
     mobileLayoutKey=null;
     header.style.maxHeight=''; header.style.overflow='';
@@ -445,6 +461,12 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     }
     dialog.style.width=`${Math.floor(width)}px`;
     dialog.style.setProperty('--tg-ratio',String(ratio));
+    placeClose();
+  }
+  function placeClose() {
+    if (closed) return;
+    const rect=dialog.getBoundingClientRect();
+    close.style.position='fixed';close.style.top=`${rect.top+8}px`;close.style.right=`${innerWidth-rect.right+8}px`;
   }
   function size() {
     const r = stage.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1,2);
@@ -454,6 +476,11 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     poster.width = composition.width; poster.height = composition.height;
     poster.getContext('2d').drawImage(composition,0,0); drawing = composition;
     zoomImage.src = compositeSources.get(items[index]) || absolute(items[index]);
+    if (displayRatio) {
+      const rect=stage.getBoundingClientRect();
+      const [left,top,width,height]=containRect(displayRatio,1,rect.width,rect.height);
+      Object.assign(zoomImage.style,{inset:'auto',left:`${left}px`,top:`${top}px`,width:`${width}px`,height:`${height}px`,objectFit:'fill'});
+    }
     const description=descriptions[index] || media[items[index]]?.description;
     poster.setAttribute('aria-label',`${typeof description==='string' && description.trim() ? description.trim() : title.textContent} — billede ${index+1} af ${items.length}`);
   }
@@ -500,8 +527,8 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     Promise.all([imageAt(index),imageAt(session.target)]).then(([currentImage,image]) => {
       if (closed || scene !== session) return;
       const [w,h] = size();
-      const before=drawing || compose(currentImage,w,h,shouldBackdrop(currentImage));
-      session.after = compose(image,w,h,shouldBackdrop(image));
+      const before=drawing || composePhoto(currentImage,w,h,shouldBackdrop(currentImage));
+      session.after = composePhoto(image,w,h,shouldBackdrop(image));
       if (before && before.width === w && before.height === h && !reduced.matches) {
         transition ||= createTransition(effectCanvas);
         if (transition) {
@@ -537,9 +564,9 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       if (direction && previousIndex !== null && before && (before.width !== w || before.height !== h)) {
         const previousImage = await imageAt(previousIndex);
         if (closed || ticket !== request) return;
-        before = compose(previousImage,w,h,shouldBackdrop(previousImage));
+        before = composePhoto(previousImage,w,h,shouldBackdrop(previousImage));
       }
-      const composed = compose(image,w,h,shouldBackdrop(image));
+      const composed = composePhoto(image,w,h,shouldBackdrop(image));
       status.hidden = true; poster.hidden = false;
       paint(composed); announce();
       if (direction && before && before.width === w && before.height === h && !reduced.matches) {
@@ -594,7 +621,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   }
   function cleanup() {
     if (closed) return;
-    closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); zoom.reset(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect();
+    closed = true; ++request; clearTimeout(autoplayTimer); cancelScene(); zoom.reset(); cancelAnimationFrame(frame); cancelAnimationFrame(layoutFrame); observer.disconnect(); headerObserver.disconnect(); dialogObserver.disconnect();
     transition?.destroy(); cache.clear(); reduced.removeEventListener('change',motionPreferenceChanged); window.removeEventListener('keydown',keydown,true);
     mobile.removeEventListener('change',resize); window.removeEventListener('resize',resize); window.visualViewport?.removeEventListener('resize',resize); overlay.remove();
     if (root) root.inert = oldInert;
@@ -654,29 +681,44 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   const headerObserver = new ResizeObserver(() => {
     // Presse articles/mastheads can change header height after loading. Keep
     // their image inside the popup so its close button remains in view.
-    if (group==='press') mobileLayoutKey=null;
+    mobileLayoutKey=null;
     resize();
   }); headerObserver.observe(header);
+  const dialogObserver=new ResizeObserver(placeClose);dialogObserver.observe(dialog);
   function link(label, href) {
     const url = new URL(href,assetBase);
     if (!['http:','https:',...(group==='press'?['mailto:']:[])].includes(url.protocol)) return;
+    const localSource=url.origin===assetBase.origin || /^(www\.)?dennisagerblad\.dk$/.test(url.hostname);
+    const target=localSource ? timelineEntries.find(item=>item.href && new URL(item.href,assetBase).pathname===url.pathname) || related[decodeURIComponent(url.pathname)] : undefined;
+    if (target?.popupContent===false) return;
+    if (target) { const node=button(label,label,()=>openTimelineGallery(target,timelinePopupGroup(target)));node.className='tg-content-link';supplementary.append(node);return; }
     const node=el('a','',label); node.href=url.href; node.target='_blank'; node.rel='noreferrer'; supplementary.append(node);
   }
   function populate(data) {
     if (closed) return;
-    const gallery = data.entries?.[`${entry.date}|${entry.category}|${entry.title}`];
-    media = data.media || {}; descriptions=Array.isArray(gallery?.imageDescriptions)?gallery.imageDescriptions:[];
-    composites=group==='press' ? gallery?.composites || {} : {};
+    related=data.related || {};
+    const gallery = data.entries?.[entry.contentKey || `${entry.date}|${entry.category}|${entry.title}`];
+    media = displayRatio ? Object.fromEntries(Object.entries(data.media || {}).map(([src,record])=>[src,{...record,width:displayRatio*1000,height:1000}])) : data.media || {}; descriptions=Array.isArray(gallery?.imageDescriptions)?gallery.imageDescriptions:[];
+    composites=gallery?.composites || {};
     title.textContent = entry.title;
-    const paragraphs = gallery?.details || (entry.details ? [entry.details] : []);
+    const linkLabels=new Set((gallery?.links || []).flatMap(item=>[item.href,item.label]).filter(text=>/^(https?:|www\.)/.test(text)));
+    const sourceParagraphs=[...(entry.details?[entry.details]:[]),...(gallery?.details || [])].filter(text=>!linkLabels.has(text.trim()));
+    const paragraphs = timelinePopupParagraphs(entry,sourceParagraphs);
+    const paragraph = text => {
+      const node=el('p','',text);
+      const index=gallery?.archiveDetails?.indexOf(text) ?? -1;
+      const markup=gallery?.detailMarkup?.[index];
+      if (markup && (markup.match(/<[^>]+>/g) || []).every(tag=>/^<\/?(?:strong|em)>$/.test(tag))) node.innerHTML=markup;
+      return node;
+    };
     const longCopy = entry.date !== '2012-10-12' && paragraphs.join(' ').length > 700 && paragraphs.length > 1;
     if (longCopy) {
-      details.append(el('p','',paragraphs[0]));
+      details.append(paragraph(paragraphs[0]));
       const more = el('details','tg-more'); more.append(el('summary','',group==='press'?(window.DennisLanguage?.current==='en'?'Read the full text':'Læs hele teksten'):'Læs mere om arrangementet'));
-      paragraphs.slice(1).forEach(text => more.append(el('p','',text)));
+      paragraphs.slice(1).forEach(text => more.append(paragraph(text)));
       details.append(more);
-    } else paragraphs.forEach(text => details.append(el('p','',text)));
-    items = gallery?.images || entry.images || (entry.thumbnail ? [entry.thumbnail] : []);
+    } else paragraphs.forEach(text => details.append(paragraph(text)));
+    items = gallery?.images || entry.images || (entry.thumbnail && !entry.videoId ? [entry.thumbnail] : []);
     ({ images: items, descriptions } = thumbnailFirst(items, descriptions, entry.thumbnail));
     if (searchImage) {
       const identity=src=>{const url=new URL(absolute(src));url.search='';url.hash='';return url.href;};
@@ -689,12 +731,12 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       } else p.append(document.createTextNode(entry.creditName));
       supplementary.append(p);
     }
-    if (entry.videoId) {
-      const video=el('iframe','tg-video'); video.src=videoEmbedURL(entry.videoId);
+    for (const videoId of [...new Set([entry.videoId,...(gallery?.videos || [])].filter(Boolean))]) {
+      const video=el('iframe','tg-video'); video.src=videoEmbedURL(videoId);
       video.title=entry.videoTitle || entry.title; video.referrerPolicy='strict-origin-when-cross-origin'; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
       const videoFrame=el('div','video-frame');videoFrame.append(video);
       const youtube=el('a','tg-video-link','Se videoen på YouTube');
-      youtube.href=`https://www.youtube.com/watch?v=${encodeURIComponent(entry.videoId)}`;
+      youtube.href=`https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
       youtube.target='_blank'; youtube.rel='noreferrer';
       if (entry.videoAfterImages) {
         const belowImages=el('div','tg-video-after-images');
@@ -704,20 +746,36 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       }
     }
     if (entry.popupHref) link(entry.popupLabel || 'Se linket ↗',entry.popupHref);
-    if (group==='press') {
-      const seen=new Set(entry.popupHref?[new URL(entry.popupHref,assetBase).href]:[]);
-      for (const item of [...(gallery?.links || []),...Object.values(entry.imageLinks || {})]) {
-        const href=new URL(item.href,assetBase).href;
-        if (!seen.has(href)) { link(item.label || 'Se linket ↗',href); seen.add(href); }
-      }
-      if (gallery?.logos?.length) {
-        const logos=el('div','tg-press-logos');
-        for (const logo of gallery.logos) {
-          const image=el('img'); image.src=absolute(logo.src); image.alt=logo.alt;
-          image.width=logo.width; image.height=logo.height; logos.append(image);
+    const seen=new Set(entry.popupHref?[new URL(entry.popupHref,assetBase).href]:[]);
+    for (const item of [...(gallery?.links || []),...Object.values(entry.imageLinks || {})]) {
+      const href=new URL(item.href,assetBase).href;
+      if (!seen.has(href) && !entry.albumKey) { link(item.label || 'Se linket ↗',href); seen.add(href); }
+    }
+    if (entry.albumKey) {
+      const footer=el('footer','tg-album-footer');
+      const usedLinks=new Set();
+      for (const part of gallery?.albumFooter || []) {
+        if (/^(?:sum\s*[-–]\s*)?nakin\?/i.test(part.text) || /^(sum|nakin\?|land|STEV)\s*[-–]/.test(part.text)) continue;
+        const p=el('p'); let rest=part.text;
+        for (const item of gallery?.links || []) {
+          if (/\/archive\/legacy\//.test(item.href) || !item.label || !rest.includes(item.label)) continue;
+          const at=rest.indexOf(item.label);p.append(document.createTextNode(rest.slice(0,at)));
+          const a=el('a','',item.label);a.href=item.href;a.target='_blank';a.rel='noreferrer';p.append(a);
+          rest=rest.slice(at+item.label.length);usedLinks.add(item.href);
         }
-        header.append(logos);
+        p.append(document.createTextNode(rest));footer.append(p);
       }
+      for (const item of gallery?.links || []) {
+        if (/\/archive\/legacy\//.test(item.href) || usedLinks.has(item.href)) continue;
+        const p=el('p'),a=el('a','',item.label);a.href=item.href;a.target='_blank';a.rel='noreferrer';p.append(a);footer.append(p);
+      }
+      const nav=el('nav','tg-album-nav');nav.setAttribute('aria-label','maður:glotti-albums');
+      timelineEntries.filter(album=>album.albumKey).sort((a,b)=>a.date.localeCompare(b.date)).forEach(album=>{
+        const node=button(album.albumKey,album.albumKey,()=>openTimelineGallery(album,'music',theme));
+        if(album.albumKey===entry.albumKey)node.setAttribute('aria-current','page');
+        nav.append(node);
+      });
+      footer.append(nav);viewer.append(footer);
     }
     if (items.length) {
       previous.hidden=next.hidden=items.length<2; rotation.hidden=items.length<2; updateRotation();
