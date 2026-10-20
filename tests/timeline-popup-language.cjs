@@ -35,6 +35,7 @@ const {fileURLToPath}=require('node:url');
     const state={URL,document,location:{href:'https://dennisagerblad.dk/?lang='+language,pathname:'/'},localStorage:{getItem(){return null}},window:{DennisEnglish:dictionary,DennisPopupDanish:aliases}};
     vm.runInNewContext(fs.readFileSync('assets/site-language.js','utf8'),state);
     assert.equal(state.window.DennisLanguage.translate('Udgivet af: '),language==='en'?'Released by: ':'Udgivet af: ');
+    assert.equal(state.window.DennisLanguage.translate('Hør STEV'),language==='en'?'Listen to STEV':'Hør STEV');
     assert.equal(state.window.DennisLanguage.danish('Released by: TUTL Records'),'Udgivet af: TUTL Records');
   }
   console.log(`PASS: screenshot examples have one description in each language; ${Object.keys(source).length} reviewed bilingual strings; photographer credits retained`);
