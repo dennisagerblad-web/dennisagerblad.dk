@@ -291,7 +291,7 @@ export const timelineEntries = [
     "display": "14.12.2024",
     "year": 2024,
     "category": "Optræden",
-    "title": "Scoop Models Juleshow",
+    "title": "Scoop Models Julefest",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2024-12-14-thumb.webp",
@@ -301,8 +301,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2024-12-14-03.webp",
       "./archive/timeline/performance/2024-12-14-04.webp"
     ],
-    "details": "Jeg var go-go-danser til Scoop Models’ juleshow.",
-    "thumbnailPreview": "./assets/timeline-thumbs/b874ecde162cf43a.webp"
+    "details": "Jeg var go-go-danser til Scoop Models’ juleshow. Vi var Hairwerk Hugh Mongous, Blomst og Dennis Agerblad. Hairwerk lavede kostumer og makeup.",
+    "thumbnailPreview": "./assets/timeline-thumbs/b874ecde162cf43a.webp",
+    "shareAliases": [
+      "2024-12-14|Optræden|Scoop Models Juleshow"
+    ]
   },
   {
     "date": "2024-11-10",
@@ -608,7 +611,7 @@ export const timelineEntries = [
     "display": "17.12.2022",
     "year": 2022,
     "category": "Optræden",
-    "title": "Juleoptræden med Hairwerk, Scoop Models",
+    "title": "Scoop Models Julefest",
     "group": "live",
     "href": null,
     "gallery": true,
@@ -622,7 +625,10 @@ export const timelineEntries = [
     ],
     "thumbnail": "./archive/timeline/performance/2022-12-17-scoop-03.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/2022-12-17-scoop-03.webp",
-    "details": "Vi var go-go-dansere til Scoop Models’ juleshow."
+    "details": "Vi var go-go-dansere til Scoop Models’ juleshow. Vi var Hairwerk Hugh Mongous, Adam og Dennis Agerblad. Hairwerk lavede kostumer og makeup.",
+    "shareAliases": [
+      "2022-12-17|Optræden|Juleoptræden med Hairwerk, Scoop Models"
+    ]
   },
   {
     "date": "2022-10-21",

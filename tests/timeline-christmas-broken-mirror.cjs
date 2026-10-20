@@ -10,11 +10,12 @@ const {execFileSync} = require('node:child_process');
   const report = read('docs/timeline-christmas-consolidation-20261016.json');
   const restored = report.restoredSeparateEvents;
   assert.ok(!timelineEntries.some(e=>[e.date,e.category,e.title].join('|')===restored.previousMergedKey),'Distinct 2024 events are not merged');
-  for (const {key,images} of restored.events) {
+  for (const {key,images,originalKey=key} of restored.events) {
     const entry=timelineEntries.find(e=>[e.date,e.category,e.title].join('|')===key);
     assert.ok(entry,key);
     assert.equal(galleries[key].images.length,images,'Each event has its own complete gallery');
-    assert.deepEqual(galleries[key].images,before[key].images,'Preserve original event photo order');
+    assert.deepEqual(galleries[key].images,before[originalKey].images,'Preserve original event photo order');
+    if(originalKey!==key) assert.ok(entry.shareAliases.includes(originalKey),'Renamed events retain their original shared links');
     assert.deepEqual(entry.images,galleries[key].images,'Timeline and popup use the same event photographs');
     assert.equal(galleries[key].imageDescriptions.length,images,'Preserve every photo description');
     assert.ok(galleries[key].images.every(src=>src.includes('/'+entry.date+'-')),'No photos from the other show');
