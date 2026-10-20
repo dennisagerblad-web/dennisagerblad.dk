@@ -203,22 +203,18 @@ function createTransition(canvas) {
           vec2 b=vec2(uv.x,uv.y-direction*intensity*oldLight*(1.-p));
           gl_FragColor=mix(texture2D(before,clamp(a,0.,1.)),texture2D(after,clamp(b,0.,1.)),p);
         } else {
-          // Contrast: complementary colours lead the arriving photograph.
-          // A small horizontal glide settles before the original colours return.
-          // Both endpoints are the untouched photos; there is no colour flash
-          // on the resting image, and direction follows the navigation arrows.
-          vec2 a=vec2(uv.x+direction*.08*p,uv.y);
-          vec2 b=vec2(uv.x-direction*.14*(1.-p),uv.y);
-          vec4 outgoing=texture2D(before,clamp(a,0.,1.));
-          vec4 incoming=texture2D(after,clamp(b,0.,1.));
-          // Rotate the colour axis instead of mixing with a negative: this
-          // keeps the colours vivid through the middle and dark areas dark.
-          float turn=3.14159265*(1.-smoothstep(.18,.88,p));
-          vec3 axis=vec3(.577350269);
-          vec3 colour=incoming.rgb;
-          incoming.rgb=clamp(colour*cos(turn)+cross(axis,colour)*sin(turn)
-            +axis*dot(axis,colour)*(1.-cos(turn)),0.,1.);
-          gl_FragColor=mix(outgoing,incoming,smoothstep(0.,.42,p));
+          // Contrast between the two source photographs guides the reveal.
+          // Only their original pixels are sampled and blended; RGB values
+          // are never rotated, inverted, saturated or otherwise recoloured.
+          vec3 oldColour=texture2D(before,uv).rgb;
+          vec3 newColour=texture2D(after,uv).rgb;
+          float contrast=clamp(length(oldColour-newColour)*.577350269,0.,1.);
+          float movement=4.*p*(1.-p);
+          vec2 a=vec2(uv.x+direction*.06*p*contrast,uv.y);
+          vec2 b=vec2(uv.x-direction*.12*(1.-p)*contrast,uv.y);
+          float reveal=clamp(p+.55*(contrast-.3)*movement,0.,1.);
+          gl_FragColor=mix(texture2D(before,clamp(a,0.,1.)),
+                           texture2D(after,clamp(b,0.,1.)),reveal);
         }
       }`);
     program = gl.createProgram(); resources.push(['program', program]);
