@@ -16,10 +16,19 @@ const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
   '../content/timeline/galleries.json?v=20261019-word-slides-1',
   '../content/timeline/image-metadata.json?v=20261019-word-slides-1',
-].map(path => fetch(new URL(path, import.meta.url)).then(response => {
+  '../content/timeline/press-galleries.json?v=20261020-press-slides-2',
+].map((path,index) => fetch(new URL(path, import.meta.url)).then(response => {
   if (!response.ok) throw new Error('Gallery data unavailable');
   return response.json();
-}))).then(([galleries, metadata]) => ({entries:galleries.entries, media:metadata.media}))
+}).catch(error => { if (index === 2) return {}; throw error; })))
+  .then(([galleries, metadata, press]) => ({
+    // Later curated photo replacements/order always outrank the archive index.
+    entries:{...galleries.entries,...Object.fromEntries(Object.entries(press.entries || {}).map(([key,gallery])=>{
+      const curated=galleries.entries[key];
+      return [key,{...gallery,...curated,details:curated?.details?.length ? curated.details : gallery.details}];
+    }))},
+    media:{...metadata.media,...Object.fromEntries(Object.entries(press.media || {}).map(([src,size])=>[src,{...size,...metadata.media[src]}]))},
+  }))
   .catch(error => { dataPromise = null; throw error; });
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -42,7 +51,18 @@ export const galleryEffects = Object.freeze({
   Morph: { shader:2, intensity:.3, duration:1000 },
   Contrast: { shader:3, intensity:0, duration:1100 },
 });
-export const timelineEffects = Object.freeze({ live:'Morph', art:'Paint' });
+export const timelineEffects = Object.freeze({ live:'Morph', art:'Paint', press:'Contrast' });
+
+// Single-image and text-only Presse entries retain their existing popup.
+// The shared data is already prefetched by Timeline search before a click.
+export function openPressTimelineGallery(entry, theme, fallback) {
+  return loadData().then(data => {
+    const images=data.entries[`${entry.date}|${entry.category}|${entry.title}`]?.images || entry.images || [];
+    if (images.length > 1 || ['2011-06-24','2011-07-01'].includes(entry.date)) {
+      openTimelineGallery(entry,'press',theme);
+    } else fallback();
+  }).catch(() => fallback());
+}
 
 // Use all available space while preserving the complete photograph.
 export function containRect(imageWidth, imageHeight, frameWidth, frameHeight) {
@@ -315,7 +335,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
 
   stage.append(previous,next,announcement,rotation); viewer.append(stage);
   dialog.append(close,header,viewer); overlay.append(dialog); document.body.append(overlay);
-  let closed = false, index = 0, items = [], media = {}, descriptions = [], drawing = null, request = 0;
+  let closed = false, index = 0, items = [], media = {}, descriptions = [], composites = {}, drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
   let scene = null, drag = null, paused = options.autoplay===false || !!searchImage, rotationPointerPaused = null;
   let mobileLayoutKey;
@@ -327,6 +347,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   const portraitMobile = matchMedia('(max-width: 760px) and (orientation: portrait)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cache = new Map();
+  const compositeSources = new Map();
   const shouldBackdrop = image => items.length > 1;
   function scheduleAutoplay(delay = 2000) {
     clearTimeout(autoplayTimer);
@@ -352,11 +373,24 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   updateRotation();
   function imageAt(i) {
     const src = items[i];
-    if (!cache.has(src)) cache.set(src,new Promise((resolve,reject) => {
+    const load=source => new Promise((resolve,reject) => {
       const image = new Image(); image.decoding = 'async';
-      image.onload = () => resolve(image); image.onerror = () => { cache.delete(src); reject(Error('image')); };
-      image.src = absolute(src);
-    }));
+      image.onload = () => resolve(image); image.onerror = () => reject(Error('image'));
+      image.src = source;
+    });
+    if (!cache.has(src)) cache.set(src,(composites[src]
+      ? Promise.all(composites[src].map(part=>load(absolute(part)))).then(parts=>{
+        // Display the existing, vertically sliced archive photo as one slide.
+        // No source photo is rewritten and no gap is introduced between parts.
+        const canvas=document.createElement('canvas');
+        canvas.width=Math.max(...parts.map(part=>part.naturalWidth));
+        canvas.height=parts.reduce((height,part)=>height+part.naturalHeight,0);
+        const ctx=canvas.getContext('2d'); let top=0;
+        for (const part of parts) { ctx.drawImage(part,0,top); top+=part.naturalHeight; }
+        const source=canvas.toDataURL(); compositeSources.set(src,source);
+        return load(source);
+      })
+      : load(absolute(src))).catch(error=>{cache.delete(src);throw error;}));
     return cache.get(src);
   }
   function layout() {
@@ -419,7 +453,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   function paint(composition) {
     poster.width = composition.width; poster.height = composition.height;
     poster.getContext('2d').drawImage(composition,0,0); drawing = composition;
-    zoomImage.src = absolute(items[index]);
+    zoomImage.src = compositeSources.get(items[index]) || absolute(items[index]);
     const description=descriptions[index] || media[items[index]]?.description;
     poster.setAttribute('aria-label',`${typeof description==='string' && description.trim() ? description.trim() : title.textContent} — billede ${index+1} af ${items.length}`);
   }
@@ -617,22 +651,28 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     const [w,h] = size();
     if (!drawing || drawing.width !== w || drawing.height !== h) render();
   }); observer.observe(stage);
-  const headerObserver = new ResizeObserver(resize); headerObserver.observe(header);
+  const headerObserver = new ResizeObserver(() => {
+    // Presse articles/mastheads can change header height after loading. Keep
+    // their image inside the popup so its close button remains in view.
+    if (group==='press') mobileLayoutKey=null;
+    resize();
+  }); headerObserver.observe(header);
   function link(label, href) {
     const url = new URL(href,assetBase);
-    if (!['http:','https:'].includes(url.protocol)) return;
+    if (!['http:','https:',...(group==='press'?['mailto:']:[])].includes(url.protocol)) return;
     const node=el('a','',label); node.href=url.href; node.target='_blank'; node.rel='noreferrer'; supplementary.append(node);
   }
   function populate(data) {
     if (closed) return;
     const gallery = data.entries?.[`${entry.date}|${entry.category}|${entry.title}`];
     media = data.media || {}; descriptions=Array.isArray(gallery?.imageDescriptions)?gallery.imageDescriptions:[];
+    composites=group==='press' ? gallery?.composites || {} : {};
     title.textContent = entry.title;
     const paragraphs = gallery?.details || (entry.details ? [entry.details] : []);
     const longCopy = entry.date !== '2012-10-12' && paragraphs.join(' ').length > 700 && paragraphs.length > 1;
     if (longCopy) {
       details.append(el('p','',paragraphs[0]));
-      const more = el('details','tg-more'); more.append(el('summary','','Læs mere om arrangementet'));
+      const more = el('details','tg-more'); more.append(el('summary','',group==='press'?(window.DennisLanguage?.current==='en'?'Read the full text':'Læs hele teksten'):'Læs mere om arrangementet'));
       paragraphs.slice(1).forEach(text => more.append(el('p','',text)));
       details.append(more);
     } else paragraphs.forEach(text => details.append(el('p','',text)));
@@ -664,6 +704,21 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       }
     }
     if (entry.popupHref) link(entry.popupLabel || 'Se linket ↗',entry.popupHref);
+    if (group==='press') {
+      const seen=new Set(entry.popupHref?[new URL(entry.popupHref,assetBase).href]:[]);
+      for (const item of [...(gallery?.links || []),...Object.values(entry.imageLinks || {})]) {
+        const href=new URL(item.href,assetBase).href;
+        if (!seen.has(href)) { link(item.label || 'Se linket ↗',href); seen.add(href); }
+      }
+      if (gallery?.logos?.length) {
+        const logos=el('div','tg-press-logos');
+        for (const logo of gallery.logos) {
+          const image=el('img'); image.src=absolute(logo.src); image.alt=logo.alt;
+          image.width=logo.width; image.height=logo.height; logos.append(image);
+        }
+        header.append(logos);
+      }
+    }
     if (items.length) {
       previous.hidden=next.hidden=items.length<2; rotation.hidden=items.length<2; updateRotation();
       layout(); render();
