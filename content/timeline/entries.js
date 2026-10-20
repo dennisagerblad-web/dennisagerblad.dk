@@ -145,7 +145,10 @@ export const timelineEntries = [
         "href": "https://kvf.fo/ljod/sending/leitisstein?sid=200676",
         "label": "Hør interviewet hos Kringvarp Føroya"
       }
-    }
+    },
+    "galleryEffect": "Contrast",
+    "popupHref": "https://kvf.fo/ljod/sending/leitisstein?sid=200676",
+    "popupLabel": "Hør interviewet hos Kringvarp Føroya"
   },
   {
     "date": "2025-10-29",

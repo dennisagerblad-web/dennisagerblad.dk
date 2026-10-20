@@ -1,4 +1,4 @@
-/* Named timeline effects: Grow, Paint and Morph.
+/* Named timeline effects: Grow, Paint, Morph and Contrast.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
 import { timelineDate } from './timeline-ui.js?v=20261018-sproghoved-1';
@@ -40,6 +40,7 @@ export const galleryEffects = Object.freeze({
   Grow: { shader:0, intensity:0, duration:1000 },
   Paint: { shader:1, intensity:0, duration:1100 },
   Morph: { shader:2, intensity:.3, duration:1000 },
+  Contrast: { shader:3, intensity:0, duration:1100 },
 });
 export const timelineEffects = Object.freeze({ live:'Morph', art:'Paint' });
 
@@ -190,7 +191,7 @@ function createTransition(canvas) {
           vec2 a=vec2(uv.x+offset*p,uv.y);
           vec2 b=vec2(uv.x-offset*(1.-p),uv.y);
           gl_FragColor=mix(texture2D(before,clamp(a,0.,1.)),texture2D(after,clamp(b,0.,1.)),p);
-        } else {
+        } else if(effect<2.5) {
           // Morph: each full-resolution photo displaces the OTHER photo.
           // Arithmetic RGB mean, no external noise or blurred flow map.
           float oldLight=dot(texture2D(before,uv).rgb,vec3(1./3.));
@@ -201,6 +202,23 @@ function createTransition(canvas) {
           vec2 a=vec2(uv.x,uv.y-direction*intensity*newLight*p);
           vec2 b=vec2(uv.x,uv.y-direction*intensity*oldLight*(1.-p));
           gl_FragColor=mix(texture2D(before,clamp(a,0.,1.)),texture2D(after,clamp(b,0.,1.)),p);
+        } else {
+          // Contrast: complementary colours lead the arriving photograph.
+          // A small horizontal glide settles before the original colours return.
+          // Both endpoints are the untouched photos; there is no colour flash
+          // on the resting image, and direction follows the navigation arrows.
+          vec2 a=vec2(uv.x+direction*.08*p,uv.y);
+          vec2 b=vec2(uv.x-direction*.14*(1.-p),uv.y);
+          vec4 outgoing=texture2D(before,clamp(a,0.,1.));
+          vec4 incoming=texture2D(after,clamp(b,0.,1.));
+          // Rotate the colour axis instead of mixing with a negative: this
+          // keeps the colours vivid through the middle and dark areas dark.
+          float turn=3.14159265*(1.-smoothstep(.18,.88,p));
+          vec3 axis=vec3(.577350269);
+          vec3 colour=incoming.rgb;
+          incoming.rgb=clamp(colour*cos(turn)+cross(axis,colour)*sin(turn)
+            +axis*dot(axis,colour)*(1.-cos(turn)),0.,1.);
+          gl_FragColor=mix(outgoing,incoming,smoothstep(0.,.42,p));
         }
       }`);
     program = gl.createProgram(); resources.push(['program', program]);
@@ -262,7 +280,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   closeActive?.();
   const searchImage=options.initialImage || (requestedSearchImage?.key===`${entry.date}|${entry.category}|${entry.title}` && requestedSearchImage.expires>Date.now() ? requestedSearchImage.src : null);
   requestedSearchImage=null;
-  const effectName=timelineEffects[group] || 'Grow';
+  const effectName=Object.hasOwn(galleryEffects,entry.galleryEffect) ? entry.galleryEffect : timelineEffects[group] || 'Grow';
   const opener = document.activeElement;
   const root = document.getElementById('root');
   const oldInert = root?.inert;
