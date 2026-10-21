@@ -30,7 +30,7 @@ const {fileURLToPath,pathToFileURL}=require('node:url');
  assert.equal(article.images.length,1);assert(article.details.length>=5);assert(article.detailMarkup.some(s=>s.includes('<strong>')));
  assert(article.links.some(l=>l.href==='http://citadellet.dk/homopolis/filmprogram-snart-ude'));
  assert.deepEqual(paragraphs({title:'Filmprogram snart ude, Citadel Avisen, Danmark.',display:'03.09.2009'},['Filmprogram snart ude','03.09.2009','Filmprogram snart ude, Citadel Avisen, Danmark.','Unik artikeltekst','Unik artikeltekst']),['Unik artikeltekst']);
- assert.equal(press,119,'All Presse records, including single-image and text articles, have native content');
+ assert.equal(press,118,'All remaining Presse records, after removing the duplicate Dancing entry, have native content');
  for(const e of timelineEntries.filter(e=>e.href)){
   const key=`${e.date}|${e.category}|${e.title}`;
   assert(native.entries[key],e.title+' was left on the old iframe route');

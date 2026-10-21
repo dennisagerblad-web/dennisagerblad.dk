@@ -1,6 +1,6 @@
-import './timeline-position.js?v=20261019-sproghoved-date-1';
+import './timeline-position.js?v=20261021-person-tags-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261018-sproghoved-1';
-import { timelineEntries } from '../content/timeline/entries.js?v=20261019-lyd-copy-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261021-person-tags-1';
 const icon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v5C6 8 3 12 3 20c3-5 6-7 11-7v5l8-7z"/></svg>';
 let activePanel;
 function closePanel() {

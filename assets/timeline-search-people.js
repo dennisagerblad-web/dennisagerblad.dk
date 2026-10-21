@@ -119,8 +119,9 @@ export const timelinePerformers = [
   },
   {
     "id": "gitte-plads",
-    "name": "Gitte Plads",
+    "name": "Gitte Plass",
     "aliases": [
+      "Gitte Plass",
       "Gitte Plads"
     ]
   },
@@ -782,6 +783,13 @@ export const timelinePerformers = [
     "name": "Adam",
     "aliases": [
       "Adam"
+    ]
+  },
+  {
+    "id": "aupair-outrair",
+    "name": "Aupair Outrair",
+    "aliases": [
+      "Aupair Outrair"
     ]
   }
 ];

@@ -4055,17 +4055,6 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/8e390d4f5114b756.webp"
   },
   {
-    "date": "2006-05-05",
-    "display": "05.05.2006",
-    "year": 2006,
-    "category": "Film",
-    "title": "Dancing",
-    "group": "media",
-    "href": "./archive/legacy/200_calendar/2006/06_05_05_lars/dancing.html",
-    "thumbnail": "./archive/legacy/200_calendar/2006/06_05_05_lars/2006_05_05_lars_02.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/9070740a4bf3983a.webp"
-  },
-  {
     "date": "2006-05-01",
     "display": "01.05.2006",
     "year": 2006,

@@ -9,7 +9,7 @@ const fs = require('node:fs');
   const galleries = read('content/timeline/galleries.json').entries;
   const records = read('content/timeline/people.json').photos;
   const englishRaw = fs.readFileSync('assets/site-language-data.js','utf8');
-  const english = JSON.parse(englishRaw.split('window.DennisEnglish = ')[1].trim().replace(/;$/,''));
+  const english = JSON.parse(englishRaw.split('window.DennisEnglish = ')[1].split(';\nwindow.DennisPopupDanish')[0]);
   const results = timelineEntries.map(entry => {
     const g = galleries[`${entry.date}|${entry.category}|${entry.title}`];
     return {entry,searchable:normalize(entry.title+' '+entry.details),galleryDetails:g?.details || [],images:(g?.images || []).map((src,i)=>({src,description:g.imageDescriptions[i],people:[...new Set([...(records[src.split('?')[0]]?.people || []),...find(g.imageDescriptions[i])])]}))};
