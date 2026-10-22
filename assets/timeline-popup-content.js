@@ -5,13 +5,16 @@ export function hasTimelinePopupContent(entry) {
     entry.images?.length || entry.albumKey || entry.biography?.length || entry.popupHref);
 }
 export function timelinePopupParagraphs(entry, paragraphs) {
+  // Text approved in the popup editor replaces earlier descriptions and archive
+  // captions. The editor's paragraphs are the complete body, not extra copy.
+  const source = Array.isArray(entry.popupParagraphs) ? entry.popupParagraphs : paragraphs;
   const normalize = value => String(value).normalize('NFKC').toLocaleLowerCase('da-DK')
     .replace(/[.,!?;:–—"“”()\[\]]/g, ' ').replace(/\s+/g, ' ').trim();
   const withoutPrepositions = value => normalize(value).split(' ').filter(word => !['i','på','ved','til','af','fra'].includes(word)).join(' ');
   const titles = [entry.title,entry.shortTitle,entry.popupTitle,entry.title?.split(',')[0]].filter(Boolean).map(withoutPrepositions);
   const dates = [entry.display,entry.date].filter(Boolean).map(normalize);
   const seen = new Set();
-  const result = paragraphs.map(text => globalThis.window?.DennisLanguage?.danish?.(text) || text).filter(text => {
+  const result = source.map(text => globalThis.window?.DennisLanguage?.danish?.(text) || text).filter(text => {
     const value=normalize(text);
     if (!value || titles.includes(withoutPrepositions(text)) || dates.includes(value) || seen.has(value)) return false;
     seen.add(value); return true;

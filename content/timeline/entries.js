@@ -52,7 +52,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2026-07-18-05.jpg",
       "./archive/timeline/performance/2026-07-18-01.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/066b54791347bab1.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/066b54791347bab1.webp",
+    "details": "Denne gang havde jeg Hairwerk Hugh Mongues og Blomst med mig.",
+    "popupParagraphs": [
+      "Denne gang havde jeg Hairwerk Hugh Mongues og Blomst med mig."
+    ]
   },
   {
     "date": "2026-06-05",
@@ -89,7 +93,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2025-12-19-04.jpg"
     ],
     "details": "Jeg blev fundet i en julekalender og måtte synge en julesang, mens jeg blev bollet i røven.",
-    "thumbnailPreview": "./assets/timeline-thumbs/c6bcdbdc2ffe28b4.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/c6bcdbdc2ffe28b4.webp",
+    "popupParagraphs": [
+      "Jeg blev fundet i en julekalender og måtte synge en julesang, mens jeg blev bollet i røven.",
+      "Jack King og Rebekka Fjams Du Nord samlede affald i backstage."
+    ]
   },
   {
     "date": "2025-11-28",
@@ -121,8 +129,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2025-11-28-06.jpg",
       "./archive/timeline/performance/2025-11-28-07.jpg"
     ],
-    "details": "Vi var tre på scenen: Terji Korssteig på guitar og sang, jeg på Kaospad og sang, og Kristin Nólsøe Bech på bas.",
-    "thumbnailPreview": "./assets/timeline-thumbs/8093067ba54b9a88.webp"
+    "details": "Vi var tre på scenen: Terji Korssteig på guitar og sang, Kristin Nólsøe Bech på bas og jeg på Kaospad og sang.",
+    "thumbnailPreview": "./assets/timeline-thumbs/8093067ba54b9a88.webp",
+    "popupParagraphs": [
+      "Vi var tre på scenen: Terji Korssteig på guitar og sang, Kristin Nólsøe Bech på bas og jeg på Kaospad og sang."
+    ]
   },
   {
     "date": "2025-11-28",
@@ -132,7 +143,7 @@ export const timelineEntries = [
     "title": "maður:glotti i Leitisstein, Kringvarp Føroya",
     "group": "press",
     "href": null,
-    "details": "Interview i færøsk radio om det nye album “STEV”.",
+    "details": "Terji Krossteig og jeg blev Interviewet i færøsk radio om vores nye album “STEV”.",
     "thumbnail": "./archive/timeline/press/2025-11-28-leitisstein-radio.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/182619212b13521c.webp",
     "images": [
@@ -148,7 +159,10 @@ export const timelineEntries = [
     },
     "galleryEffect": "Contrast",
     "popupHref": "https://kvf.fo/ljod/sending/leitisstein?sid=200676",
-    "popupLabel": "Hør interviewet hos Kringvarp Føroya"
+    "popupLabel": "Hør interviewet hos Kringvarp Føroya",
+    "popupParagraphs": [
+      "Terji Krossteig og jeg blev Interviewet i færøsk radio om vores nye album “STEV”."
+    ]
   },
   {
     "date": "2025-10-29",
@@ -168,8 +182,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2025-10-29-06.jpg",
       "./archive/timeline/performance/2025-10-29-07.jpg"
     ],
-    "details": "Jeg sang min sang “Kærlighed”.",
-    "thumbnailPreview": "./assets/timeline-thumbs/9dc59abb17c2dfc8.webp"
+    "details": "Jeg sang min sang “Kærlighed”. Dette år var vi Hairwerk Hugh Mongues, Ramona Macho, Trine Trash, Blomst, Trine Syberg, Katrine, Tutu Wanna, Miss Fish, Kastanje, Lea, med flere.",
+    "thumbnailPreview": "./assets/timeline-thumbs/9dc59abb17c2dfc8.webp",
+    "popupParagraphs": [
+      "Jeg sang min sang “Kærlighed”. Dette år var vi Hairwerk Hugh Mongues, Ramona Macho, Trine Trash, Blomst, Trine Syberg, Katrine, Tutu Wanna, Miss Fish, Kastanje, Lea, med flere."
+    ]
   },
   {
     "date": "2025-10-25",
@@ -207,8 +224,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2025-08-09-02.jpg",
       "./archive/timeline/performance/2025-08-09-03.jpg"
     ],
-    "details": "Jeg sang “Rumpedans”.",
-    "thumbnailPreview": "./assets/timeline-thumbs/1ad1e51c3b6b24c3.webp"
+    "details": "Jeg sang Rumpedans og hang ud med Aupair Outrair.",
+    "thumbnailPreview": "./assets/timeline-thumbs/1ad1e51c3b6b24c3.webp",
+    "popupParagraphs": [
+      "Jeg sang Rumpedans og hang ud med Aupair Outrair."
+    ]
   },
   {
     "date": "2025-07-25",
@@ -256,8 +276,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2025-05-10-03.jpg",
       "./archive/timeline/performance/2025-05-10-04.webp"
     ],
-    "details": "Jeg sang “Lige før jeg faldt i søvn”.",
-    "thumbnailPreview": "./assets/timeline-thumbs/f3f72186e1ee2c63.webp"
+    "details": "Jeg sang “Lige før jeg faldt i søvn”. Her med Trine Syberg og Per i backstage.",
+    "thumbnailPreview": "./assets/timeline-thumbs/f3f72186e1ee2c63.webp",
+    "popupParagraphs": [
+      "Jeg sang “Lige før jeg faldt i søvn”. Her med Trine Syberg og Per i backstage."
+    ]
   },
   {
     "date": "2024-12-21",
@@ -284,6 +307,10 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/36e3bea92784893a.webp",
     "shareAliases": [
       "2024-12-21|Optræden|Juleshow – Bøssehuset og Scoop Models"
+    ],
+    "details": "Biker og jeg optrådte med telefonsex. Telefonerne blev også brugt til en duet med Tutu Wanna. I back stage hygger jeg mig med Gitte Plass, George og Falula",
+    "popupParagraphs": [
+      "Biker og jeg optrådte med telefonsex. Telefonerne blev også brugt til en duet med Tutu Wanna. I back stage hygger jeg mig med Gitte Plass, George og Falula"
     ]
   },
   {
@@ -353,8 +380,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2024-08-10-02.webp",
       "./archive/timeline/performance/2024-08-10-03.webp"
     ],
-    "details": "Jeg sang “We Are Aliens” med mit band til sommerfesten i Bøssehuset.",
-    "thumbnailPreview": "./assets/timeline-thumbs/763e206036840953.webp"
+    "details": "“We Are Aliens” sang Dennis Agerblad Band til sommerfesten i Bøssehuset. Vi var Hairwerk Hugh Mongous, Blomst og mig.",
+    "thumbnailPreview": "./assets/timeline-thumbs/763e206036840953.webp",
+    "popupParagraphs": [
+      "“We Are Aliens” sang Dennis Agerblad Band til sommerfesten i Bøssehuset. Vi var Hairwerk Hugh Mongous, Blomst og mig."
+    ]
   },
   {
     "date": "2024-05-31",
@@ -425,7 +455,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2023-10-28-03.webp",
       "./archive/timeline/performance/2023-10-28-04.webp"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/ef0f808f9777deea.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/ef0f808f9777deea.webp",
+    "details": "Jeg var til Goth fest i Bøssehuset.",
+    "popupParagraphs": [
+      "Jeg var til Goth fest i Bøssehuset."
+    ]
   },
   {
     "date": "2023-10-20",
@@ -481,8 +515,11 @@ export const timelineEntries = [
       "archive/timeline/performance/2023-09-27-03.webp",
       "archive/timeline/performance/2023-09-27-04.webp"
     ],
-    "details": "Jeg sang, da Bøssehuset modtog en pris ved Regnbueawards.",
-    "thumbnailPreview": "./assets/timeline-thumbs/8fb884a6f92e9318.webp"
+    "details": "Bøssehuset modtog en pris ved Regnbueawards og Lotte, Bisgaard, Tutu Wanna og jeg sang Bøssehusets nye slagsang. \"Ind Af Bagindgangen.\"",
+    "thumbnailPreview": "./assets/timeline-thumbs/8fb884a6f92e9318.webp",
+    "popupParagraphs": [
+      "Bøssehuset modtog en pris ved Regnbueawards og Lotte, Bisgaard, Tutu Wanna og jeg sang Bøssehusets nye slagsang. \"Ind Af Bagindgangen.\""
+    ]
   },
   {
     "date": "2023-08-17",
@@ -537,8 +574,11 @@ export const timelineEntries = [
       "archive/timeline/performance/2023-08-12-04.webp",
       "archive/timeline/performance/2023-08-12-05.webp"
     ],
-    "details": "Jeg sang “Bøssehusets Sommerfest” til sommerfesten.",
-    "thumbnailPreview": "./assets/timeline-thumbs/b7b40587c784918d.webp"
+    "details": "Dennis Agerblad Band sang vores nye sang “Bøssehusets Sommerfest” til sommerfesten. Denne gang var vi Blomst, Athena Lady, Hairwerk Hugh Mongous, Florence og mig. Vi dansede synkrondans.",
+    "thumbnailPreview": "./assets/timeline-thumbs/b7b40587c784918d.webp",
+    "popupParagraphs": [
+      "Dennis Agerblad Band sang vores nye sang “Bøssehusets Sommerfest” til sommerfesten. Denne gang var vi Blomst, Athena Lady, Hairwerk Hugh Mongous, Florence og mig. Vi dansede synkrondans."
+    ]
   },
   {
     "date": "2023-06-05",
@@ -573,8 +613,11 @@ export const timelineEntries = [
       "./archive/timeline/performance/2023-05-27-05.jpg",
       "./archive/timeline/performance/2023-05-27-06.jpg"
     ],
-    "details": "Jeg sang Tennis Sladderblad.",
-    "thumbnailPreview": "./assets/timeline-thumbs/a03e78d061767416.webp"
+    "details": "Jeg sang Tennis Sladderblad. To af mine søstre Unni og Siv var inde for at høre mig. Efter showet hang jeg med Krisser & Ole, dem der var med til at starte Bøssehuset op for ca. 50 år siden. Og her ses jeg også med Gitte Plass, Maria Maud og Sara Mc Evan.",
+    "thumbnailPreview": "./assets/timeline-thumbs/a03e78d061767416.webp",
+    "popupParagraphs": [
+      "Jeg sang Tennis Sladderblad. To af mine søstre Unni og Siv var inde for at høre mig. Efter showet hang jeg med Krisser & Ole, dem der var med til at starte Bøssehuset op for ca. 50 år siden. Og her ses jeg også med Gitte Plass, Maria Maud og Sara Mc Evan."
+    ]
   },
   {
     "date": "2023-02-02",
@@ -625,9 +668,12 @@ export const timelineEntries = [
     ],
     "thumbnail": "./archive/timeline/performance/2022-12-17-scoop-03.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/2022-12-17-scoop-03.webp",
-    "details": "Vi var go-go-dansere til Scoop Models’ juleshow. Vi var Hairwerk Hugh Mongous, Adam og Dennis Agerblad. Hairwerk lavede kostumer og makeup.",
+    "details": "Vi var go-go-dansere til Scoop Models’ juleshow. Vi var Hairwerk Hugh Mongous, Adam og Dennis Agerblad. Hairwerk lavede kostumer og makeup. Adam lagde måske sin egen makeup.",
     "shareAliases": [
       "2022-12-17|Optræden|Juleoptræden med Hairwerk, Scoop Models"
+    ],
+    "popupParagraphs": [
+      "Vi var go-go-dansere til Scoop Models’ juleshow. Vi var Hairwerk Hugh Mongous, Adam og Dennis Agerblad. Hairwerk lavede kostumer og makeup. Adam lagde måske sin egen makeup."
     ]
   },
   {
@@ -754,7 +800,7 @@ export const timelineEntries = [
     "year": 2022,
     "category": "Optræden",
     "title": "Cabaret til Peter Vadims 50 års fødselsdag, Bornholm.",
-    "details": "Jeg optrådte sammen med Trine Trash, mAdam, Kvinde, Katrine Syberg, Florance, Hairwerk og Johnny Warehouse til Peter Vadims fødselsdag.",
+    "details": "Jeg optrådte sammen med Trine Trash, mAdam, Susanne Judson, Katrine Syberg, Florance, Hairwerk og Nadja Rubin til Peter Vadims fødselsdag.",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/peter-vadim-50-2022-05.jpeg",
@@ -765,7 +811,10 @@ export const timelineEntries = [
       "./archive/timeline/peter-vadim-50-2022-04.jpeg",
       "./archive/timeline/peter-vadim-50-2022-05.jpeg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/06dafff564840150.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/06dafff564840150.webp",
+    "popupParagraphs": [
+      "Jeg optrådte sammen med Trine Trash, mAdam, Susanne Judson, Katrine Syberg, Florance, Hairwerk og Nadja Rubin til Peter Vadims fødselsdag."
+    ]
   },
   {
     "date": "2022-02-03",
@@ -1142,7 +1191,10 @@ export const timelineEntries = [
       "./archive/timeline/performance/2019-10-19-02.jpg"
     ],
     "thumbnailPreview": "./assets/timeline-thumbs/e110c5e154593f10.webp",
-    "details": "Jeg sang “Master Fucker”."
+    "details": "Jeg sang min frække “Master Fucker”. I backstage ses jeg med Hairwerk Hugh Mongous og Ramona Macho.",
+    "popupParagraphs": [
+      "Jeg sang min frække “Master Fucker”. I backstage ses jeg med Hairwerk Hugh Mongous og Ramona Macho."
+    ]
   },
   {
     "date": "2019-08-10",
@@ -1706,7 +1758,7 @@ export const timelineEntries = [
     "display": "10.04.2015",
     "category": "Fest",
     "title": "Fødselsdagsfest hos mig",
-    "details": "Jeg blev 45 år.",
+    "details": "Jeg blev 45 år. Jeg havde blandt andet besøg af Johnny Warehouse og Puta.",
     "thumbnail": "./archive/timeline/performance/2015-04-10-04.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/c08bbaaf1ac96a1d.webp",
     "images": [
@@ -1717,6 +1769,9 @@ export const timelineEntries = [
       "./archive/timeline/performance/2015-04-10-05.webp",
       "./archive/timeline/performance/2015-04-10-06.webp",
       "./archive/timeline/performance/2015-04-10-07.webp"
+    ],
+    "popupParagraphs": [
+      "Jeg blev 45 år. Jeg havde blandt andet besøg af Johnny Warehouse og Puta."
     ]
   },
   {
@@ -1770,7 +1825,10 @@ export const timelineEntries = [
     ],
     "popupHref": "./video/danmark-har-talent/",
     "popupLabel": "se de 3 optrædener fra Talentshowet",
-    "details": "Vi sang sangen Fantasi."
+    "details": "Dennis Agerblad Band. Jeg var klædt ud som en lille pige med min bamse. Resten af bandet var monstre der gemte sig under sengen. Men dommerne spurgte om de skulle forestille lorte. Det sagde vi ja til. Vi sang sangen Fantasi. Efter showet blev vi modtaget af en masse børne Fan's. Det var sjovt.",
+    "popupParagraphs": [
+      "Dennis Agerblad Band. Jeg var klædt ud som en lille pige med min bamse. Resten af bandet var monstre der gemte sig under sengen. Men dommerne spurgte om de skulle forestille lorte. Det sagde vi ja til. Vi sang sangen Fantasi. Efter showet blev vi modtaget af en masse børne Fan's. Det var sjovt."
+    ]
   },
   {
     "date": "2015-01-31",
@@ -1874,7 +1932,10 @@ export const timelineEntries = [
     ],
     "popupHref": "./video/danmark-har-talent/",
     "popupLabel": "se de 3 optrædener fra Talentshowet",
-    "details": "Vi sang sangen Selleri."
+    "details": "Dennis Agerblad Band mødte op som fem tranvestitter med briller og pagehår. Vi sang sangen Selleri, og trak alle en selleri ud af trussen, men den ene trak en knoldselleri frem.",
+    "popupParagraphs": [
+      "Dennis Agerblad Band mødte op som fem tranvestitter med briller og pagehår. Vi sang sangen Selleri, og trak alle en selleri ud af trussen, men den ene trak en knoldselleri frem."
+    ]
   },
   {
     "date": "2014-12-12",
@@ -1938,7 +1999,10 @@ export const timelineEntries = [
       "./assets/timeline-media/dragnight-2014-05-20261015.jpg",
       "./assets/timeline-media/dragnight-2014-01-20261015.jpg"
     ],
-    "details": "Fotos: Tejs Lindhardt."
+    "details": "Dennis Agerblad band optrådte. Med på scenen var Ariel, Hairwerk Hugh Mongous, Rebekka Fjams Du Nord. Fotos: Tejs Lindhardt.",
+    "popupParagraphs": [
+      "Dennis Agerblad band optrådte. Med på scenen var Ariel, Hairwerk Hugh Mongous, Rebekka Fjams Du Nord. Fotos: Tejs Lindhardt."
+    ]
   },
   {
     "date": "2014-07-09",
@@ -2081,7 +2145,11 @@ export const timelineEntries = [
       "./assets/timeline-media/champagnepiger-2013-06-20261015.webp",
       "./assets/timeline-media/champagnepiger-2013-07-20261015.webp"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/148b770dd5c77d48.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/148b770dd5c77d48.webp",
+    "details": "Ramona Macho, Lea og jeg var hyret til at optræde. Vi lavede mere ballade væltede ting, knuste glas, drak os fulde og gæsterne klappede begejstrede.",
+    "popupParagraphs": [
+      "Ramona Macho, Lea og jeg var hyret til at optræde. Vi lavede mere ballade væltede ting, knuste glas, drak os fulde og gæsterne klappede begejstrede."
+    ]
   },
   {
     "date": "2013-10-09",
@@ -2299,7 +2367,11 @@ export const timelineEntries = [
     "title": "JULE TA(r)M TA(r)M, Bøssehuset, Christiania, København",
     "href": "./archive/legacy/200_calendar/2012/2012_12_01_jule_tarm_tarm/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/d97faa7273e54e.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/110de29d1c8bb360.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/110de29d1c8bb360.webp",
+    "details": "Jeg optrådte med Hairwerk Hugh Mongous og Knud Vesterskov til julearrangementet i Bøssehuset. Vi var tre harlekins.",
+    "popupParagraphs": [
+      "Jeg optrådte med Hairwerk Hugh Mongous og Knud Vesterskov til julearrangementet i Bøssehuset. Vi var tre harlekins."
+    ]
   },
   {
     "date": "2012-11-22",
@@ -2310,7 +2382,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_11_22_keramik/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/2901d917a2151e.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/97d8b7acf866c873.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/97d8b7acf866c873.webp",
+    "details": "Jeg optrådte med Hairwerk Hugh Mongous og Knud Vesterskov i tre timer ved Christin Johanssons keramikudstilling “Her Alter Ego Universe”. Der var en ældre mand der kom over og spurgte om vi ikke godt kunne stoppe, for nu havde vi sunget Jingle Bell i en time: Jingle Bell, Jingle Bell, Jingle Bell, Jingle Bell, Jingle Bell. Okay, sagde vi og sang: Nu er det jul igen og Nu er det jul igen og Nu er det jul igen og Nu er det jul igen...",
+    "popupParagraphs": [
+      "Jeg optrådte med Hairwerk Hugh Mongous og Knud Vesterskov i tre timer ved Christin Johanssons keramikudstilling “Her Alter Ego Universe”. Der var en ældre mand der kom over og spurgte om vi ikke godt kunne stoppe, for nu havde vi sunget Jingle Bell i en time: Jingle Bell, Jingle Bell, Jingle Bell, Jingle Bell, Jingle Bell. Okay, sagde vi og sang: Nu er det jul igen og Nu er det jul igen og Nu er det jul igen og Nu er det jul igen..."
+    ]
   },
   {
     "date": "2012-11-05",
@@ -2345,7 +2421,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/3be71541169284.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/4412ecae7e4b242b.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/4412ecae7e4b242b.webp",
+    "details": "Gina La Mirage kørte mig til Sverige til et nordisk trans træf. Der var Transvestit der fra Norge Danmark og Sverige. De fleste havde en hverdagparyk og en festparyk. De var imponeret da de så midt morgenmadsoutfit, mit middagoutfit, mit aftensmad outfit, mit party outfit, og næste dag havde jeg fire nye looks og hver gang med ny paryk. En vidunderlig weekend.",
+    "popupParagraphs": [
+      "Gina La Mirage kørte mig til Sverige til et nordisk trans træf. Der var Transvestit der fra Norge Danmark og Sverige. De fleste havde en hverdagparyk og en festparyk. De var imponeret da de så midt morgenmadsoutfit, mit middagoutfit, mit aftensmad outfit, mit party outfit, og næste dag havde jeg fire nye looks og hver gang med ny paryk. En vidunderlig weekend."
+    ]
   },
   {
     "date": "2012-08-21",
@@ -2379,7 +2459,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/index.html",
     "thumbnail": "./archive/legacy/200_calendar/2012/2012_08_15_dragnight/07.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/6ffcd17f66079097.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/6ffcd17f66079097.webp",
+    "details": "Dennis Agerblad Band optrådte med et par sange. Vi havde alle kørler i håret. Denne dag bestod vi af Moma Van Vest, Hairwerk Hugh Mongous, Delores Duchess LaCour og Petruska.",
+    "popupParagraphs": [
+      "Dennis Agerblad Band optrådte med et par sange. Vi havde alle kørler i håret. Denne dag bestod vi af Moma Van Vest, Hairwerk Hugh Mongous, Delores Duchess LaCour og Petruska."
+    ]
   },
   {
     "date": "2012-08-12",
@@ -2411,7 +2495,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/index.html",
     "thumbnail": "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/02.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/faca6b987032e637.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/faca6b987032e637.webp",
+    "details": "Dennis Agerblad Band holdt koncert med strygebræt og strygejern. Lars Von Trier kom op på scenen og ville synge duet med os men han var for fuld. Dennis Agerblad band var denne aften: Hairwerk Hugh Mongous, Moma Van Vest, Paul Jensen, Ann Charlot og Ninna Fedder Helsinghoff.",
+    "popupParagraphs": [
+      "Dennis Agerblad Band holdt koncert med strygebræt og strygejern. Lars Von Trier kom op på scenen og ville synge duet med os men han var for fuld. Dennis Agerblad band var denne aften: Hairwerk Hugh Mongous, Moma Van Vest, Paul Jensen, Ann Charlot og Ninna Fedder Helsinghoff."
+    ]
   },
   {
     "date": "2012-04-23",
@@ -2518,7 +2606,7 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2012/2012_03_01_resturang/index.html",
     "thumbnail": "./archive/timeline/performance/2012-03-01-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/3d6530efd608f949.webp",
-    "details": "Jeg sang Forelsket I Et Dyr på Resturang 3.",
+    "details": "For at komme ind skulle man træde over et afhugget hoved af en enhjørning. Hovedretten var hestekød. Imens gæsterne spiste sang jeg forelsket i et dyr. Der var også en dværg der sang opera i et enmandstelt. Tjenerne var nøgne mænd og kvinder.",
     "images": [
       "./archive/timeline/performance/2012-03-01-01.webp",
       "./archive/timeline/performance/2012-03-01-02.webp",
@@ -2531,6 +2619,9 @@ export const timelineEntries = [
       "./archive/timeline/performance/2012-03-01-09.webp",
       "./archive/legacy/200_calendar/2012/2012_03_01_resturang/01.jpg",
       "./archive/legacy/200_calendar/2012/2012_03_01_resturang/02.jpg"
+    ],
+    "popupParagraphs": [
+      "For at komme ind skulle man træde over et afhugget hoved af en enhjørning. Hovedretten var hestekød. Imens gæsterne spiste sang jeg forelsket i et dyr. Der var også en dværg der sang opera i et enmandstelt. Tjenerne var nøgne mænd og kvinder."
     ]
   },
   {
@@ -2659,9 +2750,12 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/word/2011-11-05-paludan-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/2011-11-05-paludan-01.webp",
     "thumbnailFit": "contain",
-    "details": "Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen.",
+    "details": "Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen. Forfatterne var Tóroddur Poulsen, Vónbjørt Vang, Daniella Andreasen og Mai Young Øvlisen.",
     "shareAliases": [
       "2011-11-05|Optræden|Paludan Bogcafe, Fiolstræde, København."
+    ],
+    "popupParagraphs": [
+      "Jeg fremførte digte af Tóroddur Poulsen med effekter på stemmen. Forfatterne var Tóroddur Poulsen, Vónbjørt Vang, Daniella Andreasen og Mai Young Øvlisen."
     ]
   },
   {
@@ -2706,7 +2800,11 @@ export const timelineEntries = [
     ],
     "videoId": "K73sDChiHUw",
     "videoTitle": "Det samme som mig – musikvideo",
-    "videoAfterImages": true
+    "videoAfterImages": true,
+    "details": "Jeg skulle på teambuilding med mit arbejde. Vi var det japanske hold. Jeg kedede mig og tænkte, jeg tror lige jeg laver en musikvideo og så instruerede jeg mine kolleger.",
+    "popupParagraphs": [
+      "Jeg skulle på teambuilding med mit arbejde. Vi var det japanske hold. Jeg kedede mig og tænkte, jeg tror lige jeg laver en musikvideo og så instruerede jeg mine kolleger."
+    ]
   },
   {
     "date": "2011-09-26",
@@ -2852,6 +2950,10 @@ export const timelineEntries = [
     "shareAliases": [
       "2011-07-10|Musikvideooptagelser|Optagelser af musikvideoen Sproghoved, Bøssehuset.",
       "2011-07-09|Musikvideo-optagelse|Bøssehuset, Christiania, København."
+    ],
+    "details": "Efter hver optagelse hvor jeg havde sunget på dansk, råbte jeg, og så tager vi den lige en gang til på færøsk. Det tog en evighed men der var vingummier til alle. De medvirkende var: Athena Lady, Birgitte, Birk, Blomst, Daniel USA, Florence, Hairwerk Hugh Mongous, Liebling Siebling, Mark, Mathuresh, Mikkeline, Nat Zyrik, Ramona Macho, Søren B Meisterbrau, Unni Ova Tolfsen og mig. Min mand Daniel Svanberg Bøtcher dokumentede hele aftenen.",
+    "popupParagraphs": [
+      "Efter hver optagelse hvor jeg havde sunget på dansk, råbte jeg, og så tager vi den lige en gang til på færøsk. Det tog en evighed men der var vingummier til alle. De medvirkende var: Athena Lady, Birgitte, Birk, Blomst, Daniel USA, Florence, Hairwerk Hugh Mongous, Liebling Siebling, Mark, Mathuresh, Mikkeline, Nat Zyrik, Ramona Macho, Søren B Meisterbrau, Unni Ova Tolfsen og mig. Min mand Daniel Svanberg Bøtcher dokumentede hele aftenen."
     ]
   },
   {
@@ -2861,11 +2963,16 @@ export const timelineEntries = [
     "category": "Katalog",
     "title": "Artlap Kursus Katalog, København.",
     "group": "media",
-    "details": "Forsiden af ArtLap-kataloget for efteråret 2011.",
+    "details": "Jeg var på forsiden af ArtLap-kataloget for efteråret 2011.",
     "href": "./archive/legacy/200_calendar/2011/11_07_01_artlap_katalog/index.html",
     "thumbnail": "./archive/timeline/press/2011-07-01-artlap-katalog.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/3a67edd9fc94aaf9.webp",
-    "thumbnailFit": "contain"
+    "thumbnailFit": "contain",
+    "popupParagraphs": [
+      "Jeg var på forsiden af ArtLap-kataloget for efteråret 2011.",
+      "I bladet står der om mig: Jeg hedder Dennis Agerblad, og er hovedsaligt sanger og komponist. Jeg laver elektronisk musik og synger på Færøsk, Dansk eller Engelsk, alt efter hvor jeg optræder. Men jeg har også truttet i en trompet når jeg optræder med min trash drag performance gruppe, Dennis Agerblad Band, som jeg har med 4 transvestitter. Vi er en udbrydergruppe fra performance gruppen Dunst.",
+      "Jeg deltager altid på mange af Artlaps fede kurser. Sidst var det Beatværkstedet og MusikVideoAften. Jeg bygger som regel altid mine beats op fra bunden selv og mine musik video'er laver jeg også selv. Det er spændende og vigtigt at udvikle sig. Der skal ske noget nyt hele tiden. Min nye solo plade er lige på trapperne. Dog uden trumpet og uden transer."
+    ]
   },
   {
     "date": "2011-06-25",
@@ -2889,7 +2996,11 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/press/2011-06-24-godmorgen-danmark-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/c217749f1cb39dc7.webp",
-    "thumbnailFit": "contain"
+    "thumbnailFit": "contain",
+    "details": "Bøsserup Pigegarde medvirker i TV-udsendelsen Godmorgen Danmark i forbindelse med Bøssehusets 40-års jubilæum. Vi var: Ariel, Athena Lady, Blomst, Delores Duchess LaCour, Fru Klud, Rebekka Fjams Du Nord og Dennis Agerblad.",
+    "popupParagraphs": [
+      "Bøsserup Pigegarde medvirker i TV-udsendelsen Godmorgen Danmark i forbindelse med Bøssehusets 40-års jubilæum. Vi var: Ariel, Athena Lady, Blomst, Delores Duchess LaCour, Fru Klud, Rebekka Fjams Du Nord og Dennis Agerblad."
+    ]
   },
   {
     "date": "2011-06-19",
@@ -2900,7 +3011,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2011/11_06_19_sangerindepavillion/index.html",
     "thumbnail": "./archive/legacy/200_calendar/2011/11_06_19_sangerindepavillion/dennis_synger.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/160161715fc60279.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/160161715fc60279.webp",
+    "details": "Jeg medvirkede ved Bøssehusets søndagsmatiné med gamle viser, historiske kostumer og fællessang. På scenen var Uffe Gartner, Bisgaard, Connie Cool, Fru Klud, Gitte Plass og Dennis Agerblad.",
+    "popupParagraphs": [
+      "Jeg medvirkede ved Bøssehusets søndagsmatiné med gamle viser, historiske kostumer og fællessang. På scenen var Uffe Gartner, Bisgaard, Connie Cool, Fru Klud, Gitte Plass og Dennis Agerblad."
+    ]
   },
   {
     "date": "2011-06-17",
@@ -2912,7 +3027,11 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/performance/2011-06-17-01.webp",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/558c32f811674fd0.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/558c32f811674fd0.webp",
+    "details": "Jeg gik med Bøsserup Pigegarde på Strøget i København for at fejre at Bøssehuset fyldte 40 år. Vi var bland andet Athena Lady, Fru Klud, Rune Gartner, Birk, Pelle, Dennis Agerblad og mange flere.",
+    "popupParagraphs": [
+      "Jeg gik med Bøsserup Pigegarde på Strøget i København for at fejre at Bøssehuset fyldte 40 år. Vi var bland andet Athena Lady, Fru Klud, Rune Gartner, Birk, Pelle, Dennis Agerblad og mange flere."
+    ]
   },
   {
     "date": "2011-06-04",
@@ -2935,7 +3054,11 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/performance/2011-05-27-01.webp",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/539eb2eb97e6fe39.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/539eb2eb97e6fe39.webp",
+    "details": "Optræden til Tranny Lounge i Warehouse 9. Her bland andet med Hairwerk Hugh Mongous, Liebling Siebling, Ole Cairo, Paul Jensen og Ramona Macho.",
+    "popupParagraphs": [
+      "Optræden til Tranny Lounge i Warehouse 9. Her bland andet med Hairwerk Hugh Mongous, Liebling Siebling, Ole Cairo, Paul Jensen og Ramona Macho."
+    ]
   },
   {
     "date": "2011-04-30",
@@ -3014,7 +3137,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2010/10_09_23_heinrich/index.html",
     "thumbnail": "./archive/timeline/generated-thumbs/f0fe65ebcafdad.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/7295a3e34484f720.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/7295a3e34484f720.webp",
+    "details": "Dunst overrakte Heinrich-prisen. Master Fatman var vært, og Jeg sang med Hairwerk Hugh Mongous, Tina Trash, Ramona Macho, Liebling Siebling, Søde Car O’lina og Vibeke.",
+    "popupParagraphs": [
+      "Dunst overrakte Heinrich-prisen. Master Fatman var vært, og Jeg sang med Hairwerk Hugh Mongous, Tina Trash, Ramona Macho, Liebling Siebling, Søde Car O’lina og Vibeke."
+    ]
   },
   {
     "date": "2010-07-27",
@@ -3060,7 +3187,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/index.html",
     "thumbnail": "./archive/legacy/200_calendar/2010/10_06_26_bossehus_39_aar/IMG_0320.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/19175327ef986c0f.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/19175327ef986c0f.webp",
+    "details": "Jeg fejrede Bøssehusets 39-års fødselsdag sammen med Tove Hansen, Søde Car O’lina, Schwanzen Sänger Knaben, Bent Jacobsen, Ole og Christian.",
+    "popupParagraphs": [
+      "Jeg fejrede Bøssehusets 39-års fødselsdag sammen med Tove Hansen, Søde Car O’lina, Schwanzen Sänger Knaben, Bent Jacobsen, Ole og Christian."
+    ]
   },
   {
     "date": "2010-06-11",
@@ -3120,7 +3251,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2009/09_12_12_klima/klima_show.html",
     "thumbnail": "./archive/timeline/generated-thumbs/79a97a5fd63aa5.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/cd2c08125c9ba9f6.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/cd2c08125c9ba9f6.webp",
+    "details": "Hairwerk Hugh Mongous, Ramona Macho og jeg optrådte til klimafesten på Borups Højskole under klimakonferencen i København. Jeg sang sangen \"I Did It\".",
+    "popupParagraphs": [
+      "Hairwerk Hugh Mongous, Ramona Macho og jeg optrådte til klimafesten på Borups Højskole under klimakonferencen i København. Jeg sang sangen \"I Did It\"."
+    ]
   },
   {
     "date": "2009-12-01",
@@ -3199,7 +3334,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2009/09_08_22_happy_nordic_music_days/oslo.html",
     "thumbnail": "./archive/timeline/generated-thumbs/1ce2a328a22d42.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/d0c3f1552530ca81.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/d0c3f1552530ca81.webp",
+    "details": "Jeg repræsenterede Færøerne med Dennis Agerblad Band ved Nordic Music Days i Oslo. Me mig havde jeg Delores Duchess LaCour og Gina La Mirage. Vi havde hver vores lille højttaler og klatrede op i træer i en norsk fredet naturpark og sang bold mig i mit numsehul. Nordmændene klappede i hænderne og et barn spurgte hvorfor vi sang om boller.",
+    "popupParagraphs": [
+      "Jeg repræsenterede Færøerne med Dennis Agerblad Band ved Nordic Music Days i Oslo. Me mig havde jeg Delores Duchess LaCour og Gina La Mirage. Vi havde hver vores lille højttaler og klatrede op i træer i en norsk fredet naturpark og sang bold mig i mit numsehul. Nordmændene klappede i hænderne og et barn spurgte hvorfor vi sang om boller."
+    ]
   },
   {
     "date": "2009-07-31",
@@ -3210,7 +3349,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2009/09_07_31_dunst/dunst.html",
     "thumbnail": "./archive/timeline/generated-thumbs/38e478ece04a48.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/002fe2fd0fa6012e.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/002fe2fd0fa6012e.webp",
+    "details": "Med brækket håndled optrådte jeg i Råhuset sammen med Maria Maud, Lene Leth Lebbe og Liebling Siebling.",
+    "popupParagraphs": [
+      "Med brækket håndled optrådte jeg i Råhuset sammen med Maria Maud, Lene Leth Lebbe og Liebling Siebling."
+    ]
   },
   {
     "date": "2009-07-30",
@@ -3258,7 +3401,11 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2009/09_07_03_dukke_leg/dukke.html",
     "thumbnail": "./archive/timeline/generated-thumbs/86c8b0d0e89bbf.jpg",
     "thumbnailShape": "wide",
-    "thumbnailPreview": "./assets/timeline-thumbs/dbd1bd3762a821d0.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/dbd1bd3762a821d0.webp",
+    "details": "Jeg udstillede selvportrætter malet i akryl, kostumer, parykker, håndtasker, stiletter og en dukke jeg havde syet. Dennis Agerblad Band optrådte ved åbningen og igen den 17. juli. Bandet bestod denne dag af Tove Hansen, Gina La Mirage og Søde Car O'Lina.",
+    "popupParagraphs": [
+      "Jeg udstillede selvportrætter malet i akryl, kostumer, parykker, håndtasker, stiletter og en dukke jeg havde syet. Dennis Agerblad Band optrådte ved åbningen og igen den 17. juli. Bandet bestod denne dag af Tove Hansen, Gina La Mirage og Søde Car O'Lina."
+    ]
   },
   {
     "date": "2009-06-30",
@@ -3339,7 +3486,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2009/09_04_17_vega/vega.html",
     "thumbnail": "./archive/timeline/generated-thumbs/ca11d7c0f5f6cf.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/68fb0670f7547ff4.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/68fb0670f7547ff4.webp",
+    "details": "Dennis Agerblad Band sang tre sange i Lille Vega. Vi sang blandt andet sangen Tissemand. Denne aften var vi: Delores Düchess La Cour, Gina La Mirage og Hairwerk Hugh Mongous. Efter fest i backstage med Petruska og Alexis.",
+    "popupParagraphs": [
+      "Dennis Agerblad Band sang tre sange i Lille Vega. Vi sang blandt andet sangen Tissemand. Denne aften var vi: Delores Düchess La Cour, Gina La Mirage og Hairwerk Hugh Mongous. Efter fest i backstage med Petruska og Alexis."
+    ]
   },
   {
     "date": "2009-04-08",
@@ -3350,7 +3501,20 @@ export const timelineEntries = [
     "group": "media",
     "href": "./archive/legacy/200_calendar/2009/09_03_13_vaarframsyning/09_04_08_citadel.html",
     "thumbnail": "./archive/timeline/generated-thumbs/8a0838cbf0bbe2.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/99c78c8eb2f86b87.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/99c78c8eb2f86b87.webp",
+    "details": "Dennis Agerblad udstiller bl.a. samtlige sine dunst-kostumer. Dog på Færøerne. Men se fotos her.",
+    "popupParagraphs": [
+      "Dennis Agerblad udstiller bl.a. samtlige sine dunst-kostumer. Dog på Færøerne. Men se fotos her.",
+      "by Lars Erik Frank",
+      "Der går desværre lidt for lang tid i mellem, at vi ser kunstneren Dennis Agerblad i København for tiden. Men så er der andre, der får glæde af hans arbejder. Lige nu er Agerblad fx. aktuel med på på det nationale færøske kusntmuseum Listaskálin’s forårsudstilling.",
+      "2009’s tema på udstillingen er identitet og Dennis er blevet særligt inviteret af museet uden om censuren. Han udstiller bl.a. med installationen “dunst show”, som indeholder samtlige hans kostumer fra de mange performances og optrædener ved de legendariske dunst-fester i København. Kostumerne samles under et spændetrøjekostume, der hænger under loftet og spreder 5 meter lange arme og ben ud i rummet.",
+      "Dennis Agerblad har ligeledes seks 100 x 80 cm store selvportrætter med. Under hvert maleri ligger det outfit han bærer på billedet. Han viser også sine mandekjoler på hankønnede manekin-dukker.",
+      "Nationaldragt som ny trend",
+      "I et særskilt rum hænger 3 fotos af Agerblad klædt i den kvindelige færøske nationaldragt, men også iført mandehuen, lakstøvler og med blottet bryst.",
+      "Ved åbningen af udstillingen midt i marts bar kunstneren nationaldragten med sølvknapper og hue iført plateaustøvler med en 21 cm - enogtyve - høj hæl. “Reaktionen var alt fra tavshed til store øjne,” fortalte Dennis til Citadellet.dk, da vi kontaktede ham efter at have set de forrygende flotte og stærke fotos fra udstillingen.”Ingen turde sige noget grimt til smilende mig. Men jeg kunne så høre fra andre, at nogen ikke syntes, jeg var en rigtig færing, hvis jeg kunne finde på at forpurre den færøske nationaldragt. Det var respektløst.”",
+      "Dennis Agerblad håber at have sat en ny trend på Færøerne: “Vi må se til sommer på Færøernes nationaldag d. 29. juli. Da går alle i nationaldragter og danser færøsk kædedans. Måske der er nogle fiskere, der har tage moden til sig. Jeg er jo uddanet designer fra Danmarks Design Skole, så hvis jeg siger, det er moderne, så er det det,” slutter Dennis.",
+      "citadellet.dk/index.php/2009/04/08/dennis-agerblad-pa-forarsudstilling/"
+    ]
   },
   {
     "date": "2009-03-20",
@@ -3383,7 +3547,12 @@ export const timelineEntries = [
     "group": "art",
     "href": "./archive/legacy/200_calendar/2009/09_03_13_vaarframsyning/listaskalin.html",
     "thumbnail": "./archive/timeline/generated-thumbs/2ce3efefba699d.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/794a3095b2bf8f55.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/794a3095b2bf8f55.webp",
+    "details": "I det store rum under balkonen har jeg lavet en installation, som jeg kalder for dunst show. Den består af 6 selvportrætter (80 x 100 cm.) og alle mine kostumer, som er draperet å væg, gulv og loft. Og indeholder kjoler, parykker, hatte, sko, tasker og smykker. Alt sammen ting som jeg har samlet og ændret på igennem 10 år med performancegruppen www.dunst.dk i ind- og udland. Fotos fra ferniseringen: Ole Wich.",
+    "popupParagraphs": [
+      "I det store rum under balkonen har jeg lavet en installation, som jeg kalder for dunst show. Den består af 6 selvportrætter (80 x 100 cm.) og alle mine kostumer, som er draperet å væg, gulv og loft. Og indeholder kjoler, parykker, hatte, sko, tasker og smykker. Alt sammen ting som jeg har samlet og ændret på igennem 10 år med performancegruppen www.dunst.dk i ind- og udland. Fotos fra ferniseringen: Ole Wich.",
+      "Med overskriften \"Aldersbegrænsning 60 år\" udstilles i et lille rum 3 fotos (60 x 80 cm.) af mig fra Frøken Verden Showet i Den Grå Hal, Christiania 2002 og 3 tilhørende tekster én tekst til hvert at de 3 shows. Billederne er kun fra det sidste show som hed Festtøj, hvor jeg har den kvindelige færøske national dragt på, dog med mandens hue. Resten er mit eget. Fotos: www.mallemadsen.com"
+    ]
   },
   {
     "date": "2009-03-12",
@@ -3474,7 +3643,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2008/08_09_20_band_show/show.html",
     "thumbnail": "./archive/timeline/generated-thumbs/bb79c636846339.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/136decd42119ad59.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/136decd42119ad59.webp",
+    "details": "Jeg optrådte med Dennis Agerblad Band på Warehouse 9. Denne aften bestod bandet af: Delores Düchess LaCour, Søde Car O’lina og Dennis Agerblad. Fotos: Katrine Barfoed.",
+    "popupParagraphs": [
+      "Jeg optrådte med Dennis Agerblad Band på Warehouse 9. Denne aften bestod bandet af: Delores Düchess LaCour, Søde Car O’lina og Dennis Agerblad. Fotos: Katrine Barfoed."
+    ]
   },
   {
     "date": "2008-09-06",
@@ -3645,7 +3818,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2008/08_07_19_dennis/08_07_19_dennis_show.html",
     "thumbnail": "./archive/timeline/generated-thumbs/238b35e6f3c8da.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/57f531c8d6582275.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/57f531c8d6582275.webp",
+    "details": "Jeg fremfører her Færøernes første dragshow sammen med Terji Krossteig som \"Eivør Pállsdóttir\". Fotos: Mureldur, Beinta Haraldsen & Barbara Vang og Daniel Svandberg Bøtcher.",
+    "popupParagraphs": [
+      "Jeg fremfører her Færøernes første dragshow sammen med Terji Krossteig som \"Eivør Pállsdóttir\". Fotos: Mureldur, Beinta Haraldsen & Barbara Vang og Daniel Svandberg Bøtcher."
+    ]
   },
   {
     "date": "2008-07-18",
@@ -3737,7 +3914,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2008/08_04_04_camp_x/camp_x.html",
     "thumbnail": "./archive/legacy/200_calendar/2008/08_04_04_camp_x/flyer_02.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/d95e0e3a632649de.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/d95e0e3a632649de.webp",
+    "details": "Dennis Agerblad Band bestod denne gang af: Tove Hansen, Delores Düchess LaCour og Gina La Mirage. Fotos: Freddy Hagen.",
+    "popupParagraphs": [
+      "Dennis Agerblad Band bestod denne gang af: Tove Hansen, Delores Düchess LaCour og Gina La Mirage. Fotos: Freddy Hagen."
+    ]
   },
   {
     "date": "2008-03-09",
@@ -3896,7 +4077,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_12_15_pyramide/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2006/06_12_15_pyramide/IMG_0836.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/3213dacb6342f3ff.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/3213dacb6342f3ff.webp",
+    "details": "Den sidste rigtige dunst fest. Her med Lene Leth Lebbe, Petruska og Daniel Svandberg Bøtcher.",
+    "popupParagraphs": [
+      "Den sidste rigtige dunst fest. Her med Lene Leth Lebbe, Petruska og Daniel Svandberg Bøtcher."
+    ]
   },
   {
     "date": "2006-11-15",
@@ -3942,7 +4127,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_07_22_csd_berlin/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/b3d5e01cd34295.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/14f2f54d576acefb.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/14f2f54d576acefb.webp",
+    "details": "Jeg optrådte til CSD-festen i Berlin sammen med Hairwerk Hugh Mongous og Ramona Macho. \"We are Red, We are White, We are Danish Dynamite.\"",
+    "popupParagraphs": [
+      "Jeg optrådte til CSD-festen i Berlin sammen med Hairwerk Hugh Mongous og Ramona Macho. \"We are Red, We are White, We are Danish Dynamite.\""
+    ]
   },
   {
     "date": "2006-07-08",
@@ -3953,7 +4142,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_07_08_shave_your_pet/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/fe5166cea8dea0.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/1b697f1a687b840f.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/1b697f1a687b840f.webp",
+    "details": "Jeg optrådte til Shave Your Pet dunst-festen sammen med tyske Glamour To Kill. Her med Athena Lady og en sort veninde. Foto: Anett Ahrends.",
+    "popupParagraphs": [
+      "Jeg optrådte til Shave Your Pet dunst-festen sammen med tyske Glamour To Kill. Her med Athena Lady og en sort veninde. Foto: Anett Ahrends."
+    ]
   },
   {
     "date": "2006-07-08",
@@ -3976,7 +4169,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_07_03_queer_festival/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/0e00be70da2125.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/3a98774d59ac51ff.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/3a98774d59ac51ff.webp",
+    "details": "Dennis Agerblad Band var representeret af Søde Car O'lina og jeg som lavede en performance.",
+    "popupParagraphs": [
+      "Dennis Agerblad Band var representeret af Søde Car O'lina og jeg som lavede en performance."
+    ]
   },
   {
     "date": "2006-07-03",
@@ -3999,7 +4196,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_06_17_spanien/index.html",
     "thumbnail": "./archive/legacy/200_calendar/2006/06_06_17_spanien/05.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/ccbc0dd9843331e2.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/ccbc0dd9843331e2.webp",
+    "details": "Jeg stod i front ved La Extreme Circus, akkompagneret af Hairwerk, The Thom og Miss Fish på kor.",
+    "popupParagraphs": [
+      "Jeg stod i front ved La Extreme Circus, akkompagneret af Hairwerk, The Thom og Miss Fish på kor."
+    ]
   },
   {
     "date": "2006-06-10",
@@ -4041,7 +4242,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_05_11_berghain/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2006/06_05_11_berghain/smegma_flyer.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/9f0f7e3a547148aa.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/9f0f7e3a547148aa.webp",
+    "details": "Jeg optrådte på Berghain i Berlin sammen med Hairwerk Hugh Mongous, Ramona Macho og Puta.",
+    "popupParagraphs": [
+      "Jeg optrådte på Berghain i Berlin sammen med Hairwerk Hugh Mongous, Ramona Macho og Puta."
+    ]
   },
   {
     "date": "2006-05-05",
@@ -4052,7 +4257,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_05_05_lars/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2006/06_05_05_lars/2006_05_05_lars_01.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/8e390d4f5114b756.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/8e390d4f5114b756.webp",
+    "details": "Performance gruppen dunst var med til Lars von Triers og Peter Aalbæks fødselsdagsfest. Her ses jeg sammen med Lars Von Trier, Miss Fish og Lene Leth Lebbe.",
+    "popupParagraphs": [
+      "Performance gruppen dunst var med til Lars von Triers og Peter Aalbæks fødselsdagsfest. Her ses jeg sammen med Lars Von Trier, Miss Fish og Lene Leth Lebbe."
+    ]
   },
   {
     "date": "2006-05-01",
@@ -4086,7 +4295,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2006/06_04_12_boy_george_party/IMG_8864.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/d3cde784ec052053.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/d3cde784ec052053.webp",
+    "details": "Boy George var DJ i Vega. Dunst mødte op. Vi var: Søde Car O’lina, Lene Leth Lebbe, Knud Vesterskov, Gina La Mirage, Birgitte Delores Düchess LaCour og Dennis Agerblad.",
+    "popupParagraphs": [
+      "Boy George var DJ i Vega. Dunst mødte op. Vi var: Søde Car O’lina, Lene Leth Lebbe, Knud Vesterskov, Gina La Mirage, Birgitte Delores Düchess LaCour og Dennis Agerblad."
+    ]
   },
   {
     "date": "2006-04-01",
@@ -4108,7 +4321,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_03_23_natfilmfestival/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/c301a35394e9c8.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/7a03a77caedbb6fc.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/7a03a77caedbb6fc.webp",
+    "details": "Til Natfilmfestival på Empire Bio. De havde bedt performancegruppen dunst komme og lave en afterpartey. Vi kom med et par dunst- DJ's og ellers lavede vi performance i krogene. Her ses jeg sammen med Knud Vesterskov, og jeg viste røv hele aftenen.",
+    "popupParagraphs": [
+      "Til Natfilmfestival på Empire Bio. De havde bedt performancegruppen dunst komme og lave en afterpartey. Vi kom med et par dunst- DJ's og ellers lavede vi performance i krogene. Her ses jeg sammen med Knud Vesterskov, og jeg viste røv hele aftenen."
+    ]
   },
   {
     "date": "2006-02-28",
@@ -4132,7 +4349,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2006/06_02_11_odeur_ungdomshuset/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/ed24d7b379f02a.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/a38ea523f9152600.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/a38ea523f9152600.webp",
+    "details": "Udgivelses fest for Dunst-cd’en \"Shave your Pet.\" Scenen var fyldt med lodrette elastikker som vi skiftes vis optrådte imellem. På billederne ses jeg blandt andet sammen med Miss Fish og Maria Maud.",
+    "popupParagraphs": [
+      "Udgivelses fest for Dunst-cd’en \"Shave your Pet.\" Scenen var fyldt med lodrette elastikker som vi skiftes vis optrådte imellem. På billederne ses jeg blandt andet sammen med Miss Fish og Maria Maud."
+    ]
   },
   {
     "date": "2006-01-15",
@@ -4208,7 +4429,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/dennis_agerblad_02.html",
     "thumbnail": "./archive/legacy/200_calendar/2005/05_10_07_be_queer_02/IMG_7476.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/d04599addebc69e6.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/d04599addebc69e6.webp",
+    "details": "Performancegruppen Dunst tog en bus til Frankrig hvor vi optrådte på båden Stubnitz. Her opstod Dennis Agerblad band, for Tove Hansen og Søde Car O’lina havde ikke noget show, så de kom med i mit. Dndre dunst performere der ses på billederne er: Lene Leth Lebbe, Moma Van Vest, Andreas Tange Lange, Nikolaj Tange Lange, Puta og Liebling Siebling.",
+    "popupParagraphs": [
+      "Performancegruppen Dunst tog en bus til Frankrig hvor vi optrådte på båden Stubnitz. Her opstod Dennis Agerblad band, for Tove Hansen og Søde Car O’lina havde ikke noget show, så de kom med i mit. Dndre dunst performere der ses på billederne er: Lene Leth Lebbe, Moma Van Vest, Andreas Tange Lange, Nikolaj Tange Lange, Puta og Liebling Siebling."
+    ]
   },
   {
     "date": "2005-10-07",
@@ -4265,7 +4490,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2005/05_09_03_milch_nakkeost/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/806639708dc548.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/a3ac0a4c7e9a7527.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/a3ac0a4c7e9a7527.webp",
+    "details": "Nøgen sang jeg duet med Knud Vesterskov. “The Man With The Needle”, mens hele dunst performance gruppen sad under hans kjole. Kun hovederne stak frem. På Sürich-billederne ses Hairwerk Hugh Mongous, Knud Vesterskov, Nikolaj Tange Lange, Ramona Macho, The Thom og Dennis Agerblad.",
+    "popupParagraphs": [
+      "Nøgen sang jeg duet med Knud Vesterskov. “The Man With The Needle”, mens hele dunst performance gruppen sad under hans kjole. Kun hovederne stak frem. På Sürich-billederne ses Hairwerk Hugh Mongous, Knud Vesterskov, Nikolaj Tange Lange, Ramona Macho, The Thom og Dennis Agerblad."
+    ]
   },
   {
     "date": "2005-08-13",
@@ -4276,7 +4505,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2005/05_08_13_private_parts/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/9b6ed25eae0347.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/01f2c73b08d2a51e.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/01f2c73b08d2a51e.webp",
+    "details": "Jeg står her sammen med Tina Trasch, Ulle Dulle og Alexis.",
+    "popupParagraphs": [
+      "Jeg står her sammen med Tina Trasch, Ulle Dulle og Alexis."
+    ]
   },
   {
     "date": "2005-07-02",
@@ -4301,6 +4534,10 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/0dabe7721d01d0da.webp",
     "shareAliases": [
       "2005-06-11|Demonstration|Hos den polske ambassade, København."
+    ],
+    "details": "Performancegruppen Dunst med venner demonstrerede foran den polske ambassade mod forbuddet mod prideparade i Polen. Der blev samtidig arrangeret demonstrationer foran de polske ambassader i London, Berlin og Barcelona. Vi er bland andet: Andreas Tange Lange, Nikolaj Tange Lange, Miss Fish, Bjarne Pigen, Søde Car O'lina, Dennis Agerblad.",
+    "popupParagraphs": [
+      "Performancegruppen Dunst med venner demonstrerede foran den polske ambassade mod forbuddet mod prideparade i Polen. Der blev samtidig arrangeret demonstrationer foran de polske ambassader i London, Berlin og Barcelona. Vi er bland andet: Andreas Tange Lange, Nikolaj Tange Lange, Miss Fish, Bjarne Pigen, Søde Car O'lina, Dennis Agerblad."
     ]
   },
   {
@@ -4334,7 +4571,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2005/05_05_05_frankrig/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/c6d488cde5edf1.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/e813edd27f9ca249.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e813edd27f9ca249.webp",
+    "details": "Dunst show. Her ses jeg sammen med Ramona Macho, Hairwerk Hugh Mongous og Lene Leth Lebbe. Fotos: Hunter Desportes.",
+    "popupParagraphs": [
+      "Dunst show. Her ses jeg sammen med Ramona Macho, Hairwerk Hugh Mongous og Lene Leth Lebbe. Fotos: Hunter Desportes."
+    ]
   },
   {
     "date": "2005-03-17",
@@ -4393,7 +4634,11 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/cb0d11b9f1a98f.jpg",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/fa17a281768c13ac.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/fa17a281768c13ac.webp",
+    "details": "Til \"HR & FRU Dunst\" -festen var performancegruppen dunst dommere over for de deltagere der stillede op. Publikum skulle stemme Pis eller Lort. Det gik lidt tid inden de fattede at Pis betød ros og Lort betød Ris. Her ses jeg sammen med Bob, Puta, Liebling Siebling, mAdam og Mads ananda Lodahl. Foto: Hans Jørgensen.",
+    "popupParagraphs": [
+      "Til \"HR & FRU Dunst\" -festen var performancegruppen dunst dommere over for de deltagere der stillede op. Publikum skulle stemme Pis eller Lort. Det gik lidt tid inden de fattede at Pis betød ros og Lort betød Ris. Her ses jeg sammen med Bob, Puta, Liebling Siebling, mAdam og Mads ananda Lodahl. Foto: Hans Jørgensen."
+    ]
   },
   {
     "date": "2004-11-26",
@@ -4460,7 +4705,11 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2004/04_10_08_kulturnat_knud/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/1afe210a020ab1.jpg",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/234bbff8c2c87e00.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/234bbff8c2c87e00.webp",
+    "details": "Jeg sidder jeg sammen med Søde Car O’lina og Johnny Warehouse.",
+    "popupParagraphs": [
+      "Jeg sidder jeg sammen med Søde Car O’lina og Johnny Warehouse."
+    ]
   },
   {
     "date": "2004-09-27",
@@ -4482,7 +4731,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2004/04_09_25_puha_benutz/dennis_show_02.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/80f9681072ca08f1.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/80f9681072ca08f1.webp",
+    "details": "I forbindelse med at Puta udgav sit magasin, PUHA. Klædte vi os alle ud som Puta med sort paryk og farver om øjnene. Vi var 7 Putaer: Søde Car O’lina, Miss Fish, Liebling Siebling, Jan Rolsted, Puta, Tue og Dennis Agerblad.",
+    "popupParagraphs": [
+      "I forbindelse med at Puta udgav sit magasin, PUHA. Klædte vi os alle ud som Puta med sort paryk og farver om øjnene. Vi var 7 Putaer: Søde Car O’lina, Miss Fish, Liebling Siebling, Jan Rolsted, Puta, Tue og Dennis Agerblad."
+    ]
   },
   {
     "date": "2004-09-02",
@@ -4493,7 +4746,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2004/04_09_02_kupe_aarhus/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/227fd1d9abdead.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/0e37021ec640bab8.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/0e37021ec640bab8.webp",
+    "details": "Jeg optrådte med Johnny Warehouse, Hairwerk Hugh Mongous, Miss Fish. Vi sminkede os i toget til Aarhus. Folk gloede.",
+    "popupParagraphs": [
+      "Jeg optrådte med Johnny Warehouse, Hairwerk Hugh Mongous, Miss Fish. Vi sminkede os i toget til Aarhus. Folk gloede."
+    ]
   },
   {
     "date": "2004-08-27",
@@ -4504,7 +4761,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2004/04_08_27_universitetet/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2004/04_08_27_universitetet/dennis_02.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/12ba5eedbd2cbaa1.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/12ba5eedbd2cbaa1.webp",
+    "details": "dunst deltog i samtalen om queer på Københavns Universitet efter en dunst performace. På billederne ses jeg sammen med dragkings, mAdam og Johnny Warehouse.",
+    "popupParagraphs": [
+      "dunst deltog i samtalen om queer på Københavns Universitet efter en dunst performace. På billederne ses jeg sammen med dragkings, mAdam og Johnny Warehouse."
+    ]
   },
   {
     "date": "2004-08-07",
@@ -4561,7 +4822,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2004/04_07_17_belgrade_pride/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2004/04_07_17_belgrade_pride/demonstration_09.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/dde36fe13adf8b60.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/dde36fe13adf8b60.webp",
+    "details": "Jeg demonstrerede med Dunst foran den serbiske ambassade i København mod vold og diskrimination af LGBT+ personer i Serbien. Vi afleverede et brev til ambassadøren og talte med ham om menneskerettigheder. Han bød tre af os indenfor til et glas saftevand. Miss Fish, Bjarne pigen og mig. For billederne ses også Johnny Warehouse, Zanne og Liebing Sibling.",
+    "popupParagraphs": [
+      "Jeg demonstrerede med Dunst foran den serbiske ambassade i København mod vold og diskrimination af LGBT+ personer i Serbien. Vi afleverede et brev til ambassadøren og talte med ham om menneskerettigheder. Han bød tre af os indenfor til et glas saftevand. Miss Fish, Bjarne pigen og mig. For billederne ses også Johnny Warehouse, Zanne og Liebing Sibling."
+    ]
   },
   {
     "date": "2004-07-15",
@@ -4616,7 +4881,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2004/04_06_04_queeruption/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2004/04_06_04_queeruption/queer_dennis_03.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/046653f63f58fb98.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/046653f63f58fb98.webp",
+    "details": "Dunst deltog i Queeruption. Her ses jeg sammen med Bjarnepigen, Hairwerk, Liebling Siebling og Puta.",
+    "popupParagraphs": [
+      "Dunst deltog i Queeruption. Her ses jeg sammen med Bjarnepigen, Hairwerk, Liebling Siebling og Puta."
+    ]
   },
   {
     "date": "2004-05-01",
@@ -4627,7 +4896,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2004/04_05_01_silo/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/058cd65548798b.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/25b775c1407d5918.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/25b775c1407d5918.webp",
+    "details": "Sammen med Destortion holdt vi Dunst-festen Silo. Her ses jeg sammen med Miss Fish, Liebling Siebling og Bjarnepigen.",
+    "popupParagraphs": [
+      "Sammen med Destortion holdt vi Dunst-festen Silo. Her ses jeg sammen med Miss Fish, Liebling Siebling og Bjarnepigen."
+    ]
   },
   {
     "date": "2004-04-10",
@@ -4751,7 +5024,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_11_29_bryggen/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/c2d20761df064d.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/f927753df43ab81d.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/f927753df43ab81d.webp",
+    "details": "Jeg var vært ved åbningsfesten for Nordatlantens Brygge sammen med Ernalise, Miss Fish og Johnny Warehouse.",
+    "popupParagraphs": [
+      "Jeg var vært ved åbningsfesten for Nordatlantens Brygge sammen med Ernalise, Miss Fish og Johnny Warehouse."
+    ]
   },
   {
     "date": "2003-11-22",
@@ -4774,7 +5051,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_11_15_shadow_people/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/89f30ccde541dc.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/5bb87947fbec115c.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/5bb87947fbec115c.webp",
+    "details": "4 dunstere i Berlin: Johnny Warehouse, The Thom, Miss Fish og Dennis Agerblad. Fotos: Fryd.",
+    "popupParagraphs": [
+      "4 dunstere i Berlin: Johnny Warehouse, The Thom, Miss Fish og Dennis Agerblad. Fotos: Fryd."
+    ]
   },
   {
     "date": "2003-11-01",
@@ -4796,7 +5077,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_10_30_Den%20Anden%20Opera/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/a9f62306d11c12.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/424972c6e7488ac8.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/424972c6e7488ac8.webp",
+    "details": "Jeg var i teatret og baren sammen med Ramona Macho. Vi så et forfærdeligt stykke.",
+    "popupParagraphs": [
+      "Jeg var i teatret og baren sammen med Ramona Macho. Vi så et forfærdeligt stykke."
+    ]
   },
   {
     "date": "2003-09-20",
@@ -4891,6 +5176,10 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/640f5b927adfe29f.webp",
     "shareAliases": [
       "2003-08-16|Parade|Jeg gik med Dunst i paraden."
+    ],
+    "details": "Dunst i paraden med rollatorer og en hospitalsseng på hjul. Puta havde rulleskøjter på. Jeg kom flere gange til at gå ud af paraden, og da folk spurgte, om vi havde brug for hjælp, svarede jeg: “Jeg ved ikke, hvem jeg er.” Foto: Andreas Frøsting og Hunter Desportes og Jacob Nicu.",
+    "popupParagraphs": [
+      "Dunst i paraden med rollatorer og en hospitalsseng på hjul. Puta havde rulleskøjter på. Jeg kom flere gange til at gå ud af paraden, og da folk spurgte, om vi havde brug for hjælp, svarede jeg: “Jeg ved ikke, hvem jeg er.” Foto: Andreas Frøsting og Hunter Desportes og Jacob Nicu."
     ]
   },
   {
@@ -4913,7 +5202,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/2003/03_08_01_wigstockholm/wigstockholm_dennis_01.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/a2e528cb5b7d2f8b.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/a2e528cb5b7d2f8b.webp",
+    "details": "Dunst optrådte til WigStockholm: Miss Fish, Stimulundia, Liebling Siebling, Ramona Macho, The Thom, Puta Johnny Warehouse og Hairwerk.",
+    "popupParagraphs": [
+      "Dunst optrådte til WigStockholm: Miss Fish, Stimulundia, Liebling Siebling, Ramona Macho, The Thom, Puta Johnny Warehouse og Hairwerk."
+    ]
   },
   {
     "date": "2003-08-01",
@@ -4953,7 +5246,7 @@ export const timelineEntries = [
     "group": "art",
     "href": null,
     "thumbnail": "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04b.jpg",
-    "details": "Jeg udstillede værker ved Kunst i Dunst i Bøssehuset på Christiania.",
+    "details": "Jeg udstillede 6 kollager til Kunst i Dunst udstillingen og lavede flere performances. I haven sidder jeg med Miss Fish og The Thom.",
     "images": [
       "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04b.jpg",
       "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04c.jpg",
@@ -4969,6 +5262,9 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/51d1bbeb6316a04e.webp",
     "shareAliases": [
       "2003-07-23|Kunst|Kunstudstilling, Kunst i Dunst, Ishuset, Christiania, København"
+    ],
+    "popupParagraphs": [
+      "Jeg udstillede 6 kollager til Kunst i Dunst udstillingen og lavede flere performances. I haven sidder jeg med Miss Fish og The Thom."
     ]
   },
   {
@@ -5004,7 +5300,11 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2003/03_06_08_pinsefest/pinsefest.html",
     "thumbnail": "./archive/timeline/generated-thumbs/c0b5ca94b2a9ee.jpg",
     "thumbnailFit": "contain",
-    "thumbnailPreview": "./assets/timeline-thumbs/9a18b7a5d76b2319.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/9a18b7a5d76b2319.webp",
+    "details": "Jeg optrådte med Hairwerk og Miss Fish ved Helligånds Dunst-festen. Foto: Daisy Løvendahl.",
+    "popupParagraphs": [
+      "Jeg optrådte med Hairwerk og Miss Fish ved Helligånds Dunst-festen. Foto: Daisy Løvendahl."
+    ]
   },
   {
     "date": "2003-06-05",
@@ -5015,7 +5315,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_06_05_thursday_itch_03/thursday_3.html",
     "thumbnail": "./archive/timeline/generated-thumbs/e888266cd98ead.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/cb455a3693d36901.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/cb455a3693d36901.webp",
+    "details": "Johnny Warehouse, Liebling Siebling, The Thom og Dennis Agerblad var i byen og reklamerede for dunst.",
+    "popupParagraphs": [
+      "Johnny Warehouse, Liebling Siebling, The Thom og Dennis Agerblad var i byen og reklamerede for dunst."
+    ]
   },
   {
     "date": "2003-06-01",
@@ -5037,7 +5341,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_05_29_eurogames/eurogames.html",
     "thumbnail": "./archive/timeline/generated-thumbs/5c3f9566ac7b09.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/7d40444d3092530e.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/7d40444d3092530e.webp",
+    "details": "Jeg lavede gymnastik og optrådte sammen med Bjarnepigen, Ramona Macho, Stimulundia, Puta og Miss Fish. Knud Vesterskov hev i sine baller og viste sit røvhul for LGBT+ sportsfolk der var kommet til Danmark fra 20 lande. Da vi skulle lave show nummer to blev vi bedt om at udelade Knuds nummer, men vi sagde alt eller intet.",
+    "popupParagraphs": [
+      "Jeg lavede gymnastik og optrådte sammen med Bjarnepigen, Ramona Macho, Stimulundia, Puta og Miss Fish. Knud Vesterskov hev i sine baller og viste sit røvhul for LGBT+ sportsfolk der var kommet til Danmark fra 20 lande. Da vi skulle lave show nummer to blev vi bedt om at udelade Knuds nummer, men vi sagde alt eller intet."
+    ]
   },
   {
     "date": "2003-05-23",
@@ -5154,6 +5462,10 @@ export const timelineEntries = [
     "shareAliases": [
       "2003-02-08|Happening|Reklame for Dunst-festen Arty Farty, Café Oscar, København.",
       "2003-02-08|Happening|Reklame for Dunst-festen Arty Farty på Café Oscar, København."
+    ],
+    "details": "Ramona Macho, Johnny Warehouse, Puta og jeg delte flyers ud for vores næste fest Arty Farty. Mødte bland andre Sune Prahl Knudsen.",
+    "popupParagraphs": [
+      "Ramona Macho, Johnny Warehouse, Puta og jeg delte flyers ud for vores næste fest Arty Farty. Mødte bland andre Sune Prahl Knudsen."
     ]
   },
   {
@@ -5209,7 +5521,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_01_11_ski_ore/03_01_11_ski.html",
     "thumbnail": "./archive/timeline/generated-thumbs/951c1d3e9d9ea2.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/5f3754ed20af53bb.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/5f3754ed20af53bb.webp",
+    "details": "Puta, Ramona Macho og jeg var på skiferien i Åre, nord-Sverige og kørte sne-scooter.",
+    "popupParagraphs": [
+      "Puta, Ramona Macho og jeg var på skiferien i Åre, nord-Sverige og kørte sne-scooter."
+    ]
   },
   {
     "date": "2003-01-10",
@@ -5220,7 +5536,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_01_10_ski_ore/03_01_10_ski.html",
     "thumbnail": "./archive/timeline/generated-thumbs/29e8306e0b4905.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/55cd975f422bfa77.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/55cd975f422bfa77.webp",
+    "details": "Puta, Ramona Macho og jeg var på skiferien i Åre, nord-Sverige. Vi drak kakao, festede om aftenen og var på kasino. Blev nægtet at optræde da de så os.",
+    "popupParagraphs": [
+      "Puta, Ramona Macho og jeg var på skiferien i Åre, nord-Sverige. Vi drak kakao, festede om aftenen og var på kasino. Blev nægtet at optræde da de så os."
+    ]
   },
   {
     "date": "2003-01-09",
@@ -5231,7 +5551,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_01_09_ski_ore/03_01_09_ski.html",
     "thumbnail": "./archive/timeline/generated-thumbs/2be2ffc41b16c4.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/a96f3f8e358f0a81.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/a96f3f8e358f0a81.webp",
+    "details": "Puta, Ramona Macho og jeg tog toget til Åre i nord-Sverige.",
+    "popupParagraphs": [
+      "Puta, Ramona Macho og jeg tog toget til Åre i nord-Sverige."
+    ]
   },
   {
     "date": "2002-12-31",
@@ -5253,7 +5577,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2002/02_12_20_grrit_spektakel/spektakel.html",
     "thumbnail": "./archive/timeline/generated-thumbs/442dfac0850fd6.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/e3cc79d72e4b4e15.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e3cc79d72e4b4e15.webp",
+    "details": "Jeg optrådte ved Grit Uldals Spetakel på Kafe Knud. Miss Fish trådte til for Ramona Macho, Gritt og Bent Stålhøj viste film, Knud Vesterskov fik læst en tekst op.",
+    "popupParagraphs": [
+      "Jeg optrådte ved Grit Uldals Spetakel på Kafe Knud. Miss Fish trådte til for Ramona Macho, Gritt og Bent Stålhøj viste film, Knud Vesterskov fik læst en tekst op."
+    ]
   },
   {
     "date": "2002-12-14",
@@ -5299,7 +5627,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2002/02_11_16_lefreak/lefreak.html",
     "thumbnail": "./archive/timeline/generated-thumbs/1338737c20fd9b.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/84fbf75d23e1929f.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/84fbf75d23e1929f.webp",
+    "details": "Jeg optrådte som en vandmand og sang sangen \"Tissemand\" og senere optrådte jeg med \"De syngende Røvhuller.\" På flyeren ses Tove Hansen, Ramona Macho, Miss fish, Dennis Agerblad og Johnny warehouse.",
+    "popupParagraphs": [
+      "Jeg optrådte som en vandmand og sang sangen \"Tissemand\" og senere optrådte jeg med \"De syngende Røvhuller.\" På flyeren ses Tove Hansen, Ramona Macho, Miss fish, Dennis Agerblad og Johnny warehouse."
+    ]
   },
   {
     "date": "2002-11-09",
@@ -5311,7 +5643,11 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2002/02_11_09_for_fest/for_fest.html",
     "thumbnail": "./archive/legacy/200_calendar/2002/02_11_09_for_fest/2002_11_09_fest_02.jpg",
     "popupTitle": "Dunst-happening",
-    "thumbnailPreview": "./assets/timeline-thumbs/c75c8255769009b1.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/c75c8255769009b1.webp",
+    "details": "Jeg reklamerede for Dunst-festen Le Freak på Café Heaven sammen med Ramona Macho, Puta og Anders Clausen.",
+    "popupParagraphs": [
+      "Jeg reklamerede for Dunst-festen Le Freak på Café Heaven sammen med Ramona Macho, Puta og Anders Clausen."
+    ]
   },
   {
     "date": "2002-11-01",
@@ -5334,7 +5670,11 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2002/02_10_19_filmfestival/filmfestival.html",
     "thumbnail": "./archive/timeline/generated-thumbs/f4fdd839928c81.jpg",
     "popupTitle": "Filmfestivalen i Cinemateket",
-    "thumbnailPreview": "./assets/timeline-thumbs/e3fc585ad048d96a.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e3fc585ad048d96a.webp",
+    "details": "Jeg optrådte foran lærredet før visningen af en portrætfilm om Knud Vesterskov. Jeg sang “Knud –fest og sjov”, en sang med grove seksuelle undertoner. På billederne ses Puta, Johnny Warehouse, Ramona Macho, Miss Fish, Knud Vesterskov og Di Laila.",
+    "popupParagraphs": [
+      "Jeg optrådte foran lærredet før visningen af en portrætfilm om Knud Vesterskov. Jeg sang “Knud –fest og sjov”, en sang med grove seksuelle undertoner. På billederne ses Puta, Johnny Warehouse, Ramona Macho, Miss Fish, Knud Vesterskov og Di Laila."
+    ]
   },
   {
     "date": "2002-10-11",
@@ -5403,7 +5743,11 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2002/02_09_08_designskolen/designskolen.html",
     "thumbnail": "./archive/timeline/generated-thumbs/29a1776161467a.jpg",
     "popupTitle": "Stemmetællere",
-    "thumbnailPreview": "./assets/timeline-thumbs/e56db816857f6012.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e56db816857f6012.webp",
+    "details": "Ramona Macho, Miss Fish og jeg talte stemmer og sang en sang på Danmarks Designskole.",
+    "popupParagraphs": [
+      "Ramona Macho, Miss Fish og jeg talte stemmer og sang en sang på Danmarks Designskole."
+    ]
   },
   {
     "date": "2002-09-01",
@@ -5460,7 +5804,11 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/strandtoej.html",
     "thumbnail": "./archive/legacy/200_calendar/2002/02_08_10_froeken_verden/2002_strand_03.jpg",
     "popupTitle": "Strandtøj",
-    "thumbnailPreview": "./assets/timeline-thumbs/1c9dec5db46bc776.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/1c9dec5db46bc776.webp",
+    "details": "Jeg fik bad af to sømænd mens jeg sang sangen: Strandtøj.",
+    "popupParagraphs": [
+      "Jeg fik bad af to sømænd mens jeg sang sangen: Strandtøj."
+    ]
   },
   {
     "date": "2002-08-10",
@@ -5551,7 +5899,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/2000/00_10_31_halloween/halloween.html",
     "thumbnail": "./archive/timeline/generated-thumbs/990821cfcf8f47.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/82a2c806a79c00a9.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/82a2c806a79c00a9.webp",
+    "details": "Jeg var til Halloween-fest med Tina Von Kina og Malle.",
+    "popupParagraphs": [
+      "Jeg var til Halloween-fest med Tina Von Kina og Malle."
+    ]
   },
   {
     "date": "2000-08-14",
@@ -5822,7 +6174,11 @@ export const timelineEntries = [
     "group": "live",
     "href": "./archive/legacy/200_calendar/1991/dennis_agerblad.html",
     "thumbnail": "./archive/legacy/200_calendar/1991/1991_birthday_02b.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/aba1818b408e062f.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/aba1818b408e062f.webp",
+    "details": "Til min 21-års fødselsdag pillede jeg gardinerne ned og brugte dem til et kostume jeg optrådte for Erling, Jan Rolsted, Siv, Ulle Dulle La Pepe og Unni.",
+    "popupParagraphs": [
+      "Til min 21-års fødselsdag pillede jeg gardinerne ned og brugte dem til et kostume jeg optrådte for Erling, Jan Rolsted, Siv, Ulle Dulle La Pepe og Unni."
+    ]
   },
   {
     "date": "1989-07-28",

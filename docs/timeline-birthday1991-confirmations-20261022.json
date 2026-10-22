@@ -1,0 +1,81 @@
+{
+  "confirmation": "Owner completed the 21st birthday, 10 April 1991 person/photo-checkbox review, 22 October 2026. Only those five pictures are included.",
+  "reviewRevision": 349,
+  "events": [
+    "1991-04-10|Optræden|21-års fødselsdagsfest i min fars lejlighed, København."
+  ],
+  "photosReviewed": 5,
+  "photosChanged": 3,
+  "addedAssociations": 3,
+  "removedAssociations": 0,
+  "newPeople": [],
+  "records": [
+    {
+      "src": "./archive/legacy/200_calendar/1991/1991_birthday_03.jpg",
+      "people": [
+        "jan-rolsted",
+        "dennis"
+      ],
+      "added": [
+        "dennis"
+      ],
+      "removed": [],
+      "names": [
+        "Jan Rolsted",
+        "Dennis Agerblad"
+      ],
+      "addedNames": [
+        "Dennis Agerblad"
+      ],
+      "removedNames": [],
+      "da": "Person i hvid kjole løfter hænderne over hovedet. Dennis med hvid kjole uden briller. På billedet ses Dennis Agerblad og Jan Rolsted.",
+      "en": "Person in white dress raises hands above head. Dennis with white dress without glasses. Pictured: Dennis Agerblad, Jan Rolsted."
+    },
+    {
+      "src": "./archive/timeline/combined/B02-1991_birthday.png",
+      "people": [
+        "jan-rolsted",
+        "dennis"
+      ],
+      "added": [
+        "dennis"
+      ],
+      "removed": [],
+      "names": [
+        "Jan Rolsted",
+        "Dennis Agerblad"
+      ],
+      "addedNames": [
+        "Dennis Agerblad"
+      ],
+      "removedNames": [],
+      "da": "Person i hvid kjole og slør blandt siddende gæster. Dennis med hvid kjole. På billedet ses Dennis Agerblad og Jan Rolsted.",
+      "en": "Person in white dress and veil among seated guests. Dennis with white dress. Pictured: Dennis Agerblad, Jan Rolsted."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/1991/1991_birthday_05.jpg",
+      "people": [
+        "erling-victor",
+        "jan-rolsted",
+        "siv-ova-tolfsen",
+        "ulle-dulle"
+      ],
+      "added": [
+        "ulle-dulle"
+      ],
+      "removed": [],
+      "names": [
+        "Erling Victor",
+        "Jan Rolsted",
+        "Siv Ova Tolfsen",
+        "Ulle Dulle"
+      ],
+      "addedNames": [
+        "Ulle Dulle"
+      ],
+      "removedNames": [],
+      "da": "Optrædende i hvidt kostume rækker hånden mod publikum. Dennis med hvid kjole uden briller. På billedet ses Erling Victor, Jan Rolsted, Siv Ova Tolfsen og Ulle Dulle.",
+      "en": "Performer in white costume reaches out to audience. Dennis with white dress without glasses. Pictured: Erling Victor, Jan Rolsted, Siv Ova Tolfsen, Ulle Dulle."
+    }
+  ]
+}

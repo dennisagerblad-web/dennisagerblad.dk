@@ -16,8 +16,9 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
  const filming=timelineEntries.find(e=>e.date==='2011-07-09'&&e.title.includes('Sproghoved'));
  assert.equal(opens(filming),true,'The real filming gallery must remain accessible without a videoId');
  assert.equal(galleries[[filming.date,filming.category,filming.title].join('|')].images.length,20);
- assert.equal(inline(filming),'','Do not repeat the event title as a second description');
- assert.deepEqual(galleries[[filming.date,filming.category,filming.title].join('|')].details,[]);
+ assert.ok(filming.popupParagraphs[0].includes('Efter hver optagelse'),'The owner supplied a new filming description');
+ assert.deepEqual(paragraphs(filming,['Old archive caption',filming.details]),filming.popupParagraphs,'Approved body replaces archive captions');
+ assert.deepEqual(galleries[[filming.date,filming.category,filming.title].join('|')].details,filming.popupParagraphs);
  assert.equal(opens({category:'Musikvideo',thumbnail:'poster.webp'}),false,'A video poster alone is not a playable video');
  assert.equal(opens({category:'Musikvideo',videoId:'example'}),true);
  for(const e of timelineEntries){
