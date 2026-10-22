@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR 2</title>
+  <style>
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      color: #000;
+    }
+    main { width: 100%; display: flex; justify-content: center; }
+    h1 {
+      display: inline-block;
+      margin: 0;
+      font: 900 20vw/1 Arial, Helvetica, sans-serif;
+      white-space: nowrap;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main><h1 id="word">Pik</h1></main>
+  <script>
+    const word = document.getElementById('word');
+    function fitWord() {
+      word.style.fontSize = '100px';
+      const bounds = word.getBoundingClientRect();
+      const scale = Math.min(
+        (window.innerWidth * 0.96) / bounds.width,
+        (window.innerHeight * 0.86) / bounds.height
+      );
+      word.style.fontSize = `${100 * scale}px`;
+    }
+    fitWord();
+    document.fonts.ready.then(fitWord);
+    window.addEventListener('resize', fitWord);
+  </script>
+</body>
+</html>
