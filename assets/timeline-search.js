@@ -1,10 +1,10 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261021-person-tags-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261022-polish-title-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261018-sproghoved-1';
 
-import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261022-paludan-tags-1';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261022-paludan-tags-1';
+import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261022-polish-title-1';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261022-polish-title-1';
 
-import {findTimelinePeople} from './timeline-search-people.js?v=20261022-paludan-tags-1';
+import {findTimelinePeople} from './timeline-search-people.js?v=20261022-polish-title-1';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {

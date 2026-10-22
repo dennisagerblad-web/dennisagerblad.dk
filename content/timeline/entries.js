@@ -4294,11 +4294,14 @@ export const timelineEntries = [
     "display": "11.06.2005",
     "year": 2005,
     "category": "Demonstration",
-    "title": "Hos den polske ambassade, København.",
+    "title": "Demonstration foran den Polske amassade, København.",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2005/05_06_11_polen_demo/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/2bfd89accac70b.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/0dabe7721d01d0da.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/0dabe7721d01d0da.webp",
+    "shareAliases": [
+      "2005-06-11|Demonstration|Hos den polske ambassade, København."
+    ]
   },
   {
     "date": "2005-05-30",
