@@ -4883,12 +4883,15 @@ export const timelineEntries = [
     "display": "16.08.2003",
     "year": 2003,
     "category": "Parade",
-    "title": "Jeg gik med Dunst i paraden.",
+    "title": "Dunst i Parade med rollator.",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_08_16_pride_dk/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/generated-thumbs/c2e5735b3c9a82.jpg",
-    "popupTitle": "Dunst går med i paraden",
-    "thumbnailPreview": "./assets/timeline-thumbs/640f5b927adfe29f.webp"
+    "popupTitle": "Dunst i Parade med rollator.",
+    "thumbnailPreview": "./assets/timeline-thumbs/640f5b927adfe29f.webp",
+    "shareAliases": [
+      "2003-08-16|Parade|Jeg gik med Dunst i paraden."
+    ]
   },
   {
     "date": "2003-08-04",
@@ -4946,11 +4949,11 @@ export const timelineEntries = [
     "display": "23.07.2003",
     "year": 2003,
     "category": "Kunst",
-    "title": "Kunstudstilling, Kunst i Dunst, Ishuset, Christiania, København",
+    "title": "Kunstudstilling, Kunst i Dunst, bøssehuset, Christiania, København",
     "group": "art",
     "href": null,
     "thumbnail": "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04b.jpg",
-    "details": "Jeg udstillede værker ved Kunst i Dunst i Ishuset på Christiania.",
+    "details": "Jeg udstillede værker ved Kunst i Dunst i Bøssehuset på Christiania.",
     "images": [
       "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04b.jpg",
       "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04c.jpg",
@@ -4962,8 +4965,11 @@ export const timelineEntries = [
       "./archive/art/kunst-i-dunst/05.webp",
       "./archive/art/kunst-i-dunst/06.webp"
     ],
-    "popupTitle": "Kunstudstilling",
-    "thumbnailPreview": "./assets/timeline-thumbs/51d1bbeb6316a04e.webp"
+    "popupTitle": "Kunstudstilling, Kunst i Dunst, bøssehuset, Christiania, København",
+    "thumbnailPreview": "./assets/timeline-thumbs/51d1bbeb6316a04e.webp",
+    "shareAliases": [
+      "2003-07-23|Kunst|Kunstudstilling, Kunst i Dunst, Ishuset, Christiania, København"
+    ]
   },
   {
     "date": "2003-06-24",
@@ -5140,11 +5146,14 @@ export const timelineEntries = [
     "display": "08.02.2003",
     "year": 2003,
     "category": "Happening",
-    "title": "Reklame for Dunst-festen Arty Farty, Café Oscar, København.",
+    "title": "Reklame for Dunst-festen Arty Farty på Café Oscar, København.",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_02_08_oscar/oscar.html",
     "thumbnail": "./archive/timeline/generated-thumbs/46a3bb5a393d1e.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/443022b885c2510a.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/443022b885c2510a.webp",
+    "shareAliases": [
+      "2003-02-08|Happening|Reklame for Dunst-festen Arty Farty, Café Oscar, København."
+    ]
   },
   {
     "date": "2003-02-01",

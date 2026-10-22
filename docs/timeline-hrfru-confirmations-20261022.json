@@ -1,0 +1,79 @@
+{
+  "confirmation": "Owner completed the HR & FRU dunst person/photo-checkbox review, 22 October 2026. Only those eleven pictures are included.",
+  "reviewRevision": 340,
+  "events": [
+    "2004-12-18|Optræden|HR & FRU Dunst-fest – en konkurrence for queer-personligheder, Ungdomshuset, København."
+  ],
+  "photosReviewed": 11,
+  "photosChanged": 3,
+  "addedAssociations": 3,
+  "removedAssociations": 0,
+  "newPeople": [],
+  "records": [
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/531.jpg",
+      "people": [
+        "dennis",
+        "liebling-siebling",
+        "puta"
+      ],
+      "added": [
+        "puta"
+      ],
+      "removed": [],
+      "names": [
+        "Dennis Agerblad",
+        "Liebling Siebling",
+        "Puta"
+      ],
+      "addedNames": [
+        "Puta"
+      ],
+      "removedNames": [],
+      "da": "Flere personer i kostumer står på scenen. Dennis med lang lys paryk og turkis og grå kjole uden briller. På billedet ses Dennis Agerblad, Liebling Siebling og Puta.",
+      "en": "Several people in costumes are on stage. Dennis with long light wig and turquoise and grey dress without glasses. Pictured: Dennis Agerblad, Liebling Siebling, Puta."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/CRW_0421.jpg",
+      "people": [
+        "dennis",
+        "bob"
+      ],
+      "added": [
+        "bob"
+      ],
+      "removed": [],
+      "names": [
+        "Dennis Agerblad",
+        "Bob"
+      ],
+      "addedNames": [
+        "Bob"
+      ],
+      "removedNames": [],
+      "da": "Sanger med blond paryk og pelsjakke set nedefra. Dennis med lang lys paryk og turkis og grå kjole uden briller. Han holder en mikrofon. På billedet ses Bob og Dennis Agerblad.",
+      "en": "Singer with blond wig and fur jacket seen from below. Dennis with long light wig and turquoise and grey dress without glasses. He holds a microphone. Pictured: Bob, Dennis Agerblad."
+    },
+    {
+      "src": "./archive/legacy/200_calendar/2004/04_12_18_hr_fru_dunst/CRW_0422.jpg",
+      "people": [
+        "dennis",
+        "puta"
+      ],
+      "added": [
+        "puta"
+      ],
+      "removed": [],
+      "names": [
+        "Dennis Agerblad",
+        "Puta"
+      ],
+      "addedNames": [
+        "Puta"
+      ],
+      "removedNames": [],
+      "da": "Sanger i turkis kjole holder mikrofonen foran sig. Dennis med lang lys paryk og turkis og grå kjole uden briller. Han holder en mikrofon. På billedet ses Dennis Agerblad og Puta.",
+      "en": "Singer in turquoise dress holds the microphone in front of her. Dennis with long light wig and turquoise and grey dress without glasses. He holds a microphone. Pictured: Dennis Agerblad, Puta."
+    }
+  ]
+}
