@@ -791,6 +791,46 @@ export const timelinePerformers = [
     "aliases": [
       "Aupair Outrair"
     ]
+  },
+  {
+    "id": "daniella-andreasen",
+    "name": "Daniella Andreasen",
+    "aliases": [
+      "Daniella Andreasen"
+    ],
+    "explicitOnly": true
+  },
+  {
+    "id": "vonbjort-vang",
+    "name": "Vónbjørt Vang",
+    "aliases": [
+      "Vónbjørt Vang"
+    ],
+    "explicitOnly": true
+  },
+  {
+    "id": "george",
+    "name": "George",
+    "aliases": [
+      "George"
+    ],
+    "explicitOnly": true
+  },
+  {
+    "id": "ann-charlot",
+    "name": "Ann Charlot",
+    "aliases": [
+      "Ann Charlot"
+    ],
+    "explicitOnly": true
+  },
+  {
+    "id": "connie-cool",
+    "name": "Connie Cool",
+    "aliases": [
+      "Connie Cool"
+    ],
+    "explicitOnly": true
   }
 ];
 
