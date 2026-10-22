@@ -1,10 +1,10 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261021-person-tags-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261018-sproghoved-1';
 
-import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261022-aftertagging-1';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261022-aftertagging-1';
+import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261022-paludan-tags-1';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261022-paludan-tags-1';
 
-import {findTimelinePeople} from './timeline-search-people.js?v=20261022-aftertagging-1';
+import {findTimelinePeople} from './timeline-search-people.js?v=20261022-paludan-tags-1';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {
@@ -54,7 +54,7 @@ loadTimelineGalleryData().then(async data => {
   const [thumbnailData,lookData,peopleData,videoData,bodyData]=await Promise.allSettled([
     fetch(new URL('../content/timeline/search-thumbnails.json?v=20261020-scoop-2022-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/own-look-features.json?v=20261019-foerohus-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
-    fetch(new URL('../content/timeline/people.json?v=20261022-aftertagging-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
+    fetch(new URL('../content/timeline/people.json?v=20261022-paludan-tags-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/video-look-features.json?v=20261014-stable-mobile-gallery-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
     fetch(new URL('../content/timeline/body-features.json?v=20261019-strikkeklub-nudity-1',import.meta.url)).then(response=>response.ok ? response.json() : {}),
   ]);

@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
   const {timelinePerformers}=await import('../assets/timeline-search-people.js');
   const {parseTimelineSearchQuery:parse,matchTimelineResult:match,normalizeTimelineSearch:normalize}=await import('../assets/timeline-search-match.js');
   const read=p=>JSON.parse(fs.readFileSync(p));
-  const proof=read('docs/timeline-person-confirmations-20261022.json');
+  const proof=read(process.argv[2]||'docs/timeline-person-confirmations-20261022.json');
   const galleries=read('content/timeline/galleries.json').entries,records=read('content/timeline/people.json').photos;
   const english=JSON.parse(fs.readFileSync('assets/site-language-data.js','utf8').split('window.DennisEnglish = ')[1].split(';\nwindow.DennisPopupDanish')[0]);
   const results=timelineEntries.map(entry=>{
@@ -25,12 +25,12 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
   }
   assert.equal(checked,proof.addedAssociations);
   for(const person of proof.newPeople){
-    const expected=proof.records.filter(r=>r.people.includes(person.id)).map(r=>r.src).sort();
+    const expected=Object.entries(records).filter(([,r])=>r.people?.includes(person.id)).map(([src])=>src).sort();
     assert.deepEqual([...searchPhotos(person.name)].sort(),expected,'Only owner-selected photos for '+person.name);
   }
   for(const name of ['Kunst','Glemt person','Ikke søgbare mennesker','Ninna Fedder Helsinghoff']){
     assert.ok(!timelinePerformers.some(p=>p.name===name));
     assert.ok(!JSON.stringify(proof).includes(name),'No private labels or withdrawn name in public proof');
   }
-  console.log(`PASS: ${checked} additional confirmed name/photo searches on ${proof.photosChanged} photos; exact photo sets for five new people; bilingual descriptions agree and private labels remain private.`);
+  console.log(`PASS: ${checked} additional confirmed name/photo searches on ${proof.photosChanged} photos; exact photo sets for ${proof.newPeople.length} new people; bilingual descriptions agree and private labels remain private.`);
 })().catch(error=>{console.error(error);process.exitCode=1});

@@ -831,6 +831,14 @@ export const timelinePerformers = [
       "Connie Cool"
     ],
     "explicitOnly": true
+  },
+  {
+    "id": "mai-young-ovlisen",
+    "name": "Mai Young Øvlisen",
+    "aliases": [
+      "Mai Young Øvlisen"
+    ],
+    "explicitOnly": true
   }
 ];
 

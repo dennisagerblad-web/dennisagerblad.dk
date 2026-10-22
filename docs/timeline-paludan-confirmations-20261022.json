@@ -1,0 +1,51 @@
+{
+  "confirmation": "Owner completed the Cafe Paludan person/photo-checkbox review, 22 October 2026. Be Queer and Peter Vadim remain outside this approved batch.",
+  "reviewRevision": 333,
+  "events": [
+    "2011-11-05 · Lyrikoplæsning på Café Paludan, København."
+  ],
+  "photosReviewed": 6,
+  "photosChanged": 1,
+  "addedAssociations": 3,
+  "newPeople": [
+    {
+      "id": "mai-young-ovlisen",
+      "name": "Mai Young Øvlisen",
+      "aliases": [
+        "Mai Young Øvlisen"
+      ],
+      "explicitOnly": true
+    }
+  ],
+  "records": [
+    {
+      "src": "./archive/timeline/word/2011-11-05-paludan-04.webp",
+      "people": [
+        "dennis",
+        "toroddur-poulsen",
+        "daniella-andreasen",
+        "mai-young-ovlisen",
+        "vonbjort-vang"
+      ],
+      "added": [
+        "daniella-andreasen",
+        "mai-young-ovlisen",
+        "vonbjort-vang"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Tóroddur Poulsen",
+        "Daniella Andreasen",
+        "Mai Young Øvlisen",
+        "Vónbjørt Vang"
+      ],
+      "addedNames": [
+        "Daniella Andreasen",
+        "Mai Young Øvlisen",
+        "Vónbjørt Vang"
+      ],
+      "da": "Fem personer poserer sammen foran bogreoler på en café; personen forrest har krøllet brun paryk, ternet skjorte og lysegrøn kjole. På billedet ses Daniella Andreasen, Dennis Agerblad, Mai Young Øvlisen, Tóroddur Poulsen og Vónbjørt Vang.",
+      "en": "Five people pose together in front of bookshelves in a café; the person in front wears a curly brown wig, checked shirt and light green dress. Pictured: Daniella Andreasen, Dennis Agerblad, Mai Young Øvlisen, Tóroddur Poulsen, Vónbjørt Vang."
+    }
+  ]
+}
