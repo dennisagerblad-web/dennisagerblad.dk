@@ -104,24 +104,8 @@
 }
 
 /* Mobile orientation and archive refinements, 2026-09-22. */
-@media (max-width:760px) and (orientation:portrait){
-  .performance-viewer:not(.release-viewer){width:100%;height:calc(100svh - 24px)}
-  .performance-viewer:not(.release-viewer) figure,
-  .performance-viewer:not(.release-viewer) figure.is-portrait,
-  .performance-viewer:not(.release-viewer) figure.is-landscape{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;align-content:center;align-items:center;gap:12px;width:100%;height:100%;display:grid}
-  .performance-viewer:not(.release-viewer) figure>img,
-  .performance-viewer:not(.release-viewer) figure.is-portrait>img{justify-self:center;object-fit:contain;width:auto;max-width:100%;height:auto;max-height:calc(100svh - 150px)}
-  .performance-viewer:not(.release-viewer) figcaption{text-align:center;width:100%;margin:0}
-}
 @media (max-width:1000px) and (orientation:landscape){
-  .performance-lightbox{padding:8px 14px}
-  .performance-viewer:not(.release-viewer){width:100%;height:calc(100svh - 16px)}
-  .performance-viewer:not(.release-viewer) figure,
-  .performance-viewer:not(.release-viewer) figure.is-portrait,
-  .performance-viewer:not(.release-viewer) figure.is-landscape{grid-template-columns:minmax(0,1fr) minmax(190px,30vw);align-items:center;gap:clamp(14px,2.5vw,32px);width:100%;height:100%;display:grid}
-  .performance-viewer:not(.release-viewer) figure>img,
-  .performance-viewer:not(.release-viewer) figure.is-portrait>img{justify-self:end;object-fit:contain;width:auto;max-width:100%;height:auto;max-height:calc(100svh - 20px)}
-  .performance-viewer:not(.release-viewer) figcaption{text-align:left;align-self:center;margin:0}
+  .release-lightbox{padding:8px 14px}
   .section-0 .music-intro-list{padding-right:150px;font-size:clamp(11px,1.7vw,15px)}
   .section-0 .music-intro-list li:nth-child(-n+2){white-space:nowrap}
   .section-3 .section-heading{top:2px;left:8px}
@@ -137,24 +121,7 @@
 .is-open.section-3 .portrait-underlay{animation:literature-background-settle 1.05s cubic-bezier(.2,.72,.2,1) .12s both}
 
 /* Mobile orientation and archive refinements, 2026-09-22. */
-@media (max-width:760px) and (orientation:portrait){
-  .performance-viewer:not(.release-viewer){width:100%;height:calc(100svh - 24px)}
-  .performance-viewer:not(.release-viewer) figure,
-  .performance-viewer:not(.release-viewer) figure.is-portrait,
-  .performance-viewer:not(.release-viewer) figure.is-landscape{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;align-items:center;gap:12px;width:100%;height:100%;display:grid}
-  .performance-viewer:not(.release-viewer) figure>img,
-  .performance-viewer:not(.release-viewer) figure.is-portrait>img{justify-self:center;object-fit:contain;width:auto;max-width:100%;height:auto;max-height:calc(100svh - 150px)}
-  .performance-viewer:not(.release-viewer) figcaption{text-align:center;width:100%;margin:0}
-}
 @media (max-width:1000px) and (orientation:landscape){
-  .performance-lightbox{padding:8px 14px}
-  .performance-viewer:not(.release-viewer){width:100%;height:calc(100svh - 16px)}
-  .performance-viewer:not(.release-viewer) figure,
-  .performance-viewer:not(.release-viewer) figure.is-portrait,
-  .performance-viewer:not(.release-viewer) figure.is-landscape{grid-template-columns:minmax(0,1fr) minmax(190px,30vw);align-items:center;gap:clamp(14px,2.5vw,32px);width:100%;height:100%;display:grid}
-  .performance-viewer:not(.release-viewer) figure>img,
-  .performance-viewer:not(.release-viewer) figure.is-portrait>img{justify-self:end;object-fit:contain;width:auto;max-width:100%;height:auto;max-height:calc(100svh - 20px)}
-  .performance-viewer:not(.release-viewer) figcaption{text-align:left;align-self:center;margin:0}
   .section-0 .music-intro-list{padding-right:150px;font-size:clamp(11px,1.7vw,15px)}
   .section-0 .music-intro-list li:nth-child(-n+2){white-space:nowrap}
   .section-3 .section-heading{top:2px;left:8px}
@@ -375,4 +342,47 @@
 }
 @media(max-width:1100px) and (max-height:650px) and (orientation:landscape){
  .ship.is-open.section-2:not(.gallery-open) .face-piece-shadow{transform:translate(42vw,42vh) rotate(9deg) scale(.72)}
+}
+
+/* Performance photos: keep the image, caption and count together, above page controls. */
+.performance-lightbox:not(.release-lightbox){
+  z-index:160;
+  box-sizing:border-box;
+  padding:calc(64px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));
+  overflow:auto;
+}
+.performance-lightbox:not(.release-lightbox) .performance-lightbox-close{
+  top:max(12px,env(safe-area-inset-top));
+  right:max(12px,env(safe-area-inset-right));
+  display:flex;align-items:center;justify-content:center;
+}
+.performance-viewer:not(.release-viewer){
+  height:auto;max-height:100%;min-height:0;
+  display:flex;flex-direction:column;justify-content:center;gap:12px;
+}
+.performance-viewer:not(.release-viewer) figure{min-height:0;flex:0 1 auto}
+.performance-viewer:not(.release-viewer) figure>img{max-height:calc(100svh - 210px)}
+.performance-viewer:not(.release-viewer) figcaption p{margin:6px 0 0;font:16px/1.4 Helvetica,Arial,sans-serif}
+.performance-viewer:not(.release-viewer) .gallery-controls{position:static;flex:0 0 auto;align-items:center}
+@media (max-width:760px) and (orientation:portrait){
+  .performance-viewer:not(.release-viewer) figure,
+  .performance-viewer:not(.release-viewer) figure.is-portrait,
+  .performance-viewer:not(.release-viewer) figure.is-landscape{
+    width:100%;height:auto;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;
+  }
+  .performance-viewer:not(.release-viewer) figure>img{
+    min-height:0;width:auto;height:auto;max-width:100%;max-height:calc(100svh - 230px);object-fit:contain;flex:0 1 auto;
+  }
+  .performance-viewer:not(.release-viewer) figcaption{flex:0 0 auto;width:100%;text-align:center;margin:0}
+}
+@media (max-width:1000px) and (orientation:landscape){
+  .performance-viewer:not(.release-viewer) figure,
+  .performance-viewer:not(.release-viewer) figure.is-portrait,
+  .performance-viewer:not(.release-viewer) figure.is-landscape{
+    width:100%;height:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,30vw);grid-template-rows:auto;align-items:center;gap:20px;
+  }
+  .performance-viewer:not(.release-viewer) figure>img{justify-self:end;width:auto;height:auto;max-width:100%;max-height:calc(100svh - 132px);object-fit:contain}
+  .performance-viewer:not(.release-viewer) figcaption{width:100%;text-align:left;margin:0}
+  .performance-viewer:not(.release-viewer) .gallery-controls button{position:absolute}
+  .performance-viewer:not(.release-viewer) .gallery-controls button:last-child{right:calc(max(180px,30vw) + 28px)}
 }
