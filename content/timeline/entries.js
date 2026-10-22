@@ -5146,13 +5146,14 @@ export const timelineEntries = [
     "display": "08.02.2003",
     "year": 2003,
     "category": "Happening",
-    "title": "Reklame for Dunst-festen Arty Farty på Café Oscar, København.",
+    "title": "På Café Oscar, København.",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2003/03_02_08_oscar/oscar.html",
     "thumbnail": "./archive/timeline/generated-thumbs/46a3bb5a393d1e.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/443022b885c2510a.webp",
     "shareAliases": [
-      "2003-02-08|Happening|Reklame for Dunst-festen Arty Farty, Café Oscar, København."
+      "2003-02-08|Happening|Reklame for Dunst-festen Arty Farty, Café Oscar, København.",
+      "2003-02-08|Happening|Reklame for Dunst-festen Arty Farty på Café Oscar, København."
     ]
   },
   {
