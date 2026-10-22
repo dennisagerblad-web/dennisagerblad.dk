@@ -362,6 +362,7 @@
 }
 .performance-viewer:not(.release-viewer) figure{min-height:0;flex:0 1 auto}
 .performance-viewer:not(.release-viewer) figure>img{max-height:calc(100svh - 210px)}
+.performance-viewer:not(.release-viewer) figure figcaption{text-align:center}
 .performance-viewer:not(.release-viewer) figcaption p{margin:6px 0 0;font:16px/1.4 Helvetica,Arial,sans-serif}
 .performance-viewer:not(.release-viewer) .gallery-controls{position:static;flex:0 0 auto;align-items:center}
 @media (max-width:760px) and (orientation:portrait){
@@ -382,7 +383,7 @@
     width:100%;height:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,30vw);grid-template-rows:auto;align-items:center;gap:20px;
   }
   .performance-viewer:not(.release-viewer) figure>img{justify-self:end;width:auto;height:auto;max-width:100%;max-height:calc(100svh - 132px);object-fit:contain}
-  .performance-viewer:not(.release-viewer) figcaption{width:100%;text-align:left;margin:0}
+  .performance-viewer:not(.release-viewer) figcaption{width:100%;text-align:center;margin:0}
   .performance-viewer:not(.release-viewer) .gallery-controls button{position:absolute}
   .performance-viewer:not(.release-viewer) .gallery-controls button:last-child{right:calc(max(180px,30vw) + 28px)}
 }

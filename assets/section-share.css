@@ -22,6 +22,7 @@ body>.section-share.is-closing{opacity:0}
 .art-page-heading>.section-share .section-share-feedback{left:0;right:auto}
 .section-heading>.section-share{position:absolute;top:calc(100% + 2px);left:0;right:auto}
 .section-heading>.section-share .section-share-feedback{left:0;right:auto}
+.performance-lightbox>.section-share{top:max(12px,env(safe-area-inset-top));right:calc(max(12px,env(safe-area-inset-right)) + 52px)}
 .ship.section-0 .section-heading>.section-share{top:50%;left:auto;right:calc(100% + 8px);transform:translateY(-50%)}
 .ship.section-0 .section-share-feedback{left:auto;right:0}
 @media (max-width:760px) and (orientation:portrait){

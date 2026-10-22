@@ -155,8 +155,12 @@
     const attachToHeading = section.slug === 'kunst' || section.slug === 'musik' ||
       (section.slug === 'litteratur' && matchMedia('(max-width: 760px) and (orientation: portrait)').matches);
     const heading = attachToHeading && root.querySelector(section.slug === 'kunst' ? '.art-page-heading' : '.ship.has-section .section-heading');
-    const parent = heading || document.body;
-    if (wrap.parentElement !== parent) parent.append(wrap);
+    const photoDialog = section.slug === 'performance' && document.querySelector('.performance-lightbox:not(.release-lightbox)');
+    const parent = photoDialog || heading || document.body;
+    if (wrap.parentElement !== parent) {
+      if (photoDialog) parent.insertBefore(wrap, parent.querySelector('.performance-lightbox-close'));
+      else parent.append(wrap);
+    }
     const closing = !root.querySelector('.ship')?.classList.contains('is-open');
     if (wrap.classList.contains('is-closing') !== closing) wrap.classList.toggle('is-closing', closing);
     if (link.tabIndex !== (closing ? -1 : 0)) link.tabIndex = closing ? -1 : 0;
@@ -184,6 +188,12 @@
   });
   window.addEventListener('resize', updateShare);
   window.addEventListener('dennis-timeline-position-ready', updateShare);
+  // Performance's React portal lives outside #root. Keep the existing share
+  // control inside the dialog and its focus trap, then restore it on close.
+  new MutationObserver(records => {
+    if (records.some(record => [...record.addedNodes, ...record.removedNodes].some(node =>
+      node.nodeType === 1 && node.matches('.performance-lightbox:not(.release-lightbox)')))) updateShare();
+  }).observe(document.body, {childList: true});
   // Keep copy-link, context-menu and modified-click destinations current too.
   let shareScrollFrame = 0;
   root.addEventListener('scroll', event => {
