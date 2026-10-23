@@ -1,5 +1,5 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261023-anders2018-photos-1';
-import { stopTimelineMotion } from './timeline-ui.js?v=20261023-anders2018-photos-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261023-mental-health-cover-1';
+import { stopTimelineMotion } from './timeline-ui.js?v=20261023-mental-health-cover-1';
 
 const groups = ['live', 'music', 'art', 'word', 'press'];
 export const entryKey = entry => [entry.date, entry.category, entry.title].join('|');

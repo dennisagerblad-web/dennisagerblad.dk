@@ -1658,9 +1658,10 @@ export const timelineEntries = [
     "popupParagraphs": [
       "Hairwerk Hugh Mongous, Poul Jensen, Lea og jeg lavede et show om at være spærret inde."
     ],
-    "thumbnail": "./archive/timeline/performance/2016-10-22-mental-health-16.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/2016-10-22-mental-health-16.webp",
+    "thumbnail": "./archive/timeline/performance/2016-10-22-mental-health-19.jpg",
+    "thumbnailPreview": "./assets/timeline-thumbs/2016-10-22-mental-health-19.webp",
     "images": [
+      "./archive/timeline/performance/2016-10-22-mental-health-19.jpg",
       "./archive/timeline/performance/2016-10-22-mental-health-16.jpg",
       "./archive/timeline/performance/2016-10-22-mental-health-01.jpg",
       "./archive/timeline/performance/2016-10-22-mental-health-02.jpg",
@@ -1679,7 +1680,6 @@ export const timelineEntries = [
       "./archive/timeline/performance/2016-10-22-mental-health-15.jpg",
       "./archive/timeline/performance/2016-10-22-mental-health-17.jpg",
       "./archive/timeline/performance/2016-10-22-mental-health-18.jpg",
-      "./archive/timeline/performance/2016-10-22-mental-health-19.jpg",
       "./archive/timeline/performance/2016-10-22-mental-health-20.jpg"
     ]
   },
