@@ -1,8 +1,8 @@
 import {canOpenTimelinePopup,timelineInlineDetails} from "./timeline-popup-content.js?v=20261022-popup-texts-1";
 import {videoEmbedURL} from "./video-embed-url.js?v=20261012-video-history-1";
-import { timelineEntries } from "../content/timeline/entries.js?v=20261023-sommerfest-stage-2";
-import {openTimelineGallery} from "./timeline-gallery.js?v=20261023-sommerfest-stage-2";
-import {timelineDate, timelineThumbDimensions, scrollTimelineYear, scrollTimelineTop} from "./timeline-ui.js?v=20261023-sommerfest-stage-2";
+import { timelineEntries } from "../content/timeline/entries.js?v=20261023-mental-health-2016-1";
+import {openTimelineGallery} from "./timeline-gallery.js?v=20261023-mental-health-2016-1";
+import {timelineDate, timelineThumbDimensions, scrollTimelineYear, scrollTimelineTop} from "./timeline-ui.js?v=20261023-mental-health-2016-1";
 
 // Keep an embedded frame's initial src stable across section rerenders. Language
 // changes use replacement navigation in site-language.js, never a new src.

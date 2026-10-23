@@ -1621,6 +1621,43 @@ export const timelineEntries = [
     ]
   },
   {
+    "date": "2016-10-22",
+    "display": "22.10.2016",
+    "year": 2016,
+    "category": "Optræden",
+    "title": "Mental Health Care Performance, Bøssehuset",
+    "group": "live",
+    "href": null,
+    "details": "Tommy, Hairwerk Hugh Mongous og jeg lavede et show om at være spærret inde.",
+    "popupParagraphs": [
+      "Tommy, Hairwerk Hugh Mongous og jeg lavede et show om at være spærret inde."
+    ],
+    "thumbnail": "./archive/timeline/performance/2016-10-22-mental-health-16.jpg",
+    "thumbnailPreview": "./assets/timeline-thumbs/2016-10-22-mental-health-16.webp",
+    "images": [
+      "./archive/timeline/performance/2016-10-22-mental-health-16.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-01.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-02.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-03.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-04.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-05.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-06.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-07.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-08.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-09.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-10.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-11.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-12.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-13.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-14.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-15.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-17.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-18.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-19.jpg",
+      "./archive/timeline/performance/2016-10-22-mental-health-20.jpg"
+    ]
+  },
+  {
     "date": "2016-09-17",
     "display": "17.09.2016",
     "year": 2016,
