@@ -18868,5 +18868,69 @@
       "content/timeline/entries.js",
       "content/timeline/galleries.json"
     ]
+  },
+  {
+    "id": 2635,
+    "da": "Dennis Agerblad med lang grå paryk, sort, hvid og rød ansigtsmakeup og halskæder backstage i Bøssehuset.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2636,
+    "da": "Florence med kort sort paryk, sort, hvid og rød ansigtsmakeup og en stor halskæde.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2637,
+    "da": "Dennis Agerblad ligger i en blå sofa med benene løftet, iført orange kjole med lyse flæser, lang grå paryk og sort, hvid og rød ansigtsmakeup.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2638,
+    "da": "Dennis Agerblad sidder tilbagelænet i en blå sofa med krydsede ben, orange kjole med flæser og lang grå paryk.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2639,
+    "da": "Blomst poserer med hånden på hoften i en kort sort kjole, sorte solbriller og langt lyst hår backstage blandt kostumer.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2640,
+    "da": "To personer backstage, den ene i gulgrønt gennemsigtigt kostume og stor stråhat, den anden i grøn kjole med glitrende overdel og kort lyst hår. På billedet ses Ramona Macho og Tommy Drag.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2641,
+    "da": "Tommy Drag med stor stråhat, farverig øjenmakeup og lyserøde læber holder armene ud, iført et gennemsigtigt gulgrønt kostume.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2642,
+    "da": "Tove Hansen i kort sort kjole og høje støvler poserer foran et stativ med kostumer og et stort spejl backstage.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
   }
 ]

@@ -847,6 +847,13 @@ export const timelinePerformers = [
       "Ernst Dalsgarð",
       "Ernst Dalsgard"
     ]
+  },
+  {
+    "id": "tommy-drag-mvkycm93",
+    "name": "Tommy Drag",
+    "aliases": [
+      "Tommy Drag"
+    ]
   }
 ];
 

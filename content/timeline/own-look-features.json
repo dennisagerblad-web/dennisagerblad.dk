@@ -17393,6 +17393,68 @@
       "subject": "context",
       "tags": [],
       "evidence": "Visually reviewed on 2026-10-19; owner person confirmation pending."
+    },
+    "./archive/timeline/performance/2018-08-04-sommerfest-01.webp": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "gaze:direct",
+        "glasses:absent",
+        "hair:grey",
+        "hair:long",
+        "wig:long",
+        "wig:present"
+      ]
+    },
+    "./archive/timeline/performance/2018-08-04-sommerfest-02.webp": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "gaze:direct",
+        "glasses:absent",
+        "hair:grey",
+        "hair:long",
+        "wig:long",
+        "wig:present"
+      ]
+    },
+    "./archive/timeline/performance/2018-08-04-sommerfest-04.webp": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "microphone:handheld",
+        "setting:outdoor",
+        "setting:stage",
+        "show:group",
+        "show:performance"
+      ]
+    },
+    "./archive/timeline/performance/2018-08-04-sommerfest-05.webp": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "clothing:dress",
+        "glasses:absent",
+        "hair:grey",
+        "hair:long",
+        "outfit:orange",
+        "pose:lying",
+        "wig:long",
+        "wig:present"
+      ]
+    },
+    "./archive/timeline/performance/2018-08-04-sommerfest-06.webp": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "clothing:dress",
+        "glasses:absent",
+        "hair:grey",
+        "hair:long",
+        "outfit:orange",
+        "wig:long",
+        "wig:present"
+      ]
     }
   }
 }
