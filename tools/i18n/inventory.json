@@ -19476,5 +19476,13 @@
       "content/timeline/galleries.json",
       "content/timeline/people.json"
     ]
+  },
+  {
+    "id": 2711,
+    "da": "Anders Toft Nielsens 30 års fødselsdagsfest i Bøssehuset.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
   }
 ]

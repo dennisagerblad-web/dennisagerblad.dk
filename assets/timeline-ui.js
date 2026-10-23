@@ -1,4 +1,4 @@
-export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=20261023-anders2018-people-1';
+export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=20261023-anders-full-title-1';
 
 const months = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
 let stopKeepingYearInView;

@@ -1343,7 +1343,7 @@ export const timelineEntries = [
     "display": "28.07.2018",
     "year": 2018,
     "category": "Optræden",
-    "title": "Anders’ 30-års fødselsdag i Bøssehuset",
+    "title": "Anders Toft Nielsens 30 års fødselsdagsfest i Bøssehuset.",
     "group": "live",
     "href": null,
     "details": "Florence og jeg lavede en performance til Anders’ 30-års fødselsdag i Bøssehuset. Dennis Agerblad Band lavede også en performance. Bandet bestod af Blomst, Knud Vesterskov, Florence og mig. På det sidste billede ses jeg med min elskede mand, Daniel Svanberg Bøtcher.",
@@ -1359,6 +1359,9 @@ export const timelineEntries = [
       "./archive/timeline/performance/2018-07-28-anders-30-04.webp",
       "./archive/timeline/performance/2018-07-28-anders-30-05.webp",
       "./archive/timeline/performance/2018-07-28-anders-30-06.webp"
+    ],
+    "shareAliases": [
+      "2018-07-28|Optræden|Anders’ 30-års fødselsdag i Bøssehuset"
     ]
   },
   {
