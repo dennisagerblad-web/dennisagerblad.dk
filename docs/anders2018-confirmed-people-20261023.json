@@ -1,0 +1,97 @@
+{
+  "reviewRevision": 473,
+  "entryKey": "2018-07-28|Optræden|Anders’ 30-års fødselsdag i Bøssehuset",
+  "photos": [
+    {
+      "id": "pending-anders2018-01",
+      "src": "./archive/timeline/performance/2018-07-28-anders-30-01.webp",
+      "people": [
+        "dennis",
+        "florence"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Florence"
+      ],
+      "alt": "To personer poserer backstage med sort, hvid og rød ansigtsmakeup og ballonpynt i brune og sorte parykker. Den ene bærer orange kjole, den anden en hvid kjole med sorte prikker og grønne bånd. På billedet ses Dennis Agerblad og Florence.",
+      "englishAlt": "Two people pose backstage with black, white and red face makeup and balloon decorations in brown and black wigs. One wears an orange dress; the other a white dress with black dots and green ribbons. Pictured: Dennis Agerblad and Florence."
+    },
+    {
+      "id": "pending-anders2018-02",
+      "src": "./archive/timeline/performance/2018-07-28-anders-30-02.webp",
+      "people": [
+        "dennis",
+        "florence",
+        "moma-van-vest"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Florence",
+        "Moma Van Vest (Knud Vesterskov)"
+      ],
+      "alt": "Fire personer optræder med mikrofoner på en scene med sølvfarvet, blå og grøn glimmerbaggrund. De bærer en orange kjole, to sorte kjoler og en hvid kjole med sorte prikker. På billedet ses Dennis Agerblad, Florence og Moma Van Vest (Knud Vesterskov).",
+      "englishAlt": "Four people perform with microphones on a stage with a silver, blue and green glitter backdrop. They wear an orange dress, two black dresses and a white dress with black dots. Pictured: Dennis Agerblad, Florence and Moma Van Vest (Knud Vesterskov)."
+    },
+    {
+      "id": "pending-anders2018-03",
+      "src": "./archive/timeline/performance/2018-07-28-anders-30-03.jpg",
+      "people": [
+        "dennis"
+      ],
+      "names": [
+        "Dennis Agerblad"
+      ],
+      "alt": "Nærbillede af en person i orange kjole med sort glitrende halskant, kædehalskæder, brun paryk med ballonpynt og sort, hvid og rød ansigtsmakeup. På billedet ses Dennis Agerblad.",
+      "englishAlt": "Close-up of a person in an orange dress with a black glittering neckline, chain necklaces, a brown wig with balloon decorations and black, white and red face makeup. Pictured: Dennis Agerblad."
+    },
+    {
+      "id": "pending-anders2018-04",
+      "src": "./archive/timeline/performance/2018-07-28-anders-30-04.webp",
+      "people": [
+        "florence"
+      ],
+      "names": [
+        "Florence"
+      ],
+      "alt": "En person backstage ser op mod kameraet med sort paryk og gul ballonpynt, kraftig sort, hvid og rød ansigtsmakeup og en stor blå halskæde. Kjolen er hvid med sorte prikker og grønne bånd. På billedet ses Florence.",
+      "englishAlt": "A person backstage looks up at the camera, wearing a black wig with yellow balloon decorations, bold black, white and red face makeup and a large blue necklace. The dress is white with black dots and green ribbons. Pictured: Florence."
+    },
+    {
+      "id": "pending-anders2018-05",
+      "src": "./archive/timeline/performance/2018-07-28-anders-30-05.webp",
+      "people": [
+        "dennis",
+        "florence",
+        "moma-van-vest"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Florence",
+        "Moma Van Vest (Knud Vesterskov)"
+      ],
+      "alt": "Tre personer poserer sammen backstage. I midten ses en person med lange brune krøller, hvid ansigtsmakeup og pink og gul øjenmakeup, omgivet af to personer med ballonpyntede parykker og sort, hvid og rød ansigtsmakeup. På billedet ses Dennis Agerblad, Florence og Moma Van Vest (Knud Vesterskov).",
+      "englishAlt": "Three people pose together backstage. In the middle is a person with long brown curls, white face makeup and pink and yellow eye makeup, between two people with balloon-decorated wigs and black, white and red face makeup. Pictured: Dennis Agerblad, Florence and Moma Van Vest (Knud Vesterskov)."
+    },
+    {
+      "id": "pending-anders2018-06",
+      "src": "./archive/timeline/performance/2018-07-28-anders-30-06.webp",
+      "people": [
+        "dennis",
+        "danny-boy"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Danny Boy (Daniel Svanberg Bøtcher)"
+      ],
+      "alt": "Dennis Agerblad og hans mand, Danny Boy (Daniel Svanberg Bøtcher), sammen i et nærbillede. Den ene bærer brun paryk med ballonpynt, sorte briller og sort, hvid og rød ansigtsmakeup; den anden har kort hår og et sort tørklæde med hvide prikker.",
+      "englishAlt": "Dennis Agerblad and his husband, Danny Boy (Daniel Svanberg Bøtcher), together in a close-up. One wears a brown wig with balloon decorations, black glasses and black, white and red face makeup; the other has short hair and a black scarf with white dots."
+    }
+  ],
+  "source": "Owner completed manual person review for all six photos. Only confirmed names from this batch imported; unidentified people retain descriptive alt text.",
+  "canonicalPersonMappings": {
+    "dennis": "dennis",
+    "florence": "florence",
+    "moma-van-vest": "moma-van-vest",
+    "danny-boy": "danny-boy"
+  }
+}

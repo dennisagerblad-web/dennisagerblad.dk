@@ -19436,5 +19436,45 @@
       "content/timeline/entries.js",
       "content/timeline/galleries.json"
     ]
+  },
+  {
+    "id": 2706,
+    "da": "To personer poserer backstage med sort, hvid og rød ansigtsmakeup og ballonpynt i brune og sorte parykker. Den ene bærer orange kjole, den anden en hvid kjole med sorte prikker og grønne bånd. På billedet ses Dennis Agerblad og Florence.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2707,
+    "da": "Fire personer optræder med mikrofoner på en scene med sølvfarvet, blå og grøn glimmerbaggrund. De bærer en orange kjole, to sorte kjoler og en hvid kjole med sorte prikker. På billedet ses Dennis Agerblad, Florence og Moma Van Vest (Knud Vesterskov).",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2708,
+    "da": "Nærbillede af en person i orange kjole med sort glitrende halskant, kædehalskæder, brun paryk med ballonpynt og sort, hvid og rød ansigtsmakeup. På billedet ses Dennis Agerblad.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2709,
+    "da": "En person backstage ser op mod kameraet med sort paryk og gul ballonpynt, kraftig sort, hvid og rød ansigtsmakeup og en stor blå halskæde. Kjolen er hvid med sorte prikker og grønne bånd. På billedet ses Florence.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
+  },
+  {
+    "id": 2710,
+    "da": "Tre personer poserer sammen backstage. I midten ses en person med lange brune krøller, hvid ansigtsmakeup og pink og gul øjenmakeup, omgivet af to personer med ballonpyntede parykker og sort, hvid og rød ansigtsmakeup. På billedet ses Dennis Agerblad, Florence og Moma Van Vest (Knud Vesterskov).",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/people.json"
+    ]
   }
 ]
