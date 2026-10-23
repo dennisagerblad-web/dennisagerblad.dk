@@ -1631,9 +1631,9 @@ export const timelineEntries = [
     "title": "Mental Health Care Performance, Bøssehuset",
     "group": "live",
     "href": null,
-    "details": "Hairwerk Hugh Mongous, Pauls Jensen, Lea og jeg lavede et show om at være spærret inde.",
+    "details": "Hairwerk Hugh Mongous, Poul Jensen, Lea og jeg lavede et show om at være spærret inde.",
     "popupParagraphs": [
-      "Hairwerk Hugh Mongous, Pauls Jensen, Lea og jeg lavede et show om at være spærret inde."
+      "Hairwerk Hugh Mongous, Poul Jensen, Lea og jeg lavede et show om at være spærret inde."
     ],
     "thumbnail": "./archive/timeline/performance/2016-10-22-mental-health-16.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/2016-10-22-mental-health-16.webp",
@@ -2595,9 +2595,9 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/index.html",
     "thumbnail": "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/02.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/faca6b987032e637.webp",
-    "details": "Dennis Agerblad Band holdt koncert med strygebræt og strygejern. Lars Von Trier kom op på scenen og ville synge duet med os men han var for fuld. Dennis Agerblad band var denne aften: Hairwerk Hugh Mongous, Moma Van Vest, Paul Jensen, Ann Charlot og Ninna Fedder Helsinghoff.",
+    "details": "Dennis Agerblad Band holdt koncert med strygebræt og strygejern. Lars Von Trier kom op på scenen og ville synge duet med os men han var for fuld. Dennis Agerblad band var denne aften: Hairwerk Hugh Mongous, Moma Van Vest, Poul Jensen, Ann Charlot og Ninna Fedder Helsinghoff.",
     "popupParagraphs": [
-      "Dennis Agerblad Band holdt koncert med strygebræt og strygejern. Lars Von Trier kom op på scenen og ville synge duet med os men han var for fuld. Dennis Agerblad band var denne aften: Hairwerk Hugh Mongous, Moma Van Vest, Paul Jensen, Ann Charlot og Ninna Fedder Helsinghoff."
+      "Dennis Agerblad Band holdt koncert med strygebræt og strygejern. Lars Von Trier kom op på scenen og ville synge duet med os men han var for fuld. Dennis Agerblad band var denne aften: Hairwerk Hugh Mongous, Moma Van Vest, Poul Jensen, Ann Charlot og Ninna Fedder Helsinghoff."
     ]
   },
   {
@@ -3154,9 +3154,9 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/performance/2011-05-27-01.webp",
     "thumbnailFit": "contain",
     "thumbnailPreview": "./assets/timeline-thumbs/539eb2eb97e6fe39.webp",
-    "details": "Optræden til Tranny Lounge i Warehouse 9. Her bland andet med Hairwerk Hugh Mongous, Liebling Siebling, Ole Cairo, Paul Jensen og Ramona Macho.",
+    "details": "Optræden til Tranny Lounge i Warehouse 9. Her bland andet med Hairwerk Hugh Mongous, Liebling Siebling, Ole Cairo, Poul Jensen og Ramona Macho.",
     "popupParagraphs": [
-      "Optræden til Tranny Lounge i Warehouse 9. Her bland andet med Hairwerk Hugh Mongous, Liebling Siebling, Ole Cairo, Paul Jensen og Ramona Macho."
+      "Optræden til Tranny Lounge i Warehouse 9. Her bland andet med Hairwerk Hugh Mongous, Liebling Siebling, Ole Cairo, Poul Jensen og Ramona Macho."
     ]
   },
   {

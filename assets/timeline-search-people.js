@@ -362,9 +362,9 @@ export const timelinePerformers = [
   },
   {
     "id": "paul-jensen",
-    "name": "Paul Jensen",
+    "name": "Poul Jensen",
     "aliases": [
-      "Paul Jensen"
+      "Poul Jensen"
     ]
   },
   {

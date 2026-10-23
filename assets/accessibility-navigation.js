@@ -1,5 +1,5 @@
 // Keyboard enhancements for the current site; historical archive pages are untouched.
-import { stopTimelineMotion } from './timeline-ui.js?v=20261023-mental-health-copy-1';
+import { stopTimelineMotion } from './timeline-ui.js?v=20261023-mental-health-copy-2';
 const root = document.getElementById('root');
 const svgNS = 'http://www.w3.org/2000/svg';
 function visible(node) {
