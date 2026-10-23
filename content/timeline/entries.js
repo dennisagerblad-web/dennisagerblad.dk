@@ -1289,12 +1289,16 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/performance/2018-10-14-04.jpg",
     "images": [
       "./archive/timeline/performance/2018-10-14-01.jpg",
+      "./archive/timeline/performance/2018-10-14-sjael-paa-daase-05.webp",
       "./archive/timeline/performance/2018-10-14-02.jpg",
       "./archive/timeline/performance/2018-10-14-03.jpg",
       "./archive/timeline/performance/2018-10-14-04.jpg"
     ],
     "thumbnailPreview": "./assets/timeline-thumbs/e6c145dd9ded8e32.webp",
-    "details": "Jeg sang duet med Florence."
+    "details": "Jeg sang duet med Florence. Andy Benz spillede kontrabas, Trine Trahs klaver, og der var også en musiker på trombone.",
+    "popupParagraphs": [
+      "Jeg sang duet med Florence. Andy Benz spillede kontrabas, Trine Trahs klaver, og der var også en musiker på trombone."
+    ]
   },
   {
     "date": "2018-09-01",
@@ -1322,7 +1326,6 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/2018-08-04-sommerfest-01.webp",
     "images": [
       "./archive/timeline/performance/2018-08-04-sommerfest-01.webp",
-      "./archive/timeline/performance/2018-08-04-sommerfest-12.webp",
       "./archive/timeline/performance/2018-08-04-sommerfest-02.webp",
       "./archive/timeline/performance/2018-08-04-sommerfest-03.webp",
       "./archive/timeline/performance/2018-08-04-sommerfest-04.webp",

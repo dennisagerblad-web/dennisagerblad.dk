@@ -19204,5 +19204,21 @@
       "content/timeline/galleries.json",
       "content/timeline/people.json"
     ]
+  },
+  {
+    "id": 2677,
+    "da": "Jeg sang duet med Florence. Andy Benz spillede kontrabas, Trine Trahs klaver, og der var også en musiker på trombone.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
+  },
+  {
+    "id": 2678,
+    "da": "To sangere ved mikrofonstativer og en kontrabassist på en overdækket scene i pink og lilla lys. Sangeren i midten bærer lilla kjole, paryk og en gennemsigtig kappe; sangeren til venstre er i sort og løfter armene. På billedet ses Dennis Agerblad, Florence og Andy Benz.",
+    "origins": [
+      "content/timeline/galleries.json",
+      "content/timeline/entries.js"
+    ]
   }
 ]

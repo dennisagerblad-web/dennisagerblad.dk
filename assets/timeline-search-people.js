@@ -868,6 +868,13 @@ export const timelinePerformers = [
     "aliases": [
       "Yasmín"
     ]
+  },
+  {
+    "id": "andy-benz-mvl2x9lg",
+    "name": "Andy Benz",
+    "aliases": [
+      "Andy Benz"
+    ]
   }
 ];
 
