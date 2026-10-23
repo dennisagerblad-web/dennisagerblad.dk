@@ -18709,5 +18709,12 @@
     "origins": [
       "content/timeline/galleries.json"
     ]
+  },
+  {
+    "id": 2615,
+    "da": "Kunstnersamtale",
+    "origins": [
+      "content/timeline/entries.js"
+    ]
   }
 ]

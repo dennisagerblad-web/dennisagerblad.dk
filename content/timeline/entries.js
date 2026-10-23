@@ -872,9 +872,9 @@ export const timelineEntries = [
     "date": "2021-09-04",
     "display": "04.09.2021",
     "year": 2021,
-    "category": "Liveoptræden",
+    "category": "Kunstnersamtale",
     "title": "Kunstnersamtale på Nordic Music Days, Tórshavn, Færøerne.",
-    "group": "live",
+    "group": "art",
     "href": null
   },
   {

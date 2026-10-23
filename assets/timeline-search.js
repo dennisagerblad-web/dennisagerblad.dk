@@ -1,7 +1,7 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261022-popup-texts-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261023-nordic-art-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261018-sproghoved-1';
 
-import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261022-popup-texts-1';
+import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261023-nordic-art-1';
 import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261022-popup-texts-1';
 
 import {findTimelinePeople} from './timeline-search-people.js?v=20261022-three-headings-1';
