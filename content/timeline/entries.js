@@ -1307,6 +1307,34 @@ export const timelineEntries = [
     "details": "Jeg var Frankensteins brud."
   },
   {
+    "date": "2018-08-04",
+    "display": "04.08.2018",
+    "year": 2018,
+    "category": "Optræden",
+    "title": "Duet med Florence til sommerfest i Bøssehuset",
+    "group": "live",
+    "href": null,
+    "details": "Florence og jeg sang en duet på udendørsscenen.",
+    "popupParagraphs": [
+      "Florence og jeg sang en duet på udendørsscenen."
+    ],
+    "thumbnail": "./archive/timeline/performance/2018-08-04-sommerfest-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2018-08-04-sommerfest-01.webp",
+    "images": [
+      "./archive/timeline/performance/2018-08-04-sommerfest-01.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-02.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-03.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-04.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-05.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-06.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-07.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-08.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-09.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-10.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-11.webp"
+    ]
+  },
+  {
     "date": "2018-07-01",
     "display": "01.07.2018",
     "year": 2018,

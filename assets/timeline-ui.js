@@ -1,4 +1,4 @@
-export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=20261023-nordic-photo-2';
+export { timelineThumbDimensions } from './timeline-thumb-dimensions.js?v=20261023-florence-sommerfest-1';
 
 const months = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
 let stopKeepingYearInView;
