@@ -18980,5 +18980,21 @@
       "content/timeline/entries.js",
       "content/timeline/galleries.json"
     ]
+  },
+  {
+    "id": 2649,
+    "da": "Florence og jeg sang en duet på udendørsscenen. På billederne ses: Blomst, Ramona Macho, Tommy Drag og Tove Hansen.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2650,
+    "da": "To sangere ved mikrofonstativer og en kontrabassist på en overdækket scene i pink og lilla lys. Sangeren i midten bærer lilla kjole, paryk og en gennemsigtig kappe; sangeren til venstre er i sort og løfter armene.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
   }
 ]

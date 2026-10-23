@@ -1314,14 +1314,15 @@ export const timelineEntries = [
     "title": "Duet med Florence til sommerfest i Bøssehuset",
     "group": "live",
     "href": null,
-    "details": "Florence og jeg sang en duet på udendørsscenen.",
+    "details": "Florence og jeg sang en duet på udendørsscenen. På billederne ses: Blomst, Ramona Macho, Tommy Drag og Tove Hansen.",
     "popupParagraphs": [
-      "Florence og jeg sang en duet på udendørsscenen."
+      "Florence og jeg sang en duet på udendørsscenen. På billederne ses: Blomst, Ramona Macho, Tommy Drag og Tove Hansen."
     ],
     "thumbnail": "./archive/timeline/performance/2018-08-04-sommerfest-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/2018-08-04-sommerfest-01.webp",
     "images": [
       "./archive/timeline/performance/2018-08-04-sommerfest-01.webp",
+      "./archive/timeline/performance/2018-08-04-sommerfest-12.webp",
       "./archive/timeline/performance/2018-08-04-sommerfest-02.webp",
       "./archive/timeline/performance/2018-08-04-sommerfest-03.webp",
       "./archive/timeline/performance/2018-08-04-sommerfest-04.webp",
