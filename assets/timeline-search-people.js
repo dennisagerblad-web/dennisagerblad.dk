@@ -839,6 +839,14 @@ export const timelinePerformers = [
       "Mai Young Øvlisen"
     ],
     "explicitOnly": true
+  },
+  {
+    "id": "ernst-dalsgard",
+    "name": "Ernst Dalsgarð",
+    "aliases": [
+      "Ernst Dalsgarð",
+      "Ernst Dalsgard"
+    ]
   }
 ];
 

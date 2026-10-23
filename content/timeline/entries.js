@@ -872,10 +872,19 @@ export const timelineEntries = [
     "date": "2021-09-04",
     "display": "04.09.2021",
     "year": 2021,
-    "category": "Kunstnersamtale",
-    "title": "Kunstnersamtale på Nordic Music Days, Tórshavn, Færøerne.",
+    "category": "Artisttalk",
+    "title": "Nordic Music Days, Tórshavn, Færøerne.",
     "group": "art",
-    "href": null
+    "href": null,
+    "details": "Inspireret af mine tekster til det færøske band maður:glotti komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg, hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed.",
+    "popupParagraphs": [
+      "Inspireret af mine tekster til det færøske band maður:glotti komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg, hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed."
+    ],
+    "thumbnail": "./archive/timeline/art/2021-09-04-nordic-music-days.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/489d5b0a135d480d.webp",
+    "images": [
+      "./archive/timeline/art/2021-09-04-nordic-music-days.webp"
+    ]
   },
   {
     "date": "2021-08-21",

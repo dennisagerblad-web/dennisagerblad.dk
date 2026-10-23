@@ -18716,5 +18716,53 @@
     "origins": [
       "content/timeline/entries.js"
     ]
+  },
+  {
+    "id": 2616,
+    "da": "Artisttalk",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2617,
+    "da": "Nordic Music Days, Tórshavn, Færøerne.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2618,
+    "da": "Inspireret af mine tekster til det færøske band maður:glotti komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg, hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2619,
+    "da": "Dennis Agerblad og Ernst Dalsgarð på et fælles portræt indendørs. Til venstre ses runde sorte briller, en sort skjorte med røde roser og en perlekæde; til højre gråt hår og en sort skjorte.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2620,
+    "da": "Inspireret af mine tekster til det færøske band",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2621,
+    "da": "komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg, hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
   }
 ]

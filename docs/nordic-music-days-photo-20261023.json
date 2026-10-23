@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-23",
+  "source": "/Users/robintm/Pictures/www/Dennis/_Kunst/2021/IMG_4947.jpg",
+  "originalDimensions": [
+    4032,
+    3024
+  ],
+  "originalBytes": 5187856,
+  "delivery": {
+    "src": "./archive/timeline/art/2021-09-04-nordic-music-days.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 623828
+  },
+  "thumbnail": {
+    "src": "./assets/timeline-thumbs/489d5b0a135d480d.webp",
+    "width": 384,
+    "height": 288,
+    "bytes": 15754
+  },
+  "entryKey": "2021-09-04|Artisttalk|Nordic Music Days, Tórshavn, Færøerne.",
+  "description": "Dennis Agerblad og Ernst Dalsgarð på et fælles portræt indendørs. Til venstre ses runde sorte briller, en sort skjorte med røde roser og en perlekæde; til højre gråt hår og en sort skjorte.",
+  "confirmedPeople": [
+    "Dennis Agerblad",
+    "Ernst Dalsgarð"
+  ],
+  "personEvidence": "Owner identifies himself and the Faroese tenor Ernst Dalsgarð in the supplied caption; no other identities inferred. Familiar manual review offered; supplied names used.",
+  "originalPreserved": true,
+  "copy": "Inspireret af mine tekster til det færøske band maður:glotti komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg, hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed.",
+  "markup": "Inspireret af mine tekster til det færøske band <em>maður:glotti</em> komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg, hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed."
+}
