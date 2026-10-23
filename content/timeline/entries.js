@@ -1288,11 +1288,11 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/performance/2018-10-14-04.jpg",
     "images": [
-      "./archive/timeline/performance/2018-10-14-01.jpg",
+      "./archive/timeline/performance/2018-10-14-04.jpg",
       "./archive/timeline/performance/2018-10-14-sjael-paa-daase-05.webp",
+      "./archive/timeline/performance/2018-10-14-01.jpg",
       "./archive/timeline/performance/2018-10-14-02.jpg",
-      "./archive/timeline/performance/2018-10-14-03.jpg",
-      "./archive/timeline/performance/2018-10-14-04.jpg"
+      "./archive/timeline/performance/2018-10-14-03.jpg"
     ],
     "thumbnailPreview": "./assets/timeline-thumbs/e6c145dd9ded8e32.webp",
     "details": "Jeg sang duet med Florence. Andy Benz spillede kontrabas, Trine Trahs klaver, og der var også en musiker på trombone.",
