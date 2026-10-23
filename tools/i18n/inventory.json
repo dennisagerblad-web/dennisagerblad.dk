@@ -19220,5 +19220,13 @@
       "content/timeline/galleries.json",
       "content/timeline/entries.js"
     ]
+  },
+  {
+    "id": 2679,
+    "da": "Jeg optrådte med Florence til Melodigrandprix i Bøssehuset. Vi tabte. På billederne ses: Biker, Yasmín og Pablo.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
   }
 ]

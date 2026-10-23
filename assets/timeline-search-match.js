@@ -1,4 +1,4 @@
-import {extractTimelinePeopleQuery,findTimelinePeople} from './timeline-search-people.js?v=20261023-sjael2-stage-correction-2';
+import {extractTimelinePeopleQuery,findTimelinePeople} from './timeline-search-people.js?v=20261023-image-recovery-1';
 // Shared text matching for event copy and the existing, non-visible image descriptions.
 export function normalizeTimelineSearch(value) {
   return String(value ?? '').toLocaleLowerCase('da-DK')

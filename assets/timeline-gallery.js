@@ -1,10 +1,11 @@
+import {loadTimelineImage} from './timeline-image-loading.js?v=20261023-image-recovery-1';
 /* Named timeline effects: Grow, Paint, Morph and Contrast.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20261023-sjael2-stage-correction-2';
+import { timelineDate } from './timeline-ui.js?v=20261023-image-recovery-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
-import { timelineEntries } from '../content/timeline/entries.js?v=20261023-sjael2-stage-correction-2';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261023-image-recovery-1';
 import { timelinePopupParagraphs, timelinePopupGroup, timelineGalleryDetails } from './timeline-popup-content.js?v=20261022-popup-texts-1';
 let dataPromise;
 let closeActive;
@@ -16,9 +17,9 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261023-sjael2-stage-correction-2',
-  '../content/timeline/image-metadata.json?v=20261023-sjael2-stage-correction-2',
-  '../content/timeline/popup-content.json?v=20261023-sjael2-stage-correction-2',
+  '../content/timeline/galleries.json?v=20261023-image-recovery-1',
+  '../content/timeline/image-metadata.json?v=20261023-image-recovery-1',
+  '../content/timeline/popup-content.json?v=20261023-image-recovery-1',
 ].map(async (path,index) => {
   for (let attempt=0;attempt<2;attempt++) {
     try {
@@ -382,11 +383,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   updateRotation();
   function imageAt(i) {
     const src = items[i];
-    const load=source => new Promise((resolve,reject) => {
-      const image = new Image(); image.decoding = 'async';
-      image.onload = () => resolve(image); image.onerror = () => reject(Error('image'));
-      image.src = source;
-    });
+    const load = loadTimelineImage;
     if (!cache.has(src)) cache.set(src,(composites[src]
       ? Promise.all(composites[src].map(part=>load(absolute(part)))).then(parts=>{
         // Display the existing, vertically sliced archive photo as one slide.
@@ -473,10 +470,10 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     const r = stage.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1,2);
     return [Math.max(1,Math.round(r.width*dpr)),Math.max(1,Math.round(r.height*dpr))];
   }
-  function paint(composition) {
+  function paint(composition, loadedSource) {
     poster.width = composition.width; poster.height = composition.height;
     poster.getContext('2d').drawImage(composition,0,0); drawing = composition;
-    zoomImage.src = compositeSources.get(items[index]) || absolute(items[index]);
+    zoomImage.src = loadedSource || compositeSources.get(items[index]) || absolute(items[index]);
     if (displayRatio) {
       const rect=stage.getBoundingClientRect();
       const [left,top,width,height]=containRect(displayRatio,1,rect.width,rect.height);
@@ -498,7 +495,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   }
   function finishScene(session, commit) {
     if (scene !== session || closed) return;
-    if (commit) { index = session.target; paint(session.after); announce(); }
+    if (commit) { index = session.target; paint(session.after, session.source); announce(); }
     effectCanvas.classList.remove('is-active');
     scene = null; busy = false; stage.setAttribute('aria-busy','false'); prefetch();
     scheduleAutoplay(commit && session.animated ? 2000 - sceneDuration : 2000);
@@ -530,6 +527,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       const [w,h] = size();
       const before=drawing || composePhoto(currentImage,w,h,shouldBackdrop(currentImage));
       session.after = composePhoto(image,w,h,shouldBackdrop(image));
+      session.source = image.currentSrc || image.src;
       if (before && before.width === w && before.height === h && !reduced.matches) {
         transition ||= createTransition(effectCanvas);
         if (transition) {
@@ -569,7 +567,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       }
       const composed = composePhoto(image,w,h,shouldBackdrop(image));
       status.hidden = true; poster.hidden = false;
-      paint(composed); announce();
+      paint(composed, image.currentSrc || image.src); announce();
       if (direction && before && before.width === w && before.height === h && !reduced.matches) {
         transition ||= createTransition(effectCanvas);
         if (transition) {

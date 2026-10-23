@@ -1,0 +1,20 @@
+{
+  "restoredURLs": [
+    {
+      "compatibilityURL": "archive/timeline/performance/2018-08-04-sommerfest-12.webp",
+      "currentURL": "archive/timeline/performance/2018-10-14-sjael-paa-daase-05.webp",
+      "sha256": "684784f919e8c8a6e4d2274ed76e022f5e6a4d6edb2d298cf6a7119b56da8713"
+    },
+    {
+      "compatibilityURL": "assets/timeline-thumbs/2018-08-04-sommerfest-12.webp",
+      "currentURL": "assets/timeline-thumbs/2018-10-14-sjael-paa-daase-05.webp",
+      "sha256": "8262a33ea74d00ea0f16fadc57684f2c9e424af282587c35a338cc3d6be5ef47"
+    }
+  ],
+  "reason": "Already open pages can still request a published image URL after the photo is moved to a different event. Keep these image URLs available.",
+  "retries": "Failed thumbnail and slideshow image requests retry after 300ms and 1200ms with a fresh image URL. Successful requests are not reloaded.",
+  "localFaultTest": "Four timeline thumbnails recovered after injected 503s (including two consecutive failures); slideshow advanced to photo 2 after an injected 503; popup image remained visible.",
+  "caption": "På billederne ses: Biker, Yasmín og Pablo.",
+  "captionEntryDate": "2018-05-04",
+  "investigation": "Current 2020 thumbnail references exist and returned HTTP 200 with byte-identical image files; the moved photo old URLs returned HTTP 404 before restoration. No evidence of a general server outage was established."
+}

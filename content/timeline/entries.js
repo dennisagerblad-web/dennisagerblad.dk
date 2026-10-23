@@ -1364,9 +1364,9 @@ export const timelineEntries = [
     "title": "Optræden med Florence til Melodigrandprix, Bøssehuset",
     "group": "live",
     "href": null,
-    "details": "Jeg optrådte med Florence til Melodigrandprix i Bøssehuset. Vi tabte.",
+    "details": "Jeg optrådte med Florence til Melodigrandprix i Bøssehuset. Vi tabte. På billederne ses: Biker, Yasmín og Pablo.",
     "popupParagraphs": [
-      "Jeg optrådte med Florence til Melodigrandprix i Bøssehuset. Vi tabte."
+      "Jeg optrådte med Florence til Melodigrandprix i Bøssehuset. Vi tabte. På billederne ses: Biker, Yasmín og Pablo."
     ],
     "thumbnail": "./archive/timeline/performance/2018-05-04-melodigrandprix-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/2018-05-04-melodigrandprix-01.webp",
