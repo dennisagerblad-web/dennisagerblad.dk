@@ -1,0 +1,89 @@
+{
+  "reviewRevision": 386,
+  "entryKey": "2018-05-04|Optræden|Optræden med Florence til Melodigrandprix, Bøssehuset",
+  "photos": [
+    {
+      "id": "pending-melodigrandprix2018-01",
+      "src": "./archive/timeline/performance/2018-05-04-melodigrandprix-01.webp",
+      "people": [
+        "florence",
+        "dennis"
+      ],
+      "names": [
+        "Florence",
+        "Dennis Agerblad"
+      ],
+      "alt": "To personer backstage med sort, hvid og rød ansigtsmakeup og balloner i parykkerne. Den ene bærer rød kappe og brun paryk, den anden lilla kjole, sort paryk og en stor blå halskæde. På billedet ses Florence og Dennis Agerblad.",
+      "englishAlt": "Two people backstage with black, white and red face makeup and balloons in their wigs. One wears a red cape and brown wig; the other a purple dress, black wig and a large blue necklace. Pictured: Florence and Dennis Agerblad."
+    },
+    {
+      "id": "pending-melodigrandprix2018-02",
+      "src": "./archive/timeline/performance/2018-05-04-melodigrandprix-02.webp",
+      "people": [
+        "florence",
+        "dennis"
+      ],
+      "names": [
+        "Florence",
+        "Dennis Agerblad"
+      ],
+      "alt": "To personer sidder sammen backstage. Rød kappe, hvide handsker, prikkede strømper og en brun taske ses ved siden af en lilla kjole, en gul taske og en stor blå halskæde. På billedet ses Florence og Dennis Agerblad.",
+      "englishAlt": "Two people sit together backstage. A red cape, white gloves, dotted tights and a brown bag are pictured next to a purple dress, a yellow bag and a large blue necklace. Pictured: Florence and Dennis Agerblad."
+    },
+    {
+      "id": "pending-melodigrandprix2018-03",
+      "src": "./archive/timeline/performance/2018-05-04-melodigrandprix-03.webp",
+      "people": [
+        "dennis",
+        "pablo-mvl0ijd3"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Pablo"
+      ],
+      "alt": "To personer foran et stativ med kostumer. Den ene har lang brun paryk, sort fjerhovedbånd og lilla kjole, den anden kort brun paryk med ballonpynt, rød kappe og sort, hvid og rød ansigtsmakeup. På billedet ses Dennis Agerblad og Pablo.",
+      "englishAlt": "Two people in front of a costume rack. One has a long brown wig, black feather headband and purple dress; the other a short brown wig with balloon decorations, a red cape and black, white and red face makeup. Pictured: Dennis Agerblad and Pablo."
+    },
+    {
+      "id": "pending-melodigrandprix2018-04",
+      "src": "./archive/timeline/performance/2018-05-04-melodigrandprix-04.webp",
+      "people": [
+        "dennis",
+        "biker",
+        "yasmin-mvl0ib5b"
+      ],
+      "names": [
+        "Dennis Agerblad",
+        "Biker",
+        "Yasmín"
+      ],
+      "alt": "Flere personer backstage blandt kostumer. Foran ses en person med brun paryk, ballonpynt, rød kappe og ansigtsmakeup samt en person med cowboyhat, briller og rød vest. En person med lilla fjerhovedbeklædning står bagved. På billedet ses Dennis Agerblad, Biker og Yasmín.",
+      "englishAlt": "Several people backstage among costumes. In front are a person with a brown wig, balloon decorations, red cape and face makeup, and a person with a cowboy hat, glasses and red waistcoat. A person with a purple feather headdress stands behind them. Pictured: Dennis Agerblad, Biker and Yasmín.",
+      "savedReviewPeople": [
+        "dennis",
+        "biker-mv8g9c8z",
+        "yasmin-mvl0ib5b"
+      ]
+    }
+  ],
+  "source": "Owner completed manual person review for all four images; only this batch imported.",
+  "newPeople": [
+    {
+      "id": "pablo-mvl0ijd3",
+      "name": "Pablo",
+      "aliases": [
+        "Pablo"
+      ]
+    },
+    {
+      "id": "yasmin-mvl0ib5b",
+      "name": "Yasmín",
+      "aliases": [
+        "Yasmín"
+      ]
+    }
+  ],
+  "canonicalPersonMappings": {
+    "biker-mv8g9c8z": "biker"
+  }
+}

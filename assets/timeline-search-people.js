@@ -854,6 +854,20 @@ export const timelinePerformers = [
     "aliases": [
       "Tommy Drag"
     ]
+  },
+  {
+    "id": "pablo-mvl0ijd3",
+    "name": "Pablo",
+    "aliases": [
+      "Pablo"
+    ]
+  },
+  {
+    "id": "yasmin-mvl0ib5b",
+    "name": "Yasmín",
+    "aliases": [
+      "Yasmín"
+    ]
   }
 ];
 
