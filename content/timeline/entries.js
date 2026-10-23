@@ -1572,6 +1572,7 @@ export const timelineEntries = [
     "display": "30.03.2017",
     "thumbnail": "./archive/timeline/performance/2017-03-30-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/a2f0757e20996a09.webp",
+    "thumbnailFit": "contain",
     "videoId": "ILgM-NpNBWo"
   },
   {

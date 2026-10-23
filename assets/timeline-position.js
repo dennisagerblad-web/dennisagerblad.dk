@@ -1,5 +1,5 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261023-anders-full-title-1';
-import { stopTimelineMotion } from './timeline-ui.js?v=20261023-anders-full-title-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261023-eivor-thumb-1';
+import { stopTimelineMotion } from './timeline-ui.js?v=20261023-eivor-thumb-1';
 
 const groups = ['live', 'music', 'art', 'word', 'press'];
 export const entryKey = entry => [entry.date, entry.category, entry.title].join('|');
