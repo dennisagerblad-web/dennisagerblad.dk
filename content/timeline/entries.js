@@ -1353,6 +1353,27 @@ export const timelineEntries = [
     "href": null
   },
   {
+    "date": "2018-05-04",
+    "display": "04.05.2018",
+    "year": 2018,
+    "category": "Optræden",
+    "title": "Optræden med Florence til Melodigrandprix, Bøssehuset",
+    "group": "live",
+    "href": null,
+    "details": "Jeg optrådte med Florence til Melodigrandprix i Bøssehuset. Vi tabte.",
+    "popupParagraphs": [
+      "Jeg optrådte med Florence til Melodigrandprix i Bøssehuset. Vi tabte."
+    ],
+    "thumbnail": "./archive/timeline/performance/2018-05-04-melodigrandprix-01.webp",
+    "thumbnailPreview": "./assets/timeline-thumbs/2018-05-04-melodigrandprix-01.webp",
+    "images": [
+      "./archive/timeline/performance/2018-05-04-melodigrandprix-01.webp",
+      "./archive/timeline/performance/2018-05-04-melodigrandprix-02.webp",
+      "./archive/timeline/performance/2018-05-04-melodigrandprix-03.webp",
+      "./archive/timeline/performance/2018-05-04-melodigrandprix-04.webp"
+    ]
+  },
+  {
     "date": "2018-02-14",
     "display": "14.02.2018",
     "year": 2018,

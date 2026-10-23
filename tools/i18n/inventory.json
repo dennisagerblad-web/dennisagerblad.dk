@@ -18932,5 +18932,53 @@
       "content/timeline/galleries.json",
       "content/timeline/people.json"
     ]
+  },
+  {
+    "id": 2643,
+    "da": "Optræden med Florence til Melodigrandprix, Bøssehuset",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2644,
+    "da": "Jeg optrådte med Florence til Melodigrandprix i Bøssehuset. Vi tabte.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2645,
+    "da": "To personer backstage med sort, hvid og rød ansigtsmakeup og balloner i parykkerne. Den ene bærer rød kappe og brun paryk, den anden lilla kjole, sort paryk og en stor blå halskæde.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2646,
+    "da": "To personer sidder sammen backstage. Rød kappe, hvide handsker, prikkede strømper og en brun taske ses ved siden af en lilla kjole, en gul taske og en stor blå halskæde.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2647,
+    "da": "To personer foran et stativ med kostumer. Den ene har lang brun paryk, sort fjerhovedbånd og lilla kjole, den anden kort brun paryk med ballonpynt, rød kappe og sort, hvid og rød ansigtsmakeup.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
+  },
+  {
+    "id": 2648,
+    "da": "Flere personer backstage blandt kostumer. Foran ses en person med brun paryk, ballonpynt, rød kappe og ansigtsmakeup samt en person med cowboyhat, briller og rød vest. En person med lilla fjerhovedbeklædning står bagved.",
+    "origins": [
+      "content/timeline/entries.js",
+      "content/timeline/galleries.json"
+    ]
   }
 ]
