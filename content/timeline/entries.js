@@ -1631,9 +1631,9 @@ export const timelineEntries = [
     "title": "Mental Health Care Performance, Bøssehuset",
     "group": "live",
     "href": null,
-    "details": "Tommy, Hairwerk Hugh Mongous og jeg lavede et show om at være spærret inde.",
+    "details": "Hairwerk Hugh Mongous, Pauls Jensen, Lea og jeg lavede et show om at være spærret inde.",
     "popupParagraphs": [
-      "Tommy, Hairwerk Hugh Mongous og jeg lavede et show om at være spærret inde."
+      "Hairwerk Hugh Mongous, Pauls Jensen, Lea og jeg lavede et show om at være spærret inde."
     ],
     "thumbnail": "./archive/timeline/performance/2016-10-22-mental-health-16.jpg",
     "thumbnailPreview": "./assets/timeline-thumbs/2016-10-22-mental-health-16.webp",
