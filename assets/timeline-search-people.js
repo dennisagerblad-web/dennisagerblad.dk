@@ -84,7 +84,8 @@ export const timelinePerformers = [
     "name": "Moma Van Vest (Knud Vesterskov)",
     "aliases": [
       "Moma Van Vest",
-      "Knud Vesterskov"
+      "Knud Vesterskov",
+      "Moma Van Vest (Knud Vesterskov)"
     ]
   },
   {
@@ -174,14 +175,16 @@ export const timelinePerformers = [
     "name": "Danny Boy (Daniel Svanberg Bøtcher)",
     "aliases": [
       "Danny Boy",
-      "Daniel Svanberg Bøtcher"
+      "Daniel Svanberg Bøtcher",
+      "Danny Boy (Daniel Svanberg Bøtcher)"
     ]
   },
   {
     "id": "dennis",
     "name": "Dennis Agerblad",
     "aliases": [
-      "Dennis Agerblad"
+      "Dennis Agerblad",
+      "Dennis"
     ]
   },
   {
@@ -874,6 +877,167 @@ export const timelinePerformers = [
     "name": "Andy Benz",
     "aliases": [
       "Andy Benz"
+    ]
+  },
+  {
+    "id": "paul-jensen-mv8hqocd",
+    "name": "Poul Jensen",
+    "aliases": [
+      "Poul Jensen"
+    ]
+  },
+  {
+    "id": "hestehoved-mvbdzmfe",
+    "name": "Hestehoved",
+    "aliases": [
+      "Hestehoved"
+    ]
+  },
+  {
+    "id": "peter-vadim-mvocs62q",
+    "name": "Peter Vadim",
+    "aliases": [
+      "Peter Vadim"
+    ]
+  },
+  {
+    "id": "tomas-lagermand-lundme-mvoct4jl",
+    "name": "Tomas Lagermand Lundme",
+    "aliases": [
+      "Tomas Lagermand Lundme"
+    ]
+  },
+  {
+    "id": "marianne-rasmussen-mvocvqno",
+    "name": "Marianne Rasmussen",
+    "aliases": [
+      "Marianne Rasmussen"
+    ]
+  },
+  {
+    "id": "o-t-b-mvod5klb",
+    "name": "O.T.B.",
+    "aliases": [
+      "O.T.B."
+    ]
+  },
+  {
+    "id": "carsten-sparwath-mvodbj7c",
+    "name": "Carsten Sparwath",
+    "aliases": [
+      "Carsten Sparwath"
+    ]
+  },
+  {
+    "id": "lullu-mvodc1nr",
+    "name": "Lullu",
+    "aliases": [
+      "Lullu"
+    ]
+  },
+  {
+    "id": "uffe-gartner-mvodfgvk",
+    "name": "Uffe Gärtner",
+    "aliases": [
+      "Uffe Gärtner"
+    ]
+  },
+  {
+    "id": "lyser-dt-undert-j-mvodn6mg",
+    "name": "Lyserødt Undertøj",
+    "aliases": [
+      "Lyserødt Undertøj"
+    ]
+  },
+  {
+    "id": "morten-mvodo28n",
+    "name": "Morten",
+    "aliases": [
+      "Morten"
+    ]
+  },
+  {
+    "id": "thomas-kinch-mvodt4de",
+    "name": "Thomas Kinch",
+    "aliases": [
+      "Thomas Kinch"
+    ]
+  },
+  {
+    "id": "sahar-mvodtilu",
+    "name": "Sahar",
+    "aliases": [
+      "Sahar"
+    ]
+  },
+  {
+    "id": "pandora-box-mvodtvmq",
+    "name": "Pandora Box",
+    "aliases": [
+      "Pandora Box"
+    ]
+  },
+  {
+    "id": "fisker-j-rgen-mvodu4na",
+    "name": "Fisker Jørgen",
+    "aliases": [
+      "Fisker Jørgen"
+    ]
+  },
+  {
+    "id": "bongo-mvodvw8x",
+    "name": "Bongo",
+    "aliases": [
+      "Bongo"
+    ]
+  },
+  {
+    "id": "cho-hae-mvot3bxn",
+    "name": "Cho Hae",
+    "aliases": [
+      "Cho Hae"
+    ]
+  },
+  {
+    "id": "finn-mvot8evn",
+    "name": "Finn",
+    "aliases": [
+      "Finn"
+    ]
+  },
+  {
+    "id": "chantal-al-arab-mvotaa8v",
+    "name": "Chantal Al Arab",
+    "aliases": [
+      "Chantal Al Arab"
+    ]
+  },
+  {
+    "id": "atlanta-mvotbqmt",
+    "name": "Atlanta",
+    "aliases": [
+      "Atlanta"
+    ]
+  },
+  {
+    "id": "bo-mvothke6",
+    "name": "Bo",
+    "aliases": [
+      "Bo"
+    ]
+  },
+  {
+    "id": "jaxie-mvotnx8z",
+    "name": "Jaxie",
+    "aliases": [
+      "Jaxie"
+    ]
+  },
+  {
+    "id": "michael-netschajeff-mvotxyd0",
+    "name": "Michael Netschajeff",
+    "aliases": [
+      "Michael Netschajeff"
     ]
   }
 ];

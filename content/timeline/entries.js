@@ -37,6 +37,38 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/fe0cfbb46834c13b.webp"
   },
   {
+    "date": "2026-08-02",
+    "display": "02.08.2026",
+    "year": 2026,
+    "category": "Udstilling",
+    "title": "Olajudstillingen, Tórshavn, Færøerne.",
+    "group": "art",
+    "href": null,
+    "details": "Jeg udstillede disse 3 ting. Alt blev solgt. Bollafad til 1.500 kr. - Pisskop ikke til salg. - Transpot til 1.200 kr. - Tallerken til 700 kr.",
+    "popupParagraphs": [
+      "Jeg udstillede disse 3 ting. Alt blev solgt. Bollafad til 1.500 kr. - Pisskop ikke til salg. - Transpot til 1.200 kr. - Tallerken til 700 kr."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1710221007775254.jpg",
+      "./archive/facebook-20261025/1710221164441905.jpg",
+      "./archive/facebook-20261025/1710221134441908.jpg",
+      "./archive/facebook-20261025/1710221071108581.jpg",
+      "./archive/facebook-20261025/1710220991108589.jpg",
+      "./archive/facebook-20261025/1710220967775258.jpg",
+      "./archive/facebook-20261025/1710220957775259.jpg",
+      "./archive/facebook-20261025/1710220917775263.jpg",
+      "./archive/facebook-20261025/1710220884441933.jpg",
+      "./archive/facebook-20261025/1710220834441938.jpg",
+      "./archive/facebook-20261025/1710220821108606.jpg",
+      "./archive/facebook-20261025/1710220764441945.jpg",
+      "./archive/facebook-20261025/1710220737775281.jpg",
+      "./archive/facebook-20261025/1710220714441950.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1710221007775254.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1710221007775254.webp",
+    "thumbnailFit": "contain"
+  },
+  {
     "date": "2026-07-18",
     "display": "18.07.2026",
     "year": 2026,
@@ -432,13 +464,19 @@ export const timelineEntries = [
     "title": "Juleshow, Bøssehuset",
     "group": "live",
     "href": null,
-    "thumbnail": "./archive/timeline/performance/2023-12-01-thumb.webp",
+    "thumbnail": "./archive/facebook-20261025/866546335476063.jpg",
     "images": [
+      "./archive/facebook-20261025/866546335476063.jpg",
       "./archive/timeline/performance/2023-12-01-01.webp",
       "./archive/timeline/performance/2023-12-01-02.webp",
       "./archive/timeline/performance/2023-12-01-03.webp"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/db035105934c068c.webp"
+    "thumbnailPreview": "./assets/facebook-thumbs/866546335476063.webp",
+    "details": "Lars Gade og jeg var to Harlekins der sang hver sin slemme julesang men med samme melodi.",
+    "popupParagraphs": [
+      "Lars Gade og jeg var to Harlekins der sang hver sin slemme julesang men med samme melodi."
+    ],
+    "thumbnailFit": "contain"
   },
   {
     "date": "2023-10-28",
@@ -471,12 +509,21 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/performance/2023-10-20-thumb.webp",
     "images": [
-      "archive/timeline/performance/2023-10-20-01.webp",
-      "archive/timeline/performance/2023-10-20-02.webp",
-      "archive/timeline/performance/2023-10-20-03.webp",
-      "archive/timeline/performance/2023-10-20-04.webp"
+      "./archive/timeline/performance/2023-10-20-01.webp",
+      "./archive/timeline/performance/2023-10-20-02.webp",
+      "./archive/timeline/performance/2023-10-20-03.webp",
+      "./archive/timeline/performance/2023-10-20-04.webp",
+      "./archive/facebook-20261025/841425721321458.jpg",
+      "./archive/facebook-20261025/841425717988125.jpg",
+      "./archive/facebook-20261025/841425714654792.jpg",
+      "./archive/facebook-20261025/841425707988126.jpg",
+      "./archive/facebook-20261025/841425701321460.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/c669055c53f5b73a.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/c669055c53f5b73a.webp",
+    "details": "Endnu en skøøøn aften til Sjæl På Dåse i Operaen. Selvom der var storm udenfor havde vi fuldt hus. Helt fantastisk. Hår og kostume af Tommy Berg Holbech.",
+    "popupParagraphs": [
+      "Endnu en skøøøn aften til Sjæl På Dåse i Operaen. Selvom der var storm udenfor havde vi fuldt hus. Helt fantastisk. Hår og kostume af Tommy Berg Holbech."
+    ]
   },
   {
     "date": "2023-10-06",
@@ -588,13 +635,18 @@ export const timelineEntries = [
     "title": "Det Lilla Rum, Nørrebro",
     "group": "word",
     "href": null,
-    "thumbnail": "./archive/timeline/literature/2023-06-05-thumb.webp",
+    "thumbnail": "./archive/facebook-20261025/740658204731544.jpg",
     "images": [
+      "./archive/facebook-20261025/740658204731544.jpg",
       "./archive/timeline/literature/2023-06-05-01.webp",
       "./archive/timeline/literature/2023-06-05-02.webp"
     ],
-    "details": "Jeg læste op af mine skriverier.",
-    "thumbnailPreview": "./assets/timeline-thumbs/ed0dcfac569a7fa5.webp"
+    "details": "Jeg læste op af mine skriverier til Shadiangelina Bazeghi bogreception.",
+    "thumbnailPreview": "./assets/facebook-thumbs/740658204731544.webp",
+    "popupParagraphs": [
+      "Jeg læste op af mine skriverier til Shadiangelina Bazeghi bogreception."
+    ],
+    "thumbnailFit": "contain"
   },
   {
     "date": "2023-05-27",
@@ -611,12 +663,24 @@ export const timelineEntries = [
       "./archive/timeline/performance/2023-05-27-03.jpg",
       "./archive/timeline/performance/2023-05-27-04.jpg",
       "./archive/timeline/performance/2023-05-27-05.jpg",
-      "./archive/timeline/performance/2023-05-27-06.jpg"
+      "./archive/timeline/performance/2023-05-27-06.jpg",
+      "./archive/facebook-20261025/738839541580077.jpg",
+      "./archive/facebook-20261025/738839461580085.jpg",
+      "./archive/facebook-20261025/738839294913435.jpg",
+      "./archive/facebook-20261025/738839198246778.jpg",
+      "./archive/facebook-20261025/738839068246791.jpg",
+      "./archive/facebook-20261025/738839044913460.webp",
+      "./archive/facebook-20261025/738838981580133.jpg",
+      "./archive/facebook-20261025/738838988246799.jpg",
+      "./archive/facebook-20261025/738838928246805.jpg",
+      "./archive/facebook-20261025/738838924913472.jpg",
+      "./archive/facebook-20261025/738838868246811.jpg",
+      "./archive/facebook-20261025/738838828246815.jpg"
     ],
-    "details": "Jeg sang Tennis Sladderblad. To af mine søstre Unni og Siv var inde for at høre mig. Efter showet hang jeg med Krisser & Ole, dem der var med til at starte Bøssehuset op for ca. 50 år siden. Og her ses jeg også med Gitte Plass, Maria Maud og Sara Mc Evan.",
+    "details": "Jeg sang Tennis Sladderblad. To af mine søstre Unni og Siv var inde for at høre mig. Efter showet hang jeg med Krisser & Ole, dem der var med til at starte Bøssehuset op for ca. 50 år siden. Og her ses jeg også med Gitte Plass, Maria Maud, Sara Mc Evan, Lotte, Tutu Wanna, Mono & Polly, Fru Direktør Elsa Kragh Madsen og Morten.",
     "thumbnailPreview": "./assets/timeline-thumbs/a03e78d061767416.webp",
     "popupParagraphs": [
-      "Jeg sang Tennis Sladderblad. To af mine søstre Unni og Siv var inde for at høre mig. Efter showet hang jeg med Krisser & Ole, dem der var med til at starte Bøssehuset op for ca. 50 år siden. Og her ses jeg også med Gitte Plass, Maria Maud og Sara Mc Evan."
+      "Jeg sang Tennis Sladderblad. To af mine søstre Unni og Siv var inde for at høre mig. Efter showet hang jeg med Krisser & Ole, dem der var med til at starte Bøssehuset op for ca. 50 år siden. Og her ses jeg også med Gitte Plass, Maria Maud, Sara Mc Evan, Lotte, Tutu Wanna, Mono & Polly, Fru Direktør Elsa Kragh Madsen og Morten."
     ]
   },
   {
@@ -681,15 +745,28 @@ export const timelineEntries = [
     "display": "21.10.2022",
     "year": 2022,
     "category": "Optræden",
-    "title": "Sølvklædt til Sjæl på Dåse 7",
+    "title": "Straight World Order på Sjæl På Dåse 7, Operaen, Christiania",
     "group": "live",
     "href": null,
-    "thumbnail": "./archive/timeline/performance/2022-10-21-01.jpg",
+    "thumbnail": "./archive/facebook-20261025/550250330439000.jpg",
     "images": [
+      "./archive/facebook-20261025/550250330439000.jpg",
+      "./archive/facebook-20261025/550250347105665.jpg",
+      "./archive/facebook-20261025/550250343772332.jpg",
+      "./archive/facebook-20261025/550250340438999.jpg",
+      "./archive/facebook-20261025/550250337105666.jpg",
+      "./archive/facebook-20261025/550250333772333.jpg",
       "./archive/timeline/performance/2022-10-21-01.jpg"
     ],
-    "details": "Jeg sang “Straight World Order”, som jeg har lavet med technoproduceren Giuseppe De Bellis. Alle var klædt i guld eller sølv.",
-    "thumbnailPreview": "./assets/timeline-thumbs/db69f899495acc49.webp"
+    "details": "Her optræder jeg med min KUSSEsine Florence.",
+    "thumbnailPreview": "./assets/facebook-thumbs/550250330439000.webp",
+    "popupParagraphs": [
+      "Her optræder jeg med min KUSSEsine Florence."
+    ],
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2022-10-21|Optræden|Sølvklædt til Sjæl på Dåse 7"
+    ]
   },
   {
     "date": "2022-10-12",
@@ -753,12 +830,18 @@ export const timelineEntries = [
     "display": "07.07.2022",
     "year": 2022,
     "category": "Litteratur",
-    "title": "Afslutning på Nyt Forum For Skrift",
+    "title": "Afslutning på Nyt Forum For Skrift, Litteratur Haus.",
     "group": "media",
     "href": null,
     "thumbnail": "./archive/timeline/nyt-forum-for-skrift-2022.jpeg",
-    "details": "Jeg læste op til afslutningen af skriveskolen.",
-    "thumbnailPreview": "./assets/timeline-thumbs/29138dbf58e5f0d8.webp"
+    "details": "Tak til Duncan og alle lærerne på Nyt Forum for Skrift for 4 lærerige måneder. Her læser jeg op til afslutningen.",
+    "thumbnailPreview": "./assets/timeline-thumbs/29138dbf58e5f0d8.webp",
+    "popupParagraphs": [
+      "Tak til Duncan og alle lærerne på Nyt Forum for Skrift for 4 lærerige måneder. Her læser jeg op til afslutningen."
+    ],
+    "shareAliases": [
+      "2022-07-07|Litteratur|Afslutning på Nyt Forum For Skrift"
+    ]
   },
   {
     "date": "2022-06-18",
@@ -776,23 +859,37 @@ export const timelineEntries = [
     "category": "Litteratur",
     "title": "Læse op af BØSSEDANMARK til Lille Bog Dag",
     "group": "media",
-    "href": null
+    "href": null,
+    "images": [
+      "./archive/facebook-20261025/431907902273244.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/431907902273244.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/431907902273244.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2022-05-06",
     "display": "06.05.2022",
     "year": 2022,
     "category": "Liveoptræden",
-    "title": "Kønspolitisk Melodigrandprix, Bøssehuset",
+    "title": "Hollywood or Bollywood til Kønspolitisk Melodigrandprix, Bøssehuset",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/hollywood-or-bollywood-2022.jpeg",
-    "details": "Jeg optræder med Florance med sangen Hollywood or Bollywood.",
+    "details": "Florence og jeg optræder med med sangen Hollywood or Bollywood. På billederne ses også fru direktør Elsa Kragh Madsen og mrs. Miller.",
     "images": [
       "./archive/timeline/hollywood-or-bollywood-2022.jpeg",
-      "./archive/timeline/performance/2022-05-06-02.jpg"
+      "./archive/timeline/performance/2022-05-06-02.jpg",
+      "./archive/facebook-20261025/434678925329475.jpg",
+      "./archive/facebook-20261025/434678918662809.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/576f96fef1b1df71.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/576f96fef1b1df71.webp",
+    "popupParagraphs": [
+      "Florence og jeg optræder med med sangen Hollywood or Bollywood. På billederne ses også fru direktør Elsa Kragh Madsen og mrs. Miller."
+    ],
+    "shareAliases": [
+      "2022-05-06|Liveoptræden|Kønspolitisk Melodigrandprix, Bøssehuset"
+    ]
   },
   {
     "date": "2022-04-23",
@@ -821,15 +918,41 @@ export const timelineEntries = [
     "display": "03.02.2022",
     "year": 2022,
     "category": "Radio 24/7",
-    "title": "Interview om BØSSEDANMARK i radioprogrammet Min litterære pornosamling",
+    "title": "TEAM BØSSEDANMARK på besøg hos Min Litterære Pornosamling",
     "group": "media",
     "href": null,
     "thumbnail": "./archive/litteratur/boessedanmark.jpg",
-    "details": "Interviewet kan høres på Spotify.",
+    "details": "Mads Ananda Lodahl, Nikolaj Tange Lange, Thomas Lagermann Lunde og Dennis Agerblad i radioen.\nhttps://24syv.dk/episode/bossedanmark",
     "creditPrefix": "Lyt til interviewet:",
     "creditName": "Spotify",
     "creditHref": "https://open.spotify.com/episode/65FuBRzMl7j3Y6twpsc6nJ?si=428d41c70f2a4b91&nd=1",
-    "thumbnailPreview": "./assets/timeline-thumbs/e7d8e945c9f5d81a.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e7d8e945c9f5d81a.webp",
+    "popupParagraphs": [
+      "Mads Ananda Lodahl, Nikolaj Tange Lange, Thomas Lagermann Lunde og Dennis Agerblad i radioen.",
+      "https://24syv.dk/episode/bossedanmark"
+    ],
+    "images": [
+      "./archive/facebook-20261025/356279006502801.jpg",
+      "./archive/facebook-20261025/356279003169468.jpg"
+    ],
+    "shareAliases": [
+      "2022-02-03|Radio 24/7|Interview om BØSSEDANMARK i radioprogrammet Min litterære pornosamling"
+    ]
+  },
+  {
+    "date": "2022-01-13",
+    "display": "13.01.2022",
+    "year": 2022,
+    "category": "Lydbog",
+    "title": "BØSSEDANMARK – Nu som lydbog",
+    "group": "word",
+    "href": null,
+    "images": [
+      "./archive/facebook-20261025/339419791522056.webp"
+    ],
+    "thumbnail": "./archive/facebook-20261025/339419791522056.webp",
+    "thumbnailPreview": "./assets/facebook-thumbs/339419791522056.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2021-12-16",
@@ -939,7 +1062,19 @@ export const timelineEntries = [
     "category": "Litteratur",
     "title": "Prerelease af BØSSEDANMARK, Arnold Busck, Købmagergade",
     "group": "music",
-    "href": null
+    "href": null,
+    "details": "I forbindelse med Copenhagen Pride holder vi her Prerelease i Arnold Busck, hvor vi alle fire læste en novelle op hver. Nikolaj Tange Lange, Mads Ananda Lodahl, Tomas Lagermand Lundme og Dennis Agerblad.",
+    "popupParagraphs": [
+      "I forbindelse med Copenhagen Pride holder vi her Prerelease i Arnold Busck, hvor vi alle fire læste en novelle op hver. Nikolaj Tange Lange, Mads Ananda Lodahl, Tomas Lagermand Lundme og Dennis Agerblad."
+    ],
+    "images": [
+      "./archive/facebook-20261025/236348588495844.jpg",
+      "./archive/facebook-20261025/236348595162510.jpg",
+      "./archive/facebook-20261025/236348591829177.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/236348588495844.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/236348588495844.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2021-08-14",
@@ -954,6 +1089,49 @@ export const timelineEntries = [
       "./archive/timeline/performance/2021-08-14-01.jpg"
     ],
     "thumbnailPreview": "./assets/timeline-thumbs/e52b00f3466e510f.webp"
+  },
+  {
+    "date": "2021-05-16",
+    "display": "16.05.2021",
+    "year": 2021,
+    "category": "Udstilling",
+    "title": "Udstillingen “Samtaler om tåge” er åbnet igen.",
+    "group": "art",
+    "href": null,
+    "details": "Udstillingen “Samtaler om tåge” er åbnet igen. Jeg medvirker med nogle store selvportrætter i trashdrag. Jeg udstiller også det tøj og hår jeg er i på malerierne. De er her pakket ind i bobleplast, på vej ud til udstillingen på Nordatlantens Brygge i KBH. Udstillingen har åbent indtil 25. Juli. Udstillingen er kurateret af Kinna Poulsen.",
+    "popupParagraphs": [
+      "Udstillingen “Samtaler om tåge” er åbnet igen. Jeg medvirker med nogle store selvportrætter i trashdrag. Jeg udstiller også det tøj og hår jeg er i på malerierne. De er her pakket ind i bobleplast, på vej ud til udstillingen på Nordatlantens Brygge i KBH. Udstillingen har åbent indtil 25. Juli. Udstillingen er kurateret af Kinna Poulsen."
+    ],
+    "images": [
+      "./archive/facebook-20261025/164181239045913.jpg",
+      "./archive/facebook-20261025/164181205712583.jpg",
+      "./archive/facebook-20261025/164181165712587.jpg",
+      "./archive/facebook-20261025/164181142379256.jpg",
+      "./archive/facebook-20261025/164181085712595.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/164181239045913.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/164181239045913.webp",
+    "thumbnailFit": "contain"
+  },
+  {
+    "date": "2021-05-07",
+    "display": "07.05.2021",
+    "year": 2021,
+    "category": "Radiointerview",
+    "title": "Interview om dunst i P1",
+    "group": "press",
+    "href": null,
+    "details": "Interview om dunst",
+    "popupParagraphs": [
+      "Interview om dunst"
+    ],
+    "images": [
+      "./archive/facebook-20261025/157379726392731.jpg",
+      "./archive/facebook-20261025/157379759726061.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/157379726392731.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/157379726392731.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2021-04-25",
@@ -982,6 +1160,26 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/video-thumbs/2021-03-01-tu-og-eg.jpg",
     "videoId": "xjdlldhlFVk",
     "thumbnailPreview": "./assets/timeline-thumbs/eae9f9dbab2e4e48.webp"
+  },
+  {
+    "date": "2021-02-22",
+    "display": "22.02.2021",
+    "year": 2021,
+    "category": "Bogomslag",
+    "title": "Bogomslag for Jóanes Nielsen. Glansbilledsamlerne.",
+    "group": "art",
+    "href": null,
+    "details": "Jeg har lavet coveret til denne sjove og spændende bog skrevet af Jóanes Nielsen. Glansbilledsamlerne. Læs den, den er fantastisk. om nogle personer som går på den samme nonneskole i Tórshavn og så følger man dem til de dør.",
+    "popupParagraphs": [
+      "Jeg har lavet coveret til denne sjove og spændende bog skrevet af Jóanes Nielsen. Glansbilledsamlerne. Læs den, den er fantastisk. om nogle personer som går på den samme nonneskole i Tórshavn og så følger man dem til de dør."
+    ],
+    "images": [
+      "./archive/facebook-20261025/5058089687597199.jpg",
+      "./archive/facebook-20261025/5058089810930520.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/5058089687597199.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/5058089687597199.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2020-12-18",
@@ -1032,19 +1230,44 @@ export const timelineEntries = [
     "title": "Anmeldelse af udstillingen Samtaler Om Tåge",
     "group": "media",
     "href": null,
-    "details": "Jeg medvirker med 3 Selvportrætter i drag."
+    "details": "DER SKER NOGET MOD NORD. Udstillingen, jeg medvirker på, får 5 ud af 6 stjerner i Kristeligt Dagblad.",
+    "popupParagraphs": [
+      "DER SKER NOGET MOD NORD. Udstillingen, jeg medvirker på, får 5 ud af 6 stjerner i Kristeligt Dagblad."
+    ],
+    "images": [
+      "./archive/facebook-20261025/4664852666920905.jpg",
+      "./archive/facebook-20261025/4664852670254238.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/4664852666920905.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/4664852666920905.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2020-10-31",
     "display": "31.10.2020",
     "year": 2020,
     "category": "Udstilling",
-    "title": "3 Selvportrætter i drag, Samtaler Om Tåge, Færøske kunstudstilling, Nordatlantens Brygge",
+    "title": "Samtaler Om Tåge, kunstudstilling, Nordatlantens Brygge",
     "group": "art",
     "href": "./archive/legacy/200_calendar/2021/udstilling/samtaler_om_taage.html",
     "thumbnail": "./archive/timeline/generated-thumbs/971e08fd42c77b.jpg",
-    "shortTitle": "Samtaler om tåge, Nordatlantens Brygge",
-    "thumbnailPreview": "./assets/timeline-thumbs/5cae027b04eeb3b8.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/5cae027b04eeb3b8.webp",
+    "details": "Jeg udstillede tre store selvportrætter i trashdrag. Under hvert maleri hang den kjole, paryk, sko og håndtaske, jeg har på på billedet. Udstillingen var kurateret af Kinna Poulsen.",
+    "popupParagraphs": [
+      "Jeg udstillede tre store selvportrætter i trashdrag. Under hvert maleri hang den kjole, paryk, sko og håndtaske, jeg har på på billedet. Udstillingen var kurateret af Kinna Poulsen."
+    ],
+    "images": [
+      "./archive/legacy/200_calendar/2021/udstilling/IMG_1957.jpg",
+      "./archive/legacy/200_calendar/2021/udstilling/IMG_1955.jpg",
+      "./archive/legacy/200_calendar/2021/udstilling/IMG_1956.jpg",
+      "./archive/legacy/200_calendar/2021/udstilling/IMG_1981.jpg",
+      "./archive/facebook-20261025/4566796950059811.jpg",
+      "./archive/facebook-20261025/4566797026726470.jpg",
+      "./archive/facebook-20261025/4566796846726488.jpg"
+    ],
+    "shareAliases": [
+      "2020-10-31|Udstilling|3 Selvportrætter i drag, Samtaler Om Tåge, Færøske kunstudstilling, Nordatlantens Brygge"
+    ]
   },
   {
     "date": "2020-10-18",
@@ -1179,12 +1402,19 @@ export const timelineEntries = [
     "title": "Indisk cabaret i Operaen, Christiania",
     "group": "live",
     "href": null,
-    "thumbnail": "./archive/timeline/performance/2019-12-05-01.jpg",
+    "thumbnail": "./archive/facebook-20261025/3258361147570071.jpg",
     "images": [
+      "./archive/facebook-20261025/3258361147570071.jpg",
+      "./archive/facebook-20261025/3258361360903383.jpg",
       "./archive/timeline/performance/2019-12-05-01.jpg",
       "./archive/timeline/performance/2019-12-05-02.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/c161bb2f48590370.webp"
+    "thumbnailPreview": "./assets/facebook-thumbs/3258361147570071.webp",
+    "details": "Indisk Cabaret med Florence og Dennis Agerblad @ Operaen Christiania",
+    "popupParagraphs": [
+      "Indisk Cabaret med Florence og Dennis Agerblad @ Operaen Christiania"
+    ],
+    "thumbnailFit": "contain"
   },
   {
     "date": "2019-10-19",
@@ -1230,7 +1460,7 @@ export const timelineEntries = [
     "display": "17.05.2019",
     "year": 2019,
     "category": "Liveoptræden",
-    "title": "Sang Pik Nok til Kønspolitisk Melodigrandprix, Bøssehuset",
+    "title": "Pik Nok til Kønspolitisk Melodigrandprix, Bøssehuset",
     "group": "live",
     "href": null,
     "thumbnail": "./archive/timeline/performance/2019-05-17-01.jpg",
@@ -1238,9 +1468,18 @@ export const timelineEntries = [
       "./archive/timeline/performance/2019-05-17-01.jpg",
       "./archive/timeline/performance/2019-05-17-02.jpg",
       "./archive/timeline/performance/2019-05-17-03.jpg",
-      "./archive/timeline/performance/2019-05-17-04.jpg"
+      "./archive/timeline/performance/2019-05-17-04.jpg",
+      "./archive/facebook-20261025/2876354619104061.jpg",
+      "./archive/facebook-20261025/2706437336095791.jpg"
     ],
-    "thumbnailPreview": "./assets/timeline-thumbs/ffd14ee7b0c105b9.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/ffd14ee7b0c105b9.webp",
+    "details": "Jeg sang \"Pik Nok\" til stor glæde for alle.",
+    "popupParagraphs": [
+      "Jeg sang \"Pik Nok\" til stor glæde for alle."
+    ],
+    "shareAliases": [
+      "2019-05-17|Liveoptræden|Sang Pik Nok til Kønspolitisk Melodigrandprix, Bøssehuset"
+    ]
   },
   {
     "date": "2019-02-22",
@@ -1264,7 +1503,20 @@ export const timelineEntries = [
     "title": "Queer Litteraturaften, Ungdomshuset",
     "group": "art",
     "href": null,
-    "details": "Mads Ananda Lodahl og jeg læste op."
+    "details": "Mads Ananda Lodahl og jeg læste op i Ungdomshuset. Vi snakkede også lidt om bøsseri, transeri og skriveri. Og om Dunst Festernen vi holdt i Ungdomshuset da det lå på Jagtvej 69. Tak til Bogcaféen og det store fremmøde nede i Rockmaskinen hvor det blev afholdt.",
+    "popupParagraphs": [
+      "Mads Ananda Lodahl og jeg læste op i Ungdomshuset. Vi snakkede også lidt om bøsseri, transeri og skriveri. Og om Dunst Festernen vi holdt i Ungdomshuset da det lå på Jagtvej 69. Tak til Bogcaféen og det store fremmøde nede i Rockmaskinen hvor det blev afholdt."
+    ],
+    "images": [
+      "./archive/facebook-20261025/2373756479363880.jpg",
+      "./archive/facebook-20261025/2373756592697202.jpg",
+      "./archive/facebook-20261025/2373756469363881.jpg",
+      "./archive/facebook-20261025/2373756489363879.jpg",
+      "./archive/facebook-20261025/2373756606030534.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/2373756479363880.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/2373756479363880.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2018-12-03",
@@ -1308,7 +1560,13 @@ export const timelineEntries = [
     "title": "Jeg var Frankensteins brud på Teateret ved Sorte Hest.",
     "group": "live",
     "href": null,
-    "details": "Jeg var Frankensteins brud."
+    "details": "Jeg var Frankensteins brud.",
+    "images": [
+      "./archive/facebook-20261025/2144269028979294.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/2144269028979294.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/2144269028979294.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2018-08-04",
@@ -1423,14 +1681,58 @@ export const timelineEntries = [
     "details": "Jeg lavede en optræden til bogudgivelsen."
   },
   {
+    "date": "2017-12-03",
+    "display": "03.12.2017",
+    "year": 2017,
+    "category": "Fest",
+    "title": "Ramona Machos 50 års fødselsdagsfest",
+    "group": "live",
+    "href": null,
+    "details": "Vi var nogle stykker der startede hjemme hos mig: Kenzo, Thomas, Unni, Petruska, Daniel, Marianne og Peter Vadim.",
+    "popupParagraphs": [
+      "Vi var nogle stykker der startede hjemme hos mig: Kenzo, Thomas, Unni, Petruska, Daniel, Marianne og Peter Vadim."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1766597486746452.jpg",
+      "./archive/facebook-20261025/1766649946741206.jpg",
+      "./archive/facebook-20261025/1766648716741329.jpg",
+      "./archive/facebook-20261025/1766647026741498.jpg",
+      "./archive/facebook-20261025/1766637640075770.jpg",
+      "./archive/facebook-20261025/1766634853409382.jpg",
+      "./archive/facebook-20261025/1766611613411706.jpg",
+      "./archive/facebook-20261025/1766610410078493.jpg",
+      "./archive/facebook-20261025/1766608736745327.jpg",
+      "./archive/facebook-20261025/1766606353412232.jpg",
+      "./archive/facebook-20261025/1766604730079061.jpg",
+      "./archive/facebook-20261025/1766602866745914.jpg",
+      "./archive/facebook-20261025/1766600520079482.jpg",
+      "./archive/facebook-20261025/1766598486746352.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1766597486746452.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1766597486746452.webp",
+    "thumbnailFit": "contain"
+  },
+  {
     "date": "2017-11-11",
     "display": "11.11.2017",
     "year": 2017,
     "category": "Litteratur",
-    "title": "Oplæsning på herretoilettet, Bogforum",
+    "title": "Jeg læste op på Bogforum",
     "group": "art",
     "href": null,
-    "details": "Jeg læste op på herretoilettet."
+    "details": "Efter etårsskolen læste jeg op af mine tekster på Gladiators stand.",
+    "popupParagraphs": [
+      "Efter etårsskolen læste jeg op af mine tekster på Gladiators stand."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1736802259725975.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1736802259725975.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1736802259725975.webp",
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2017-11-11|Litteratur|Oplæsning på herretoilettet, Bogforum"
+    ]
   },
   {
     "date": "2017-10-27",
@@ -1440,7 +1742,26 @@ export const timelineEntries = [
     "title": "Sang med Røvhullet til Sjæl på Dåse 1",
     "group": "live",
     "href": null,
-    "details": "Jeg sang med Røvhullet til kontrabas."
+    "details": "Hairwerk Hugh Mongues er værtinde og bagmand bag denne cabaret. De optrædende er: Blomst, Trine Trash, Ramona Macho, Andy Benz, Lago og Sahar Pour. Mit røvhul sang en duet med Andy Benz kontrabass.",
+    "popupParagraphs": [
+      "Hairwerk Hugh Mongues er værtinde og bagmand bag denne cabaret. De optrædende er: Blomst, Trine Trash, Ramona Macho, Andy Benz, Lago og Sahar Pour. Mit røvhul sang en duet med Andy Benz kontrabass."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1721146397958228.jpg",
+      "./archive/facebook-20261025/1721146354624899.jpg",
+      "./archive/facebook-20261025/1721146217958246.jpg",
+      "./archive/facebook-20261025/1721146491291552.jpg",
+      "./archive/facebook-20261025/1721149984624536.jpg",
+      "./archive/facebook-20261025/1721146214624913.jpg",
+      "./archive/facebook-20261025/1721146364624898.jpg",
+      "./archive/facebook-20261025/1721146391291562.jpg",
+      "./archive/facebook-20261025/1721146224624912.jpg",
+      "./archive/facebook-20261025/1721146221291579.jpg",
+      "./archive/facebook-20261025/1721173534622181.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1721146397958228.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1721146397958228.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2017-10-08",
@@ -1506,6 +1827,52 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/00b1629c904f8111.webp"
   },
   {
+    "date": "2017-06-04",
+    "display": "04.06.2017",
+    "year": 2017,
+    "category": "Fest",
+    "title": "Fejring af Unnis nye køkken",
+    "group": "live",
+    "href": null,
+    "details": "Kenzo, Bjarnepigen og jeg mødte op i trash drag.",
+    "popupParagraphs": [
+      "Kenzo, Bjarnepigen og jeg mødte op i trash drag."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1547185755354294.jpg",
+      "./archive/facebook-20261025/1547769291962607.jpg",
+      "./archive/facebook-20261025/1547762408629962.jpg",
+      "./archive/facebook-20261025/1547192858686917.jpg",
+      "./archive/facebook-20261025/1547188155354054.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1547185755354294.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1547185755354294.webp",
+    "thumbnailFit": "contain"
+  },
+  {
+    "date": "2017-05-29",
+    "display": "29.05.2017",
+    "year": 2017,
+    "category": "Fest",
+    "title": "Grillfest på Vesterbro",
+    "group": "live",
+    "href": null,
+    "details": "Vi var nogle stykker der mødtes for at grille pølser i en baggård bag Fags Palace på Vesterbrogade.",
+    "popupParagraphs": [
+      "Vi var nogle stykker der mødtes for at grille pølser i en baggård bag Fags Palace på Vesterbrogade."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1541710519235151.jpg",
+      "./archive/facebook-20261025/1540673809338822.jpg",
+      "./archive/facebook-20261025/1541703805902489.jpg",
+      "./archive/facebook-20261025/1539443912795145.jpg",
+      "./archive/facebook-20261025/1539248646148005.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1541710519235151.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1541710519235151.webp",
+    "thumbnailFit": "contain"
+  },
+  {
     "date": "2017-05-25",
     "display": "25.05.2017",
     "year": 2017,
@@ -1524,7 +1891,26 @@ export const timelineEntries = [
     "category": "Udstilling",
     "title": "Ultimate impact, Transpot Pølselæn keramik udstilling i Rundetårn",
     "group": "art",
-    "href": null
+    "href": null,
+    "details": "Jeg udstillede en Transpot-tekande og en Piss-tekop.",
+    "popupParagraphs": [
+      "Jeg udstillede en Transpot-tekande og en Piss-tekop."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1531815856891284.jpg",
+      "./archive/facebook-20261025/1531815383557998.jpg",
+      "./archive/facebook-20261025/1531815783557958.jpg",
+      "./archive/facebook-20261025/1531815673557969.jpg",
+      "./archive/facebook-20261025/1531816026891267.jpg",
+      "./archive/facebook-20261025/1531815920224611.jpg",
+      "./archive/facebook-20261025/1531815756891294.jpg",
+      "./archive/facebook-20261025/1531815276891342.jpg",
+      "./archive/facebook-20261025/1531815433557993.jpg",
+      "./archive/facebook-20261025/1531815166891353.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1531815856891284.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1531815856891284.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2017-05-10",
@@ -1557,9 +1943,28 @@ export const timelineEntries = [
     "display": "01.04.2017",
     "year": 2017,
     "category": "Liveoptræden",
-    "title": "Duet med Hairwerk med sangen Blomser til Kønspolitisk Mekodigrandprix, Bøssehuset",
+    "title": "Blomster til Kønspolitisk Mekodigrandprix, Bøssehuset",
     "group": "live",
-    "href": null
+    "href": null,
+    "details": "Hairwerk Hugh Mongous og jeg sang duet med sangen \"Blomser\". På et billede ses også Ariel.",
+    "popupParagraphs": [
+      "Hairwerk Hugh Mongous og jeg sang duet med sangen \"Blomser\". På et billede ses også Ariel."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1522955381110665.jpg",
+      "./archive/facebook-20261025/1522954874444049.jpg",
+      "./archive/facebook-20261025/1522953151110888.jpg",
+      "./archive/facebook-20261025/1522951721111031.jpg",
+      "./archive/facebook-20261025/1513149195424617.jpg",
+      "./archive/facebook-20261025/1513141985425338.jpg",
+      "./archive/facebook-20261025/1513137728759097.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1522955381110665.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1522955381110665.webp",
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2017-04-01|Liveoptræden|Duet med Hairwerk med sangen Blomser til Kønspolitisk Mekodigrandprix, Bøssehuset"
+    ]
   },
   {
     "date": "2017-03-30",
@@ -1692,21 +2097,55 @@ export const timelineEntries = [
     "display": "17.09.2016",
     "year": 2016,
     "category": "Liveoptræden",
-    "title": "Scala, Bøssehuset",
+    "title": "Scala Performance, Bøssehuset",
     "group": "live",
     "href": null,
-    "details": "Jeg sang 3 sange til eventet Scala."
+    "details": "Jeg synger 3 sange. Bland andet \"Elastikken\" som jeg har skrevet til min mand Daniel. Andre performere: Hairwerk Hugh Mongous, Kim Kim og USA'ske Actually. Entré: 50 kr. Fotos: Hjalte Von Augusto Abrahamsen.",
+    "popupParagraphs": [
+      "Jeg synger 3 sange. Bland andet \"Elastikken\" som jeg har skrevet til min mand Daniel. Andre performere: Hairwerk Hugh Mongous, Kim Kim og USA'ske Actually. Entré: 50 kr. Fotos: Hjalte Von Augusto Abrahamsen."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1216851591721047.jpg",
+      "./archive/facebook-20261025/1216851531721053.jpg",
+      "./archive/facebook-20261025/1216850825054457.jpg",
+      "./archive/facebook-20261025/1216850925054447.jpg",
+      "./archive/facebook-20261025/1218847134854826.jpg",
+      "./archive/facebook-20261025/1216850748387798.jpg",
+      "./archive/facebook-20261025/1218847138188159.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1216851591721047.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1216851591721047.webp",
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2016-09-17|Liveoptræden|Scala, Bøssehuset"
+    ]
   },
   {
     "date": "2016-08-20",
     "display": "20.08.2016",
     "year": 2016,
     "category": "Happening",
-    "title": "Pride Brud",
+    "title": "Pride brud, København",
     "group": "live",
     "href": null,
-    "thumbnail": "./archive/timeline/performance/2016-08-20-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/c27a0146fe91a13f.webp"
+    "thumbnail": "./archive/facebook-20261025/1185490584857148.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1185490584857148.webp",
+    "details": "Kenzo, Trine Syberg og jeg stressede op for at se på paraden. Vi mødte blandt andet Gitte Plass og Mikkeline.",
+    "popupParagraphs": [
+      "Kenzo, Trine Syberg og jeg stressede op for at se på paraden. Vi mødte blandt andet Gitte Plass og Mikkeline."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1185490584857148.jpg",
+      "./archive/facebook-20261025/1185496474856559.jpg",
+      "./archive/facebook-20261025/1185492638190276.jpg",
+      "./archive/facebook-20261025/1185488178190722.jpg",
+      "./archive/facebook-20261025/1185486021524271.jpg",
+      "./archive/timeline/performance/2016-08-20-01.webp"
+    ],
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2016-08-20|Happening|Pride Brud"
+    ]
   },
   {
     "date": "2016-07-16",
@@ -1718,7 +2157,51 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2016-07-16-forelsket-i-et-dyr.jpg",
     "videoId": "ly47V19BqQI",
-    "thumbnailPreview": "./assets/timeline-thumbs/d1930b3d76156351.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/d1930b3d76156351.webp",
+    "details": "Videoen er optaget på Kho Pagnan, Thailand. Liebling Siebling medvirker i videoen.",
+    "popupParagraphs": [
+      "Videoen er optaget på Kho Pagnan, Thailand. Liebling Siebling medvirker i videoen."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1160918393981034.jpg",
+      "./archive/facebook-20261025/1160918293981044.jpg",
+      "./archive/facebook-20261025/1160918247314382.jpg",
+      "./archive/facebook-20261025/1160918253981048.jpg"
+    ],
+    "videoAfterImages": true
+  },
+  {
+    "date": "2016-07-06",
+    "display": "06.07.2016",
+    "year": 2016,
+    "category": "Sammenkomst",
+    "title": "Fint besøg fra Thailand",
+    "group": "live",
+    "href": null,
+    "shareAliases": [
+      "2016-07-08|Sammenkomst|Fint besøg fra Thailand"
+    ],
+    "details": "Vi udveksler makeup tricks. Vi er: Ernalise, Bjarne Pigen, Porn, Dennis Agerblad.",
+    "popupParagraphs": [
+      "Vi udveksler makeup tricks. Vi er: Ernalise, Bjarne Pigen, Porn, Dennis Agerblad."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1149055568500650.jpg",
+      "./archive/facebook-20261025/1149058488500358.jpg",
+      "./archive/facebook-20261025/1149054108500796.jpg",
+      "./archive/facebook-20261025/1149042811835259.jpg",
+      "./archive/facebook-20261025/1149039758502231.jpg",
+      "./archive/facebook-20261025/1147751891964351.jpg",
+      "./archive/facebook-20261025/1147750091964531.jpg",
+      "./archive/facebook-20261025/1147745885298285.jpg",
+      "./archive/facebook-20261025/1147744061965134.jpg",
+      "./archive/facebook-20261025/1147742738631933.jpg",
+      "./archive/facebook-20261025/1147738781965662.jpg",
+      "./archive/facebook-20261025/1147737228632484.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1149055568500650.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1149055568500650.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2016-06-26",
@@ -1730,6 +2213,49 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/performance/2016-06-26-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/5650dde699b830a6.webp"
+  },
+  {
+    "date": "2016-06-25",
+    "display": "25.06.2016",
+    "year": 2016,
+    "category": "Fest",
+    "title": "Grillfest på Vesterbro",
+    "group": "live",
+    "href": null,
+    "details": "Vi mødes ved pølser og griller i baggården bag fags palace. På billederne ses: Kenzo, Finn, Ariel, Blomst, Athena Lady og Dennis Agerblad",
+    "popupParagraphs": [
+      "Vi mødes ved pølser og griller i baggården bag fags palace. På billederne ses: Kenzo, Finn, Ariel, Blomst, Athena Lady og Dennis Agerblad"
+    ],
+    "images": [
+      "./archive/facebook-20261025/1139655689440638.jpg",
+      "./archive/facebook-20261025/1139669162772624.jpg",
+      "./archive/facebook-20261025/1139667146106159.jpg",
+      "./archive/facebook-20261025/1139665046106369.jpg",
+      "./archive/facebook-20261025/1139656259440581.jpg",
+      "./archive/facebook-20261025/1139655139440693.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1139655689440638.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1139655689440638.webp",
+    "thumbnailFit": "contain"
+  },
+  {
+    "date": "2016-06-11",
+    "display": "11.06.2016",
+    "year": 2016,
+    "category": "Fest",
+    "title": "På Kit Kat Club, Berlin",
+    "group": "live",
+    "href": null,
+    "details": "Jeg, Ariel, Athena Lady stressede op og kom gratis ind på Kit Cat Club.",
+    "popupParagraphs": [
+      "Jeg, Ariel, Athena Lady stressede op og kom gratis ind på Kit Cat Club."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1129364020469805.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1129364020469805.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1129364020469805.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2016-06-09",
@@ -1745,9 +2271,26 @@ export const timelineEntries = [
     "display": "02.06.2016",
     "year": 2016,
     "category": "Liveoptræden",
-    "title": "Optræder med Vesterbro Drag Udlejling Service, Flippet Festival, Karise",
+    "title": "Flippet Festival, Karise",
     "group": "live",
-    "href": null
+    "href": null,
+    "details": "Jeg optræder med Vesterbro Drag Udlejling Service. Vi var Kenneth Cock Whore, Blomst, Jumbo Jette, Athena Lady, Rebekka Fjams Du Nord og Ariel. Vi optrådte bland andet med sangen Transformation hvor vi først er en orm der bliver til en sommerfugl.",
+    "popupParagraphs": [
+      "Jeg optræder med Vesterbro Drag Udlejling Service. Vi var Kenneth Cock Whore, Blomst, Jumbo Jette, Athena Lady, Rebekka Fjams Du Nord og Ariel. Vi optrådte bland andet med sangen Transformation hvor vi først er en orm der bliver til en sommerfugl."
+    ],
+    "images": [
+      "./archive/facebook-20261025/1122247517848122.jpg",
+      "./archive/facebook-20261025/1122356141170593.jpg",
+      "./archive/facebook-20261025/1122353071170900.jpg",
+      "./archive/facebook-20261025/1122311284508412.jpg",
+      "./archive/facebook-20261025/1122301677842706.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1122247517848122.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1122247517848122.webp",
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2016-06-02|Liveoptræden|Optræder med Vesterbro Drag Udlejling Service, Flippet Festival, Karise"
+    ]
   },
   {
     "date": "2016-05-20",
@@ -1801,6 +2344,91 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/video-thumbs/2016-03-10-tis-paa-mig.jpg",
     "videoId": "IYhZxAJxTgo",
     "thumbnailPreview": "./assets/timeline-thumbs/1ae7b7039c3c699f.webp"
+  },
+  {
+    "date": "2016-03-05",
+    "display": "05.03.2016",
+    "year": 2016,
+    "category": "Fest",
+    "title": "Torsdags fest på Von Fressen, Vesterbroggade, København",
+    "group": "live",
+    "href": null,
+    "details": "Kenzo, Unni og jeg tog til fest, samme aften filmede jeg musikvideoen \"Tis på mig.\"",
+    "popupParagraphs": [
+      "Kenzo, Unni og jeg tog til fest, samme aften filmede jeg musikvideoen \"Tis på mig.\""
+    ],
+    "images": [
+      "./archive/facebook-20261025/1054225124650362.jpg",
+      "./archive/facebook-20261025/1054225121317029.jpg",
+      "./archive/facebook-20261025/1054225104650364.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/1054225124650362.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/1054225124650362.webp",
+    "thumbnailFit": "contain"
+  },
+  {
+    "date": "2015-11-05",
+    "display": "05.11.2015",
+    "year": 2015,
+    "category": "Fest",
+    "title": "Torsdags hygge på Von Fressen",
+    "group": "live",
+    "href": null,
+    "details": "Vi var en masse trash drags i byen. Her ses blandt andet: Ariel, Ernaise, Rebeca Fjams Du Nord, Tove Hansen, Johan, Blomst med flere.",
+    "popupParagraphs": [
+      "Vi var en masse trash drags i byen. Her ses blandt andet: Ariel, Ernaise, Rebeca Fjams Du Nord, Tove Hansen, Johan, Blomst med flere."
+    ],
+    "images": [
+      "./archive/facebook-20261025/985384834867725.jpg",
+      "./archive/facebook-20261025/985383881534487.jpg",
+      "./archive/facebook-20261025/985392001533675.jpg",
+      "./archive/facebook-20261025/985391701533705.jpg",
+      "./archive/facebook-20261025/985391528200389.jpg",
+      "./archive/facebook-20261025/985391411533734.jpg",
+      "./archive/facebook-20261025/985390984867110.jpg",
+      "./archive/facebook-20261025/985390508200491.jpg",
+      "./archive/facebook-20261025/985390111533864.jpg",
+      "./archive/facebook-20261025/985389944867214.jpg",
+      "./archive/facebook-20261025/985385294867679.jpg",
+      "./archive/facebook-20261025/985385038201038.jpg",
+      "./archive/facebook-20261025/985384671534408.jpg",
+      "./archive/facebook-20261025/985384531534422.jpg",
+      "./archive/facebook-20261025/985384248201117.jpg",
+      "./archive/facebook-20261025/985383614867847.jpg",
+      "./archive/facebook-20261025/985383344867874.jpg",
+      "./archive/facebook-20261025/985383128201229.jpg",
+      "./archive/facebook-20261025/985382678201274.jpg",
+      "./archive/facebook-20261025/985382304867978.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/985384834867725.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/985384834867725.webp",
+    "thumbnailFit": "contain"
+  },
+  {
+    "date": "2015-10-03",
+    "display": "03.10.2015",
+    "year": 2015,
+    "category": "Filmfestival",
+    "title": "MIX Film Festival",
+    "group": "live",
+    "href": null,
+    "details": "Jeg har dresset mig op til at se homoseksuelle film.",
+    "popupParagraphs": [
+      "Jeg har dresset mig op til at se homoseksuelle film."
+    ],
+    "images": [
+      "./archive/facebook-20261025/970883849651157.jpg",
+      "./archive/facebook-20261025/970560896350119.jpg",
+      "./archive/facebook-20261025/970561636350045.jpg",
+      "./archive/facebook-20261025/970561003016775.jpg",
+      "./archive/facebook-20261025/970560999683442.jpg",
+      "./archive/facebook-20261025/970561479683394.jpg",
+      "./archive/facebook-20261025/970561743016701.jpg",
+      "./archive/facebook-20261025/970882789651263.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/970883849651157.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/970883849651157.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2015-09-13",
@@ -1871,10 +2499,27 @@ export const timelineEntries = [
     "date": "2015-05-30",
     "display": "30.05.2015",
     "year": 2015,
-    "category": "Liveoptræden og samtale",
-    "title": "Jeg optrådte og deltog i en samtale med mit band på Doma Festival i Sofia.",
-    "group": "live",
-    "href": null
+    "category": "Artisttalk",
+    "title": "Doma Festival, Sofia, Bulgarien",
+    "group": "art",
+    "href": null,
+    "details": "Jeg holdt et foredrag om mit liv og hvad mine performaces handlede om. Dennis Agerblad Band sad med på scenen og lyttede, mens jeg viste billeder og snakkede i en time.",
+    "popupParagraphs": [
+      "Jeg holdt et foredrag om mit liv og hvad mine performaces handlede om. Dennis Agerblad Band sad med på scenen og lyttede, mens jeg viste billeder og snakkede i en time."
+    ],
+    "images": [
+      "./archive/facebook-20261025/908563315883211.jpg",
+      "./archive/facebook-20261025/908563335883209.jpg",
+      "./archive/facebook-20261025/908563319216544.jpg",
+      "./archive/facebook-20261025/908563442549865.jpg",
+      "./archive/facebook-20261025/908563379216538.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/908563315883211.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/908563315883211.webp",
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2015-05-30|Liveoptræden og samtale|Jeg optrådte og deltog i en samtale med mit band på Doma Festival i Sofia."
+    ]
   },
   {
     "year": 2015,
@@ -1901,13 +2546,32 @@ export const timelineEntries = [
     ]
   },
   {
+    "date": "2015-03-10",
+    "display": "10.03.2015",
+    "year": 2015,
+    "category": "Presse",
+    "title": "På forsiden af den Færøsk avis, Dimmalætting",
+    "group": "press",
+    "href": null,
+    "details": "Så kom jeg på forsiden af Dimmalætting som er en Færøsk avis. \"Ikke bare skør\" hedder overskriften. Interview om at være med i Danmark har talent.",
+    "popupParagraphs": [
+      "Så kom jeg på forsiden af Dimmalætting som er en Færøsk avis. \"Ikke bare skør\" hedder overskriften. Interview om at være med i Danmark har talent."
+    ],
+    "images": [
+      "./archive/facebook-20261025/863230770416466.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/863230770416466.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/863230770416466.webp",
+    "thumbnailFit": "contain"
+  },
+  {
     "year": 2015,
     "group": "live",
     "href": null,
     "date": "2015-03-06",
     "display": "06.03.2015",
     "category": "Fest",
-    "title": "Fest hos Marquien på Frederiksberg",
+    "title": "Fest hos Marquien Marcel de Sade på Frederiksberg",
     "thumbnail": "./archive/timeline/performance/2015-03-06-01.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/e4eedb6f2a81e4e6.webp",
     "images": [
@@ -1918,7 +2582,16 @@ export const timelineEntries = [
       "./archive/timeline/performance/2015-03-06-05.webp",
       "./archive/timeline/performance/2015-03-06-06.webp",
       "./archive/timeline/performance/2015-03-06-07.webp",
-      "./archive/timeline/performance/2015-03-06-08.webp"
+      "./archive/timeline/performance/2015-03-06-08.webp",
+      "./archive/facebook-20261025/847528501986693.jpg",
+      "./archive/facebook-20261025/847528731986670.jpg"
+    ],
+    "details": "Kunstner og Trash drag sammentræf. Der skete vist en pladerelease til festen.",
+    "popupParagraphs": [
+      "Kunstner og Trash drag sammentræf. Der skete vist en pladerelease til festen."
+    ],
+    "shareAliases": [
+      "2015-03-06|Fest|Fest hos Marquien på Frederiksberg"
     ]
   },
   {
@@ -2023,7 +2696,17 @@ export const timelineEntries = [
     "category": "Interview",
     "title": "Interview i Vikuskifti, Færøsk Avis om min medvirken i Talent",
     "group": "media",
-    "href": null
+    "href": null,
+    "details": "Færøske Dennis. SÅDAN KAN EN MAND OGSÅ SE UD. - Dette er min udgave af en mand, siger Dennis Agerblad som optræder i kvindeklæder i Danmark.",
+    "popupParagraphs": [
+      "Færøske Dennis. SÅDAN KAN EN MAND OGSÅ SE UD. - Dette er min udgave af en mand, siger Dennis Agerblad som optræder i kvindeklæder i Danmark."
+    ],
+    "images": [
+      "./archive/facebook-20261025/834942339911976.webp"
+    ],
+    "thumbnail": "./archive/facebook-20261025/834942339911976.webp",
+    "thumbnailPreview": "./assets/facebook-thumbs/834942339911976.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2015-01-10",
@@ -2064,6 +2747,21 @@ export const timelineEntries = [
     ]
   },
   {
+    "date": "2015-01-02",
+    "display": "02.01.2015",
+    "year": 2015,
+    "category": "Plakat",
+    "title": "Den Lilla Havfrue i Bøssehuset – plakat",
+    "group": "press",
+    "href": null,
+    "images": [
+      "./archive/facebook-20261025/825576594181884.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/825576594181884.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/825576594181884.webp",
+    "thumbnailFit": "contain"
+  },
+  {
     "date": "2014-12-12",
     "display": "12.12.2014",
     "year": 2014,
@@ -2088,7 +2786,45 @@ export const timelineEntries = [
     "category": "Happening",
     "title": "Vonk, Malmø",
     "group": "live",
-    "href": null
+    "href": null,
+    "details": "Rebekka Fjams Du Nord, Ariel, en mørkhåret veninde og jeg, var 4 danske trash drags der tog toget til Malmö, Sverige, og gik på Vonk, for at se danske O.T.B. og amerikanske Pandora Box fra Ru Paul's Drag Race. Vi mødte en masse skønne svenske drags.",
+    "popupParagraphs": [
+      "Rebekka Fjams Du Nord, Ariel, en mørkhåret veninde og jeg, var 4 danske trash drags der tog toget til Malmö, Sverige, og gik på Vonk, for at se danske O.T.B. og amerikanske Pandora Box fra Ru Paul's Drag Race. Vi mødte en masse skønne svenske drags."
+    ],
+    "images": [
+      "./archive/facebook-20261025/768483496557861.jpg",
+      "./archive/facebook-20261025/768483619891182.jpg",
+      "./archive/facebook-20261025/768483596557851.jpg",
+      "./archive/facebook-20261025/768483486557862.jpg",
+      "./archive/facebook-20261025/768483483224529.jpg",
+      "./archive/facebook-20261025/768483573224520.jpg",
+      "./archive/facebook-20261025/768484153224462.jpg",
+      "./archive/facebook-20261025/768484029891141.jpg",
+      "./archive/facebook-20261025/768484016557809.jpg",
+      "./archive/facebook-20261025/768484179891126.jpg",
+      "./archive/facebook-20261025/768484246557786.jpg",
+      "./archive/facebook-20261025/770208239718720.jpg",
+      "./archive/facebook-20261025/768483849891159.jpg",
+      "./archive/facebook-20261025/768483756557835.jpg",
+      "./archive/facebook-20261025/768483716557839.jpg",
+      "./archive/facebook-20261025/768483796557831.jpg",
+      "./archive/facebook-20261025/768483726557838.jpg",
+      "./archive/facebook-20261025/768484126557798.jpg",
+      "./archive/facebook-20261025/768483966557814.jpg",
+      "./archive/facebook-20261025/768484216557789.jpg",
+      "./archive/facebook-20261025/768483899891154.jpg",
+      "./archive/facebook-20261025/768483933224484.jpg",
+      "./archive/facebook-20261025/768483989891145.jpg",
+      "./archive/facebook-20261025/768484283224449.jpg",
+      "./archive/facebook-20261025/768484199891124.jpg",
+      "./archive/facebook-20261025/768483873224490.jpg",
+      "./archive/facebook-20261025/768484069891137.jpg",
+      "./archive/facebook-20261025/768483686557842.jpg",
+      "./archive/facebook-20261025/770208279718716.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/768483496557861.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/768483496557861.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2014-09-18",
@@ -2098,6 +2834,76 @@ export const timelineEntries = [
     "title": "Bol Mig I MIt Numsehul, Modkraft",
     "group": "media",
     "href": null
+  },
+  {
+    "date": "2014-08-30",
+    "display": "30.08.2014",
+    "year": 2014,
+    "category": "Parade",
+    "title": "LGBT parade København",
+    "group": "live",
+    "href": null,
+    "details": "Jeg tog fotos af de bedste i paraden.",
+    "popupParagraphs": [
+      "Jeg tog fotos af de bedste i paraden."
+    ],
+    "images": [
+      "./archive/facebook-20261025/963749923697883.jpg",
+      "./archive/facebook-20261025/963748903697985.jpg",
+      "./archive/facebook-20261025/963748913697984.jpg",
+      "./archive/facebook-20261025/963748993697976.jpg",
+      "./archive/facebook-20261025/963749020364640.jpg",
+      "./archive/facebook-20261025/963749023697973.jpg",
+      "./archive/facebook-20261025/963749083697967.jpg",
+      "./archive/facebook-20261025/963749127031296.jpg",
+      "./archive/facebook-20261025/963749240364618.jpg",
+      "./archive/facebook-20261025/963749317031277.jpg",
+      "./archive/facebook-20261025/963749343697941.jpg",
+      "./archive/facebook-20261025/963749383697937.jpg",
+      "./archive/facebook-20261025/963749600364582.jpg",
+      "./archive/facebook-20261025/963749630364579.jpg",
+      "./archive/facebook-20261025/963749693697906.jpg",
+      "./archive/facebook-20261025/963749727031236.jpg",
+      "./archive/facebook-20261025/963749750364567.jpg",
+      "./archive/facebook-20261025/963749823697893.jpg",
+      "./archive/facebook-20261025/963749943697881.jpg",
+      "./archive/facebook-20261025/963750000364542.jpg",
+      "./archive/facebook-20261025/963750027031206.jpg",
+      "./archive/facebook-20261025/963750053697870.jpg",
+      "./archive/facebook-20261025/963750097031199.jpg",
+      "./archive/facebook-20261025/963750263697849.jpg",
+      "./archive/facebook-20261025/963750323697843.jpg",
+      "./archive/facebook-20261025/963750337031175.jpg",
+      "./archive/facebook-20261025/963750447031164.jpg",
+      "./archive/facebook-20261025/963750510364491.jpg",
+      "./archive/facebook-20261025/963750527031156.jpg",
+      "./archive/facebook-20261025/963750557031153.jpg",
+      "./archive/facebook-20261025/963750700364472.jpg",
+      "./archive/facebook-20261025/963750727031136.jpg",
+      "./archive/facebook-20261025/963750743697801.jpg",
+      "./archive/facebook-20261025/963750787031130.jpg",
+      "./archive/facebook-20261025/963750800364462.jpg",
+      "./archive/facebook-20261025/963750830364459.jpg",
+      "./archive/facebook-20261025/963750930364449.jpg",
+      "./archive/facebook-20261025/963751027031106.jpg",
+      "./archive/facebook-20261025/963751080364434.jpg",
+      "./archive/facebook-20261025/963751133697762.jpg",
+      "./archive/facebook-20261025/963751243697751.jpg",
+      "./archive/facebook-20261025/963751297031079.jpg",
+      "./archive/facebook-20261025/963751313697744.jpg",
+      "./archive/facebook-20261025/963751320364410.jpg",
+      "./archive/facebook-20261025/963751397031069.jpg",
+      "./archive/facebook-20261025/963751420364400.jpg",
+      "./archive/facebook-20261025/963751807031028.jpg",
+      "./archive/facebook-20261025/963751970364345.jpg",
+      "./archive/facebook-20261025/963752320364310.jpg",
+      "./archive/facebook-20261025/963752470364295.jpg",
+      "./archive/facebook-20261025/963752523697623.jpg",
+      "./archive/facebook-20261025/963752643697611.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/963749923697883.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/963749923697883.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2014-08-29",
@@ -2227,6 +3033,25 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/df36dfef13f696b0.webp"
   },
   {
+    "date": "2014-02-01",
+    "display": "01.02.2014",
+    "year": 2014,
+    "category": "Euroman",
+    "title": "Lars Von Trier og Dennis Agerblad i Euroman Magasinet",
+    "group": "press",
+    "href": null,
+    "details": "Jeg var med performancegruppen Dunst ude og optræde til Lars Von Triers og Peter Aalbæks dobbelte 50 års fødselsdags fest på Zentropa. Jeg pumpede min røv med en gammeldags cykelpumpe og sang ind i microfonen med røvhullet. Alle børnene blev fulgt ud af teltet af en dame der var forstenet i ansigtet. Men alle kunne alligevel se alt, for hele showet blev transmiteret ud til alle de andre telte med kæmpe fladskærme.",
+    "popupParagraphs": [
+      "Jeg var med performancegruppen Dunst ude og optræde til Lars Von Triers og Peter Aalbæks dobbelte 50 års fødselsdags fest på Zentropa. Jeg pumpede min røv med en gammeldags cykelpumpe og sang ind i microfonen med røvhullet. Alle børnene blev fulgt ud af teltet af en dame der var forstenet i ansigtet. Men alle kunne alligevel se alt, for hele showet blev transmiteret ud til alle de andre telte med kæmpe fladskærme."
+    ],
+    "images": [
+      "./archive/facebook-20261025/770290693043808.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/770290693043808.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/770290693043808.webp",
+    "thumbnailFit": "contain"
+  },
+  {
     "date": "2014-01-04",
     "display": "04.01.2014",
     "year": 2014,
@@ -2237,6 +3062,35 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/video-thumbs/2014-01-04-lesbisk-sadist.jpg",
     "videoId": "6yDZTMn4AtQ",
     "thumbnailPreview": "./assets/timeline-thumbs/54938ba702ab7117.webp"
+  },
+  {
+    "date": "2013-12-31",
+    "display": "31.12.2013",
+    "year": 2013,
+    "category": "Fest",
+    "title": "Nytårs aften ombord Air Transslavia",
+    "group": "live",
+    "href": null,
+    "details": "Stewdesserne: Delores Düchess LaCour og Dennis Agerblad prøver at bevare fatningen. Men piloten Petruska vil have sex.",
+    "popupParagraphs": [
+      "Stewdesserne: Delores Düchess LaCour og Dennis Agerblad prøver at bevare fatningen. Men piloten Petruska vil have sex."
+    ],
+    "images": [
+      "./archive/facebook-20261025/769504893122388.jpg",
+      "./archive/facebook-20261025/769504769789067.jpg",
+      "./archive/facebook-20261025/769505126455698.jpg",
+      "./archive/facebook-20261025/769505119789032.jpg",
+      "./archive/facebook-20261025/769505039789040.webp",
+      "./archive/facebook-20261025/769504756455735.jpg",
+      "./archive/facebook-20261025/769505253122352.jpg",
+      "./archive/facebook-20261025/769505279789016.jpg",
+      "./archive/facebook-20261025/769505316455679.jpg",
+      "./archive/facebook-20261025/769504966455714.jpg",
+      "./archive/facebook-20261025/769504813122396.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/769504893122388.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/769504893122388.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2013-12-21",
@@ -2359,9 +3213,102 @@ export const timelineEntries = [
     "display": "13.07.2013",
     "year": 2013,
     "category": "Liveoptræden",
-    "title": "Rejseguide til Frøken Verden, Christiania, København",
+    "title": "Frøken Verden, Christiania, København",
     "group": "live",
-    "href": null
+    "href": null,
+    "details": "Vi var rejseguides der hjalp publikum på plads. Og vi samlede stemmesedler",
+    "popupParagraphs": [
+      "Vi var rejseguides der hjalp publikum på plads. Og vi samlede stemmesedler"
+    ],
+    "images": [
+      "./archive/facebook-20261025/963705670368975.jpg",
+      "./archive/facebook-20261025/963705763702299.jpg",
+      "./archive/facebook-20261025/963705520368990.jpg",
+      "./archive/facebook-20261025/963705803702295.jpg",
+      "./archive/facebook-20261025/768089019930642.jpg",
+      "./archive/facebook-20261025/963705723702303.jpg",
+      "./archive/facebook-20261025/963631243709751.jpg",
+      "./archive/facebook-20261025/963631240376418.jpg",
+      "./archive/facebook-20261025/963631247043084.jpg",
+      "./archive/facebook-20261025/963705760368966.jpg",
+      "./archive/facebook-20261025/768089159930628.jpg",
+      "./archive/facebook-20261025/963705517035657.jpg",
+      "./archive/facebook-20261025/963705667035642.jpg",
+      "./archive/facebook-20261025/963705513702324.jpg",
+      "./archive/facebook-20261025/963705673702308.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/963705670368975.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/963705670368975.webp",
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2013-07-13|Liveoptræden|Rejseguide til Frøken Verden, Christiania, København"
+    ]
+  },
+  {
+    "date": "2013-07-06",
+    "display": "06.07.2013",
+    "year": 2013,
+    "category": "Fest",
+    "title": "Preparty i Block 66",
+    "group": "live",
+    "href": null,
+    "details": "Uffe og jeg deler flyers ud for Frk. Verden 2013.",
+    "popupParagraphs": [
+      "Uffe og jeg deler flyers ud for Frk. Verden 2013."
+    ],
+    "images": [
+      "./archive/facebook-20261025/768085256597685.jpg",
+      "./archive/facebook-20261025/768085149931029.jpg",
+      "./archive/facebook-20261025/768085153264362.jpg",
+      "./archive/facebook-20261025/768085166597694.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/768085256597685.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/768085256597685.webp",
+    "thumbnailFit": "contain"
+  },
+  {
+    "date": "2013-06-08",
+    "display": "08.06.2013",
+    "year": 2013,
+    "category": "Fest",
+    "title": "X-Dressed party hos Knud Vesterskov",
+    "group": "live",
+    "href": null,
+    "details": "Gæsterne var: Lulu, Carsten Sparwath, Maia Maud, Lene Leth Lebbe, Ramona Macho, med flere.",
+    "popupParagraphs": [
+      "Gæsterne var: Lulu, Carsten Sparwath, Maia Maud, Lene Leth Lebbe, Ramona Macho, med flere."
+    ],
+    "images": [
+      "./archive/facebook-20261025/768073566598854.jpg",
+      "./archive/facebook-20261025/768073186598892.jpg",
+      "./archive/facebook-20261025/768073139932230.jpg",
+      "./archive/facebook-20261025/768073096598901.jpg",
+      "./archive/facebook-20261025/768072916598919.jpg",
+      "./archive/facebook-20261025/768073206598890.jpg",
+      "./archive/facebook-20261025/768073176598893.jpg",
+      "./archive/facebook-20261025/768073249932219.jpg",
+      "./archive/facebook-20261025/768073046598906.jpg",
+      "./archive/facebook-20261025/768073266598884.jpg",
+      "./archive/facebook-20261025/768073006598910.jpg",
+      "./archive/facebook-20261025/768072886598922.jpg",
+      "./archive/facebook-20261025/768073463265531.jpg",
+      "./archive/facebook-20261025/768073563265521.jpg",
+      "./archive/facebook-20261025/768073516598859.jpg",
+      "./archive/facebook-20261025/768073313265546.jpg",
+      "./archive/facebook-20261025/768072919932252.jpg",
+      "./archive/facebook-20261025/768072946598916.jpg",
+      "./archive/facebook-20261025/768073363265541.jpg",
+      "./archive/facebook-20261025/768073393265538.jpg",
+      "./archive/facebook-20261025/768073409932203.jpg",
+      "./archive/facebook-20261025/768073673265510.jpg",
+      "./archive/facebook-20261025/768073753265502.jpg",
+      "./archive/facebook-20261025/768073629932181.jpg",
+      "./archive/facebook-20261025/768073639932180.jpg",
+      "./archive/facebook-20261025/768073729932171.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/768073566598854.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/768073566598854.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2013-06-03",
@@ -2404,13 +3351,39 @@ export const timelineEntries = [
     "display": "17.05.2013",
     "year": 2013,
     "category": "Liveoptræden",
-    "title": "Melodigrandprix, Bøssehuset, Christiania",
+    "title": "Svans til Kønspolitiske Melodigrandprix i Bøssehuset",
     "group": "live",
     "href": null,
-    "details": "Melodigrandprix i Bøssehuset.",
-    "thumbnail": "./archive/timeline/performance/2013-05-17-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/0bbe927a28018766.webp",
+    "details": "Jeg vandt med sangen svans. På scenen havde jeg Rune og Uffe med, kun iklædt sko. Ramona Macho var værtinde. På billederne ses Aupair Outrair, Hairværk Hugh Mongous & Blomst, Mikkeline, Mono & Polly, Tutu Wanna, Lyserødt Undertøj, Lotte og pigerne, Michael Netschajeff med flere.",
+    "thumbnail": "./archive/facebook-20261025/767365823336295.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/767365823336295.webp",
     "images": [
+      "./archive/facebook-20261025/767365823336295.jpg",
+      "./archive/facebook-20261025/767365650002979.webp",
+      "./archive/facebook-20261025/767366586669552.jpg",
+      "./archive/facebook-20261025/767365610002983.jpg",
+      "./archive/facebook-20261025/767365783336299.jpg",
+      "./archive/facebook-20261025/767365830002961.jpg",
+      "./archive/facebook-20261025/767366686669542.jpg",
+      "./archive/facebook-20261025/767365626669648.jpg",
+      "./archive/facebook-20261025/767365980002946.jpg",
+      "./archive/facebook-20261025/767365950002949.jpg",
+      "./archive/facebook-20261025/767366750002869.jpg",
+      "./archive/facebook-20261025/767367180002826.jpg",
+      "./archive/facebook-20261025/767366066669604.jpg",
+      "./archive/facebook-20261025/767367006669510.jpg",
+      "./archive/facebook-20261025/767367056669505.jpg",
+      "./archive/facebook-20261025/767367136669497.jpg",
+      "./archive/facebook-20261025/767366256669585.jpg",
+      "./archive/facebook-20261025/767366153336262.jpg",
+      "./archive/facebook-20261025/767366343336243.jpg",
+      "./archive/facebook-20261025/767366446669566.jpg",
+      "./archive/facebook-20261025/767366386669572.jpg",
+      "./archive/facebook-20261025/767366963336181.jpg",
+      "./archive/facebook-20261025/767366946669516.jpg",
+      "./archive/facebook-20261025/767366006669610.jpg",
+      "./archive/facebook-20261025/767366550002889.jpg",
+      "./archive/facebook-20261025/767366613336216.jpg",
       "./archive/timeline/performance/2013-05-17-01.webp",
       "./archive/timeline/performance/2013-05-17-02.webp",
       "./archive/timeline/performance/2013-05-17-03.webp",
@@ -2420,7 +3393,14 @@ export const timelineEntries = [
     "creditPrefix": "Fotos:",
     "videoId": "5egu-7Rnq5U",
     "videoTitle": "Svans – musikvideo",
-    "videoAfterImages": true
+    "videoAfterImages": true,
+    "popupParagraphs": [
+      "Jeg vandt med sangen svans. På scenen havde jeg Rune og Uffe med, kun iklædt sko. Ramona Macho var værtinde. På billederne ses Aupair Outrair, Hairværk Hugh Mongous & Blomst, Mikkeline, Mono & Polly, Tutu Wanna, Lyserødt Undertøj, Lotte og pigerne, Michael Netschajeff med flere."
+    ],
+    "thumbnailFit": "contain",
+    "shareAliases": [
+      "2013-05-17|Liveoptræden|Melodigrandprix, Bøssehuset, Christiania"
+    ]
   },
   {
     "date": "2013-05-04",
@@ -2451,6 +3431,37 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/video-thumbs/2013-03-09-private-parts.jpg",
     "videoId": "f14TTCKyeEU",
     "thumbnailPreview": "./assets/timeline-thumbs/5db50295ccb6da4e.webp"
+  },
+  {
+    "date": "2013-02-24",
+    "display": "24.02.2013",
+    "year": 2013,
+    "category": "Fest",
+    "title": "Hairwerk og Sørens Fødselsdags fest",
+    "group": "live",
+    "href": null,
+    "details": "På billederne ses bland andet Ginal La Mirage, Blomst, Dennis Ageblad med flere.",
+    "popupParagraphs": [
+      "På billederne ses bland andet Ginal La Mirage, Blomst, Dennis Ageblad med flere."
+    ],
+    "images": [
+      "./archive/facebook-20261025/963634357042773.jpg",
+      "./archive/facebook-20261025/963634360376106.jpg",
+      "./archive/facebook-20261025/963634397042769.jpg",
+      "./archive/facebook-20261025/963634413709434.jpg",
+      "./archive/facebook-20261025/963634233709452.jpg",
+      "./archive/facebook-20261025/963634287042780.jpg",
+      "./archive/facebook-20261025/963634440376098.jpg",
+      "./archive/facebook-20261025/963634210376121.jpg",
+      "./archive/facebook-20261025/963634297042779.jpg",
+      "./archive/facebook-20261025/963634487042760.jpg",
+      "./archive/facebook-20261025/963634293709446.jpg",
+      "./archive/facebook-20261025/963634207042788.jpg",
+      "./archive/facebook-20261025/963634343709441.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/963634357042773.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/963634357042773.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2013-02-12",
@@ -2551,6 +3562,40 @@ export const timelineEntries = [
     "details": "Gina La Mirage kørte mig til Sverige til et nordisk trans træf. Der var Transvestit der fra Norge Danmark og Sverige. De fleste havde en hverdagparyk og en festparyk. De var imponeret da de så midt morgenmadsoutfit, mit middagoutfit, mit aftensmad outfit, mit party outfit, og næste dag havde jeg fire nye looks og hver gang med ny paryk. En vidunderlig weekend.",
     "popupParagraphs": [
       "Gina La Mirage kørte mig til Sverige til et nordisk trans træf. Der var Transvestit der fra Norge Danmark og Sverige. De fleste havde en hverdagparyk og en festparyk. De var imponeret da de så midt morgenmadsoutfit, mit middagoutfit, mit aftensmad outfit, mit party outfit, og næste dag havde jeg fire nye looks og hver gang med ny paryk. En vidunderlig weekend."
+    ],
+    "images": [
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/01.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/02.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/03.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/04.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/05.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/06.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/07.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/08.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/09.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/10.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/11.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/12.jpg",
+      "./archive/legacy/200_calendar/2012/2012_08_31_trans_i_sverige/13.jpg",
+      "./archive/facebook-20261025/769513369788207.jpg",
+      "./archive/facebook-20261025/769513876454823.jpg",
+      "./archive/facebook-20261025/769513943121483.jpg",
+      "./archive/facebook-20261025/769514116454799.jpg",
+      "./archive/facebook-20261025/769514123121465.jpg",
+      "./archive/facebook-20261025/769514903121387.jpg",
+      "./archive/facebook-20261025/769515156454695.jpg",
+      "./archive/facebook-20261025/769515396454671.jpg",
+      "./archive/facebook-20261025/769515496454661.jpg",
+      "./archive/facebook-20261025/769515683121309.jpg",
+      "./archive/facebook-20261025/769515879787956.jpg",
+      "./archive/facebook-20261025/769516133121264.jpg",
+      "./archive/facebook-20261025/769516229787921.jpg",
+      "./archive/facebook-20261025/769516419787902.jpg",
+      "./archive/facebook-20261025/769516443121233.jpg",
+      "./archive/facebook-20261025/769516576454553.jpg",
+      "./archive/facebook-20261025/769516623121215.jpg",
+      "./archive/facebook-20261025/769516749787869.jpg",
+      "./archive/facebook-20261025/769517016454509.jpg"
     ]
   },
   {
@@ -2721,6 +3766,30 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/generated-thumbs/478d21c3ea66a5.jpg",
     "thumbnailFit": "contain",
     "thumbnailPreview": "./assets/timeline-thumbs/9cddf12bc97fe2ce.webp"
+  },
+  {
+    "date": "2012-03-03",
+    "display": "03.03.2012",
+    "year": 2012,
+    "category": "Optræden",
+    "title": "Din Salon, Bøssehuset",
+    "group": "live",
+    "href": null,
+    "details": "Der var en aften med sang og spas, hvor vi sang Bent Jacobsen sange.",
+    "popupParagraphs": [
+      "Der var en aften med sang og spas, hvor vi sang Bent Jacobsen sange."
+    ],
+    "images": [
+      "./archive/facebook-20261025/766714806734730.jpg",
+      "./archive/facebook-20261025/766714690068075.jpg",
+      "./archive/facebook-20261025/766714700068074.jpg",
+      "./archive/facebook-20261025/766714943401383.jpg",
+      "./archive/facebook-20261025/766714976734713.jpg",
+      "./archive/facebook-20261025/766715146734696.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/766714806734730.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/766714806734730.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2012-03-01",
@@ -4702,6 +5771,34 @@ export const timelineEntries = [
     "popupParagraphs": [
       "Dunst show. Her ses jeg sammen med Ramona Macho, Hairwerk Hugh Mongous og Lene Leth Lebbe. Fotos: Hunter Desportes."
     ]
+  },
+  {
+    "date": "2005-04-08",
+    "display": "08.04.2005",
+    "year": 2005,
+    "category": "Sammenkomst",
+    "title": "I Stockholm med Gritt Uldall-Jessen",
+    "group": "live",
+    "href": null,
+    "details": "Jeg ved ikke hvorfor jeg er her og hvorfor der er så mange asiater, men det var sjovt.",
+    "popupParagraphs": [
+      "Jeg ved ikke hvorfor jeg er her og hvorfor der er så mange asiater, men det var sjovt."
+    ],
+    "images": [
+      "./archive/facebook-20261025/963612123711663.jpg",
+      "./archive/facebook-20261025/963611907045018.jpg",
+      "./archive/facebook-20261025/963612253711650.jpg",
+      "./archive/facebook-20261025/963611957045013.jpg",
+      "./archive/facebook-20261025/963612820378260.jpg",
+      "./archive/facebook-20261025/963612353711640.jpg",
+      "./archive/facebook-20261025/963612487044960.jpg",
+      "./archive/facebook-20261025/963612563711619.jpg",
+      "./archive/facebook-20261025/963612600378282.jpg",
+      "./archive/facebook-20261025/963612940378248.jpg"
+    ],
+    "thumbnail": "./archive/facebook-20261025/963612123711663.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/963612123711663.webp",
+    "thumbnailFit": "contain"
   },
   {
     "date": "2005-03-17",

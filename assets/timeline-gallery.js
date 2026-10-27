@@ -426,7 +426,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       mobileLayoutKey=key;
       const margin=portrait ? 16 : 20;
       const maxW=vw-margin*2, maxH=vh-margin*2;
-      const {tallest}=mobileGalleryRatios(items,media);
+      const {tallest,widest}=mobileGalleryRatios(items,media);
       header.style.maxHeight=`${Math.floor(maxH*.34)}px`;
       header.style.overflow='auto';
       const flowHeight=node=>{
@@ -436,8 +436,17 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       };
       const extra=()=>[...dialog.children].filter(node=>node!==header && node!==viewer && node!==actions).reduce((sum,node)=>sum+flowHeight(node),0);
       let width=maxW;
-      // Use the full landscape width. Shrinking the dialog to the image ratio
-      // wraps the header into more lines and needlessly reduces image height.
+      if (!portrait) {
+        // Resolve header wrapping before opening, then retain the same frame
+        // for every slide. The widest photo controls landscape width.
+        for (let attempt=0;attempt<16;attempt++) {
+          dialog.style.width=`${Math.floor(width)}px`;
+          const imageHeight=Math.max(1,maxH-padding-flowHeight(header)-extra());
+          const nextWidth=Math.min(maxW,Math.max(padding+1,imageHeight*widest+padding));
+          if (Math.abs(nextWidth-width)<1) { width=nextWidth; break; }
+          width=nextWidth;
+        }
+      }
       dialog.style.width=`${Math.floor(width)}px`;
       const available=Math.max(1,maxH-padding-flowHeight(header)-extra());
       const frameHeight=portrait ? Math.min((Math.floor(width)-padding)/tallest,available) : available;

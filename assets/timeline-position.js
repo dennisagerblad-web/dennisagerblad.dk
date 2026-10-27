@@ -7,7 +7,8 @@ const sourceText = node => (window.DennisLanguage?.sourceText(node) || node?.tex
 function entryForNode(node) {
   const date = node.querySelector('time')?.getAttribute('datetime');
   const title = sourceText(node.querySelector('.life-description'));
-  return timelineEntries.find(entry => entry.date === date && (entry.title === title || entry.shortTitle === title));
+  const category = sourceText(node.querySelector('.life-category'));
+  return timelineEntries.find(entry => entry.date === date && entry.category === category && (entry.title === title || entry.shortTitle === title));
 }
 function eventForEntry(shell, entry) {
   return [...shell.querySelectorAll('.life-event')].find(node => entryForNode(node) === entry);
