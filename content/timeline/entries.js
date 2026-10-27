@@ -1663,15 +1663,6 @@ export const timelineEntries = [
     ]
   },
   {
-    "date": "2018-07-01",
-    "display": "01.07.2018",
-    "year": 2018,
-    "category": "Optræden",
-    "title": "Med Florince og flasker til Kønspolitisk Mekodigrandprix, Bøssehuset",
-    "group": "live",
-    "href": null
-  },
-  {
     "date": "2018-06-03",
     "display": "03.06.2018",
     "year": 2018,
@@ -1966,7 +1957,9 @@ export const timelineEntries = [
     "year": 2017,
     "display": "10.05.2017",
     "thumbnail": "./archive/timeline/performance/2017-05-10-01.webp",
-    "thumbnailPreview": "./assets/timeline-thumbs/0f9aae0cef554145.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/0f9aae0cef554145.webp",
+    "videoId": "W1A7KyZAXjQ",
+    "videoTitle": "Blomster"
   },
   {
     "date": "2017-05-08",
@@ -2007,7 +2000,9 @@ export const timelineEntries = [
     "thumbnailFit": "contain",
     "shareAliases": [
       "2017-04-01|Liveoptræden|Duet med Hairwerk med sangen Blomser til Kønspolitisk Mekodigrandprix, Bøssehuset"
-    ]
+    ],
+    "videoId": "W1A7KyZAXjQ",
+    "videoTitle": "Blomster"
   },
   {
     "date": "2017-03-30",
@@ -2220,8 +2215,7 @@ export const timelineEntries = [
       "./archive/facebook-20261025/1160918293981044.jpg",
       "./archive/facebook-20261025/1160918247314382.jpg",
       "./archive/facebook-20261025/1160918253981048.jpg"
-    ],
-    "videoAfterImages": true
+    ]
   },
   {
     "date": "2016-07-06",
@@ -2433,10 +2427,10 @@ export const timelineEntries = [
       "På billederne ses: Chantal Al Arab."
     ],
     "images": [
+      "./archive/facebook-20261025/985391701533705.jpg",
       "./archive/facebook-20261025/985384834867725.jpg",
       "./archive/facebook-20261025/985383881534487.jpg",
       "./archive/facebook-20261025/985392001533675.jpg",
-      "./archive/facebook-20261025/985391701533705.jpg",
       "./archive/facebook-20261025/985391528200389.jpg",
       "./archive/facebook-20261025/985391411533734.jpg",
       "./archive/facebook-20261025/985390984867110.jpg",
@@ -2454,8 +2448,8 @@ export const timelineEntries = [
       "./archive/facebook-20261025/985382678201274.jpg",
       "./archive/facebook-20261025/985382304867978.jpg"
     ],
-    "thumbnail": "./archive/facebook-20261025/985384834867725.jpg",
-    "thumbnailPreview": "./assets/facebook-thumbs/985384834867725.webp",
+    "thumbnail": "./archive/facebook-20261025/985391701533705.jpg",
+    "thumbnailPreview": "./assets/facebook-thumbs/985391701533705.webp",
     "thumbnailFit": "contain"
   },
   {
@@ -3085,7 +3079,6 @@ export const timelineEntries = [
     "details": "Jeg sang Straight World Order.",
     "videoId": "iP4osFcJ4gI",
     "videoTitle": "Straight World Order - Dennis Agerblad",
-    "videoAfterImages": true,
     "popupParagraphs": [
       "Jeg sang Straight World Order.",
       "På billederne ses: Delores Duchess LaCour og Moma Van Vest (Knud Vesterskov)."
@@ -3267,7 +3260,6 @@ export const timelineEntries = [
     "creditPrefix": "Fotos:",
     "videoId": "6yDZTMn4AtQ",
     "videoTitle": "Lesbisk Sadist – musikvideo",
-    "videoAfterImages": true,
     "thumbnailFit": "contain"
   },
   {
@@ -3467,7 +3459,6 @@ export const timelineEntries = [
     "creditPrefix": "Fotos:",
     "videoId": "5egu-7Rnq5U",
     "videoTitle": "Svans – musikvideo",
-    "videoAfterImages": true,
     "popupParagraphs": [
       "Jeg vandt med sangen svans. På scenen havde jeg Rune og Uffe med, kun iklædt sko. Ramona Macho var værtinde. På billederne ses Aupair Outrair, Hairværk Hugh Mongous & Blomst, Mikkeline, Mono & Polly, Tutu Wanna, Lyserødt Undertøj, Lotte og pigerne, Michael Netschajeff samt Ariel, Yasmín og Gitte Plass med flere."
     ],
@@ -4100,7 +4091,6 @@ export const timelineEntries = [
     ],
     "videoId": "K73sDChiHUw",
     "videoTitle": "Det samme som mig – musikvideo",
-    "videoAfterImages": true,
     "details": "Jeg skulle på teambuilding med mit arbejde. Vi var det japanske hold. Jeg kedede mig og tænkte, jeg tror lige jeg laver en musikvideo og så instruerede jeg mine kolleger.",
     "popupParagraphs": [
       "Jeg skulle på teambuilding med mit arbejde. Vi var det japanske hold. Jeg kedede mig og tænkte, jeg tror lige jeg laver en musikvideo og så instruerede jeg mine kolleger."
