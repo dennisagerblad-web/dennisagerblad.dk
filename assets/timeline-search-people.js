@@ -172,11 +172,9 @@ export const timelinePerformers = [
   },
   {
     "id": "danny-boy",
-    "name": "Danny Boy (Daniel Svanberg Bøtcher)",
+    "name": "Daniel Svandberg Bøtcher",
     "aliases": [
-      "Danny Boy",
-      "Daniel Svanberg Bøtcher",
-      "Danny Boy (Daniel Svanberg Bøtcher)"
+      "Daniel Svandberg Bøtcher"
     ]
   },
   {
@@ -271,9 +269,9 @@ export const timelinePerformers = [
   },
   {
     "id": "bjarne-pigen",
-    "name": "Bjarne Pigen",
+    "name": "Bjarnepigen",
     "aliases": [
-      "Bjarne Pigen"
+      "Bjarnepigen"
     ]
   },
   {
@@ -593,9 +591,9 @@ export const timelinePerformers = [
   },
   {
     "id": "trine-trasch",
-    "name": "Trine Trasch",
+    "name": "Trine Trash",
     "aliases": [
-      "Trine Trasch"
+      "Trine Trash"
     ]
   },
   {

@@ -14,9 +14,11 @@ const assert=require('node:assert/strict');const fs=require('node:fs');
  });
  const search=q=>results.map(r=>match(r,parse(q))).filter(Boolean);
  for(const p of timelinePerformers)for(const alias of p.aliases)assert.ok(parse(alias).people.includes(p.id),alias);
- for(const aliases of [['Danny Boy','Daniel Svanberg Bøtcher'],['Moma Van Vest','Knud Vesterskov'],['Florence','Florince','Florance'],['Hairwerk Hugh Mongues','Hairwerk Hugh Mongous']]) {
+ for(const aliases of [['Moma Van Vest','Knud Vesterskov'],['Florence','Florince','Florance'],['Hairwerk Hugh Mongues','Hairwerk Hugh Mongous']]) {
   const titles=aliases.map(q=>search(q).map(r=>r.entry.title));assert.ok(titles[0].length);titles.forEach(t=>assert.deepEqual(t,titles[0]));
  }
+ assert.ok(search('Daniel Svandberg Bøtcher').some(r=>r.matchedImages.length),'Owner-confirmed current name');
+ for(const old of ['DSB','Danny Boy'])assert.equal(search(old).length,0,'Removed name must not remain searchable: '+old);
  assert.ok(search('Tove Hansen').some(r=>r.matchedImages.length));
  assert.ok(search('Gina La Mirage').some(r=>r.matchedImages.length));
  assert.deepEqual(search('flo').map(r=>r.entry.title),search('Florence').map(r=>r.entry.title));
