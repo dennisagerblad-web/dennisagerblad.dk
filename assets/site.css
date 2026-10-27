@@ -387,3 +387,26 @@
   .performance-viewer:not(.release-viewer) .gallery-controls button{position:absolute}
   .performance-viewer:not(.release-viewer) .gallery-controls button:last-child{right:calc(max(180px,30vw) + 28px)}
 }
+
+/* Performance: use the open header space for the introduction on desktop. */
+.section-2 .archive .performance-header-intro{display:none}
+@media (min-width:1101px), (min-width:761px) and (min-height:651px){
+ .section-2 .archive .section-heading{
+  position:relative;top:auto;right:auto;left:auto;
+  display:grid;grid-template-columns:clamp(250px,30vw,380px) minmax(0,1fr);
+  align-items:start;gap:24px;width:92vw;flex:0 0 auto;margin:12px 0 8px;
+ }
+ .section-2 .archive .section-heading h1{width:100%;min-width:0}
+ .section-2 .archive .performance-header-intro{
+  box-sizing:border-box;display:block;position:relative;isolation:isolate;
+  width:100%;max-width:760px;min-width:0;margin:0;padding:36px 78px 40px;
+  background:url("./video-bubble-right.png") center/100% 100% no-repeat;
+  color:#251a12;font:400 clamp(19px,2.2vw,24px)/1.18 "Caveat Timeline","Bradley Hand",cursive;
+  text-align:center;text-shadow:none;text-wrap:balance;overflow-wrap:normal;
+ }
+ .section-2 .archive .scrolling-intro{display:none}
+ .section-2 .archive-layout{height:auto;flex:1 1 auto;min-height:0}
+ .section-2 .archive-scroll{padding-top:8px}
+}
+/* Photo captions follow a left-aligned reading edge in every orientation. */
+.performance-viewer:not(.release-viewer) figure figcaption{width:100%;text-align:left}

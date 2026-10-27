@@ -7545,12 +7545,6 @@
       ],
       "description": "Sort-hvidt portræt med lys paryk, stor ørering, halskæde og mørk øjenmakeup. På billedet ses Dennis Agerblad."
     },
-    "./archive/facebook-20261025/823699761036234.jpg": {
-      "people": [
-        "dennis"
-      ],
-      "description": "Mørkt sort-hvidt portræt med pageparyk, store briller og sort trøje. På billedet ses Dennis Agerblad."
-    },
     "./archive/facebook-20261025/431907902273244.jpg": {
       "people": [
         "dennis"
@@ -9980,6 +9974,12 @@
     "./archive/facebook-20261025/985382304867978.jpg": {
       "people": [],
       "description": "Person med lys paryk og store pink solbriller har åben mund."
+    },
+    "./archive/performance-quality-20261027/97.jpg": {
+      "people": [
+        "dennis"
+      ],
+      "description": "Mørkt sort-hvidt portræt med pageparyk, store briller og sort trøje. På billedet ses Dennis Agerblad."
     }
   },
   "entries": {}

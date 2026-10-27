@@ -17870,14 +17870,6 @@
         "wig:present"
       ]
     },
-    "./archive/facebook-20261025/823699761036234.jpg": {
-      "reviewed": true,
-      "subject": "dennis",
-      "tags": [
-        "glasses:present",
-        "wig:present"
-      ]
-    },
     "./archive/facebook-20261025/431907902273244.jpg": {
       "reviewed": true,
       "subject": "dennis",
@@ -18316,6 +18308,14 @@
       "subject": "dennis",
       "tags": [
         "glasses:present"
+      ]
+    },
+    "./archive/performance-quality-20261027/97.jpg": {
+      "reviewed": true,
+      "subject": "dennis",
+      "tags": [
+        "glasses:present",
+        "wig:present"
       ]
     }
   }
