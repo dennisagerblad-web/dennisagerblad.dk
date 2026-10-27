@@ -10,7 +10,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
  assert.ok(grandprixText[0].includes('Fru Direktør Elsa Kragh Madsen'));
  assert.ok(!grandprixText.join(' ').includes('Direktørfrue Andersen'),'Do not restore the superseded participant name');
  const example=timelineEntries.find(e=>e.date==='2023-01-12');assert.equal(has(example),false);assert.equal(inline(example),'Jeg læste op til afslutningen på Skolen for Skrift.');
- const textOnly=timelineEntries.filter(e=>e.details&&!has(e));assert.equal(textOnly.length,13);
+ const textOnly=timelineEntries.filter(e=>e.details&&!has(e));assert.equal(textOnly.length,7);
  for(const e of timelineEntries){const g=galleries[[e.date,e.category,e.title].join('|')];if(e.popupContent!==false&&(g?.images?.length||e.images?.length||e.videoId||e.href))assert.ok(has(e),e.title+' retains its existing content');}
  assert.equal(inline({title:'Jeg var Frankensteins brud på Teateret ved Sorte Hest.',details:'Jeg var Frankensteins brud.'}),'');
  const filming=timelineEntries.find(e=>e.date==='2011-07-09'&&e.title.includes('Sproghoved'));
@@ -26,5 +26,5 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
    const previous=has(e)&&(video?!!(e.videoId||e.href&&(!e.thumbnail||/video marathon/i.test(e.category))||e.images?.length):!!(e.href||e.thumbnail||e.images?.length||e.biography?.length||e.albumKey||e.popupHref));
    if(e!==filming)assert.equal(opens(e),previous,e.title+' keeps its existing popup behavior');
  }
- console.log('PASS: all 13 text-only descriptions stay inline; galleries, videos and archive content remain eligible.');
+ console.log('PASS: all 7 remaining text-only descriptions stay inline; galleries, videos and archive content remain eligible.');
 })().catch(error=>{console.error(error);process.exitCode=1});

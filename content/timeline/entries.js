@@ -44,9 +44,9 @@ export const timelineEntries = [
     "title": "Olajudstillingen, Tórshavn, Færøerne.",
     "group": "art",
     "href": null,
-    "details": "Jeg udstillede disse 3 ting. Alt blev solgt. Bollafad til 1.500 kr. - Pisskop ikke til salg. - Transpot til 1.200 kr. - Tallerken til 700 kr.",
+    "details": "Jeg udstillede disse 4 ting. Alt blev solgt. Bollafad til 1.500 kr. - Pisskop ikke til salg. - Transpot til 1.200 kr. - Tallerken til 700 kr.",
     "popupParagraphs": [
-      "Jeg udstillede disse 3 ting. Alt blev solgt. Bollafad til 1.500 kr. - Pisskop ikke til salg. - Transpot til 1.200 kr. - Tallerken til 700 kr."
+      "Jeg udstillede disse 4 ting. Alt blev solgt. Bollafad til 1.500 kr. - Pisskop ikke til salg. - Transpot til 1.200 kr. - Tallerken til 700 kr."
     ],
     "images": [
       "./archive/facebook-20261025/1710221007775254.jpg",
@@ -189,7 +189,6 @@ export const timelineEntries = [
         "label": "Hør interviewet hos Kringvarp Føroya"
       }
     },
-    "galleryEffect": "Contrast",
     "popupHref": "https://kvf.fo/ljod/sending/leitisstein?sid=200676",
     "popupLabel": "Hør interviewet hos Kringvarp Føroya",
     "popupParagraphs": [
@@ -999,9 +998,9 @@ export const timelineEntries = [
     "title": "Nordic Music Days, Tórshavn, Færøerne.",
     "group": "art",
     "href": null,
-    "details": "Inspireret af mine tekster til det færøske band maður:glotti komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg, hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed.",
+    "details": "Inspireret af mine tekster til det færøske band maður:glotti komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg om teksterne, om hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed.",
     "popupParagraphs": [
-      "Inspireret af mine tekster til det færøske band maður:glotti komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg, hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed."
+      "Inspireret af mine tekster til det færøske band maður:glotti komponerede Tan Tuan Hao Charlie ny musik, som blev opført ved en privat koncert med bratsch, kontrabas, slagtøj og sang. Her står jeg med den færøske tenor Ernst Dalsgarð. Efter koncerten fortalte jeg om teksterne, om hvordan jeg som homoseksuel i det skjulte brugte naturbilleder til at skrive om kærlighed."
     ],
     "thumbnail": "./archive/timeline/art/2021-09-04-nordic-music-days.webp",
     "thumbnailPreview": "./assets/timeline-thumbs/489d5b0a135d480d.webp",

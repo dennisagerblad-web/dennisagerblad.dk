@@ -1,11 +1,11 @@
-import {loadTimelineImage} from './timeline-image-loading.js?v=20261027-facebook-reviewed-1';
+import {loadTimelineImage} from './timeline-image-loading.js?v=20261027-shared-popup-1';
 /* Named timeline effects: Grow, Paint, Morph and Contrast.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
    See timeline-gallery-LICENSE.txt. No UI Initiative code is included. */
-import { timelineDate } from './timeline-ui.js?v=20261027-facebook-reviewed-1';
+import { timelineDate } from './timeline-ui.js?v=20261027-shared-popup-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
-import { timelineEntries } from '../content/timeline/entries.js?v=20261027-facebook-reviewed-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261027-shared-popup-1';
 import { timelinePopupParagraphs, timelinePopupGroup, timelineGalleryDetails } from './timeline-popup-content.js?v=20261022-popup-texts-1';
 let dataPromise;
 let closeActive;
@@ -17,9 +17,9 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=20261027-facebook-reviewed-1',
-  '../content/timeline/image-metadata.json?v=20261027-facebook-reviewed-1',
-  '../content/timeline/popup-content.json?v=20261027-facebook-reviewed-1',
+  '../content/timeline/galleries.json?v=20261027-shared-popup-1',
+  '../content/timeline/image-metadata.json?v=20261027-shared-popup-1',
+  '../content/timeline/popup-content.json?v=20261027-shared-popup-1',
 ].map(async (path,index) => {
   for (let attempt=0;attempt<2;attempt++) {
     try {
@@ -304,7 +304,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   const composePhoto=(image,w,h,backdrop)=>compose(image,w,h,backdrop,displayRatio);
   const searchImage=options.initialImage || (requestedSearchImage?.key===`${entry.date}|${entry.category}|${entry.title}` && requestedSearchImage.expires>Date.now() ? requestedSearchImage.src : null);
   requestedSearchImage=null;
-  const effectName=Object.hasOwn(galleryEffects,entry.galleryEffect) ? entry.galleryEffect : timelineEffects[group] || 'Grow';
+  const effectName=timelineEffects[group] || 'Grow';
   const palettes={music:'#123d50',live:'#410c12',art:'#452c0c',word:'#34203f',press:'#2b2828'};
   theme={'--timeline-deep':palettes[group] || '#171719',...theme};
   const opener = document.activeElement;
@@ -348,7 +348,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   let closed = false, index = 0, items = [], media = {}, descriptions = [], composites = {}, related = {}, drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
   let scene = null, drag = null, paused = options.autoplay===false || !!searchImage, rotationPointerPaused = null;
-  let mobileLayoutKey;
+  let layoutKey, contentReady=false;
   const zoom = attachPinchZoom(stage, (scale,x,y) => {
     zoomImage.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
     stage.classList.toggle('is-zoomed', scale > 1.01);
@@ -403,77 +403,52 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     if (closed) return;
     const vh=window.visualViewport?.height || innerHeight, vw=document.documentElement.clientWidth;
     const compact=mobile.matches, portrait=portraitMobile.matches;
-    const padding=40;
-    if (!items.length) {
-      const margin=compact?(portrait?16:20):32;
-      const maxH=vh-margin*2;
-      dialog.style.width=`${Math.floor(Math.min(vw-margin*2,compact?1200:900))}px`;
-      dialog.style.height=''; dialog.style.maxHeight=`${maxH}px`;
-      header.style.maxHeight=`${Math.floor(maxH*(dialog.querySelector('.video-frame') ? .5 : .85))}px`;
-      header.style.overflow='auto';
-      for (const frame of dialog.querySelectorAll('.video-frame')) {
-        const available=Math.max(100,maxH-padding-header.getBoundingClientRect().height-60);
-        frame.style.width=`min(100%,${Math.floor(available*16/9)}px)`;
-        frame.style.marginLeft=frame.style.marginRight='auto';
+    // The same layout applies to every entry and tab. Once populated, only a
+    // viewport-width/orientation change may change the popup's outer frame.
+    const key=`${vw}:${compact}:${portrait}`;
+    if (contentReady && layoutKey===key) return;
+    const padding=40, margin=compact ? (portrait ? 16 : 20) : 32;
+    const maxH=vh-margin*2, maxW=Math.min(vw-margin*2,1200);
+    const videos=[...dialog.querySelectorAll('.video-frame')];
+    const hasMedia=items.length>0 || videos.length>0;
+    const ratios=mobileGalleryRatios(items,media);
+    const widest=videos.length ? Math.max(items.length ? ratios.widest : 0,16/9) : ratios.widest;
+    const tallest=videos.length ? Math.min(items.length ? ratios.tallest : 16/9,16/9) : ratios.tallest;
+    header.style.maxHeight=`${Math.floor(hasMedia ? maxH*.34 : maxH-padding)}px`;
+    header.style.overflow='auto';
+    const flowHeight=node=>{
+      const style=getComputedStyle(node);
+      if (style.position==='absolute' || style.position==='fixed' || style.display==='none') return 0;
+      return node.getBoundingClientRect().height+(parseFloat(style.marginTop)||0)+(parseFloat(style.marginBottom)||0);
+    };
+    let width=hasMedia ? maxW : Math.min(maxW,compact ? 1200 : 900);
+    if (hasMedia && !portrait) {
+      for (let attempt=0;attempt<16;attempt++) {
+        dialog.style.width=`${Math.floor(width)}px`;
+        const available=Math.max(1,maxH-padding-flowHeight(header));
+        const nextWidth=Math.min(maxW,Math.max(compact ? padding+1 : 360,available*widest+padding));
+        if (Math.abs(nextWidth-width)<1) { width=nextWidth; break; }
+        width=nextWidth;
       }
-      return;
-    }
-    if (compact) {
-      // Safari toolbar movement and image loading cannot resize an open popup.
-      // Rotation changes the viewport width and receives a fresh calculation.
-      const key=`${vw}:${portrait}`;
-      if (mobileLayoutKey===key) return;
-      mobileLayoutKey=key;
-      const margin=portrait ? 16 : 20;
-      const maxW=vw-margin*2, maxH=vh-margin*2;
-      const {tallest,widest}=mobileGalleryRatios(items,media);
-      header.style.maxHeight=`${Math.floor(maxH*.34)}px`;
-      header.style.overflow='auto';
-      const flowHeight=node=>{
-        const style=getComputedStyle(node);
-        if (style.position==='absolute' || style.position==='fixed' || style.display==='none') return 0;
-        return node.getBoundingClientRect().height+(parseFloat(style.marginTop)||0)+(parseFloat(style.marginBottom)||0);
-      };
-      const extra=()=>[...dialog.children].filter(node=>node!==header && node!==viewer && node!==actions).reduce((sum,node)=>sum+flowHeight(node),0);
-      let width=maxW;
-      if (!portrait) {
-        // Resolve header wrapping before opening, then retain the same frame
-        // for every slide. The widest photo controls landscape width.
-        for (let attempt=0;attempt<16;attempt++) {
-          dialog.style.width=`${Math.floor(width)}px`;
-          const imageHeight=Math.max(1,maxH-padding-flowHeight(header)-extra());
-          const nextWidth=Math.min(maxW,Math.max(padding+1,imageHeight*widest+padding));
-          if (Math.abs(nextWidth-width)<1) { width=nextWidth; break; }
-          width=nextWidth;
-        }
-      }
-      dialog.style.width=`${Math.floor(width)}px`;
-      const available=Math.max(1,maxH-padding-flowHeight(header)-extra());
-      const frameHeight=portrait ? Math.min((Math.floor(width)-padding)/tallest,available) : available;
-      stage.style.height=`${frameHeight}px`;
-      stage.style.aspectRatio='auto';
-      const belowImages=viewer.querySelector('.tg-video-after-images');
-      const belowHeight=belowImages ? flowHeight(belowImages) : 0;
-      const portraitHeight=padding+flowHeight(header)+extra()+frameHeight;
-      dialog.style.height=`${portrait ? (belowImages ? Math.min(maxH,portraitHeight+belowHeight) : portraitHeight) : maxH}px`;
-      dialog.style.maxHeight=`${maxH}px`;
-      return;
-    }
-    mobileLayoutKey=null;
-    header.style.maxHeight=''; header.style.overflow='';
-    dialog.style.height=''; dialog.style.maxHeight=''; stage.style.height=''; stage.style.aspectRatio='';
-    const margin=32, maxW=Math.min(vw-margin*2,1200);
-    const ratio=galleryRatio(items,media,vw/vh);
-    let width=maxW;
-    for(let i=0;i<8;i++) {
-      dialog.style.width=`${width}px`;
-      const available=Math.max(1,vh-margin*2-padding-header.getBoundingClientRect().height-20);
-      const nextWidth=Math.min(maxW,Math.max(360,available*ratio+padding));
-      if(Math.abs(nextWidth-width)<1) break;
-      width=nextWidth;
     }
     dialog.style.width=`${Math.floor(width)}px`;
-    dialog.style.setProperty('--tg-ratio',String(ratio));
+    const available=Math.max(1,maxH-padding-flowHeight(header));
+    if (items.length) {
+      // Each media area fits the available height. Stacked videos and photos
+      // scroll inside the same popup; they cannot squeeze its width to zero.
+      const imageRatio=galleryRatio(items,media);
+      const frameHeight=portrait ? Math.min((Math.floor(width)-padding)/tallest,available)
+        : compact ? available : Math.min((Math.floor(width)-padding)/imageRatio,available);
+      stage.style.height=`${frameHeight}px`; stage.style.aspectRatio='auto';
+    }
+    for (const video of videos) {
+      video.style.width=`min(100%,${Math.floor(available*16/9)}px)`;
+      video.style.marginLeft=video.style.marginRight='auto';
+    }
+    const contentHeight=padding+[...dialog.children].reduce((sum,node)=>sum+flowHeight(node),0);
+    dialog.style.height=`${compact && !portrait && hasMedia ? maxH : Math.min(maxH,contentHeight)}px`;
+    dialog.style.maxHeight=`${maxH}px`;
+    if (contentReady) layoutKey=key;
   }
   function size() {
     const r = stage.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1,2);
@@ -687,9 +662,8 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     if (!drawing || drawing.width !== w || drawing.height !== h) render();
   }); observer.observe(stage);
   const headerObserver = new ResizeObserver(() => {
-    // Presse articles/mastheads can change header height after loading. Keep
-    // their image inside the popup so its close button remains in view.
-    mobileLayoutKey=null;
+    // Updated copy or loaded media may require repainting, but must not resize
+    // a popup that is already open.
     resize();
   }); headerObserver.observe(header);
   function link(label, href) {
@@ -718,7 +692,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       if (markup && (markup.match(/<[^>]+>/g) || []).every(tag=>/^<\/?(?:strong|em)>$/.test(tag))) node.innerHTML=markup;
       return node;
     };
-    const longCopy = entry.date !== '2012-10-12' && paragraphs.join(' ').length > 700 && paragraphs.length > 1;
+    const longCopy = paragraphs.join(' ').length > 700 && paragraphs.length > 1;
     if (longCopy) {
       details.append(paragraph(paragraphs[0]));
       const more = el('details','tg-more'); more.append(el('summary','',group==='press'?(window.DennisLanguage?.current==='en'?'Read the full text':'Læs hele teksten'):'Læs mere om arrangementet'));
@@ -784,6 +758,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       });
       footer.append(nav);viewer.append(footer);
     }
+    contentReady=true;
     if (items.length) {
       previous.hidden=next.hidden=items.length<2; rotation.hidden=items.length<2; updateRotation();
       layout(); render();
