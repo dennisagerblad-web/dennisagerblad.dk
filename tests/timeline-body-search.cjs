@@ -40,7 +40,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
  const additions=JSON.parse(fs.readFileSync('docs/timeline-body-search-review-20261015.json'));
  const latest=JSON.parse(fs.readFileSync('docs/timeline-body-search-review-20261017.json'));
  for(const photo of additions.photos) assert.ok(shared.includes(photo.src),'Requested image matches: '+photo.src);
- assert.equal(new Set(shared).size,46,'Preserve confirmed collection and include the newly confirmed Strikkeklub poster');
+ assert.equal(new Set(shared).size,49,'Preserve confirmed collection, Strikkeklub poster, and three reviewed Facebook stage photos');
  for(const photo of latest.photos) assert.ok(shared.includes(photo.src),'Owner screenshot: '+photo.src);
  assert.deepEqual(anatomy[latest.photos[0].src][0].tags,['costume:testicles'],'Index artificial testicles as costume, not anatomy');
  const birthday='./archive/timeline/performance/2015-04-10-04.webp';
