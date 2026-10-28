@@ -154,7 +154,12 @@
       image.dataset.danishSrc = image.getAttribute('src');
     }
     const source = language === 'en' ? new URL(`menu-fast/en/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
-    if (image.getAttribute('src') !== source) image.setAttribute('src', source);
+    if (image.getAttribute('src') !== source) {
+      const currentURL=new URL(image.getAttribute('src'),document.baseURI),targetURL=new URL(source,document.baseURI);
+      // Keep a cache-busted retry of this artwork; a real language change still replaces it.
+      const recovering=currentURL.searchParams.has('timeline-image-retry') && currentURL.origin===targetURL.origin && currentURL.pathname===targetURL.pathname;
+      if(!recovering)image.setAttribute('src', source);
+    }
     const button = image.closest('.menu-point');
     if (button && button.dataset.accentLanguage !== language) {
       button.dataset.accentLanguage = language;
