@@ -410,3 +410,17 @@
 }
 /* Photo captions follow a left-aligned reading edge in every orientation. */
 .performance-viewer:not(.release-viewer) figure figcaption{width:100%;text-align:left}
+
+/* Desktop only: retain the owner's bubble artwork and fit it beside the speaker. */
+@media (min-width:761px) and (min-height:651px){
+ .section-2 .archive .section-heading{
+  min-height:clamp(140px,calc(24.5833vh - 22px),225px);
+ }
+ .section-2 .archive .performance-header-intro{
+  position:absolute;
+  width:min(520px,46vw);max-width:520px;
+  left:calc(max(73.125vw,calc(50vw + 41.1111vh)) - 4vw - min(520px,46vw));
+  top:clamp(0px,calc(24.5833vh - 168px),85px);
+  margin:0;padding:26px 48px 30px;
+ }
+}
