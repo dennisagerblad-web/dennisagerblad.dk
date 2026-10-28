@@ -147,13 +147,13 @@
   function updateMenu(image) {
     let word = image.dataset.languageWord;
     if (!word) {
-      const filename = new URL(image.src).pathname.split('/').at(-1).replace(/\.(png|svg)$/, '');
+      const filename = new URL(image.src).pathname.split('/').at(-1).replace(/\.(png|svg|webp)$/, '');
       word = Object.keys(menuWords).find(word => word.toLowerCase() === filename);
       if (!word) return;
       image.dataset.languageWord = word;
       image.dataset.danishSrc = image.getAttribute('src');
     }
-    const source = language === 'en' ? new URL(`menu-imagegen/20261015/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
+    const source = language === 'en' ? new URL(`menu-fast/en/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
     if (image.getAttribute('src') !== source) image.setAttribute('src', source);
     const button = image.closest('.menu-point');
     if (button && button.dataset.accentLanguage !== language) {

@@ -298,9 +298,11 @@ function warmGalleryImages(){
   const photo=new Image();photo.decoding='async';photo.fetchPriority='low';photo.src=src;warmingPhotos.push(photo);
  }
 }
-// Start warming the gallery's local photos during the initial page load so
-// opening Kunst does not first compete for every room image on the user's click.
-warmGalleryImages();
+// Prewarm only when the visitor intends to enter Kunst. Initial menu and
+// Timeline requests must not compete with photos from every gallery room.
+for(const type of ['pointerover','focusin']) document.addEventListener(type,event=>{
+ if(event.target.closest?.('.menu-4'))warmGalleryImages();
+},{passive:true});
 let nextGalleryYield=0;
 async function yieldGalleryWork(){
  if(performance.now()<nextGalleryYield)return;
