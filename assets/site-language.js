@@ -153,7 +153,7 @@
       image.dataset.languageWord = word;
       image.dataset.danishSrc = image.getAttribute('src');
     }
-    const source = language === 'en' ? new URL(`menu-fast/en/${menuFiles[word]}`, siteRoot).href : image.dataset.danishSrc;
+    const source = language === 'en' ? new URL(`menu-fast/en/${menuFiles[word]}?v=20261029-original-pixels-1`, siteRoot).href : image.dataset.danishSrc;
     if (image.getAttribute('src') !== source) {
       const currentURL=new URL(image.getAttribute('src'),document.baseURI),targetURL=new URL(source,document.baseURI);
       // Keep a cache-busted retry of this artwork; a real language change still replaces it.

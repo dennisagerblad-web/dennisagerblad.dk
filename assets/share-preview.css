@@ -15,3 +15,15 @@
 
 /* Align the visible arrow and uppercase text with the optical centre of ×. */
 .site-share-button > svg,.site-share-button > span {transform:translateY(3px);}
+
+/* Shared Timeline top row; 20px refers to the visible ×, inside its 44px hit area. */
+.timeline-overlay :is(.timeline-popup,.tg-dialog) :is(.timeline-popup-date,.tg-date){padding-right:122px;}
+.timeline-overlay :is(.timeline-popup,.tg-dialog) h2{padding-right:0;}
+/* Keep the existing sticky control wrapper when the dialog scrolls. */
+.timeline-overlay .tg-actions .tg-close{top:-17px;right:-14px;}
+.timeline-overlay .tg-actions .site-share-button{top:-17px;right:38px;}
+.timeline-overlay .timeline-popup :is(.timeline-popup-close,.site-share-button){top:3px;}
+.timeline-overlay .timeline-popup .timeline-popup-close{right:6px;}
+.timeline-overlay .timeline-popup .site-share-button{right:58px;}
+.timeline-overlay .tg-actions .site-share-panel{top:35px;right:0;}
+.timeline-overlay .timeline-popup .site-share-panel{top:55px;}
