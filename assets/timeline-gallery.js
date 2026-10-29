@@ -1,3 +1,4 @@
+import {readTimelinePhotoShare,timelineEntryKey} from './timeline-share-state.js?v=20261029-photo-share-1';
 import {loadTimelineImage} from './timeline-image-loading.js?v=20261027-performance-quality-1';
 /* Named timeline effects: Grow, Paint, Morph and Contrast.
    Paint adapted from paniq's MIT-licensed GL Transitions shader.
@@ -302,7 +303,9 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   const proportion=String(entry.archiveImageAspectRatio || '').split('/').map(Number);
   const displayRatio=proportion.length===2 && proportion.every(value=>value>0) ? proportion[0]/proportion[1] : undefined;
   const composePhoto=(image,w,h,backdrop)=>compose(image,w,h,backdrop,displayRatio);
-  const searchImage=options.initialImage || (requestedSearchImage?.key===`${entry.date}|${entry.category}|${entry.title}` && requestedSearchImage.expires>Date.now() ? requestedSearchImage.src : null);
+  const sharedSelection=readTimelinePhotoShare(location.search,entry);
+  const explicitImage=options.initialImage || (requestedSearchImage?.key===timelineEntryKey(entry) && requestedSearchImage.expires>Date.now() ? requestedSearchImage.src : null);
+  const searchImage=explicitImage || sharedSelection?.image;
   requestedSearchImage=null;
   const effectName=timelineEffects[group] || 'Grow';
   const palettes={music:'#123d50',live:'#410c12',art:'#452c0c',word:'#34203f',press:'#2b2828'};
@@ -317,6 +320,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   Object.entries(theme).forEach(([key,value]) => overlay.style.setProperty(key,value));
   const dialog = el('section', 'tg-dialog'); dialog.setAttribute('role','dialog');
   dialog.dataset.entryDate = entry.date;
+  dialog.dataset.entryKey = timelineEntryKey(entry);
   dialog.setAttribute('aria-modal','true'); dialog.setAttribute('aria-labelledby','tg-title');
   const header = el('header', 'tg-header');
   const title = el('h2', '', entry.title); title.id = 'tg-title';
@@ -347,7 +351,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   dialog.append(actions,header,viewer); overlay.append(dialog); document.body.append(overlay);
   let closed = false, index = 0, items = [], media = {}, descriptions = [], composites = {}, related = {}, drawing = null, request = 0;
   let frame = 0, transition = null, busy = false, startTouch = null, layoutFrame=0, autoplayTimer=0;
-  let scene = null, drag = null, paused = options.autoplay===false || !!searchImage, rotationPointerPaused = null;
+  let scene = null, drag = null, paused = typeof options.autoplay==='boolean' ? !options.autoplay : explicitImage ? true : sharedSelection?.paused ?? false, rotationPointerPaused = null;
   let layoutKey, contentReady=false;
   const zoom = attachPinchZoom(stage, (scale,x,y) => {
     zoomImage.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
@@ -367,6 +371,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
   function updateRotation() {
     rotation.innerHTML='<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="white" stroke-width="2.5"/>'+(paused||reduced.matches?'<path fill="white" d="M16 11L29 20L16 29Z"/>':'<path fill="white" d="M13 11H18V29H13ZM22 11H27V29H22Z"/>')+'</svg>';
     rotation.dataset.state=paused||reduced.matches?'paused':'playing';
+    dialog.dataset.galleryPaused=String(paused||reduced.matches);
     rotation.setAttribute('aria-label',reduced.matches?'Automatiske billedskift er slået fra ved reduceret bevægelse':paused?'Start automatiske billedskift':'Sæt automatiske billedskift på pause');
     rotation.disabled=reduced.matches;
     announcement.setAttribute('aria-live',paused?'polite':'off');
@@ -463,6 +468,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       const [left,top,width,height]=containRect(displayRatio,1,rect.width,rect.height);
       Object.assign(zoomImage.style,{inset:'auto',left:`${left}px`,top:`${top}px`,width:`${width}px`,height:`${height}px`,objectFit:'fill'});
     }
+    dialog.dataset.galleryImage=items[index] || '';
     const description=descriptions[index] || media[items[index]]?.description;
     poster.setAttribute('aria-label',`${typeof description==='string' && description.trim() ? description.trim() : title.textContent} — billede ${index+1} af ${items.length}`);
   }

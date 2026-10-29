@@ -1,7 +1,7 @@
 import { timelineEntries } from '../content/timeline/entries.js?v=20261027-performance-quality-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261027-performance-quality-1';
 
-import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261027-performance-quality-1';
+import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261029-photo-share-1';
 import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261027-performance-quality-1';
 
 import {findTimelinePeople} from './timeline-search-people.js?v=20261027-performance-quality-1';

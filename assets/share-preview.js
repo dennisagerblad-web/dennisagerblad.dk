@@ -1,3 +1,5 @@
+import {timelineEntryKey,timelineShareURL} from './timeline-share-state.js?v=20261029-photo-share-1';
+import {timelinePopupGroup} from './timeline-popup-content.js?v=20261022-popup-texts-1';
 import './timeline-position.js?v=20261027-performance-quality-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261027-performance-quality-1';
 import { timelineEntries } from '../content/timeline/entries.js?v=20261027-performance-quality-1';
@@ -16,18 +18,17 @@ document.addEventListener('pointerdown', event => {
 function info(dialog) {
   const title=(window.DennisLanguage?.sourceText(dialog.querySelector('h2')) || dialog.querySelector('h2')?.textContent)?.trim();
   const date=dialog.dataset.entryDate || dialog.querySelector('time')?.getAttribute('datetime');
-  const entry=timelineEntries.find(e=>e.date===date && (e.title===title || e.shortTitle===title));
+  const entry=timelineEntries.find(e=>dialog.dataset.entryKey ? timelineEntryKey(e)===dialog.dataset.entryKey : e.date===date && (e.title===title || e.shortTitle===title));
   if(!entry)return null;
-  const group=entry.group==='media'?'press':entry.group;
-  const url=new URL('/',location.origin);
-  url.searchParams.set('opslag',[entry.date,entry.category,entry.title].join('|'));
-  url.hash=`timeline-${group}-${entry.year}`;
-  if(window.DennisLanguage?.current==='en')url.searchParams.set('lang','en');
-  return {entry,url:url.href,publicUrl:url.href};
+  const group=timelinePopupGroup(entry);
+  const image=dialog.dataset.galleryImage;
+  const url=timelineShareURL(entry,{origin:location.origin,group,language:window.DennisLanguage?.current || 'da',image,paused:dialog.dataset.galleryPaused!=='false'});
+  return {entry,url,publicUrl:url,image};
 }
 function add(dialog) {
   if(dialog.querySelector('.site-share-button'))return;
-  const details=info(dialog);if(!details)return;
+  let details=info(dialog);if(!details)return;
+  const refresh=()=>{details=info(dialog) || details;url.value=details.publicUrl;button.dataset.shareUrl=details.publicUrl;return details;};
   const button=document.createElement('button');button.type='button';button.className='site-share-button';button.innerHTML=icon+'<span>DEL</span>';button.setAttribute('aria-label','Del dette opslag');button.setAttribute('aria-expanded','false');
   const panel=document.createElement('div');panel.className='site-share-panel';panel.hidden=true;
   const heading=document.createElement('strong');heading.textContent='Del dette opslag';
@@ -35,11 +36,11 @@ function add(dialog) {
   const url=document.createElement('input');url.readOnly=true;url.value=details.publicUrl;url.setAttribute('aria-label','Link til opslaget');
   const copy=document.createElement('button');copy.type='button';copy.textContent='Kopiér link';
   const status=document.createElement('p');status.className='site-share-status';status.setAttribute('role','status');
-  copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(details.publicUrl);status.textContent='Link til denne side er kopieret';}catch{panel.insertBefore(url,copy);url.focus();url.select();status.textContent='Kopiér det markerede link';}});
+  copy.addEventListener('click',async()=>{refresh();try{await navigator.clipboard.writeText(details.publicUrl);status.textContent=details.image?'Link til det valgte billede er kopieret':'Link til denne side er kopieret';}catch{panel.insertBefore(url,copy);url.focus();url.select();status.textContent='Kopiér det markerede link';}});
   panel.append(copy);
-  if(navigator.share && matchMedia('(pointer: coarse)').matches){const native=document.createElement('button');native.type='button';native.textContent='Del via …';native.addEventListener('click',async()=>{try{await navigator.share({title:details.entry.title,url:details.publicUrl});}catch(e){if(e.name!=='AbortError')status.textContent='Brug Kopiér link i stedet';}});panel.append(native);}
+  if(navigator.share && matchMedia('(pointer: coarse)').matches){const native=document.createElement('button');native.type='button';native.textContent='Del via …';native.addEventListener('click',async()=>{refresh();try{await navigator.share({title:details.entry.title,url:details.publicUrl});}catch(e){if(e.name!=='AbortError')status.textContent='Brug Kopiér link i stedet';}});panel.append(native);}
   panel.append(status);(dialog.querySelector('.tg-actions') || dialog).append(button,panel);
-  button.addEventListener('click',event=>{const opening=panel.hidden;if(activePanel&&activePanel!==panel)closePanel();panel.hidden=!opening;button.setAttribute('aria-expanded',String(opening));activePanel=opening?panel:null;if(opening){status.textContent='';if(event.detail===0)copy.focus();}});
+  button.addEventListener('click',event=>{const opening=panel.hidden;if(activePanel&&activePanel!==panel)closePanel();panel.hidden=!opening;button.setAttribute('aria-expanded',String(opening));activePanel=opening?panel:null;if(opening){refresh();status.textContent='';if(event.detail===0)copy.focus();}});
   panel.addEventListener('keydown',event=>{if(event.key==='Escape'){event.stopPropagation();closePanel();button.focus();}});
 }
 const observer=new MutationObserver(()=>document.querySelectorAll('.timeline-popup,.tg-dialog').forEach(add));observer.observe(document.body,{childList:true,subtree:true});
