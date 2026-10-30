@@ -1,4 +1,11 @@
 (() => {
+  // Keep relative image/artwork URLs rooted at the site when pushState changes
+  // / to /tidslinje/ (or another section). Cover older cached homepage HTML too.
+  if (!document.querySelector('base[href]')) {
+    const base = document.createElement('base');
+    base.setAttribute('href', '/');
+    document.head.prepend(base);
+  }
   const sections = [
     { slug: 'musik', index: 0, da: 'Musik', en: 'Music', description: 'Sange, udgivelser og musikalske projekter af Dennis Agerblad.' },
     { slug: 'video', index: 1, da: 'Video', en: 'Video', description: 'Musikvideoer og optagelser med Dennis Agerblad.' },
