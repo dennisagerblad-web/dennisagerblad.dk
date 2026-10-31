@@ -1,4 +1,4 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261031-kunst-dunst-videos-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261031-zentropa-title-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261027-performance-quality-1';
 
 const groups = ['live', 'music', 'art', 'word', 'press'];

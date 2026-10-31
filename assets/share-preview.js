@@ -1,8 +1,8 @@
 import {timelineEntryKey,timelineShareURL} from './timeline-share-state.js?v=20261029-photo-share-1';
 import {timelinePopupGroup} from './timeline-popup-content.js?v=20261022-popup-texts-1';
-import './timeline-position.js?v=20261031-kunst-dunst-videos-1';
+import './timeline-position.js?v=20261031-zentropa-title-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261027-performance-quality-1';
-import { timelineEntries } from '../content/timeline/entries.js?v=20261031-kunst-dunst-videos-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261031-zentropa-title-1';
 const icon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v5C6 8 3 12 3 20c3-5 6-7 11-7v5l8-7z"/></svg>';
 let activePanel;
 function closePanel() {

@@ -3766,7 +3766,7 @@ export const timelineEntries = [
     "display": "22.06.2012",
     "year": 2012,
     "category": "Liveoptræden",
-    "title": "Zentropa Jubilæums fest, Zentropa, København.",
+    "title": "Filmselskabet Zentropa 20-års jubilæum, Zentropa, København",
     "group": "live",
     "href": "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/index.html",
     "thumbnail": "./archive/legacy/200_calendar/2012/2012_06_22_zentropa/02.jpg",
@@ -3774,6 +3774,9 @@ export const timelineEntries = [
     "details": "Dennis Agerblad Band holdt koncert med strygebræt og strygejern. Lars Von Trier kom op på scenen og ville synge duet med os men han var for fuld. Dennis Agerblad band var denne aften: Hairwerk Hugh Mongous, Moma Van Vest, Poul Jensen, Ann Charlot og Ninna Fedder Helsinghoff.",
     "popupParagraphs": [
       "Dennis Agerblad Band holdt koncert med strygebræt og strygejern. Lars Von Trier kom op på scenen og ville synge duet med os men han var for fuld. Dennis Agerblad band var denne aften: Hairwerk Hugh Mongous, Moma Van Vest, Poul Jensen, Ann Charlot og Ninna Fedder Helsinghoff."
+    ],
+    "shareAliases": [
+      "2012-06-22|Liveoptræden|Zentropa Jubilæums fest, Zentropa, København."
     ]
   },
   {
