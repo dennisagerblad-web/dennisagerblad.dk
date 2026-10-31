@@ -1037,6 +1037,50 @@ export const timelinePerformers = [
     "aliases": [
       "Martina"
     ]
+  },
+  {
+    "id": "zanne-mvw9ompj",
+    "name": "Zanne",
+    "aliases": [
+      "Zanne"
+    ]
+  },
+  {
+    "id": "susanne-judson-mvw9t0ms",
+    "name": "Susanne Judson",
+    "aliases": [
+      "Susanne Judson"
+    ]
+  },
+  {
+    "id": "nadja-rubin-mvw9ubz8",
+    "name": "Nadja Rubin",
+    "aliases": [
+      "Nadja Rubin"
+    ]
+  },
+  {
+    "id": "ninna-fedder-helsinghoff-mvwa30q8",
+    "name": "Ninna Fedder Helsinghoff",
+    "aliases": [
+      "Ninna Fedder Helsinghoff"
+    ]
+  },
+  {
+    "id": "master-fatman-mvwa4vt9",
+    "name": "Master Fatman",
+    "aliases": [
+      "Master Fatman"
+    ]
+  },
+  {
+    "id": "nosser-mvwa7nme",
+    "name": "Nosser",
+    "aliases": [
+      "Nosser"
+    ],
+    "explicitOnly": true,
+    "queryCaseSensitive": true
   }
 ];
 
@@ -1047,7 +1091,7 @@ export function normalizePersonName(value) {
 }
 const foldPersonText=value=>String(value ?? '').toLocaleLowerCase('da-DK').replaceAll('å','aa').replaceAll('æ','ae').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 const escapePattern=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-const aliases=timelinePerformers.flatMap(person=>person.aliases.map(alias=>({id:person.id,text:normalizePersonName(alias),explicitOnly:person.explicitOnly===true}))).sort((a,b)=>b.text.length-a.text.length);
+const aliases=timelinePerformers.flatMap(person=>person.aliases.map(alias=>({id:person.id,text:normalizePersonName(alias),caseText:alias,explicitOnly:person.explicitOnly===true,queryCaseSensitive:person.queryCaseSensitive===true}))).sort((a,b)=>b.text.length-a.text.length);
 const namePattern=text=>new RegExp(`(^|[^\\p{L}\\p{N}])${text.split(' ').map(escapePattern).join('[^\\p{L}\\p{N}]+')}(?=$|[^\\p{L}\\p{N}])`,'gu');
 export function findTimelinePeople(text) {
   const normalized=normalizePersonName(text);
@@ -1058,12 +1102,15 @@ export function extractTimelinePeopleQuery(query) {
   let text=foldPersonText(query);
   const people=[];
   for(const alias of aliases) {
+    // An explicitly ambiguous stage name keeps its written form, while the
+    // ordinary lowercase word retains its existing search meaning.
+    if(alias.queryCaseSensitive && !namePattern(alias.caseText).test(String(query))) continue;
     text=text.replace(namePattern(alias.text),(whole,boundary)=>{people.push(alias.id);return boundary+' ';});
   }
   if(people.length) return {text,people:[...new Set(people)],peopleAny:[]};
   // Preserve name suggestions while typing. A prefix matches the start of a
   // name, never a random substring or a flower description.
   const prefix=normalizePersonName(query);
-  const peopleAny=prefix.length>=3 ? [...new Set(aliases.filter(alias=>alias.text.startsWith(prefix)).map(alias=>alias.id))] : [];
+  const peopleAny=prefix.length>=3 ? [...new Set(aliases.filter(alias=>alias.text.startsWith(prefix) && (!alias.queryCaseSensitive || alias.caseText.startsWith(String(query).trim()))).map(alias=>alias.id))] : [];
   return {text:peopleAny.length ? '' : query,people:[],peopleAny};
 }

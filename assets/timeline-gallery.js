@@ -18,7 +18,7 @@ export function selectTimelineSearchImage(entry, src) {
 const assetBase = new URL('../', import.meta.url);
 const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
-  '../content/timeline/galleries.json?v=participant-review-b1aea5660b83',
+  '../content/timeline/galleries.json?v=20261031-photo-tags-r144',
   '../content/timeline/image-metadata.json?v=20261027-performance-quality-1',
   '../content/timeline/popup-content.json?v=participant-review-b1aea5660b83',
 ].map(async (path,index) => {
