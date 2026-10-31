@@ -1030,6 +1030,13 @@ export const timelinePerformers = [
     "aliases": [
       "Michael Netschajeff"
     ]
+  },
+  {
+    "id": "martina",
+    "name": "Martina",
+    "aliases": [
+      "Martina"
+    ]
   }
 ];
 

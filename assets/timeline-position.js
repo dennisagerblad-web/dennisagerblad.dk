@@ -1,4 +1,4 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261027-performance-quality-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=participant-review-b1aea5660b83';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261027-performance-quality-1';
 
 const groups = ['live', 'music', 'art', 'word', 'press'];
