@@ -6,7 +6,7 @@ import {loadTimelineImage} from './timeline-image-loading.js?v=20261027-performa
 import { timelineDate } from './timeline-ui.js?v=20261027-performance-quality-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
-import { timelineEntries } from '../content/timeline/entries.js?v=participant-review-b1aea5660b83';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261031-kunst-dunst-videos-1';
 import { timelinePopupParagraphs, timelinePopupGroup, timelineGalleryDetails } from './timeline-popup-content.js?v=20261022-popup-texts-1';
 let dataPromise;
 let closeActive;

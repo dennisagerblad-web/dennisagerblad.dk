@@ -6703,6 +6703,7 @@ export const timelineEntries = [
     "category": "Kunst",
     "title": "Kunstudstilling, Kunst i Dunst, bøssehuset, Christiania, København",
     "group": "art",
+    "videoId": "Y_DPundjHN4",
     "href": null,
     "thumbnail": "./archive/legacy/200_calendar/2003/03_07_23_kunst_i_dunst/kunst_i_dunst_04b.jpg",
     "details": "Jeg udstillede 6 kollager til Kunst i Dunst udstillingen og lavede flere performances. I haven sidder jeg med Miss Fish og The Thom.",
