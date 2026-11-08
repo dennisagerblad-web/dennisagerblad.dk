@@ -540,8 +540,9 @@ export const timelinePerformers = [
   },
   {
     "id": "povilas-bastys",
-    "name": "Povilas Bastys",
+    "name": "Miss Plastica",
     "aliases": [
+      "Miss Plastica",
       "Povilas Bastys"
     ]
   },
@@ -767,8 +768,11 @@ export const timelinePerformers = [
   },
   {
     "id": "soren-b-meisterbrau",
-    "name": "Søren B Meisterbrau",
+    "name": "Søren B. Meisterbrau",
     "aliases": [
+      "Søren B. Meisterbrau",
+      "Søren Meisterbrau",
+      "Meisterbrau",
       "Søren B Meisterbrau"
     ]
   },

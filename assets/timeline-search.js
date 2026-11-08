@@ -1,10 +1,10 @@
-import { timelineEntries } from '../content/timeline/entries.js?v=20261031-zentropa-title-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261108-reviewed-videos-1';
 import { stopTimelineMotion } from './timeline-ui.js?v=20261027-performance-quality-1';
 
-import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261031-zentropa-title-1';
-import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261031-photo-tags-r144';
+import {loadTimelineGalleryData, openTimelineGallery} from './timeline-gallery.js?v=20261108-reviewed-videos-1';
+import {normalizeTimelineSearch as normalize, parseTimelineSearchQuery, matchTimelineResult, timelineSearchResultMedia, timelineSearchNameSuggestion} from './timeline-search-match.js?v=20261108-reviewed-videos-1';
 
-import {findTimelinePeople} from './timeline-search-people.js?v=20261031-photo-tags-r144';
+import {findTimelinePeople,timelinePerformers} from './timeline-search-people.js?v=20261108-reviewed-videos-1';
 
 const labels = { live: 'Scene', music: 'Musik', art: 'Kunst', word: 'Ord', press: 'Presse' };
 const groupIcons = {
@@ -82,7 +82,8 @@ loadTimelineGalleryData().then(async data => {
     // A confirmed video association can show the existing poster without claiming
     // that the named person is the face pictured in that poster.
     const sources=gallery?.images || entry.images || (biography.length ? biography.map(part=>part.src) : entry.videoId && entry.thumbnail ? [entry.thumbnail] : []);
-    result.galleryDetails=gallery?.searchDetails || gallery?.details || [];
+    const reviewed=data.videoTexts?.[`${entry.date}|${entry.category}|${entry.title}`];
+    result.galleryDetails=reviewed ? [reviewed.text,...reviewed.videos.map(video=>video.description)].filter(Boolean) : gallery?.searchDetails || gallery?.details || [];
     result.searchable+=' '+normalize(result.galleryDetails.join(' '));
     result.images=sources.map((src,index)=>{
       const description=gallery?.imageDescriptions?.[index] || nativeDescriptions.get(sourceURL(src)) || photoPeople.get(photoIdentity(src))?.description || biography.find(part=>part.src===src)?.caption || '';
@@ -93,7 +94,14 @@ loadTimelineGalleryData().then(async data => {
     result.timelineThumbnailAlt=nativeDescriptions.get(sourceURL(entry.thumbnail || entry.thumbnailPreview || '')) || photoPeople.get(photoIdentity(entry.thumbnail || entry.thumbnailPreview || ''))?.description;
     result.people=[...new Set([...result.people,...findTimelinePeople(result.galleryDetails.join(' ')),...(people.entries?.[`${entry.date}|${entry.category}|${entry.title}`] || []),...result.images.flatMap(image=>image.people)])];
     const video=entry.videoId && videoFacts[entry.videoId];
-    result.videos=video ? [{kind:'video',videoId:entry.videoId,src:entry.thumbnail,thumbnail:entry.thumbnailPreview || entry.thumbnail,description:video.description,thumbnailAlt:video.thumbnailAlt,look:video,people:[]}] : [];
+    result.videos=reviewed ? reviewed.videos.map(item=>{
+      const facts=videoFacts[item.videoId];
+      const castText=item.castText || '';
+      const castIds=findTimelinePeople(castText);
+      // Explicit-only stage names are safe inside the owner's confirmed cast list.
+      for(const performer of timelinePerformers)if(performer.explicitOnly && performer.aliases.some(alias=>new RegExp('(^|[^\\p{L}\\p{N}])'+alias.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?=$|[^\\p{L}\\p{N}])','iu').test(castText)))castIds.push(performer.id);
+      return {kind:'video',videoId:item.videoId,src:item.thumbnail,thumbnail:item.thumbnail,description:item.description || '',thumbnailAlt:item.title,look:facts,people:[...new Set(castIds)]};
+    }) : video ? [{kind:'video',videoId:entry.videoId,src:entry.thumbnail,thumbnail:entry.thumbnailPreview || entry.thumbnail,description:video.description,thumbnailAlt:video.thumbnailAlt,look:video,people:[]}] : [];
   }
   // Native Presse/Ord popups use the same alt descriptions as the image search.
   // This writes only the alt attribute, never a caption or paragraph.
@@ -167,7 +175,12 @@ async function goToResult(result, input, search) {
   setTimeout(() => event.classList.remove('timeline-search-hit'), 5000);
   const image=result.matchedImages?.[0];
   const video=result.matchedVideos?.[0];
-  if (image || video || result.entry.landingPage) {
+  if(video){
+    const shell=event.closest('.timeline-shell'),style=getComputedStyle(shell);
+    const theme=Object.fromEntries(['accent','line','soft','deep','year-rgb'].map(name=>['--timeline-'+name,style.getPropertyValue('--timeline-'+name)]));
+    openTimelineGallery(result.entry,result.group,theme,{initialVideo:video.videoId,autoplay:false});return;
+  }
+  if (image || result.entry.landingPage) {
     if (image && image.kind!=='video-poster') {
       const data=await loadTimelineGalleryData();
       const gallery=data.entries[`${result.entry.date}|${result.entry.category}|${result.entry.title}`];

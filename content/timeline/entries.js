@@ -1198,7 +1198,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2021-03-01-tu-og-eg.jpg",
     "videoId": "xjdlldhlFVk",
-    "thumbnailPreview": "./assets/timeline-thumbs/eae9f9dbab2e4e48.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/eae9f9dbab2e4e48.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2021-02-22",
@@ -1244,7 +1245,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2020-12-10-covid-19.jpg",
     "videoId": "2Y4QeD3JmNo",
-    "thumbnailPreview": "./assets/timeline-thumbs/b6d8c1468db5b26a.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/b6d8c1468db5b26a.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2020-12-04",
@@ -1373,7 +1375,8 @@ export const timelineEntries = [
     "videoId": "djFXmc2mVNc",
     "thumbnailPreview": "./assets/timeline-thumbs/1a00e247854b3b77.webp",
     "popupHref": "https://dennisagerblad.bandcamp.com/track/love-has-no-gender",
-    "popupLabel": "Hør sangen ↗"
+    "popupLabel": "Hør sangen ↗",
+    "reviewedVideoText": true
   },
   {
     "date": "2020-04-20",
@@ -1385,7 +1388,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2020-04-20-blomster.jpg",
     "videoId": "W1A7KyZAXjQ",
-    "thumbnailPreview": "./assets/timeline-thumbs/dbadec60028bd2d2.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/dbadec60028bd2d2.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2020-03-07",
@@ -1412,7 +1416,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2020-02-17-video-video.jpg",
     "videoId": "BIJTQxGkQ80",
-    "thumbnailPreview": "./assets/timeline-thumbs/3139ab880276c382.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/3139ab880276c382.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2020-01-06",
@@ -1424,7 +1429,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2020-01-06-master-fucker.jpg",
     "videoId": "2fQOtbu9cJ4",
-    "thumbnailPreview": "./assets/timeline-thumbs/acd7e688a9428a5e.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/acd7e688a9428a5e.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2019-12-10",
@@ -1579,7 +1585,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2018-12-03-normal-man.jpg",
     "videoId": "yaA0jyDWLC4",
-    "thumbnailPreview": "./assets/timeline-thumbs/47e1c9e13bad1190.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/47e1c9e13bad1190.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2018-10-14",
@@ -1836,7 +1843,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2017-09-17-i-wanna-pose.jpg",
     "videoId": "gOOloB7YCb8",
-    "thumbnailPreview": "./assets/timeline-thumbs/bb3a28363c878438.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/bb3a28363c878438.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2017-07-11",
@@ -1848,7 +1856,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2017-07-11-hipp-og-hopp.jpg",
     "videoId": "vvjCeNak7jQ",
-    "thumbnailPreview": "./assets/timeline-thumbs/18ffec67a8349869.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/18ffec67a8349869.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2017-07-01",
@@ -1869,7 +1878,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2017-06-11-mogga.jpg",
     "videoId": "jg8rzij_LwM",
-    "thumbnailPreview": "./assets/timeline-thumbs/00b1629c904f8111.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/00b1629c904f8111.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2017-06-04",
@@ -1927,7 +1937,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2017-05-25-synkron-svoemning.jpg",
     "videoId": "FRupUFNZF14",
-    "thumbnailPreview": "./assets/timeline-thumbs/f546a9c2cf49db2e.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/f546a9c2cf49db2e.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2017-05-20",
@@ -1983,7 +1994,8 @@ export const timelineEntries = [
     "thumbnail": "./archive/timeline/video-thumbs/2017-05-08-eivoer-in-my-shoes.jpg",
     "videoId": "ILgM-NpNBWo",
     "details": "Jeg medvirker i Eivørs musikvideo.",
-    "thumbnailPreview": "./assets/timeline-thumbs/cdffc936298a2956.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/cdffc936298a2956.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2017-04-01",
@@ -2065,7 +2077,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2017-01-31-jeg-er-tove-hansen.jpg",
     "videoId": "WWVI0IL638I",
-    "thumbnailPreview": "./assets/timeline-thumbs/9fa01a99b803336d.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/9fa01a99b803336d.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2017-01-01",
@@ -2222,7 +2235,8 @@ export const timelineEntries = [
       "./archive/facebook-20261025/1160918293981044.jpg",
       "./archive/facebook-20261025/1160918247314382.jpg",
       "./archive/facebook-20261025/1160918253981048.jpg"
-    ]
+    ],
+    "reviewedVideoText": true
   },
   {
     "date": "2016-07-06",
@@ -2397,7 +2411,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2016-03-10-tis-paa-mig.jpg",
     "videoId": "IYhZxAJxTgo",
-    "thumbnailPreview": "./assets/timeline-thumbs/1ae7b7039c3c699f.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/1ae7b7039c3c699f.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2016-03-05",
@@ -2500,7 +2515,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2015-09-13-transformation.jpg",
     "videoId": "Gb5WDXCCQu8",
-    "thumbnailPreview": "./assets/timeline-thumbs/b576293584b5246d.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/b576293584b5246d.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2015-08-26",
@@ -2512,7 +2528,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2015-08-26-refugee.jpg",
     "videoId": "_1b2lt4YSEw",
-    "thumbnailPreview": "./assets/timeline-thumbs/1cdf1e40b6534d11.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/1cdf1e40b6534d11.webp",
+    "reviewedVideoText": true
   },
   {
     "year": 2015,
@@ -3025,7 +3042,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2014-07-09-tissemand.jpg",
     "videoId": "CNGVa5cbd6M",
-    "thumbnailPreview": "./assets/timeline-thumbs/7e0c4c43df689181.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/7e0c4c43df689181.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2014-06-12",
@@ -3049,7 +3067,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2014-06-08-forfoer-mig.jpg",
     "videoId": "u29lm8nDnIc",
-    "thumbnailPreview": "./assets/timeline-thumbs/09056542d3e2e130.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/09056542d3e2e130.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2014-06-06",
@@ -3114,7 +3133,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2014-04-04-svaj.jpg",
     "videoId": "8dkzVBxYRdw",
-    "thumbnailPreview": "./assets/timeline-thumbs/df36dfef13f696b0.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/df36dfef13f696b0.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2014-02-01",
@@ -3145,7 +3165,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2014-01-04-lesbisk-sadist.jpg",
     "videoId": "6yDZTMn4AtQ",
-    "thumbnailPreview": "./assets/timeline-thumbs/54938ba702ab7117.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/54938ba702ab7117.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2013-12-31",
@@ -3225,7 +3246,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2013-10-09-bananasplit.jpg",
     "videoId": "n2AM0XKuAC8",
-    "thumbnailPreview": "./assets/timeline-thumbs/e1ff711d607b5bf5.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e1ff711d607b5bf5.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2013-09-07",
@@ -3257,7 +3279,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2013-09-05-midnight-lover.jpg",
     "videoId": "yA2AV9pDvn8",
-    "thumbnailPreview": "./assets/timeline-thumbs/0728b3931e407d4d.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/0728b3931e407d4d.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2013-08-30",
@@ -3407,7 +3430,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2013-06-03-koebenhavns-vaerste-trash-drag.jpg",
     "videoId": "eDrkJPHt0mA",
-    "thumbnailPreview": "./assets/timeline-thumbs/99001ca9e20f062a.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/99001ca9e20f062a.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2013-05-30",
@@ -3431,7 +3455,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2013-05-25-svans.jpg",
     "videoId": "5egu-7Rnq5U",
-    "thumbnailPreview": "./assets/timeline-thumbs/b8a27aa455f4d21d.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/b8a27aa455f4d21d.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2013-05-17",
@@ -3517,7 +3542,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2013-03-09-private-parts.jpg",
     "videoId": "f14TTCKyeEU",
-    "thumbnailPreview": "./assets/timeline-thumbs/5db50295ccb6da4e.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/5db50295ccb6da4e.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2013-02-24",
@@ -3583,7 +3609,8 @@ export const timelineEntries = [
     "href": null,
     "thumbnail": "./archive/timeline/video-thumbs/2013-01-25-hospital.jpg",
     "videoId": "ElFkEAO2_xo",
-    "thumbnailPreview": "./assets/timeline-thumbs/669e4c2040901ece.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/669e4c2040901ece.webp",
+    "reviewedVideoText": true
   },
   {
     "group": "live",
@@ -3623,9 +3650,11 @@ export const timelineEntries = [
     "title": "Loco Mama, MIX-København BLOG",
     "group": "media",
     "href": "./archive/legacy/200_calendar/2012/2012_11_05_mix_cph/index.html",
-    "thumbnail": "./archive/legacy/200_calendar/2012/2012_11_05_mix_cph/dennis_agerblad.jpeg",
+    "thumbnail": "https://i.ytimg.com/vi/acKe9jQKANA/hqdefault.jpg",
     "videoId": "acKe9jQKANA",
-    "thumbnailPreview": "./assets/timeline-thumbs/db21d0989c5341d3.webp"
+    "thumbnailPreview": "https://i.ytimg.com/vi/acKe9jQKANA/hqdefault.jpg",
+    "reviewedVideoText": true,
+    "thumbnailFit": "contain"
   },
   {
     "date": "2012-10-12",
@@ -3759,7 +3788,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2012/2012_07_18_youtube/index.html",
     "thumbnail": "./archive/timeline/video-thumbs/2012-07-18-jeg-taenker-paa-dig.jpg",
     "videoId": "NDI11UDVqV8",
-    "thumbnailPreview": "./assets/timeline-thumbs/cb746e255d69c372.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/cb746e255d69c372.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2012-06-22",
@@ -3857,7 +3887,8 @@ export const timelineEntries = [
     "group": "music",
     "href": "./archive/legacy/200_calendar/2012/2012_04_12_sprog_maxi/cd_sprog_maxi.html",
     "thumbnail": "./archive/timeline/sproghoved-remixed.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/b3c29410edb62bb2.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/b3c29410edb62bb2.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2012-03-23",
@@ -4091,7 +4122,8 @@ export const timelineEntries = [
     "group": "music",
     "href": "./archive/legacy/200_calendar/2011/11_11_01_dun_maxi/cd_dun.html",
     "thumbnail": "./archive/timeline/dun-remixed.jpg",
-    "thumbnailPreview": "./assets/timeline-thumbs/9ad8d982e387c1a5.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/9ad8d982e387c1a5.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2011-10-30",
@@ -4127,7 +4159,8 @@ export const timelineEntries = [
     "details": "Jeg skulle på teambuilding med mit arbejde. Vi var det japanske hold. Jeg kedede mig og tænkte, jeg tror lige jeg laver en musikvideo og så instruerede jeg mine kolleger.",
     "popupParagraphs": [
       "Jeg skulle på teambuilding med mit arbejde. Vi var det japanske hold. Jeg kedede mig og tænkte, jeg tror lige jeg laver en musikvideo og så instruerede jeg mine kolleger."
-    ]
+    ],
+    "reviewedVideoText": true
   },
   {
     "date": "2011-09-26",
@@ -4150,7 +4183,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2011/11_09_03_sproghoved/11_09_05_video_haab.html",
     "thumbnail": "./archive/timeline/video-thumbs/2011-09-05-haab-von.jpg",
     "videoId": "d88qIC6PD4A",
-    "thumbnailPreview": "./assets/timeline-thumbs/5bed92ac21ede1f7.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/5bed92ac21ede1f7.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2011-09-03",
@@ -4178,7 +4212,8 @@ export const timelineEntries = [
     ],
     "shareAliases": [
       "2011-09-03|CD- og digital udgivelse|Jeg udgav mit debutalbum med sange af Tóroddur Poulsen."
-    ]
+    ],
+    "reviewedVideoText": true
   },
   {
     "date": "2011-08-20",
@@ -4208,7 +4243,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2011/11_09_03_sproghoved/11_08_16_video_dun.html",
     "thumbnail": "./archive/timeline/video-thumbs/2011-08-16-dun-larm.jpg",
     "videoId": "kau6uVyRZvA",
-    "thumbnailPreview": "./assets/timeline-thumbs/bafe099bad8dc2b2.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/bafe099bad8dc2b2.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2011-08-16",
@@ -4253,7 +4289,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2011/11_09_03_sproghoved/11_08_04_video_flaget.html",
     "thumbnail": "./archive/timeline/video-thumbs/2011-08-04-flaget-flaggid.jpg",
     "videoId": "Y9VPoUXtoLs",
-    "thumbnailPreview": "./assets/timeline-thumbs/e5ad1cb0b9844870.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/e5ad1cb0b9844870.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2011-08-03",
@@ -4505,7 +4542,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2010/10_07_03_festtoej_musik_video/rumpedans.html",
     "thumbnail": "./archive/timeline/video-thumbs/2010-07-03-rumpedans.jpg",
     "videoId": "wZcHL7J5c30",
-    "thumbnailPreview": "./assets/timeline-thumbs/76efe6c123c906fd.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/76efe6c123c906fd.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2010-07-03",
@@ -4517,7 +4555,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2010/10_07_03_festtoej_musik_video/index.html",
     "thumbnail": "./archive/timeline/video-thumbs/2010-07-03-festtoej.jpg",
     "videoId": "KGlpQWuqp8g",
-    "thumbnailPreview": "./assets/timeline-thumbs/b6207818481c2764.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/b6207818481c2764.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2010-06-26",
@@ -4611,7 +4650,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2009/09_12_01_dunst_julekalender/dunst_julekalender.html",
     "thumbnail": "./archive/legacy/200_calendar/2009/09_12_01_dunst_julekalender/dunst_julekalender_2009.jpg",
     "videoId": "T_rwFmHmYAc",
-    "thumbnailPreview": "./assets/timeline-thumbs/a88df5bd616af7d9.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/a88df5bd616af7d9.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2009-11-27",
@@ -5220,7 +5260,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2008/08_07_17_land/madurglotti_musikvideo.html",
     "thumbnail": "./archive/timeline/video-thumbs/2008-07-17-spurningurin.jpg",
     "videoId": "nI8OiBdGqOM",
-    "thumbnailPreview": "./assets/timeline-thumbs/a32c5636b9f024db.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/a32c5636b9f024db.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2008-07-09",
@@ -6025,7 +6066,8 @@ export const timelineEntries = [
     "href": "./archive/legacy/200_calendar/2005/05_03_01_midnight_lover_musikvideo/dennis_agerblad.html",
     "thumbnail": "./archive/timeline/video-thumbs/2005-03-01-midnight-lover.jpg",
     "videoId": "yA2AV9pDvn8",
-    "thumbnailPreview": "./assets/timeline-thumbs/2430b4a54786f086.webp"
+    "thumbnailPreview": "./assets/timeline-thumbs/2430b4a54786f086.webp",
+    "reviewedVideoText": true
   },
   {
     "date": "2005-02-12",

@@ -1,3 +1,4 @@
+import {appendReviewedVideoText} from './timeline-video-text.js?v=20261108-reviewed-videos-1';
 import {readTimelinePhotoShare,timelineEntryKey} from './timeline-share-state.js?v=20261029-photo-share-1';
 import {loadTimelineImage} from './timeline-image-loading.js?v=20261027-performance-quality-1';
 /* Named timeline effects: Grow, Paint, Morph and Contrast.
@@ -6,7 +7,7 @@ import {loadTimelineImage} from './timeline-image-loading.js?v=20261027-performa
 import { timelineDate } from './timeline-ui.js?v=20261027-performance-quality-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
-import { timelineEntries } from '../content/timeline/entries.js?v=20261031-zentropa-title-1';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261108-reviewed-videos-1';
 import { timelinePopupParagraphs, timelinePopupGroup, timelineGalleryDetails } from './timeline-popup-content.js?v=20261022-popup-texts-1';
 let dataPromise;
 let closeActive;
@@ -20,7 +21,8 @@ const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
   '../content/timeline/galleries.json?v=20261031-zentropa-title-1',
   '../content/timeline/image-metadata.json?v=20261027-performance-quality-1',
-  '../content/timeline/popup-content.json?v=20261031-zentropa-title-1',
+  '../content/timeline/popup-content.json?v=20261108-reviewed-videos-1',
+  '../content/timeline/video-texts.json?v=20261108-reviewed-videos-1',
 ].map(async (path,index) => {
   for (let attempt=0;attempt<2;attempt++) {
     try {
@@ -32,7 +34,8 @@ const loadData = () => dataPromise ||= Promise.all([
     }
   }
 }))
-  .then(([galleries, metadata, native]) => ({
+  .then(([galleries, metadata, native, videoTexts]) => ({
+    videoTexts:videoTexts.entries || {},
     entries:{...galleries.entries,...Object.fromEntries(Object.entries(native.entries || {}).map(([key,record])=>{
       const curated=galleries.entries[key];
       const source=curated || record;
@@ -690,7 +693,9 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     title.textContent = entry.title;
     const linkLabels=new Set((gallery?.links || []).flatMap(item=>[item.href,item.label]).filter(text=>/^(https?:|www\.)/.test(text)));
     const sourceParagraphs=[...(entry.details?[entry.details]:[]),...(gallery?.details || [])].filter(text=>!linkLabels.has(text.trim()));
-    const paragraphs = timelinePopupParagraphs(entry,sourceParagraphs);
+    const reviewed=data.videoTexts?.[timelineEntryKey(entry)];
+    const paragraphs = reviewed ? (reviewed.multiple ? reviewed.eventParagraphs || [] : []) : timelinePopupParagraphs(entry,sourceParagraphs);
+    if(reviewed && !reviewed.multiple)appendReviewedVideoText(details,reviewed.segments);
     const paragraph = text => {
       const node=el('p','',text);
       const index=gallery?.archiveDetails?.indexOf(text) ?? -1;
@@ -718,20 +723,22 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       } else p.append(document.createTextNode(entry.creditName));
       supplementary.append(p);
     }
-    for (const videoId of [...new Set([entry.videoId,...(gallery?.videos || [])].filter(Boolean))]) {
+    const videoIds=reviewed ? reviewed.videos.map(video=>video.videoId) : [...new Set([entry.videoId,...(gallery?.videos || [])].filter(Boolean))];
+    for (const videoId of videoIds) {
+      const reviewedVideo=reviewed?.videos.find(video=>video.videoId===videoId);
       const video=el('iframe','tg-video'); video.src=videoEmbedURL(videoId);
-      video.title=entry.videoTitle || entry.title; video.referrerPolicy='strict-origin-when-cross-origin'; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
+      video.title=reviewedVideo?.title || entry.videoTitle || entry.title; video.loading='lazy'; video.referrerPolicy='strict-origin-when-cross-origin'; video.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; video.allowFullscreen=true;
       const videoFrame=el('div','video-frame');videoFrame.append(video);
       const youtube=el('a','tg-video-link','Se videoen på YouTube');
       youtube.href=`https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
       youtube.target='_blank'; youtube.rel='noreferrer';
-      // Every mixed-media popup shows its full photo gallery before videos.
-      if (items.length) {
-        const belowImages=el('div','tg-video-after-images');
-        belowImages.append(videoFrame,youtube); viewer.append(belowImages);
-      } else {
-        dialog.insertBefore(videoFrame,viewer); dialog.insertBefore(youtube,viewer);
-      }
+      // Keep each video's own copy next to that video, after all photographs.
+      const section=el('section','tg-video-section');section.dataset.videoId=videoId;
+      section.setAttribute('aria-label',reviewedVideo?.title || video.title);
+      if(reviewed?.multiple)appendReviewedVideoText(section,reviewedVideo?.segments);
+      section.append(videoFrame,youtube);
+      if(items.length){section.classList.add('tg-video-after-images');viewer.append(section);}
+      else dialog.insertBefore(section,viewer);
     }
     if (entry.popupHref) link(entry.popupLabel || 'Se linket ↗',entry.popupHref);
     const seen=new Set(entry.popupHref?[new URL(entry.popupHref,assetBase).href]:[]);
@@ -771,6 +778,10 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
       layout(); render();
     } else { stage.hidden=true; layout(); }
     dialog.style.visibility=''; close.focus({preventScroll:true});
+    if(options.initialVideo)requestAnimationFrame(()=>{
+      const target=[...dialog.querySelectorAll('[data-video-id]')].find(node=>node.dataset.videoId===options.initialVideo);
+      if(target)dialog.scrollTop+=target.getBoundingClientRect().top-dialog.getBoundingClientRect().top-60;
+    });
   }
   function load() {
     status.replaceChildren(document.createTextNode('Henter billeder …')); status.hidden=false;

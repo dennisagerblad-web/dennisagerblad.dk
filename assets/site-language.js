@@ -79,7 +79,7 @@
     if (!node || !node.textContent.trim() || node.parentElement?.closest('script,style,noscript,textarea,[data-no-translate]')) return;
     const previous = originalText.get(node);
     const raw = previous && node.textContent === previous.last ? previous.source : node.textContent;
-    const source = node.parentElement?.closest('.tg-dialog') ? danish(raw) : raw;
+    const source = node.parentElement?.closest('.tg-dialog') && !node.parentElement?.closest('[data-owner-video-text]') ? danish(raw) : raw;
     let target = language === 'en' && node.parentElement?.dataset.englishText ? node.parentElement.dataset.englishText : translate(source);
     if (node.parentElement?.closest('.calendar-biography')) target = target.replace('BØSSEDANMARK (GAYDENMARK)', 'BØSSEDANMARK');
     originalText.set(node, { source, last: target });

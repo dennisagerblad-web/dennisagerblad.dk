@@ -340,3 +340,8 @@ body .timeline-overlay iframe:is(.timeline-video-player,.tg-video) { outline:non
 .tg-album-nav { display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; }
 .tg-album-nav button { border:0; padding:8px 12px; color:inherit; background:#ffffff18; border-radius:6px; cursor:pointer; font:inherit; }
 .tg-album-nav button[aria-current="page"] { background:#ffffff36; }
+
+/* Reviewed copy uses the shared popup font, padding and scrolling template. */
+.tg-reviewed-copy { white-space:pre-wrap; overflow-wrap:anywhere; font:inherit; line-height:1.45; margin:0 0 16px; }
+.tg-video-text-heading { font-weight:600; }
+.tg-video-section { min-width:0; }
