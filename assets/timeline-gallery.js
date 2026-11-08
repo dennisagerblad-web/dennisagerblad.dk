@@ -1,4 +1,4 @@
-import {appendReviewedVideoText} from './timeline-video-text.js?v=20261108-reviewed-videos-2';
+import {appendReviewedVideoText} from './timeline-video-text.js?v=20261108-video-headings-1';
 import {readTimelinePhotoShare,timelineEntryKey} from './timeline-share-state.js?v=20261029-photo-share-1';
 import {loadTimelineImage} from './timeline-image-loading.js?v=20261027-performance-quality-1';
 /* Named timeline effects: Grow, Paint, Morph and Contrast.
@@ -7,7 +7,7 @@ import {loadTimelineImage} from './timeline-image-loading.js?v=20261027-performa
 import { timelineDate } from './timeline-ui.js?v=20261027-performance-quality-1';
 import { attachPinchZoom } from './pinch-zoom.js?v=20261009-search-zoom-2';
 import { videoEmbedURL } from './video-embed-url.js?v=20261012-video-history-1';
-import { timelineEntries } from '../content/timeline/entries.js?v=20261108-reviewed-videos-2';
+import { timelineEntries } from '../content/timeline/entries.js?v=20261108-video-headings-1';
 import { timelinePopupParagraphs, timelinePopupGroup, timelineGalleryDetails } from './timeline-popup-content.js?v=20261022-popup-texts-1';
 let dataPromise;
 let closeActive;
@@ -21,8 +21,8 @@ const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
   '../content/timeline/galleries.json?v=20261031-zentropa-title-1',
   '../content/timeline/image-metadata.json?v=20261027-performance-quality-1',
-  '../content/timeline/popup-content.json?v=20261108-reviewed-videos-2',
-  '../content/timeline/video-texts.json?v=20261108-reviewed-videos-2',
+  '../content/timeline/popup-content.json?v=20261108-video-headings-1',
+  '../content/timeline/video-texts.json?v=20261108-video-headings-1',
 ].map(async (path,index) => {
   for (let attempt=0;attempt<2;attempt++) {
     try {
@@ -695,7 +695,7 @@ export function openTimelineGallery(entry, group, theme = {}, options = {}) {
     const sourceParagraphs=[...(entry.details?[entry.details]:[]),...(gallery?.details || [])].filter(text=>!linkLabels.has(text.trim()));
     const reviewed=data.videoTexts?.[timelineEntryKey(entry)];
     const paragraphs = reviewed ? (reviewed.multiple ? reviewed.eventParagraphs || [] : []) : timelinePopupParagraphs(entry,sourceParagraphs);
-    if(reviewed && !reviewed.multiple)appendReviewedVideoText(details,reviewed.segments);
+    if(reviewed && !reviewed.multiple)appendReviewedVideoText(details,reviewed.segments,{standalone:true,popupTitle:entry.title});
     const paragraph = text => {
       const node=el('p','',text);
       const index=gallery?.archiveDetails?.indexOf(text) ?? -1;
