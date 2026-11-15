@@ -21,7 +21,7 @@ const absolute = src => new URL(src, assetBase).href;
 const loadData = () => dataPromise ||= Promise.all([
   '../content/timeline/galleries.json?v=20261031-zentropa-title-1',
   '../content/timeline/image-metadata.json?v=20261027-performance-quality-1',
-  '../content/timeline/popup-content.json?v=20261108-video-headings-1',
+  '../content/timeline/popup-content.json?v=20261115-remove-old-single-1',
   '../content/timeline/video-texts.json?v=20261108-video-headings-1',
 ].map(async (path,index) => {
   for (let attempt=0;attempt<2;attempt++) {

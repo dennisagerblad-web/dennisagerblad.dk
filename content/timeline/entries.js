@@ -5025,18 +5025,6 @@ export const timelineEntries = [
     "thumbnailPreview": "./assets/timeline-thumbs/bfec60e2e1757dec.webp"
   },
   {
-    "date": "2008-12-01",
-    "display": "01.12.2008",
-    "year": 2008,
-    "category": "Digital udgivelse",
-    "title": "\"Jólastjørnan\" Christmas single. maður:glotti (my Faroese Duo)",
-    "group": "music",
-    "href": "./archive/legacy/200_calendar/2008/08_12_01_jolastjornan/jolastjornan.html",
-    "thumbnail": "./archive/timeline/jolastjornan.jpg",
-    "shortTitle": "Jólastjørnan, julesingle",
-    "thumbnailPreview": "./assets/timeline-thumbs/273f69ac1dac028b.webp"
-  },
-  {
     "date": "2008-09-20",
     "display": "20.09.2008",
     "year": 2008,
