@@ -139,6 +139,12 @@
   function init() {
     if (!document.body || document.body.tagName === 'FRAMESET' || !analyticsAllowed) return;
     window.SiteStatistics = { showPreferences: show };
+    // Section entry pages can return to the homepage without reloading the document.
+    document.head.insertAdjacentHTML('beforeend', `<style>
+      body:not(:has(#root > .ship:not(.has-section))) > #site-statistics-consent {
+        --cookie-settings-display: none;
+      }
+    </style>`);
     const host = document.createElement('div');
     host.dataset.statisticsIgnore = '';
     host.id = 'site-statistics-consent';
@@ -216,7 +222,6 @@
       .details-copy { clear: both; padding-top: 5px; }
       p { margin: 0 0 2px; }
       :is(button, summary, a):focus-visible { outline: 2px solid var(--cookie-blue); outline-offset: 2px; }
-      .settings { display: block; margin: 0 16px 0 auto; padding: 8px 0; min-height: 44px; border: 0; color: #333; background: #fff; font-size: 14px; text-decoration: underline; }
       section { max-width: 246px; border: 0; border-radius: 12px; color: #fff; background: #c8102e; text-align: center; }
       header { padding: 4px 8px 0; border: 0; color: inherit; background: transparent; }
       .cookie-icon { top: 100%; right: 6px; color: #fff; }
@@ -227,6 +232,19 @@
       .choices button { min-width: 33px; min-height: 25px; padding: 2px 6px; border: 0; border-radius: 8px; color: #a10d26; background: #fff; }
       summary, section a { color: #fff; }
       :is(button, summary, a):focus-visible { outline-color: #fff; }
+      .settings {
+        display: var(--cookie-settings-display, block);
+        position: fixed;
+        inset: auto calc(16px + env(safe-area-inset-right)) env(safe-area-inset-bottom) auto;
+        min-height: 44px;
+        padding: 0 4px;
+        border: 0;
+        color: #ff575f;
+        background: transparent;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .settings:focus-visible { outline-color: currentColor; }
     </style><section role="region" aria-label="Valg af statistikcookies" hidden>
       <header>
         <h2 tabindex="-1">Tillad cookies?</h2>
@@ -248,14 +266,16 @@
           <summary><span class="read-more">Læs mere</span><span class="read-less">Læs mindre</span></summary>
           <div class="details-copy">
             <p>Vi vil gerne se hvordan folk klikker sig rundt på siden.</p>
+            <p>Du kan ændre dit valg under Cookiesinstillinger nederst på forsiden.</p>
             <a href="https://policies.google.com/technologies/partner-sites?hl=da" target="_blank" rel="noopener noreferrer">Sådan behandler Google oplysninger</a>
           </div>
         </details>
       </div>
-    </section><button type="button" class="settings" hidden>Statistikvalg</button>`;
-    banner=root.querySelector('section');preferenceButton=root.querySelector('.settings');
+    </section><button type="button" class="settings" hidden>Cookiesinstillinger</button>`;
+    banner = root.querySelector('section');
+    preferenceButton = root.querySelector('.settings');
     root.querySelectorAll('[data-choice]').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.choice)));
-    preferenceButton.addEventListener('click',show);
+    preferenceButton.addEventListener('click', show);
     const choice=readConsent();
     consent=choice==='granted';
     start();
